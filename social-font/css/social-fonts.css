@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'social-fonts';
+  src: url("../font/social-fonts.eot?4705312");
+  src: url("../font/social-fonts.eot?4705312#iefix") format('embedded-opentype'), url("../font/social-fonts.woff?4705312") format('woff'), url("../font/social-fonts.ttf?4705312") format('truetype'), url("../font/social-fonts.svg?4705312#social-fonts") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'social-fonts';
+    src: url('../font/social-fonts.svg?4705312#social-fonts') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'social-fonts';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+/* opacity .8 */
+/* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-android:before { content: '\26'; } /* '&amp;' */
+.icon-html5:before { content: '\35'; } /* '5' */
+.icon-appstore:before { content: '\41'; } /* 'A' */
+.icon-youtube:before { content: '\55'; } /* 'U' */
+.icon-wordpress:before { content: '\77'; } /* 'w' */
+.icon-bitbucket:before { content: '\e9'; } /* 'é' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-stackoverflow:before { content: '\e032'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-github:before { content: '\f09b'; } /* '' */
+.icon-google-plus:before { content: '\f0d5'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-file-alt:before { content: '\f0f6'; } /* '' */
+.icon-graduation-cap:before { content: '🎓'; } /* '\1f393' */
+.icon-book:before { content: '📕'; } /* '\1f4d5' */
+.icon-phone:before { content: '📞'; } /* '\1f4de' */
+.icon-signal:before { content: '📶'; } /* '\1f4f6' */
