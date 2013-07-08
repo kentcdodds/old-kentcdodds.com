@@ -27,19 +27,21 @@
     
     <!-- Use libraries. This must be done AFTER calling DoubleTakeScriptLoader() -->
     <script>
-      var checkStuff = function(prop, elementId) {
-        var el = document.getElementById(elementId);
-        if (window[prop]) {
-          el.innerText = 'Loading ' + prop + ' worked great!';
-          el.style.backgroundColor = "green";
-        } else {
-          el.innerText = 'Loading ' + prop + ' did NOT work!';
-          el.style.backgroundColor = "red";
-        }
-      };
+      (function() {
+        var checkStuff = function(prop, elementId) {
+          var el = document.getElementById(elementId);
+          if (window[prop]) {
+            el.innerText = 'Loading ' + prop + ' worked great!';
+            el.style.backgroundColor = "green";
+          } else {
+            el.innerText = 'Loading ' + prop + ' did NOT work!';
+            el.style.backgroundColor = "red";
+          }
+        };
       
-      checkStuff('$', 'message-jQuery');
-      checkStuff('_', 'message-underscore');
+        checkStuff('$', 'message-jQuery');
+        checkStuff('_', 'message-underscore');
+      };)();
     </script>
   </body>
 </html>
