@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
     <title>DT Script Loader</title>
   </head>
   <body>
     <h1>Double Take Script Loader Example</h1>
     <div id="message-jQuery">
-      The safe script loader did not work! jQuery was never loaded!
+      Waiting to load jQuery...
     </div>
     <div id="message-underscore">
-      The safe script loader did not work! Underscore was never loaded!
+      Waiting to load Underscore...
     </div>
+    <!-- Method 1: Use data- attributes. This does NOT require calling DoubleTakeScriptLoader, just including it. -->
     <script src="http://cdn.example.com/underscore/1.4.4/underscore-min.js" data-prop-name="_" data-local-src="underscore-min.js"></script>
+    
+    <!-- Method 2: Call DoubleTakeScriptLoader directly -->
     <script src="http://cdn.example.com/jquery/1.10.1/jquery.min.js" id="jQueryScript"></script>
     <script src="dt-script-loader.js"></script>
     <script>
@@ -22,28 +24,22 @@
         originalId: 'jQueryScript'
       });
     </script>
+    
+    <!-- Use libraries. This must be done AFTER calling DoubleTakeScriptLoader() -->
     <script>
-      if ($) {
-        var $jqMessage = $('#message-jQuery');
-        $jqMessage.text($jqMessage.text()
-          .replace('not ', '')
-          .replace('never ', '')
-          );
-        $jqMessage.css('background-color', 'green');
-      } else {
-        document.getElementById('message-jQuery').style.backgroundColor="red"
-      }
-    </script>
-    <script>
-      var _Message = document.getElementById('message-underscore');
-      if (window['_']) {
-        _Message.innerText = _Message.innerText
-          .replace('not ', '')
-          .replace('never ', '');
-        _Message.style.backgroundColor = "green";
-      } else {
-        _Message.style.backgroundColor = "red";
-      }
+      var checkStuff(prop, elementId) {
+        var el = document.getElementById(elementId);
+        if (window[prop]) {
+          el.innerText = 'Loading ' + prop + ' worked great!';
+          el.style.backgroundColor = "green";
+        } else {
+          el.innerText = 'Loading ' + prop + ' did NOT work!';
+          el.style.backgroundColor = "red";
+        }
+      };
+      
+      checkStuff('$', 'message-jQuery');
+      checkStuff('_', 'message-underscore');
     </script>
   </body>
 </html>
