@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DT Script Loader</title>
+  </head>
+  <body>
+    <h1>Double Take Script Loader Example</h1>
+    <div id="message-jQuery">
+      The safe script loader did not work! jQuery was never loaded!
+    </div>
+    <div id="message-underscore">
+      The safe script loader did not work! Underscore was never loaded!
+    </div>
+    <script src="http://cdn.example.com/underscore/1.4.4/underscore-min.js" data-prop-name="_" data-local-src="underscore-min.js"></script>
+    <script src="http://cdn.example.com/jquery/1.10.1/jquery.min.js" id="jQueryScript"></script>
+    <script src="dt-script-loader.js"></script>
+    <script>
+      DoubleTakeScriptLoader({
+        propName: '$',
+        localSource: 'jquery-1.10.2.min.js',
+        originalId: 'jQueryScript'
+      });
+    </script>
+    <script>
+      if ($) {
+        var $jqMessage = $('#message-jQuery');
+        $jqMessage.text($jqMessage.text()
+          .replace('not ', '')
+          .replace('never ', '')
+          );
+      }
+    </script>
+    <script>
+      if (window['_']) {
+        var _Message = document.getElementById('message-underscore');
+        _Message.innerText = _Message.innerText
+          .replace('not ', '')
+          .replace('never ', '');
+      }
+    </script>
+  </body>
+</html>
