@@ -29,14 +29,20 @@
           .replace('not ', '')
           .replace('never ', '')
           );
+        $jqMessage.css('background-color', 'green');
+      } else {
+        document.getElementById('message-jQuery').style.backgroundColor="red"
       }
     </script>
     <script>
+      var _Message = document.getElementById('message-underscore');
       if (window['_']) {
-        var _Message = document.getElementById('message-underscore');
         _Message.innerText = _Message.innerText
           .replace('not ', '')
           .replace('never ', '');
+        _Message.style.backgroundColor = "green";
+      } else {
+        _Message.style.backgroundColor = "red";
       }
     </script>
   </body>
