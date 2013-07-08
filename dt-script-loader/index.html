@@ -27,7 +27,7 @@
     
     <!-- Use libraries. This must be done AFTER calling DoubleTakeScriptLoader() -->
     <script>
-      var checkStuff(prop, elementId) {
+      var checkStuff = function(prop, elementId) {
         var el = document.getElementById(elementId);
         if (window[prop]) {
           el.innerText = 'Loading ' + prop + ' worked great!';
