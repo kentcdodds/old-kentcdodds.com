@@ -1,154 +1,43 @@
-<html>
-<head>
-    <link rel="stylesheet" href="social-font/css/social-fonts.css">
-    <link href="tinybox2/style.css" rel="stylesheet" />
-    <style type="text/css">
-    body {
-        background-color: white;
-        color: rgb(50,50,50) !important;
-        padding: 0;
-        margin: auto;
-        text-align: left;
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    a:hover {
-        text-decoration: none;
-        color: black;
-    }
-    a:visited {
-        text-decoration: none;
-        color: black;
-    }
-    a:active: {
-        text-decoration: none;
-        color: black;
-    }
-    #my-name {
-        padding-bottom:9px;
-        font-size:1.5em;
-        font-weight: bold;
-    }
-    #call-icon:hover {
-        cursor: hand;
-    }
-    #call-widget {
-        position:absolute;
-    }
-    #gv-status {
-        text-align: center;
-        padding-top: 43px;
-    }
-    .section-label {
-        font-size: 14px;
-        vertical-align: top;
-    }
-    .icon-section {
-        font-size: 18px;
-        padding-bottom: 6px;
-    }
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before {
-        color: rgb(50,50,50);
-    }
-    .tinner {
-        position:relative;
-    }
-    </style>
-</head>
-    <body>
-        <div id="main-content">
-            <div id="my-name">
-                Kent Dodds
-            </div>
-            <div class="icons">
-                <table>
-                    <tr>
-                        <td class="section-label">
-                            Contact:
-                        </td>
-                        <td class="icon-section">
-                            <a id="call-icon" onclick="showCall()" title="Call me"><i class="icon-phone"></i></a><a href="mailto:kent@doddsfamily.us" target="_blank" title="Email me"><i class="icon-mail-alt"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="section-label">
-                            Connect:
-                        </td>
-                        <td class="icon-section">
-                            <a href="http://www.linkedin.com/profile/view?id=67772537" target="_blank" title="Connect with me"><i class="icon-linkedin"></i></a><a href="https://plus.google.com/114245123507194646768" target="_blank" title="Circle me"><i class="icon-google-plus"></i></a><a href="https://twitter.com/kentcdodds" target="_blank" title="Follow me"><i class="icon-twitter"></i></a><a href="https://github.com/kentcdodds" target="_blank" title="Fork me"><i class="icon-github"></i></a><a href="http://stackoverflow.com/users/971592" target="_blank" title="Ask me"><i class="icon-stackoverflow"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="section-label">
-                            About:
-                        </td>
-                        <td class="icon-section">
-                            <a href="http://marriottschool.byu.edu/mism/" target="_blank" title="My School"><i class="icon-graduation-cap"></i></a><a href="http://careers.stackoverflow.com/kentcdodds" target="_blank" title="Hire me"><i class="icon-signal"></i></a><a href="http://kent.doddsfamily.us/resume.pdf" target="_blank" title="My resume"><i class="icon-file-alt"></i></a><a href="http://mormon.org/me/1J5N/Kent" target="_blank" title="Learn my faith"><i class="icon-book"></i></a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                Update to this page coming soon...
-            </div>
-        </div>
-        <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="tinybox2/packed.js"></script>
-        <script src="js/purl.js"></script>
-        <script>
-            var ie = (function() {
-              var undef;
-              var rv = -1; // Return value assumes failure.
-              if (navigator.appName == 'Microsoft Internet Explorer') {
-                var ua = navigator.userAgent;
-                var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-                if (re.exec(ua) != null) {
-                  rv = parseFloat( RegExp.$1 );
-                }
-              }
-              return ((rv > -1) ? rv : undef);
-            }());
-
-            var showCall = function() {
-              $('#call-widget').remove();
-              var widgetHtml = 
-                  '<object id="call-widget" type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton" width="230" height="85">'+
-                    '<param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" />'+
-                    '<param name="wmode" value="transparent" />'+
-                    '<param name="FlashVars" value="id=a8dd9c58da5043dca0e879988f5cadc447e74f7a&style=0" />'+
-                  '</object>'+
-                  '<div id="gv-status"><i class="icon-phone"></i> Loading Google Voice...</div>';
-              if (ie) {
-                $('#main-content').append('<div>Looks like you\'re using Internet Explorer so some of the cool stuff wont work for you, but here\'s the call widget you wanted...</div>').append(widgetHtml);
-              } else {
-                TINY.box.show({
-                  html: widgetHtml,
-                  height: '85',
-                  width: '230'
-                });
-              }
-            };
-
-            $().ready(function() {
-                if ($.url().param('showCall') === 'true') {
-                    showCall();
-                }
-                if ($.url().param('nocenter') !== 'true') {
-                    jQuery.fn.center = function () {
-                        this.css("position","absolute");
-                        this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
-                        this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
-                        return this;
-                    }
-                    $(window).resize(function() {
-                        $('#main-content').center();
-                    });
-                    $(window).resize();
-                }
-            });
-        </script>
-    </body>
+<!DOCTYPE html>
+<html ng-app="kent">
+  <head>
+    <title>Kent C. Dodds</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap-responsive.min.css" />
+  </head>
+  <body ng-controller="MainCtrl">
+    <h1 id="title">
+      {{ name }}
+    </h1>
+    <div ng-show="underConstruction">
+      This site is currently under construction!
+    </div>
+    <div ng-hide="underConstruction" class="navbar" bs-navbar>
+      <hr />
+      <div class="navbar-inner">
+        <a class="brand" href="#">Home</a>
+        <ul class="nav">
+          <!-- You can use regular expressions -->
+          <li data-match-route="/(:?navbar)"><a href="#/navbar">Projects</a></li>
+          <li data-match-route="/page-one"><a href="#/page-one">Page One</a></li>
+          <li data-match-route="/page-two.*"><a href="#/page-two/sub-a">Page Two</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div id="social-media-links" ng-controller="SocialCtrl">
+      Connect with me:<br />
+      <a ng-repeat="network in networks" class="social-slide" style="background-image: url('images/{{network.name}}-hover.png')" ng-href="{{network.url}}"></a>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" data-prop-name="$" data-local-src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/dt-script-loader.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/controllers/MainCtrl.js"></script>
+    <script src="./scripts/controllers/SocialCtrl.js"></script>
+  </body>
 </html>
