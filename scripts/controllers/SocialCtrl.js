@@ -1,24 +1,21 @@
-app.controller('SocialCtrl', ['$scope', function($scope) {
-  $scope.networks = [
-    {
-      name: 'google',
-      url: 'https://plus.google.com/114245123507194646768'
-    },
-    {
-      name: 'twitter',
-      url: 'http://www.twitter.com/kentcdodds'
-    },
-    {
-      name: 'github',
-      url: 'http://www.github.com/kentcdodds'
-    },
-    {
-      name: 'facebook',
-      url: 'http://www.facebook.com/kentcdodds'
-    },
-    {
-      name: 'linkedin',
-      url: 'http://www.linkedin.com/pub/kent-dodds/1a/844/275/'
+app.controller('SocialCtrl', ['$scope', 'socialFactory', '$routeParams', '$location', function($scope, socialFactory, $routeParams, $location) {
+  $scope.networks = socialFactory.getNetworks();
+  $scope.getBackgroundImage = function(networkName) {
+    return '/images/' + networkName + '-hover.png';
+  };
+  $scope.click = function(index) {
+    if ($scope.networks[index].click) {
+      $scope.networks[index].click($scope);
     }
-  ];
+  }
+
+  var searchParams = $location.search();
+  for (var i = 0; i < searchParams.length; i++) {
+    
+  }
+//  if ($location.search().phone === 'true') {
+//    for (var j = 0; i < $scope.networks.length; i++) {
+//      if ()
+//    }
+//  }
 }]);

@@ -28,7 +28,14 @@
     <hr />
     <div id="social-media-links" ng-controller="SocialCtrl">
       Connect with me:<br />
-      <a ng-repeat="network in networks" class="social-slide" style="background-image: url('images/{{network.name}}-hover.png')" ng-href="{{network.url}}"></a>
+      <a 
+          ng-repeat="network in networks" 
+          class="social-slide" 
+          title="{{network.summary}}"
+          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}" 
+          ng-href="{{network.url}}"
+          ng-click="click($index)"
+          ></a>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
@@ -37,7 +44,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js"></script>
     <script src="./scripts/app.js"></script>
+    <script src="./scripts/factories/SocialFactories.js"></script>
     <script src="./scripts/controllers/MainCtrl.js"></script>
     <script src="./scripts/controllers/SocialCtrl.js"></script>
+    <script src="./scripts/controllers/PhoneCallCtrl.js"></script>
   </body>
 </html>

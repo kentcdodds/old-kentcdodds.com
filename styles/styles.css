@@ -1,12 +1,11 @@
-body {
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
 #title {
   text-align: center;
   font-size: 3em;
 }
 
+/*
+ * Social Media Stuff
+ */
 #social-media-links {
   text-align: center;
   margin-left: auto;
@@ -28,4 +27,20 @@ body {
 .social-slide:hover {
   background-position: 0px -48px;
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+/* Call Widget stuff */
+
+#call-widget {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#call-widget div {
+  z-index: -1;
+}
+
+#call-widget object {
+  margin-top: -30px;
 }
