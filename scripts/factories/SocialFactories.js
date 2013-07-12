@@ -1,4 +1,4 @@
-app.factory('socialFactory', function($modal) {
+angular.module('kent').factory('socialFactory', function($modal) {
   return {
     getNetworks: function() {
       return [

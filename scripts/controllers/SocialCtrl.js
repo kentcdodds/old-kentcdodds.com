@@ -1,4 +1,4 @@
-app.controller('SocialCtrl', ['$scope', 'socialFactory', '$routeParams', '$location', function($scope, socialFactory, $routeParams, $location) {
+angular.module('kent').controller('SocialCtrl', ['$scope', 'socialFactory', '$routeParams', '$location', function($scope, socialFactory, $routeParams, $location) {
   $scope.networks = socialFactory.getNetworks();
   $scope.getBackgroundImage = function(networkName) {
     return '/images/' + networkName + '-hover.png';

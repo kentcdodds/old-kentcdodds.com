@@ -1,3 +1,3 @@
-app.controller('PhoneCallCtrl', ['$scope', function($scope) {
+angular.module('kent').controller('PhoneCallCtrl', ['$scope', function($scope) {
   
 }]);
