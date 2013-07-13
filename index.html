@@ -28,14 +28,27 @@
     <hr />
     <div id="social-media-links" ng-controller="SocialCtrl">
       Connect with me:<br />
-      <a 
-          ng-repeat="network in networks" 
-          class="social-slide" 
+      <div>
+        <a
+          ng-repeat="network in mainNetworks"
+          class="social-slide {{network.class}}"
           title="{{network.summary}}"
-          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}" 
+          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
           ng-href="{{network.url}}"
-          ng-click="click($index)"
+          ng-click="mainNetworkClick($index)"
+        ></a>
+      </div>
+      <div>
+        <a
+          ng-show="viewMore"
+          ng-repeat="network in otherNetworks"
+          class="social-slide"
+          title="{{network.summary}}"
+          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
+          ng-href="{{network.url}}"
+          ng-click="otherNetworkClick($index)"
           ></a>
+      </div>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>

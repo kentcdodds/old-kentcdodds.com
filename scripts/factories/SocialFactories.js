@@ -1,50 +1,78 @@
 angular.module('kent').factory('socialFactory', function($modal) {
   return {
-    getNetworks: function() {
+    getMainNetworks: function() {
       return [
         {
-          name: 'google',
-          url: 'https://plus.google.com/114245123507194646768',
-          summary: 'Circle me',
-          click: ''
+          name: 'email',
+          summary: 'Email me',
+          url: 'mailto:kent@doddsfamily.us'
         },
         {
-          name: 'twitter',
-          url: 'http://www.twitter.com/kentcdodds',
-          summary: 'Follow me @kentcdodds'
+          name: 'google',
+          summary: 'Circle me',
+          url: 'https://plus.google.com/114245123507194646768'
         },
         {
           name: 'github',
-          url: 'http://www.github.com/kentcdodds',
-          summary: 'Fork me'
+          summary: 'Fork me',
+          url: 'http://www.github.com/kentcdodds'
         },
         {
-          name: 'facebook',
-          url: 'http://www.facebook.com/kentcdodds',
-          summary: 'Friend me'
+          name: 'twitter',
+          summary: 'Follow me @kentcdodds',
+          url: 'http://www.twitter.com/kentcdodds'
         },
         {
           name: 'linkedin',
-          url: 'http://www.linkedin.com/pub/kent-dodds/1a/844/275/',
-          summary: 'Connect with me'
+          summary: 'Connect with me',
+          url: 'http://www.linkedin.com/pub/kent-dodds/1a/844/275/'
         },
         {
-          name: 'careers',
-          url: 'http://careers.stackoverflow.com/kentcdodds',
-          summary: 'Hire me'
-        },
+          name: 'more',
+          summary: 'View more',
+          onClick: function(scope) {
+            scope.viewMore = !scope.viewMore;
+            this.class = scope.viewMore ? 'hover' : '';
+            this.name = scope.viewMore ? 'less' : 'more';
+            
+          }
+        }
+      ];
+    },
+    getOtherNetworks: function() {
+      return [
         {
           name: 'phone',
-          click: function(scope) {
-            scope.modal = {content: 'Hello Modal', saved: true};
-            var modal = $modal({
+          summary: 'Call me (maybe? ;D)',
+          onClick: function(scope) {
+            scope.modal = {content: '', saved: false};
+            $modal({
               template: 'views/callModal.html',
               show: true,
               backdrop: 'static',
               scope: scope
             });
-          },
-          summary: 'Call me'
+          }
+        },
+        {
+          name: 'facebook',
+          summary: 'Friend me',
+          url: 'http://www.facebook.com/kentcdodds'
+        },
+        {
+          name: 'careers',
+          summary: 'Hire me',
+          url: 'http://careers.stackoverflow.com/kentcdodds'
+        },
+        {
+          name: 'stack-overflow',
+          summary: 'Ask me',
+          url: 'http://stackoverflow.com/users/971592/kentcdodds'
+        },
+        {
+          name: 'mormon',
+          summary: 'I\'m a Mormon',
+          url: 'http://mormon.org/me/1J5N'
         }
       ];
     }
