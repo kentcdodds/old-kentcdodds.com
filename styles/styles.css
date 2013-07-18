@@ -50,6 +50,11 @@ a:hover {
     display: none;
   }
 
+  .bl-main > section {
+    height: 50%;
+  }
+
+
   .bl-main > section:nth-child(2),
   .bl-main > section:nth-child(3) {
     top: 0%;
