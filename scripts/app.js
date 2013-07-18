@@ -1,4 +1,4 @@
-angular.module('kent', ['$strap.directives']);
+angular.module('kent', []);
 //  .config(function($routeProvider) {
 //    $routeProvider.
 //      when('/', {

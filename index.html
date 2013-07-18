@@ -1,65 +1,74 @@
 <!DOCTYPE html>
-<html ng-app="kent">
+<html lang="en">
   <head>
     <title>Kent C. Dodds</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap-responsive.min.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio website of Kent C. Dodds. Connect with Kent here." />
+    <meta name="keywords" content="Kent Dodds, kentcdodds, Kent C. Dodds, web developer, frontend developer" />
+    <meta name="author" content="Kent C. Dodds" />
+    <link rel="shortcut icon" href="../favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <script src="./vendor/modernizr.custom.js"></script>
   </head>
-  <body ng-controller="MainCtrl">
-    <h1 id="title">
-      {{ name }}
-    </h1>
-    <div ng-show="underConstruction">
-      This site is currently under construction!
-    </div>
-    <div ng-hide="underConstruction" class="navbar" bs-navbar>
-      <hr />
-      <div class="navbar-inner">
-        <a class="brand" href="#">Home</a>
-        <ul class="nav">
-          <!-- You can use regular expressions -->
-          <li data-match-route="/(:?navbar)"><a href="#/navbar">Projects</a></li>
-          <li data-match-route="/page-one"><a href="#/page-one">Page One</a></li>
-          <li data-match-route="/page-two.*"><a href="#/page-two/sub-a">Page Two</a></li>
-        </ul>
-      </div>
-    </div>
-    <hr />
-    <div id="social-media-links" ng-controller="SocialCtrl">
-      Connect with me:<br />
-      <div>
-        <a
-          ng-repeat="network in mainNetworks"
-          class="social-slide {{network.class}}"
-          title="{{network.summary}}"
-          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
-          ng-href="{{network.url}}"
-          ng-click="mainNetworkClick($index)"
-        ></a>
-      </div>
-      <div>
-        <a
-          ng-show="viewMore"
-          ng-repeat="network in otherNetworks"
-          class="social-slide"
-          title="{{network.summary}}"
-          ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
-          ng-href="{{network.url}}"
-          ng-click="otherNetworkClick($index)"
-          ></a>
-      </div>
-    </div>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" data-prop-name="$" data-local-src="./vendor/jquery.min.js"></script>
-    <script src="./vendor/dt-script-loader.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js"></script>
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/factories/SocialFactories.js"></script>
-    <script src="./scripts/controllers/MainCtrl.js"></script>
-    <script src="./scripts/controllers/SocialCtrl.js"></script>
-    <script src="./scripts/controllers/PhoneCallCtrl.js"></script>
+  <body>
+    <div class="container">
+      <div id="bl-main" class="bl-main">
+        <div id="my-name">
+          Kent C. Dodds
+        </div>
+        <section>
+          <div class="bl-box">
+            <h2 class="bl-icon bl-icon-about">About</h2>
+          </div>
+          <div class="bl-content">
+            <h2>About Me</h2>
+            <p>This part is under construction...</p>
+            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+          </div>
+          <span class="bl-icon bl-icon-close"></span>
+        </section>
+        <section id="bl-work-section">
+          <div class="bl-box">
+            <h2 class="bl-icon bl-icon-works">Works</h2>
+          </div>
+          <div class="bl-content">
+            <h2>My Works</h2>
+            <p>This part is under construction...</p>
+            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+          </div>
+          <span class="bl-icon bl-icon-close"></span>
+        </section>
+        <section>
+          <div class="bl-box">
+            <h2 class="bl-icon bl-icon-blog">Blog</h2>
+          </div>
+          <div class="bl-content">
+            <h2>My Musings</h2>
+            <p>This part is under construction...</p>
+            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+          </div>
+          <span class="bl-icon bl-icon-close"></span>
+        </section>
+        <section>
+          <div class="bl-box">
+            <h2 class="bl-icon bl-icon-contact">Contact</h2>
+          </div>
+          <div class="bl-content">
+            <h2>Get in touch</h2>
+            <p>This part is under construction...</p>
+            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+          </div>
+          <span class="bl-icon bl-icon-close"></span>
+        </section>
+    </div><!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./vendor/boxlayout.js"></script>
+    <script>
+      $(function() {
+        Boxlayout.init();
+      });
+    </script>
   </body>
 </html>
