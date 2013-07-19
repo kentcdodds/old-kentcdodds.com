@@ -54,7 +54,6 @@ a:hover {
     height: 50%;
   }
 
-
   .bl-main > section:nth-child(2),
   .bl-main > section:nth-child(3) {
     top: 0%;
@@ -64,6 +63,10 @@ a:hover {
   .bl-main > section:nth-child(5) {
     top: 50%;
   }
+
+  .bl-box > .bl-icon {
+    padding: 0;
+  }
 }
 
 @media all and (max-height: 405px) and (min-height: 260px) {
@@ -71,6 +74,10 @@ a:hover {
     font-size: 40px;
     width: 247px;
     margin-top: 0px;
+  }
+
+  .bl-main > section {
+    height: 42.1%;
   }
 
   .bl-main > section:nth-child(2),
@@ -91,6 +98,10 @@ a:hover {
     margin-top: 5px;
   }
 
+  .bl-main > section {
+    height: 42.1%;
+  }
+
   .bl-main > section:nth-child(2),
   .bl-main > section:nth-child(3) {
     top: 16%;
@@ -107,6 +118,10 @@ a:hover {
     font-size: 85px;
     width: 524px;
     margin-top: 10px;
+  }
+
+  .bl-main > section {
+    height: 42.1%;
   }
 
   .bl-main > section:nth-child(2),
@@ -138,7 +153,6 @@ a:hover {
 .bl-main > section {
   position: absolute;
   width: 50%;
-  height: 42.1%;
 }
 
 .bl-main > div:first-child {
