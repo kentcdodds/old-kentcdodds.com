@@ -67,6 +67,15 @@ a:hover {
   .bl-box > .bl-icon {
     padding: 0;
   }
+
+  div.bl-panel-items > div > div,
+  div.bl-content {
+    top: 6px;
+  }
+
+  .bl-main > section .bl-icon-close {
+    top: 3px;
+  }
 }
 
 @media all and (max-height: 405px) and (min-height: 260px) {
@@ -88,6 +97,15 @@ a:hover {
   .bl-main > section:nth-child(4),
   .bl-main > section:nth-child(5) {
     top: 58%;
+  }
+
+  div.bl-panel-items > div > div,
+  div.bl-content {
+    top: 10px;
+  }
+
+  .bl-main > section .bl-icon-close {
+    top: 5px;
   }
 }
 
@@ -111,6 +129,15 @@ a:hover {
   .bl-main > section:nth-child(5) {
     top: 58%;
   }
+
+  div.bl-panel-items > div > div,
+  div.bl-content {
+    top: 20px;
+  }
+
+  .bl-main > section .bl-icon-close {
+    top: 10px;
+  }
 }
 
 @media all and (min-height: 600px) {
@@ -132,6 +159,15 @@ a:hover {
   .bl-main > section:nth-child(4),
   .bl-main > section:nth-child(5) {
     top: 58%;
+  }
+
+  div.bl-panel-items > div > div,
+  div.bl-content {
+    top: 40px;
+  }
+
+  .bl-main > section .bl-icon-close {
+    top: 20px;
   }
 }
 
@@ -258,7 +294,6 @@ a:hover {
 
 .bl-main > section .bl-icon-close {
   position: absolute;
-  top: 20px;
   right: 20px;
   cursor: pointer;
   z-index: 100;
@@ -275,7 +310,6 @@ div.bl-panel-items > div > div {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 10px;
   left: 30px;
   right: 30px;
   bottom: 30px;
