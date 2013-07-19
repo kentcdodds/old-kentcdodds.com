@@ -163,22 +163,22 @@ a:hover {
 
 .bl-main > section:nth-child(2) {
   left: 0;
-  background: #F06060;
+  background: #3498db;
 }
 
 .bl-main > section:nth-child(3) {
   left: 50%;
-  background: #FA987D;
+  background: #e74c3c;
 }
 
 .bl-main > section:nth-child(4) {
   left: 0;
-  background: #72CCA7;
+  background: #9b59b6;
 }
 
 .bl-main > section:nth-child(5) {
   left: 50%;
-  background: #10A296;
+  background: #34495e;
 }
 
 .bl-box {
@@ -275,7 +275,7 @@ div.bl-panel-items > div > div {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  top: 60px;
+  top: 10px;
   left: 30px;
   right: 30px;
   bottom: 30px;
@@ -471,17 +471,17 @@ div.bl-panel-items > div.bl-hide-current-work {
   z-index: 100;
 }
 
-.bl-main > section:first-child.bl-expand {
-  background: #EE4444;
-}
 .bl-main > section:nth-child(2).bl-expand {
-  background: #F98262;
+  background: #2980b9;
 }
 .bl-main > section:nth-child(3).bl-expand {
-  background: #4BBE8E;
+  background: #c0392b
 }
 .bl-main > section:nth-child(4).bl-expand {
-  background: #0D8278;
+  background: #8e44ad;
+}
+.bl-main > section:nth-child(5).bl-expand {
+  background: #2c3e50;
 }
 
 .bl-main.bl-expand-item > section:not(.bl-expand),
@@ -539,10 +539,6 @@ section.bl-expand .bl-icon-close {
   .bl-content,
   .bl-box {
     font-size: 75%;
-  }
-
-  .bl-expand .bl-box {
-    height: 130px;
   }
 
   .bl-content > ul li {
