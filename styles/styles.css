@@ -204,17 +204,17 @@ a:hover {
 
 .bl-main > section:nth-child(3) {
   left: 50%;
-  background: #e74c3c;
+  background: #95a5a6;
 }
 
 .bl-main > section:nth-child(4) {
   left: 0;
-  background: #9b59b6;
+  background: #2ecc71;
 }
 
 .bl-main > section:nth-child(5) {
   left: 50%;
-  background: #34495e;
+  background: #e74c3c;
 }
 
 .bl-box {
@@ -509,13 +509,13 @@ div.bl-panel-items > div.bl-hide-current-work {
   background: #2980b9;
 }
 .bl-main > section:nth-child(3).bl-expand {
-  background: #c0392b
+  background: #7f8c8d;
 }
 .bl-main > section:nth-child(4).bl-expand {
-  background: #8e44ad;
+  background: #27ae60;
 }
 .bl-main > section:nth-child(5).bl-expand {
-  background: #2c3e50;
+  background: #c0392b;
 }
 
 .bl-main.bl-expand-item > section:not(.bl-expand),
