@@ -10,7 +10,7 @@
  */
 var Boxlayout = (function() {
 
-  var $el = $('#bl-main'),
+  var $el = $('#bl-sections'),
     $sections = $el.children('section'),
     // works section
     $sectionWork = $('#bl-work-section'),
@@ -55,7 +55,6 @@ var Boxlayout = (function() {
         }
       });
       var removeCircles = $section.find('i.icon-remove-circle');
-      debugger;
       removeCircles.on('click', function() {
         closeSection($section);
         return false;

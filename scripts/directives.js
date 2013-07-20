@@ -1,30 +1,30 @@
 (function() {
-  var app = angular.get('kent');
+  var app = angular.module('kent');
   
-  app.directive('kTile', function() {
-    return {
-      templateUrl: './views/directives/kTile.html',
-      replace: false,
-      transclude: false,
-      restrict: 'EA',
-      controller: ["$scope", "$element", "$attrs", "$transclude", "otherInjectables",
-        function($scope, $element, $attrs, $transclude) {
+  // app.directive('kTile', function() {
+  //   return {
+  //     templateUrl: './views/directives/kTile.html',
+  //     replace: false,
+  //     transclude: false,
+  //     restrict: 'EA',
+  //     controller: ["$scope", "$element", "$attrs", "$transclude", "otherInjectables",
+  //       function($scope, $element, $attrs, $transclude) {
           
-        }
-      ],
-      compile: function compile(tElement, tAttrs, transclude) {
-        return {
-          pre: function preLink(scope, iElement, iAttrs, controller) {
+  //       }
+  //     ],
+  //     compile: function compile(tElement, tAttrs, transclude) {
+  //       return {
+  //         pre: function preLink(scope, iElement, iAttrs, controller) {
             
-          },
-          post: function postLink(scope, iElement, iAttrs, controller) {
+  //         },
+  //         post: function postLink(scope, iElement, iAttrs, controller) {
             
-          }
-        }
-      },
-      link: function postLink(scope, iElement, iAttrs) { 
-      }
-    };
-  });
+  //         }
+  //       }
+  //     },
+  //     link: function postLink(scope, iElement, iAttrs) { 
+  //     }
+  //   };
+  // });
   
 })();

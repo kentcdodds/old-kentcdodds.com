@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kent">
   <head>
     <title>Kent C. Dodds</title>
     <meta charset="UTF-8" />
@@ -15,69 +15,31 @@
   </head>
   <body>
     <div class="container">
-      <div id="bl-main" class="bl-main">
+      <div id="bl-sections" class="bl-sections" ng-controller="MainCtrl">
         <div id="my-name">
           Kent C. Dodds
         </div>
-        <section>
-          <div class="bl-box">
+        <section ng-repeat="section in sections" id="{{section.sectionId}}">
+          <div class="bl-box" ng-click="onBoxClick($index)">
             <div class="bl-box-label">
-              <i class="icon-smile"></i>
-              <h1>About</h1>
-            </div>
-          </i>
-          </div>
-          <div class="bl-content">
-            <h2>About Me</h2>
-            <p>This part is under construction...</p>
-            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
-          </div>
-          <i class="icon-remove-circle"></i>
-        </section>
-        <section id="bl-work-section">
-          <div class="bl-box">
-            <div class="bl-box-label">
-              <i class="icon-laptop"></i>
-              <h1>Projects</h1>
+              <i class="{{section.icon}}"></i>
+              <h1>{{section.title}}</h1>
             </div>
           </div>
           <div class="bl-content">
-            <h2>My Works</h2>
+            <h2>{{section.contentTitle}}</h2>
             <p>This part is under construction...</p>
             <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
           </div>
-          <i class="icon-remove-circle"></i>
-        </section>
-        <section>
-          <div class="bl-box">
-            <div class="bl-box-label">
-              <i class="icon-pencil"></i>
-              <h1>Blog</h1>
-            </div>
-          </div>
-          <div class="bl-content">
-            <h2>My Musings</h2>
-            <p>This part is under construction...</p>
-            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
-          </div>
-          <i class="icon-remove-circle"></i>
-        </section>
-        <section>
-          <div class="bl-box">
-            <div class="bl-box-label">
-              <i class="icon-envelope"></i>
-              <h1>Contact</h1>
-            </div>
-          </div>
-          <div class="bl-content">
-            <h2>Get in touch</h2>
-            <p>This part is under construction...</p>
-            <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
-          </div>
-          <i class="icon-remove-circle"></i>
+          <i class="icon-remove-circle" ng-click="closeSection($index)"></i>
         </section>
     </div><!-- /container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/dt-script-loader.min.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/controllers.js"></script>
+    <script src="./scripts/directives.js"></script>
     <script src="./vendor/boxlayout.js"></script>
     <script>
       $(function() {
