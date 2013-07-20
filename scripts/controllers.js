@@ -91,6 +91,19 @@
       $location.path('/');
     };
 
+    $scope.keyUp = function(e) {
+      if (event.keyCode !== 27) {
+        return;
+      }
+      var $section = $('section.bl-expand');
+      //Check if a section or a work panel is open
+      if ($('.bl-show-work').length) {
+        closeWorkPanel();
+      } else if ($section.length) {
+        $scope.closeSection($section);
+      }
+    };
+
     $(function() {
       var section = _.find($scope.sections, {path: $location.path()});
       if (section) {
