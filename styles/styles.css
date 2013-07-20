@@ -45,9 +45,21 @@ a:hover {
 
 .container { height: 100%; }
 
+
+/**
+ * Media queries. Responsive design.
+ */
 @media all and (max-height: 260px) {
   #my-name {
     display: none;
+  }
+
+  .bl-box-label > i {
+    font-size: 30px;
+  }
+
+  .bl-box-label > h1 {
+    font-size: 20px;
   }
 
   .bl-main > section {
@@ -73,8 +85,9 @@ a:hover {
     top: 6px;
   }
 
-  .bl-main > section .bl-icon-close {
+  .bl-main > section .icon-remove-circle {
     top: 3px;
+    font-size: 20px;
   }
 }
 
@@ -83,6 +96,14 @@ a:hover {
     font-size: 40px;
     width: 247px;
     margin-top: 0px;
+  }
+
+  .bl-box-label > i {
+    font-size: 40px;
+  }
+
+  .bl-box-label > h1 {
+    font-size: 25px;
   }
 
   .bl-main > section {
@@ -104,8 +125,9 @@ a:hover {
     top: 10px;
   }
 
-  .bl-main > section .bl-icon-close {
+  .bl-main > section .icon-remove-circle {
     top: 5px;
+    font-size: 25px;
   }
 }
 
@@ -115,6 +137,15 @@ a:hover {
     width: 372px;
     margin-top: 5px;
   }
+
+  .bl-box-label > i {
+    font-size: 45px;
+  }
+
+  .bl-box-label > h1 {
+    font-size: 30px;
+  }
+
 
   .bl-main > section {
     height: 42.1%;
@@ -135,8 +166,9 @@ a:hover {
     top: 20px;
   }
 
-  .bl-main > section .bl-icon-close {
+  .bl-main > section .icon-remove-circle {
     top: 10px;
+    font-size: 30px;
   }
 }
 
@@ -145,6 +177,14 @@ a:hover {
     font-size: 85px;
     width: 524px;
     margin-top: 10px;
+  }
+
+  .bl-box-label > i {
+    font-size: 55px;
+  }
+
+  .bl-box-label > h1 {
+    font-size: 35px;
   }
 
   .bl-main > section {
@@ -166,8 +206,9 @@ a:hover {
     top: 40px;
   }
 
-  .bl-main > section .bl-icon-close {
+  .bl-main > section .icon-remove-circle {
     top: 20px;
+    font-size: 40px;
   }
 }
 
@@ -247,19 +288,16 @@ a:hover {
     align-items: center;
 }
 
-.bl-box h2 {
+.bl-box-label {
   text-align: center;
   margin: 0;
-  padding: 20px;
   width: 100%;
-  font-size: 1.8em;
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.bl-icon {
-  font-family: 'icomoon';
+.bl-box-label > h1 {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -267,42 +305,18 @@ a:hover {
   text-transform: none;
   line-height: 1;
   cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0px;
   -webkit-font-smoothing: antialiased;
 }
 
-.bl-icon:before {
-  display: block;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.bl-icon-about:before {
-  content: "\e000";
-}
-
-.bl-icon-works:before {
-  content: "\e001";
-}
-
-.bl-icon-blog:before {
-  content: "\e002";
-}
-
-.bl-icon-contact:before {
-  content: "\e003";
-}
-
-.bl-main > section .bl-icon-close {
+.bl-main > section .icon-remove-circle {
   position: absolute;
   right: 20px;
   cursor: pointer;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
-}
-
-.bl-icon-close:before {
-  content: "\e005";
 }
 
 .bl-content, 
@@ -334,48 +348,8 @@ div.bl-panel-items > div > div {
   margin: 0 0 20px 0;
 }
 
-.bl-content article {
-  padding: 20px 40px 20px 0px;
-}
-
-.bl-content article h3 {
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0 0 10px 0;
-  padding-top: 20px;
-  font-size: 1.4em;
-}
-
-.bl-content article a {
-  color: rgba(0,0,0,0.2);
-}
-
-.bl-content > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-} 
-
-.bl-content > ul li {
-  display: inline-block;
-  width: 20%;
-  margin: 1%;
-}
-
-.bl-content > ul li a {
-  display: block;
-  padding: 0;
-  border: 8px solid rgba(0,0,0,0.1);
-}
-
-.bl-content > ul li a img {
-  display: block;
-  max-width: 100%;
-}
 
 /* Panel Items */
-
 div.bl-panel-items,
 div.bl-panel-items > div {
   width: 100%;
@@ -540,13 +514,13 @@ section.bl-expand .bl-box {
   transition: opacity 0s linear;
 }
 
-.bl-box h2 {
+.bl-box-label {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.no-touch section:not(.bl-expand) .bl-box:hover h2 {
+.no-touch section:not(.bl-expand) .bl-box:hover .bl-box-label {
   -webkit-transform: translateY(-15px);
   -moz-transform: translateY(-15px);
   -ms-transform: translateY(-15px);
@@ -554,14 +528,14 @@ section.bl-expand .bl-box {
 }
 
 .bl-content,
-.bl-icon-close {
+.icon-remove-circle {
   -webkit-transition: opacity 0.1s linear 0s;
   -moz-transition: opacity 0.1s linear 0s;
   transition: opacity 0.1s linear 0s;
 }
 
 section.bl-expand .bl-content,
-section.bl-expand .bl-icon-close {
+section.bl-expand .icon-remove-circle {
   pointer-events: auto;
   opacity: 1;
   -webkit-transition: opacity 0.3s linear 0.5s;
