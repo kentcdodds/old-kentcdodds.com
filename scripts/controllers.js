@@ -75,8 +75,8 @@
       }
     };
 
-    $scope.closeSection = function(index) {
-      var $section = getSection(index);
+    $scope.closeSection = function(arg) {
+      var $section = _.isNumber(arg) ? getSection(arg) : arg;
       $section.data('open', false).removeClass('bl-expand').on(transEndEventName, function(event) {
         if (!$(event.target).is('section')) {
           return false;
