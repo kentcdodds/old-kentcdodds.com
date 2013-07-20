@@ -1,7 +1,7 @@
 (function() {
   var app = angular.module('kent');
   
-  app.controller('MainCtrl', function($scope) {
+  app.controller('MainCtrl', function($scope, $location) {
     
     var $el = $('#bl-sections');
     
@@ -37,25 +37,25 @@
         sectionId: 'about-section',
         title: 'About',
         icon: 'icon-smile',
-        contentTitle: 'About me'
+        path: '/about'
       },
       {
         sectionId: 'projects-section',
         title: 'Projects',
         icon: 'icon-laptop',
-        contentTitle: 'My projects'
+        path: 'projects'
       },
       {
         sectionId: 'blog-section',
         title: 'Blog',
         icon: 'icon-pencil',
-        contentTitle: 'My Thoughts'
+        path: '/blog'
       },
       {
         sectionId: 'contact-section',
         title: 'Contact',
         icon: 'icon-envelope',
-        contentTitle: 'Get in touch'
+        path: '/contact'
       },
     ];
 
@@ -70,6 +70,8 @@
       if (!$section.data('open')) {
         $section.data('open', true).addClass('bl-expand bl-expand-top');
         $el.addClass('bl-expand-item'); 
+        var sectionView = $scope.sections[index].path;
+        $location.path(sectionView);
       }
     };
 
@@ -89,5 +91,9 @@
     };
 
   });
+
+app.controller('AboutCtrl', function($scope) {
+
+});
   
 })();
