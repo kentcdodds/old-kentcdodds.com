@@ -43,7 +43,7 @@
         sectionId: 'projects-section',
         title: 'Projects',
         icon: 'icon-laptop',
-        path: 'projects'
+        path: '/projects'
       },
       {
         sectionId: 'blog-section',
