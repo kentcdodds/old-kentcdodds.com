@@ -94,7 +94,6 @@ a:hover {
 @media all and (max-height: 405px) and (min-height: 260px) {
   #my-name {
     font-size: 40px;
-    width: 247px;
     margin-top: 0px;
   }
 
@@ -134,7 +133,6 @@ a:hover {
 @media all and (max-height: 600px) and (min-height: 405px) {
   #my-name {
     font-size: 60px;
-    width: 372px;
     margin-top: 5px;
   }
 
@@ -175,7 +173,6 @@ a:hover {
 @media all and (min-height: 600px) {
   #my-name {
     font-size: 85px;
-    width: 524px;
     margin-top: 10px;
   }
 
@@ -213,11 +210,7 @@ a:hover {
 }
 
 #my-name {
-  position: absolute;
-  margin-right: auto;
-  margin-left: auto;
-  right: 0;
-  left: 0;
+  text-align: center;
 }
 
 .bl-sections {
