@@ -88,6 +88,7 @@
         $section.removeClass('bl-expand-top');
       }
       $el.removeClass('bl-expand-item');
+      $location.path('/');
     };
 
   });
