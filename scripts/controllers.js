@@ -91,10 +91,12 @@
       $location.path('/');
     };
 
-  });
+    $(function() {
+      var section = _.find($scope.sections, {path: $location.path()});
+      if (section) {
+        $scope.onBoxClick(_.indexOf($scope.sections, section));
+      }
+    });
 
-app.controller('AboutCtrl', function($scope) {
-
-});
-  
+  }); 
 })();
