@@ -100,7 +100,7 @@
   }); 
 
   app.controller('ProjectsCtrl', function($scope) {
-
+    $scope.underConstruction = true;
 
     var getPanelAt = function(index) {
       return $('#bl-panel-work-items > [data-panel=panel-' + index + ']');
