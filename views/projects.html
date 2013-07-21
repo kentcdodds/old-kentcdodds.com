@@ -1,3 +1,21 @@
 <h1>My Projects</h1>
-<p>This part is under construction...</p>
-<p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+<ul id="bl-work-items">
+  <li ng-repeat="project in projects" ng-click="clickProject({{$index}})" data-panel="panel-{{$index}}">
+    {{project.title}}
+  </li>
+</ul>
+<div class="bl-panel-items" id="bl-panel-work-items">
+  <div ng-repeat="project in projects" data-panel="panel-{{$index}}">
+    <div>
+      <!-- <img src="{{project.img}}" ng-show="{{project.img}}" /> -->
+      <h3>{{project.title}}</h3>
+      <p>{{project.description}}</p>
+      <p>{{getContributors($index)}}</p>
+    </div>
+  </div>
+  <nav>
+    <span class="bl-prev-work" ng-click="changeProject(-1)">&lt; Prev</span>
+    <span class="bl-next-work" ng-click="changeProject(1)">&gt; Next</span>
+    <span class="bl-icon bl-icon-close" ng-click="closeProjectPanels"></span>
+  </nav>
+</div>

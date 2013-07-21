@@ -1,35 +1,21 @@
 (function() {
   var app = angular.module('kent');
-  
+
+  var transEndEventNames = {
+    'WebkitTransition' : 'webkitTransitionEnd',
+    'MozTransition' : 'transitionend',
+    'OTransition' : 'oTransitionEnd',
+    'msTransition' : 'MSTransitionEnd',
+    'transition' : 'transitionend'
+  };
+  // transition end event name
+  var transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
+  // support css transitions
+  var supportTransitions = Modernizr.csstransitions;
+
+
   app.controller('MainCtrl', function($scope, $location) {
-    
-    var $el = $('#bl-sections');
-    
-    // works section
-    var $sectionWork = $('#bl-work-section');
-    // work items
-    var $workItems = $('#bl-work-items > li');
-    // work panels
-    var $workPanelsContainer = $('#bl-panel-work-items');
-    var $workPanels = $workPanelsContainer.children('div');
-    var totalWorkPanels = $workPanels.length;
-    // navigating the work panels
-    var $nextWorkItem = $workPanelsContainer.find('nav > span.bl-next-work');
-    // if currently navigating the work items
-    var isAnimating = false;
-    // close work panel trigger
-    var $closeWorkItem = $workPanelsContainer.find('nav > i.icon-remove-circle');
-    var transEndEventNames = {
-      'WebkitTransition' : 'webkitTransitionEnd',
-      'MozTransition' : 'transitionend',
-      'OTransition' : 'oTransitionEnd',
-      'msTransition' : 'MSTransitionEnd',
-      'transition' : 'transitionend'
-    };
-    // transition end event name
-    var transEndEventName = transEndEventNames[ Modernizr.prefixed('transition') ];
-    // support css transitions
-    var supportTransitions = Modernizr.csstransitions;
+
 
     $scope.underConstruction = true;
     $scope.sections = [
@@ -69,7 +55,7 @@
       var $section = getSection(index);
       if (!$section.data('open')) {
         $section.data('open', true).addClass('bl-expand bl-expand-top');
-        $el.addClass('bl-expand-item'); 
+        $('#bl-sections').addClass('bl-expand-item'); 
         var sectionView = $scope.sections[index].path;
         $location.path(sectionView);
       }
@@ -87,7 +73,7 @@
       if (!supportTransitions) {
         $section.removeClass('bl-expand-top');
       }
-      $el.removeClass('bl-expand-item');
+      $('#bl-sections').removeClass('bl-expand-item');
       $location.path('/');
     };
 
@@ -112,4 +98,102 @@
     });
 
   }); 
+
+  app.controller('ProjectsCtrl', function($scope) {
+
+
+    var getPanelAt = function(index) {
+      return $('#bl-panel-work-items > [data-panel=panel-' + index + ']');
+    };
+
+    var getCurrentPanel = function() {
+      return getPanelAt($scope.currentPanelIndex);
+    };
+
+    $scope.projects = [
+      {
+        title: 'SpendMyCents.com',
+        img: null,
+        description: 'Spend My Cents rocks!',
+        contributors: [
+          {
+            name: 'Kent Dodds',
+            role: 'Backend (and currently sole maintainer)',
+            link: 'http://kent.doddsfamily.us'
+          },
+          {
+            name: 'Mack Cope',
+            role: 'Initial frontend',
+            link: 'http://www.mackcope.com'
+          }
+        ]
+      },
+      {
+        title: 'FriendStories',
+        img: null,
+        description: 'Friend Stories is going to be big!',
+        contributors: [
+          {
+            name: 'Kent Dodds',
+            role: 'Everyting',
+            link: 'http://kent.doddsfamily.us'
+          }
+        ]
+      }
+    ];
+
+
+    $scope.getContributors = function(index) {
+      var contributors = $scope.projects[index].contributors;
+      var totalContributors  = contributors.length;
+      return 'contrib';
+    };
+
+    $scope.closeProjectPanels = function() {
+      // scale up main section
+      $('#bl-work-section').removeClass('bl-scale-down');
+      $('#bl-panel-work-items').removeClass('bl-panel-items-show');
+      getCurrentPanel().removeClass('bl-show-work');
+    };
+
+    $scope.clickProject = function(index) {
+      console.log('Index: ' + index);
+      var $workPanelsContainer = $('#bl-panel-work-items');
+      var $panel = getPanelAt(index);
+
+      $('#bl-work-section').addClass('bl-scale-down');
+      $('#bl-panel-work-items').addClass('bl-panel-items-show');
+      $scope.currentPanelIndex = index;
+      $panel.addClass('bl-show-work');
+    };
+
+    $scope.changeProject = function(movement) {
+      var $currentPanel = getCurrentPanel();
+      var newIndex = $scope.currentPanelIndex + movement;
+      if ($scope.isAnimating) {
+        return false;
+      }
+      $scope.isAnimating = true;
+
+      if (newIndex > $scope.projects.length - 1) {
+        newIndex = 0;
+      } else if (newIndex < 0) {
+        newIndex = $scope.projects.length - 1;
+      }
+
+      $currentPanel.removeClass('bl-show-work').addClass('bl-hide-current-work').on(transEndEventName, function(event) {
+        if (!$(event.target).is('div')) return false;
+        $(this).off(transEndEventName).removeClass('bl-hide-current-work');
+        $scope.isAnimating = false;
+      });
+
+      if (!supportTransitions) {
+        $currentPanel.removeClass('bl-hide-current-work');
+        $scope.isAnimating = false;
+      }
+
+      $scope.clickProject(newIndex);
+    };
+
+  });
 })();

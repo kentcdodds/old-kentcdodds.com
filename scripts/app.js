@@ -6,7 +6,8 @@
       templateUrl: './views/about.html'
     }).
     when('/projects', {
-      templateUrl: './views/projects.html'
+      templateUrl: './views/projects.html',
+      controller: 'ProjectsCtrl'
     }).
     when('/blog', {
       templateUrl: './views/blog.html'
