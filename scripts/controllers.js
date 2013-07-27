@@ -45,11 +45,11 @@
       $scope.sectionSelected = isSectionIsActive();
     });
 
-    $scope.closeSection = function(arg) {
+    $scope.closeSection = function() {
       $location.path('/');
     };
 
-    $scope.keyUp = function(e) {
+    $scope.keyUp = function(event) {
       if (event.keyCode !== 27) {
         return;
       }
