@@ -5,7 +5,6 @@
   app.directive('shortcut', function() {
     return {
       restrict: 'A',
-      replace: true,
       scope: true,
       link: function postLink(scope, iElement, iAttrs) {
         if (scope.keyUp) {
