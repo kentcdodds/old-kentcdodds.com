@@ -16,65 +16,65 @@
 
 
   app.controller('MainCtrl', function($scope, $location) {
+    var i, total;
+    var isSectionIsActive;
 
 
     $scope.underConstruction = true;
+    $scope.sectionSelected = false;
     $scope.sections = [
       {
         sectionId: 'about-section',
         title: 'About',
         icon: 'icon-smile',
-        path: '/about'
+        path: '/about',
+        active: false
       },
       {
         sectionId: 'projects-section',
         title: 'Projects',
         icon: 'icon-laptop',
-        path: '/projects'
+        path: '/projects',
+        active: false
       },
       {
         sectionId: 'blog-section',
         title: 'Blog',
         icon: 'icon-pencil',
-        path: '/blog'
+        path: '/blog',
+        active: false
       },
       {
         sectionId: 'contact-section',
         title: 'Contact',
         icon: 'icon-envelope',
-        path: '/contact'
-      },
-    ];
-
-
-    var getSection = function(index) {
-      var selector = '#' + $scope.sections[index].sectionId;
-      return $(selector);
-    };
-
-    $scope.onBoxClick = function(index) {
-      var $section = getSection(index);
-      if (!$section.data('open')) {
-        $section.data('open', true).addClass('bl-expand bl-expand-top');
-        $('#bl-sections').addClass('bl-expand-item'); 
-        var sectionView = $scope.sections[index].path;
-        $location.path(sectionView);
+        path: '/contact',
+        active: false
       }
+    ];
+    
+    $scope.$watch(function() {
+      return $location.path();
+    }, function() {
+      _.each($scope.sections, function(section) {
+        section.active = section.path === $location.path();
+      });
+    });
+    
+    isSectionIsActive = function() {
+      for (i = 0, total = $scope.sections.length; i < total; i++) {
+        if ($scope.sections[i].active) {
+          return true;
+        }
+      }
+      return false;
     };
+    
+    $scope.$watch(isSectionIsActive, function() {
+      $scope.sectionSelected = isSectionIsActive();
+    });
 
     $scope.closeSection = function(arg) {
-      var $section = _.isNumber(arg) ? getSection(arg) : arg;
-      $section.data('open', false).removeClass('bl-expand').on(transEndEventName, function(event) {
-        if (!$(event.target).is('section')) {
-          return false;
-        }
-        $(this).off(transEndEventName).removeClass('bl-expand-top');
-      });
-
-      if (!supportTransitions) {
-        $section.removeClass('bl-expand-top');
-      }
-      $('#bl-sections').removeClass('bl-expand-item');
       $location.path('/');
     };
 
@@ -85,19 +85,12 @@
       var $section = $('section.bl-expand');
       //Check if a section or a work panel is open
       if ($('.bl-show-work').length) {
-        closeWorkPanel();
+        //closeWorkPanel();
+        console.log('close work panel... TODO');
       } else if ($section.length) {
         $scope.closeSection($section);
       }
     };
-
-    $(function() {
-      var section = _.find($scope.sections, {path: $location.path()});
-      if (section) {
-        $scope.onBoxClick(_.indexOf($scope.sections, section));
-      }
-    });
-
   }); 
 
   app.controller('ProjectsCtrl', function($scope) {

@@ -46,6 +46,10 @@ a:hover {
 .container { height: 100%; }
 
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
 /**
  * Media queries. Responsive design.
  */
