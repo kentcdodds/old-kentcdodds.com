@@ -1,7 +1,45 @@
 'use strict';
 (function() {
   var app = angular.module('kent');
-  
+
+  app.factory('Sections', function() {
+    var sections = [
+      {
+        sectionId: 'about-section',
+        title: 'About',
+        icon: 'icon-smile',
+        path: '/about',
+        active: false
+      },
+      {
+        sectionId: 'projects-section',
+        title: 'Projects',
+        icon: 'icon-laptop',
+        path: '/projects',
+        active: false
+      },
+      {
+        sectionId: 'blog-section',
+        title: 'Blog',
+        icon: 'icon-pencil',
+        path: '/blog',
+        active: false
+      },
+      {
+        sectionId: 'contact-section',
+        title: 'Contact',
+        icon: 'icon-envelope',
+        path: '/contact',
+        active: false
+      }
+    ];
+    return {
+      getSections: function() {
+        return sections;
+      }
+    }
+  });
+
   app.factory('Networks', function() {
     var networks = [
       {
@@ -63,5 +101,45 @@
         return networks;
       }
     };
+  });
+  
+  app.factory('Projects', function() {
+    var projects = [
+      {
+        title: 'SpendMyCents.com',
+        img: null,
+        description: 'Spend My Cents rocks!',
+        contributors: [
+          {
+            name: 'Kent Dodds',
+            role: 'Backend (and currently sole maintainer)',
+            link: 'http://kent.doddsfamily.us'
+          },
+          {
+            name: 'Mack Cope',
+            role: 'Initial frontend',
+            link: 'http://www.mackcope.com'
+          }
+        ]
+      },
+      {
+        title: 'FriendStories',
+        img: null,
+        description: 'Friend Stories is going to be big!',
+        contributors: [
+          {
+            name: 'Kent Dodds',
+            role: 'Everyting',
+            link: 'http://kent.doddsfamily.us'
+          }
+        ]
+      }
+    ];
+    
+    return {
+      getProjects: function() {
+        return projects;
+      }
+    }
   });
 })();

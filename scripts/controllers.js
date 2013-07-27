@@ -15,43 +15,14 @@
   var supportTransitions = Modernizr.csstransitions;
 
 
-  app.controller('MainCtrl', function($scope, $location) {
+  app.controller('MainCtrl', function($scope, $location, Sections) {
     var i, total;
     var isSectionIsActive;
 
 
     $scope.underConstruction = true;
     $scope.sectionSelected = false;
-    $scope.sections = [
-      {
-        sectionId: 'about-section',
-        title: 'About',
-        icon: 'icon-smile',
-        path: '/about',
-        active: false
-      },
-      {
-        sectionId: 'projects-section',
-        title: 'Projects',
-        icon: 'icon-laptop',
-        path: '/projects',
-        active: false
-      },
-      {
-        sectionId: 'blog-section',
-        title: 'Blog',
-        icon: 'icon-pencil',
-        path: '/blog',
-        active: false
-      },
-      {
-        sectionId: 'contact-section',
-        title: 'Contact',
-        icon: 'icon-envelope',
-        path: '/contact',
-        active: false
-      }
-    ];
+    $scope.sections = Sections.getSections();
     
     $scope.$watch(function() {
       return $location.path();
@@ -93,7 +64,7 @@
     };
   }); 
 
-  app.controller('ProjectsCtrl', function($scope) {
+  app.controller('ProjectsCtrl', function($scope, Projects) {
     $scope.underConstruction = true;
 
     var getPanelAt = function(index) {
@@ -104,38 +75,7 @@
       return getPanelAt($scope.currentPanelIndex);
     };
 
-    $scope.projects = [
-      {
-        title: 'SpendMyCents.com',
-        img: null,
-        description: 'Spend My Cents rocks!',
-        contributors: [
-          {
-            name: 'Kent Dodds',
-            role: 'Backend (and currently sole maintainer)',
-            link: 'http://kent.doddsfamily.us'
-          },
-          {
-            name: 'Mack Cope',
-            role: 'Initial frontend',
-            link: 'http://www.mackcope.com'
-          }
-        ]
-      },
-      {
-        title: 'FriendStories',
-        img: null,
-        description: 'Friend Stories is going to be big!',
-        contributors: [
-          {
-            name: 'Kent Dodds',
-            role: 'Everyting',
-            link: 'http://kent.doddsfamily.us'
-          }
-        ]
-      }
-    ];
-
+    $scope.projects = Projects.getProjects();
 
     $scope.getContributors = function(index) {
       var contributors = $scope.projects[index].contributors;
