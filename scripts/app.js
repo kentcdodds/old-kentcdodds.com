@@ -14,7 +14,8 @@
       templateUrl: './views/blog.html'
     }).
     when('/contact', {
-      templateUrl: './views/contact.html'
+      templateUrl: './views/contact.html',
+      controller: 'ContactCtrl'
     }).
     otherwise({redirectTo: '/'});
   });

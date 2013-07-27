@@ -197,4 +197,28 @@
     };
 
   });
+  
+  app.controller('ContactCtrl', function($scope, $location, Networks) {
+    var searchParams;
+
+    $scope.networks = Networks.getNetworks();
+    $scope.getBackgroundImage = function(networkName) {
+      return './images/social/' + networkName + '-hover.png';
+    };
+
+    $scope.networkClick = function(index) {
+      if ($scope.networks[index].onClick) {
+        $scope.networks[index].onClick($scope);
+      }
+    };
+
+    searchParams = $location.search();
+    for (var i = 0, total = $scope.networks.length; i < total; i++) {
+      var network = $scope.networks[i];
+      if (searchParams[network.name] === 'true') {
+        network.onClick($scope);
+      }
+    }
+    
+  });
 })();
