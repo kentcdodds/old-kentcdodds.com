@@ -315,6 +315,10 @@ a:hover {
   text-transform: uppercase;
 }
 
+a.bl-box {
+  text-decoration: none;
+}
+
 .bl-box-label > h1 {
   speak: none;
   font-style: normal;
