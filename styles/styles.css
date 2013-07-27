@@ -43,6 +43,10 @@ a:hover {
   display: none;
 }
 
+#offline-indicator {
+  position: absolute;
+}
+
 /**
  * Media queries. Responsive design.
  */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="kent">
+<html manifest="./cache.manifest" lang="en" ng-app="kent">
   <head>
     <title>Kent C. Dodds</title>
     <meta charset="UTF-8" />
@@ -14,6 +14,7 @@
     <script src="./vendor/modernizr.custom.js"></script>
   </head>
   <body>
+    <div id="offline-indicator" ng-cloak ng-hide="online">You are offline! You are seeing a cached version.</div>
     <div class="container">
       <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" ng-controller="MainCtrl" shortcut>
         <div id="my-name">
@@ -31,8 +32,8 @@
         </section>
       </div>
     </div><!-- /container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.min.js" data-prop-name="_" data-local-src="./vendor/lodash.min.js"></script>
     
     <script src="./vendor/dt-script-loader.min.js"></script>
@@ -40,6 +41,6 @@
     <script src="./scripts/controllers.js"></script>
     <script src="./scripts/factories.js"></script>
     <script src="./scripts/directives.js"></script>
-    <script src="./scripts/other.js"></script>
+    <script src="./vendor/google-analytics.js"></script>
   </body>
 </html>
