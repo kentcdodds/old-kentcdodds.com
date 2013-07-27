@@ -144,6 +144,10 @@
         $scope.networks[index].onClick($scope);
       }
     };
+    
+    $scope.closePhoneModal = function() {
+      $('#modal-16').removeClass('md-show');
+    };
 
     searchParams = $location.search();
     for (var i = 0, total = $scope.networks.length; i < total; i++) {
