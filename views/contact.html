@@ -1,3 +1,13 @@
 <h1>Contact me</h1>
-<p>This part is under construction...</p>
-<p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+<p>Below you will find a list of all the networks you can connect with me on.
+  I'm more active on some than others.
+  I tried to put them in order of activity. Enjoy :)</p>
+<a
+  ng-repeat="network in networks"
+  class="social-slide {{network.class}}"
+  title="{{network.summary}}"
+  ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
+  ng-href="{{network.url}}"
+  ng-click="networkClick($index)"
+>
+</a>
