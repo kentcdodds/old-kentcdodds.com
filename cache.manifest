@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#manifest version: 0.0.1
+#manifest version: 0.0.1.2
 
 CACHE:
 
@@ -32,6 +32,9 @@ CACHE:
 
 #styles
 /styles/styles.css
+//themes.googleusercontent.com/static/fonts/lato/v6/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff
+//themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff
+//themes.googleusercontent.com/static/fonts/lato/v6/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff
 
 #vendor
 /vendor/font-awesome/css/font-awesome.min.css

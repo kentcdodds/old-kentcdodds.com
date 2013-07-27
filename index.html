@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--<html lang="en" ng-app="kent">-->
 <html manifest="./cache.manifest" lang="en" ng-app="kent">
   <head>
     <title>Kent C. Dodds</title>
@@ -13,10 +14,12 @@
     <link rel="stylesheet" type="text/css" href="./vendor/font-awesome/css/font-awesome.min.css" />
     <script src="./vendor/modernizr.custom.js"></script>
   </head>
-  <body>
-    <div id="offline-indicator" ng-cloak ng-hide="online">You are offline! You are seeing a cached version.</div>
+  <body ng-controller="MainCtrl">
+    <div id="top-message" ng-cloak ng-show="(isIE && showIEMessage) || (!online && showOfflineMessage)">
+      <span ng-show="isIE && showIEMessage" ng-click="showIEMessage = false">This site works best when <em><strong>not</strong></em> viewed in Internet Explorer... Try <a href="http://chrome.google.com" target="_blank">Chrome</a></span>
+      <span ng-show="!online && showOfflineMessage" ng-click="showOfflineMessage = false">You are offline! You are seeing a cached version.</span></div>
     <div class="container">
-      <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" ng-controller="MainCtrl" shortcut>
+      <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" shortcut>
         <div id="my-name">
           Kent C. Dodds
         </div>

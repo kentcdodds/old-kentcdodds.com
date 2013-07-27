@@ -15,11 +15,13 @@
   var supportTransitions = Modernizr.csstransitions;
 
 
-  app.controller('MainCtrl', function($scope, $location, Sections) {
+  app.controller('MainCtrl', function($scope, $location, Sections, ie) {
     var i, total;
     var isSectionIsActive;
 
-
+    $scope.isIE = !!ie;
+    $scope.showIEMessage = true;
+    $scope.showOfflineMessage = true;
     $scope.underConstruction = true;
     $scope.sectionSelected = false;
     $scope.sections = Sections.getSections();

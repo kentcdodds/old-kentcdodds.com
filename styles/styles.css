@@ -43,8 +43,12 @@ a:hover {
   display: none;
 }
 
-#offline-indicator {
+#top-message {
   position: absolute;
+  z-index: 101;
+  padding: 4px;
+  text-shadow: .5px 1px 5px #000000;
+  background-color:rgba(255,0,0,0.5);
 }
 
 /**
