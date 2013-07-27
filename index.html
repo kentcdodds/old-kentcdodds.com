@@ -26,10 +26,10 @@
               <h1>{{section.title}}</h1>
             </div>
           </a>
-          <div class="bl-content" ng-view>
-          </div>
+          <div class="bl-content" ng-include src="section.viewLocation"></div>
           <i class="icon-remove-circle" ng-click="closeSection($index)"></i>
         </section>
+      </div>
     </div><!-- /container -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
@@ -37,8 +37,8 @@
     
     <script src="./vendor/dt-script-loader.min.js"></script>
     <script src="./scripts/app.js"></script>
-    <script src="./scripts/factories.js"></script>
     <script src="./scripts/controllers.js"></script>
+    <script src="./scripts/factories.js"></script>
     <script src="./scripts/directives.js"></script>
   </body>
 </html>

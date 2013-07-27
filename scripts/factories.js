@@ -9,28 +9,32 @@
         title: 'About',
         icon: 'icon-smile',
         path: '/about',
-        active: false
+        active: false,
+        viewLocation: './views/about.html'
       },
       {
         sectionId: 'projects-section',
         title: 'Projects',
         icon: 'icon-laptop',
         path: '/projects',
-        active: false
+        active: false,
+        viewLocation: './views/projects.html'
       },
       {
         sectionId: 'blog-section',
         title: 'Blog',
         icon: 'icon-pencil',
         path: '/blog',
-        active: false
+        active: false,
+        viewLocation: './views/blog.html'
       },
       {
         sectionId: 'contact-section',
         title: 'Contact',
         icon: 'icon-envelope',
         path: '/contact',
-        active: false
+        active: false,
+        viewLocation: './views/contact.html'
       }
     ];
     return {
@@ -71,7 +75,8 @@
         name: 'phone',
         summary: 'Call me (maybe? ;D)',
         onClick: function(scope) {
-          console.log('call clicked');
+          console.log('call phone clicked');
+          $('#modal-16').addClass('md-show');
         }
       },
       {
