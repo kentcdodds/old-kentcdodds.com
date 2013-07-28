@@ -28,7 +28,7 @@ CACHE:
 /scripts/app.js
 /scripts/controllers.js
 /scripts/directives.js
-/scripts/factories.js
+/scripts/value.js
 
 #styles
 /styles/styles.css
