@@ -15,7 +15,7 @@
   var supportTransitions = Modernizr.csstransitions;
 
 
-  app.controller('MainCtrl', function($scope, $location, Sections, ie) {
+  app.controller('MainCtrl', function($scope, $location, sections, ie) {
     var i, total;
     var isSectionIsActive;
 
@@ -24,7 +24,7 @@
     $scope.showOfflineMessage = true;
     $scope.underConstruction = true;
     $scope.sectionSelected = false;
-    $scope.sections = Sections.getSections();
+    $scope.sections = sections;
     
     $scope.$watch(function() {
       return $location.path();
@@ -66,7 +66,7 @@
     };
   }); 
 
-  app.controller('ProjectsCtrl', function($scope, Projects) {
+  app.controller('ProjectsCtrl', function($scope, projects) {
     $scope.underConstruction = true;
 
     var getPanelAt = function(index) {
@@ -77,7 +77,7 @@
       return getPanelAt($scope.currentPanelIndex);
     };
 
-    $scope.projects = Projects.getProjects();
+    $scope.projects = projects;
 
     $scope.getContributors = function(index) {
       var contributors = $scope.projects[index].contributors;
@@ -133,10 +133,10 @@
 
   });
   
-  app.controller('ContactCtrl', function($scope, $location, Networks) {
+  app.controller('ContactCtrl', function($scope, $location, networks) {
     var searchParams;
 
-    $scope.networks = Networks.getNetworks();
+    $scope.networks = networks;
     $scope.getBackgroundImage = function(networkName) {
       return './images/social/' + networkName + '-hover.png';
     };
