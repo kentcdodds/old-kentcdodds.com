@@ -28,10 +28,14 @@ CACHE:
 /scripts/app.js
 /scripts/controllers.js
 /scripts/directives.js
-/scripts/value.js
+/scripts/values.js
 
 #styles
-/styles/styles.css
+/styles/main.css
+/styles/common.css
+/styles/common-content.css
+/styles/contact.css
+/styles/projects.css
 //themes.googleusercontent.com/static/fonts/lato/v6/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff
 //themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff
 //themes.googleusercontent.com/static/fonts/lato/v6/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff
