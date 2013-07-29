@@ -123,10 +123,6 @@
   opacity: 1;
 }
 
-#call-widget > object {
-  margin-top: -50px;
-}
-
 #call-widget {
   text-align: center;
 }
