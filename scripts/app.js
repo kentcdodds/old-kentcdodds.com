@@ -18,17 +18,8 @@
       });
     }, false);
   };
-  
-  var addGAToAllAnchorTags = function() {
-    var anchors = $('a');
-    anchors.each(function() {
-      $(this).attr('ga', '');
-    });
-  };
 
   app.run(function($window, $rootScope) {
     setupOnlineListener($window, $rootScope);
-    setTimeout(addGAToAllAnchorTags, 1000); //Yeah, I know, it's really lame...
-    //I did it because I didn't want to rewrite the ng-include directive...
   });
 })();
