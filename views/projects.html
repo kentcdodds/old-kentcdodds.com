@@ -1,8 +1,7 @@
 <div ng-controller="ProjectsCtrl">
   <h1>My Projects</h1>
   <div ng-show="underConstruction">
-    <p>This part is under construction...</p>
-    <p>For now, you can connect with me on <a href="https://plus.google.com/114245123507194646768">Google+</a> and <a href="http://www.github.com/kentcdodds">GitHub</a></p>
+    <div ng-include src="'./views/under-construction.html'"></div>
     <p>But, in case you can't wait. My main projects are:</p>
     <ul>
       <li><a href="http://www.spendmycents.com">SpendMyCents.com</a></li>
