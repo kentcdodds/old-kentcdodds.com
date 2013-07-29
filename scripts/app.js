@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-  var app = angular.module('kent', []);
+  var app = angular.module('kent', ['ga']);
   app.config(function($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
   });

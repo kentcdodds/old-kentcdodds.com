@@ -15,9 +15,12 @@
   var supportTransitions = Modernizr.csstransitions;
 
 
-  app.controller('MainCtrl', function($scope, $location, sections, ie) {
+  app.controller('MainCtrl', function($scope, $location, sections, ie, ga) {
     var i, total;
     var isSectionIsActive;
+
+    ga('set', 'dimension1', 'Hello!');
+    ga('send', 'pageview', {title: 'Hello world!'});
 
     $scope.isIE = !!ie;
     $scope.showIEMessage = true;

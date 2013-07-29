@@ -30,7 +30,7 @@
           Kent C. Dodds
         </div>
         <section ng-cloak ng-repeat="section in sections" id="{{section.sectionId}}" ng-class="{'bl-expand bl-expand-top': section.active}">
-          <a class="bl-box" ng-href="#{{section.path}}">
+          <a class="bl-box" ng-href="#{{section.path}}" ga>
             <div class="bl-box-label">
               <i class="{{section.icon}}"></i>
               <h1>{{section.title}}</h1>
@@ -44,12 +44,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.min.js" data-prop-name="_" data-local-src="./vendor/lodash.min.js"></script>
-    
     <script src="./vendor/dt-script-loader.min.js"></script>
+
+    <script src="./vendor/google-analytics.js"></script>
+    <script src="./vendor/ga.js"></script>
+
     <script src="./scripts/app.js"></script>
     <script src="./scripts/controllers.js"></script>
     <script src="./scripts/values.js"></script>
     <script src="./scripts/directives.js"></script>
-    <script src="./vendor/google-analytics.js"></script>
   </body>
 </html>
