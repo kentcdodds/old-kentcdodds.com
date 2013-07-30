@@ -14,61 +14,6 @@
   // support css transitions
   var supportTransitions = Modernizr.csstransitions;
 
-
-  app.controller('MainCtrl', function($scope, $location, sections, ie, ga) {
-    var i, total;
-    var isSectionIsActive;
-
-    ga('set', 'dimension1', 'Hello!');
-    ga('send', 'pageview', {title: 'Hello world!'});
-
-    $scope.isIE = !!ie;
-    $scope.showIEMessage = true;
-    $scope.showOfflineMessage = true;
-    $scope.underConstruction = true;
-    $scope.sectionSelected = false;
-    $scope.sections = sections;
-    
-    $scope.$watch(function() {
-      return $location.path();
-    }, function() {
-      _.each($scope.sections, function(section) {
-        section.active = section.path === $location.path();
-      });
-    });
-    
-    isSectionIsActive = function() {
-      for (i = 0, total = $scope.sections.length; i < total; i++) {
-        if ($scope.sections[i].active) {
-          return true;
-        }
-      }
-      return false;
-    };
-    
-    $scope.$watch(isSectionIsActive, function() {
-      $scope.sectionSelected = isSectionIsActive();
-    });
-
-    $scope.closeSection = function() {
-      $location.path('/');
-    };
-
-    $scope.keyUp = function(event) {
-      if (event.keyCode !== 27) {
-        return;
-      }
-      var $section = $('section.bl-expand');
-      //Check if a section or a work panel is open
-      if ($('.bl-show-work').length) {
-        //closeWorkPanel();
-        console.log('close work panel... TODO');
-      } else if ($section.length) {
-        $scope.closeSection($section);
-      }
-    };
-  }); 
-
   app.controller('ProjectsCtrl', function($scope, projects) {
     $scope.underConstruction = true;
 
@@ -135,32 +80,5 @@
     };
 
   });
-  
-  app.controller('ContactCtrl', function($scope, $location, networks) {
-    var searchParams;
 
-    $scope.networks = networks;
-    $scope.getBackgroundImage = function(networkName) {
-      return './images/social/' + networkName + '-hover.png';
-    };
-
-    $scope.networkClick = function(index) {
-      if ($scope.networks[index].onClick) {
-        $scope.networks[index].onClick($scope);
-      }
-    };
-    
-    $scope.closePhoneModal = function() {
-      $('#modal-16').removeClass('md-show');
-    };
-
-    searchParams = $location.search();
-    for (var i = 0, total = $scope.networks.length; i < total; i++) {
-      var network = $scope.networks[i];
-      if (searchParams[network.name] === 'true') {
-        network.onClick($scope);
-      }
-    }
-    
-  });
 })();
