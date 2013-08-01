@@ -10,8 +10,7 @@
       title="{{network.summary}}"
       ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
       ng-href="{{network.url}}"
-      ng-click="networkClick($index)"
-      target="_blank"
+      target="{{network.target || '_blank'}}"
       ga
     >
     </a>

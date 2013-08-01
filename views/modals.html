@@ -1,4 +1,4 @@
-<div ng-controller="ModalCtrl" class="md-modal" ng-class="{'md-show': phoneModalActive}" id="modal-16">
+<div class="md-modal" ng-class="{'md-show': modals.modals.phone.active}">
   <div class="md-content">
     <h3>Call Me</h3>
     <p>
@@ -16,6 +16,6 @@
         <param name="FlashVars" value="id=a8dd9c58da5043dca0e879988f5cadc447e74f7a&style=0" />
       </object>
     </div>
-    <i class="icon-remove-circle" ng-click="closeModal(0)"></i>
+    <i class="icon-remove-circle" ng-click="deactivateModals()"></i>
   </div>
 </div>

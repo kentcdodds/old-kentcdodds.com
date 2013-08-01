@@ -1,8 +1,7 @@
 CACHE MANIFEST
-#manifest version: 0.0.1.5
+#manifest version: 0.0.1.6
 
 CACHE:
-
 
 #dt-script-loader stuff
 /dt-script-loader/dt.png
@@ -26,15 +25,22 @@ CACHE:
 
 #scripts
 /scripts/app.js
-/scripts/controllers.js
 /scripts/directives.js
-/scripts/values.js
+/scripts/controllers/ContactCtrl.js
+/scripts/controllers/MainCtrl.js
+/scripts/controllers/ProjectsCtrl.js
+/scripts/values/ie.js
+/scripts/values/modals.js
+/scripts/values/networks.js
+/scripts/values/projects.js
+/scripts/values/sections.js
 
 #styles
-/styles/main.css
 /styles/common.css
 /styles/common-content.css
 /styles/contact.css
+/styles/main.css
+/styles/modals.css
 /styles/projects.css
 //themes.googleusercontent.com/static/fonts/lato/v6/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff
 //themes.googleusercontent.com/static/fonts/lato/v6/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff
@@ -59,7 +65,9 @@ CACHE:
 /views/about.html
 /views/blog.html
 /views/contact.html
+/views/modals.html
 /views/projects.html
+/views/under-construction.html
 
 #top level stuff
 favicon.png

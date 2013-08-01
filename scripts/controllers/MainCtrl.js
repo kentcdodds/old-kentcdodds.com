@@ -2,7 +2,7 @@
 (function() {
   var app = angular.module('kent');
   
-  app.controller('MainCtrl', function($scope, $location, sections, ModalState, ie) {
+  app.controller('MainCtrl', function($scope, $location, sections, modals, ie) {
     var i, total;
     var isSectionIsActive;
 
@@ -12,6 +12,11 @@
     $scope.underConstruction = true;
     $scope.sectionSelected = false;
     $scope.sections = sections;
+    $scope.modals = modals;
+    
+    $scope.deactivateModals = function() {
+      $scope.modals.deactivateModals($location);
+    }
 
     $scope.$watch(function() {
       return $location.path();
@@ -30,10 +35,10 @@
       return false;
     };
 
-    $scope.$on('ModalState.update', function(event, state) {
-      $scope.modalActive = state;
+    $scope.$watch($scope.modals.isModalActive, function() {
+      $scope.modalActive = $scope.modals.isModalActive();
     });
-
+    
     $scope.$watch(isSectionIsActive, function() {
       $scope.sectionSelected = isSectionIsActive();
     });
@@ -46,13 +51,10 @@
       if (event.keyCode !== 27) {
         return;
       }
-      var $section = $('section.bl-expand');
-      //Check if a section or a work panel is open
-      if ($('.bl-show-work').length) {
-        //closeWorkPanel();
-        console.log('close work panel... TODO');
-      } else if ($section.length) {
-        $scope.closeSection($section);
+      if (modals.isModalActive()) {
+        $scope.deactivateModals();
+      } else {
+        $scope.closeSection();
       }
     };
   });
