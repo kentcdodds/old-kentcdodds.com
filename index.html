@@ -23,7 +23,7 @@
   </head>
   <body ng-controller="MainCtrl">
     <div id="top-message" ng-cloak ng-show="(isIE && showIEMessage) || (!online && showOfflineMessage)">
-      <span ng-show="isIE && showIEMessage" ng-click="showIEMessage = false">This site works best when <em><strong>not</strong></em> viewed in Internet Explorer... Try <a href="http://whatbrowser.org/" target="_blank">A Better Browser</a></span>
+      <span ng-show="isIE && showIEMessage" ng-click="showIEMessage = false">This site works best when <em><strong>not</strong></em> viewed in Internet Explorer... Try <a href="http://chrome.google.com" target="_blank">Chrome</a></span>
       <span ng-show="!online && showOfflineMessage" ng-click="showOfflineMessage = false">You are offline! You are seeing a cached version.</span></div>
     <div class="container" ng-class="{'blur': modalActive}">
       <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" shortcut>
