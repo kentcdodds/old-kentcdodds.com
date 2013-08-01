@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#manifest version: 0.0.1.6
+#manifest version: 0.0.1.7
 
 CACHE:
 
@@ -26,7 +26,9 @@ CACHE:
 #scripts
 /scripts/app.js
 /scripts/directives.js
+/scripts/factories.js
 /scripts/controllers/ContactCtrl.js
+/scripts/controllers/GistCtrl.js
 /scripts/controllers/MainCtrl.js
 /scripts/controllers/ProjectsCtrl.js
 /scripts/values/ie.js

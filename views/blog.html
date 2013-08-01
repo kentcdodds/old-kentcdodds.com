@@ -1,2 +1,28 @@
-<h1>My Thoughts</h1>
-<div ng-include src="'./views/under-construction.html'"></div>
+<div ng-controller="GistCtrl">
+  <h1>My Thoughts</h1>
+  <div>This does have content, but it's still <strong>under construction</strong>. Stay tuned!</div>
+  <br />
+  <div>
+    I'm a software developer. My thoughts are wrapped up in code most of the time.
+    That's why I did away with my WordPress blog of yester-year and changed to a <a href="https://gist.github.com/kentcdodds/5822336">Gist Blog</a>.
+    When my thoughts don't have anything to do with code, then I post it to Google+ for engagement there.
+    My more noteable posts are hashtagged: #blogpost. Find those <a href="https://plus.google.com/s/%23blogpost%20Kent%20Dodds">here</a>.
+  </div>
+  <br />
+  <div>
+    <div ng-repeat="gist in gists">
+      <h2>
+        <a ng-href="{{gist.html_url}}" target="_blank">{{gist.id}}</a>
+      </h2>
+      <p class="description">{{gist.description}}</p>
+      <p>
+        Files:
+        <ul>
+          <li ng-repeat="(fileName, file) in gist.files">
+            <a ng-href="{{file.raw_url}}" target="_blank">{{fileName}}</a>
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
