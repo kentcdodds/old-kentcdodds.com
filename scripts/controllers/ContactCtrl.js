@@ -19,8 +19,7 @@
         var searchParams = $location.search();
         for (var i = 0, total = $scope.networks.length; i < total; i++) {
           var network = $scope.networks[i];
-          if (searchParams[network.name] === 'true'
-            && network.action) {
+          if (searchParams[network.name] && network.action) {
             network.action($scope);
           }
         }
