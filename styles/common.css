@@ -11,7 +11,12 @@
   font-style: normal;
 }
 
-body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+body, html {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
 
 *,
 *:after,
