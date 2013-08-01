@@ -4,7 +4,6 @@
   app.controller('GistCtrl', function($scope, Gists) {
     Gists.list().success(function(data) {
       $scope.gists = data;
-      console.log($scope.gists);
     });
   });
 })();
