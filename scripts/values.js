@@ -80,8 +80,7 @@
       name: 'phone',
       summary: 'Call me (maybe? ;D)',
       onClick: function(scope) {
-        console.log('call phone clicked');
-        $('#modal-16').addClass('md-show');
+        scope.activatePhoneModal();
       }
     },
     {

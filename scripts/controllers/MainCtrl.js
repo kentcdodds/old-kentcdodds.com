@@ -2,12 +2,9 @@
 (function() {
   var app = angular.module('kent');
   
-  app.controller('MainCtrl', function($scope, $location, sections, ie, ga) {
+  app.controller('MainCtrl', function($scope, $location, sections, ModalState, ie) {
     var i, total;
     var isSectionIsActive;
-
-    ga('set', 'dimension1', 'Hello!');
-    ga('send', 'pageview', {title: 'Hello world!'});
 
     $scope.isIE = !!ie;
     $scope.showIEMessage = true;
@@ -32,6 +29,10 @@
       }
       return false;
     };
+
+    $scope.$on('ModalState.update', function(event, state) {
+      $scope.modalActive = state;
+    });
 
     $scope.$watch(isSectionIsActive, function() {
       $scope.sectionSelected = isSectionIsActive();

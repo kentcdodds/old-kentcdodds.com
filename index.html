@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/common-content.css" />
     <link rel="stylesheet" type="text/css" href="./styles/contact.css" />
     <link rel="stylesheet" type="text/css" href="./styles/projects.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/modals.css" />
     <link rel="stylesheet" type="text/css" href="./vendor/font-awesome/css/font-awesome.min.css" />
     
     <script src="./vendor/modernizr.custom.js"></script>
@@ -24,7 +25,7 @@
     <div id="top-message" ng-cloak ng-show="(isIE && showIEMessage) || (!online && showOfflineMessage)">
       <span ng-show="isIE && showIEMessage" ng-click="showIEMessage = false">This site works best when <em><strong>not</strong></em> viewed in Internet Explorer... Try <a href="http://chrome.google.com" target="_blank">Chrome</a></span>
       <span ng-show="!online && showOfflineMessage" ng-click="showOfflineMessage = false">You are offline! You are seeing a cached version.</span></div>
-    <div class="container">
+    <div class="container" ng-class="{'blur': modalActive}">
       <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" shortcut>
         <div id="my-name">
           Kent C. Dodds
@@ -41,6 +42,7 @@
         </section>
       </div>
     </div><!-- /container -->
+    <div ng-include src="'./views/modals.html'"></div>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.min.js" data-prop-name="_" data-local-src="./vendor/lodash.min.js"></script>
@@ -54,7 +56,9 @@
     <script src="./scripts/controllers/MainCtrl.js"></script>
     <script src="./scripts/controllers/ContactCtrl.js"></script>
     <script src="./scripts/controllers/ProjectsCtrl.js"></script>
+    <script src="./scripts/controllers/ModalCtrl.js"></script>
     
+    <script src="./scripts/services.js"></script>
     <script src="./scripts/values.js"></script>
     <script src="./scripts/directives.js"></script>
   </body>
