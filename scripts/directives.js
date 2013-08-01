@@ -8,7 +8,7 @@
       scope: true,
       link: function postLink(scope, iElement, iAttrs) {
         if (scope.keyUp) {
-          jQuery(document).on('keyup', function(e) {
+          $(document).on('keyup', function(e) {
               scope.$apply(scope.keyUp(e));
           });
         }
