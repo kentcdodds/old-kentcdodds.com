@@ -5,6 +5,8 @@
   text-shadow: .5px 1px 5px #000000;
   background-color:rgba(255,0,0,0.5);
   cursor: pointer;
+  text-align: center;
+  width: 100%;
 }
 
 /**

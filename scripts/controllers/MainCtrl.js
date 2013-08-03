@@ -10,6 +10,7 @@
     $scope.showIEMessage = true;
     $scope.showOfflineMessage = true;
     $scope.underConstruction = true;
+    $scope.showUnderConstructionMessage = true;
     $scope.sectionSelected = false;
     $scope.sections = sections;
     $scope.modals = modals;
