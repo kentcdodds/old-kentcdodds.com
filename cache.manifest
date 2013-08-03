@@ -3,13 +3,30 @@ CACHE MANIFEST
 
 CACHE:
 
+#Demos
 #dt-script-loader stuff
-/dt-script-loader/dt.png
-/dt-script-loader/dt-script-loader.js
-/dt-script-loader/index.html
-/dt-script-loader/jquery-1.10.2.min.js
-/dt-script-loader/underscore-min.js
-
+/demos/dt-script-loader/dt.png
+/demos/dt-script-loader/dt-script-loader.js
+/demos/dt-script-loader/index.html
+/demos/dt-script-loader/jquery-1.10.2.min.js
+/demos/dt-script-loader/underscore-min.js
+#js-point
+/demos/js-point/js-point.html
+/demos/js-point/Slide1.PNG
+/demos/js-point/Slide2.PNG
+/demos/js-point/Slide3.PNG
+/demos/js-point/Slide4.PNG
+/demos/js-point/Slide5.PNG
+/demos/js-point/Slide6.PNG
+/demos/js-point/Slide7.PNG
+/demos/js-point/Slide8.PNG
+/demos/js-point/Slide9.PNG
+/demos/js-point/Slide10.PNG
+/demos/js-point/Slide11.PNG
+/demos/js-point/Slide12.PNG
+/demos/js-point/Slide13.PNG
+/demos/js-point/Slide14.PNG
+/demos/js-point/Slide15.PNG
 
 #images
 /images/social/careers-hover.png
