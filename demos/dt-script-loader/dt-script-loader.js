@@ -10,7 +10,7 @@ var DoubleTakeScriptLoader = function(scripts) {
     var script = scripts[i];
     var propName = script.propName || script.getAttribute('data-prop-name');
     var localSource = script.localSource || script.getAttribute('data-local-src');
-    if (propName != null && localSource != null) {
+    if (propName !== null && localSource !== null) {
       if (!window[propName]) {
         document.write('<script src="' + localSource + '" type="text/javascript"><' + '/script>');
         if (script.originalId) {
