@@ -1,0 +1,23 @@
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  margin: 5% 20% 5% 20%;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
+h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: normal;
+  font-size: 50px;
+  margin: 0;
+  height: 55px;
+}
+
+#skills-and-achievements h3 {
+  display: inline;
+}
