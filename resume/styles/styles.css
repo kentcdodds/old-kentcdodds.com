@@ -3,7 +3,14 @@
 }
 
 body {
-  margin: 5% 20% 5% 20%;
+  padding: 70px 60px;
+  font-size: 15px;
+}
+
+#main-container {
+  max-width: 650px;
+  min-width: 525px;
+  margin: 0 auto;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -16,6 +23,48 @@ h1 {
   font-size: 50px;
   margin: 0;
   height: 55px;
+}
+
+h2 {
+  color: #424242;
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+
+h3 {
+  color: #666666;
+  font-size: 1.1em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+a {
+  color: #424242;
+  font-weight: bold;
+}
+
+time {
+  float: right;
+}
+
+ul {
+  margin-top: 5px;
+}
+
+#qr-code {
+  float: right;
+  max-height: 130px;
+  margin-right: 50px;
+}
+
+#education img {
+  max-width: 40px;
+  float: left;
+}
+
+#experience img {
+  max-width: 40px;
+  float: left;
 }
 
 #skills-and-achievements h3 {

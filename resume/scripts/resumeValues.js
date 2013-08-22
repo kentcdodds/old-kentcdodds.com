@@ -16,6 +16,7 @@
         schoolUrl: 'http://www.byu.edu',
         college: 'Marriott School of Management',
         collegeUrl: 'http://marriottschool.byu.edu',
+        imgSrc: '../resume/images/byu.png',
         items: [
           'Major GPA 3.76; Cumulative GPA 3.44',
           'J. Owen Cherrington Scholarship for outstanding service to classmates and excellent academic performance in IT related courses',
@@ -26,6 +27,7 @@
         {
           company: 'Domo Technologies Inc.',
           companyUrl: 'http://www.domo.com',
+          imgSrc: './images/domo.png',
           jobTitle: 'Software Engineer',
           timeRange: 'December 2012 - May 2013 & August 2013 - Present',
           achievements: [
@@ -37,6 +39,7 @@
         {
           company: 'United Services Automobile Association (USAA)',
           companyUrl: 'http://www.usaa.com',
+          imgSrc: './images/USAA.png',
           jobTitle: 'Software Engineer (IT Intern)',
           timeRange: 'May 2013 - August 2013',
           achievements: [
@@ -47,6 +50,7 @@
         {
           company: 'The Church of Jesus Christ of Latter-Day Saints',
           companyUrl: 'http://www.lds.org',
+          imgSrc: './images/lds.png',
           jobTitle: 'Business Intelligence Database Engineer',
           timeRange: 'April 2012 - December 2012',
           achievements: [

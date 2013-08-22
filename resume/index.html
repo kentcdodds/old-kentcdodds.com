@@ -12,37 +12,39 @@
     <link href="../resume/styles/styles.css" rel="stylesheet">
   </head>
   <body ng-cloak ng-controller="MainCtrl">
-    <h1>Kent C. Dodds</h1>
-    <div>
-      <a ng-href="{{'mailto:' + contact.email}}">{{contact.email}}</a> | <a ng-href="{{contact.phoneUrl}}">{{contact.phone}}</a>
-    </div>
-    <img id="qr-code" src="../resume/images/qrcode.png" />
-    <section>
-      <h2>Education</h2>
-      <h3>{{education.degree}}</h3><time>{{education.graduationDate}}</time>
-      <a ng-href="education.schoolUrl">{{education.school}}</a> | <a ng-href="education.collegeUrl">{{education.college}}</a>
-      <ul>
-        <li ng-repeat="item in education.items" ng-bind-html-unsafe="item"></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Experience</h2>
-      <div ng-repeat="xp in experience">
-        <h3>{{xp.jobTitle}}</h3><time>{{xp.timeRange}}</time>
-        <a ng-href="xp.companyUrl">{{xp.company}}</a>
-        <ul>
-          <li ng-repeat="achievement in xp.achievements" ng-bind-html-unsafe="achievement"></li>
-        </ul>
+    <div id="main-container">
+      <img id="qr-code" src="../resume/images/qrcode.png" />
+      <h1>Kent C. Dodds</h1>
+      <div>
+        <a ng-href="{{'mailto:' + contact.email}}" target="_blank">{{contact.email}}</a> | <a ng-href="{{contact.phoneUrl}}" target="_blank">{{contact.phone}}</a>
       </div>
-    </section>
-    <section id="skills-and-achievements">
-      <h2>Skills & Achievements</h2>
-      <ul>
-        <li ng-repeat="item in skillsAndAchievements">
-          <h3>{{item.title}}: </h3><span ng-bind-html-unsafe="item.content"></span>
-        </li>
-      </ul>
-    </section>
+      <section id="education">
+        <h2>Education</h2>
+        <h3>{{education.degree}}</h3><time>{{education.graduationDate}}</time>
+        <a ng-href="education.schoolUrl">{{education.school}}</a> | <a ng-href="education.collegeUrl">{{education.college}}</a>
+        <ul>
+          <li ng-repeat="item in education.items" ng-bind-html-unsafe="item"></li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div ng-repeat="xp in experience">
+          <h3>{{xp.jobTitle}}</h3><time>{{xp.timeRange}}</time>
+          <a ng-href="xp.companyUrl">{{xp.company}}</a>
+          <ul>
+            <li ng-repeat="achievement in xp.achievements" ng-bind-html-unsafe="achievement"></li>
+          </ul>
+        </div>
+      </section>
+      <section id="skills-and-achievements">
+        <h2>Skills & Achievements</h2>
+        <ul>
+          <li ng-repeat="item in skillsAndAchievements">
+            <h3>{{item.title}}: </h3><span ng-bind-html-unsafe="item.content"></span>
+          </li>
+        </ul>
+      </section>
+    </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="../vendor/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="../vendor/jquery.min.js"></script>
