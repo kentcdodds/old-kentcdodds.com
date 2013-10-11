@@ -1,0 +1,71 @@
+.ng-cloak {
+  display: none;
+}
+
+body {
+  text-align: center;
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  color: #535353;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a, a:visited {
+  color: #08C;
+}
+
+a:hover, a:active, a:focus {
+  color: #005580;
+}
+
+#spacer {
+  vertical-align: middle;
+  height: 100%;
+  width: 0;
+  display: inline-block;
+}
+
+#content {
+  display: inline-block;
+  text-align: start;
+  width: 750px;
+}
+
+#name {
+  font-size: 100px;
+  text-align: center;
+}
+
+#tagline {
+  font-size: 18px;
+}
+
+.section-label {
+  font-size: 14px;
+}
+
+#social-icons {
+  height: 80px;
+}
+
+.social-slide {
+  height: 48px;
+  width: 48px;
+  margin: 10px;
+  float: left;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.social-slide:hover {
+  background-position: 0px -48px;
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}

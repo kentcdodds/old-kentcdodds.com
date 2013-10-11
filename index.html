@@ -1,74 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="kent">
-<!--<html manifest="./cache.manifest" lang="en" ng-app="kent">-->
+<html ng-app="kent" ng-controller="MainCtrl">
   <head>
     <title>Kent C. Dodds</title>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio website of Kent C. Dodds. Connect with Kent here." />
     <meta name="keywords" content="Kent Dodds, kentcdodds, Kent C. Dodds, web developer, frontend developer" />
     <meta name="author" content="Kent C. Dodds" />
-    <link rel="shortcut icon" href="./favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="./styles/common.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/common-content.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/contact.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/projects.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/modals.css" />
-    <link rel="stylesheet" type="text/css" href="./vendor/font-awesome/css/font-awesome.min.css" />
-    
-    <script src="./vendor/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
   </head>
-  <body ng-controller="MainCtrl">
-    <div id="top-message" ng-cloak ng-show="(isIE && showIEMessage) || (!online && showOfflineMessage) || (underConstruction && showUnderConstructionMessage)">
-      <div ng-show="underConstruction && showUnderConstructionMessage" ng-click="showUnderConstructionMessage = false">This site is under construction. Forgive any uncompleted-ness...</div>
-      <div ng-show="isIE && showIEMessage" ng-click="showIEMessage = false">This site works best when <em><strong>not</strong></em> viewed in Internet Explorer... Try <a href="http://chrome.google.com" target="_blank">Chrome</a></div>
-      <div ng-show="!online && showOfflineMessage" ng-click="showOfflineMessage = false">You are offline! You are seeing a cached version.</div>
-    </div>
-    <div class="container" ng-class="{'blur': modalActive}">
-      <div id="bl-sections" class="bl-sections" ng-class="{'bl-expand-item': sectionSelected}" shortcut>
-        <div id="my-name">
-          Kent C. Dodds
+  <body class="ng-cloak">
+    <div id="spacer"></div>
+    <div id="content">
+      <h1 id="name">Kent C. Dodds</h1>
+      <p id="tagline">I'm a husband, father, <a href="http://www.domo.com">Domosapien</a>, web developer, tech enthusiast, <a href="http://www.byu.edu">student</a>, and <a href="http://www.mormon.org">Mormon</a></p>
+      
+      <p><span class="section-label">Connect with me online:</span>
+        <div id="social-icons">
+          <a
+            ng-repeat="network in networks"
+            class="social-slide {{network.class}}"
+            title="{{network.summary}}"
+            ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
+            ng-href="{{network.url}}"
+            ga
+          ></a>
         </div>
-        <section ng-cloak ng-repeat="section in sections" id="{{section.sectionId}}" ng-class="{'bl-expand bl-expand-top': section.active}">
-          <a class="bl-box" ng-href="#{{section.path}}" ga>
-            <div class="bl-box-label">
-              <i class="{{section.icon}}"></i>
-              <h1>{{section.title}}</h1>
-            </div>
-          </a>
-          <div class="bl-content" ng-include src="section.viewLocation"></div>
-          <i class="icon-remove-circle" ng-click="closeSection($index)"></i>
-        </section>
+      </p>
+
+      <p><span class="section-label">Some of my personal projects:</span>
+        <div id="projects">
+          <ul>
+            <li ng-repeat="project in projects">
+              <a ng-href="{{project.url}}" ga>{{project.name}}</a> - {{project.description}}
+            </li>
+          </ul>
+        </div>
       </div>
-    </div><!-- /container -->
-    <div ng-include src="'./views/modals.html'"></div>
-    
-    <!-- Scripts. TODO use a script loader.... -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-prop-name="angular" data-local-src="./vendor/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-prop-name="jQuery" data-local-src="./vendor/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.3.1/lodash.min.js" data-prop-name="_" data-local-src="./vendor/lodash.min.js"></script>
-    <script src="./vendor/dt-script-loader.min.js"></script>
+    </p>
 
-    <script src="./vendor/google-analytics.js"></script>
-    <script src="./vendor/ga.js"></script>
-
-    <script src="./scripts/app.js"></script>
-    
-    <script src="./scripts/controllers/MainCtrl.js"></script>
-    <script src="./scripts/controllers/ContactCtrl.js"></script>
-    <script src="./scripts/controllers/ProjectsCtrl.js"></script>
-    <script src="./scripts/controllers/GistCtrl.js"></script>
-    
-    <script src="./scripts/values/ie.js"></script>
-    <script src="./scripts/values/modals.js"></script>
-    <script src="./scripts/values/networks.js"></script>
-    <script src="./scripts/values/projects.js"></script>
-    <script src="./scripts/values/sections.js"></script>
-    
-    <script src="./scripts/directives.js"></script>
-    <script src="./scripts/factories.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="vendor/ga.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+      //Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-42764912-1', 'doddsfamily.us');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
