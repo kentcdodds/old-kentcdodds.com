@@ -1,10 +1,15 @@
-angular.module('kent', ['ga']).controller('MainCtrl', function($scope) {
+angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope) {
   $scope.networks = [];
-  function addNetwork(name, summary, url, target, action) {
+  function addNetwork(name, summary, url) {
     $scope.networks.push({
       name: name,
       summary: summary,
       url: url
+    });
+
+    genie({
+      action: url,
+      magicWords: ['Connect: ' + summary, name]
     });
   };
   
@@ -29,6 +34,11 @@ angular.module('kent', ['ga']).controller('MainCtrl', function($scope) {
       name: name,
       url: url,
       description: description
+    });
+
+    genie({
+      action: url,
+      magicWords: 'Project: ' + name
     });
   }
 

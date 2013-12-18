@@ -14,37 +14,44 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
   </head>
   <body class="ng-cloak">
-    <div id="spacer"></div>
     <div id="content">
       <h1 id="name">Kent C. Dodds</h1>
       <p id="tagline">I'm a husband, father, <a href="http://www.domo.com">Domosapien</a>, web developer, tech enthusiast, <a href="http://www.byu.edu">student</a>, and <a href="http://www.mormon.org">Mormon</a></p>
       
-      <p><span class="section-label">Connect with me online:</span>
-        <div id="social-icons">
-          <a
-            ng-repeat="network in networks"
-            class="social-slide {{network.class}}"
-            title="{{network.summary}}"
-            ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
-            ng-href="{{network.url}}"
-            ga
-          ></a>
+      <div>
+        <p><span class="section-label">Connect with me online:</span>
+          <div id="social-icons">
+            <a
+              ng-repeat="network in networks"
+              class="social-slide {{network.class}}"
+              title="{{network.summary}}"
+              ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
+              ng-href="{{network.url}}"
+              ga
+            ></a>
+          </div>
+        </p>
+      </div>
+
+      <div id="projects">
+        <p><span class="section-label">Some of my personal projects:</span>
+          <div id="projects">
+            <ul>
+              <li ng-repeat="project in projects">
+                <a ng-href="{{project.url}}" ga>{{project.name}}</a> - {{project.description}}
+              </li>
+            </ul>
+          </div>
         </div>
       </p>
+    </div>
+    
+    <div ux-lamp rub-class="visible" local-storage="true"></div>
 
-      <p><span class="section-label">Some of my personal projects:</span>
-        <div id="projects">
-          <ul>
-            <li ng-repeat="project in projects">
-              <a ng-href="{{project.url}}" ga>{{project.name}}</a> - {{project.description}}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </p>
-
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
     <script src="vendor/ga.js"></script>
+    <script src="vendor/genie/genie.js"></script>
+    <script src="vendor/genie/uxGenie.js"></script>
     <script src="scripts/script.js"></script>
     <script>
       //Google Analytics

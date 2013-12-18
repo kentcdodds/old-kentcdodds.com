@@ -23,17 +23,10 @@ a:hover, a:active, a:focus {
   color: #005580;
 }
 
-#spacer {
-  vertical-align: middle;
-  height: 100%;
-  width: 0;
-  display: inline-block;
-}
-
 #content {
   display: inline-block;
   text-align: start;
-  width: 750px;
+  max-width: 750px;
 }
 
 #name {
@@ -47,6 +40,10 @@ a:hover, a:active, a:focus {
 
 .section-label {
   font-size: 14px;
+}
+
+#projects {
+  clear: both;
 }
 
 #social-icons {
@@ -68,4 +65,58 @@ a:hover, a:active, a:focus {
 .social-slide:hover {
   background-position: 0px -48px;
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+.genie-container {
+  text-align: left;
+  opacity: 0;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: -1;
+  -mos-border-radius: 8px;
+  border-radius: 8px;
+  color: #333;
+  background-color: #F7F7F7;
+  box-shadow: 0px 0px 26px 6px #888888;
+  width: 384px;
+  margin-left: -208px;
+  padding: 16px;
+  transition: all .2s ease-in-out;
+}
+
+.genie-container.visible {
+  opacity: 1;
+  z-index: 1050;
+}
+
+.genie-container > input {
+  -mos-border-radius: 8px;
+  border-radius: 8px;
+  margin: 0px;
+  width: 358px;
+  line-height: 60px;
+  padding: 0px 12px 0px 12px;
+  font-size: 40px;
+  height: 60px;
+}
+
+.genie-wishes {
+  margin-top: 10px;
+  cursor: pointer;
+  overflow-y: auto;
+  width: 384px;
+  max-height: 300px;
+  font-size: 30px;
+}
+
+.genie-wish {
+  padding: 0px 12px 0px 12px;
+  line-height: 50px;
+}
+
+.genie-wish.focused {
+  -mos-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #DDD;
 }
