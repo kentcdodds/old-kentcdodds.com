@@ -12,13 +12,28 @@
 
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
   </head>
   <body class="ng-cloak">
     <div id="content">
       <h1 id="name">Kent C. Dodds</h1>
-      <p id="tagline">I'm a husband, father, <a href="http://www.domo.com">Domosapien</a>, web developer, tech enthusiast, <a href="http://www.byu.edu">student</a>, and <a href="http://www.mormon.org">Mormon</a></p>
       
-      <div>
+      <div class="alert-container" ng-class="{visible: alert.visible}">
+        <div class="alert alert-{{alert.type}}">
+          <button type="button" class="close" aria-hidden="true" ng-click="alert.visible = false">×</button>
+          <strong>{{alert.strong}}</strong> {{alert.content}} <a ng-if="alert.link" ng-href="alert.link" ga class="small">Learn more...</a>
+        </div>
+      </div>
+
+      <p id="tagline">I'm a husband, father,
+        <a href="http://www.domo.com" ga>Domosapien</a>,
+        <a href="http://www.github.com/kentcdodds" ga>web developer</a>,
+        <a href="http://plus.google.com/+KentCDodds" ga>tech enthusiast</a>,
+        <a href="http://www.byu.edu" ga>student</a>,
+        and <a href="http://www.mormon.org" ga>Mormon</a>
+      </p>
+
+      <div id="social">
         <p><span class="section-label">Connect with me online:</span>
           <div id="social-icons">
             <a
@@ -42,11 +57,12 @@
               </li>
             </ul>
           </div>
-        </div>
-      </p>
+        </p>
+      </div>
+      <h3 id="genie-notice"><small>This site is empowered by <a href="http://kentcdodds.github.com/genie" ga>genie</a> (press ctrl+space)</small></h3>
     </div>
-    
-    <div ux-lamp rub-class="visible" local-storage="true"></div>
+
+    <div ux-lamp rub-class="visible" local-storage="true" wish-callback="wishMade(wish)"></div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
     <script src="vendor/ga.js"></script>

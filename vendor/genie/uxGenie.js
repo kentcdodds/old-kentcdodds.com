@@ -26,7 +26,7 @@
           ngShow = '';
         }
         return ['<div class="genie-container"' + ngShow + '>',
-          '<input type="text" ng-model="genieInput" class="lamp-input input" />',
+          '<input type="text" ng-model="genieInput" class="lamp-input input form-control" />',
           '<div ng-show="matchingWishes.length > 0" class="genie-wishes">',
             '<div class="genie-wish" ' +
               'ng-repeat="wish in matchingWishes" ' +

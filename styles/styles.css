@@ -34,6 +34,19 @@ a:hover, a:active, a:focus {
   text-align: center;
 }
 
+.alert-container {
+  position: relative;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+.alert {
+  position: absolute;
+  width: 100%;
+  box-shadow: 0px 0px 18px 1px #888
+}
+
 #tagline {
   font-size: 18px;
 }
@@ -67,6 +80,11 @@ a:hover, a:active, a:focus {
   box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 }
 
+#genie-notice {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 .genie-container {
   text-align: left;
   opacity: 0;
@@ -79,13 +97,13 @@ a:hover, a:active, a:focus {
   color: #333;
   background-color: #F7F7F7;
   box-shadow: 0px 0px 26px 6px #888888;
-  width: 384px;
-  margin-left: -208px;
+  width: 600px;
+  margin-left: -300px;
   padding: 16px;
   transition: all .2s ease-in-out;
 }
 
-.genie-container.visible {
+.visible {
   opacity: 1;
   z-index: 1050;
 }
@@ -94,7 +112,7 @@ a:hover, a:active, a:focus {
   -mos-border-radius: 8px;
   border-radius: 8px;
   margin: 0px;
-  width: 358px;
+  width: 100%;
   line-height: 60px;
   padding: 0px 12px 0px 12px;
   font-size: 40px;
@@ -105,7 +123,7 @@ a:hover, a:active, a:focus {
   margin-top: 10px;
   cursor: pointer;
   overflow-y: auto;
-  width: 384px;
+  width: 100%;
   max-height: 300px;
   font-size: 30px;
 }
