@@ -42,7 +42,7 @@ angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope
     });
   }
 
-  addProject('GenieJS', 'http://kentcdodds.github.io/genie', 'Your wish is my command. Better keyboard conntrol for your website.');
+  addProject('GenieJS', 'http://kentcdodds.github.io/genie', 'Your wish is my command. Better keyboard control for your website.');
   addProject('SpendMyCents.com', 'http://wwww.spendmycents.com', 'Reverse product search. Find Amazon products by price.');
   addProject('Filtered List', 'http://kentcdodds.github.io/filtered-list', 'Load data and search through it easily. Useful for checking people in for events.');
   addProject('KeymasterJS', 'http://kentcdodds.github.io/keymaster', 'My forked version of KeymasterJS with added support for keyboard combinations.');
@@ -56,32 +56,23 @@ angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope
     }
   };
 
-  genie([
-    {
-      magicWords: 'What\'s a Domosapien?',
+  function addQuestionWish(question, strong, content, type, url) {
+    genie({
+      magicWords: 'Question: ' + question,
       action: function() {
-        updateAlert('Domosapien (doh-moh sey-pee-uhn):', 'An employee of the coolest company on earth.', 'info', 'http://www.domo.com');
+        updateAlert(strong, content, type, url);
       }
-    },
-    {
-      magicWords: 'What\'s a Mormon?',
-      action: function() {
-        updateAlert('Mormon (ˈmɔrmən):', 'A member of the Church of Jesus Christ of Latter-Day Saints.', 'info', 'http://www.mormon.org');
-      }
-    },
-    {
-      magicWords: 'Where do you go to school?',
-      action: function() {
-        updateAlert('Brigham Young University (BYU)', 'I will be graduating with a Master of Information Systems degree in April 2014.', 'info', 'http://mism.byu.edu');
-      }
-    },
-    {
-      magicWords: 'What about your family?',
-      action: function() {
-        updateAlert('', 'I was married July 8th, 2011 to Brooke. We had our first daughter about a year later. We had our second child, a son this time, 17 months after that. Yeah, I\'m a family man :)', 'info')
-      }
-    }
-  ]);
+    });
+  }
+
+  addQuestionWish('What\'s a Domosapien?', 'Domosapien (doh-moh sey-pee-uhn):', 'An employee of the coolest company on earth.', 'info', 'http://www.domo.com');
+  addQuestionWish('What\'s a Mormon?', 'Mormon (ˈmɔrmən):', 'A member of the Church of Jesus Christ of Latter-Day Saints.', 'info', 'http://www.mormon.org');
+  addQuestionWish('Where do you go to school?', 'Brigham Young University (BYU)', 'I will be graduating with a Master of Information Systems degree in April 2014.', 'info', 'http://mism.byu.edu');
+  addQuestionWish('What about your family?', '', 'I was married July 8th, 2011 to Brooke. We had our first daughter about a year later. We had our second child, a son this time, 17 months after that. Yeah, I\'m a family man :)', 'info');
+  addQuestionWish('Tech enthusiast huh?', '', 'Yeah, I\'m interested in anything to do with technology. I love hearing/reading/talking about the next big thing (which is not always Samsung as they would lead you to believe). I\'m fascinated by the future. I\'m a Mac and Android lover. Yeah, I know...', 'info');
+  addQuestionWish('Web developer huh?', '', 'Yep, I love JavaScript. I\'m especially in love with the MEAN stack because I can code JS all day long. I like to focus on the front end. I love making the user\'s experience awesome which is why I wrote Genie :)', 'info');
+  addQuestionWish('Why the full name?', 'Why Kent C. Dodds?', 'Well, one day I decided that I\'d buy kentcdodds.com and started using it for my email. People started calling me by my full name because of that and it just kinda stuck. Now I really like it :)', 'info');
+
 
   $scope.alert = {};
 

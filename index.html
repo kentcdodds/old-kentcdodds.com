@@ -21,7 +21,7 @@
       <div class="alert-container" ng-class="{visible: alert.visible}">
         <div class="alert alert-{{alert.type}}">
           <button type="button" class="close" aria-hidden="true" ng-click="alert.visible = false">×</button>
-          <strong>{{alert.strong}}</strong> {{alert.content}} <a ng-if="alert.link" ng-href="alert.link" ga class="small">Learn more...</a>
+          <strong>{{alert.strong}}</strong> {{alert.content}} <a ng-if="alert.link" ng-href="{{alert.link}}" ga class="small">Learn more...</a>
         </div>
       </div>
 
@@ -34,18 +34,19 @@
       </p>
 
       <div id="social">
-        <p><span class="section-label">Connect with me online:</span>
-          <div id="social-icons">
-            <a
-              ng-repeat="network in networks"
-              class="social-slide {{network.class}}"
-              title="{{network.summary}}"
-              ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
-              ng-href="{{network.url}}"
-              ga
-            ></a>
-          </div>
+        <p>
+          <span class="section-label">Connect with me online:</span>
         </p>
+        <div id="social-icons" style="{{'max-width: ' + (networks.length * 68 > 750 ? 750 : networks.length * 68) + 'px'}}">
+          <a
+            ng-repeat="network in networks"
+            class="social-slide {{network.class}}"
+            title="{{network.summary}}"
+            ng-style="{'background-image': 'url(' + getBackgroundImage(network.name) + ')'}"
+            ng-href="{{network.url}}"
+            ga
+          ></a>
+        </div>
       </div>
 
       <div id="projects">
