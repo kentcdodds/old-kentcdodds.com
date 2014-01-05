@@ -23,6 +23,19 @@ a:hover, a:active, a:focus {
   color: #005580;
 }
 
+.rub-the-lamp {
+  background: rgba(0, 0, 0, 0);
+  color: #428BCA;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rub-the-lamp:hover, .rub-the-lamp:focus {
+  color: #2A6496;
+  outline: 0;
+  text-decoration: underline;
+}
+
 #content {
   display: inline-block;
   text-align: start;
@@ -140,4 +153,9 @@ a:hover, a:active, a:focus {
   -mos-border-radius: 8px;
   border-radius: 8px;
   background-color: #DDD;
+}
+
+.genie-wish > img, .genie-wish > i {
+  height: 35px;
+  margin-right: 10px;
 }

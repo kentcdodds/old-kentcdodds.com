@@ -18,33 +18,45 @@
   uxGenie.constant('genie', genie);
 
   uxGenie.directive('uxLamp', ['genie', '$timeout', '$document', function(genie, $timeout, $document) {
+    var states = {
+      userEntry: 'userentry',
+      subContext: 'subcontext'
+    }
     return {
       replace: true,
       template: function(el, attr) {
-        var ngShow = ' ng-show="uxGenieVisible"';
+        var ngShow = ' ng-show="lampVisible"';
         if (attr.rubClass) {
           ngShow = '';
         }
         return ['<div class="genie-container"' + ngShow + '>',
           '<input type="text" ng-model="genieInput" class="lamp-input input form-control" />',
           '<div ng-show="matchingWishes.length > 0" class="genie-wishes">',
-            '<div class="genie-wish" ' +
-              'ng-repeat="wish in matchingWishes" ' +
-              'ng-class="{focused: focusedWish == wish}" ' +
-              'ng-click="makeWish(wish)" ' +
-              'ng-mouseenter="focusOnWish(wish, false)">',
-            '{{wish.data.displayText || wish.magicWords[0]}}',
+          '<div class="genie-wish wish-{{wish.id}}" ' +
+            'ng-repeat="wish in matchingWishes" ' +
+            'ng-class="{focused: focusedWish == wish}" ' +
+            'ng-click="makeWish(wish)" ' +
+            'ng-mouseenter="focusOnWish(wish, false)">',
+          '<img ng-if="wish.data.uxGenie.imgIcon" ng-src="{{wish.data.uxGenie.imgIcon}}">',
+          '<i ng-if="wish.data.uxGenie.iIcon" class="{{wish.data.uxGenie.iIcon}}"></i>',
+          '{{wish.data.uxGenie.displayText || wish.magicWords[0]}}',
           '</div></div></div>'].join('');
       },
       scope: {
+        lampVisible: '=?',
         rubClass: '@',
         rubShortcut: '@',
         rubModifier: '@',
         rubEventType: '@',
-        wishCallback: '&',
-        localStorage: '='
+        wishCallback: '&?',
+        localStorage: '=?'
       },
       link: function(scope, el, attr) {
+        scope.genieInput = '';
+        scope.state = states.userEntry;
+
+        var mathResultId = 'ux-genie-math-result';
+        var startTextForSubContext = null;
         var inputEl = angular.element(el.children()[0]);
         var genieOptionContainer = angular.element(el.children()[1]);
         var rubShortcut = scope.rubShortcut || '32';
@@ -56,18 +68,18 @@
           rubShortcut = rubShortcut[0].charCodeAt(0);
         }
 
-        scope.uxGenieVisible = false;
+        scope.lampVisible = false;
 
         function toggleVisibility() {
           scope.$apply(function() {
-            scope.uxGenieVisible = !scope.uxGenieVisible;
+            scope.lampVisible = !scope.lampVisible;
           });
         }
 
         // Wish focus
         scope.focusOnWish = function(wishElement, autoScroll) {
           scope.focusedWish = wishElement;
-          if (autoScroll) {
+          if (scope.focusedWish && autoScroll) {
             scrollToWish(scope.matchingWishes.indexOf(wishElement));
           }
         };
@@ -93,7 +105,7 @@
 
         // Document events
         $document.bind('click', function(event) {
-          // If it's not part of the lamp, then make the lamp invisible.
+          // If it's not part of the lamp, then make the lamp inlampVisible.
           var clickedElement = event.srcElement || event.target;
           if (clickedElement === el[0]) {
             return;
@@ -106,7 +118,7 @@
           }
 
           scope.$apply(function() {
-            scope.uxGenieVisible = false;
+            scope.lampVisible = false;
           });
         });
 
@@ -125,10 +137,10 @@
         });
 
         $document.bind('keydown', function(event) {
-          if (event.keyCode === 27 && scope.uxGenieVisible) {
+          if (event.keyCode === 27 && scope.lampVisible) {
             event.preventDefault();
             scope.$apply(function() {
-              scope.uxGenieVisible = false;
+              scope.lampVisible = false;
             });
           }
         });
@@ -155,6 +167,12 @@
           return function keydownHandler(event) {
             var change = 0;
             switch(event.keyCode) {
+              case 9:
+                event.preventDefault();
+                if (_isSubContextWish(scope.focusedWish)) {
+                  _setSubContextState(scope.focusedWish);
+                }
+                break;
               case 38:
                 change = -1;
                 break;
@@ -169,15 +187,57 @@
           }
         })());
 
+        function _setSubContextState(wish) {
+          if (scope.state !== states.subContext) {
+            scope.state = states.subContext;
+            startTextForSubContext = wish.magicWords[0] + ' ';
+            if (wish.data && wish.data.uxGenie && wish.data.uxGenie.displayText) {
+              startTextForSubContext = wish.data.uxGenie.displayText;
+            }
+            genie.context(wish.data.uxGenie.subContext);
+            scope.$apply(function() {
+              scope.genieInput = startTextForSubContext;
+            });
+          }
+        }
+
+        function _exitSubContext() {
+          genie.revertContext();
+          scope.state = states.userEntry;
+          startTextForSubContext = null;
+        }
+
         // Making a wish
         scope.makeWish = function(wish) {
-          scope.wishCallback(genie.makeWish(wish, scope.genieInput));
-          saveToLocalStorage(wish);
-          scope.$apply(function() {
-            updateMatchingWishes(scope.genieInput);
-            scope.uxGenieVisible = false;
+          var makeWish = true;
+          var makeInvisible = true;
+          if (wish.id === mathResultId) {
+            makeWish = false;
+          }
+
+          if (_isSubContextWish(wish)) {
+            _setSubContextState(wish);
+            makeInvisible = false;
+            if (!wish.action) {
+              makeWish = false;
+            }
+          }
+
+          if (makeWish) {
+            wish = genie.makeWish(wish, scope.genieInput);
+            saveToLocalStorage(wish);
+          }
+
+          scope.wishCallback({
+            wish: wish,
+            magicWord: scope.genieInput
           });
-        }
+          if (makeInvisible) {
+            scope.$apply(function() {
+              scope.lampVisible = false;
+            });
+          }
+        };
 
         el.bind('keyup', function(event) {
           if (event.keyCode === 13 && scope.focusedWish) {
@@ -203,20 +263,67 @@
           }
         }
 
-        if (scope.rubClass) {
-          scope.$watch('uxGenieVisible', function(newVal) {
-            if (newVal) {
+        function handleInputChange(newVal) {
+          if (scope.state === states.subContext) {
+            if (newVal.indexOf(startTextForSubContext.trim()) === 0) {
+              newVal = newVal.substring(startTextForSubContext.length);
+            } else {
+              _exitSubContext();
+            }
+          }
+          updateMatchingWishes(newVal);
+          var firstWish = null;
+          var firstWishDisplay = null;
+          if (scope.matchingWishes && scope.matchingWishes.length > 0) {
+            firstWish = scope.matchingWishes[0];
+            firstWishDisplay = firstWish.magicWords[0];
+            if (firstWish.data && firstWish.data.uxGenie && firstWish.data.uxGenie.displayText) {
+              firstWishDisplay = firstWish.data.uxGenie.displayText;
+            }
+          }
+
+          if (firstWish && scope.matchingWishes.length === 1 &&
+            _isSubContextWish(firstWish) && firstWishDisplay === newVal) {
+            _setSubContextState(firstWish);
+          }
+
+          var result = _evaluateMath(newVal);
+          if (angular.isNumber(result)) {
+            scope.matchingWishes = scope.matchingWishes || [];
+            scope.matchingWishes.unshift({
+              id: mathResultId,
+              data: {
+                uxGenie: {
+                  displayText: newVal + ' = ' + result
+                }
+              }
+            });
+            scope.focusedWish = scope.matchingWishes[0];
+          }
+        }
+
+        scope.$watch('lampVisible', function(lampIsVisible) {
+          if (scope.state === states.subContext) {
+            _exitSubContext();
+          }
+          if (lampIsVisible) {
+            handleInputChange(scope.genieInput);
+            if (scope.rubClass) {
               el.addClass(scope.rubClass);
-              // Needs to be visible before it can be selected
+              // Needs to be lampVisible before it can be selected
               $timeout(function() {
                 inputEl[0].select();
               }, 25);
             } else {
-              el.removeClass(scope.rubClass);
-              inputEl[0].blur();
+              inputEl[0].select();
             }
-          });
-        }
+          } else {
+            if (scope.rubClass) {
+              el.removeClass(scope.rubClass);
+            }
+            inputEl[0].blur();
+          }
+        });
 
         if (scope.localStorage && localStorage) {
           // Load machine's preferences
@@ -232,8 +339,98 @@
           }
         }
 
-        scope.$watch('genieInput', function(newVal) {
-          updateMatchingWishes(newVal);
+        function _isSubContextWish(wish) {
+          return !!wish && !!wish.data && !!wish.data.uxGenie && !!wish.data.uxGenie.subContext;
+        }
+
+        function _evaluateMath(expression) {
+          var mathRegex = /(?:[a-z$_][a-z0-9$_]*)|(?:[;={}\[\]"'!&<>^\\?:])/ig;
+          var valid = true;
+
+          expression = expression.replace(mathRegex, function (match) {
+            if (Math.hasOwnProperty(match)) {
+              return 'Math.' + match;
+            } else {
+              valid = false;
+            }
+          });
+
+          if (!valid) {
+            return false;
+          } else {
+            try {
+              return eval(expression);
+            } catch (e) {
+              return false;
+            }
+          }
+        }
+
+        scope.$watch('genieInput', handleInputChange);
+      }
+    }
+  }]);
+
+  uxGenie.directive('genieWish', ['genie', function(genie) {
+    return {
+      scope: true,
+      link: function(scope, el, attrs) {
+        var id = attrs.wishId;
+        var context = attrs.wishContext ? attrs.wishContext.split(',') : null;
+        var data = attrs.wishData || {};
+        var uxGenieData = data.uxGenie = data.uxGenie || {};
+
+        uxGenieData.element = el[0];
+        uxGenieData.event = attrs.wishEvent || uxGenieData.event || 'click';
+        uxGenieData.iIcon = attrs.wishIIcon;
+        uxGenieData.imgIcon = attrs.wishImgIcon;
+
+        var action = function(wish) {
+          var modifiers = [];
+          if (attrs.eventModifiers) {
+            modifiers = attrs.eventModifiers.split(',');
+          }
+          var event = new MouseEvent(wish.data.uxGenie.event, {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+            ctrlKey: modifiers.indexOf('ctrlKey') > -1,
+            altKey: modifiers.indexOf('altKey') > -1,
+            shiftKey: modifiers.indexOf('shiftKey') > -1,
+            metaKey: modifiers.indexOf('metaKey') > -1
+          });
+          wish.data.uxGenie.element.dispatchEvent(event);
+        };
+
+        // get magic words
+        var magicWords = null;
+        ['genieWish', 'name', 'id'].every(function(attrName) {
+          magicWords = attrs[attrName];
+          return !magicWords;
+        });
+        magicWords = magicWords || el.text();
+        magicWords = magicWords.replace(/\\,/g, '{{COMMA}}');
+        if (magicWords) {
+          magicWords = magicWords.split(',');
+        } else {
+          throw new Error('Thrown by the genie-wish directive: All genie-wish elements must have a magic-words, id, or name attribute.');
+        }
+        for (var i = 0; i < magicWords.length; i++) {
+          magicWords[i] = magicWords[i].replace(/\{\{COMMA\}\}/g, ',');
+        }
+
+        var wishRegistered = false;
+        attrs.$observe('ignoreWish', function(newVal) {
+          if (newVal !== 'true' && !wishRegistered) {
+            genie({
+              id: id,
+              magicWords: magicWords,
+              context: context,
+              action: action,
+              data: data
+            });
+            wishRegistered = true;
+          }
         });
       }
     }

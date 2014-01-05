@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   </head>
   <body class="ng-cloak">
     <div id="content">
@@ -51,7 +52,7 @@
 
       <div id="projects">
         <p><span class="section-label">Some of my personal projects:</span>
-          <div id="projects">
+          <div>
             <ul>
               <li ng-repeat="project in projects">
                 <a ng-href="{{project.url}}" ga>{{project.name}}</a> - {{project.description}}
@@ -60,10 +61,10 @@
           </div>
         </p>
       </div>
-      <h3 id="genie-notice"><small>This site is empowered by <a href="http://kentcdodds.github.com/genie" ga>genie</a> (press ctrl+space)</small></h3>
+      <h3 id="genie-notice"><small>This site is empowered by <a href="http://kentcdodds.github.com/genie" ga>genie</a> (press <span class="rub-the-lamp" ng-click="lampVisible=!lampVisible; $event.stopPropagation();" ga>ctrl+space</span>)</small></h3>
     </div>
 
-    <div ux-lamp rub-class="visible" local-storage="true" wish-callback="wishMade(wish)"></div>
+    <div ux-lamp rub-class="visible" local-storage="true" wish-callback="wishMade(wish)" lamp-visible="lampVisible"></div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
     <script src="vendor/ga.js"></script>
