@@ -65,6 +65,12 @@
     </div>
 
     <div ux-lamp rub-class="visible" local-storage="true" wish-callback="wishMade(wish)" lamp-visible="lampVisible"></div>
+    
+    <div class="kcd-modal-backdrop" ng-class="{'visible': showPhone}" ng-click="hidePhone()">
+      <div class="kcd-modal" ng-class="{'small': !showPhone}">
+        <object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton" width="230" height="85"><param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" /><param name="wmode" value="transparent" /><param name="FlashVars" value="id=a8dd9c58da5043dca0e879988f5cadc447e74f7a&style=0" /></object>
+      </div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
     <script src="vendor/ga.js"></script>

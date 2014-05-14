@@ -1,4 +1,6 @@
-angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope) {
+angular.module('kent', ['ga', 'uxGenie']).config(function($locationProvider) {
+  $locationProvider.html5Mode(true);
+}).controller('MainCtrl', function($scope, $location) {
   $scope.lampVisible = false;
   $scope.networks = [];
   function addNetwork(name, summary, magicWord, url, icon) {
@@ -17,12 +19,13 @@ angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope
         }
       }
     });
-  };
+  }
   
   addNetwork('email', 'Email me', 'Email', 'mailto:kent@doddsfamily.us', 'envelope');
-  addNetwork('google', 'Circle me', 'Google+', 'https://plus.google.com/+KentCDodds', 'google-plus-square');
-  addNetwork('github', 'Fork me', 'GitHub', 'http://www.github.com/kentcdodds', 'github');
+  addNetwork('phone', 'Call me', 'Phone', '/?call=true', 'phone-square');
   addNetwork('twitter', 'Follow me @kentcdodds', 'Twitter', 'http://www.twitter.com/kentcdodds', 'twitter-square');
+  addNetwork('github', 'Fork me', 'GitHub', 'http://www.github.com/kentcdodds', 'github');
+  addNetwork('google', 'Circle me', 'Google+', 'https://plus.google.com/+KentCDodds', 'google-plus-square');
   addNetwork('linkedin', 'Connect with me', 'LinkedIn', 'http://www.linkedin.com/pub/kent-dodds/1a/844/275/', 'linkedin-square');
   addNetwork('facebook', 'Friend me', 'Facebook', 'http://www.facebook.com/kentcdodds', 'facebook-square');
   addNetwork('resume', 'Hire me', 'My Resume', 'http://kentcdodds.github.io/resume', 'file-text');
@@ -98,5 +101,14 @@ angular.module('kent', ['ga', 'uxGenie']).controller('MainCtrl', function($scope
     $scope.alert.link = link;
     $scope.alert.visible = !!strong || !!content;
   }
-
+  
+  $scope.$watch(function() {
+    return $location.search().call === 'true';
+  }, function(showPhone) {
+    $scope.showPhone = showPhone;
+  });
+  
+  $scope.hidePhone = function() {
+    $location.url($location.path());
+  };
 });

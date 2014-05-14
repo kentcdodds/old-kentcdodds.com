@@ -159,3 +159,50 @@ a:hover, a:active, a:focus {
   height: 35px;
   margin-right: 10px;
 }
+
+.kcd-modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.5);
+
+  white-space: nowrap;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity .3s, z-index 0s .3s;
+}
+
+.kcd-modal-backdrop.visible {
+  transition: opacity .3s, z-index 0s;
+  opacity: 1;
+  z-index: 2000;
+}
+
+.kcd-modal-backdrop .kcd-modal {
+  -webkit-box-shadow: 0 0 0 6px rgba(84, 88, 90, 0.25);
+  -moz-box-shadow: 0 0 0 6px rgba(84,88,90,0.25);
+  box-shadow: 0 0 0 6px rgba(84, 88, 90, 0.25);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background: #FFF;
+  max-height: 90%;
+  max-width: 500px;
+  margin-top: 100px;
+  overflow: auto;
+  padding: 40px 40px 40px 40px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+}
