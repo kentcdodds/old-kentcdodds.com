@@ -111,4 +111,14 @@ angular.module('kent', ['ga', 'uxGenie']).config(function($locationProvider) {
   $scope.hidePhone = function() {
     $location.url($location.path());
   };
+  
+  $scope.preventHidePhone = function($event) {
+    $event.stopPropagation();
+  };
+  
+  $scope.shortcutHidePhone = function($event) {
+    if ($scope.showPhone && $event.keyCode === 27) {
+      $scope.hidePhone();
+    }
+  }
 });
