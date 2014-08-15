@@ -83,7 +83,6 @@ angular.module('kent', ['ga', 'uxGenie']).config(function($locationProvider) {
     });
   }
 
-  addQuestionWish('What\'s a Domosapien?', 'Domosapien (doh-moh sey-pee-uhn):', 'An employee of the coolest company on earth.', 'info', 'http://www.domo.com');
   addQuestionWish('What\'s a Mormon?', 'Mormon (ˈmɔrmən):', 'A member of the Church of Jesus Christ of Latter-Day Saints.', 'info', 'http://www.mormon.org');
   addQuestionWish('Where do you go to school?', 'Brigham Young University (BYU)', 'I will be graduating with a Master of Information Systems degree in April 2014.', 'info', 'http://mism.byu.edu');
   addQuestionWish('What about your family?', '', 'I was married July 8th, 2011 to Brooke. We had our first daughter about a year later. We had our second child, a son this time, 17 months after that. Yeah, I\'m a family man :)', 'info');
