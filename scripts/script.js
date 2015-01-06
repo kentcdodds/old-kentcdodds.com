@@ -56,6 +56,7 @@ angular.module('kent', ['ga', 'uxGenie']).config(function($locationProvider) {
     });
   }
 
+  addProject('Angular-Formly', 'http://formly-js.github.io/angular-formly', 'JSON Powered forms for AngularJS projects.', 'globe');
   addProject('GenieJS', 'http://kentcdodds.github.io/genie', 'Your wish is my command. Better keyboard control for your website.', 'globe');
   addProject('SpendMyCents.com', 'http://wwww.spendmycents.com', 'Reverse product search. Find Amazon products by price.', 'globe');
   addProject('KeymasterJS', 'http://kentcdodds.github.io/keymaster', 'My forked version of KeymasterJS with added support for keyboard combinations.', 'github');
@@ -83,9 +84,10 @@ angular.module('kent', ['ga', 'uxGenie']).config(function($locationProvider) {
     });
   }
 
-  addQuestionWish('What\'s a Alianzite?', 'Alianzite:', 'An employee of the coolest company on earth.', 'info', 'http://www.alianza.com');
+  addQuestionWish('What\'s an Alianzite?', 'Alianzite:', 'An employee of the coolest company on earth.', 'info', 'http://www.alianza.com');
+  addQuestionWish('What\'s Egghead.io?', 'Egghead.io:', 'A way terrific training site for web technologies.', 'info', 'https://egghead.io/instructors/kentcdodds');
   addQuestionWish('What\'s a Mormon?', 'Mormon (ˈmɔrmən):', 'A member of the Church of Jesus Christ of Latter-Day Saints.', 'info', 'http://www.mormon.org');
-  addQuestionWish('Where do you go to school?', 'Brigham Young University (BYU)', 'I will be graduating with a Master of Information Systems degree in April 2014.', 'info', 'http://mism.byu.edu');
+  addQuestionWish('Where did you go to school?', 'Brigham Young University (BYU)', 'I graduated with a Master of Information Systems degree in April 2014.', 'info', 'http://mism.byu.edu');
   addQuestionWish('What about your family?', '', 'I was married July 8th, 2011 to Brooke. We had our first daughter about a year later. We had our second child, a son this time, 17 months after that. Yeah, I\'m a family man :)', 'info');
   addQuestionWish('Tech enthusiast huh?', '', 'Yeah, I\'m interested in anything to do with technology. I love hearing/reading/talking about the next big thing (which is not always Samsung as they would lead you to believe). I\'m fascinated by the future. I\'m a Mac and Android lover. Yeah, I know...', 'info');
   addQuestionWish('Web developer huh?', '', 'Yep, I love JavaScript. I\'m especially in love with the MEAN stack because I can code JS all day long. I like to focus on the front end. I love making the user\'s experience awesome which is why I wrote Genie :)', 'info');
