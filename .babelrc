@@ -1,0 +1,6 @@
+{
+  "presets": ["stage-2", "node6", "react"],
+  "plugins": [
+    "react-require",
+  ],
+}
