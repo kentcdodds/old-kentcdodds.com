@@ -1,14 +1,17 @@
 {
   "name": "kentcdodds.github.io",
   "version": "1.0.0",
+  "private": true,
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "build": "babel-node generate/home & babel-node generate/links",
+    "build": "babel-node generate/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
+    "deploy": "./scripts/deploy.sh",
     "serve": "http-server",
-    "storybook": "start-storybook --port 9001 --dont-track"
+    "validate": "npm run lint && npm run build",
+    "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001 --dont-track"
   },
   "repository": {
     "type": "git",
@@ -23,9 +26,6 @@
   "homepage": "https://github.com/kentcdodds/kentcdodds.github.io#readme",
   "devDependencies": {
     "@kadira/storybook": "^2.20.1",
-    "aphrodisiac": "^0.3.0",
-    "arrify": "^1.0.1",
-    "async": "^2.0.1",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.0.0",
@@ -33,16 +33,17 @@
     "babel-preset-node6": "^11.0.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
+    "cross-env": "^3.0.0",
     "eslint": "^3.5.0",
     "eslint-config-kentcdodds": "^10.1.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-react": "^6.3.0",
     "http-server": "^0.9.0",
-    "lodash": "^4.16.2",
     "marked": "^0.3.6",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "strip-indent": "^2.0.0",
+    "surge": "^0.18.0",
     "uglify-js": "^2.7.3"
   },
   "eslintConfig": {

@@ -1,0 +1,12 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+node_js:
+  - "6"
+script:
+  - time npm run validate
+  - time npm run deploy

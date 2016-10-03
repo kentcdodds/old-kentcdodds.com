@@ -23,19 +23,19 @@ function Page({
           href="/favicon.png"
         />
         <style
-          dangerouslySetInnerHTML={{__html: `
-            body {
-            font-family: 'MS Sans Serif', Geneva, 'sans-serif';
-            }
-          `}}
+          dangerouslySetInnerHTML={{__html: `body {font-family: 'MS Sans Serif', Geneva, 'sans-serif';}`}}
         />
-        <style>{'/* aphrodisiac-content */'}</style>
       </head>
       <body>
         {children}
-
+        <div style={{textAlign: 'center', fontSize: 'xx-small'}}>Last Updated: {getDateStamp()}</div>
         <GoogleAnalyticsScript />
       </body>
     </html>
   )
+}
+
+function getDateStamp() {
+  const date = new Date()
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
 }
