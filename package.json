@@ -4,7 +4,7 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "build": "babel-node generate/home",
+    "build": "babel-node generate/home & babel-node generate/links",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "serve": "http-server",
@@ -39,8 +39,10 @@
     "eslint-plugin-react": "^6.3.0",
     "http-server": "^0.9.0",
     "lodash": "^4.16.2",
+    "marked": "^0.3.6",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "strip-indent": "^2.0.0",
     "uglify-js": "^2.7.3"
   },
   "eslintConfig": {

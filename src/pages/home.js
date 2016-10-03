@@ -46,6 +46,9 @@ function Home() {
           ])}
         </p>
         <p>
+          Find more interesting links <a href="/links">here</a>
+        </p>
+        <p>
           <small>
             If you're unimpressed with my website
             it's because I'm too busy<br />
