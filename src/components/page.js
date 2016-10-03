@@ -22,11 +22,13 @@ function Page({
           type="image/png"
           href="/favicon.png"
         />
-        <style>{`
-          body {
-          font-family: 'MS Sans Serif', Geneva, 'sans-serif';
-          }
-        `}</style>
+        <style
+          dangerouslySetInnerHTML={{__html: `
+            body {
+            font-family: 'MS Sans Serif', Geneva, 'sans-serif';
+            }
+          `}}
+        />
         <style>{'/* aphrodisiac-content */'}</style>
       </head>
       <body>
