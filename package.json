@@ -8,7 +8,7 @@
     "build": "babel-node generate/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "deploy": "./scripts/deploy.sh",
+    "deploy": "./other/deploy.sh",
     "serve": "http-server",
     "validate": "npm run lint && npm run build",
     "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001 --dont-track"
