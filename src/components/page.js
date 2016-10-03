@@ -22,11 +22,16 @@ function Page({
           type="image/png"
           href="/favicon.png"
         />
+        <style>{`
+          body {
+          font-family: 'MS Sans Serif', Geneva, 'sans-serif';
+          }
+        `}</style>
         <style>{'/* aphrodisiac-content */'}</style>
       </head>
       <body>
         {children}
-        
+
         <GoogleAnalyticsScript />
       </body>
     </html>

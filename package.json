@@ -4,6 +4,7 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
+    "build": "babel-node generate/home",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "serve": "http-server",
