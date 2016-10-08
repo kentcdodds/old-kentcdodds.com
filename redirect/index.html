@@ -2,7 +2,7 @@
 <script src="//www.google-analytics.com/analytics.js"></script>
 <script>
   var urlToRedirectTo = getQueryStringParam(location.href, 'url') || '/'
-  ga('send', 'event', 'N/A', urlToRedirectTo, 'redirect', 0)
+  ga('send', 'event', 'redirect', urlToRedirectTo, 'redirect', 0)
   window.location.replace(urlToRedirectTo)
   function getQueryStringParam(url, name) {
     var regexReadyName = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]')
