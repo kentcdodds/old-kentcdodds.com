@@ -34,7 +34,8 @@ function Home() {
             {text: 'PayPal', url: 'https://paypal.com/careers'},
             {text: 'egghead.io', url: 'https://kcd.im/egghead'},
             {text: 'Frontend Masters', url: 'https://frontendmasters.com/'},
-            {text: 'JavaScriptAir', url: 'https://javascriptair.com'},
+            {text: 'JavaScript Air', url: 'https://javascriptair.com'},
+            {text: 'React30', url: 'https://react30.com'},
           ])}
         </p>
         <p>

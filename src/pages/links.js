@@ -30,6 +30,21 @@ function Links() {
       url: 'mailto:kent@doddsfamily.us',
       desc: `Please feel free to email me with anything you don't feel comfortable posting to my AMA`,
     },
+    {
+      text: 'JavaScript Air',
+      url: 'https://javascriptair.com',
+      desc: 'A podcast I created (I also started [Angular Air](http://angularair.com/))',
+    },
+    {
+      text: 'React30',
+      url: 'https://react30.com',
+      desc: 'A podcast about React that I co-host',
+    },
+    {
+      text: '3 Minutes with Kent',
+      url: 'https://kcd.im/3-mins',
+      desc: 'A [briefs.fm](https://briefs.fm) podcast I occasionally do',
+    },
     {text: 'Talks', url: 'https://kcd.im/talks', desc: `Talks I've given`},
     {text: 'Workshops', url: 'https://kcd.im/workshops', desc: `Workshops I've given`},
     {
