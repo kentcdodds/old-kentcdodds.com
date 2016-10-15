@@ -1,5 +1,5 @@
 {
-  "presets": ["stage-2", "es2015-node4", "react"],
+  "presets": ["stage-2", "node6", "react"],
   "plugins": [
     "react-require",
   ],

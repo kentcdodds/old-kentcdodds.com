@@ -6,9 +6,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel-node generate/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint",
     "lint": "eslint .",
-    "deploy": "./other/deploy.sh",
     "serve": "http-server",
     "validate": "npm run lint && npm run build",
     "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001 --dont-track"
@@ -29,8 +28,8 @@
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.0.0",
-    "babel-plugin-react-require": "^2.1.0",
-    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-preset-node6": "^11.0.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
     "cross-env": "^3.0.0",
@@ -43,7 +42,6 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "strip-indent": "^2.0.0",
-    "surge": "^0.18.0",
     "uglify-js": "^2.7.3"
   },
   "eslintConfig": {

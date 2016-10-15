@@ -9,4 +9,3 @@ node_js:
   - "6"
 script:
   - time npm run validate
-  - time npm run deploy
