@@ -584,6 +584,7 @@ export default [
     ...delivery,
     event: markdownToHTMLWithNoPTag(delivery.event),
     date: moment(delivery.date),
+    isFuture: moment().isBefore(delivery.date),
   })).sort((a, b) => (a.date.isAfter(b.date) ? -1 : 1)),
   resources: (talk.resources || []).map(markdownToHTMLWithNoPTag),
   abstract: markdownToHTML(talk.abstract || ''),

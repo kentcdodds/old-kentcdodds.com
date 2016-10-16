@@ -24,13 +24,13 @@ function Talks() {
 function Talk({talk}) {
   const {title, abstract, resources, presentations = []} = talk
   const resourceEls = resources.map((r, i) => <span key={i} {...innerHTML(r)} />)
-  const presentationEls = presentations.map(({event, recording, date}, i) => (
+  const presentationEls = presentations.map(({event, recording, date, isFuture}, i) => (
     <li key={i}>
       <span {...innerHTML(event)} />
       {recording ? ' - ' : null}
       {recording ? <a href={recording}>video</a> : null}
       <span style={{paddingLeft: 10, fontSize: '0.7em'}}>
-        {date.format('YYYY-MM-DD')}
+        {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
       </span>
     </li>
   ))
