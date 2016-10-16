@@ -39,8 +39,11 @@
     "eslint-plugin-react": "^6.3.0",
     "http-server": "^0.9.0",
     "marked": "^0.3.6",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.15.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "slugify": "^1.0.2",
     "strip-indent": "^2.0.0",
     "uglify-js": "^2.7.3"
   },

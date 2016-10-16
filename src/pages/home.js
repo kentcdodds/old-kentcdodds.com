@@ -22,7 +22,7 @@ function Home() {
         <p>
           {listOfThings([
             'Mormon', 'Husband', 'Father',
-            {text: 'Speaker', url: 'https://kcd.im/talks'},
+            {text: 'Speaker', url: '/talks'},
             {text: 'Trainer', url: 'https://kcd.im/talks#workshops'},
             {text: 'Open Sourcerer', url: 'https://github.com/kentcdodds'},
             {text: 'GDE', url: 'https://kcd.im/gde'},

@@ -45,7 +45,7 @@ function Links() {
       url: 'https://kcd.im/3-mins',
       desc: 'A [briefs.fm](https://briefs.fm) podcast I occasionally do',
     },
-    {text: 'Talks', url: 'https://kcd.im/talks', desc: `Talks I've given`},
+    {text: 'Talks', url: '/talks', desc: `Talks I've given`},
     {text: 'Workshops', url: 'https://kcd.im/workshops', desc: `Workshops I've given`},
     {
       text: 'Egghead.io',
