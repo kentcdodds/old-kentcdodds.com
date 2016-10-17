@@ -7,5 +7,5 @@ renderComponentToFile(
   <Page>
     <Talks />
   </Page>,
-  resolve(__dirname, '../talks/index.html'),
+  resolve(__dirname, '../dist/talks/index.html'),
 )

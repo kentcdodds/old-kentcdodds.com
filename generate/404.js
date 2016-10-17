@@ -7,5 +7,5 @@ renderComponentToFile(
   <Page>
     <FourOFour />
   </Page>,
-  resolve(__dirname, '../404.html'),
+  resolve(__dirname, '../dist/404.html'),
 )

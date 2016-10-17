@@ -7,5 +7,5 @@ renderComponentToFile(
   <Page>
     <Home />
   </Page>,
-  resolve(__dirname, '../index.html'),
+  resolve(__dirname, '../dist/index.html'),
 )

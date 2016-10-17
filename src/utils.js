@@ -1,4 +1,4 @@
-export {intersperse}
+export {intersperse} // eslint-disable-line import/prefer-default-export
 
 /* intersperse: Return an array with the separator interspersed between
  * each element of the input array.

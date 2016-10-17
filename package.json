@@ -5,11 +5,14 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "build": "babel-node generate/",
+    "build:clean": "rimraf dist",
+    "build:copy": "cpy \"**/*.*\" ../dist/ --parents --cwd=./copy",
+    "build:pages": "babel-node generate/",
+    "build": "npm-run-all --parallel build:*",
     "test": "npm run lint",
     "lint": "eslint .",
-    "serve": "http-server",
-    "validate": "npm run lint && npm run build",
+    "serve": "http-server dist",
+    "validate": "npm-run-all --parallel lint build",
     "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001 --dont-track"
   },
   "repository": {
@@ -32,6 +35,7 @@
     "babel-preset-node6": "^11.0.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-2": "^6.13.0",
+    "cpy-cli": "^1.0.1",
     "cross-env": "^3.0.0",
     "eslint": "^3.5.0",
     "eslint-config-kentcdodds": "^10.1.0",
@@ -41,8 +45,10 @@
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
     "moment": "^2.15.1",
+    "npm-run-all": "^3.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "rimraf": "^2.5.4",
     "slugify": "^1.0.2",
     "strip-indent": "^2.0.0",
     "uglify-js": "^2.7.3"
