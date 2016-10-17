@@ -3,10 +3,20 @@ import marked from 'marked'
 import stripIndent from 'strip-indent'
 import moment from 'moment'
 
+const tagEmojiMap = {
+  lightning: '⚡',
+  'open source': '🌎',
+  'live coding': '💻',
+  testing: '⚠️',
+  react: '⚛',
+}
+
 export default [
   // {
   //   title: '',
-  //   resources: [],
+  //   resources: [
+  //   ],
+  //   tags: [],
   //   presentations: [
   //     {
   //       event: '',
@@ -23,18 +33,19 @@ export default [
       '[repo 1](https://github.com/kentcdodds/todomvc-angular)',
       '[repo 2](https://github.com/angular-todo-mvc/angular-todo-escape)',
     ],
+    tags: ['open source', 'live coding'],
     presentations: [
       {
-        event: '[Angular Remote Conf 2015](http://angularremoteconf.com)',
+        event: '[Angular Remote Conf](http://angularremoteconf.com)',
         recording: 'https://www.youtube.com/watch?v=Zlu3QvuwruY',
         date: '2015-09-01',
       },
       {
-        event: 'JS@PayPal 2015',
+        event: 'JS@PayPal',
         date: '2015-12-16',
       },
       {
-        event: '[All Things Open 2016](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
+        event: '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
         date: '2016-10-27',
       },
     ],
@@ -53,13 +64,14 @@ export default [
       '[video](https://youtu.be/jKI1Kj5VXqE) (practice run at a meetup)',
       '[slides](https://kcd.im/manage-oss)',
     ],
+    tags: ['open source', 'soft skills'],
     presentations: [
       {
-        event: '[Space City JS 2016](http://spacecity.codes/)',
+        event: '[Space City JS](http://spacecity.codes/)',
         date: '2016-05-14',
       },
       {
-        event: '[All Things Open 2016](https://allthingsopen.org/talk/managing-an-open-source-project/)',
+        event: '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project/)',
         date: '2016-10-27',
       },
     ],
@@ -89,17 +101,18 @@ export default [
       '[older slides (ava)](https://kcd.im/react-ava)',
       '[react-ava-workshop](https://github.com/kentcdodds/react-ava-workshop)',
     ],
+    tags: ['react', 'testing', 'live coding'],
     presentations: [
       {
-        event: '[Connect.tech 2016](http://connect.tech/)',
+        event: '[Connect.tech](http://connect.tech/)',
         date: '2016-10-21',
       },
       {
-        event: 'JS@PayPal 2016',
+        event: 'JS@PayPal',
         date: '2016-09-23',
       },
       {
-        event: '[MidwestJS 2016](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com/)',
         date: '2016-08-11',
       },
     ],
@@ -116,18 +129,19 @@ export default [
     resources: [
       '[slides](https://slides.com/kentcdodds/es6-modules)',
     ],
+    tags: ['ES6', 'babel'],
     presentations: [
       {
-        event: '[MidwestJS 2016](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com/)',
         date: '2016-08-12',
       },
       {
-        event: 'JS@PayPal 2016',
+        event: 'JS@PayPal',
         recording: 'https://youtu.be/V0YQ0rnh-Hg',
         date: '2016-09-23',
       },
       {
-        event: '[JavaScript KC](https://www.meetup.com/JavaScriptKC/events/231844450/)',
+        event: '[JavaScript KC Meetup](https://www.meetup.com/JavaScriptKC/events/231844450/)',
         recording: 'https://youtu.be/qi_rLTcXers',
         date: '2016-06-21',
       },
@@ -151,13 +165,14 @@ export default [
       '[slides](https://slides.com/kentcdodds/a-beginners-guide-to-asts)',
       '[code](http://kcd.im/beginner-asts-code)',
     ],
+    tags: ['ECMAScript', 'babel', 'eslint', 'live coding'],
     presentations: [
       {
-        event: '[JS Remote Conf 2016](https://allremoteconfs.com/js-2016)',
+        event: '[JS Remote Conf](https://allremoteconfs.com/js-2016)',
         date: '2016-01-14',
       },
       {
-        event: '[KCDC 2016](http://www.kcdc.info/)',
+        event: '[KCDC](http://www.kcdc.info/)',
         date: '2016-06-23',
       },
       {
@@ -178,9 +193,10 @@ export default [
     resources: [
       '[slides](http://slides.com/kentcdodds/1st-pr)',
     ],
+    tags: ['open source', 'soft skills'],
     presentations: [
       {
-        event: '[Fluent Conf 2016](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/46612)', // eslint-disable-line
+        event: '[Fluent Conf](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/46612)',
         recording: 'https://youtu.be/HjgZQeMrw6c',
         date: '2016-03-09',
       },
@@ -216,9 +232,10 @@ export default [
     resources: [
       '[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)',
     ],
+    tags: ['testing', 'lightning'],
     presentations: [
       {
-        event: '[Ignite Fluent 2016](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)', // eslint-disable-line
+        event: '[Ignite Fluent](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)',
         recording: 'https://youtu.be/Da9wfQ0frGA',
         date: '2016-03-08',
       },
@@ -237,6 +254,7 @@ export default [
     resources: [
       '[slides](https://slides.com/kentcdodds/zero-to-60)',
     ],
+    tags: ['soft skills'],
     presentations: [
       {
         event: '[Foward 4 Web Summit](http://forwardjs.com/)',
@@ -267,9 +285,10 @@ export default [
       '[slides](http://slides.com/kentcdodds/learning-javascript)',
       '[tweet](https://twitter.com/ngnebraska/status/669319695015673856)',
     ],
+    tags: ['soft skills'],
     presentations: [
       {
-        event: '[ng-nebraska meetup November 2015](http://www.meetup.com/ng-nebraska/events/226632455/)',
+        event: '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455/)',
         date: '2015-11-24',
       },
     ],
@@ -287,9 +306,10 @@ export default [
     resources: [
       '[repo](https://github.com/kentcdodds/random-user-coverage)',
     ],
+    tags: ['babel', 'testing', 'webpack', 'live coding'],
     presentations: [
       {
-        event: '[UtahJS meetup June 2015](http://www.meetup.com/UtahJS/events/222630472/)',
+        event: '[UtahJS meetup June](http://www.meetup.com/UtahJS/events/222630472/)',
         recording: 'https://youtu.be/P-1ZZkpEmQA',
         date: '2015-06-16',
       },
@@ -351,12 +371,12 @@ export default [
     ],
     presentations: [
       {
-        event: '[ng-nl 2015](http://www.ng-nl.org)',
+        event: '[ng-nl](http://www.ng-nl.org)',
         recording: 'https://youtu.be/o90TMDL3OYc',
         date: '2015-02-13',
       },
       {
-        event: '[MidwestJS 2015](http://midwestjs.com)',
+        event: '[MidwestJS](http://midwestjs.com)',
         recording: 'https://youtu.be/jUX2zcSwbRE',
         date: '2015-08-13',
       },
@@ -378,7 +398,7 @@ export default [
     ],
     presentations: [
       {
-        event: '[Philly ETE 2015](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
+        event: '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
         recording: 'http://www.infoq.com/presentations/angularjs-2',
         date: '2015-04-08',
       },
@@ -399,7 +419,7 @@ export default [
     ],
     presentations: [
       {
-        event: '[ng-conf 2015](http://www.ng-conf.org/)',
+        event: '[ng-conf](http://www.ng-conf.org/)',
         recording: 'https://youtu.be/k3t3ov6xHDw',
         date: '2015-03-06',
       },
@@ -417,12 +437,12 @@ export default [
     ],
     presentations: [
       {
-        event: '[Jfokus 2015](http://www.jfokus.se/jfokus/)',
+        event: '[Jfokus](http://www.jfokus.se/jfokus/)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
         date: '2015-02-04',
       },
       {
-        event: '[ReactJS Utah meetup January 2015](http://www.meetup.com/ReactJS-Utah/events/219204576/)',
+        event: '[ReactJS Utah meetup January](http://www.meetup.com/ReactJS-Utah/events/219204576/)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
         date: '2015-01-27',
       },
@@ -449,7 +469,7 @@ export default [
     ],
     presentations: [
       {
-        event: '[MidwestJS 2014](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com/)',
         recording: 'https://youtu.be/lqf5mrrf4ZY',
         date: '2014-08-14',
       },
@@ -545,16 +565,16 @@ export default [
     ],
     presentations: [
       {
-        event: 'To my classmates at BYU in 2014',
+        event: 'To my classmates at BYU',
         recording: 'https://youtu.be/GmVUw_Efi_M',
         date: '2014-01-30',
       },
       {
-        event: '[UtahJS 2014](http://conf.utahjs.com/schedule-2014)',
+        event: '[UtahJS](http://conf.utahjs.com/schedule-2014)',
         date: '2014-06-06',
       },
       {
-        event: '[Jfokus 2015](http://www.jfokus.se/jfokus/)',
+        event: '[Jfokus](http://www.jfokus.se/jfokus/)',
         date: '2015-02-03',
       },
     ],
@@ -578,7 +598,10 @@ export default [
     `,
   },
 ].map(talk => ({
+  // defaults
   ...talk,
+
+  // overrides
   title: markdownToHTMLWithNoPTag(talk.title),
   presentations: (talk.presentations || []).map(delivery => ({
     ...delivery,
@@ -586,6 +609,7 @@ export default [
     date: moment(delivery.date),
     isFuture: moment().isBefore(delivery.date),
   })).sort((a, b) => (a.date.isAfter(b.date) ? -1 : 1)),
+  tags: (talk.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
   resources: (talk.resources || []).map(markdownToHTMLWithNoPTag),
   abstract: markdownToHTML(talk.abstract || ''),
 })).sort((a, b) => {
