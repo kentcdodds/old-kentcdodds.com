@@ -5,6 +5,7 @@ export default Page
 function Page({
   children,
   title = 'Kent C. Dodds',
+  lastUpdated = getDateStamp(),
 } = {}) {
   return (
     <html lang="en">
@@ -28,7 +29,7 @@ function Page({
       </head>
       <body>
         {children}
-        <div style={{textAlign: 'center', fontSize: 'xx-small'}}>Last Updated: {getDateStamp()}</div>
+        <div style={{textAlign: 'center', fontSize: 'xx-small'}}>Last Updated: {lastUpdated}</div>
         <GoogleAnalyticsScript />
       </body>
     </html>
