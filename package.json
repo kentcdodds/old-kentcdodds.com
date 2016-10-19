@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build:clean": "rimraf dist",
-    "build:copy": "cpy \"**/*.*\" ../dist/ --parents --cwd=./copy",
+    "build:copy": "npm-run-all --parallel build:copy:*",
+    "build:copy:copyDir": "cpy \"**/*.*\" ../dist/ --parents --cwd=./copy",
+    "build:copy:posts": "cpy \"**/*.!(js)\" ../../../../dist/post --parents --cwd=./src/pages/blog/posts",
     "build:pages": "babel-node generate/",
     "build": "npm-run-all --parallel build:*",
     "test": "npm run lint",
@@ -41,6 +43,7 @@
     "eslint-config-kentcdodds": "^10.1.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-react": "^6.3.0",
+    "glob": "^7.1.1",
     "http-server": "^0.9.0",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",

@@ -14,7 +14,7 @@ function BlogHome({posts}) {
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
       <div style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}>
         <ul>
-          {posts.map(({url, title, subtitle, date}, i) => (
+          {posts.filter(p => !p.draft).map(({url, title, subtitle, date}, i) => (
             <li key={i} style={{marginBottom: 4}}>
               <a href={url}>{title}</a>
               <span style={{fontSize: '0.7em', opacity: '0.7'}}> {date}</span>
