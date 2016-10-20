@@ -1,5 +1,5 @@
 import {PropTypes} from 'react'
-import Markdown from './markdown'
+import Markdown from '../../components/markdown'
 
 export default BlogHome
 

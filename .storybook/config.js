@@ -3,6 +3,7 @@ import Home from '../src/pages/home'
 import Links from '../src/pages/links'
 import FourOFour from '../src/pages/404'
 import Talks from '../src/pages/talks'
+import Appearances from '../src/pages/appearances'
 import Blog from '../src/pages/blog'
 import Draft from '../src/pages/blog/posts/sunsetting-javascriptair'
 
@@ -12,6 +13,7 @@ function loadStories() {
     .add('Links', () => <Links />)
     .add('404', () => <FourOFour />)
     .add('Talks', () => <Talks />)
+    .add('Appearances', () => <Appearances />)
   storiesOf('Posts', module)
     .add('Home', () => <Blog posts={getPostStubs()} />)
     .add('Draft', () => <Draft />)

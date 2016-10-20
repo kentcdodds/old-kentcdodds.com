@@ -1,4 +1,4 @@
-import Markdown from '../../markdown'
+import Markdown from '../../../../components/markdown'
 
 export const title = 'Sunsetting JavaScript Air'
 export const draft = true

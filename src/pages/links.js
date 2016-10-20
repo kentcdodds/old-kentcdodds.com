@@ -1,5 +1,4 @@
-import marked from 'marked'
-import stripIndent from 'strip-indent'
+import Markdown from '../components/markdown'
 
 export default Links
 
@@ -93,7 +92,7 @@ function Links() {
           {links.map(({url, text, desc}, i) => (
             <li key={i} style={{marginBottom: 4}}>
               <a href={url}>{text}</a> {desc ? (
-                <span>- <span dangerouslySetInnerHTML={markdownToHTML(desc)} /></span>
+                <span>- <Markdown noPTag style={{display: 'inline'}}>{desc}</Markdown></span>
               ) : ''}
             </li>
           ))}
@@ -101,11 +100,4 @@ function Links() {
       </div>
     </div>
   )
-}
-
-function markdownToHTML(string) {
-  const html = marked(stripIndent(string))
-    // get rid of the <p> tags
-    .slice(3, -5)
-  return {__html: html}
 }
