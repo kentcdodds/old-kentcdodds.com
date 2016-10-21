@@ -62,7 +62,7 @@ ListOfThings.propTypes = {
   things: PropTypes.arrayOf(PropTypes.shape({
     thing: PropTypes.string.isRequired,
     description: PropTypes.string,
-    date: PropTypes.string.isRequired,
+    date: PropTypes.object.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string),
   })),
 }

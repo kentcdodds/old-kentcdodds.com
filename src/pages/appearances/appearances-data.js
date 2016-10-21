@@ -22,19 +22,19 @@ export default [
       {
         thing: '[Dads in Development](http://www.dadsindev.com/)',
         description: '[Episode 12: CSS Modules](http://www.dadsindev.com/12) (and CSS in JS)',
-        date: '', //fixme
+        date: '2016-08-11',
         tags: ['css', 'aphrodite', 'webpack', 'css modules'],
       },
       {
         thing: '[Career.js](http://careerjs.com/)',
         description: '[Ep. 3 - How to Level Up Your Career with Kent C. Dodds](http://careerjs.com/#/3)',
-        date: '', //fixme
+        date: '2016-07-11',
         tags: ['soft skills'],
       },
       {
         thing: '[This Developing Story](http://developingstory.netlify.com/)',
         description: '[Ep. 56 - Kent C. Dodds](http://developingstory.netlify.com/tds-56-kent-c-dodds)',
-        date: '', // fixme
+        date: '2016-06-07',
       },
     ],
   },
