@@ -2507,6 +2507,10 @@ fs-readdir-recursive@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/fs-readdir-recursive/-/fs-readdir-recursive-0.1.2.tgz#315b4fb8c1ca5b8c47defef319d073dad3568059"
 
+fs-walker:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fs-walker/-/fs-walker-1.0.0.tgz#4897bac6c9822af9e8b80d35eb9e299d20c8840f"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"

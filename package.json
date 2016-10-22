@@ -43,6 +43,7 @@
     "eslint-config-kentcdodds": "^10.1.0",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-react": "^6.3.0",
+    "fs-walker": "^1.0.0",
     "glob": "^7.1.1",
     "http-server": "^0.9.0",
     "marked": "^0.3.6",

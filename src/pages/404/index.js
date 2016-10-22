@@ -1,4 +1,4 @@
-import InlineScript from '../components/scripts/inline-script'
+import InlineScript from '../../components/scripts/inline-script'
 
 export default FourOFour
 
