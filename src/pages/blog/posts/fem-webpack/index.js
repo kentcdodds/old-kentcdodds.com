@@ -2,6 +2,7 @@
 import Markdown from '../../../../components/markdown'
 
 export const title = 'Introducing the Webpack Deep Dive Workshop'
+export const draft = true
 
 export default Post
 
