@@ -27,6 +27,30 @@ export default [
   //   `,
   // },
   {
+    title: 'Faster JavaScript',
+    resources: [
+      '[slides](https://slides.com/kentcdodds/faster-javascript)',
+    ],
+    tags: [],
+    presentations: [
+      {
+        event: '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
+        date: '2016-11-03',
+      },
+    ],
+    abstract: `
+      The more code you have, the more problems you have. One of these is the ability to learn the code. Code often has
+      logic to handle edge cases which can distract a new contributor from the core logic of the code, making it
+      challenging to learn. Another one of the problems with more code that's specific to JavaScript and the browser is
+      the more you send over the wire to the browser, the slower it goes. This is due to network latency primarily, but
+      also parsing, evaluating, and keeping relevant variables in memory.
+
+      With a really interesting technique called [program slicing](https://en.wikipedia.org/wiki/Program_slicing), we
+      can build tools to help to mitigate some of these problems. In this talk, I'm going to give you a peek at a tool
+      I've been working on called \`slice-js\` 🍕. I'm super excited about the implications for a project like this!
+    `,
+  },
+  {
     title: 'How to Open Source Your Stuff',
     resources: [
       '[slides](https://slides.com/kentcdodds/open-sourcing-your-stuff)',
@@ -309,7 +333,7 @@ export default [
     tags: ['babel', 'testing', 'webpack', 'live coding'],
     presentations: [
       {
-        event: '[UtahJS meetup June](http://www.meetup.com/UtahJS/events/222630472/)',
+        event: '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472/)',
         recording: 'https://youtu.be/P-1ZZkpEmQA',
         date: '2015-06-16',
       },
