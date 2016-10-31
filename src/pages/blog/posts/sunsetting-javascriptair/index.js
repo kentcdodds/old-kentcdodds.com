@@ -42,13 +42,13 @@ function Post() {
           was clean the kitchen really quick so I could start working on a project I am really excited about. Then, I
           realized that I had to do some planning for the upcoming JavaScript Air show. That was the moment I realized
           that there are some other things that I'm more interested in doing with my time. This isn't an isolated
-          incident. I've actually been feeling this way for months. I've been neglecting my contributings to Open
+          incident. I've actually been feeling this way for months. I've been neglecting my contributing to Open
           Source, Egghead.io, etc. because I had to do the leg work of preparing for and producing JavaScript Air shows.
 
           Since I announced the sunset, I've had several people offer to do everything for me, just so I can continue
           hosting the show. While I'm super grateful to these people, it's just not something that I'm interested in
           doing right now. I have a very high attention to detail and worry that I'd end up micro-managing anyone I
-          hired to do the behind-the-scenese stuff for the show, which would end up taking more time. I'm just not in a
+          hired to do the behind-the-scenes stuff for the show, which would end up taking more time. I'm just not in a
           place right now to do that.
 
           I wouldn't say that I'm totally killing the show. Everything's just going to stop going for a while. It is
