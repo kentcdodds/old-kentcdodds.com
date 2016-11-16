@@ -36,6 +36,7 @@ export default [
       {
         event: '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
         date: '2016-11-03',
+        recording: 'https://www.youtube.com/watch?v=kI_OiAUFLkQ',
       },
     ],
     abstract: `
