@@ -3,11 +3,18 @@ import slugify from 'slugify'
 import Markdown from '../../components/markdown'
 import appearances from './appearances-data'
 
+const thingClassName = 'blahblahunique🐌blah'
+
 export default Appearances
 
 function Appearances() {
   return (
     <div style={{textAlign: 'center'}}>
+      <style>{`
+        /* I know, crazy right? lol :shipit: */
+        .${thingClassName} a {color: inherit;}
+        .${thingClassName} a:hover, .${thingClassName} a:focus {color: gray;}
+      `}</style>
       <h1
         style={{fontSize: 50, marginBottom: 20}}
       >
@@ -47,11 +54,17 @@ SectionOfThings.propTypes = {
 function ListOfThings({things}) {
   return (
     <ul>
-      {things.map(({thing, description}, i) => (
+      {things.map(({thing, description, duration, date, isFuture}, i) => (
         <li key={i} style={{marginBottom: 4}}>
-          <NoPMarkdown>{thing}</NoPMarkdown> {description ? (
-            <span>- <NoPMarkdown style={{fontSize: '0.8em'}}>{description}</NoPMarkdown></span>
+          <NoPMarkdown className={thingClassName}>{thing}</NoPMarkdown>: {description ? (
+            <span> <NoPMarkdown>{description}</NoPMarkdown></span>
           ) : ''}
+          <span style={{fontSize: '0.7em'}}>
+            {' '}
+            {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
+            {' '}
+            {duration ? `- ${duration}` : null}
+          </span>
         </li>
       ))}
     </ul>
@@ -67,9 +80,13 @@ ListOfThings.propTypes = {
   })),
 }
 
-function NoPMarkdown({children, style}) {
+function NoPMarkdown({children, style, ...otherProps}) {
   return (
-    <Markdown noPTag style={{display: 'inline', ...style}}>
+    <Markdown
+      noPTag
+      style={{display: 'inline', ...style}}
+      {...otherProps}
+    >
       {children}
     </Markdown>
   )

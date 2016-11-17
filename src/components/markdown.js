@@ -4,12 +4,18 @@ import stripIndent from 'strip-indent'
 
 export default Markdown
 
-function Markdown({children, style, noPTag = false}) {
+function Markdown({children, style, noPTag = false, ...otherProps}) {
   let html = marked(stripIndent(children))
   if (noPTag) {
     html = html.slice(3, -5)
   }
-  return <div style={style} dangerouslySetInnerHTML={({__html: html})} />
+  return (
+    <div
+      style={style}
+      dangerouslySetInnerHTML={({__html: html})}
+      {...otherProps}
+    />
+    )
 }
 Markdown.propTypes = {
   children: PropTypes.string.isRequired,
