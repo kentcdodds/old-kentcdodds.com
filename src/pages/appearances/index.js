@@ -9,7 +9,7 @@ export default Appearances
 
 function Appearances() {
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{textAlign: 'center', maxWidth: 600, margin: 'auto'}}>
       <style>{`
         /* I know, crazy right? lol :shipit: */
         .${thingClassName} a {color: inherit;}
@@ -21,7 +21,7 @@ function Appearances() {
         Appearances
       </h1>
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
-      <div style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}>
+      <div style={{textAlign: 'left', fontSize: 18}}>
         {appearances.map(({title, appearances: things}) => (
           <SectionOfThings
             key={title}
@@ -30,6 +30,13 @@ function Appearances() {
           />
         ))}
       </div>
+      <hr style={{margin: '50px 0'}} />
+      <Markdown style={{textAlign: 'left'}}>{`
+        You may also be interested in:
+        - [My Talks](http://kcd.im/talks)
+        - [My AMA](http://kcd.im/ama)
+        - My [tech chats](https://github.com/kentcdodds/ama/issues/125) on [YouTube](http://kcd.im/tech-chats)
+      `}</Markdown>
     </div>
   )
 }
