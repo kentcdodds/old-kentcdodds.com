@@ -1,23 +1,16 @@
-import fs from 'fs'
 import {resolve, join} from 'path'
-import glob from 'glob'
 import Page from '../src/components/page'
 import Blog from '../src/pages/blog'
 import renderComponentToFile from './render-component-to-file'
-import {getPosts, getLastUpdatedFromFileStats} from './utils'
+import {getPosts, getLastUpdated} from './utils'
 
 const posts = getPosts()
-const postListPageFilesStats = glob.sync('src/pages/blog/**/*', {
-  ignore: '**/posts/**',
-  nodir: true,
-}).map(file => fs.statSync(file))
-
-const lastUpdatedFromFileStats = getLastUpdatedFromFileStats(postListPageFilesStats)
+const lastUpdatedBlog = getLastUpdated(resolve(__dirname, '../src/pages/blog'))
 
 renderComponentToFile(
   <Page
     title="Blog post listings | Kent C. Dodds"
-    lastUpdated={lastUpdatedFromFileStats}
+    lastUpdated={lastUpdatedBlog}
   >
     <Blog posts={posts} />
   </Page>,

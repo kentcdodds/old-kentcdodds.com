@@ -21,8 +21,4 @@ Markdown.propTypes = {
   children: PropTypes.string.isRequired,
   noPTag: PropTypes.bool,
   style: PropTypes.object,
-  // children: PropTypes.oneOfType([
-  //   PropTypes.arrayOf(PropTypes.node),
-  //   PropTypes.node,
-  // ]),
 }

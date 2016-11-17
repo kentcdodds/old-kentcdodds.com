@@ -1,9 +1,9 @@
 import {join, basename} from 'path'
-import walk from 'fs-walker'
+import spawn from 'cross-spawn'
 import moment from 'moment'
 import glob from 'glob'
 
-export {getPosts, getLastUpdated, getLastUpdatedFromFileStats}
+export {getPosts, getLastUpdated}
 
 function getPosts() {
   const postDirs = glob.sync(join(__dirname, '../src/pages/blog/posts/*/'))
@@ -20,19 +20,9 @@ function getPosts() {
 }
 
 function getLastUpdated(path) {
-  const filesStats = walk.files.sync(path)
-  return getLastUpdatedFromFileStats(filesStats)
-}
-
-function getLastUpdatedFromFileStats(filesStats) {
-  const modifiedDate = filesStats.reduce((recent, fileStats) => {
-    if (moment(fileStats.mtime).isAfter(recent)) {
-      return fileStats.mtime
-    }
-    return recent
-  }, 0)
-  if (modifiedDate === 0) {
-    throw new Error(`Could not calculate the most recent modified date`)
-  }
-  return moment(modifiedDate).format('YYYY-MM-DD')
+  const args = `log -1 --pretty=format:"%ad" --date=short --`
+  const {stdout} = spawn.sync('git', [...args.split(' '), path])
+  const output = String(stdout)
+  const date = new Date(output)
+  return moment(date).format('YYYY-MM-DD')
 }
