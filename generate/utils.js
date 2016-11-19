@@ -3,7 +3,7 @@ import spawn from 'cross-spawn'
 import moment from 'moment'
 import glob from 'glob'
 
-export {getPosts, getLastUpdated}
+export {getPosts, getLastUpdated, getLinks}
 
 function getPosts() {
   const postDirs = glob.sync(join(__dirname, '../src/pages/blog/posts/*/'))
@@ -25,4 +25,14 @@ function getLastUpdated(path) {
   const output = String(stdout)
   const date = new Date(output)
   return moment(date).format('YYYY-MM-DD')
+}
+
+function getLinks() {
+  return [
+    {url: '/', text: 'Home'},
+    {url: '/post', text: 'Blog'},
+    {url: '/talks', text: 'Talks'},
+    {url: '/appearances', text: 'Appearances'},
+    {url: '/links', text: 'Links'},
+  ]
 }

@@ -2,7 +2,7 @@ import {resolve, join} from 'path'
 import Page from '../src/components/page'
 import Blog from '../src/pages/blog'
 import renderComponentToFile from './render-component-to-file'
-import {getPosts, getLastUpdated} from './utils'
+import {getPosts, getLastUpdated, getLinks} from './utils'
 
 const posts = getPosts()
 const lastUpdatedBlog = getLastUpdated(resolve(__dirname, '../src/pages/blog'))
@@ -11,6 +11,7 @@ renderComponentToFile(
   <Page
     title="Blog post listings | Kent C. Dodds"
     lastUpdated={lastUpdatedBlog}
+    links={getLinks()}
   >
     <Blog posts={posts} />
   </Page>,
@@ -22,6 +23,7 @@ posts.forEach(({url, date, title, subtitle, default: Post}) => {
     <Page
       title={`${title} | Kent C. Dodds Blog`}
       lastUpdated={date}
+      links={getLinks()}
     >
       <Post
         url={url}

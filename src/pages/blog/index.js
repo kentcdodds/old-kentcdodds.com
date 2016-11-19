@@ -12,6 +12,10 @@ function BlogHome({posts}) {
         Blog
       </h1>
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
+      <div style={{fontSize: '0.9em', marginTop: 20}}>
+        I'm in the process of moving my blog over to this.
+        Find more posts <a href="https://medium.com/@kentcdodds">on Medium.com</a>.
+      </div>
       <div style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}>
         <ul>
           {posts.filter(p => !p.draft).map(({url, title, subtitle, date}, i) => (
