@@ -1,20 +1,20 @@
 import {PropTypes} from 'react'
 import slugify from 'slugify'
+import {merge, select} from 'glamor'
 import Markdown from '../../components/markdown'
 import appearances from './appearances-data'
 
-const thingClassName = 'blahblahunique🐌blah'
+const thingAnchorStyles = merge(
+  select(' a', {color: 'inherit'}),
+  select(' a:hover', {color: 'gray'}),
+  select(' a:focus', {color: 'gray'})
+)
 
 export default Appearances
 
 function Appearances() {
   return (
     <div style={{textAlign: 'center', maxWidth: 600, margin: 'auto'}}>
-      <style>{`
-        /* I know, crazy right? lol :shipit: */
-        .${thingClassName} a {color: inherit;}
-        .${thingClassName} a:hover, .${thingClassName} a:focus {color: gray;}
-      `}</style>
       <h1
         style={{fontSize: 50, marginBottom: 20}}
       >
@@ -63,7 +63,7 @@ function ListOfThings({things}) {
     <ul>
       {things.map(({thing, description, duration, date, isFuture}, i) => (
         <li key={i} style={{marginBottom: 4}}>
-          <NoPMarkdown className={thingClassName}>{thing}</NoPMarkdown>: {description ? (
+          <NoPMarkdown {...thingAnchorStyles}>{thing}</NoPMarkdown>: {description ? (
             <span> <NoPMarkdown>{description}</NoPMarkdown></span>
           ) : ''}
           <span style={{fontSize: '0.7em'}}>

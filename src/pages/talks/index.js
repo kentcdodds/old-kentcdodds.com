@@ -1,5 +1,6 @@
 import {PropTypes} from 'react'
 import slugify from 'slugify'
+import {merge, style, firstChild, lastChild} from 'glamor'
 import {intersperse} from '../../utils'
 import talks from './talk-data'
 
@@ -12,18 +13,50 @@ const availableColors = new Set([
 ])
 const colorMap = {}
 
+const styles = {
+  talksRoot: style({textAlign: 'center'}),
+  talksHeading: style({fontSize: 50, marginBottom: 20}),
+  searchPre: style({display: 'inline'}),
+  talksContainer: style({
+    maxWidth: 600,
+    margin: 'auto',
+    textAlign: 'left',
+    fontSize: 18,
+  }),
+  talkDate: style({paddingLeft: 10, fontSize: '0.7em'}),
+  tag(color) {
+    return merge(
+      {
+        backgroundColor: color,
+        color: getTextColor(color),
+        borderRadius: 2,
+        padding: '2px 6px',
+        marginLeft: 6,
+        marginRight: 6,
+      },
+      firstChild({marginLeft: 0}),
+      lastChild({marginRight: 0}),
+    )
+  },
+  talkRoot: style({marginBottom: 60}),
+  talkTitle: style({marginBottom: 10}),
+  tagContainer: style({marginBottom: 6, fontSize: '0.75em'}),
+  references: style({marginBottom: 8, fontSize: '0.9em'}),
+  presentationsContainer: style({listStyle: 'none', paddingLeft: 16, margin: 0}),
+  abstractTitle: style({marginBottom: 2}),
+  abstractContainer: style({marginTop: -12}),
+}
+
 export default Talks
 
 function Talks() {
   return (
-    <div style={{textAlign: 'center'}}>
-      <h1
-        style={{fontSize: 50, marginBottom: 20}}
-      >
+    <div {...styles.talksRoot}>
+      <h1 {...styles.talksHeading}>
         Talks
       </h1>
-      <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
-      <div style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}>
+      <em>Search with <pre {...styles.searchPre}>⌘/ctrl + f</pre></em>
+      <div {...styles.talksContainer}>
         {talks.map((t, i) => (<Talk key={i} talk={t} />))}
       </div>
     </div>
@@ -38,59 +71,45 @@ function Talk({talk}) {
       <span {...innerHTML(event)} />
       {recording ? ' - ' : null}
       {recording ? <a href={recording}>video</a> : null}
-      <span style={{paddingLeft: 10, fontSize: '0.7em'}}>
+      <span {...styles.talkDate}>
         {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
       </span>
     </li>
   ))
-  const tagEls = tags.map((t, i) => {
-    const isFirst = i === 0
-    const isLast = i === tags.length - 1
+  const tagEls = tags.map(t => {
     let color = colorMap[t]
     if (!color) {
       color = colorMap[t] = getRandomColor()
     }
     return (
-      <span
-        key={i}
-        style={{
-          backgroundColor: color,
-          color: getTextColor(color),
-          borderRadius: 2,
-          padding: '2px 6px',
-          marginLeft: isFirst ? 0 : 6,
-          marginRight: isLast - 1 ? 0 : 6,
-        }}
-      >
-        {t}
-      </span>
+      <span key={t} {...styles.tag(color)}>{t}</span>
     )
   })
   const anchor = slugify(title.toLowerCase())
   return (
-    <div style={{marginBottom: 60}}>
+    <div {...styles.talkRoot}>
       <a href={`#${anchor}`} name={anchor}>
         <h2
           {...innerHTML(title)}
-          style={{marginBottom: 10}}
+          {...styles.talkTitle}
         />
       </a>
-      <div style={{marginBottom: 6, fontSize: '0.75em'}}>{tagEls}</div>
-      <div style={{marginBottom: 8, fontSize: '0.9em'}}>
+      <div {...styles.tagContainer}>{tagEls}</div>
+      <div {...styles.references}>
         <div>
           {intersperse(resourceEls, ' | ')}
         </div>
         <div>
           Presentations:
-          <ul style={{listStyle: 'none', paddingLeft: 16, margin: 0}}>
+          <ul {...styles.presentationsContainer}>
             {presentationEls}
           </ul>
         </div>
       </div>
       {abstract ? (
         <div>
-          <h3 style={{marginBottom: 2}}>Abstract</h3>
-          <div {...innerHTML(abstract)} style={{marginTop: -12}} />
+          <h3 {...styles.abstractTitle}>Abstract</h3>
+          <div {...innerHTML(abstract)} {...styles.abstractContainer} />
         </div>
       ) : null}
     </div>

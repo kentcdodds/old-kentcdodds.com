@@ -28,6 +28,7 @@ function Page({
         <style
           dangerouslySetInnerHTML={{__html: `body {font-family: 'MS Sans Serif', Geneva, 'sans-serif';}`}}
         />
+        <style>{`/* glamor-styles */`}</style>
       </head>
       <body>
         {children}
