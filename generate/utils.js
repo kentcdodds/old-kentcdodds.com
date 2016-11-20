@@ -34,5 +34,6 @@ function getLinks() {
     {url: '/talks', text: 'Talks'},
     {url: '/appearances', text: 'Appearances'},
     {url: '/links', text: 'Links'},
+    {url: 'https://kcd.im/ama', text: 'AMA'},
   ]
 }
