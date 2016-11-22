@@ -36,6 +36,7 @@ function Home() {
             {text: 'Frontend Masters', url: 'https://frontendmasters.com/'},
             {text: 'JavaScript Air', url: 'https://javascriptair.com'},
             {text: 'React30', url: 'https://react30.com'},
+            {text: '3 Minutes with Kent', url: 'http://kcd.im/3-mins'},
           ])}
         </p>
         <p>
