@@ -54,9 +54,11 @@
     "mkdirp": "^0.5.1",
     "moment": "^2.16.0",
     "npm-run-all": "^3.1.1",
+    "random-emoji": "^1.0.2",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "rimraf": "^2.5.4",
+    "rxjs": "^5.0.0-rc.4",
     "slugify": "^1.0.2",
     "strip-indent": "^2.0.0",
     "uglify-js": "^2.7.4"
