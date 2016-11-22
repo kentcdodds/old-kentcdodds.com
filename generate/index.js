@@ -8,7 +8,7 @@ Rx.Observable
     './404',
     './links',
     './talks',
-    // './blog',
+    './blog',
     './appearances',
     './workshops',
   ])
