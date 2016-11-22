@@ -185,6 +185,26 @@ export default [
     `,
   },
   {
+    title: 'How to Contribute to an Open Source Project on GitHub',
+    tags: ['open source'],
+    presentations: [
+      {
+        event: '[Egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
+        date: '2016-02-18',
+        recording: 'https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github',
+      },
+    ],
+    abstract: `
+      "Feel free to submit a PR!" - words often found in GitHub issues, but met with confusion and fear by many.
+      Getting started with contributing open source is not always straightforward and can be tricky. With this series,
+      you’ll be equipped with the the tools, knowledge, and understanding you need to be productive and contribute to
+      the wonderful world of open source projects. Much of this series speaks about GitHub, but most of the concepts
+      are generally applicable to contributing to any open source project, regardless of where it’s hosted.
+
+      So enjoy the course and start contributing to the projects you use and love today!
+    `,
+  },
+  {
     title: 'Intro to Webpack and Migrating from Require.js to Webpack ',
     resources: [
       '[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)',
@@ -199,6 +219,24 @@ export default [
     ],
   },
   {
+    title: 'Angular and Webpack for Modular Applications',
+    tags: ['angular', 'webpack'],
+    presentations: [
+      {
+        event: '[Egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
+        date: '2015-09-05',
+        recording: 'https://egghead.io/courses/angular-and-webpack-for-modular-applications',
+      },
+    ],
+    abstract: `
+      How much work would it take for you to move all of your directives and their templates to several different new
+      directories? You'd have to update the templateUrl, script tags, etc., etc. With webpack, this can be trivial. For
+      example, you don't need to worry about loading your templates in the $templateCache ever again. Webpack will help
+      you modularize your css and tests. All of these things and more in this series so you can start using webpack
+      with Angular today.
+    `,
+  },
+  {
     title: 'angular-formly',
     resources: [
       '[slides](http://slides.com/kentcdodds/angular-formly)',
@@ -211,6 +249,30 @@ export default [
         date: '2015-03-04',
       },
     ],
+  },
+  {
+    title: 'AngularJS Authentication with JWT',
+    tags: ['angular'],
+    presentations: [
+      {
+        event: '[Egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
+        date: '2014-09-22',
+        recording: 'https://egghead.io/courses/angularjs-authentication-with-jwt',
+      },
+    ],
+    abstract: `
+      JSON Web Tokens (JWT) are a more modern approach to authentication. As the web moves to a greater separation
+      between the client and server, JWT provides a terrific alternative to traditional cookie based authentication
+      models. For more information on JWT visit http://jwt.io/
+
+      In this series, we’ll be building a simple application to get random user information from a node server with an
+      Angular client. We’ll then implement JWT to protect the random user resource on the server and then work through
+      the frontend to get JWT authentication working.
+
+      By the end, we’ll have an application which has a single username/password combination (for simplicity) and uses
+      tokens to authorize the client to see the random user information. You’ll be able to login, get random users, and
+      logout.
+    `,
   },
   {
     title: 'Intro to AngularJS',
