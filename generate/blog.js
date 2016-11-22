@@ -11,7 +11,7 @@ function renderToFiles() {
   const posts = getPosts()
   const lastUpdatedBlog = getLastUpdated(resolve(__dirname, '../src/pages/blog'))
 
-  const blogStream = renderComponentToFile(
+  const blog$ = renderComponentToFile(
     <Page
       title="Blog post listings | Kent C. Dodds"
       lastUpdated={lastUpdatedBlog}
@@ -22,7 +22,7 @@ function renderToFiles() {
     resolve(__dirname, '../dist/post/index.html'),
   )
 
-  const postStream = posts.map(({url, date, title, subtitle, default: Post}) => {
+  const post$ = posts.map(({url, date, title, subtitle, default: Post}) => {
     return renderComponentToFile(
       <Page
         title={`${title} | Kent C. Dodds Blog`}
@@ -39,5 +39,5 @@ function renderToFiles() {
       join(__dirname, '../dist', url, 'index.html'),
     )
   })
-  return Rx.Observable.merge(...[blogStream, ...postStream])
+  return Rx.Observable.merge(blog$, ...post$)
 }
