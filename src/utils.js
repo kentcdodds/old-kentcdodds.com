@@ -1,4 +1,16 @@
-export {intersperse} // eslint-disable-line import/prefer-default-export
+import marked from 'marked'
+import stripIndent from 'strip-indent'
+import moment from 'moment'
+
+const tagEmojiMap = {
+  lightning: '⚡',
+  'open source': '🌎',
+  'live coding': '💻',
+  testing: '⚠️',
+  react: '⚛',
+}
+
+export {intersperse, sortPresentations, preparePresentationData}
 
 /* intersperse: Return an array with the separator interspersed between
  * each element of the input array.
@@ -20,4 +32,48 @@ function intersperse(arr, sep) {
       return xs.concat([sep, x])
     }
   }, [])
+}
+
+function preparePresentationData(presentation) {
+  return {
+    // defaults
+    ...presentation,
+
+    // overrides
+    title: markdownToHTMLWithNoPTag(presentation.title),
+    presentations: (presentation.presentations || []).map(delivery => ({
+      ...delivery,
+      event: markdownToHTMLWithNoPTag(delivery.event),
+      date: moment(delivery.date),
+      isFuture: moment().isBefore(delivery.date),
+    })).sort((a, b) => (a.date.isAfter(b.date) ? -1 : 1)),
+    tags: (presentation.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
+    resources: (presentation.resources || []).map(markdownToHTMLWithNoPTag),
+    abstract: markdownToHTML(presentation.abstract || ''),
+  }
+}
+
+function sortPresentations(a, b) {
+  const mostRecentA = mostRecent(presentationDates(a.presentations))
+  const mostRecentB = mostRecent(presentationDates(b.presentations))
+  return mostRecentA.isAfter(mostRecentB) ? -1 : 1
+}
+
+
+function markdownToHTML(string) {
+  return marked(stripIndent(string))
+}
+
+function markdownToHTMLWithNoPTag(string) {
+  return markdownToHTML(string).slice(3, -5)
+}
+
+function presentationDates(presentations) {
+  return presentations.map(({date}) => date)
+}
+
+function mostRecent(dates) {
+  return dates.reduce((recent, compare) => {
+    return compare.isAfter(recent) ? compare : recent
+  })
 }

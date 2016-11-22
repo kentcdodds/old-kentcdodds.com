@@ -1,15 +1,5 @@
 /* eslint max-len:[1, 120], max-lines:0 */
-import marked from 'marked'
-import stripIndent from 'strip-indent'
-import moment from 'moment'
-
-const tagEmojiMap = {
-  lightning: '⚡',
-  'open source': '🌎',
-  'live coding': '💻',
-  testing: '⚠️',
-  react: '⚛',
-}
+import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
   // {
@@ -622,41 +612,4 @@ export default [
       around with the code and then catch right back up with the next branch. So come on, and let's learn AngularJS!
     `,
   },
-].map(talk => ({
-  // defaults
-  ...talk,
-
-  // overrides
-  title: markdownToHTMLWithNoPTag(talk.title),
-  presentations: (talk.presentations || []).map(delivery => ({
-    ...delivery,
-    event: markdownToHTMLWithNoPTag(delivery.event),
-    date: moment(delivery.date),
-    isFuture: moment().isBefore(delivery.date),
-  })).sort((a, b) => (a.date.isAfter(b.date) ? -1 : 1)),
-  tags: (talk.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
-  resources: (talk.resources || []).map(markdownToHTMLWithNoPTag),
-  abstract: markdownToHTML(talk.abstract || ''),
-})).sort((a, b) => {
-  const mostRecentA = mostRecent(presentationDates(a.presentations))
-  const mostRecentB = mostRecent(presentationDates(b.presentations))
-  return mostRecentA.isAfter(mostRecentB) ? -1 : 1
-})
-
-function markdownToHTML(string) {
-  return marked(stripIndent(string))
-}
-
-function markdownToHTMLWithNoPTag(string) {
-  return markdownToHTML(string).slice(3, -5)
-}
-
-function presentationDates(presentations) {
-  return presentations.map(({date}) => date)
-}
-
-function mostRecent(dates) {
-  return dates.reduce((recent, compare) => {
-    return compare.isAfter(recent) ? compare : recent
-  })
-}
+].map(preparePresentationData).sort(sortPresentations)

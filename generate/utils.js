@@ -32,6 +32,7 @@ function getLinks() {
     {url: '/', text: 'Home'},
     {url: '/post', text: 'Blog'},
     {url: '/talks', text: 'Talks'},
+    {url: '/workshops', text: 'Workshops'},
     {url: '/appearances', text: 'Appearances'},
     {url: '/links', text: 'Links'},
     {url: 'https://kcd.im/ama', text: 'AMA'},

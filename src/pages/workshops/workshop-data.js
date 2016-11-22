@@ -1,0 +1,252 @@
+/* eslint max-len:[1, 120], max-lines:0 */
+import {preparePresentationData, sortPresentations} from '../../utils'
+
+export default [
+  // {
+  //   title: '',
+  //   resources: [
+  //   ],
+  //   tags: [],
+  //   presentations: [
+  //     {
+  //       event: '',
+  //       date: '',
+  //       recording: '',
+  //     },
+  //   ],
+  //   abstract: `
+  //   `,
+  // },
+  {
+    title: 'ES6 and Beyond',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/es6-workshop#/)',
+      '[workshop repo](https://github.com/kentcdodds/es6-workshop)',
+      '[app repo](https://github.com/kentcdodds/es6-todomvc)',
+    ],
+    tags: [
+      'ES.next', 'ES6', 'webpack',
+    ],
+    presentations: [
+      {
+        event: '[The Strange Loop](http://www.thestrangeloop.com/2016/es6-and-beyond.html)',
+        date: '2016-09-15',
+        recording: 'https://youtu.be/dnF-wrw0Q_w',
+      },
+      {
+        event: '[Connect.Tech](http://connect.tech/)',
+        date: '2016-10-20',
+        recording: 'https://youtu.be/nCP6jsN9XPI',
+      },
+      {
+        event: '[The Kansas City Developer Conference](http://www.kcdc.info/)',
+        date: '2016-06-22',
+      },
+      {
+        event: '[MidwestJS](http://midwestjs.com/)',
+        date: '2015-08-12',
+        recording: 'https://youtu.be/aeY6ctvsurs?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
+      },
+      {
+        event: '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
+        date: '2015-04-21',
+        recording: 'https://youtu.be/_Pn32tTtbuQ',
+      },
+    ],
+    abstract: `
+      The EcmaScript standard is now on a yearly release cycle. With ES6 complete and ES2016 almost ratified, we have a
+      ton of awesome new features to use in our daily software development. In this training, we'll learn about the
+      features you're likely to use and benefit from on a day-to-day basis. In the afternoon, we'll take an existing
+      application and update it to leverage these features using with modern tools like Babel. My goal is that after
+      this training, you'll be able to go back to your projects and add these tools so you can write ES.next code today.
+
+      This is a very hands-on training and you'll need to make sure that you're machine is set up. Please ensure that
+      you have git, Node, npm, and a text editor / IDE installed on your machine. With that, you'll be ready to rock
+      and roll. Feel free to hit me up on twitter if you have any questions.
+    `,
+  },
+  {
+    title: 'Intro to ReactJS',
+    resources: [
+      '[repo](https://github.com/kentcdodds/react-workshop)',
+      '[app](https://github.com/kentcdodds/react-github-profile)',
+    ],
+    tags: ['react'],
+    presentations: [
+      {
+        event: 'Internally at PayPal',
+        date: '2016-12-13',
+      },
+      {
+        event: 'Internally at PayPal',
+        recording: 'https://youtu.be/e-A4qAwr9Tg',
+        date: '2016-10-06',
+      },
+      {
+        event: '[MidwestJS](http://midwestjs.com/)',
+        date: '2016-08-10',
+      },
+    ],
+    abstract: `TODO 😅`,
+  },
+  {
+    title: 'Webpack Deep Dive',
+    resources: [
+      '[slides](https://slides.com/kentcdodds/webpack-deep-dive)',
+      '[app repo](https://github.com/kentcdodds/es6-todomvc)',
+    ],
+    tags: ['webpack'],
+    presentations: [
+      {
+        event: '[Frontend Masters](http://kcd.im/fem-webpack)',
+        date: '2016-08-08',
+        recording: 'http://kcd.im/fem-webpack',
+      },
+      {
+        event: '[Egghead.io](https://egghead.io/courses/using-webpack-for-production-javascript-applications)',
+        date: '2016-06-17',
+        recording: 'https://egghead.io/courses/using-webpack-for-production-javascript-applications',
+      },
+      {
+        event: '[MidwestJS](http://midwestjs.com/)',
+        date: '2015-08-12',
+        recording: 'https://youtu.be/a96r7Tjf0Ps?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
+      },
+    ],
+    abstract: `
+      Building and deploying complex frontend applications can get complicated quickly. Webpack simplifies this with a
+      huge list of features that cater to all kinds of JavaScript apps. In this class, we’ll explore these features to
+      optimize an application for performance and simplicity. In this workshop, you'll learn:
+
+      - The role of webpack and fundamental concepts like loaders and plugins
+      - How to setup a webpack file (and use webpack-validator to save yourself hours of debugging typos)
+      - How to setup a unit testing environment for a webpack project
+      - How tree-shaking works and how to leverage it for smaller bundles
+      - How to maintain sane file sizes with webpack code splitting
+      - How to leverage hashing for long term caching
+      - How to group vendor/common files with the CommonsChunkPlugin to save bytes in the code that changes regularly
+      - The latest features of Webpack 2!
+    `,
+  },
+  {
+    title: 'How to Write an Open Source JavaScript Library',
+    resources: [
+      '[repo](https://github.com/kentcdodds/starwars-names)',
+    ],
+    tags: ['open source'],
+    presentations: [
+      {
+        event: '[Frontend Masters](http://kcd.im/fem-oss)',
+        date: '2016-08-09',
+        recording: 'http://kcd.im/fem-oss',
+      },
+      {
+        event: '[Egghead.io](http://kcd.im/write-oss)',
+        date: '2015-08-24',
+        recording: 'http://kcd.im/write-oss',
+      },
+    ],
+    abstract: `
+      Participating in open source has been one of the most rewarding experiences of my career. The feeling of sharing
+      something I’ve created, and hearing that others are using it in their applications is incredible. But writing and
+      managing an open source project is challenging. I want to help you get started with open source or improve your
+      current projects with some of the things I’ve learned by publishing and maintaining over 60 npm packages.
+
+      - Learn how to set up a new project locally and on GitHub for development
+      - Learn how to configure npm for publishing the project to the npm registry
+      - Learn how to transpile the source with babel
+      - Learn how to add unit tests and code coverage
+      - Learn how to add CI (with Travis CI) to run tests automatically and report coverage stats to codecov.io
+      - Learn how to automate releases with semantic-release
+      - Learn how to distribute a browser build with webpack
+    `,
+  },
+  {
+    title: 'React + AVA = ❤️',
+    resources: [
+      '[repo](https://github.com/kentcdodds/react-ava-workshop)',
+    ],
+    tags: ['react', 'testing'],
+    presentations: [
+      {
+        event: 'Internally at PayPal',
+        date: '2016-02-16',
+        recording: 'https://youtu.be/UmDNx06472I',
+      },
+      {
+        event: 'Hangout with my team',
+        date: '2016-04-13',
+        recording: 'https://youtu.be/RxLW6-3dk5A',
+      },
+    ],
+    abstract: `
+      **NOTE**: _I no longer recommend using AVA in React Projects_. Instead I recommend using Jest. Incidentally, I
+      have a workshop for that too: [react-jest-workshop](https://github.com/kentcdodds/react-jest-workshop).
+    `,
+  },
+  {
+    title: 'Intro to Webpack and Migrating from Require.js to Webpack ',
+    resources: [
+      '[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)',
+    ],
+    tags: ['webpack'],
+    presentations: [
+      {
+        event: 'JS @ PayPal',
+        date: '2015-12-17',
+        recording: 'https://youtu.be/NEJyIBwo-ik',
+      },
+    ],
+  },
+  {
+    title: 'angular-formly',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/angular-formly)',
+      '[repo](https://github.com/kentcdodds/angular-formly-convert)',
+    ],
+    tags: ['angular'],
+    presentations: [
+      {
+        event: '[ng-conf](https://www.ng-conf.org/)',
+        date: '2015-03-04',
+      },
+    ],
+  },
+  {
+    title: 'Intro to AngularJS',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/intro-to-angularjs)',
+      '[workshop](http://kentcdodds.com/ng-workshop/)',
+    ],
+    tags: ['angular'],
+    presentations: [
+      {
+        event: '[JFokus 2015](http://www.jfokus.se/jfokus/)',
+        date: '2015-02-06',
+      },
+      {
+        event: '[BYU](https://byu.edu/)',
+        date: '2014-01-20',
+        recording: 'https://youtu.be/GmVUw_Efi_M',
+      },
+    ],
+    abstract: `
+      AngularJS is one of the most popular frontend frameworks out there right now. If you haven't tried it yet,
+      prepare to be amazed! Here's what we'll cover:
+
+      1. Templates/Expressions - Your View
+      2. Module - Your app's namespace
+      3. Directives - DOM Interface
+      4. Filters - Display utils
+      5. Scope - What on earth is this thing!?
+      6. Controllers - The View Model
+      7. Services - Common utilities
+      8. Working with third-party modules
+      9. Routing - Single Page App with state in the URL
+      10. Firebase & AngularFire - A full web application with no server setup required!
+
+      We'll be following through a repository hosted on GitHub. There's a branch for each concept, so you can play
+      around with the code and then catch right back up with the next branch. So come on, and let's learn AngularJS!
+    `,
+  },
+].map(preparePresentationData).sort(sortPresentations)
