@@ -7,7 +7,7 @@ import appearances from './appearances-data'
 const thingAnchorStyles = merge(
   select(' a', {color: 'inherit'}),
   select(' a:hover', {color: 'gray'}),
-  select(' a:focus', {color: 'gray'})
+  select(' a:focus', {color: 'gray'}),
 )
 
 export default Appearances
