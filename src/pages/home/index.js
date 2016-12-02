@@ -26,6 +26,7 @@ function Home() {
             {text: 'Trainer', url: 'https://kcd.im/talks#workshops'},
             {text: 'Open Sourcerer', url: 'https://github.com/kentcdodds'},
             {text: 'GDE', url: 'https://kcd.im/gde'},
+            {text: 'TC39', url: 'https://github.com/tc39'},
           ])}
         </p>
         <p>
