@@ -2,8 +2,6 @@
 import Rx from 'rxjs/Rx'
 import {random as randomEmoji} from 'random-emoji'
 
-const maxConcurrent = 10
-
 Rx.Observable
   .from([
     './home',
@@ -15,7 +13,8 @@ Rx.Observable
     './workshops',
   ])
   .map(modPath => require(modPath).default) // eslint-disable-line
-  .mergeMap(fn => Rx.Observable.of(fn()), undefined, maxConcurrent)
+  // .merge(2) // this doesn't appear to be limiting the concurrent requests
+  .flatMap(fn => fn())
   .subscribe({
     error: err => {
       console.error('something wrong happened:', err)
