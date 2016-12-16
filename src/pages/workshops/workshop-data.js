@@ -75,6 +75,7 @@ export default [
     presentations: [
       {
         event: 'Internally at PayPal',
+        recording: 'https://youtu.be/VZaQfb2y6BI',
         date: '2016-12-13',
       },
       {
