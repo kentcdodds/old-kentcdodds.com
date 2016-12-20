@@ -1,4 +1,6 @@
+import {basename} from 'path'
 import Markdown from '../../../../components/markdown'
+import Disqus from '../../../../components/disqus'
 
 export const title = 'Sunsetting JavaScript Air'
 
@@ -61,10 +63,15 @@ function Post() {
           [a project](https://gist.github.com/kentcdodds/e85254d4dbc1540df6b95eb9ad2098d9) that I'm working on and I'm
           really excited about. [Follow me on twitter](https://twitter.com/kentcdodds) to keep up with that :)
         `}</Markdown>
+        <small>
+          See more blogposts from me <a href="/post">here</a>.
+        </small>
       </div>
-      <small>
-        See more blogposts from me <a href="/post">here</a>.
-      </small>
+      <Disqus
+        style={{marginTop: 50}}
+        id={title}
+        url={`https://kentcdodds.com/post/${basename(__dirname)}`}
+      />
     </div>
   )
 }

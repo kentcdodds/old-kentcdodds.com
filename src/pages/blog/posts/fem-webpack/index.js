@@ -1,5 +1,7 @@
 /* eslint max-len:off */
+import {basename} from 'path'
 import Markdown from '../../../../components/markdown'
+import Disqus from '../../../../components/disqus'
 
 export const title = 'Introducing the Webpack Deep Dive Workshop'
 
@@ -102,6 +104,11 @@ function Post() {
           See more blogposts from me <a href="/post">here</a>.
         </small>
       </div>
+      <Disqus
+        style={{marginTop: 50}}
+        id={title}
+        url={`https://kentcdodds.com/post/${basename(__dirname)}`}
+      />
     </div>
   )
 }
