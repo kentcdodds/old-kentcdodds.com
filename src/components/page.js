@@ -16,7 +16,7 @@ function Page({
         <meta charSet="UTF-8" />
         <meta name="theme-color" content="#223891" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Personal portfolio website of Kent C. Dodds. Connect with Kent here." />
+        <meta name="description" content="Personal website of Kent C. Dodds" />
         <meta name="keywords" content="Kent Dodds, kentcdodds, Kent C. Dodds, web developer, frontend developer" />
         <meta name="author" content="Kent C. Dodds" />
         <link rel="publisher" href="https://plus.google.com/b/105493143005968326308" />
