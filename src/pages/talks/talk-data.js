@@ -251,7 +251,7 @@ export default [
     presentations: [
       {
         event: '[Ignite Fluent](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)',
-        recording: 'https://youtu.be/Da9wfQ0frGA',
+        recording: 'https://youtu.be/Da9wfQ0frGA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2016-03-08',
       },
     ],
