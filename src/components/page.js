@@ -56,6 +56,7 @@ function Footer({links = []}) {
           style={{
             listStyle: 'none',
             display: 'flex',
+            flexWrap: 'wrap',
             justifyContent: 'center',
             margin: 0,
             padding: 0,
