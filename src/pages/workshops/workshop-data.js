@@ -29,6 +29,11 @@ export default [
     ],
     presentations: [
       {
+        event: 'Self-organized PayPal workshop day',
+        date: '2017-01-23',
+        recording: 'https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
         event: '[The Strange Loop](http://www.thestrangeloop.com/2016/es6-and-beyond.html)',
         date: '2016-09-15',
         recording: 'https://youtu.be/dnF-wrw0Q_w',
