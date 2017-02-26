@@ -3,15 +3,7 @@ import Rx from 'rxjs/Rx'
 import {random as randomEmoji} from 'random-emoji'
 
 Rx.Observable
-  .from([
-    './home',
-    './404',
-    './links',
-    './talks',
-    './blog',
-    './appearances',
-    './workshops',
-  ])
+  .from(['./home', './404', './links', './talks', './blog', './appearances', './workshops'])
   .map(modPath => require(modPath).default) // eslint-disable-line
   // .merge(2) // this doesn't appear to be limiting the concurrent requests
   .flatMap(fn => fn())
@@ -27,6 +19,5 @@ Rx.Observable
   })
 
 function getRandomEmoji(count) {
-  return randomEmoji({count})
-    .reduce((string, {character, name}) => `${string}\n${name}: ${character}`, '').trim()
+  return randomEmoji({count}).reduce((string, {character, name}) => `${string}\n${name}: ${character}`, '').trim()
 }

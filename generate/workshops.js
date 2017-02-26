@@ -9,11 +9,7 @@ export default renderToFile
 function renderToFile() {
   const lastUpdated = getLastUpdated(resolve(__dirname, '../src/pages/workshops'))
   return renderComponentToFile(
-    <Page
-      lastUpdated={lastUpdated}
-      title="My Workshops | Kent C. Dodds"
-      links={getLinks()}
-    >
+    <Page lastUpdated={lastUpdated} title="My Workshops | Kent C. Dodds" links={getLinks()}>
       <Workshops />
     </Page>,
     resolve(__dirname, '../dist/workshops/index.html'),

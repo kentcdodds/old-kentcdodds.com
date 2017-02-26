@@ -8,7 +8,7 @@ export {getPosts, getLastUpdated, getLinks}
 function getPosts() {
   const postDirs = glob.sync(join(__dirname, '../src/pages/blog/posts/*/'))
   return postDirs.map(dir => {
-    const postModule = require(dir) // eslint-disable-line
+    const postModule = require(dir); // eslint-disable-line
     const postSlug = basename(dir)
     const date = getLastUpdated(dir)
     return {

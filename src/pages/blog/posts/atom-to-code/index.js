@@ -15,7 +15,9 @@ function Post() {
         <small>My experience migrating editors</small>
       </h1>
       <div>
-        <Markdown>{`
+        <Markdown>
+          {
+            `
           Back in April (2016), [I moved from vim to Atom + vim mode](https://www.briefs.fm/3-minutes-with-kent/16).
           It's been such a nice change, but there have been a few things that have really bothered me with Atom. Two of
           these stick out more than others:
@@ -36,7 +38,9 @@ function Post() {
           so here they are!
 
           ## Q:
-        `}</Markdown>
+        `
+          }
+        </Markdown>
         <small>
           See more blogposts from me <a href="/post">here</a>.
         </small>

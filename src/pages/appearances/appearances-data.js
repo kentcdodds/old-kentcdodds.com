@@ -120,7 +120,7 @@ export default [
 }))
 
 function fixupData(appearance) {
-  return ({
+  return {
     // defaults
     ...appearance,
 
@@ -131,7 +131,7 @@ function fixupData(appearance) {
     tags: (appearance.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
     description: markdownToHTMLWithNoPTag(appearance.description || ''),
     duration: appearance.duration ? moment.duration(appearance.duration).humanize() : null,
-  })
+  }
 }
 
 function sortByMostRecent(a, b) {

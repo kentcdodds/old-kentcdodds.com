@@ -24,9 +24,7 @@ export default [
       '[workshop repo](https://github.com/kentcdodds/es6-workshop)',
       '[app repo](https://github.com/kentcdodds/es6-todomvc)',
     ],
-    tags: [
-      'ES.next', 'ES6', 'webpack',
-    ],
+    tags: ['ES.next', 'ES6', 'webpack'],
     presentations: [
       {
         event: 'Self-organized PayPal workshop day',
@@ -136,9 +134,7 @@ export default [
   },
   {
     title: 'How to Write an Open Source JavaScript Library',
-    resources: [
-      '[repo](https://github.com/kentcdodds/starwars-names)',
-    ],
+    resources: ['[repo](https://github.com/kentcdodds/starwars-names)'],
     tags: ['open source'],
     presentations: [
       {
@@ -169,9 +165,7 @@ export default [
   },
   {
     title: 'React + AVA = ❤️',
-    resources: [
-      '[repo](https://github.com/kentcdodds/react-ava-workshop)',
-    ],
+    resources: ['[repo](https://github.com/kentcdodds/react-ava-workshop)'],
     tags: ['react', 'testing'],
     presentations: [
       {
@@ -212,9 +206,7 @@ export default [
   },
   {
     title: 'Intro to Webpack and Migrating from Require.js to Webpack ',
-    resources: [
-      '[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)',
-    ],
+    resources: ['[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)'],
     tags: ['webpack'],
     presentations: [
       {
@@ -317,4 +309,6 @@ export default [
       around with the code and then catch right back up with the next branch. So come on, and let's learn AngularJS!
     `,
   },
-].map(preparePresentationData).sort(sortPresentations)
+]
+  .map(preparePresentationData)
+  .sort(sortPresentations)

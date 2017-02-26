@@ -14,7 +14,11 @@ function GoogleAnalytics() {
 
 function runScript() {
   /* eslint-disable */
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  window.ga = window.ga ||
+    function() {
+      (ga.q = ga.q || []).push(arguments);
+    };
+  ga.l = +new Date();
   ga('create', 'UA-62924965-1', 'auto');
   ga('require', 'displayfeatures');
   ga('require', 'autotrack');

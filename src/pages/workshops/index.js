@@ -24,7 +24,7 @@ function Workshops() {
       </h1>
       <em>Search with <pre {...styles.searchPre}>⌘/ctrl + f</pre></em>
       <div {...styles.talksContainer}>
-        {workshops.map((t, i) => (<Presentation key={i} {...t} />))}
+        {workshops.map((t, i) => <Presentation key={i} {...t} />)}
       </div>
     </div>
   )

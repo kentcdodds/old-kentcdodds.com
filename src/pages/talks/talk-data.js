@@ -18,9 +18,7 @@ export default [
   // },
   {
     title: 'Faster JavaScript',
-    resources: [
-      '[slides](https://slides.com/kentcdodds/faster-javascript)',
-    ],
+    resources: ['[slides](https://slides.com/kentcdodds/faster-javascript)'],
     tags: [],
     presentations: [
       {
@@ -141,9 +139,7 @@ export default [
   },
   {
     title: 'More than you want to know about ES6 Modules',
-    resources: [
-      '[slides](https://slides.com/kentcdodds/es6-modules)',
-    ],
+    resources: ['[slides](https://slides.com/kentcdodds/es6-modules)'],
     tags: ['ES6', 'babel'],
     presentations: [
       {
@@ -205,9 +201,7 @@ export default [
   },
   {
     title: 'The First Pull Request',
-    resources: [
-      '[slides](http://slides.com/kentcdodds/1st-pr)',
-    ],
+    resources: ['[slides](http://slides.com/kentcdodds/1st-pr)'],
     tags: ['open source', 'soft skills'],
     presentations: [
       {
@@ -244,9 +238,7 @@ export default [
   },
   {
     title: 'What we can learn about testing from the wheel',
-    resources: [
-      '[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)',
-    ],
+    resources: ['[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)'],
     tags: ['testing', 'lightning'],
     presentations: [
       {
@@ -266,9 +258,7 @@ export default [
   },
   {
     title: 'Zero to 60 in software development: How to jumpstart your career',
-    resources: [
-      '[slides](https://slides.com/kentcdodds/zero-to-60)',
-    ],
+    resources: ['[slides](https://slides.com/kentcdodds/zero-to-60)'],
     tags: ['soft skills'],
     presentations: [
       {
@@ -318,9 +308,7 @@ export default [
   },
   {
     title: 'ES6, Webpack, Karma, and Code Coverage',
-    resources: [
-      '[repo](https://github.com/kentcdodds/random-user-coverage)',
-    ],
+    resources: ['[repo](https://github.com/kentcdodds/random-user-coverage)'],
     tags: ['babel', 'testing', 'webpack', 'live coding'],
     presentations: [
       {
@@ -333,9 +321,7 @@ export default [
   },
   {
     title: 'Angular Directive Scope: Explained and Code Structure',
-    resources: [
-      '[blog post](https://medium.com/@kentcdodds/19eee9e90e45)',
-    ],
+    resources: ['[blog post](https://medium.com/@kentcdodds/19eee9e90e45)'],
     presentations: [
       {
         event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910/)',
@@ -346,9 +332,7 @@ export default [
   },
   {
     title: 'ES6',
-    resources: [
-      '[repo](https://github.com/kentcdodds/es6-workshop)',
-    ],
+    resources: ['[repo](https://github.com/kentcdodds/es6-workshop)'],
     presentations: [
       {
         event: '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
@@ -363,10 +347,7 @@ export default [
   },
   {
     title: 'Moxee: Enforcing modularity in AngularJS',
-    resources: [
-      '[slides](http://slides.com/kentcdodds/moxee#/)',
-      '[repo](https://github.com/alianza-dev/moxee)',
-    ],
+    resources: ['[slides](http://slides.com/kentcdodds/moxee#/)', '[repo](https://github.com/alianza-dev/moxee)'],
     presentations: [
       {
         event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',
@@ -542,9 +523,7 @@ export default [
   },
   {
     title: 'How to Build a Demo with GitHub Pages',
-    resources: [
-      '[slides](http://slides.com/kentcdodds/gh-pages#/)',
-    ],
+    resources: ['[slides](http://slides.com/kentcdodds/gh-pages#/)'],
     presentations: [
       {
         event: '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152/)',
@@ -612,4 +591,6 @@ export default [
       around with the code and then catch right back up with the next branch. So come on, and let's learn AngularJS!
     `,
   },
-].map(preparePresentationData).sort(sortPresentations)
+]
+  .map(preparePresentationData)
+  .sort(sortPresentations)

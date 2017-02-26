@@ -9,7 +9,7 @@ function InlineScript({fn, vars}) {
     try {
       html = require('uglify-js').minify(code, {fromString: true}).code // eslint-disable-line global-require
     } catch (e) {
-      console.error('there was a problem minifying your code!\n\n', code, '\n\n') // eslint-disable-line
+      console.error('there was a problem minifying your code!\n\n', code, '\n\n'); // eslint-disable-line
       throw e
     }
   }
@@ -26,8 +26,11 @@ function toStringFn(fn, vars = {}) {
 }
 
 function replaceAll(string, thingsToReplace) {
-  return Object.keys(thingsToReplace).reduce((replaced, regexString) => {
-    const valueToUse = thingsToReplace[regexString]
-    return replaced.replace(new RegExp(regexString, 'g'), valueToUse)
-  }, string)
+  return Object.keys(thingsToReplace).reduce(
+    (replaced, regexString) => {
+      const valueToUse = thingsToReplace[regexString]
+      return replaced.replace(new RegExp(regexString, 'g'), valueToUse)
+    },
+    string,
+  )
 }

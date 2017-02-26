@@ -24,7 +24,8 @@ Disqus.propTypes = {
 }
 
 function runScript() {
-  window.disqus_config = function disqus_config() { // eslint-disable-line camelcase
+  // eslint-disable-next-line camelcase
+  window.disqus_config = function disqus_config() {
     this.page.url = __URL__ // eslint-disable-line no-undef
     this.page.identifier = __ID__ // eslint-disable-line no-undef
   }

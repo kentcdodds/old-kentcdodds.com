@@ -5,9 +5,7 @@ export default FourOFour
 function FourOFour() {
   return (
     <div style={{textAlign: 'center'}}>
-      <h1
-        style={{fontSize: 50, marginBottom: 20}}
-      >
+      <h1 style={{fontSize: 50, marginBottom: 20}}>
         Page not found
       </h1>
       <p>
@@ -30,8 +28,8 @@ function FourOFour() {
 
 function replaceLocationPathname() {
   /* eslint-disable */ // this is run by the browser and not transpiled
-  var anchor = document.getElementById('replace-location-pathname')
-  anchor.href = 'https://kentcdodds.github.io' + window.location.pathname
-  anchor.textContent = anchor.href
+  var anchor = document.getElementById('replace-location-pathname');
+  anchor.href = 'https://kentcdodds.github.io' + window.location.pathname;
+  anchor.textContent = anchor.href;
   /* eslint-enable */
 }

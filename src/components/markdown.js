@@ -9,13 +9,7 @@ function Markdown({children, style, noPTag = false, ...otherProps}) {
   if (noPTag) {
     html = html.slice(3, -5)
   }
-  return (
-    <div
-      style={style}
-      dangerouslySetInnerHTML={({__html: html})}
-      {...otherProps}
-    />
-  )
+  return <div style={style} dangerouslySetInnerHTML={{__html: html}} {...otherProps} />
 }
 Markdown.propTypes = {
   children: PropTypes.string.isRequired,

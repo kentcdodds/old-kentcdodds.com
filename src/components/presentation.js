@@ -4,11 +4,26 @@ import {merge, style, firstChild, lastChild} from 'glamor'
 import {intersperse} from '../utils'
 
 const availableColors = new Set([
-  '#2E4347', '#C0D1C2', '#49281F', '#564334',
-  '#5D4157', '#838689', '#413040', '#111625',
-  '#341931', '#571B3C', '#805566', '#E35B5D',
-  '#5CACC4', '#DE6262', '#64989D', '#410936',
-  '#616668', '#A43955', '#5E3929', '#1B676B',
+  '#2E4347',
+  '#C0D1C2',
+  '#49281F',
+  '#564334',
+  '#5D4157',
+  '#838689',
+  '#413040',
+  '#111625',
+  '#341931',
+  '#571B3C',
+  '#805566',
+  '#E35B5D',
+  '#5CACC4',
+  '#DE6262',
+  '#64989D',
+  '#410936',
+  '#616668',
+  '#A43955',
+  '#5E3929',
+  '#1B676B',
 ])
 const colorMap = {}
 
@@ -56,18 +71,13 @@ function Presentation({title, abstract, resources, presentations, tags}) {
     if (!color) {
       color = colorMap[t] = getRandomColor()
     }
-    return (
-      <span key={t} {...styles.tag(color)}>{t}</span>
-    )
+    return <span key={t} {...styles.tag(color)}>{t}</span>
   })
   const anchor = slugify(title.toLowerCase())
   return (
     <div {...styles.talkRoot}>
       <a href={`#${anchor}`} name={anchor}>
-        <h2
-          {...innerHTML(title)}
-          {...styles.talkTitle}
-        />
+        <h2 {...innerHTML(title)} {...styles.talkTitle} />
       </a>
       <div {...styles.tagContainer}>{tagEls}</div>
       <div {...styles.references}>
@@ -81,12 +91,12 @@ function Presentation({title, abstract, resources, presentations, tags}) {
           </ul>
         </div>
       </div>
-      {abstract ? (
+      {abstract ?
         <div>
           <h3 {...styles.abstractTitle}>Abstract</h3>
           <div {...innerHTML(abstract)} {...styles.abstractContainer} />
-        </div>
-      ) : null}
+        </div> :
+        null}
     </div>
   )
 }
@@ -95,11 +105,13 @@ Presentation.propTypes = {
   title: PropTypes.string.isRequired,
   abstract: PropTypes.string,
   resources: PropTypes.arrayOf(PropTypes.string).isRequired,
-  presentations: PropTypes.arrayOf(PropTypes.shape({
-    event: PropTypes.string.isRequired,
-    recording: PropTypes.string,
-    date: PropTypes.object.isRequired,
-  })).isRequired,
+  presentations: PropTypes.arrayOf(
+    PropTypes.shape({
+      event: PropTypes.string.isRequired,
+      recording: PropTypes.string,
+      date: PropTypes.object.isRequired,
+    }),
+  ).isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
@@ -121,9 +133,9 @@ function getTextColor(hex) {
   /* eslint no-bitwise:0 */
   const c = hex.substring(1)
   const rgb = parseInt(c, 16)
-  const r = (rgb >> 16) & 0xff // extract red
-  const g = (rgb >> 8) & 0xff // extract green
-  const b = (rgb >> 0) & 0xff // extract blue
+  const r = rgb >> 16 & 0xff // extract red
+  const g = rgb >> 8 & 0xff // extract green
+  const b = rgb >> 0 & 0xff // extract blue
 
   const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
   return luma < 130 ? 'white' : 'black'

@@ -81,9 +81,7 @@ function Links() {
   ]
   return (
     <div style={{textAlign: 'center'}}>
-      <h1
-        style={{fontSize: 50, marginBottom: 20}}
-      >
+      <h1 style={{fontSize: 50, marginBottom: 20}}>
         Links
       </h1>
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
@@ -91,9 +89,9 @@ function Links() {
         <ul>
           {links.map(({url, text, desc}, i) => (
             <li key={i} style={{marginBottom: 4}}>
-              <a href={url}>{text}</a> {desc ? (
-                <span>- <Markdown noPTag style={{display: 'inline'}}>{desc}</Markdown></span>
-              ) : ''}
+              <a href={url}>{text}</a>
+              {' '}
+              {desc ? <span>- <Markdown noPTag style={{display: 'inline'}}>{desc}</Markdown></span> : ''}
             </li>
           ))}
         </ul>

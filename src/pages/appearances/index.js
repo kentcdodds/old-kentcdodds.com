@@ -15,28 +15,26 @@ export default Appearances
 function Appearances() {
   return (
     <div style={{textAlign: 'center', maxWidth: 600, margin: 'auto'}}>
-      <h1
-        style={{fontSize: 50, marginBottom: 20}}
-      >
+      <h1 style={{fontSize: 50, marginBottom: 20}}>
         Appearances
       </h1>
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
       <div style={{textAlign: 'left', fontSize: 18}}>
         {appearances.map(({title, appearances: things}) => (
-          <SectionOfThings
-            key={title}
-            title={title}
-            things={things}
-          />
+          <SectionOfThings key={title} title={title} things={things} />
         ))}
       </div>
       <hr style={{margin: '50px 0'}} />
-      <Markdown style={{textAlign: 'left'}}>{`
+      <Markdown style={{textAlign: 'left'}}>
+        {
+          `
         You may also be interested in:
         - [My Talks](http://kcd.im/talks)
         - [My AMA](http://kcd.im/ama)
         - My [tech chats](https://github.com/kentcdodds/ama/issues/125) on [YouTube](http://kcd.im/tech-chats)
-      `}</Markdown>
+      `
+        }
+      </Markdown>
     </div>
   )
 }
@@ -63,9 +61,9 @@ function ListOfThings({things}) {
     <ul>
       {things.map(({thing, description, duration, date, isFuture}, i) => (
         <li key={i} style={{marginBottom: 4}}>
-          <NoPMarkdown {...thingAnchorStyles}>{thing}</NoPMarkdown>: {description ? (
-            <span> <NoPMarkdown>{description}</NoPMarkdown></span>
-          ) : ''}
+          <NoPMarkdown {...thingAnchorStyles}>{thing}</NoPMarkdown>
+          :{' '}
+          {description ? <span> <NoPMarkdown>{description}</NoPMarkdown></span> : ''}
           <span style={{fontSize: '0.7em'}}>
             {' '}
             {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
@@ -79,21 +77,19 @@ function ListOfThings({things}) {
 }
 
 ListOfThings.propTypes = {
-  things: PropTypes.arrayOf(PropTypes.shape({
-    thing: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    date: PropTypes.object.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string),
-  })),
+  things: PropTypes.arrayOf(
+    PropTypes.shape({
+      thing: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      date: PropTypes.object.isRequired,
+      tags: PropTypes.arrayOf(PropTypes.string),
+    }),
+  ),
 }
 
 function NoPMarkdown({children, style, ...otherProps}) {
   return (
-    <Markdown
-      noPTag
-      style={{display: 'inline', ...style}}
-      {...otherProps}
-    >
+    <Markdown noPTag style={{display: 'inline', ...style}} {...otherProps}>
       {children}
     </Markdown>
   )

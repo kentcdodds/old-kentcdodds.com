@@ -24,9 +24,8 @@ function Talks() {
       </h1>
       <em>Search with <pre {...styles.searchPre}>⌘/ctrl + f</pre></em>
       <div {...styles.talksContainer}>
-        {talks.map((t, i) => (<Presentation key={i} {...t} />))}
+        {talks.map((t, i) => <Presentation key={i} {...t} />)}
       </div>
     </div>
   )
 }
-

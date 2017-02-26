@@ -3,12 +3,14 @@ import GoogleAnalyticsScript from './scripts/google-analytics'
 
 export default Page
 
-function Page({
-  children,
-  title = 'Kent C. Dodds',
-  lastUpdated = getDateStamp(),
-  links,
-} = {}) {
+function Page(
+  {
+    children,
+    title = 'Kent C. Dodds',
+    lastUpdated = getDateStamp(),
+    links,
+  } = {},
+) {
   return (
     <html lang="en">
       <head>
@@ -20,14 +22,8 @@ function Page({
         <meta name="keywords" content="Kent Dodds, kentcdodds, Kent C. Dodds, web developer, frontend developer" />
         <meta name="author" content="Kent C. Dodds" />
         <link rel="publisher" href="https://plus.google.com/b/105493143005968326308" />
-        <link
-          rel="shortcut icon"
-          type="image/png"
-          href="/favicon.png"
-        />
-        <style
-          dangerouslySetInnerHTML={{__html: `body {font-family: 'MS Sans Serif', Geneva, 'sans-serif';}`}}
-        />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <style dangerouslySetInnerHTML={{__html: `body {font-family: 'MS Sans Serif', Geneva, 'sans-serif';}`}} />
         <style>{`/* glamor-styles */`}</style>
       </head>
       <body>
@@ -62,9 +58,7 @@ function Footer({links = []}) {
             padding: 0,
           }}
         >
-          {links.map(({url, text}) => (
-            <li key={url} style={{margin: '0 10px'}}><a href={url}>{text}</a></li>
-          ))}
+          {links.map(({url, text}) => <li key={url} style={{margin: '0 10px'}}><a href={url}>{text}</a></li>)}
         </ul>
       </nav>
     </footer>
@@ -72,8 +66,10 @@ function Footer({links = []}) {
 }
 
 Footer.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  })),
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ),
 }

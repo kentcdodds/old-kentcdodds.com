@@ -19,15 +19,19 @@ function Post() {
         <img style={{width: '100%'}} src="image.png" />
       </div>
       <div>
-        <Markdown>{`
+        <Markdown>
+          {
+            `
           This is an exciting announcement! [Let your friends know!](https://twitter.com/intent/tweet?text=There%27s%20a%20new%20webpack%20workshop%20on%20@FrontendMasters%20from%20@kentcdodds!%20Check%20it%20out!%20kcd.im/fem-webpack%20%F0%9F%8E%8A)
 
           Here's a preview:
-        `}</Markdown>
+        `
+          }
+        </Markdown>
 
         <div style={{textAlign: 'center'}}>
           <iframe
-            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFrontendMasters%2Fvideos%2F674236152752541%2F&show_text=0&width=560"
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFrontendMasters%2Fvideos%2F674236152752541%2F&amp;show_text=0&amp;width=560"
             width="560"
             height="315"
             style={{border: 'none', overflow: 'hidden'}}
@@ -38,7 +42,9 @@ function Post() {
           />
         </div>
 
-        <Markdown>{`
+        <Markdown>
+          {
+            `
           I've spent countless hours working with [webpack](https://webpack.js.org). I remember the first time I tried
           it out way back around December of 2014. I had built a reeeeally complicated gulp process (you can see some of
           that [here](https://medium.com/@kentcdodds/angularjs-script-loading-108652bde20e)) and decided that I wanted
@@ -99,16 +105,14 @@ function Post() {
           [Writing an Open Source JavaScript Library](http://kcd.im/fem-oss) which is an updated version of the
           Egghead.io course [How to Write an Open Source JavaScript Library](http://kcd.im/write-oss).
           </small>
-        `}</Markdown>
+        `
+          }
+        </Markdown>
         <small>
           See more blogposts from me <a href="/post">here</a>.
         </small>
       </div>
-      <Disqus
-        style={{marginTop: 50}}
-        id={title}
-        url={`https://kentcdodds.com/post/${basename(__dirname)}`}
-      />
+      <Disqus style={{marginTop: 50}} id={title} url={`https://kentcdodds.com/post/${basename(__dirname)}`} />
     </div>
   )
 }

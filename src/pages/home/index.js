@@ -21,7 +21,9 @@ function Home() {
         </div>
         <p>
           {listOfThings([
-            'Mormon', 'Husband', 'Father',
+            'Mormon',
+            'Husband',
+            'Father',
             {text: 'Speaker', url: '/talks'},
             {text: 'Trainer', url: 'https://kcd.im/talks#workshops'},
             {text: 'Open Sourcerer', url: 'https://github.com/kentcdodds'},
@@ -67,17 +69,20 @@ function Home() {
 }
 
 function listOfThings(things) {
-  return things.reduce((items, thing, i) => {
-    const {text, url} = thing
-    if (url) {
-      items.push(<a href={url} key={i}>{text}</a>)
-    } else {
-      items.push(thing)
-    }
-    const isLast = i === things.length - 1
-    if (!isLast) {
-      items.push(', ')
-    }
-    return items
-  }, [])
+  return things.reduce(
+    (items, thing, i) => {
+      const {text, url} = thing
+      if (url) {
+        items.push(<a href={url} key={i}>{text}</a>)
+      } else {
+        items.push(thing)
+      }
+      const isLast = i === things.length - 1
+      if (!isLast) {
+        items.push(', ')
+      }
+      return items
+    },
+    [],
+  )
 }
