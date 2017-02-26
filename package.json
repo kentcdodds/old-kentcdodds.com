@@ -71,7 +71,10 @@
       "kentcdodds",
       "kentcdodds/react",
       "kentcdodds/babel-react-require"
-    ]
+    ],
+    "rules": {
+      "react/jsx-max-props-per-line": 0
+    }
   },
   "lint-staged": {
     "*.js": [
