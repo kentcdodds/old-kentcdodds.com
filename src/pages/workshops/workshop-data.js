@@ -27,7 +27,12 @@ export default [
     tags: ['ES.next', 'ES6', 'webpack'],
     presentations: [
       {
-        event: 'Self-organized PayPal workshop day',
+        event: 'Self-organized PayPal workshop day (Part 2)',
+        date: '2017-03-07',
+        recording: 'https://youtu.be/eOKQDh50ECU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
+        event: 'Self-organized PayPal workshop day (Part 1)',
         date: '2017-01-23',
         recording: 'https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
