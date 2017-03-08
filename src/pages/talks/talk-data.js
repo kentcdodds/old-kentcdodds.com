@@ -179,6 +179,11 @@ export default [
     tags: ['ECMAScript', 'babel', 'eslint', 'live coding'],
     presentations: [
       {
+        event: 'Clevertech Engineering',
+        recording: 'https://youtu.be/CFQBHy8RCpg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        date: '2016-01-14',
+      },
+      {
         event: '[JS Remote Conf](https://allremoteconfs.com/js-2016)',
         date: '2016-01-14',
       },
