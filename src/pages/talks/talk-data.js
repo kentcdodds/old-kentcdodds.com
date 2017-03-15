@@ -181,7 +181,7 @@ export default [
       {
         event: 'Clevertech Engineering',
         recording: 'https://youtu.be/CFQBHy8RCpg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
-        date: '2016-01-14',
+        date: '2017-01-14',
       },
       {
         event: '[JS Remote Conf](https://allremoteconfs.com/js-2016)',
