@@ -22,6 +22,10 @@ export default [
     tags: [],
     presentations: [
       {
+        event: '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
+        date: '2017-03-16',
+      },
+      {
         event: '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
         date: '2016-11-03',
         recording: 'https://www.youtube.com/watch?v=kI_OiAUFLkQ',
