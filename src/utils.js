@@ -54,7 +54,9 @@ function preparePresentationData(presentation) {
       .sort((a, b) => {
         return a.date.isAfter(b.date) ? -1 : 1
       }),
-    tags: (presentation.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
+    tags: (presentation.tags || []).map(
+      t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`,
+    ),
     resources: (presentation.resources || []).map(markdownToHTMLWithNoPTag),
     abstract: markdownToHTML(presentation.abstract || ''),
   }

@@ -9,11 +9,19 @@ function FourOFour() {
         Page not found
       </h1>
       <p>
-        This page doesn't exist. It is quite possible that you were linked here from one of my GitHub projects. Those
-        are now only available via the <a href="https://kentcdodds.github.io">kentcdodds.github.io</a> url.
+        This page doesn't exist. It is quite possible that
+        you were linked here from one of my GitHub projects. Those
+        are now only available via the{' '}
+        <a href="https://kentcdodds.github.io">kentcdodds.github.io</a>
+        {' '}url.
       </p>
       <p>
-        {`If this is the case, then you'll find the page you're looking for here: `}
+        {
+          `
+            If this is the case, then you'll find
+            the page you're looking for here:
+          `
+        }
         <a href="https://kentcdodds.github.io/" id="replace-location-pathname">
           https://kentcdodds.github.io/
         </a>

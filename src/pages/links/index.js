@@ -1,18 +1,27 @@
+import {oneLine} from 'common-tags'
 import Markdown from '../../components/markdown'
 
 export default Links
 
 function Links() {
+  const eggheadio = '[egghead.io](https://egghead.io)'
   const links = [
     {text: 'Home', url: 'http://kentcdodds.com', desc: 'This website :)'},
     {text: 'Links', url: 'http://kentcdodds.com/links', desc: 'This page'},
     {text: 'AMA', url: 'https://kcd.im/ama', desc: 'Ask Me Anything'},
-    {text: 'Blog', url: 'https://kcd.im/blog', desc: 'My various musings about JavaScript and software development'},
+    {
+      text: 'Blog',
+      url: 'https://kcd.im/blog',
+      desc: 'My various musings about JavaScript and software development',
+    },
     {text: 'Twitter', url: 'https://kcd.im/twitter'},
     {
       text: 'LinkedIn',
       url: 'https://kcd.im/linkedin',
-      desc: 'I only connect with people I know. Connect with me on twitter otherwise.',
+      desc: oneLine`
+        I only connect with people I know.
+        Connect with me on twitter otherwise.
+      `,
     },
     {
       text: 'GitHub',
@@ -27,12 +36,18 @@ function Links() {
     {
       text: 'Email',
       url: 'mailto:kent@doddsfamily.us',
-      desc: `Please feel free to email me with anything you don't feel comfortable posting to my AMA`,
+      desc: oneLine`
+        Please feel free to email me with anything you
+        don't feel comfortable posting to my AMA
+      `,
     },
     {
       text: 'JavaScript Air',
       url: 'https://javascriptair.com',
-      desc: 'A podcast I created (I also started [Angular Air](http://angularair.com/))',
+      desc: oneLine`
+        A podcast I created
+        (I also started [Angular Air](http://angularair.com/))
+      `,
     },
     {
       text: 'React30',
@@ -45,12 +60,16 @@ function Links() {
       desc: 'A [briefs.fm](https://briefs.fm) podcast I occasionally do',
     },
     {text: 'Talks', url: '/talks', desc: `Talks I've given`},
-    {text: 'Workshops', url: 'https://kcd.im/workshops', desc: `Workshops I've given`},
+    {
+      text: 'Workshops',
+      url: 'https://kcd.im/workshops',
+      desc: `Workshops I've given`,
+    },
     {
       text: 'Egghead.io',
       url: 'https://kcd.im/egghead',
       desc: `
-        My [egghead.io](https://egghead.io) instructor page with over 100 lessons on
+        My ${eggheadio} instructor page with over 100 lessons on
         [JavaScript](https://kcd.im/egghead-js),
         [Open](https://kcd.im/pull-request) [Source](https://kcd.im/write-oss),
         [Webpack](https://kcd.im/egghead-webpack),
@@ -63,7 +82,10 @@ function Links() {
     {
       text: 'Frontend Masters Courses',
       url: 'https://frontendmasters.com/courses/',
-      desc: `My [Webpack](https://kcd.im/fem-webpack) [Open Source](https://kcd.im/fem-oss) courses are coming soon!`,
+      desc: oneLine`
+        My [Webpack](https://kcd.im/fem-webpack)
+        [Open Source](https://kcd.im/fem-oss) courses are coming soon!
+      `,
     },
     {
       text: 'Tech Chats',
@@ -76,7 +98,10 @@ function Links() {
     {
       text: '"Appearances"',
       url: 'https://kcd.im/appearances',
-      desc: `A list of podcasts, interviews, and other places that I've had chats and stuff`,
+      desc: oneLine`
+        A list of podcasts, interviews, and other
+        places that I've had chats and stuff
+      `,
     },
   ]
   return (
@@ -85,13 +110,22 @@ function Links() {
         Links
       </h1>
       <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
-      <div style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}>
+      <div
+        style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}
+      >
         <ul>
           {links.map(({url, text, desc}, i) => (
             <li key={i} style={{marginBottom: 4}}>
               <a href={url}>{text}</a>
               {' '}
-              {desc ? <span>- <Markdown noPTag style={{display: 'inline'}}>{desc}</Markdown></span> : ''}
+              {desc ?
+                <span>
+                    -{' '}
+                  <Markdown noPTag style={{display: 'inline'}}>
+                    {desc}
+                  </Markdown>
+                </span> :
+                ''}
             </li>
           ))}
         </ul>

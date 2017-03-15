@@ -47,7 +47,11 @@ const styles = {
   talkTitle: style({marginBottom: 10}),
   tagContainer: style({marginBottom: 6, fontSize: '0.75em'}),
   references: style({marginBottom: 8, fontSize: '0.9em'}),
-  presentationsContainer: style({listStyle: 'none', paddingLeft: 16, margin: 0}),
+  presentationsContainer: style({
+    listStyle: 'none',
+    paddingLeft: 16,
+    margin: 0,
+  }),
   abstractTitle: style({marginBottom: 2}),
   abstractContainer: style({marginTop: -12}),
 }
@@ -55,8 +59,13 @@ const styles = {
 export default Presentation
 
 function Presentation({title, abstract, resources, presentations, tags}) {
-  const resourceEls = resources.map((r, i) => <span key={i} {...innerHTML(r)} />)
-  const presentationEls = presentations.map(({event, recording, date, isFuture}, i) => (
+  const resourceEls = resources.map((r, i) => (
+    <span key={i} {...innerHTML(r)} />
+  ))
+  const presentationEls = presentations.map((
+    {event, recording, date, isFuture},
+    i,
+  ) => (
     <li key={i}>
       <span {...innerHTML(event)} />
       {recording ? ' - ' : null}
@@ -69,7 +78,8 @@ function Presentation({title, abstract, resources, presentations, tags}) {
   const tagEls = tags.map(t => {
     let color = colorMap[t]
     if (!color) {
-      color = colorMap[t] = getRandomColor()
+      color = getRandomColor()
+      colorMap[t] = color
     }
     return <span key={t} {...styles.tag(color)}>{t}</span>
   })

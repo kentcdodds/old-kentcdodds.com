@@ -1,4 +1,5 @@
 import {PropTypes} from 'react'
+import {oneLine} from 'common-tags'
 import GoogleAnalyticsScript from './scripts/google-analytics'
 
 export default Page
@@ -19,17 +20,38 @@ function Page(
         <meta name="theme-color" content="#223891" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Personal website of Kent C. Dodds" />
-        <meta name="keywords" content="Kent Dodds, kentcdodds, Kent C. Dodds, web developer, frontend developer" />
+        <meta
+          name="keywords"
+          content={
+            oneLine`
+              Kent Dodds, kentcdodds, Kent C. Dodds,
+              web developer, frontend developer
+            `
+          }
+        />
         <meta name="author" content="Kent C. Dodds" />
-        <link rel="publisher" href="https://plus.google.com/b/105493143005968326308" />
+        <link
+          rel="publisher"
+          href="https://plus.google.com/b/105493143005968326308"
+        />
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-        <style dangerouslySetInnerHTML={{__html: `body {font-family: 'MS Sans Serif', Geneva, 'sans-serif';}`}} />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: oneLine`
+              body {
+                font-family: 'MS Sans Serif', Geneva, 'sans-serif';
+              }
+            `,
+          }}
+        />
         <style>{`/* glamor-styles */`}</style>
       </head>
       <body>
         {children}
         <Footer links={links} />
-        <div style={{textAlign: 'center', fontSize: 'xx-small'}}>Last Updated: {lastUpdated}</div>
+        <div style={{textAlign: 'center', fontSize: 'xx-small'}}>
+          Last Updated: {lastUpdated}
+        </div>
         <GoogleAnalyticsScript />
       </body>
     </html>
@@ -58,7 +80,11 @@ function Footer({links = []}) {
             padding: 0,
           }}
         >
-          {links.map(({url, text}) => <li key={url} style={{margin: '0 10px'}}><a href={url}>{text}</a></li>)}
+          {links.map(({url, text}) => (
+            <li key={url} style={{margin: '0 10px'}}>
+              <a href={url}>{text}</a>
+            </li>
+          ))}
         </ul>
       </nav>
     </footer>

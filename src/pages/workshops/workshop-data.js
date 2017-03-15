@@ -211,7 +211,9 @@ export default [
   },
   {
     title: 'Intro to Webpack and Migrating from Require.js to Webpack ',
-    resources: ['[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)'],
+    resources: [
+      '[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)',
+    ],
     tags: ['webpack'],
     presentations: [
       {

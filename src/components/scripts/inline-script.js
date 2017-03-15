@@ -7,9 +7,15 @@ function InlineScript({fn, vars}) {
   let html = code
   if (!process.env.STORYBOOK_RUNNING) {
     try {
-      html = require('uglify-js').minify(code, {fromString: true}).code // eslint-disable-line global-require
+      // eslint-disable-next-line global-require
+      html = require('uglify-js').minify(code, {fromString: true}).code
     } catch (e) {
-      console.error('there was a problem minifying your code!\n\n', code, '\n\n'); // eslint-disable-line
+      // eslint-disable-next-line no-console
+      console.error(
+        'there was a problem minifying your code!\n\n',
+        code,
+        '\n\n',
+      )
       throw e
     }
   }

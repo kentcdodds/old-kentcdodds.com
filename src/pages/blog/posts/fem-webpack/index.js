@@ -11,9 +11,13 @@ function Post() {
   return (
     <div style={{maxWidth: 800, margin: 'auto', fontSize: '22px'}}>
       <h1 style={{textAlign: 'center', fontSize: '1.4em'}}>
-        🎉 Introducing the <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a> Workshop 🎊
+        🎉 Introducing the{' '}
+        <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a>
+        {' '}Workshop 🎊
         <br />
-        <small>on <a href="https://frontendmasters.com">Frontend Masters</a></small>
+        <small>
+          on <a href="https://frontendmasters.com">Frontend Masters</a>
+        </small>
       </h1>
       <div style={{textAlign: 'center'}}>
         <img style={{width: '100%'}} src="image.png" />
@@ -112,7 +116,11 @@ function Post() {
           See more blogposts from me <a href="/post">here</a>.
         </small>
       </div>
-      <Disqus style={{marginTop: 50}} id={title} url={`https://kentcdodds.com/post/${basename(__dirname)}`} />
+      <Disqus
+        style={{marginTop: 50}}
+        id={title}
+        url={`https://kentcdodds.com/post/${basename(__dirname)}`}
+      />
     </div>
   )
 }

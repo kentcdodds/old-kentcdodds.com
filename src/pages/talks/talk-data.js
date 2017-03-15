@@ -243,7 +243,9 @@ export default [
   },
   {
     title: 'What we can learn about testing from the wheel',
-    resources: ['[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)'],
+    resources: [
+      '[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)',
+    ],
     tags: ['testing', 'lightning'],
     presentations: [
       {
@@ -352,7 +354,10 @@ export default [
   },
   {
     title: 'Moxee: Enforcing modularity in AngularJS',
-    resources: ['[slides](http://slides.com/kentcdodds/moxee#/)', '[repo](https://github.com/alianza-dev/moxee)'],
+    resources: [
+      '[slides](http://slides.com/kentcdodds/moxee#/)',
+      '[repo](https://github.com/alianza-dev/moxee)',
+    ],
     presentations: [
       {
         event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',

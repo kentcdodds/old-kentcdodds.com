@@ -13,6 +13,8 @@ const thingAnchorStyles = merge(
 export default Appearances
 
 function Appearances() {
+  const techChats = 'https://github.com/kentcdodds/ama/issues/125'
+  const youTube = 'http://kcd.im/tech-chats'
   return (
     <div style={{textAlign: 'center', maxWidth: 600, margin: 'auto'}}>
       <h1 style={{fontSize: 50, marginBottom: 20}}>
@@ -28,11 +30,11 @@ function Appearances() {
       <Markdown style={{textAlign: 'left'}}>
         {
           `
-        You may also be interested in:
-        - [My Talks](http://kcd.im/talks)
-        - [My AMA](http://kcd.im/ama)
-        - My [tech chats](https://github.com/kentcdodds/ama/issues/125) on [YouTube](http://kcd.im/tech-chats)
-      `
+            You may also be interested in:
+            - [My Talks](http://kcd.im/talks)
+            - [My AMA](http://kcd.im/ama)
+            - My [tech chats](${techChats}) on [YouTube](${youTube})
+          `
         }
       </Markdown>
     </div>
@@ -63,7 +65,9 @@ function ListOfThings({things}) {
         <li key={i} style={{marginBottom: 4}}>
           <NoPMarkdown {...thingAnchorStyles}>{thing}</NoPMarkdown>
           :{' '}
-          {description ? <span> <NoPMarkdown>{description}</NoPMarkdown></span> : ''}
+          {description ?
+            <span> <NoPMarkdown>{description}</NoPMarkdown></span> :
+            ''}
           <span style={{fontSize: '0.7em'}}>
             {' '}
             {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}

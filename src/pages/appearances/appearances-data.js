@@ -49,7 +49,13 @@ export default [
         description: '[S01E03 - ES6, Beard of Jeff Cross, Air Squats, and JavaScript Air with Kent C. Dodds and Ben Lesh](http://modernweb.podbean.com/e/s01e03-es6-beard-of-jeff-cross-air-squats-and-javascript-air-with-kent-c-dodds-and-ben-lesh/)',
         date: '1970-01-01',
         duration: '00:53:31',
-        tags: ['about me', 'JavaScript Air', 'Angular Air', 'speaking', 'learning'],
+        tags: [
+          'about me',
+          'JavaScript Air',
+          'Angular Air',
+          'speaking',
+          'learning',
+        ],
       },
       {
         thing: '[The Web Platform Podcast](http://thewebplatformpodcast.com)',
@@ -104,13 +110,29 @@ export default [
         thing: '[opensource.com](https://opensource.com)',
         description: `[Tips from a software engineer for a balanced life](https://opensource.com/business/16/10/all-things-open-interview-kent-c-dodds)`,
         date: '2016-10-05',
-        tags: ['balance', 'open source', 'time management', 'teaching', 'speaking', 'learning', 'automation'],
+        tags: [
+          'balance',
+          'open source',
+          'time management',
+          'teaching',
+          'speaking',
+          'learning',
+          'automation',
+        ],
       },
       {
         thing: '[techbeacon.com](http://techbeacon.com/)',
         description: `[41 JavaScript experts to follow on Twitter](http://techbeacon.com/javascript-leaders-you-should-follow-twitter)`,
         date: '2016-10-05',
-        tags: ['balance', 'open source', 'time management', 'teaching', 'speaking', 'learning', 'automation'],
+        tags: [
+          'balance',
+          'open source',
+          'time management',
+          'teaching',
+          'speaking',
+          'learning',
+          'automation',
+        ],
       },
     ],
   },
@@ -128,9 +150,13 @@ function fixupData(appearance) {
     thing: markdownToHTMLWithNoPTag(appearance.thing),
     date: moment(appearance.date),
     isFuture: moment().isBefore(appearance.date),
-    tags: (appearance.tags || []).map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
+    tags: (appearance.tags || []).map(
+      t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`,
+    ),
     description: markdownToHTMLWithNoPTag(appearance.description || ''),
-    duration: appearance.duration ? moment.duration(appearance.duration).humanize() : null,
+    duration: appearance.duration ?
+      moment.duration(appearance.duration).humanize() :
+      null,
   }
 }
 
