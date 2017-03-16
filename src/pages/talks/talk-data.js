@@ -24,6 +24,7 @@ export default [
       {
         event: '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
         date: '2017-03-16',
+        recording: 'https://youtu.be/enlfQRUXb-s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
