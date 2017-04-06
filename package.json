@@ -76,7 +76,8 @@
       "kentcdodds/babel-react-require"
     ],
     "rules": {
-      "react/jsx-max-props-per-line": 0
+      "react/jsx-max-props-per-line": "off",
+      "func-style": "off"
     }
   },
   "lint-staged": {

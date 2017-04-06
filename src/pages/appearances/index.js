@@ -1,14 +1,19 @@
 import {PropTypes} from 'react'
 import slugify from 'slugify'
-import {merge, select} from 'glamor'
+import glamorous from 'glamorous'
 import Markdown from '../../components/markdown'
 import appearances from './appearances-data'
 
-const thingAnchorStyles = merge(
-  select(' a', {color: 'inherit'}),
-  select(' a:hover', {color: 'gray'}),
-  select(' a:focus', {color: 'gray'}),
-)
+const InlineMarkdown = glamorous(Markdown)({display: 'inline'})
+const NoPMarkdown = props => <InlineMarkdown noPTag {...props} />
+const MakrdownWithStyledAnchors = glamorous(NoPMarkdown)({
+  '& a': {
+    color: 'inherit',
+  },
+  '& a:hover, & a:focus': {
+    color: 'gray',
+  },
+})
 
 export default Appearances
 
@@ -63,7 +68,7 @@ function ListOfThings({things}) {
     <ul>
       {things.map(({thing, description, duration, date, isFuture}, i) => (
         <li key={i} style={{marginBottom: 4}}>
-          <NoPMarkdown {...thingAnchorStyles}>{thing}</NoPMarkdown>
+          <MakrdownWithStyledAnchors>{thing}</MakrdownWithStyledAnchors>
           :{' '}
           {description ?
             <span> <NoPMarkdown>{description}</NoPMarkdown></span> :
@@ -90,13 +95,3 @@ ListOfThings.propTypes = {
     }),
   ),
 }
-
-function NoPMarkdown({children, style, ...otherProps}) {
-  return (
-    <Markdown noPTag style={{display: 'inline', ...style}} {...otherProps}>
-      {children}
-    </Markdown>
-  )
-}
-
-NoPMarkdown.propTypes = {children: PropTypes.any, style: PropTypes.any}

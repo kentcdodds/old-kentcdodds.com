@@ -1,6 +1,6 @@
 import {PropTypes} from 'react'
 import slugify from 'slugify'
-import {merge, style, firstChild, lastChild} from 'glamor'
+import glamorous from 'glamorous'
 import {intersperse} from '../utils'
 
 const availableColors = new Set([
@@ -27,34 +27,20 @@ const availableColors = new Set([
 ])
 const colorMap = {}
 
-const styles = {
-  talkDate: style({paddingLeft: 10, fontSize: '0.7em'}),
-  tag(color) {
-    return merge(
-      {
-        backgroundColor: color,
-        color: getTextColor(color),
-        borderRadius: 2,
-        padding: '2px 6px',
-        marginLeft: 6,
-        marginRight: 6,
-      },
-      firstChild({marginLeft: 0}),
-      lastChild({marginRight: 0}),
-    )
+const TagSpan = glamorous.span(
+  {
+    ':first-child': {marginLeft: 0},
+    ':last-child': {marginRight: 0},
   },
-  talkRoot: style({marginBottom: 60}),
-  talkTitle: style({marginBottom: 10}),
-  tagContainer: style({marginBottom: 6, fontSize: '0.75em'}),
-  references: style({marginBottom: 8, fontSize: '0.9em'}),
-  presentationsContainer: style({
-    listStyle: 'none',
-    paddingLeft: 16,
-    margin: 0,
+  ({color}) => ({
+    backgroundColor: color,
+    color: getTextColor(color),
+    borderRadius: 2,
+    padding: '2px 6px',
+    marginLeft: 6,
+    marginRight: 6,
   }),
-  abstractTitle: style({marginBottom: 2}),
-  abstractContainer: style({marginTop: -12}),
-}
+)
 
 export default Presentation
 
@@ -70,9 +56,9 @@ function Presentation({title, abstract, resources, presentations, tags}) {
       <span {...innerHTML(event)} />
       {recording ? ' - ' : null}
       {recording ? <a href={recording}>video</a> : null}
-      <span {...styles.talkDate}>
+      <glamorous.Span paddingLeft={10} fontSize="0.7em">
         {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
-      </span>
+      </glamorous.Span>
     </li>
   ))
   const tagEls = tags.map(t => {
@@ -81,33 +67,33 @@ function Presentation({title, abstract, resources, presentations, tags}) {
       color = getRandomColor()
       colorMap[t] = color
     }
-    return <span key={t} {...styles.tag(color)}>{t}</span>
+    return <TagSpan key={t} color={color}>{t}</TagSpan>
   })
   const anchor = slugify(title.toLowerCase())
   return (
-    <div {...styles.talkRoot}>
+    <glamorous.Div marginBottom={60}>
       <a href={`#${anchor}`} name={anchor}>
-        <h2 {...innerHTML(title)} {...styles.talkTitle} />
+        <glamorous.H2 marginBottom={10} {...innerHTML(title)} />
       </a>
-      <div {...styles.tagContainer}>{tagEls}</div>
-      <div {...styles.references}>
+      <glamorous.Div marginBottom={6} fontSize="0.75em">{tagEls}</glamorous.Div>
+      <glamorous.Div marginBottom={8} fontSize="0.9em">
         <div>
           {intersperse(resourceEls, ' | ')}
         </div>
         <div>
           Presentations:
-          <ul {...styles.presentationsContainer}>
+          <glamorous.Ul listStyle="none" paddingLeft={16} margin={0}>
             {presentationEls}
-          </ul>
+          </glamorous.Ul>
         </div>
-      </div>
+      </glamorous.Div>
       {abstract ?
         <div>
-          <h3 {...styles.abstractTitle}>Abstract</h3>
-          <div {...innerHTML(abstract)} {...styles.abstractContainer} />
+          <glamorous.H3 marginBottom={2}>Abstract</glamorous.H3>
+          <glamorous.Div {...innerHTML(abstract)} marginTop={-12} />
         </div> :
         null}
-    </div>
+    </glamorous.Div>
   )
 }
 
