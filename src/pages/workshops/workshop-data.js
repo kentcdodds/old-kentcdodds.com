@@ -18,6 +18,53 @@ export default [
   //   `,
   // },
   {
+    title: 'Code Transformation and Linting',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/asts-workshop)',
+      '[repo](https://github.com/kentcdodds/asts-workshop)',
+    ],
+    tags: ['babel', 'eslint', 'codemod', 'Abstract Syntax Trees', 'asts'],
+    presentations: [
+      {
+        event: '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
+        date: '2017-04-26',
+      },
+    ],
+    abstract: `
+      Have you ever needed to change the API to a widely used function in your JavaScript application?
+      Find and replace can really only take you so far. What about the frustration of iterating over and
+      over again on pull requests because of simple code mistakes developers keep making? These are only some
+      of the problems that you can solve with a basic understanding of Abstract Syntax Trees and the tools
+      you can use to inspect and manipulate them.
+
+      Join Kent C. Dodds and learn invaluable skills you can take back to improve the developer experience
+      in your JavaScript applications.
+    `,
+  },
+  {
+    title: 'Testing JavaScript Applications',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/testing-workshop)',
+      '[repo](https://github.com/kentcdodds/testing-workshop)',
+    ],
+    tags: ['testing', 'jest', 'cypress'],
+    presentations: [
+      {
+        event: '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
+        date: '2017-04-25',
+      },
+    ],
+    abstract: `
+      Building and deploying web applications with confidence is challenging. Verifying that what you're
+      deploying to production actually works requires a solid suite of automated tests. Knowing how to
+      configure tools and write tests that enhance your development experience is vital to your success.
+
+      In this class, we'll explore the merits and tradeoffs of different forms of testing and get into configuring
+      and using specific tools to increase confidence in deploying our applications. Join Kent C. Dodds and
+      learn invaluable skills you can take back to improve your JavaScript applications.
+    `,
+  },
+  {
     title: 'ES6 and Beyond',
     resources: [
       '[slides](http://slides.com/kentcdodds/es6-workshop#/)',
@@ -124,7 +171,7 @@ export default [
     ],
     abstract: `
       Building and deploying complex frontend applications can get complicated quickly. Webpack simplifies this with a
-      huge list of features that cater to all kinds of JavaScript apps. In this class, we’ll explore these features to
+      huge list of features that cater to all kinds of JavaScript apps. In this class, we'll explore these features to
       optimize an application for performance and simplicity. In this workshop, you'll learn:
 
       - The role of webpack and fundamental concepts like loaders and plugins
@@ -155,9 +202,9 @@ export default [
     ],
     abstract: `
       Participating in open source has been one of the most rewarding experiences of my career. The feeling of sharing
-      something I’ve created, and hearing that others are using it in their applications is incredible. But writing and
+      something I've created, and hearing that others are using it in their applications is incredible. But writing and
       managing an open source project is challenging. I want to help you get started with open source or improve your
-      current projects with some of the things I’ve learned by publishing and maintaining over 60 npm packages.
+      current projects with some of the things I've learned by publishing and maintaining over 60 npm packages.
 
       - Learn how to set up a new project locally and on GitHub for development
       - Learn how to configure npm for publishing the project to the npm registry
@@ -202,9 +249,9 @@ export default [
     abstract: `
       "Feel free to submit a PR!" - words often found in GitHub issues, but met with confusion and fear by many.
       Getting started with contributing open source is not always straightforward and can be tricky. With this series,
-      you’ll be equipped with the the tools, knowledge, and understanding you need to be productive and contribute to
+      you'll be equipped with the the tools, knowledge, and understanding you need to be productive and contribute to
       the wonderful world of open source projects. Much of this series speaks about GitHub, but most of the concepts
-      are generally applicable to contributing to any open source project, regardless of where it’s hosted.
+      are generally applicable to contributing to any open source project, regardless of where it's hosted.
 
       So enjoy the course and start contributing to the projects you use and love today!
     `,
@@ -270,12 +317,12 @@ export default [
       between the client and server, JWT provides a terrific alternative to traditional cookie based authentication
       models. For more information on JWT visit http://jwt.io/
 
-      In this series, we’ll be building a simple application to get random user information from a node server with an
-      Angular client. We’ll then implement JWT to protect the random user resource on the server and then work through
+      In this series, we'll be building a simple application to get random user information from a node server with an
+      Angular client. We'll then implement JWT to protect the random user resource on the server and then work through
       the frontend to get JWT authentication working.
 
-      By the end, we’ll have an application which has a single username/password combination (for simplicity) and uses
-      tokens to authorize the client to see the random user information. You’ll be able to login, get random users, and
+      By the end, we'll have an application which has a single username/password combination (for simplicity) and uses
+      tokens to authorize the client to see the random user information. You'll be able to login, get random users, and
       logout.
     `,
   },
