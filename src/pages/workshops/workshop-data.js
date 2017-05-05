@@ -29,6 +29,11 @@ export default [
         event: '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
         date: '2017-04-26',
       },
+      {
+        event: 'Self-organized PayPal practice-run',
+        date: '2017-04-19',
+        recording: 'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
     ],
     abstract: `
       Have you ever needed to change the API to a widely used function in your JavaScript application?
@@ -52,6 +57,11 @@ export default [
       {
         event: '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
         date: '2017-04-25',
+      },
+      {
+        event: 'Self-organized PayPal practice-run',
+        date: '2017-04-20',
+        recording: 'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `
