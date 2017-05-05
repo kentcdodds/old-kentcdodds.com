@@ -11,7 +11,7 @@ const tagEmojiMap = {
 }
 
 // {
-//   title: '',
+//   thing: '',
 //   description: '',
 //   date: '',
 //   tags: [],
@@ -20,6 +20,18 @@ export default [
   {
     title: 'Podcasts',
     appearances: [
+      {
+        thing: '[The Changelog](https://changelog.com)',
+        description: '[First-time Contributors and Maintainer Balance](https://changelog.com/podcast/246)',
+        date: '2017-04-10',
+        tags: [
+          'oss',
+          'open source',
+          'glamorous',
+          'maintaining open source',
+          'community',
+        ],
+      },
       {
         thing: '[Dads in Development](http://www.dadsindev.com/)',
         description: '[Episode 12: CSS Modules](http://www.dadsindev.com/12) (and CSS in JS)',
