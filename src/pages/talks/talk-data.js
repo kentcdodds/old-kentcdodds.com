@@ -275,7 +275,7 @@ export default [
     presentations: [
       {
         event: '[Foward 4 Web Summit](http://forwardjs.com/)',
-        recording: 'https://youtu.be/-qPh6I2hfjw',
+        recording: 'https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2016-02-11',
       },
       {
