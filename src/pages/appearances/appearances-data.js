@@ -21,6 +21,20 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Developer on Fire](http://developeronfire.com)',
+        description: '[Episode 239 | Kent C. Dodds - Nice and Inclusive](http://developeronfire.com/podcast/episode-239-kent-c-dodds-nice-and-inclusive)',
+        date: '2017-06-01',
+        tags: [
+          'tc39',
+          'teaching',
+          'podcasting',
+          'open source',
+          'glamorous',
+          'personal',
+          'privilege',
+        ],
+      },
+      {
         thing: '[The Changelog](https://changelog.com)',
         description: '[First-time Contributors and Maintainer Balance](https://changelog.com/podcast/246)',
         date: '2017-04-10',
