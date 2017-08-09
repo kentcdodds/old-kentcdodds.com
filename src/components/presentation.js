@@ -3,28 +3,32 @@ import slugify from 'slugify'
 import glamorous from 'glamorous'
 import {intersperse} from '../utils'
 
-const availableColors = new Set([
-  '#2E4347',
-  '#C0D1C2',
-  '#49281F',
-  '#564334',
-  '#5D4157',
-  '#838689',
-  '#413040',
-  '#111625',
-  '#341931',
-  '#571B3C',
-  '#805566',
-  '#E35B5D',
-  '#5CACC4',
-  '#DE6262',
-  '#64989D',
-  '#410936',
-  '#616668',
-  '#A43955',
-  '#5E3929',
-  '#1B676B',
-])
+let availableColors
+updateColorsList()
+function updateColorsList() {
+  availableColors = new Set([
+    '#2E4347',
+    '#C0D1C2',
+    '#49281F',
+    '#564334',
+    '#5D4157',
+    '#838689',
+    '#413040',
+    '#111625',
+    '#341931',
+    '#571B3C',
+    '#805566',
+    '#E35B5D',
+    '#5CACC4',
+    '#DE6262',
+    '#64989D',
+    '#410936',
+    '#616668',
+    '#A43955',
+    '#5E3929',
+    '#1B676B',
+  ])
+}
 const colorMap = {}
 
 const TagSpan = glamorous.span(
@@ -117,7 +121,7 @@ function innerHTML(string) {
 
 function getRandomColor() {
   if (!availableColors.size) {
-    throw new Error('no more colors available')
+    updateColorsList()
   }
   const colors = Array.from(availableColors)
   const randomColor = colors[Math.floor(Math.random() * colors.length)]

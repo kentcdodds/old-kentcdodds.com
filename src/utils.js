@@ -8,6 +8,8 @@ const tagEmojiMap = {
   'live coding': '💻',
   testing: '⚠️',
   react: '⚛',
+  tools: '🛠',
+  glamorous: '💄',
 }
 
 export {intersperse, sortPresentations, preparePresentationData}

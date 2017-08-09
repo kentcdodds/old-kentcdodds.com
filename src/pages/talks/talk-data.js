@@ -2,24 +2,50 @@
 import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
-  // {
-  //   title: '',
-  //   resources: [
-  //   ],
-  //   tags: [],
-  //   presentations: [
-  //     {
-  //       event: '',
-  //       recording: '',
-  //     },
-  //   ],
-  //   abstract: `
-  //   `,
-  // },
+  {
+    title: 'Maintainable CSS in React',
+    resources: ['[slides](http://slides.com/kentcdodds/glamorous#/)'],
+    tags: ['glamorous', 'css', 'css-in-js', 'react'],
+    presentations: [
+      {
+        event: 'JS@PayPal Summer 2017 (internal conference)',
+        recording: 'https://youtu.be/3-4KsXPO2Q4?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
+        event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
+        recording: 'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
+      },
+    ],
+    abstract: `
+      I no longer care about: specificity, CSS linters, CSS preprocessors, vendor prefixing, removing unused CSS,
+      finding CSS dependencies and dependents. I now care more about: whether it’s fast enough, whether it’s small
+      enough, whether it’s familiar enough. These are some of my trade-offs. Because I use CSS-in-JS. I’ve made
+      trade-offs because I write HTML-in-JS. Despite these, I still do it, because the cost is minimal enough, and the
+      benefit is great enough. Let’s tell stories, talk use-cases, explore trade-offs, and inspire more innovation to
+      make the CSS-in-JS trade-offs less trade-offy.
+    `,
+  },
+  {
+    title: 'Tools of modern JavaScript projects',
+    resources: ['[slides](http://slides.com/kentcdodds/js-tools#/)'],
+    tags: ['javascript', 'tools'],
+    presentations: [
+      {
+        event: '[Open West 2017](https://www.openwest.org/schedule/#talk-77)',
+      },
+    ],
+    abstract: `
+      The cry of JavaScript fatigue still echoes in the minds of developers everywhere as they try to wade through the
+      waters of outdated blog posts, tutorials, Stack Overflow answers, and GitHub repos. Just when things seem to start
+      settling in JavaScript, something new comes to shake things up a little bit. I’ll be you tour guide as we navigate
+      through the tooling set up of a modern JavaScript project that’s leveraging these tools in a way that actually
+      enhances the experience of users using the project and developers working on it.
+    `,
+  },
   {
     title: 'Faster JavaScript',
     resources: ['[slides](https://slides.com/kentcdodds/faster-javascript)'],
-    tags: [],
+    tags: ['javascript', 'babel'],
     presentations: [
       {
         event: '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
@@ -176,13 +202,17 @@ export default [
     `,
   },
   {
-    title: 'Transform your code like Optimus Prime: ASTs for Beginners',
+    title: 'Writing custom Babel and ESLint plugins with ASTs',
     resources: [
       '[slides](https://slides.com/kentcdodds/a-beginners-guide-to-asts)',
       '[code](http://kcd.im/beginner-asts-code)',
     ],
     tags: ['ECMAScript', 'babel', 'eslint', 'live coding'],
     presentations: [
+      {
+        event: '[Open West 2017](https://www.openwest.org/schedule/#talk-99)',
+        recording: 'https://youtu.be/VBscbcm2Mok?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
       {
         event: 'Clevertech Engineering',
         recording: 'https://youtu.be/CFQBHy8RCpg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',

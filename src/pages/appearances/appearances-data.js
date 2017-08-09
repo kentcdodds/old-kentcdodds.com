@@ -21,6 +21,19 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Tyler McGinnis Podcast](https://tylermcginnis.com/podcast)',
+        description: '[Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
+        date: '2017-08-09',
+        tags: [
+          'tc39',
+          'teaching',
+          'education',
+          'open source',
+          'privilege',
+          'personal',
+        ],
+      },
+      {
         thing: '[Developer on Fire](http://developeronfire.com)',
         description: '[Episode 239 | Kent C. Dodds - Nice and Inclusive](http://developeronfire.com/podcast/episode-239-kent-c-dodds-nice-and-inclusive)',
         date: '2017-06-01',
