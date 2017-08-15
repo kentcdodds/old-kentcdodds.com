@@ -21,6 +21,12 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[NADCAST](https://www.youtube.com/playlist?list=PL1XPwt2TrDrxWL3ohvospBDFP3GMeXgQE)',
+        description: '[Kent C. Dodds](https://www.youtube.com/watch?v=FEeL_c2wtpU)',
+        date: '2017-08-14',
+        tags: ['prettier', 'react', 'testing', 'open source'],
+      },
+      {
         thing: '[Tyler McGinnis Podcast](https://tylermcginnis.com/podcast)',
         description: '[Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
         date: '2017-08-09',
