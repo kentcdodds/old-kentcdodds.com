@@ -28,7 +28,7 @@ export default [
       },
       {
         thing: '[Tyler McGinnis Podcast](https://tylermcginnis.com/podcast)',
-        description: '[Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
+        description: '[Work/Life Balance, Education, and Open Source with Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
         date: '2017-08-09',
         tags: [
           'tc39',
