@@ -146,6 +146,12 @@ export default [
     title: 'Blogposts',
     appearances: [
       {
+        thing: '[paysa blog](https://www.paysa.com/blog/)',
+        description: `[Expert Roundup: Coding Bootcamps](https://www.paysa.com/blog/2017/08/31/expert-roundup-coding-bootcamps/)`,
+        date: '2017-08-31',
+        tags: ['learning', 'coding', 'bootcamp', 'education'],
+      },
+      {
         thing: '[onalytica Influencer Library](http://www.onalytica.com/blog/)',
         description: `[Digital Inclusion and Accessibility: Top 100 Influencers and Brands](http://www.onalytica.com/blog/posts/digital-inclusion-accessibility-top-100-influencers-brands/) (I'm #29)`,
         date: '2016-10-13',
