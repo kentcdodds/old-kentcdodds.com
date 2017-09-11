@@ -56,7 +56,8 @@ function Home() {
         </p>
         <p>
           <small>
-            If you're unimpressed with my website it's because I'm too busy<br />
+            {`If you're unimpressed with my website it's because I'm too busy`}
+            <br />
             hanging out with my family,<br />
             building awesome things,<br />
             teaching people JavaScript,<br />

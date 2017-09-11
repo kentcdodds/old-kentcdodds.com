@@ -11,15 +11,25 @@ function Post() {
   return (
     <div style={{maxWidth: 800, margin: 'auto', fontSize: '22px'}}>
       <h1 style={{textAlign: 'center', fontSize: '1.4em'}}>
-        🎉 Introducing the{' '}
-        <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a> Workshop 🎊
+        <span role="img" aria-label="tada">
+          🎉
+        </span>{' '}
+        Introducing the{' '}
+        <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a> Workshop{' '}
+        <span role="img" aria-label="confetti">
+          🎊
+        </span>
         <br />
         <small>
           on <a href="https://frontendmasters.com">Frontend Masters</a>
         </small>
       </h1>
       <div style={{textAlign: 'center'}}>
-        <img style={{width: '100%'}} src="image.png" />
+        <img
+          style={{width: '100%'}}
+          src="image.png"
+          alt="Frontend Masters + Webpack = Love"
+        />
       </div>
       <div>
         <Markdown>
@@ -33,6 +43,7 @@ function Post() {
         <div style={{textAlign: 'center'}}>
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFrontendMasters%2Fvideos%2F674236152752541%2F&amp;show_text=0&amp;width=560"
+            title="Facebook video"
             width="560"
             height="315"
             style={{border: 'none', overflow: 'hidden'}}

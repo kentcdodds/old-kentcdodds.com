@@ -48,6 +48,7 @@
     "mkdirp": "^0.5.1",
     "moment": "^2.17.1",
     "npm-run-all": "^4.0.2",
+    "prop-types": "^15.5.10",
     "random-emoji": "^1.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -65,5 +66,6 @@
     "rules": {
       "react/jsx-max-props-per-line": "off"
     }
-  }
+  },
+  "eslintIgnore": ["node_modules", "dist"]
 }

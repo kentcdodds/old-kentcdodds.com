@@ -6,18 +6,25 @@ export const title = 'Sunsetting JavaScript Air'
 
 export default Post
 
+const sunset = (
+  <span role="img" aria-label="city sunset">
+    🌆
+  </span>
+)
+
 function Post() {
   return (
     <div style={{maxWidth: 800, margin: 'auto', fontSize: '22px'}}>
       <h1 style={{textAlign: 'center', fontSize: '1.4em'}}>
-        🌆 {title} 🌆
+        {sunset} {title} {sunset}
         <br />
-        <small>for now... 🌇</small>
+        <small>for now... {sunset}</small>
       </h1>
       <div style={{textAlign: 'center'}}>
         <a href="https://javascriptair.com">
           <img
             style={{width: '100%', maxWidth: 256}}
+            alt="JavaScript Air Logo"
             src="javascript-air-logo.png"
           />
         </a>

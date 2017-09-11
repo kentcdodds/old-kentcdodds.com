@@ -1,4 +1,4 @@
-import {PropTypes} from 'react'
+import {PropTypes} from 'prop-types'
 import Markdown from '../../components/markdown'
 
 export default BlogHome
@@ -11,7 +11,7 @@ function BlogHome({posts}) {
         Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre>
       </em>
       <div style={{fontSize: '0.9em', marginTop: 20}}>
-        I'm in the process of moving my blog over to this. Find more posts{' '}
+        {`I'm in the process of moving my blog over to this. Find more posts `}
         <a href="https://medium.com/@kentcdodds">on Medium.com</a>
         .
       </div>
