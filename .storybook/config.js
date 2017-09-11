@@ -6,7 +6,7 @@ import Talks from '../src/pages/talks'
 import Workshops from '../src/pages/workshops'
 import Appearances from '../src/pages/appearances'
 import Blog from '../src/pages/blog'
-import Draft from '../src/pages/blog/posts/fem-webpack'
+import Draft from '../src/pages/blog/posts/automation-without-config'
 
 function loadStories() {
   storiesOf('Pages', module)
