@@ -1,11 +1,11 @@
+sudo: false
 language: node_js
 cache:
   directories:
-    - node_modules
+    - ~/.npm
+notifications:
+  email: false
+node_js: '8'
+script: npm run validate
 branches:
-  only:
-    - master
-node_js:
-  - "6"
-script:
-  - time npm run validate
+  only: master
