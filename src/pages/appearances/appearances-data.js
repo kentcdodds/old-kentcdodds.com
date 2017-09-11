@@ -21,14 +21,17 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
-        thing: '[NADCAST](https://www.youtube.com/playlist?list=PL1XPwt2TrDrxWL3ohvospBDFP3GMeXgQE)',
-        description: '[Kent C. Dodds](https://www.youtube.com/watch?v=FEeL_c2wtpU)',
+        thing:
+          '[NADCAST](https://www.youtube.com/playlist?list=PL1XPwt2TrDrxWL3ohvospBDFP3GMeXgQE)',
+        description:
+          '[Kent C. Dodds](https://www.youtube.com/watch?v=FEeL_c2wtpU)',
         date: '2017-08-14',
         tags: ['prettier', 'react', 'testing', 'open source'],
       },
       {
         thing: '[Tyler McGinnis Podcast](https://tylermcginnis.com/podcast)',
-        description: '[Work/Life Balance, Education, and Open Source with Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
+        description:
+          '[Work/Life Balance, Education, and Open Source with Kent C. Dodds](https://tylermcginnis.com/podcast/kentcdodds/)',
         date: '2017-08-09',
         tags: [
           'tc39',
@@ -41,7 +44,8 @@ export default [
       },
       {
         thing: '[Developer on Fire](http://developeronfire.com)',
-        description: '[Episode 239 | Kent C. Dodds - Nice and Inclusive](http://developeronfire.com/podcast/episode-239-kent-c-dodds-nice-and-inclusive)',
+        description:
+          '[Episode 239 | Kent C. Dodds - Nice and Inclusive](http://developeronfire.com/podcast/episode-239-kent-c-dodds-nice-and-inclusive)',
         date: '2017-06-01',
         tags: [
           'tc39',
@@ -55,7 +59,8 @@ export default [
       },
       {
         thing: '[The Changelog](https://changelog.com)',
-        description: '[First-time Contributors and Maintainer Balance](https://changelog.com/podcast/246)',
+        description:
+          '[First-time Contributors and Maintainer Balance](https://changelog.com/podcast/246)',
         date: '2017-04-10',
         tags: [
           'oss',
@@ -67,31 +72,36 @@ export default [
       },
       {
         thing: '[Dads in Development](http://www.dadsindev.com/)',
-        description: '[Episode 12: CSS Modules](http://www.dadsindev.com/12) (and CSS in JS)',
+        description:
+          '[Episode 12: CSS Modules](http://www.dadsindev.com/12) (and CSS in JS)',
         date: '2016-08-11',
         tags: ['css', 'aphrodite', 'webpack', 'css modules'],
       },
       {
         thing: '[Career.js](http://careerjs.com/)',
-        description: '[Ep. 3 - How to Level Up Your Career with Kent C. Dodds](http://careerjs.com/#/3)',
+        description:
+          '[Ep. 3 - How to Level Up Your Career with Kent C. Dodds](http://careerjs.com/#/3)',
         date: '2016-07-11',
         tags: ['soft skills', 'about me'],
       },
       {
         thing: '[This Developing Story](http://developingstory.netlify.com/)',
-        description: '[Ep. 56 - Kent C. Dodds](http://developingstory.netlify.com/tds-56-kent-c-dodds)',
+        description:
+          '[Ep. 56 - Kent C. Dodds](http://developingstory.netlify.com/tds-56-kent-c-dodds)',
         date: '2016-06-07',
         tags: ['about me'],
       },
       {
         thing: '[The Web Behind](https://webbehind.com)',
-        description: '[Kent C. Dodds](https://webbehind.com/episode-2-kent-c-dodds/)',
+        description:
+          '[Kent C. Dodds](https://webbehind.com/episode-2-kent-c-dodds/)',
         date: '1970-01-01',
         tags: ['about me'],
       },
       {
         thing: '[Modern Web Podcast](http://www.modern-web.org/)',
-        description: '[S01E03 - ES6, Beard of Jeff Cross, Air Squats, and JavaScript Air with Kent C. Dodds and Ben Lesh](http://modernweb.podbean.com/e/s01e03-es6-beard-of-jeff-cross-air-squats-and-javascript-air-with-kent-c-dodds-and-ben-lesh/)',
+        description:
+          '[S01E03 - ES6, Beard of Jeff Cross, Air Squats, and JavaScript Air with Kent C. Dodds and Ben Lesh](http://modernweb.podbean.com/e/s01e03-es6-beard-of-jeff-cross-air-squats-and-javascript-air-with-kent-c-dodds-and-ben-lesh/)',
         date: '1970-01-01',
         duration: '00:53:31',
         tags: [
@@ -104,13 +114,15 @@ export default [
       },
       {
         thing: '[The Web Platform Podcast](http://thewebplatformpodcast.com)',
-        description: '[Teaching and Learning Angular](http://thewebplatformpodcast.com/72-teaching-and-learning-angular)',
+        description:
+          '[Teaching and Learning Angular](http://thewebplatformpodcast.com/72-teaching-and-learning-angular)',
         date: '1970-01-01',
         tags: ['angular', 'teaching', 'learning'],
       },
       {
         thing: '[Adventures in Angular](https://devchat.tv/adv-in-angular)',
-        description: '[022 AiA Form Validation with Kent C. Dodds](https://devchat.tv/adv-in-angular/022-aia-form-validation-with-kent-c-dodds)',
+        description:
+          '[022 AiA Form Validation with Kent C. Dodds](https://devchat.tv/adv-in-angular/022-aia-form-validation-with-kent-c-dodds)',
         date: '1970-01-01',
         tags: ['angular', 'forms'],
       },
@@ -201,13 +213,12 @@ function fixupData(appearance) {
     thing: markdownToHTMLWithNoPTag(appearance.thing),
     date: moment(appearance.date),
     isFuture: moment().isBefore(appearance.date),
-    tags: (appearance.tags || []).map(
-      t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`,
-    ),
+    tags: (appearance.tags || [])
+      .map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
     description: markdownToHTMLWithNoPTag(appearance.description || ''),
-    duration: appearance.duration ?
-      moment.duration(appearance.duration).humanize() :
-      null,
+    duration: appearance.duration
+      ? moment.duration(appearance.duration).humanize()
+      : null,
   }
 }
 

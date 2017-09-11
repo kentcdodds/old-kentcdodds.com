@@ -25,18 +25,15 @@ function intersperse(arr, sep) {
   if (arr.length === 0) {
     return []
   }
-  return arr.reduce(
-    function intersperseReduce(xs, x, i) {
-      if (i === 0) {
-        return [x]
-      } else if (typeof sep === 'function') {
-        return xs.concat([sep(x, i), x])
-      } else {
-        return xs.concat([sep, x])
-      }
-    },
-    [],
-  )
+  return arr.reduce(function intersperseReduce(xs, x, i) {
+    if (i === 0) {
+      return [x]
+    } else if (typeof sep === 'function') {
+      return xs.concat([sep(x, i), x])
+    } else {
+      return xs.concat([sep, x])
+    }
+  }, [])
 }
 
 function preparePresentationData(presentation) {
@@ -56,9 +53,8 @@ function preparePresentationData(presentation) {
       .sort((a, b) => {
         return a.date.isAfter(b.date) ? -1 : 1
       }),
-    tags: (presentation.tags || []).map(
-      t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`,
-    ),
+    tags: (presentation.tags || [])
+      .map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
     resources: (presentation.resources || []).map(markdownToHTMLWithNoPTag),
     abstract: markdownToHTML(presentation.abstract || ''),
   }

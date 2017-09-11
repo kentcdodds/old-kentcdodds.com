@@ -5,19 +5,19 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "precommit": "lint-staged && npm run validate",
     "build:clean": "rimraf dist",
     "build:copy": "npm-run-all --parallel build:copy:*",
     "build:copy:copyDir": "cpy \"**/*.*\" ../dist/ --parents --cwd=./copy",
-    "build:copy:posts": "cpy \"**/*.!(js)\" ../../../../dist/post --parents --cwd=./src/pages/blog/posts",
+    "build:copy:posts":
+      "cpy \"**/*.!(js)\" ../../../../dist/post --parents --cwd=./src/pages/blog/posts",
     "build:pages": "babel-node generate/",
     "build": "npm-run-all --parallel build:*",
     "test": "npm run lint",
-    "lint": "eslint .",
-    "format": "prettier-eslint --write \"src/**/*.js\" \"generate/**/*.js\"",
+    "lint": "kcd-scripts lint",
     "serve": "http-server dist",
-    "validate": "npm-run-all --parallel lint build",
-    "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001 --dont-track"
+    "validate": "kcd-scripts validate",
+    "precommit": "kcd-scripts precommit",
+    "storybook": "cross-env STORYBOOK_RUNNING=true start-storybook --port 9001"
   },
   "repository": {
     "type": "git",
@@ -31,59 +31,39 @@
   },
   "homepage": "https://github.com/kentcdodds/kentcdodds.github.io#readme",
   "devDependencies": {
-    "@kadira/storybook": "^2.35.3",
+    "@storybook/react": "^3.2.8",
     "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^7.1.0",
     "babel-plugin-react-require": "^3.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-node6": "^11.0.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-2": "^6.22.0",
     "common-tags": "^1.4.0",
     "cpy-cli": "^1.0.1",
-    "cross-env": "^3.2.4",
+    "cross-env": "^5.0.5",
     "cross-spawn": "^5.1.0",
-    "eslint": "^3.17.1",
     "eslint-config-kentcdodds": "^12.1.1",
-    "eslint-plugin-jsx": "^0.0.2",
-    "eslint-plugin-react": "^6.10.0",
-    "glamor": "^2.20.24",
-    "glamorous": "^1.0.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.8.0",
     "glob": "^7.1.1",
-    "http-server": "^0.9.0",
-    "husky": "^0.13.2",
-    "lint-staged": "^3.4.0",
+    "http-server": "^0.10.0",
+    "kcd-scripts": "^0.8.4",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
     "moment": "^2.17.1",
     "npm-run-all": "^4.0.2",
-    "prettier-eslint-cli": "^3.1.2",
     "random-emoji": "^1.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "rimraf": "^2.6.1",
+    "rimraf": "^2.6.2",
     "rxjs": "^5.2.0",
     "slugify": "^1.1.0",
     "strip-indent": "^2.0.0",
-    "uglify-js": "^2.8.12"
+    "uglify-js": "^3.1.0"
   },
   "eslintConfig": {
     "extends": [
-      "kentcdodds",
-      "kentcdodds/react",
-      "kentcdodds/prettier",
+      "./node_modules/kcd-scripts/eslint.js",
       "kentcdodds/babel-react-require"
     ],
     "rules": {
-      "react/jsx-max-props-per-line": "off",
-      "func-style": "off"
+      "react/jsx-max-props-per-line": "off"
     }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
   }
 }

@@ -5,12 +5,7 @@ import GoogleAnalyticsScript from './scripts/google-analytics'
 export default Page
 
 function Page(
-  {
-    children,
-    title = 'Kent C. Dodds',
-    lastUpdated = getDateStamp(),
-    links,
-  } = {},
+  {children, title = 'Kent C. Dodds', lastUpdated = getDateStamp(), links} = {},
 ) {
   return (
     <html lang="en">
@@ -22,12 +17,10 @@ function Page(
         <meta name="description" content="Personal website of Kent C. Dodds" />
         <meta
           name="keywords"
-          content={
-            oneLine`
+          content={oneLine`
               Kent Dodds, kentcdodds, Kent C. Dodds,
               web developer, frontend developer
-            `
-          }
+            `}
         />
         <meta name="author" content="Kent C. Dodds" />
         <link

@@ -26,13 +26,15 @@ export default [
     tags: ['babel', 'eslint', 'codemod', 'Abstract Syntax Trees', 'asts'],
     presentations: [
       {
-        event: '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
+        event:
+          '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
         date: '2017-04-26',
       },
       {
         event: 'Self-organized PayPal practice-run',
         date: '2017-04-19',
-        recording: 'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `
@@ -55,13 +57,15 @@ export default [
     tags: ['testing', 'jest', 'cypress'],
     presentations: [
       {
-        event: '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
+        event:
+          '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
         date: '2017-04-25',
       },
       {
         event: 'Self-organized PayPal practice-run',
         date: '2017-04-20',
-        recording: 'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `
@@ -86,15 +90,18 @@ export default [
       {
         event: 'Self-organized PayPal workshop day (Part 2)',
         date: '2017-03-07',
-        recording: 'https://youtu.be/eOKQDh50ECU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/eOKQDh50ECU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Self-organized PayPal workshop day (Part 1)',
         date: '2017-01-23',
-        recording: 'https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event: '[The Strange Loop](http://www.thestrangeloop.com/2016/es6-and-beyond.html)',
+        event:
+          '[The Strange Loop](http://www.thestrangeloop.com/2016/es6-and-beyond.html)',
         date: '2016-09-15',
         recording: 'https://youtu.be/dnF-wrw0Q_w',
       },
@@ -110,10 +117,12 @@ export default [
       {
         event: '[MidwestJS](http://midwestjs.com/)',
         date: '2015-08-12',
-        recording: 'https://youtu.be/aeY6ctvsurs?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
+        recording:
+          'https://youtu.be/aeY6ctvsurs?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
       },
       {
-        event: '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
+        event:
+          '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
         date: '2015-04-21',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
       },
@@ -169,14 +178,17 @@ export default [
         recording: 'http://kcd.im/fem-webpack',
       },
       {
-        event: '[Egghead.io](https://egghead.io/courses/using-webpack-for-production-javascript-applications)',
+        event:
+          '[Egghead.io](https://egghead.io/courses/using-webpack-for-production-javascript-applications)',
         date: '2016-06-17',
-        recording: 'https://egghead.io/courses/using-webpack-for-production-javascript-applications',
+        recording:
+          'https://egghead.io/courses/using-webpack-for-production-javascript-applications',
       },
       {
         event: '[MidwestJS](http://midwestjs.com/)',
         date: '2015-08-12',
-        recording: 'https://youtu.be/a96r7Tjf0Ps?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
+        recording:
+          'https://youtu.be/a96r7Tjf0Ps?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
       },
     ],
     abstract: `
@@ -251,9 +263,11 @@ export default [
     tags: ['open source'],
     presentations: [
       {
-        event: '[Egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
+        event:
+          '[Egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
         date: '2016-02-18',
-        recording: 'https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github',
+        recording:
+          'https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github',
       },
     ],
     abstract: `
@@ -285,9 +299,11 @@ export default [
     tags: ['angular', 'webpack'],
     presentations: [
       {
-        event: '[Egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
+        event:
+          '[Egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
         date: '2015-09-05',
-        recording: 'https://egghead.io/courses/angular-and-webpack-for-modular-applications',
+        recording:
+          'https://egghead.io/courses/angular-and-webpack-for-modular-applications',
       },
     ],
     abstract: `
@@ -317,9 +333,11 @@ export default [
     tags: ['angular'],
     presentations: [
       {
-        event: '[Egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
+        event:
+          '[Egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
         date: '2014-09-22',
-        recording: 'https://egghead.io/courses/angularjs-authentication-with-jwt',
+        recording:
+          'https://egghead.io/courses/angularjs-authentication-with-jwt',
       },
     ],
     abstract: `

@@ -22,10 +22,10 @@ function Appearances() {
   const youTube = 'http://kcd.im/tech-chats'
   return (
     <div style={{textAlign: 'center', maxWidth: 600, margin: 'auto'}}>
-      <h1 style={{fontSize: 50, marginBottom: 20}}>
-        Appearances
-      </h1>
-      <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
+      <h1 style={{fontSize: 50, marginBottom: 20}}>Appearances</h1>
+      <em>
+        Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre>
+      </em>
       <div style={{textAlign: 'left', fontSize: 18}}>
         {appearances.map(({title, appearances: things}) => (
           <SectionOfThings key={title} title={title} things={things} />
@@ -33,14 +33,12 @@ function Appearances() {
       </div>
       <hr style={{margin: '50px 0'}} />
       <Markdown style={{textAlign: 'left'}}>
-        {
-          `
+        {`
             You may also be interested in:
             - [My Talks](http://kcd.im/talks)
             - [My AMA](http://kcd.im/ama)
             - My [tech chats](${techChats}) on [YouTube](${youTube})
-          `
-        }
+          `}
       </Markdown>
     </div>
   )
@@ -51,7 +49,9 @@ function SectionOfThings({things, title}) {
   return (
     <div>
       <h2>
-        <a href={`#${slug}`} name={slug}>{title}</a>
+        <a href={`#${slug}`} name={slug}>
+          {title}
+        </a>
       </h2>
       <ListOfThings things={things} />
     </div>
@@ -70,13 +70,17 @@ function ListOfThings({things}) {
         <li key={i} style={{marginBottom: 4}}>
           <MakrdownWithStyledAnchors>{thing}</MakrdownWithStyledAnchors>
           :{' '}
-          {description ?
-            <span> <NoPMarkdown>{description}</NoPMarkdown></span> :
-            ''}
+          {description ? (
+            <span>
+              {' '}
+              <NoPMarkdown>{description}</NoPMarkdown>
+            </span>
+          ) : (
+            ''
+          )}
           <span style={{fontSize: '0.7em'}}>
             {' '}
-            {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
-            {' '}
+            {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}{' '}
             {duration ? `- ${duration}` : null}
           </span>
         </li>

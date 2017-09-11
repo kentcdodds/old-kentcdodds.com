@@ -1,6 +1,4 @@
 {
-  "presets": ["node6", "react", "stage-2"],
-  "plugins": [
-    "react-require"
-  ]
+  "presets": ["kcd-scripts/babel"],
+  "plugins": ["react-require"]
 }

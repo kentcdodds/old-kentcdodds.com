@@ -32,11 +32,8 @@ function toStringFn(fn, vars = {}) {
 }
 
 function replaceAll(string, thingsToReplace) {
-  return Object.keys(thingsToReplace).reduce(
-    (replaced, regexString) => {
-      const valueToUse = thingsToReplace[regexString]
-      return replaced.replace(new RegExp(regexString, 'g'), valueToUse)
-    },
-    string,
-  )
+  return Object.keys(thingsToReplace).reduce((replaced, regexString) => {
+    const valueToUse = thingsToReplace[regexString]
+    return replaced.replace(new RegExp(regexString, 'g'), valueToUse)
+  }, string)
 }

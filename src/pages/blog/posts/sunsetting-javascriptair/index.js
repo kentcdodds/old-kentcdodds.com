@@ -24,8 +24,7 @@ function Post() {
       </div>
       <div>
         <Markdown>
-          {
-            `
+          {`
               With heavy heart 💔, I must officially announce that I'm sunsetting
               [JavaScript Air](https://javascriptair.com). If you haven't heard of JavaScript Air (I'm surprised you're even
               reading this), it's the **live** broadcast podcast all about JavaScript and the web platform. Learn more about
@@ -67,8 +66,7 @@ function Post() {
               [egghead.io](http://kcd.im/egghead), [Frontend Masters](https://frontendmasters.com/), and I have
               [a project](https://gist.github.com/kentcdodds/e85254d4dbc1540df6b95eb9ad2098d9) that I'm working on and I'm
               really excited about. [Follow me on twitter](https://twitter.com/kentcdodds) to keep up with that :)
-            `
-          }
+            `}
         </Markdown>
         <small>
           See more blogposts from me <a href="/post">here</a>.

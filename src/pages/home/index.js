@@ -25,7 +25,7 @@ function Home() {
             'Husband',
             'Father',
             {text: 'Speaker', url: '/talks'},
-            {text: 'Trainer', url: 'https://kcd.im/talks#workshops'},
+            {text: 'Trainer', url: '/workshops'},
             {text: 'Open Sourcerer', url: 'https://github.com/kentcdodds'},
             {text: 'GDE', url: 'https://kcd.im/gde'},
             {text: 'TC39', url: 'https://github.com/tc39'},
@@ -38,15 +38,16 @@ function Home() {
             {text: 'egghead.io', url: 'https://kcd.im/egghead'},
             {text: 'Frontend Masters', url: 'https://frontendmasters.com/'},
             {text: 'JavaScript Air', url: 'https://javascriptair.com'},
-            {text: 'React30', url: 'https://react30.com'},
             {text: '3 Minutes with Kent', url: 'http://kcd.im/3-mins'},
           ])}
         </p>
         <p>
           {listOfThings([
+            {text: 'Kent C. Dodds Mail', url: 'http://kcd.im/news'},
             {text: 'Ask Me Anything', url: 'https://kcd.im/ama'},
             {text: 'Twitter', url: 'https://twitter.com/kentcdodds'},
             {text: 'GitHub', url: 'https://github.com/kentcdodds'},
+            {text: 'YouTube', url: 'http://kcd.im/youtube'},
             {text: 'Email', url: 'mailto:kent@doddsfamily.us'},
           ])}
         </p>
@@ -55,8 +56,7 @@ function Home() {
         </p>
         <p>
           <small>
-            If you're unimpressed with my website
-            it's because I'm too busy<br />
+            If you're unimpressed with my website it's because I'm too busy<br />
             hanging out with my family,<br />
             building awesome things,<br />
             teaching people JavaScript,<br />
@@ -69,20 +69,21 @@ function Home() {
 }
 
 function listOfThings(things) {
-  return things.reduce(
-    (items, thing, i) => {
-      const {text, url} = thing
-      if (url) {
-        items.push(<a href={url} key={i}>{text}</a>)
-      } else {
-        items.push(thing)
-      }
-      const isLast = i === things.length - 1
-      if (!isLast) {
-        items.push(', ')
-      }
-      return items
-    },
-    [],
-  )
+  return things.reduce((items, thing, i) => {
+    const {text, url} = thing
+    if (url) {
+      items.push(
+        <a href={url} key={i}>
+          {text}
+        </a>,
+      )
+    } else {
+      items.push(thing)
+    }
+    const isLast = i === things.length - 1
+    if (!isLast) {
+      items.push(', ')
+    }
+    return items
+  }, [])
 }

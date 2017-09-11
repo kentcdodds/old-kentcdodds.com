@@ -12,8 +12,7 @@ function Post() {
     <div style={{maxWidth: 800, margin: 'auto', fontSize: '22px'}}>
       <h1 style={{textAlign: 'center', fontSize: '1.4em'}}>
         🎉 Introducing the{' '}
-        <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a>
-        {' '}Workshop 🎊
+        <a href="http://kcd.im/fem-webpack">Webpack Deep Dive</a> Workshop 🎊
         <br />
         <small>
           on <a href="https://frontendmasters.com">Frontend Masters</a>
@@ -24,13 +23,11 @@ function Post() {
       </div>
       <div>
         <Markdown>
-          {
-            `
+          {`
           This is an exciting announcement! [Let your friends know!](https://twitter.com/intent/tweet?text=There%27s%20a%20new%20webpack%20workshop%20on%20@FrontendMasters%20from%20@kentcdodds!%20Check%20it%20out!%20kcd.im/fem-webpack%20%F0%9F%8E%8A)
 
           Here's a preview:
-        `
-          }
+        `}
         </Markdown>
 
         <div style={{textAlign: 'center'}}>
@@ -47,8 +44,7 @@ function Post() {
         </div>
 
         <Markdown>
-          {
-            `
+          {`
           I've spent countless hours working with [webpack](https://webpack.js.org). I remember the first time I tried
           it out way back around December of 2014. I had built a reeeeally complicated gulp process (you can see some of
           that [here](https://medium.com/@kentcdodds/angularjs-script-loading-108652bde20e)) and decided that I wanted
@@ -109,8 +105,7 @@ function Post() {
           [Writing an Open Source JavaScript Library](http://kcd.im/fem-oss) which is an updated version of the
           Egghead.io course [How to Write an Open Source JavaScript Library](http://kcd.im/write-oss).
           </small>
-        `
-          }
+        `}
         </Markdown>
         <small>
           See more blogposts from me <a href="/post">here</a>.

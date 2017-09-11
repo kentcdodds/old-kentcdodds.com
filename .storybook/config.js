@@ -1,4 +1,4 @@
-import {configure, storiesOf} from '@kadira/storybook'
+import {configure, storiesOf} from '@storybook/react'
 import Home from '../src/pages/home'
 import Links from '../src/pages/links'
 import FourOFour from '../src/pages/404'

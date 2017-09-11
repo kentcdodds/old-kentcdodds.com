@@ -52,26 +52,29 @@ function Presentation({title, abstract, resources, presentations, tags}) {
   const resourceEls = resources.map((r, i) => (
     <span key={i} {...innerHTML(r)} />
   ))
-  const presentationEls = presentations.map((
-    {event, recording, date, isFuture},
-    i,
-  ) => (
-    <li key={i}>
-      <span {...innerHTML(event)} />
-      {recording ? ' - ' : null}
-      {recording ? <a href={recording}>video</a> : null}
-      <glamorous.Span paddingLeft={10} fontSize="0.7em">
-        {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
-      </glamorous.Span>
-    </li>
-  ))
+  const presentationEls = presentations.map(
+    ({event, recording, date, isFuture}, i) => (
+      <li key={i}>
+        <span {...innerHTML(event)} />
+        {recording ? ' - ' : null}
+        {recording ? <a href={recording}>video</a> : null}
+        <glamorous.Span paddingLeft={10} fontSize="0.7em">
+          {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
+        </glamorous.Span>
+      </li>
+    ),
+  )
   const tagEls = tags.map(t => {
     let color = colorMap[t]
     if (!color) {
       color = getRandomColor()
       colorMap[t] = color
     }
-    return <TagSpan key={t} color={color}>{t}</TagSpan>
+    return (
+      <TagSpan key={t} color={color}>
+        {t}
+      </TagSpan>
+    )
   })
   const anchor = slugify(title.toLowerCase())
   return (
@@ -79,11 +82,11 @@ function Presentation({title, abstract, resources, presentations, tags}) {
       <a href={`#${anchor}`} name={anchor}>
         <glamorous.H2 marginBottom={10} {...innerHTML(title)} />
       </a>
-      <glamorous.Div marginBottom={6} fontSize="0.75em">{tagEls}</glamorous.Div>
+      <glamorous.Div marginBottom={6} fontSize="0.75em">
+        {tagEls}
+      </glamorous.Div>
       <glamorous.Div marginBottom={8} fontSize="0.9em">
-        <div>
-          {intersperse(resourceEls, ' | ')}
-        </div>
+        <div>{intersperse(resourceEls, ' | ')}</div>
         <div>
           Presentations:
           <glamorous.Ul listStyle="none" paddingLeft={16} margin={0}>
@@ -91,12 +94,12 @@ function Presentation({title, abstract, resources, presentations, tags}) {
           </glamorous.Ul>
         </div>
       </glamorous.Div>
-      {abstract ?
+      {abstract ? (
         <div>
           <glamorous.H3 marginBottom={2}>Abstract</glamorous.H3>
           <glamorous.Div {...innerHTML(abstract)} marginTop={-12} />
-        </div> :
-        null}
+        </div>
+      ) : null}
     </glamorous.Div>
   )
 }
@@ -133,9 +136,9 @@ function getTextColor(hex) {
   /* eslint no-bitwise:0 */
   const c = hex.substring(1)
   const rgb = parseInt(c, 16)
-  const r = rgb >> 16 & 0xff // extract red
-  const g = rgb >> 8 & 0xff // extract green
-  const b = rgb >> 0 & 0xff // extract blue
+  const r = (rgb >> 16) & 0xff // extract red
+  const g = (rgb >> 8) & 0xff // extract green
+  const b = (rgb >> 0) & 0xff // extract blue
 
   const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
   return luma < 130 ? 'white' : 'black'

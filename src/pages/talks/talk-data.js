@@ -9,11 +9,13 @@ export default [
     presentations: [
       {
         event: 'JS@PayPal Summer 2017 (internal conference)',
-        recording: 'https://youtu.be/3-4KsXPO2Q4?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/3-4KsXPO2Q4?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
-        recording: 'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
+        recording:
+          'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
     ],
     abstract: `
@@ -48,12 +50,15 @@ export default [
     tags: ['javascript', 'babel'],
     presentations: [
       {
-        event: '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
+        event:
+          '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
         date: '2017-03-16',
-        recording: 'https://youtu.be/enlfQRUXb-s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/enlfQRUXb-s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event: '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
+        event:
+          '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
         date: '2016-11-03',
         recording: 'https://www.youtube.com/watch?v=kI_OiAUFLkQ',
       },
@@ -89,7 +94,8 @@ export default [
         date: '2015-12-16',
       },
       {
-        event: '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
+        event:
+          '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
         date: '2016-10-27',
       },
     ],
@@ -115,7 +121,8 @@ export default [
         date: '2016-05-14',
       },
       {
-        event: '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project/)',
+        event:
+          '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project/)',
         date: '2016-10-27',
       },
     ],
@@ -183,12 +190,14 @@ export default [
         date: '2016-09-23',
       },
       {
-        event: '[JavaScript KC Meetup](https://www.meetup.com/JavaScriptKC/events/231844450/)',
+        event:
+          '[JavaScript KC Meetup](https://www.meetup.com/JavaScriptKC/events/231844450/)',
         recording: 'https://youtu.be/qi_rLTcXers',
         date: '2016-06-21',
       },
       {
-        event: '[Modern Web Remote Meetup](https://www.bigmarker.com/modernweb/ES6-Modules-Mastering-Chrome-Developer-Tools-and-more) (video on the event page)', // eslint-disable-line
+        event:
+          '[Modern Web Remote Meetup](https://www.bigmarker.com/modernweb/ES6-Modules-Mastering-Chrome-Developer-Tools-and-more) (video on the event page)', // eslint-disable-line
         date: '2016-03-19',
       },
     ],
@@ -211,11 +220,13 @@ export default [
     presentations: [
       {
         event: '[Open West 2017](https://www.openwest.org/schedule/#talk-99)',
-        recording: 'https://youtu.be/VBscbcm2Mok?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/VBscbcm2Mok?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Clevertech Engineering',
-        recording: 'https://youtu.be/CFQBHy8RCpg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/CFQBHy8RCpg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2017-01-14',
       },
       {
@@ -227,7 +238,8 @@ export default [
         date: '2016-06-23',
       },
       {
-        event: '[BeMyApp webinar](https://www.eventbrite.com/e/transform-your-code-like-optimus-prime-asts-for-beginners-wkent-c-dodds-tickets-26281147620)', // eslint-disable-line
+        event:
+          '[BeMyApp webinar](https://www.eventbrite.com/e/transform-your-code-like-optimus-prime-asts-for-beginners-wkent-c-dodds-tickets-26281147620)', // eslint-disable-line
         recording: 'https://youtu.be/WO7H2NHmN18',
         date: '2016-06-06',
       },
@@ -245,7 +257,8 @@ export default [
     tags: ['open source', 'soft skills'],
     presentations: [
       {
-        event: '[Fluent Conf](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/46612)',
+        event:
+          '[Fluent Conf](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/46612)',
         recording: 'https://youtu.be/HjgZQeMrw6c',
         date: '2016-03-09',
       },
@@ -284,8 +297,10 @@ export default [
     tags: ['testing', 'lightning'],
     presentations: [
       {
-        event: '[Ignite Fluent](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)',
-        recording: 'https://youtu.be/Da9wfQ0frGA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        event:
+          '[Ignite Fluent](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)',
+        recording:
+          'https://youtu.be/Da9wfQ0frGA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2016-03-08',
       },
     ],
@@ -305,7 +320,8 @@ export default [
     presentations: [
       {
         event: '[Foward 4 Web Summit](http://forwardjs.com/)',
-        recording: 'https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+        recording:
+          'https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2016-02-11',
       },
       {
@@ -335,7 +351,8 @@ export default [
     tags: ['soft skills'],
     presentations: [
       {
-        event: '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455/)',
+        event:
+          '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455/)',
         date: '2015-11-24',
       },
     ],
@@ -354,7 +371,8 @@ export default [
     tags: ['babel', 'testing', 'webpack', 'live coding'],
     presentations: [
       {
-        event: '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472/)',
+        event:
+          '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472/)',
         recording: 'https://youtu.be/P-1ZZkpEmQA',
         date: '2015-06-16',
       },
@@ -366,7 +384,8 @@ export default [
     resources: ['[blog post](https://medium.com/@kentcdodds/19eee9e90e45)'],
     presentations: [
       {
-        event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910/)',
+        event:
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910/)',
         recording: 'https://youtu.be/ii7J-k661Zg',
         date: '2015-05-28',
       },
@@ -377,7 +396,8 @@ export default [
     resources: ['[repo](https://github.com/kentcdodds/es6-workshop)'],
     presentations: [
       {
-        event: '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
+        event:
+          '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
         date: '2015-04-21',
       },
@@ -395,7 +415,8 @@ export default [
     ],
     presentations: [
       {
-        event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',
+        event:
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',
         date: '2015-03-26',
       },
     ],
@@ -439,7 +460,8 @@ export default [
     ],
     presentations: [
       {
-        event: '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
+        event:
+          '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
         recording: 'http://www.infoq.com/presentations/angularjs-2',
         date: '2015-04-08',
       },
@@ -483,7 +505,8 @@ export default [
         date: '2015-02-04',
       },
       {
-        event: '[ReactJS Utah meetup January](http://www.meetup.com/ReactJS-Utah/events/219204576/)',
+        event:
+          '[ReactJS Utah meetup January](http://www.meetup.com/ReactJS-Utah/events/219204576/)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
         date: '2015-01-27',
       },
@@ -515,7 +538,8 @@ export default [
         date: '2014-08-14',
       },
       {
-        event: '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/)',
+        event:
+          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/)',
         date: '2014-02-06',
       },
     ],
@@ -541,7 +565,8 @@ export default [
     ],
     presentations: [
       {
-        event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/184204692/)',
+        event:
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/184204692/)',
         recording: 'https://youtu.be/hFOSXVT-Cps?t=1m34s',
         date: '2014-08-12',
       },
@@ -557,7 +582,8 @@ export default [
     title: 'Sharing code between Ionic and Web Angular Apps',
     presentations: [
       {
-        event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/160366932/)',
+        event:
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/160366932/)',
         recording: 'https://youtu.be/EmWBbvWJDVY',
         date: '2014-08-08',
       },
@@ -571,7 +597,8 @@ export default [
     resources: ['[slides](http://slides.com/kentcdodds/gh-pages#/)'],
     presentations: [
       {
-        event: '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152/)',
+        event:
+          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152/)',
         date: '2014-08-07',
       },
     ],
@@ -585,7 +612,8 @@ export default [
     ],
     presentations: [
       {
-        event: '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/173788512/)',
+        event:
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/173788512/)',
         recording: 'https://youtu.be/vIGZxeQUUFU?t=1m51s',
         date: '2014-06-10',
       },

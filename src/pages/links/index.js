@@ -8,6 +8,11 @@ function Links() {
   const links = [
     {text: 'Home', url: 'http://kentcdodds.com', desc: 'This website :)'},
     {text: 'Links', url: 'http://kentcdodds.com/links', desc: 'This page'},
+    {
+      text: 'Kent C. Dodds Mail',
+      url: 'https://kcd.im/news',
+      desc: 'My newsletter!! 💌',
+    },
     {text: 'AMA', url: 'https://kcd.im/ama', desc: 'Ask Me Anything'},
     {
       text: 'Blog',
@@ -106,26 +111,27 @@ function Links() {
   ]
   return (
     <div style={{textAlign: 'center'}}>
-      <h1 style={{fontSize: 50, marginBottom: 20}}>
-        Links
-      </h1>
-      <em>Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre></em>
+      <h1 style={{fontSize: 50, marginBottom: 20}}>Links</h1>
+      <em>
+        Search with <pre style={{display: 'inline'}}>⌘/ctrl + f</pre>
+      </em>
       <div
         style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}
       >
         <ul>
           {links.map(({url, text, desc}, i) => (
             <li key={i} style={{marginBottom: 4}}>
-              <a href={url}>{text}</a>
-              {' '}
-              {desc ?
+              <a href={url}>{text}</a>{' '}
+              {desc ? (
                 <span>
-                    -{' '}
+                  -{' '}
                   <Markdown noPTag style={{display: 'inline'}}>
                     {desc}
                   </Markdown>
-                </span> :
-                ''}
+                </span>
+              ) : (
+                ''
+              )}
             </li>
           ))}
         </ul>

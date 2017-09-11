@@ -10,13 +10,11 @@ function GoogleAnalytics() {
       <script async src="//www.google-analytics.com/analytics.js" />
       <script
         async
-        src={
-          oneLineTrim`
+        src={oneLineTrim`
             https://cdn.rawgit.com/
             googleanalytics/
             autotrack/0.5.0/autotrack.js
-          `
-        }
+          `}
       />
     </div>
   )
@@ -24,14 +22,15 @@ function GoogleAnalytics() {
 
 function runScript() {
   /* eslint-disable */
-  window.ga = window.ga ||
+  window.ga =
+    window.ga ||
     function() {
-      (ga.q = ga.q || []).push(arguments);
-    };
-  ga.l = +new Date();
-  ga('create', 'UA-62924965-1', 'auto');
-  ga('require', 'displayfeatures');
-  ga('require', 'autotrack');
-  ga('send', 'pageview');
+      ;(ga.q = ga.q || []).push(arguments)
+    }
+  ga.l = +new Date()
+  ga('create', 'UA-62924965-1', 'auto')
+  ga('require', 'displayfeatures')
+  ga('require', 'autotrack')
+  ga('send', 'pageview')
   /* eslint-enable */
 }
