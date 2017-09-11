@@ -1,2 +1,4 @@
 node_modules/
 dist/
+.opt-in
+.opt-out
