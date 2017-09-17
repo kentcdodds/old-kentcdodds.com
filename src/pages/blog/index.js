@@ -12,8 +12,7 @@ function BlogHome({posts}) {
       </em>
       <div style={{fontSize: '0.9em', marginTop: 20}}>
         {`I'm in the process of moving my blog over to this. Find more posts `}
-        <a href="https://medium.com/@kentcdodds">on Medium.com</a>
-        .
+        <a href="https://medium.com/@kentcdodds">on Medium.com</a>.
       </div>
       <div
         style={{maxWidth: 600, margin: 'auto', textAlign: 'left', fontSize: 18}}

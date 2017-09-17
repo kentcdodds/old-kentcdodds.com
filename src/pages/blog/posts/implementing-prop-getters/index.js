@@ -1,10 +1,8 @@
-/* eslint max-len:off */
 import {basename} from 'path'
 import Markdown from '../../../../components/markdown'
 import Disqus from '../../../../components/disqus'
 
 export const title = 'How to give rendering control to users with prop getters'
-export const draft = true
 
 export default Post
 
@@ -15,13 +13,15 @@ function Post() {
       <div>
         <Markdown>
           {`
-            Since I [released downshift](https://medium.com/@kentcdodds/introducing-downshift-for-react-b1de3fca0817)
+            Since I [released downshift 🏎](https://medium.com/@kentcdodds/introducing-downshift-for-react-b1de3fca0817)
             a few weeks ago. Of all things, I think the most common question I've gotten has been about the
             "prop getters." As far as I know, [downshift](https://github.com/paypal/downshift) is the first library to
             implement this pattern, so I thought I'd explain why it's useful and how to implement it. If you're
             unfamiliar with downshift, please read
             [the intro post](https://medium.com/@kentcdodds/introducing-downshift-for-react-b1de3fca0817) before you
             continue. Don't worry, I'll wait...
+
+            ![dog waiting patiently](waiting.png)
 
             So, to recap from what you read, prop getters are one piece to the puzzle to let you hand rendering over to
             the users of your components (a great idea). I got the idea from
@@ -32,8 +32,11 @@ function Post() {
             Hopefully that's clear 😀
 
             To talk about this, we'll actually use a different component I wrote recently that uses this pattern called
-            [~react-toggled~](https://github.com/kentcdodds/react-toggled). It's pretty small, so I'm just going to
-            paste all of it here for you:
+            [~react-toggled~](https://github.com/kentcdodds/react-toggled).
+
+            [![react-toggled logo](react-toggled.png)](https://github.com/kentcdodds/react-toggled)
+
+            It's pretty small, so I'm just going to paste all of it here for you:
 
             ~~~
             import {Component} from 'react'
@@ -118,13 +121,15 @@ function Post() {
               You'll notice that ~this.props.children~ is unwrapped, this is for preact compatibility.
             </p>
 
-            Here's how you could use ~react-toggled~:
+            And here's how you could use ~react-toggled~:
 
             ~~~
             <Toggle>
               {({on, getTogglerProps}) => (
                 <div>
-                  <button {...getTogglerProps()}>Toggle me</button>
+                  <button {...getTogglerProps({ onClick() { alert('you clicked!') } })}>
+                    Toggle me
+                  </button>
                   <div>{on ? 'Toggled On' : 'Toggled Off'}</div>
                 </div>
               )}
@@ -132,7 +137,18 @@ function Post() {
             ~~~
 
             There are a few neat things about this component I may talk about in a future post, but for now, let's focus
-            on the ~getTogglerProps~ function. The biggest question I get from folks about "prop getters" is:
+            on the ~getTogglerProps~ function (that's the prop getter).
+
+            The cool thing about this pattern is that it allows users to render whatever they want. So your components
+            take care of the hard and generic part (the logic of the component) and the user can take care of the easy
+            and less-generic part: what to show and how it's styled given the state of the component.
+
+            So if you want the ~<div>~ to appear above the ~<button>~ or to not appear at all, then the user can simply
+            do that without having to look up any docs for props or anything. This is pretty powerful!
+
+            With that said,
+            [the biggest question I get from folks about "prop getters"](https://twitter.com/sprjrx/status/908367026619506688)
+            is:
 
             > Why are you using a function to get props? Why not just pass a regular object to my render callback and
             > let me spread that instead of having to call a function?
@@ -174,15 +190,26 @@ function Post() {
             ---
 
             To summarize, prop getters are one of the patterns that enable you to hand rendering responsibility to the
-            user of your components (a really awesome idea). You can implement it with the render prop pattern.
+            user of your components (a really awesome idea). You can only really implement it with the render prop
+            pattern (in our case we use the ~children~ prop, but you could use a ~render~ prop if you prefer).
 
-            hi [example 1](https://twitter.com/lukeherrington/status/908110333155278848)
+            Here are a few projects that implement the prop getters pattern:
 
+            - [~downshift~ 🏎](https://github.com/paypal/downshift)
+            - [~react-toggled~](https://github.com/kentcdodds/react-toggled)
+            - [~dub-step~ 🕺](https://twitter.com/lukeherrington/status/908110333155278848)
+            - [~react-stepper-primitive~](https://github.com/ajoslin/react-stepper-primitive)
 
-            https://twitter.com/sprjrx/status/908367026619506688
-            Good luck to you all! 👍
+            I hope to see more folks doing stuff like this in the future! Good luck to you all! 👍
 
             **Things to not miss:**
+
+            - [~react-powerplug~](https://github.com/renatorib/react-powerplug) - Pretty neat/interesting idea with the render prop pattern.
+            - [~graphql-tag.macro~](https://github.com/leoasis/graphql-tag.macro) - Impressive babel-macro that precompiles graphql queries.
+            - [~size-limit~](https://github.com/ai/size-limit) - Prevent JS libraries bloat. If you accidentally add a massive dependency, Size Limit will throw an error.
+            - [left-pad not found sticker](https://www.stickermule.com/marketplace/11354-left-pad) - See below. This was created by my friend [Tyler McGinnis](https://twitter.com/tylermcginnis) (of Tyler McGinnis fame) and I think it's pretty funny.
+
+            [![left-pad sticker](left-pad.png)](https://www.stickermule.com/marketplace/11354-left-pad)
 
             _**P.S. If you like this, make sure to [subscribe](http://tinyletter.com/kentcdodds),
             [follow me on twitter](https://twitter.com/kentcdodds),
