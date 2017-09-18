@@ -21,7 +21,7 @@ function Post() {
             [the intro post](https://medium.com/@kentcdodds/introducing-downshift-for-react-b1de3fca0817) before you
             continue. Don't worry, I'll wait...
 
-            ![dog waiting patiently](waiting.png)
+            ![dog waiting patiently](waiting.gif)
 
             So, to recap from what you read, prop getters are one piece to the puzzle to let you hand rendering over to
             the users of your components (a great idea). I got the idea from
