@@ -6,7 +6,7 @@ import Talks from '../src/pages/talks'
 import Workshops from '../src/pages/workshops'
 import Appearances from '../src/pages/appearances'
 import Blog from '../src/pages/blog'
-import Draft from '../src/pages/blog/posts/implementing-prop-getters'
+import Draft from '../src/pages/blog/posts/maintainable-workarounds-with-codegen'
 
 function loadStories() {
   storiesOf('Pages', module)
