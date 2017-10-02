@@ -7,6 +7,7 @@ import Workshops from '../src/pages/workshops'
 import Appearances from '../src/pages/appearances'
 import Blog from '../src/pages/blog'
 import Draft from '../src/pages/blog/posts/maintainable-workarounds-with-codegen'
+import importAll from 'import-all.macro'
 
 function loadStories() {
   storiesOf('Pages', module)
@@ -16,9 +17,14 @@ function loadStories() {
     .add('Talks', () => <Talks />)
     .add('Workshops', () => <Workshops />)
     .add('Appearances', () => <Appearances />)
-  storiesOf('Posts', module)
-    .add('Home', () => <Blog posts={getPostStubs()} />)
-    .add('Draft', () => <Draft />)
+  const postsStories = storiesOf('Posts', module).add('Home', () => (
+    <Blog posts={getPostStubs()} />
+  ))
+  Object.values(
+    importAll.sync('../src/pages/blog/posts/*'),
+  ).forEach(({title, default: Post}) => {
+    postsStories.add(title, () => <Post />)
+  })
 }
 
 configure(loadStories, module)

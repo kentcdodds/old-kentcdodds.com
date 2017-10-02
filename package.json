@@ -33,6 +33,7 @@
   "devDependencies": {
     "@storybook/react": "^3.2.8",
     "babel-cli": "^6.24.0",
+    "babel-macros": "^1.0.2",
     "babel-plugin-react-require": "^3.0.0",
     "common-tags": "^1.4.0",
     "cpy-cli": "^1.0.1",
@@ -43,6 +44,7 @@
     "glamorous": "^4.8.0",
     "glob": "^7.1.1",
     "http-server": "^0.10.0",
+    "import-all.macro": "^2.0.0",
     "kcd-scripts": "^0.23.2",
     "marked": "^0.3.6",
     "mkdirp": "^0.5.1",
