@@ -1,4 +1,5 @@
 import {basename} from 'path'
+import {css} from 'glamor'
 import Markdown from '../../../../components/markdown'
 import Disqus from '../../../../components/disqus'
 
@@ -6,9 +7,15 @@ export const title = 'Write tests, not too many, mostly integration'
 
 export default Post
 
+const maxWidth = 800
+const maxWidthImage = css({'& img': {maxWidth}})
+
 function Post() {
   return (
-    <div style={{maxWidth: 800, margin: 'auto', fontSize: '22px'}}>
+    <div
+      className={maxWidthImage}
+      style={{maxWidth, margin: 'auto', fontSize: '22px'}}
+    >
       <h1 style={{textAlign: 'center', fontSize: '1.4em'}}>{title}</h1>
       <div>
         <Markdown>
