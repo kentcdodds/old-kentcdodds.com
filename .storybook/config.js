@@ -16,6 +16,7 @@ function loadStories() {
     .add('Talks', () => <Talks />)
     .add('Workshops', () => <Workshops />)
     .add('Appearances', () => <Appearances />)
+
   const postsStories = storiesOf('Posts', module).add('Home', () => (
     <Blog posts={getPostStubs()} />
   ))
