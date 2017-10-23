@@ -206,7 +206,7 @@ function Post() {
             P.S. ‼️ HELP ‼️ Remember that I publish these emails to Medium 2 weeks after you receive them in your inbox.
             If you liked it before, maybe your friends will like it! **Please tweet about and share the published
             version!** This week, I published
-            [Making your UI tests resilient to change]().
+            [Making your UI tests resilient to change](https://blog.kentcdodds.com/d37a6ee37269).
             Feel free to read it again,
             [give it 50 claps](https://blog.kentcdodds.com/did-you-know-3079d5aec43b), tweet about it, and/or
             [retweet my tweet]().
