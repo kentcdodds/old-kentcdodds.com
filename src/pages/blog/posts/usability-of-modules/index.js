@@ -3,7 +3,7 @@ import {css} from 'glamor'
 import Markdown from '../../../../components/markdown'
 import Disqus from '../../../../components/disqus'
 
-export const title = 'Usability of Modules'
+export const title = 'Improving the usability of your modules'
 
 export default Post
 
@@ -41,10 +41,19 @@ function Post() {
             preferred language):
 
             ~~~
-            <script type="application/json" id="react-messages">{"pages/home":{"header":{"title":"PayPal Rocks",subtitle:"No really, it does"}}}</script>
+            <script type="application/json" id="react-messages">
+              {
+                "pages/home": {
+                  "header": {
+                    "title": "PayPal Rocks",
+                    subtitle: "No really, it does"
+                  }
+                }
+              }
+            </script>
             ~~~
 
-            Then ~react-i18n~ would load that on the client side. All you have to do is:
+            Then ~react-i18n~ will automatically load that on the client side. All you have to do is use it:
 
             ~~~
             import getContentForFile from 'react-i18n'
@@ -62,35 +71,46 @@ function Post() {
 
             So that's how it works (again, I'm sure some of you are thinking of
             [other libs](https://www.npmjs.com/search?q=react%20i18n) that could do this better, but please spare me
-            the "well actually." I'm aware of them, I promise).
+            the "well actually." I'm aware of them, I promise). Now that you understand basically how this works,
+            **I want to talk about a few things that I changed about it to make it more usable**.
 
-            Now that you understand basically how this works, I want to talk about a few things that I changed about it
-            to make it more usable:
+            !["I'll show you"](ill-show-you.gif)
 
-            ## No side-effects in import
+            ## No [side-effects][side-effects] on import
 
-            So you'll notice that when we use ~react-i18n~ on the client, we don't have to do anything to initialize or
-            bootstrap it with messages. It automatically gets those from the DOM. It does this inside the ~main~ export
-            from ~react-i18n~. This way when you import ~react-i18n~, loading the messages happens for you. This means
-            that the ~main~ module in ~react-i18n~ has side-effects in the root-level of the module. For example:
+            So you'll notice that when we use ~react-i18n~ on the client in the example above, we don't have to do
+            anything to initialize or bootstrap it with content. It automatically gets those from the DOM. It does this
+            inside the ~main~ export from ~react-i18n~. This way when you import ~react-i18n~, loading the content
+            happens for you. This is a handy feature. But it comes with the trade-off that the ~main~ module in
+            ~react-i18n~ has side-effects in the root-level of the module. For example:
 
+            ~~~
+            // react-i18n/index.js
+            // ... stuff
+            // side-effect!
+            const content = JSON.parse(
+              document.getElementById('react-messages')
+            )
+            // ... more stuff
+            export {getContentForFile as default, init}
+            ~~~
 
-            This presents a bunch of challenges for users of the module. It means that they have to be aware of what
-            happens when they import your module. They have to make sure that they don't import your module before the
+            This presents a few challenges for users of the module. It means that **they have to be aware of what
+            happens when they import your module**. They have to make sure that they don't import your module before the
             global environment is ready for it. And that problem manifests itself not only in the application
             environment, but also in the test environment! And unless you take care to give good warnings when the
             environment isn't ready (if you even know), people will get cryptic error messages when doing seemingly
-            unrelated tasks (like importing some module that happens to import your module somewhere in the dependency
-            graph).
+            unrelated tasks (like importing some module that happens to import your module somewhere in the
+            [dependency graph](https://twitter.com/kentcdodds/status/922114804038303745)).
 
-            Another issue is that there could be a reason to configure the initialization process. What if my node
+            Another issue is that there could be a reason to **configure the initialization process**. What if my node
             doesn't have the id ~react-messages~, but instead uses ~i18n-content~? Or what if I don't server-render
             the messages at all and they're coming from an ajax request? Turns out that ~react-i18n~ actually exposed
             another module ~react-i18n/bootstrap~ to customize this behavior which is great, but that doesn't resolve
             the problem of stuff happening if someone were to import ~react-i18n~ first.
 
             So what I did was a wrapped all side-effects in a function I exported called ~init~ (which was similar to
-              the ~bootstrap~ thing it already exported):
+            the ~bootstrap~ thing it already exported):
 
             ~~~
             // react-i18n/index.js
@@ -98,7 +118,9 @@ function Post() {
             function init(options) {
               // ... other stuff
               // side-effect! But it's ok now because that's clear
-              const messages = JSON.parse(document.getElementById('react-messages'))
+              const messages = JSON.parse(
+                document.getElementById('react-messages')
+              )
               // ... other other stuff
             }
             // ... more stuff
@@ -107,10 +129,13 @@ function Post() {
 
             So this means that anyone using the module now _must_ call the ~init~ function, but they're doing that on
             their own terms and whenever they want it to happen which I think is the key difference. It doesn't matter
-            whether someone imports this module before initialization takes place.
+            whether someone imports this module before initialization takes place. It also gives us an opportunity to
+            give a more informative error message if they fail to initialize before they start using the module.
 
             **The key is that your module shouldn't do side-effects when it's imported. Instead, export functions which
-            perform the side-effects.** This gives the users control over when and what happens.
+            perform the side-effects.** This gives the users control over when and what happens. Even better is to not
+            have any side-effects at all if you can help it (which is actually also possible to accomplish with my
+            reworking of ~react-i18n~), but that's a subject for another newsletter.
 
             ## Make it generic
 
@@ -121,7 +146,7 @@ function Post() {
             "inner sourcing" this module (and perhaps open sourcing it eventually), so folks are going to use it who use
             different tools and have different use cases.
 
-            So, if it's not too much work and doesn't add too much complexity, then try to make the solution more
+            So, **if it's not too much work and doesn't add too much complexity**, then try to make the solution more
             generic. So now, the implementation doesn't care about the fact that the root level of the localization
             object is a file name and the rest is the contents of that file. All it cares about is the fact that it's a
             nested JavaScript object. This means that whereas before, you had to do this:
@@ -155,21 +180,32 @@ function Post() {
             assume you're using ~react-content-loader~. And as it turned out, doing things this way actually made the
             implementation simpler! Wahoo!
 
+            I should mention also that you should can't predict the future, and that's what you sort of have to try
+            to do when building a generic library. While you're doing this, you need to balance usability with the
+            [~YAGNI~](https://martinfowler.com/bliki/Yagni.html) principle. I only put this effort in because we were
+            extracting this from our project so others could use it and we needed to support these use cases. Beware of
+            pre-mature optimizations (that's not limited to performance situations, but also features/complexity as
+            well).
+
             There were several other things I could talk about, but I'm going to wrap this email up with this. I hope
             that you find ways to remove side-effects from the root-level of most of your modules and find ways to make
             your solution more generic without sacraficing usability or implementation complexity.
 
-            Good luck!
+            Good luck! And stay awesome 😎
+
+            ![Who's awesome? You!](stay-awesome.gif)
 
             **Things to not miss**:
 
             - ["Addressable Errors"](https://rauchg.com/2016/addressable-errors) by [Guillermo Rauch](https://twitter.com/rauchg). I was thinking about writing my blogpost as an expansion on this (I think it's a great idea, in addition I think you should version the error messages with your project). Maybe one day.
             - ["The Future of RethinkDB"](https://changelog.com/podcast/266) on [The Changelog](https://changelog.com). It's a great example of a community rallying together to keep open source going. And RethinkDB seems really awesome so I'm glad it's pushing forward!
             - [Did you know...](https://blog.kentcdodds.com/did-you-know-3079d5aec43b) by me. Something you might not have known about Medium before and now that you do I'd appreciate you applying that knowledge to the things I publish 😉
+            - [Flexbox Zombies](http://geddski.teachable.com/p/flexbox-zombies). The best way to learn flexbox by the amazing [Dave Geddes](https://twitter.com/geddski). Also check out [Grid Critters](https://gridcritters.com/p/gridcritters) (to learn CSS Grid, also by Dave) which will be released soon!
 
-            P.S. Remember that I publish these emails to Medium 2 weeks after you receive them in your inbox. If you
-            liked it before, maybe your friends will like it! Please tweet about and share the published version!
-            This week, I published [Making your UI tests resilient to change]().
+            P.S. ‼️ HELP ‼️ Remember that I publish these emails to Medium 2 weeks after you receive them in your inbox.
+            If you liked it before, maybe your friends will like it! **Please tweet about and share the published
+            version!** This week, I published
+            [Making your UI tests resilient to change]().
             Feel free to read it again,
             [give it 50 claps](https://blog.kentcdodds.com/did-you-know-3079d5aec43b), tweet about it, and/or
             [retweet my tweet]().
@@ -178,6 +214,8 @@ function Post() {
             [follow me on twitter](https://twitter.com/kentcdodds),
             [buy me lunch](http://kcd.im/donate),
             and [share this with your friends](http://kcd.im/news) 😀**_
+
+            [side-effects]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
         `.replace(/~/g, '`')}
         </Markdown>
         <small>
