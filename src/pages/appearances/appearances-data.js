@@ -21,6 +21,13 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[I.T. Career Energizer](http://itcareerenergizer.com/)',
+        description:
+          '[Episode 35 - Learn, Build, and Teach with Kent C. Dodds](http://itcareerenergizer.com/e35/)',
+        date: '2017-12-11',
+        tags: ['career', 'oss', 'teaching', 'communication', 'relationships'],
+      },
+      {
         thing:
           '[NADCAST](https://www.youtube.com/playlist?list=PL1XPwt2TrDrxWL3ohvospBDFP3GMeXgQE)',
         description:
@@ -213,8 +220,9 @@ function fixupData(appearance) {
     thing: markdownToHTMLWithNoPTag(appearance.thing),
     date: moment(appearance.date),
     isFuture: moment().isBefore(appearance.date),
-    tags: (appearance.tags || [])
-      .map(t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`),
+    tags: (appearance.tags || []).map(
+      t => `${t}${tagEmojiMap[t] ? ` ${tagEmojiMap[t]}` : ''}`,
+    ),
     description: markdownToHTMLWithNoPTag(appearance.description || ''),
     duration: appearance.duration
       ? moment.duration(appearance.duration).humanize()
