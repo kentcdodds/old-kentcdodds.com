@@ -9,11 +9,13 @@ export default [
     presentations: [
       {
         event: 'JS@PayPal Summer 2017 (internal conference)',
+        date: '2017-07-20',
         recording:
           'https://youtu.be/3-4KsXPO2Q4?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
+        date: '2017-06-22',
         recording:
           'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
@@ -34,6 +36,7 @@ export default [
     presentations: [
       {
         event: '[Open West 2017](https://www.openwest.org/schedule/#talk-77)',
+        date: '2017-07-13',
       },
     ],
     abstract: `
@@ -220,6 +223,7 @@ export default [
     presentations: [
       {
         event: '[Open West 2017](https://www.openwest.org/schedule/#talk-99)',
+        date: '2017-07-13',
         recording:
           'https://youtu.be/VBscbcm2Mok?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
