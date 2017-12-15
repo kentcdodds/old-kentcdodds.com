@@ -21,6 +21,14 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing:
+          '[JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio/)',
+        description:
+          '[Ep. #23, Introduction to Downshift and Glamorous](https://www.heavybit.com/library/podcasts/jamstack-radio/ep-23-introduction-to-downshift-and-glamorous/?utm_campaign=coschedule&utm_source=twitter&utm_medium=heavybit&utm_content=Ep.%20%2323,%20Introduction%20to%20Downshift%20and%20Glamorous)',
+        date: '2017-12-14',
+        tags: ['react', 'oss', 'tc39', 'work life balance'],
+      },
+      {
         thing: '[I.T. Career Energizer](http://itcareerenergizer.com/)',
         description:
           '[Episode 35 - Learn, Build, and Teach with Kent C. Dodds](http://itcareerenergizer.com/e35/)',
