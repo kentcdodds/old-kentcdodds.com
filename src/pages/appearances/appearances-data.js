@@ -22,6 +22,14 @@ export default [
     appearances: [
       {
         thing:
+          '[#!hashbang](https://www.youtube.com/playlist?list=PLZ66c9_z3umOuPSGsTu3mfzt6PGZeUyQZ)',
+        description:
+          '[HashBang Episode 5: Assert(js) panel: Kent C. Dodds, Justin Searls, Gleb Bahmutov and Brian Mann](https://www.youtube.com/watch?v=ltzNIOF_L3E)',
+        date: '2017-12-15',
+        tags: ['testing', 'javascript'],
+      },
+      {
+        thing:
           '[JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio/)',
         description:
           '[Ep. #23, Introduction to Downshift and Glamorous](https://www.heavybit.com/library/podcasts/jamstack-radio/ep-23-introduction-to-downshift-and-glamorous/?utm_campaign=coschedule&utm_source=twitter&utm_medium=heavybit&utm_content=Ep.%20%2323,%20Introduction%20to%20Downshift%20and%20Glamorous)',
