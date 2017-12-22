@@ -21,6 +21,13 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Full Stack Radio](http://www.fullstackradio.com)',
+        description:
+          '[79: Kent C. Dodds - Building Reusable React Components with Render Props](http://www.fullstackradio.com/79)',
+        date: '2017-12-27',
+        tags: ['downshift', 'open source', 'react'],
+      },
+      {
         thing:
           '[#!hashbang](https://www.youtube.com/playlist?list=PLZ66c9_z3umOuPSGsTu3mfzt6PGZeUyQZ)',
         description:
