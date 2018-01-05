@@ -21,6 +21,13 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Web of Tomorrow](http://www.weboftomorrowpodcast.com/)',
+        description:
+          '[44: How to Jumpstart Your Career - Kent C. Dodds](http://www.weboftomorrowpodcast.com/44)',
+        date: '2018-01-02',
+        tags: ['open source', 'career', 'teaching'],
+      },
+      {
         thing: '[Full Stack Radio](http://www.fullstackradio.com)',
         description:
           '[79: Kent C. Dodds - Building Reusable React Components with Render Props](http://www.fullstackradio.com/79)',
