@@ -18,6 +18,61 @@ export default [
   //   `,
   // },
   {
+    title: 'Advanced React Component Patterns',
+    resources: [
+      '[repo](https://github.com/kentcdodds/advanced-react-patterns)',
+    ],
+    tags: ['react'],
+    presentations: [
+      {
+        event:
+          '[Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)',
+        date: '2017-12-04',
+      },
+    ],
+    abstract: `
+      The goal of this course is to give you the knowledge of advanced patterns you can use to make React components
+      that are more flexible, simpler, and more fun to build, use, and maintain. You'll start with a simple
+      \`<Toggle />\` component which you'll progressively refactor to each of the patterns so you can see the relative
+      trade-offs of the patterns and how they can be used together to increase the usefulness of your component while at
+      the same time simplifying things for everyone.
+
+      Having built and shipped components using each of these patterns, Kent will help you understand and weigh the
+      trade-offs of each of them and you'll come to intuitively know where to apply each pattern in your own components.
+      When you're finished with this course, hopefully you'll have a list of actionable things you can do to rework the
+      components that you're building to make them more flexible, simpler, and more fun to build, use, and maintain.
+
+      Enjoy!
+    `,
+  },
+  {
+    title: `The Beginner's Guide to ReactJS`,
+    resources: [
+      '[repo](https://github.com/eggheadio-projects/the-beginner-s-guide-to-reactjs)',
+    ],
+    tags: ['react'],
+    presentations: [
+      {
+        event:
+          '[Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
+        date: '2017-12-04',
+      },
+    ],
+    abstract: `
+      This course is for React newbies and those looking to get a better understanding of React fundamentals.
+      With a focus on React fundamentals, you'll come out of this course knowing what problems React can solve
+      for you and how it goes about solving those problems. You will have a good grasp on what JSX is and how
+      it translates to regular JavaScript function calls and objects.
+
+      Each lesson in this course is just a single \`index.html\` file which will help you keep your focus on
+      learning React and not distracted by all the tools that make production applications work. The course
+      wraps up with a lesson on how to move from these \`index.html\` files to a more production ready development
+      environment and even how to deploy your app to a great service like Netlify.
+
+      Enjoy!
+    `,
+  },
+  {
     title: 'Code Transformation and Linting',
     resources: [
       '[slides](http://slides.com/kentcdodds/asts-workshop)',
