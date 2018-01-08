@@ -21,6 +21,13 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Adventures in Angular](https://devchat.tv/adv-in-angular)',
+        description:
+          '[My Angular Story 020: Kent C. Dodds](https://devchat.tv/adv-in-angular/mas-020-kent-c-dodds)',
+        date: '2018-01-05',
+        tags: ['story', 'open source', 'career'],
+      },
+      {
         thing: '[Web of Tomorrow](http://www.weboftomorrowpodcast.com/)',
         description:
           '[44: How to Jumpstart Your Career - Kent C. Dodds](http://www.weboftomorrowpodcast.com/44)',
