@@ -27,7 +27,7 @@ function Page(
           rel="publisher"
           href="https://plus.google.com/b/105493143005968326308"
         />
-        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png?v2" />
         <style
           dangerouslySetInnerHTML={{
             __html: oneLine`
