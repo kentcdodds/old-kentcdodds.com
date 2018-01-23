@@ -17,7 +17,7 @@ function Home() {
             fontSize: 24,
           }}
         >
-          Building awesome and making software development more accessible.
+          Building awesome experiences and making software development more accessible.
         </div>
         <p>
           {listOfThings([
