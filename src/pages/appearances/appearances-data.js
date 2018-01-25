@@ -21,6 +21,21 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[Fixate on Code](http://fixate.it)',
+        description:
+          '[16 - Kent C. Dodds](http://fixate.it/podcast/consume-build-and-teach-kent-c-dodds)',
+        date: '2018-01-25',
+        tags: [
+          'story',
+          'open source',
+          'career',
+          'react',
+          'learning',
+          'teaching',
+          'advice',
+        ],
+      },
+      {
         thing: '[Adventures in Angular](https://devchat.tv/adv-in-angular)',
         description:
           '[My Angular Story 020: Kent C. Dodds](https://devchat.tv/adv-in-angular/mas-020-kent-c-dodds)',
