@@ -89,7 +89,7 @@ export default [
         event: 'Self-organized PayPal practice-run',
         date: '2017-04-19',
         recording:
-          'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://www.youtube.com/watch?v=-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `

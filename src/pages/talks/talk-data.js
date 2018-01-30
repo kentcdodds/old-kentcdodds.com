@@ -1,7 +1,63 @@
 /* eslint max-len:[1, 120], max-lines:0 */
 import {preparePresentationData, sortPresentations} from '../../utils'
 
+// {
+//   title: '',
+//   resources: [],
+//   tags: [],
+//   presentations: [
+//     {
+//       event: '',
+//       date: '',
+//       recording: '',
+//     }
+//   ],
+//   abstract: `
+//   `,
+// },
+
 export default [
+  {
+    title: 'Write tests. Not too many. Mostly integration.',
+    resources: ['[slides](https://slides.com/kentcdodds/write-tests)'],
+    tags: ['testing'],
+    presentations: [
+      {
+        event:
+          '[UtahJS Orem Meetup](https://www.meetup.com/UtahJS/events/246047733/)',
+        date: '2018-01-04',
+        recording:
+          'https://www.youtube.com/watch?v=10jYq_d8fks&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+    ],
+    abstract: `
+      Automated tests are an important part of raising your confidence when releasing software. They can speed you up
+      or slow you down depending on how you write them and which form of testing you focus your test writing on. In
+      this talk, we’ll cover the value of automated testing and where your efforts should be focused to strike the best
+      balance of confidence and effort.
+    `,
+  },
+  {
+    title: `The introduction to React you've been missing`,
+    resources: [
+      `[The Beginner's guide to ReactJS ⚛️](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)`,
+    ],
+    tags: ['react', 'jsx', 'intro'],
+    presentations: [
+      {
+        event:
+          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227/)',
+        date: '2017-12-19',
+        recording:
+          'https://www.youtube.com/watch?v=pugPxYH96TU&t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+    ],
+    abstract: `
+      In this talk I teach React from scratch in a single \`index.html\` file with no magic up my sleeves. We start with
+      a basic Hello World in vanilla JavaScript and incrementally iterate through React APIs and JSX. We continue with
+      introducing more of React's APIs.
+    `,
+  },
   {
     title: 'Maintainable CSS in React',
     resources: ['[slides](http://slides.com/kentcdodds/glamorous#/)'],
