@@ -18,6 +18,23 @@ import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
   {
+    title: 'All about macros with babel-plugin-macros 🎣',
+    resources: ['[slides](http://slides.com/kentcdodds/macros)'],
+    tags: [],
+    presentations: [
+      {
+        event:
+          '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/)',
+        date: '2018-01-31',
+        recording:
+          'https://www.youtube.com/watch?v=nlAHtAQlFGk&t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
+      },
+    ],
+    abstract: `
+      Customize babel without configuration or ejecting from create-react-app
+    `,
+  },
+  {
     title: 'Write tests. Not too many. Mostly integration.',
     resources: ['[slides](https://slides.com/kentcdodds/write-tests)'],
     tags: ['testing'],
