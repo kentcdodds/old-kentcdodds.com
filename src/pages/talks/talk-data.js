@@ -46,6 +46,11 @@ export default [
         recording:
           'https://www.youtube.com/watch?v=10jYq_d8fks&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
+      {
+        event:
+          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/244852066/)',
+        date: '2017-11-21',
+      },
     ],
     abstract: `
       Automated tests are an important part of raising your confidence when releasing software. They can speed you up
