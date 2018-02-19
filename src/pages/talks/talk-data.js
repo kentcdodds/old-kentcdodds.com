@@ -18,9 +18,73 @@ import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
   {
+    title: '5 Patterns to make your React Components more useful',
+    resources: [],
+    tags: ['react'],
+    presentations: [
+      {
+        event: '[Chain React](https://infinite.red/ChainReactConf)',
+        date: '2018-07-12',
+      },
+    ],
+    abstract: `
+      One of the things I love about React is how easy it is to encapsulate UI code into a component. I love this
+      because it makes reuse of those components easy. But is it easy? I’ve made my fair share of components that had to
+      accept a bunch of props to handle a growing list of different use cases resulting in a complex render function
+      full of conditional statements and a confusing API for people using this “reusable” component. Eventually it
+      becomes too much and I had to make a new version of the same component to handle slightly different use cases.
+      Lots of code/bug duplication there because my reusable component wasn’t reusable enough.
+
+      There are patterns that have emerged in React that allow you to promote code reuse without sacrificing the
+      simplicity or flexibility of the component. In this talk we’ll go over 5 of these patterns that will make your
+      React components more useful.
+    `,
+  },
+  {
+    title: 'How to React',
+    resources: [],
+    tags: ['react'],
+    presentations: [
+      {
+        event: '[React Dev Summit](https://reactdevsummit.com/)',
+        date: '2018-03-30',
+      },
+    ],
+    abstract: `
+      Learning React can be confusing. React is a library, but even more than that, React is an ecosystem of tools that
+      you piece together to create a program. This is a powerful property of the React community, however that ecosystem
+      can be frustratingly distracting when you’re a newcomer trying to get your feet wet. The key to avoiding this
+      frustration and confusion is to learn React (and its ecosystem) in the right order.
+
+      In this talk, we’ll go over what that order is and give a roadmap so you can have a vision of where you’re going.
+      Let’s learn how to React!
+    `,
+  },
+  {
+    title: 'How open source has made me and the stuff I make better',
+    resources: [],
+    tags: ['open source'],
+    presentations: [
+      {
+        event: 'KnowJS (announcement coming soon)',
+        date: '2018-04-13',
+      },
+    ],
+    abstract: `
+      The open source community and ecosystem have made me a better software developer and helped me develop better
+      software. I get to see how other people work. Other people get to see how I work. It encourages me to put forth my
+      best effort, think critically about the software I'm creating, and ensure it has great documentation. It's also
+      easier to develop software in an isolated environment like an open source project.
+
+      In this talk, we'll see how open source can help improve your skills and improve the software that you create.
+      This makes you a much more skilled, marketable, and gives you work that you can share with the public and
+      contribute to the open source ecosystem.
+    `,
+  },
+  {
     title: 'All about macros with babel-plugin-macros 🎣',
     resources: ['[slides](http://slides.com/kentcdodds/macros)'],
-    tags: [],
+    tags: ['babel'],
     presentations: [
       {
         event:
@@ -50,6 +114,10 @@ export default [
         event:
           '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/244852066/)',
         date: '2017-11-21',
+      },
+      {
+        event: '[Assert(JS)](https://www.assertjs.com/)',
+        date: '2018-02-22',
       },
     ],
     abstract: `
@@ -179,14 +247,20 @@ export default [
           '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
         date: '2016-10-27',
       },
+      {
+        event: 'KnowJS',
+        date: '2018-04-13',
+      },
     ],
     abstract: `
-      Modularity is the key to success with large apps. Build things so they work well in isolation, then piece them
-      together to make the full application. One thing that really helps with this kind of strategy is to open source
-      your stuff. In this talk, we'll talk about why you would want to open source your hard earned components. Then
-      we'll take a look at an existing application, identify a good candidate component for open sourcing, and then go
-      through the process of creating an open source project for that component and add it as a project dependency. I
-      hope you like looking at code, because you're going to see a lot of it!
+      Building things so they work well in isolation, then piece them together to make the full application makes
+      building applications easier. One thing that really helps with this kind of strategy is to open source your stuff.
+
+      In this talk, we'll take a look at an existing application, identify a good candidate component for open sourcing,
+      and then go through the process of creating an open source project for that component and add it as a project
+      dependency. By the end that component of the application will be easier to work on and contribute to and we'll
+      also have it open for the rest of the world to contribute and improve the software which once had bugs that were
+      just as private as the original project repository.
     `,
   },
   {

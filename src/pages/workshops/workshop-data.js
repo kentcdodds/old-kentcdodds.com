@@ -18,6 +18,80 @@ export default [
   //   `,
   // },
   {
+    title: 'Testing React and Web Applications',
+    resources: ['[repo](https://github.com/kentcdodds/testing-workshop)'],
+    tags: ['testing', 'automation', 'jest', 'cypress', 'react'],
+    presentations: [
+      {
+        event:
+          '[Workshop.me](https://workshop.me/2018-03-testing-react?a=kent) in San Francisco',
+        date: '2018-03-27',
+      },
+      {
+        event:
+          '[Frontend Masters](https://frontendmasters.com/workshops/testing-react-apps/)',
+        date: '2018-04-19',
+      },
+    ],
+    abstract: `
+      Developing and deploying production applications with React is one thing, but being confident that you're not
+      shipping a hidden bug is something else! Knowing how to configure and use testing tools is critical to your
+      success in shipping with confidence, and React's model opens up testing productivity most of us couldn't even
+      dream of before.
+
+      I have personally written tens of thousands of tests for production applications and my open source modules.
+      Hundreds of developers have improved their testing knowledge from this workshop.
+
+      **Topics**:
+      - Learn the fundamentals of what a test is and what role testing frameworks play
+      - Configure Jest for a client-side React project
+      - Learn what Code Coverage is and how to properly use that metric
+      - Write unit tests for JavaScript utilities and React components
+      - Learn what snapshot testing is and how to use it effectively
+      - Write integration tests for a React application
+      - Configure Cypress for a web application
+      - Write E2E (end-to-end) tests with Cypress
+    `,
+  },
+  {
+    title: 'Testing Practices and Principles',
+    resources: [
+      '[slides](http://slides.com/kentcdodds/testing-principles)',
+      '[repo](https://github.com/kentcdodds/testing-workshop)',
+    ],
+    tags: ['testing', 'automation', 'jest', 'cypress'],
+    presentations: [
+      {
+        event:
+          '[Workshop.me](https://workshop.me/2018-03-testing?a=kent) in San Francisco',
+        date: '2018-03-26',
+      },
+      {
+        event:
+          '[Frontend Masters](https://frontendmasters.com/workshops/testing-practices-principles/)',
+        date: '2018-04-18',
+      },
+    ],
+    abstract: `
+      The goal of a test is to increase your confidence that the subject of your test is functioning the way it should
+      be. Not all tests provide the same level of confidence (some provide very little confidence at all). If you're not
+      doing things correctly, you could be wasting your time and giving yourself a false sense of security (even worse
+      than having no tests at all).
+
+      I have personally written tens of thousands of tests for production applications and my open source modules.
+      Hundreds of developers have improved their testing knowledge from this workshop.
+
+      **Topics**:
+      - The fundamentals behind tests and testing frameworks the distinctions of different forms of testing
+      - How to write Unit tests
+      - How to write Integration tests
+      - When and how to mock dependencies
+      - How to use test driven development to write new features
+      - How to use test driven development to find and fix bugs
+      - Core principles of testing to ensure your tests give you the confidence you need
+    `,
+  },
+  {
     title: 'Advanced React Component Patterns',
     resources: [
       '[repo](https://github.com/kentcdodds/advanced-react-patterns)',
@@ -28,21 +102,43 @@ export default [
         event:
           '[Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)',
         date: '2017-12-04',
+        recording:
+          'https://egghead.io/courses/advanced-react-component-patterns',
+      },
+      {
+        event:
+          '[Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/)',
+        date: '2018-04-17',
+      },
+      {
+        event:
+          '[Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) in Portland',
+        date: '2018-07-11',
+      },
+      {
+        event:
+          '[Workshop.me](https://workshop.me/2018-08-advanced-react?a=kent) in Salt Lake City',
+        date: '2018-08-15',
       },
     ],
     abstract: `
-      The goal of this course is to give you the knowledge of advanced patterns you can use to make React components
-      that are more flexible, simpler, and more fun to build, use, and maintain. You'll start with a simple
-      \`<Toggle />\` component which you'll progressively refactor to each of the patterns so you can see the relative
-      trade-offs of the patterns and how they can be used together to increase the usefulness of your component while at
-      the same time simplifying things for everyone.
+      Making React components that can be used in multiple places is not hard. What is hard is when the use cases
+      differ. Without the right patterns, you can find yourself with a highly complex component that requires a lot of
+      configuration props and way too many if statements. With this course, you'll not only learn great patterns you can
+      use, but also the strengths and weaknesses of each so you know which to reach for to provide your components the
+      flexibility and power you need.
 
-      Having built and shipped components using each of these patterns, Kent will help you understand and weigh the
-      trade-offs of each of them and you'll come to intuitively know where to apply each pattern in your own components.
-      When you're finished with this course, hopefully you'll have a list of actionable things you can do to rework the
-      components that you're building to make them more flexible, simpler, and more fun to build, use, and maintain.
+      I have contributed to and published some of the most successful React components in the React ecosystem. Through
+      that experience, I've learned and taught patterns that enhnace flexibilty, usefulness, and simplicity.
 
-      Enjoy!
+      **Topics**:
+      - Use the Compound Components Pattern to write React components that implicitly share state while giving rendering
+        flexibility to the user
+      - Share code and enhance your components with the Higher Order Components Pattern
+      - Give full rendering power to users with the Render Props Pattern
+      - Improve the render prop API with the Prop Collections and Prop Getters Patterns
+      - Provide total logic control with the Controlled Props and State Reducer Patterns
+      - Take advantage of React’s Context API to share state throughout the application with the Provider Pattern
     `,
   },
   {
@@ -56,6 +152,11 @@ export default [
         event:
           '[Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
         date: '2017-12-04',
+      },
+      {
+        event:
+          '[Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) in Salt Lake City',
+        date: '2018-08-14',
       },
     ],
     abstract: `
@@ -181,17 +282,31 @@ export default [
         date: '2015-04-21',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
       },
+      {
+        event:
+          '[Wokshop.me](https://workshop.me/2018-07-es6?a=kent) in Salt Lake City',
+        date: '2018-07-26',
+      },
     ],
     abstract: `
-      The EcmaScript standard is now on a yearly release cycle. With ES6 complete and ES2016 almost ratified, we have a
-      ton of awesome new features to use in our daily software development. In this training, we'll learn about the
-      features you're likely to use and benefit from on a day-to-day basis. In the afternoon, we'll take an existing
-      application and update it to leverage these features using with modern tools like Babel. My goal is that after
-      this training, you'll be able to go back to your projects and add these tools so you can write ES.next code today.
+      The ECMAScript standard is now on a yearly release cycle. Keeping up with the latest features can make you more
+      productive and your code more expressive and maintainable. In this workshop, we'll learn about the features from
+      ES6 to today that you're likely to use and benefit from on a day-to-day basis.
 
-      This is a very hands-on training and you'll need to make sure that you're machine is set up. Please ensure that
-      you have git, Node, npm, and a text editor / IDE installed on your machine. With that, you'll be ready to rock
-      and roll. Feel free to hit me up on twitter if you have any questions.
+      Kent has been using and teaching the latest features of JavaScript with Babel for years. He represents PayPal on
+      the [TC39](https://github.com/tc39). Kent has taught thousands of developers the new and useful features of
+      JavaScript.
+
+      **Topics**:
+      - Simple ES6 features like let, const, and template literals
+      - New object and array operators and syntax like destructuring, rest and spread, and object literal syntax
+        enhancements
+      - New function syntax and operators like arrow functions and rest/spread
+      - Data structures like Map/Set and their weak counterparts
+      - How to use Promises effectively
+      - How and when to use async/await
+      - Really useful new APIs on built-ins like Object, String, Array, and even new syntax for RegExp
+      - How and when to use public class fields to avoid issues with "this" bindings
     `,
   },
   {
