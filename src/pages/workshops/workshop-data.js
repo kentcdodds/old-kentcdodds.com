@@ -62,6 +62,10 @@ export default [
     tags: ['testing', 'automation', 'jest', 'cypress'],
     presentations: [
       {
+        event: '[Assert(JS)](https://www.assertjs.com/training)',
+        date: '2018-02-21',
+      },
+      {
         event:
           '[Workshop.me](https://workshop.me/2018-03-testing?a=kent) in San Francisco',
         date: '2018-03-26',
