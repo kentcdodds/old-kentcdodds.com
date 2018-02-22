@@ -12,7 +12,10 @@ function Links() {
       >
         <div>
           <h2>Photo</h2>
-          <img alt="my profile" src="/photo.png" />
+          <img style={{maxWidth: 200}} alt="my profile" src="/photo.png" />
+          <small>
+            <a href="/photo.png">Full image</a>
+          </small>
         </div>
         <hr />
         <div>
