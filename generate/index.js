@@ -11,6 +11,7 @@ Rx.Observable
     './blog',
     './appearances',
     './workshops',
+    './info',
   ])
   .map(modPath => require(modPath).default) // eslint-disable-line
   // .merge(2) // this doesn't appear to be limiting the concurrent requests
