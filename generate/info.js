@@ -1,6 +1,6 @@
 import {resolve} from 'path'
 import Page from '../src/components/page'
-import Info from '../src/pages/links'
+import Info from '../src/pages/info'
 import renderComponentToFile from './render-component-to-file'
 import {getLastUpdated, getLinks} from './utils'
 
