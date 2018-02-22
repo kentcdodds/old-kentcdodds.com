@@ -47,6 +47,11 @@ function Links() {
       `,
     },
     {
+      text: 'Info',
+      url: '/info',
+      desc: 'Bio and Photo',
+    },
+    {
       text: 'JavaScript Air',
       url: 'https://javascriptair.com',
       desc: oneLine`
@@ -57,7 +62,7 @@ function Links() {
     {
       text: 'React30',
       url: 'https://react30.com',
-      desc: 'A podcast about React that I co-host',
+      desc: 'A podcast about React that I co-hosted',
     },
     {
       text: '3 Minutes with Kent',
