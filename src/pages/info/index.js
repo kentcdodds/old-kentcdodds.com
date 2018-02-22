@@ -49,17 +49,17 @@ function Links() {
           <div style={{marginTop: 40}}>
             <strong>Short</strong>
             <Markdown>{`
-              My name is Kent C. Dodds and I work at [PayPal](https://www.paypal.com) as a full stack JavaScript
-              engineer. I'm heavily involved in the JavaScript community as an open source contributor
-              and instructor. I likes his family, code, JavaScript, and React.
+              My name is Kent C. Dodds and I work at [PayPal](https://www.paypal.com) as a JavaScript
+              engineer. I'm involved in the open source community and I'm a teacher. I like my family,
+              code, JavaScript, and React.
             `}</Markdown>
           </div>
           <div style={{marginTop: 40}}>
             <strong>Short Third Person</strong>
             <Markdown>{`
-              Kent C. Dodds works at [PayPal](https://www.paypal.com) as a full stack JavaScript
-              engineer. He's heavily involved in the JavaScript community as an open source contributor
-              and instructor. He likes his family, code, JavaScript, and React.
+              Kent C. Dodds works at [PayPal](https://www.paypal.com) as a JavaScript
+              engineer. He's involved in the open source community and he's a teacher.
+              He likes his family, code, JavaScript, and React.
             `}</Markdown>
           </div>
         </div>
