@@ -43,9 +43,9 @@ export default [
         tags: ['story', 'open source', 'career'],
       },
       {
-        thing: '[Web of Tomorrow](http://www.weboftomorrowpodcast.com/)',
+        thing: '[Web of Tomorrow](https://www.orbit.fm/weboftomorrow/)',
         description:
-          '[44: How to Jumpstart Your Career - Kent C. Dodds](http://www.weboftomorrowpodcast.com/44)',
+          '[44: How to Jumpstart Your Career - Kent C. Dodds](https://www.orbit.fm/weboftomorrow/44/)',
         date: '2018-01-02',
         tags: ['open source', 'career', 'teaching'],
       },
