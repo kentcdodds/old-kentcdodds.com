@@ -21,6 +21,14 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing:
+          '[Workshop.me](https://www.youtube.com/channel/UCIGqC7zgqiFrGztcgXSSWOg)',
+        description:
+          '[E1 - Kent C. Dodds, Testing, React, TC39](https://www.youtube.com/watch?v=deWkGD7ylcw&index=1&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)',
+        date: '2018-03-01',
+        tags: ['react', 'testing'],
+      },
+      {
         thing: '[Fixate on Code](http://fixate.it)',
         description:
           '[16 - Kent C. Dodds](http://fixate.it/podcast/consume-build-and-teach-kent-c-dodds)',
