@@ -21,6 +21,13 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[newsbundle.js]()',
+        description:
+          '[Future of React explained; #03.1](https://www.youtube.com/watch?v=_rFd01gvatQ) and [Future of React with Kent C. Dodds; #03.2](https://www.youtube.com/watch?v=aRFBu0k8kIk&t=217s&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)',
+        date: '2018-03-06',
+        tags: ['react'],
+      },
+      {
         thing:
           '[Workshop.me](https://www.youtube.com/channel/UCIGqC7zgqiFrGztcgXSSWOg)',
         description:
