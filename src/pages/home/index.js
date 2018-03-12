@@ -24,13 +24,11 @@ function Home() {
             marginLeft: 'auto',
             marginRight: 'auto',
             width: 800,
-            // height: 400,
-            // border: 'solid 1px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingTop: 80,
-            paddingBottom: 60,
+            paddingTop: 40,
+            paddingBottom: 30,
           }}
         >
           <img
