@@ -13,6 +13,9 @@ function Talks() {
       <em>
         Search with <glamorous.Pre display="inline">⌘/ctrl + f</glamorous.Pre>
       </em>
+      <glamorous.Div marginTop={20} marginBottom={20}>
+        You may also be interested in <a href="/workshops">my workshops</a>.
+      </glamorous.Div>
       <glamorous.Div
         maxWidth={600}
         margin="auto"
