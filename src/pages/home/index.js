@@ -23,10 +23,9 @@ function Home() {
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',
-            width: 1600,
+            width: 800,
             // height: 400,
             // border: 'solid 1px',
-            zoom: 0.5,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -39,8 +38,8 @@ function Home() {
             style={{
               justifySelf: 'center',
               alignSelf: 'center',
-              width: 300,
-              marginBottom: 60,
+              width: 150,
+              marginBottom: 30,
             }}
             src="/logo.png"
           />
@@ -51,8 +50,8 @@ function Home() {
               marginRight: 'auto',
               display: 'grid',
               gridTemplateColumns: 'repeat(6, 1fr)',
-              gridColumnGap: '20px',
-              gridRowGap: '60px',
+              gridColumnGap: '10px',
+              gridRowGap: '30px',
             }}
           >
             {[
@@ -120,7 +119,11 @@ function Home() {
                   placeSelf: 'center',
                 }}
               >
-                <img alt={alt} src={`/assets/things/${imgFilename}.png`} />
+                <img
+                  alt={alt}
+                  src={`/assets/things/${imgFilename}.png`}
+                  style={{height: 64, width: 64}}
+                />
               </a>
             ))}
           </div>
