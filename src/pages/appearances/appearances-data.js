@@ -8,6 +8,7 @@ const tagEmojiMap = {
   testing: '⚠️',
   react: '⚛',
   silly: '🙃',
+  jest: '🃏',
 }
 
 // {
@@ -21,7 +22,14 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
-        thing: '[newsbundle.js]()',
+        thing: '[TestTalks](https://joecolantonio.com/testtalks/)',
+        description: 'JavaScript Testing Using Jest with Kent C. Dodds',
+        date: '2018-03-18',
+        tags: ['testing', 'react', 'jest', 'cypress'],
+      },
+      {
+        thing:
+          '[newsbundle.js](https://www.youtube.com/channel/UCDHuR3rK_PqaTuYH4qGN3fg)',
         description:
           '[Future of React explained; #03.1](https://www.youtube.com/watch?v=_rFd01gvatQ) and [Future of React with Kent C. Dodds; #03.2](https://www.youtube.com/watch?v=aRFBu0k8kIk&t=217s&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)',
         date: '2018-03-06',

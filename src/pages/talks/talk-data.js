@@ -118,6 +118,8 @@ export default [
       {
         event: '[Assert(JS)](https://www.assertjs.com/)',
         date: '2018-02-22',
+        recording:
+          'https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `
