@@ -22,8 +22,16 @@ export default [
     title: 'Podcasts',
     appearances: [
       {
+        thing: '[React Round Up](https://devchat.tv/react-round-up)',
+        description:
+          '[Advanced Component Patterns and Downshift with Kent C. Dodds](https://devchat.tv/react-round-up/rru-003-advanced-component-patterns-and-downshift-with-kent-c-dodds)',
+        date: '2018-03-20',
+        tags: ['react'],
+      },
+      {
         thing: '[TestTalks](https://joecolantonio.com/testtalks/)',
-        description: 'JavaScript Testing Using Jest with Kent C. Dodds',
+        description:
+          '[JavaScript Testing Using Jest with Kent C. Dodds](https://joecolantonio.com/testtalks/195-javascript-testing-using-jest-with-kent-c-dodds/)',
         date: '2018-03-18',
         tags: ['testing', 'react', 'jest', 'cypress'],
       },
