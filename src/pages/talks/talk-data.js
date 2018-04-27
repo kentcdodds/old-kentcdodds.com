@@ -18,10 +18,14 @@ import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
   {
-    title: '5 Patterns to make your React Components more useful',
+    title: 'Reusable React Components',
     resources: ['[slides](http://kcd.im/5-useful-react-patterns)'],
     tags: ['react'],
     presentations: [
+      {
+        event: 'JS@PayPal (internal conference)',
+        date: '2018-05-10',
+      },
       {
         event: '[Open West 2018](https://www.openwest.org)',
         date: '2018-06-08',
@@ -29,6 +33,10 @@ export default [
       {
         event: '[Chain React](https://infinite.red/ChainReactConf)',
         date: '2018-07-12',
+      },
+      {
+        event: '[React Rally 2018](https://www.reactrally.com/)',
+        date: '2018-09-16',
       },
     ],
     abstract: `
@@ -42,6 +50,44 @@ export default [
       There are patterns that have emerged in React that allow you to promote code reuse without sacrificing the
       simplicity or flexibility of the component. In this talk we’ll go over 5 of these patterns that will make your
       React components more useful.
+    `,
+  },
+  {
+    title: 'Confident React',
+    resources: [],
+    tags: ['react', 'testing'],
+    presentations: [
+      {
+        event: 'JS@PayPal (internal conference)',
+        date: '2018-05-10',
+      },
+    ],
+    abstract: `
+      We want to make sure that when we ship new code, our users can use the
+      application. The best way we've found to do that is to write automated
+      tests that run before we deploy a new version of the app. But if our tests
+      aren't doing exactly what the user will do, then how do we really know
+      that things will work when users interact with our apps?
+
+      Let's rethink what it means to ship applications with confidence and what
+      it takes to get there. With improved tools and practices, we can be more
+      certain that what we're shipping to our users will work the way it's
+      intended.
+    `,
+  },
+  {
+    title: 'PayPal and Node Tooling',
+    resources: [],
+    tags: ['node'],
+    presentations: [
+      {
+        event: 'JS@PayPal (internal conference)',
+        date: '2018-05-10',
+      },
+    ],
+    abstract: `
+      This is a keynote at JS@PayPal about how PayPal is investing in
+      JavaScript, NodeJS, and tooling.
     `,
   },
   {

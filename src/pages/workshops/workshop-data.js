@@ -117,6 +117,10 @@ export default [
         date: '2018-04-17',
       },
       {
+        event: 'JS@PayPal (internal conference)',
+        date: '2018-05-11',
+      },
+      {
         event:
           '[Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) in Portland',
         date: '2018-07-11',
