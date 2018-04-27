@@ -19,9 +19,13 @@ import {preparePresentationData, sortPresentations} from '../../utils'
 export default [
   {
     title: '5 Patterns to make your React Components more useful',
-    resources: [],
+    resources: ['[slides](http://kcd.im/5-useful-react-patterns)'],
     tags: ['react'],
     presentations: [
+      {
+        event: '[Open West 2018](https://www.openwest.org)',
+        date: '2018-06-08',
+      },
       {
         event: '[Chain React](https://infinite.red/ChainReactConf)',
         date: '2018-07-12',
@@ -42,12 +46,19 @@ export default [
   },
   {
     title: 'How to React',
-    resources: [],
+    resources: [
+      '[slides](http://kcd.im/how-to-react-slides)',
+      '[blog](http://kcd.im/how-to-react)',
+    ],
     tags: ['react'],
     presentations: [
       {
         event: '[React Dev Summit](https://reactdevsummit.com/)',
         date: '2018-03-30',
+      },
+      {
+        event: '[Open West 2018](https://www.openwest.org)',
+        date: '2018-06-08',
       },
     ],
     abstract: `
@@ -183,7 +194,7 @@ export default [
     tags: ['javascript', 'tools'],
     presentations: [
       {
-        event: '[Open West 2017](https://www.openwest.org/schedule/#talk-77)',
+        event: '[Open West 2017](https://www.openwest.org)',
         date: '2017-07-13',
       },
     ],
