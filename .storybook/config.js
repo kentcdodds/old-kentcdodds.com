@@ -22,11 +22,11 @@ function loadStories() {
   const postsStories = storiesOf('Posts', module).add('Home', () => (
     <Blog posts={getPostStubs()} />
   ))
-  Object.values(
-    importAll.sync('../src/pages/blog/posts/*'),
-  ).forEach(({title, default: Post}) => {
-    postsStories.add(title, () => <Post />)
-  })
+  Object.values(importAll.sync('../src/pages/blog/posts/*')).forEach(
+    ({title, default: Post}) => {
+      postsStories.add(title, () => <Post />)
+    },
+  )
 }
 // blah
 

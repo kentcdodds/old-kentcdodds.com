@@ -4,9 +4,12 @@ import GoogleAnalyticsScript from './scripts/google-analytics'
 
 export default Page
 
-function Page(
-  {children, title = 'Kent C. Dodds', lastUpdated = getDateStamp(), links} = {},
-) {
+function Page({
+  children,
+  title = 'Kent C. Dodds',
+  lastUpdated = getDateStamp(),
+  links,
+} = {}) {
   return (
     <html lang="en">
       <head>

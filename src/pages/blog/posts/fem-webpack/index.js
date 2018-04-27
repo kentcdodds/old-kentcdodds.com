@@ -49,7 +49,8 @@ function Post() {
             style={{border: 'none', overflow: 'hidden'}}
             scrolling="no"
             frameBorder="0"
-            allowTransparency="true"
+            // eslint-disable-next-line react/no-unknown-property
+            allowtransparency="true"
             allowFullScreen="true"
           />
         </div>
