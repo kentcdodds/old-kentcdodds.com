@@ -7,7 +7,8 @@
   "scripts": {
     "build:clean": "rimraf dist",
     "build:copy": "npm-run-all --parallel build:copy:*",
-    "build:copy:copyDir": "cpy \"**/*.*\" ../dist/ --parents --cwd=./copy",
+    "build:copy:copyDir":
+      "cpy \"**/*.*\" \"**/.well-known/*.*\" ../dist/ --parents --cwd=./copy",
     "build:copy:posts":
       "cpy \"**/*.!(js)\" ../../../../dist/post --parents --cwd=./src/pages/blog/posts",
     "build:pages": "babel-node generate/",
