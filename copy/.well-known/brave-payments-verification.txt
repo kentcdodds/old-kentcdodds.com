@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: kentcdodds.com
+Token: ad36234aadb6391d8a45ba2976d917388112220527efbcd4cf9017b1cf0bd4ac
