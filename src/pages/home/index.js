@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default Home
 
 function Home() {
@@ -169,9 +171,12 @@ function Home() {
           <small>
             {`If you're unimpressed with my website it's because I'm too busy`}
             <br />
-            hanging out with my family,<br />
-            building awesome things,<br />
-            teaching people JavaScript,<br />
+            hanging out with my family,
+            <br />
+            building awesome things,
+            <br />
+            teaching people JavaScript,
+            <br />
             and doing stuff for the community.
           </small>
         </p>
@@ -199,3 +204,5 @@ function listOfThings(things) {
     return items
   }, [])
 }
+
+/* eslint max-lines-per-function:0, react/jsx-child-element-spacing:0 */

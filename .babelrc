@@ -1,4 +1,0 @@
-{
-  "presets": ["kcd-scripts/babel"],
-  "plugins": ["babel-macros", "react-require"]
-}

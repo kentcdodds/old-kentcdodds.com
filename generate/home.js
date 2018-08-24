@@ -1,4 +1,5 @@
 import {resolve} from 'path'
+import React from 'react'
 import Page from '../src/components/page'
 import Home from '../src/pages/home'
 import renderComponentToFile from './render-component-to-file'

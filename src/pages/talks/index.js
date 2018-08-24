@@ -1,3 +1,4 @@
+import React from 'react'
 import glamorous from 'glamorous'
 import Presentation from '../../components/presentation'
 import talks from './talk-data'
@@ -22,7 +23,9 @@ function Talks() {
         textAlign="left"
         fontSize={18}
       >
-        {talks.map((t, i) => <Presentation key={i} {...t} />)}
+        {talks.map((t, i) => (
+          <Presentation key={i} {...t} />
+        ))}
       </glamorous.Div>
     </glamorous.Div>
   )

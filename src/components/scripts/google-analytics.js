@@ -1,3 +1,4 @@
+import React from 'react'
 import {oneLineTrim} from 'common-tags'
 import InlineScript from './inline-script'
 

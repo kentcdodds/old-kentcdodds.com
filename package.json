@@ -6,11 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build:clean": "rimraf dist",
-    "build:copy": "npm-run-all --parallel build:copy:*",
-    "build:copy:copyDir":
-      "cpy \"**/*.*\" \"**/.well-known/*.*\" ../dist/ --parents --cwd=./copy",
-    "build:copy:posts":
-      "cpy \"**/*.!(js)\" ../../../../dist/post --parents --cwd=./src/pages/blog/posts",
+    "build:copy": "cpy \"**/*.*\" \"**/.well-known/*.*\" ../dist/ --parents --cwd=./copy",
     "build:pages": "babel-node generate/",
     "build": "npm-run-all --parallel build:*",
     "test": "npm run lint",
@@ -35,20 +31,20 @@
     "@reactivex/rxjs": "^6.0.0",
     "@storybook/react": "^3.4.2",
     "babel-cli": "^6.24.0",
-    "babel-macros": "^1.2.0",
+    "babel-macros": "^2.0.0",
     "babel-plugin-react-require": "^3.0.0",
     "common-tags": "^1.7.2",
-    "cpy-cli": "^1.0.1",
+    "cpy-cli": "^2.0.0",
     "cross-env": "^5.1.4",
     "cross-spawn": "^6.0.5",
-    "eslint-config-kentcdodds": "^13.0.1",
+    "eslint-config-kentcdodds": "^14.0.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.12.4",
     "glob": "^7.1.1",
     "http-server": "^0.11.1",
     "import-all.macro": "^2.0.3",
-    "kcd-scripts": "^0.38.0",
-    "marked": "^0.3.19",
+    "kcd-scripts": "^0.42.1",
+    "marked": "^0.5.0",
     "mkdirp": "^0.5.1",
     "moment": "^2.22.1",
     "npm-run-all": "^4.1.2",
@@ -62,14 +58,21 @@
     "strip-indent": "^2.0.0",
     "uglify-js": "^3.3.22"
   },
+  "babel": {
+    "presets": [
+      "kcd-scripts/babel"
+    ]
+  },
   "eslintConfig": {
     "extends": [
-      "./node_modules/kcd-scripts/eslint.js",
-      "kentcdodds/babel-react-require"
+      "./node_modules/kcd-scripts/eslint.js"
     ],
     "rules": {
       "react/jsx-max-props-per-line": "off"
     }
   },
-  "eslintIgnore": ["node_modules", "dist"]
+  "eslintIgnore": [
+    "node_modules",
+    "dist"
+  ]
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import {oneLine} from 'common-tags'
 import Markdown from '../../components/markdown'
 

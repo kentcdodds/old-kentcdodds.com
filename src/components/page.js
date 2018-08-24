@@ -1,3 +1,4 @@
+import React from 'react'
 import {PropTypes} from 'prop-types'
 import {oneLine} from 'common-tags'
 import GoogleAnalyticsScript from './scripts/google-analytics'

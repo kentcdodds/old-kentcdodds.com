@@ -1,3 +1,4 @@
+import React from 'react'
 import {PropTypes} from 'prop-types'
 import slugify from 'slugify'
 import glamorous from 'glamorous'
@@ -68,8 +69,7 @@ function ListOfThings({things}) {
     <ul>
       {things.map(({thing, description, duration, date, isFuture}, i) => (
         <li key={i} style={{marginBottom: 4}}>
-          <MakrdownWithStyledAnchors>{thing}</MakrdownWithStyledAnchors>
-          :{' '}
+          <MakrdownWithStyledAnchors>{thing}</MakrdownWithStyledAnchors>:{' '}
           {description ? (
             <span>
               {' '}

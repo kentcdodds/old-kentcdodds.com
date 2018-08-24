@@ -1,3 +1,4 @@
+import React from 'react'
 import glamorous from 'glamorous'
 import Presentation from '../../components/presentation'
 import workshops from './workshop-data'
@@ -19,7 +20,9 @@ function Workshops() {
         textAlign="left"
         fontSize={18}
       >
-        {workshops.map((t, i) => <Presentation key={i} {...t} />)}
+        {workshops.map((t, i) => (
+          <Presentation key={i} {...t} />
+        ))}
       </glamorous.Div>
     </glamorous.Div>
   )

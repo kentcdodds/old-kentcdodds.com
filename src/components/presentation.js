@@ -1,3 +1,4 @@
+import React from 'react'
 import {PropTypes} from 'prop-types'
 import slugify from 'slugify'
 import glamorous from 'glamorous'

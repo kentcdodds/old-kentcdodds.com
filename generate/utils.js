@@ -1,23 +1,7 @@
-import {join, basename} from 'path'
 import spawn from 'cross-spawn'
 import moment from 'moment'
-import glob from 'glob'
 
-export {getPosts, getLastUpdated, getLinks}
-
-function getPosts() {
-  const postDirs = glob.sync(join(__dirname, '../src/pages/blog/posts/*/'))
-  return postDirs.map(dir => {
-    const postModule = require(dir) // eslint-disable-line
-    const postSlug = basename(dir)
-    const date = getLastUpdated(dir)
-    return {
-      ...postModule,
-      date,
-      url: `/post/${postSlug}`,
-    }
-  })
-}
+export {getLastUpdated, getLinks}
 
 function getLastUpdated(path) {
   const args = `log -1 --pretty=format:"%ad" --date=short --`
@@ -30,7 +14,6 @@ function getLastUpdated(path) {
 function getLinks() {
   return [
     {url: '/', text: 'Home'},
-    {url: '/post', text: 'Blog'},
     {url: '/talks', text: 'Talks'},
     {url: '/workshops', text: 'Workshops'},
     {url: '/appearances', text: 'Appearances'},

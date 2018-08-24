@@ -1,3 +1,4 @@
+import React from 'react'
 import InlineScript from '../../components/scripts/inline-script'
 
 export default FourOFour
