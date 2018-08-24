@@ -49,7 +49,7 @@ function Home() {
               marginLeft: 'auto',
               marginRight: 'auto',
               display: 'grid',
-              gridTemplateColumns: 'repeat(6, 1fr)',
+              gridTemplateColumns: 'repeat(5, 1fr)',
               gridColumnGap: '10px',
               gridRowGap: '30px',
             }}
@@ -90,16 +90,6 @@ function Home() {
                 imgFilename: 'fem',
                 href: 'http://kcd.im/fem',
                 alt: 'See my workshops and courses on Frontend Masters',
-              },
-              {
-                imgFilename: 'workshopme',
-                href: 'http://kcd.im/wme',
-                alt: 'See my workshops on Workshop.me',
-              },
-              {
-                imgFilename: 'twitch',
-                href: 'http://kcd.im/twitch',
-                alt: 'I stream on Twitch',
               },
               {
                 imgFilename: 'gde',

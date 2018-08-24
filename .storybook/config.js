@@ -1,3 +1,4 @@
+import React from 'react'
 import {configure, storiesOf} from '@storybook/react'
 import Home from '../src/pages/home'
 import Links from '../src/pages/links'

@@ -121,13 +121,11 @@ export default [
         date: '2018-05-11',
       },
       {
-        event:
-          '[Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) in Portland',
+        event: 'Workshop.me in Portland',
         date: '2018-07-11',
       },
       {
-        event:
-          '[Workshop.me](https://workshop.me/2018-08-advanced-react?a=kent) in Salt Lake City',
+        event: 'Workshop.me in Salt Lake City',
         date: '2018-08-15',
       },
     ],
