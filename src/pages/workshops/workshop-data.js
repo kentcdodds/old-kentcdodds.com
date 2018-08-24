@@ -122,10 +122,6 @@ export default [
         event: 'Workshop.me in Portland',
         date: '2018-07-11',
       },
-      {
-        event: 'Workshop.me in Salt Lake City',
-        date: '2018-08-15',
-      },
     ],
     abstract: `
       Making React components that can be used in multiple places is not hard. What is hard is when the use cases
@@ -286,11 +282,6 @@ export default [
           '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
         date: '2015-04-21',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
-      },
-      {
-        event:
-          '[Wokshop.me](https://workshop.me/2018-07-es6?a=kent) in Salt Lake City',
-        date: '2018-07-26',
       },
     ],
     abstract: `
