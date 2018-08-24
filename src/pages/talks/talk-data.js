@@ -104,7 +104,11 @@ export default [
   },
   {
     title: 'Confident React',
-    resources: ['[slides]()'],
+    resources: [
+      '[slides](https://slides.com/kentcdodds/confident-react)',
+      '[example codesandbox](https://codesandbox.io/s/github/kentcdodds/confident-react-examples)',
+      '[react-testing-library-examples codesandbox](https://codesandbox.io/s/github/kentcdodds/react-testing-library-examples)',
+    ],
     tags: ['react', 'testing'],
     presentations: [
       {
