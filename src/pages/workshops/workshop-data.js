@@ -23,8 +23,7 @@ export default [
     tags: ['testing', 'automation', 'jest', 'cypress', 'react'],
     presentations: [
       {
-        event:
-          '[Workshop.me](https://workshop.me/2018-03-testing-react?a=kent) in San Francisco',
+        event: 'Workshop.me in San Francisco',
         date: '2018-03-27',
       },
       {
@@ -68,8 +67,7 @@ export default [
           'https://www.youtube.com/watch?v=VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event:
-          '[Workshop.me](https://workshop.me/2018-03-testing?a=kent) in San Francisco',
+        event: 'Workshop.me in San Francisco',
         date: '2018-03-26',
       },
       {
@@ -162,8 +160,7 @@ export default [
         date: '2017-12-04',
       },
       {
-        event:
-          '[Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) in Salt Lake City',
+        event: 'Workshop.me in Salt Lake City',
         date: '2018-08-14',
       },
     ],

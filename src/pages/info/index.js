@@ -29,9 +29,9 @@ function Links() {
               I am Kent C. Dodds. I work at [PayPal](https://www.paypal.com) as a full stack JavaScript
               engineer. I represent PayPal on [the TC39](https://github.com/tc39). I'm actively involved in
               the [open source community](https://github.com/kentcdodds). I'm an instructor on
-              [egghead.io](https://egghead.io/instructors/kentcdodds),
-              [Frontend Masters](https://frontendmasters.com), and [Workshop.me](https://workshop.me/?a=kent).
-              I'm also a [Google Developer Expert](https://developers.google.com/experts/people/kent-c-dodds).
+              [egghead.io](https://egghead.io/instructors/kentcdodds) and
+              [Frontend Masters](https://frontendmasters.com). I'm also a
+              [Google Developer Expert](https://developers.google.com/experts/people/kent-c-dodds).
               I'm happily married and the father of four kids. I like my family, code, JavaScript, and React.
             `}</Markdown>
           </div>
@@ -41,9 +41,9 @@ function Links() {
               Kent C. Dodds works at [PayPal](https://www.paypal.com) as a full stack JavaScript
               engineer. He represents PayPal on [the TC39](https://github.com/tc39). He's actively involved in
               the [open source community](https://github.com/kentcdodds). He's an instructor on
-              [egghead.io](https://egghead.io/instructors/kentcdodds),
-              [Frontend Masters](https://frontendmasters.com), and [Workshop.me](https://workshop.me/?a=kent).
-              He's also a [Google Developer Expert](https://developers.google.com/experts/people/kent-c-dodds).
+              [egghead.io](https://egghead.io/instructors/kentcdodds) and
+              [Frontend Masters](https://frontendmasters.com). He's also a
+              [Google Developer Expert](https://developers.google.com/experts/people/kent-c-dodds).
               Kent is happily married and the father of four kids. He likes his family, code, JavaScript, and React.
             `}</Markdown>
           </div>
