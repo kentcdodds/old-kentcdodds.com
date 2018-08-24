@@ -54,13 +54,17 @@ function Presentation({title, abstract, resources, presentations, tags}) {
     <span key={i} {...innerHTML(r)} />
   ))
   const presentationEls = presentations.map(
-    ({event, recording, date, isFuture}, i) => (
+    ({event, recording, date, endDate, isFuture}, i) => (
       <li key={i}>
         <span {...innerHTML(event)} />
         {recording ? ' - ' : null}
         {recording ? <a href={recording}>video</a> : null}
         <glamorous.Span paddingLeft={10} fontSize="0.7em">
-          {date.format('YYYY-MM-DD')} {isFuture ? 'upcoming' : null}
+          {date.format('YYYY-MM-DD')}
+          {date.format('YYYY-MM-DD') === endDate.format('YYYY-MM-DD')
+            ? null
+            : ` - ${endDate.format('YYYY-MM-DD')}`}
+          {isFuture ? ' (upcoming)' : null}
         </glamorous.Span>
       </li>
     ),

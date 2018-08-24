@@ -117,6 +117,13 @@ export default [
       {
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-11',
+        recording:
+          'https://www.youtube.com/playlist?list=PLV5CVI1eNcJgBniABPfk_tMliLrSJNC-T',
+      },
+      {
+        event: 'Workshop.me online',
+        date: '2018-06-19',
+        endDate: '2018-06-20',
       },
       {
         event: 'Workshop.me in Portland',
@@ -158,6 +165,11 @@ export default [
       {
         event: 'Workshop.me in Salt Lake City',
         date: '2018-08-14',
+      },
+      {
+        event:
+          '[Framework Summit 2018](https://www.frameworksummit.com/workshop/introduction-to-react)',
+        date: '2018-10-01',
       },
     ],
     abstract: `

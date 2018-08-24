@@ -48,6 +48,7 @@ function preparePresentationData(presentation) {
         ...delivery,
         event: markdownToHTMLWithNoPTag(delivery.event),
         date: moment(delivery.date),
+        endDate: moment(delivery.endDate || delivery.date),
         isFuture: moment().isBefore(delivery.date),
       }))
       .sort((a, b) => {

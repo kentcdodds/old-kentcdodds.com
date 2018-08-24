@@ -18,10 +18,54 @@ import {preparePresentationData, sortPresentations} from '../../utils'
 
 export default [
   {
-    title: 'Reusable React Components',
-    resources: ['[slides](http://kcd.im/5-useful-react-patterns)'],
+    title: 'A Render Prop by Any Other Name',
+    resources: [],
+    tags: ['react', 'vue', 'angular'],
+    presentations: [
+      {
+        event: '[Framework Summit](https://www.frameworksummit.com/sessions)',
+        date: '2018-10-02',
+      },
+    ],
+    abstract: `
+      Can Vue use Render Props? Does React have a concept like Directives?
+      Can Angular go Renderless the way the young ’uns do? All my developer
+      friends in that other framework keep using words I don’t understand.
+      Help! Join Kent C. Dodds, Isaac Mann and Divya Sasidharan as they
+      demonstrate UI component patterns that are common across React, Angular
+      and Vue. Consider this your language primer before a trip to a foreign
+      framework land. You’ll see that we’re all talking about the same concepts,
+      even when we use different words.
+    `,
+  },
+  {
+    title: `The introduction to React you've been missing`,
+    resources: [],
     tags: ['react'],
     presentations: [
+      {
+        event: '[UtahJS Conf](https://conf.utahjs.com/)',
+        date: '2018-09-14',
+      },
+    ],
+    abstract: `
+      In this talk I teach React from scratch in a single index.html file with
+      no magic up my sleeves. We start with a basic Hello World in vanilla
+      JavaScript and incrementally iterate through React APIs and JSX. We
+      continue with introducing more of React's APIs.
+    `,
+  },
+  {
+    title: 'Simply React',
+    resources: ['[slides](https://simply-react.netlify.com)'],
+    tags: ['react'],
+    presentations: [
+      {
+        event: 'Practice Run',
+        date: '2018-06-01',
+        recording:
+          'https://www.youtube.com/watch?v=PJe8KXPw4cA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
       {
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
@@ -29,14 +73,20 @@ export default [
       {
         event: '[Open West 2018](https://www.openwest.org)',
         date: '2018-06-08',
+        recording:
+          'https://www.youtube.com/watch?v=Q25lkYUZTMU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[Chain React](https://infinite.red/ChainReactConf)',
         date: '2018-07-12',
+        recording:
+          'https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[React Rally 2018](https://www.reactrally.com/)',
         date: '2018-09-16',
+        recording:
+          'https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     abstract: `
@@ -54,12 +104,24 @@ export default [
   },
   {
     title: 'Confident React',
-    resources: [],
+    resources: ['[slides]()'],
     tags: ['react', 'testing'],
     presentations: [
       {
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
+        recording:
+          'https://www.youtube.com/watch?v=qXRPHRgcXJ0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
+        event: '[egghead.io](http://kcd.im/egghead)',
+        date: '2018-06-14',
+        recording:
+          'https://egghead.io/lessons/react-confidently-ship-production-react-apps',
+      },
+      {
+        event: '[ByteConf](https://byteconf.com/)',
+        date: '2018-08-31',
       },
     ],
     abstract: `
@@ -119,11 +181,11 @@ export default [
   },
   {
     title: 'How open source has made me and the stuff I make better',
-    resources: [],
+    resources: ['[slides](https://slides.com/kentcdodds/oss-better#/)'],
     tags: ['open source'],
     presentations: [
       {
-        event: 'KnowJS (announcement coming soon)',
+        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018/)',
         date: '2018-04-13',
       },
     ],
@@ -307,7 +369,7 @@ export default [
         date: '2016-10-27',
       },
       {
-        event: 'KnowJS',
+        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018/)',
         date: '2018-04-13',
       },
     ],
