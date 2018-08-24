@@ -165,7 +165,8 @@ export default [
     tags: ['react'],
     presentations: [
       {
-        event: '[React Dev Summit](https://reactdevsummit.com/)',
+        event:
+          '[React Dev Summit](https://devchat.tv/event/react-dev-summit-2018/)',
         date: '2018-03-30',
       },
       {
