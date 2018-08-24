@@ -84,7 +84,7 @@ export default [
       },
       {
         event: '[React Rally 2018](https://www.reactrally.com/)',
-        date: '2018-09-16',
+        date: '2018-08-16',
         recording:
           'https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
