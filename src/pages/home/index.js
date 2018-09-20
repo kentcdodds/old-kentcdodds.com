@@ -25,7 +25,7 @@ function Home() {
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',
-            width: 800,
+            maxWidth: 800,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -49,9 +49,10 @@ function Home() {
               marginLeft: 'auto',
               marginRight: 'auto',
               display: 'grid',
-              gridTemplateColumns: 'repeat(5, 1fr)',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
               gridColumnGap: '10px',
               gridRowGap: '30px',
+              justifyItems: 'center',
             }}
           >
             {[
