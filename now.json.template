@@ -1,0 +1,16 @@
+{
+  "env": {
+    "GOOGLE_ANALYTICS": "GA_GOES_HERE",
+    "NODE_ENV": "production"
+  },
+  "alias": "DOMAIN_GOES_HERE",
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": "auto"
+    }
+  },
+  "static": {
+    "trailingSlash": false
+  }
+}

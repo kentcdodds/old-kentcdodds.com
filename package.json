@@ -1,0 +1,58 @@
+{
+  "name": "gatsby-starter-egghead-blog",
+  "description": "This is a starter for egghead content creator blogs",
+  "version": "1.0.0",
+  "author": "egghead.io <support@egghead.io> (https://egghead.io)",
+  "repository": "https://github.com/eggheadio/gatsby-starter-egghead-blog",
+  "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
+    "@mdx-js/mdx": "^0.16.6",
+    "@mdx-js/tag": "^0.16.6",
+    "core-js": "^2.6.1",
+    "emotion": "^10.0.5",
+    "emotion-server": "^10.0.5",
+    "gatsby": "^2.0.82",
+    "gatsby-awesome-pagination": "^0.3.3",
+    "gatsby-image": "^2.0.25",
+    "gatsby-link": "^2.0.7",
+    "gatsby-mdx": "^0.3.0",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-emotion": "^4.0.1",
+    "gatsby-plugin-google-analytics": "^2.0.8",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-offline": "^2.0.20",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.19",
+    "gatsby-transformer-sharp": "^2.1.10",
+    "mdx-utils": "0.0.2",
+    "prism-react-renderer": "^0.1.5",
+    "prism-themes": "^1.0.1",
+    "prismjs": "^1.15.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "~5.2.0",
+    "react-live": "^1.12.0",
+    "serve": "^10.1.1"
+  },
+  "devDependencies": {
+    "babel-preset-gatsby": "^0.1.6",
+    "prettier": "1.14.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "serve public/"
+  }
+}
