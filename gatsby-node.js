@@ -67,6 +67,10 @@ exports.createPages = ({ actions, graphql }) =>
       return Promise.reject(errors)
     }
 
+    if (_.isEmpty(data.allMdx)) {
+      return Promise.reject('There are no posts!')
+    }
+
     const { edges } = data.allMdx
     const { createRedirect, createPage } = actions
     createPosts(createPage, createRedirect, edges)
