@@ -71,7 +71,9 @@ export const pageQuery = graphql`
     siteMetadata {
       title
       description
-      author
+      author {
+        name
+      }
       keywords
     }
   }

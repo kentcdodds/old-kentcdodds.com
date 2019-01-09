@@ -2,12 +2,30 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     siteUrl: 'https://egghead.io/',
-    author: 'egghead.io',
     title: 'The blog of an egghead creator',
     description: 'This is where they post things!',
     keywords: ['Video Blogger'],
+    canonicalUrl: 'https://egghead.io',
+    image: 'https://egghead.io/images/egghead.png',
+    author: {
+      name: 'egghead.io',
+      minibio: `
+        <strong>egghead</strong> is the premier place on the internet for 
+        experienced developers to enhance their skills and stay current
+        in the fast-faced field of web development.
+      `,
+    },
+    organization: {
+      name: 'egghead.io LLC',
+      url: 'https://egghead.io',
+      logo: 'https://egghead.io/android-chrome-512x512.png',
+    },
+    social: {
+      twitter: '@eggheadio',
+      fbAppID: '',
+    },
   },
-  plugins: [1
+  plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
