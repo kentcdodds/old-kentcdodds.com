@@ -11,7 +11,6 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - MDX: JavaScript/React in Markdown
 - Prism.js: Syntax Highlighting
 - Pagination
-- Categories
 - Emotion
 
 ## Setup
