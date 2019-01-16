@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
@@ -95,7 +99,6 @@ module.exports = {
                   date: edge.node.fields.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -109,7 +112,6 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
-                      html
                       fields { 
                         slug
                         date
@@ -126,6 +128,12 @@ module.exports = {
             title: 'Blog RSS Feed',
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/lib/typography`,
       },
     },
     'gatsby-plugin-offline',
