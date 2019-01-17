@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Inter UI Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('Inter-UI-Regular.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Inter UI Regular Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: url('Inter-UI-Italic.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Inter UI SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('Inter-UI-SemiBold.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Inter UI SemiBold Italic';
+  font-style: italic;
+  font-weight: 600;
+  src: url('Inter-UI-SemiBoldItalic.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Inter UI Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Inter-UI-Bold.woff') format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Inter UI Bold Italic';
+  font-style: italic;
+  font-weight: 700;
+  src: url('Inter-UI-BoldItalic.woff') format('woff');
+  font-display: fallback;
+}
