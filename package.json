@@ -12,6 +12,7 @@
     "core-js": "^2.6.1",
     "css-doodle": "^0.5.1",
     "dotenv": "^6.2.0",
+    "dotenv-parse-variables": "^0.2.0",
     "emotion": "^10.0.5",
     "emotion-server": "^10.0.5",
     "emotion-theming": "^10.0.6",
