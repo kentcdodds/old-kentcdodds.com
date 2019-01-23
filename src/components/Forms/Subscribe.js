@@ -16,19 +16,40 @@ const SubscribeSchema = Yup.object().shape({
     .required('Required'),
 })
 
+const PostSubmissionMessage = ({ response }) => {
+  console.log('Post submission response: ', response)
+
+  return <div>You've submitted with a status of {response.status}</div>
+}
+
 class SignUp extends React.Component {
-  handleSubmit = values => {
-    console.log('you hit submit: ', values)
-    // fetch('https://app.convertkit.com/forms/834199/subscriptions', {
-    //   method: 'post',
-    //   body: JSON.stringify(values, null, 2),
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    // })
+  state = {
+    submitted: false,
   }
+
+  async handleSubmit(values) {
+    const response = await fetch(
+      'https://app.convertkit.com/forms/834199/subscriptions',
+      {
+        method: 'post',
+        body: JSON.stringify(values, null, 2),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      },
+    )
+
+    const responseJson = await response.json()
+
+    this.setState({
+      submitted: true,
+      response: responseJson,
+    })
+  }
+
   render() {
+    const { submitted, response } = this.state
     return (
       <div>
         <h2>Join the Newsletter</h2>
@@ -108,6 +129,7 @@ class SignUp extends React.Component {
             </Form>
           )}
         />
+        {submitted && <PostSubmissionMessage response={response} />}
       </div>
     )
   }
