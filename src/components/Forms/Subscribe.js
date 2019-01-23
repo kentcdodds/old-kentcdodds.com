@@ -6,11 +6,13 @@ import { css } from '@emotion/core'
 import theme from '../../../config/theme'
 import { bpMaxSM } from '../../lib/breakpoints'
 
+const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
+
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
     .email('Invalid email address')
     .required('Required'),
-  first_name: Yup.string()
+  first_name: Yup.string(),
 })
 
 const PostSubmissionMessage = ({ response }) => {
@@ -26,7 +28,7 @@ class SignUp extends React.Component {
     this.setState({ submitted: true, loading: true })
     try {
       const response = await fetch(
-        'https://app.convertkit.com/forms/834199/subscriptions',
+        `https://app.convertkit.com/forms/${FORM_ID}/subscriptions`,
         {
           method: 'post',
           body: JSON.stringify(values, null, 2),
@@ -57,6 +59,7 @@ class SignUp extends React.Component {
   render() {
     const { submitted, loading, response, errorMessage } = this.state
     const successful = response && response.status === 'success'
+
     return (
       <div>
         <h2>Join the Newsletter</h2>
