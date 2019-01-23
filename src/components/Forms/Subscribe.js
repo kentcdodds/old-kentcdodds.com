@@ -11,15 +11,10 @@ const SubscribeSchema = Yup.object().shape({
     .email('Invalid email address')
     .required('Required'),
   first_name: Yup.string()
-    .min(2, 'Must be longer than 2 characters')
-    .max(20, 'Nice try, nobody has a first name that long')
-    .required('Required'),
 })
 
 const PostSubmissionMessage = ({ response }) => {
-  console.log('Post submission response: ', response)
-
-  return <div>You have submitted with a status of {response.status}</div>
+  return <div>Thanks! You've been added to the list.</div>
 }
 
 class SignUp extends React.Component {
