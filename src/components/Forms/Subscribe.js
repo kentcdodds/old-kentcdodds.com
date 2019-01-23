@@ -19,7 +19,7 @@ const SubscribeSchema = Yup.object().shape({
 const PostSubmissionMessage = ({ response }) => {
   console.log('Post submission response: ', response)
 
-  return <div>You've submitted with a status of {response.status}</div>
+  return <div>You have submitted with a status of {response.status}</div>
 }
 
 class SignUp extends React.Component {
