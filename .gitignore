@@ -30,5 +30,3 @@ node_modules
 .cache/
 .DS_Store
 public
-.env.development
-.env.production
