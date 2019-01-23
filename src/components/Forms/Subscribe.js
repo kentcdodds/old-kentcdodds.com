@@ -2,6 +2,9 @@ import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { Debug } from './Debug'
+import { css } from '@emotion/core'
+import theme from '../../../config/theme'
+import { bpMaxSM } from '../../lib/breakpoints'
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
@@ -36,27 +39,67 @@ const SignUp = ({ subscribed = false }) => (
         })
       }}
       render={({ errors, touched }) => (
-        <Form>
-          <label htmlFor="first_name">First Name</label>
-          <Field name="first_name" placeholder="Jane" type="text" />
-          <ErrorMessage
-            name="first_name"
-            component="div"
-            className="field-error"
-          />
-
-          <label htmlFor="email">Email</label>
-          <Field
-            name="email_address"
-            placeholder="jane@acme.com"
-            type="email"
-          />
-          <ErrorMessage
-            name="email_address"
-            component="div"
-            className="field-error"
-          />
-
+        <Form
+          css={css`
+            display: flex;
+            align-items: flex-end;
+            label:not(:first-of-type),
+            button {
+              margin-left: 10px;
+            }
+            .field-error {
+              display: block;
+              position: absolute;
+              color: ${theme.colors.red};
+              font-size: 80%;
+            }
+            input,
+            label {
+              width: 280px;
+            }
+            ${bpMaxSM} {
+              flex-direction: column;
+              align-items: center;
+              width: auto;
+              label {
+                margin: 15px 0 !important;
+              }
+              button {
+                margin-top: 20px;
+              }
+            }
+          `}
+        >
+          <label htmlFor="first_name">
+            First Name
+            <Field
+              aria-label="your first name"
+              aria-required="true"
+              name="first_name"
+              placeholder="Jane"
+              type="text"
+            />
+            <ErrorMessage
+              name="first_name"
+              component="span"
+              className="field-error"
+            />
+          </label>
+          <label htmlFor="email">
+            Email
+            <Field
+              aria-label="your email address"
+              aria-required="true"
+              name="email_address"
+              placeholder="jane@acme.com"
+              type="email"
+            />
+            <ErrorMessage
+              name="email_address"
+              component="span"
+              className="field-error"
+            />
+          </label>
           <button data-element="submit" type="submit">
             Submit
           </button>

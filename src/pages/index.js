@@ -12,7 +12,7 @@ const Hero = () => (
   <section
     css={css`
       width: 100%;
-      background: ${theme.colors.grey};
+      background: ${theme.colors.gray};
       padding: 20px 0 30px 0;
       display: flex;
       margin-bottom: 20px;
@@ -51,7 +51,7 @@ const Description = styled.p`
 
 export default function Index({ data: { site, allMdx } }) {
   return (
-    <Layout site={site} headerBg={theme.colors.grey}>
+    <Layout site={site} headerBg={theme.colors.gray}>
       <Hero />
       <Container>
         {allMdx.edges.map(({ node: post }) => (

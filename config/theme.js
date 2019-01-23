@@ -12,13 +12,15 @@ const brand = {
 }
 
 const colors = {
-  grey: `${lighten(0.4, brand.primary)}`,
+  gray: `${lighten(0.4, brand.primary)}`,
+  gray_10: '#D3D3D3',
   black: '#000',
   white: '#fff',
-  bg_color: '#fff',
+  bg_color: '#fafafa',
   body_color: 'rgba(0,0,0,0.85)',
   link_color: brand.primary,
   link_color_hover: `${darken(0.15, brand.primary)}`,
+  red: '#E74C3C',
 }
 
 const theme = {

@@ -21,6 +21,31 @@ export const globalStyles = css`
       font-family: ${fonts.semiboldItalic};
     }
   }
+  input {
+    border-radius: 4px;
+    border: 1px solid ${theme.colors.gray_10};
+    padding: 5px 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    font-family: ${fonts.regular};
+    margin-top: 5px;
+    ::placeholder {
+      opacity: 0.4;
+    }
+  }
+
+  button {
+    border-radius: 4px;
+    background-color: ${theme.brand.primary};
+    border: none;
+    color: ${theme.colors.white};
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid ${theme.brand.primary};
+    :hover {
+      background: ${theme.colors.link_color_hover};
+    }
+  }
+
   pre {
     background-color: #061526 !important;
     border-radius: 4px;
