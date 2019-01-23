@@ -28,6 +28,7 @@ class SignUp extends React.Component {
   }
 
   async handleSubmit(values) {
+    this.setState({ submitted: true, loading: true })
     const response = await fetch(
       'https://app.convertkit.com/forms/834199/subscriptions',
       {
@@ -44,92 +45,98 @@ class SignUp extends React.Component {
 
     this.setState({
       submitted: true,
+      loading: false,
       response: responseJson,
     })
   }
 
   render() {
-    const { submitted, response } = this.state
+    const { submitted, loading, response } = this.state
+    const successful = response && response.status === 'success'
     return (
       <div>
         <h2>Join the Newsletter</h2>
-        <Formik
-          initialValues={{
-            email_address: '',
-            first_name: '',
-          }}
-          validationSchema={SubscribeSchema}
-          onSubmit={values => this.handleSubmit(values)}
-          render={({ errors, touched }) => (
-            <Form
-              css={css`
-                display: flex;
-                align-items: flex-end;
-                label:not(:first-of-type),
-                button {
-                  margin-left: 10px;
-                }
-                .field-error {
-                  display: block;
-                  position: absolute;
-                  color: ${theme.colors.red};
-                  font-size: 80%;
-                }
-                input,
-                label {
-                  width: 280px;
-                }
-                ${bpMaxSM} {
-                  flex-direction: column;
-                  align-items: center;
-                  width: auto;
-                  label {
-                    margin: 15px 0 !important;
-                  }
-                  button {
-                    margin-top: 20px;
-                  }
-                }
-              `}
-            >
-              <label htmlFor="first_name">
-                First Name
-                <Field
-                  aria-label="your first name"
-                  aria-required="true"
-                  name="first_name"
-                  placeholder="Jane"
-                  type="text"
-                />
-                <ErrorMessage
-                  name="first_name"
-                  component="span"
-                  className="field-error"
-                />
-              </label>
-              <label htmlFor="email">
-                Email
-                <Field
-                  aria-label="your email address"
-                  aria-required="true"
-                  name="email_address"
-                  placeholder="jane@acme.com"
-                  type="email"
-                />
-                <ErrorMessage
-                  name="email_address"
-                  component="span"
-                  className="field-error"
-                />
-              </label>
-              <button data-element="submit" type="submit">
-                Submit
-              </button>
-              {/* <Debug /> */}
-            </Form>
+        {loading && <div>Submitting...</div>}
+        {!submitted &&
+          !loading && (
+            <Formik
+              initialValues={{
+                email_address: '',
+                first_name: '',
+              }}
+              validationSchema={SubscribeSchema}
+              onSubmit={values => this.handleSubmit(values)}
+              render={({ errors, touched }) => (
+                <Form
+                  css={css`
+                    display: flex;
+                    align-items: flex-end;
+                    label:not(:first-of-type),
+                    button {
+                      margin-left: 10px;
+                    }
+                    .field-error {
+                      display: block;
+                      position: absolute;
+                      color: ${theme.colors.red};
+                      font-size: 80%;
+                    }
+                    input,
+                    label {
+                      width: 280px;
+                    }
+                    ${bpMaxSM} {
+                      flex-direction: column;
+                      align-items: center;
+                      width: auto;
+                      label {
+                        margin: 15px 0 !important;
+                      }
+                      button {
+                        margin-top: 20px;
+                      }
+                    }
+                  `}
+                >
+                  <label htmlFor="first_name">
+                    First Name
+                    <Field
+                      aria-label="your first name"
+                      aria-required="true"
+                      name="first_name"
+                      placeholder="Jane"
+                      type="text"
+                    />
+                    <ErrorMessage
+                      name="first_name"
+                      component="span"
+                      className="field-error"
+                    />
+                  </label>
+                  <label htmlFor="email">
+                    Email
+                    <Field
+                      aria-label="your email address"
+                      aria-required="true"
+                      name="email_address"
+                      placeholder="jane@acme.com"
+                      type="email"
+                    />
+                    <ErrorMessage
+                      name="email_address"
+                      component="span"
+                      className="field-error"
+                    />
+                  </label>
+                  <button data-element="submit" type="submit">
+                    Submit
+                  </button>
+                  {/* <Debug /> */}
+                </Form>
+              )}
+            />
           )}
-        />
-        {submitted && <PostSubmissionMessage response={response} />}
+        {submitted && !loading && <PostSubmissionMessage response={response} />}
       </div>
     )
   }
