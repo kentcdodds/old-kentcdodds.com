@@ -29,29 +29,38 @@ class SignUp extends React.Component {
 
   async handleSubmit(values) {
     this.setState({ submitted: true, loading: true })
-    const response = await fetch(
-      'https://app.convertkit.com/forms/834199/subscriptions',
-      {
-        method: 'post',
-        body: JSON.stringify(values, null, 2),
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+    try {
+      const response = await fetch(
+        'https://app.convertkit.com/forms/834199/subscriptions',
+        {
+          method: 'post',
+          body: JSON.stringify(values, null, 2),
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
         },
-      },
-    )
+      )
 
-    const responseJson = await response.json()
+      const responseJson = await response.json()
 
-    this.setState({
-      submitted: true,
-      loading: false,
-      response: responseJson,
-    })
+      this.setState({
+        submitted: true,
+        loading: false,
+        response: responseJson,
+        errorMessage: null,
+      })
+    } catch (error) {
+      this.setState({
+        submitted: false,
+        loading: false,
+        errorMessage: 'Something went wrong!',
+      })
+    }
   }
 
   render() {
-    const { submitted, loading, response } = this.state
+    const { submitted, loading, response, errorMessage } = this.state
     const successful = response && response.status === 'success'
     return (
       <div>
@@ -137,6 +146,7 @@ class SignUp extends React.Component {
             />
           )}
         {submitted && !loading && <PostSubmissionMessage response={response} />}
+        {errorMessage && <div>{errorMessage}</div>}
       </div>
     )
   }
