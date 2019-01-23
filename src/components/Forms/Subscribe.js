@@ -23,11 +23,18 @@ const SignUp = ({ subscribed = false }) => (
       }}
       validationSchema={SubscribeSchema}
       onSubmit={values => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-        }, 500)
+        // setTimeout(() => {
+        //   alert(JSON.stringify(values, null, 2))
+        // }, 500)
+        fetch('https://app.convertkit.com/forms/834199/subscriptions', {
+          method: 'post',
+          body: JSON.stringify(values, null, 2),
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+        })
       }}
-      // https://app.convertkit.com/forms/834199/subscriptions
       render={({ errors, touched }) => (
         <Form>
           <label htmlFor="first_name">First Name</label>
