@@ -1,7 +1,7 @@
 ---
-slug: demo-01
+slug: demo-05
 date: 2018-08-22
-title: 'do less better'
+title: 'Do Less Better'
 description: 'this post has all of the right fields'
 published: true
 ---

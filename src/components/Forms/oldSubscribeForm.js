@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
+import { bpMaxSM } from '../../lib/breakpoints'
 
 const SubscribeForm = () => (
   <div>

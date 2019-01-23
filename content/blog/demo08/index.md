@@ -1,7 +1,7 @@
 ---
-slug: demo-06
+slug: demo-01
 date: 2010-10-05
-title: 'Everybody Is Above Average'
+title: 'Lorem ipsum dolor sit amet'
 description: 'this post has all of the right fields'
 published: true
 ---

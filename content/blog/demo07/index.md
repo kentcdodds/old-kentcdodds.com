@@ -1,7 +1,7 @@
 ---
-slug: demo-04
-date: 2018-04-13
-title: 'thought leadering considered harmful'
+slug: demo-07
+date: 2010-10-05
+title: 'Lorem ipsum dolor sit amet'
 description: 'this post has all of the right fields'
 published: true
 ---

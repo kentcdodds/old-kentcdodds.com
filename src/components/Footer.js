@@ -3,7 +3,6 @@ import { css } from '@emotion/core'
 import Link from './Link'
 import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
 import { fonts } from '../lib/typography'
-
 import Container from './Container'
 
 import { Twitter, GitHub, LinkedIn } from '../images/social'

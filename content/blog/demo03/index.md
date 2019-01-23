@@ -1,7 +1,7 @@
 ---
 slug: demo-03
 date: 2018-02-01
-title: 'the one time and the one thing'
+title: 'The One Time And The One Thing'
 description: 'this post has all of the right fields'
 published: true
 ---

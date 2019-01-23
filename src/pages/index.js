@@ -1,132 +1,69 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
+import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Container from 'components/Container'
-import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
-import SubscribeForm from '../components/SubscribeForm'
+import { rhythm } from '../lib/typography'
+import theme from '../../config/theme'
 
 const Hero = () => (
   <section
     css={css`
       width: 100%;
-      background: #090909;
-      padding: 30px 0 50px 0;
-      height: 25vh;
+      background: ${theme.colors.grey};
+      padding: 20px 0 30px 0;
       display: flex;
-      ${bpMaxMD} {
-        padding: 20px 0 40px 0;
-        height: 30vh;
-      }
-      ${bpMaxSM} {
-        height: auto;
-        padding: 10px 0 30px 0;
-      }
+      margin-bottom: 20px;
     `}
   >
     <Container
-      maxWidth={920}
       css={css`
         display: flex;
         flex-direction: column;
       `}
     >
-      <div
+      <h1
         css={css`
-          display: flex;
-          flex-grow: 1;
-          ${bpMaxSM} {
-            flex-direction: column-reverse;
-            align-items: center;
-          }
+          position: relative;
+          z-index: 5;
+          line-height: 1.5;
+          margin: 0;
+          max-width: 440px;
+          text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+          color: black;
         `}
       >
-        <div
-          css={css`
-            display: flex;
-            align-items: center;
-            width: 50%;
-            flex-shrink: 0;
-            ${bpMaxSM} {
-              width: 100%;
-              margin-top: 30px;
-            }
-          `}
-        >
-          <h1
-            css={css`
-              color: #fff;
-              font-size: 2.1rem;
-              line-height: 1.5;
-              margin: 0;
-              max-width: 540px;
-              ${bpMaxSM} {
-                line-height: 1.4;
-                font-size: 1.6rem;
-              }
-            `}
-          >
-            Your blog says the things you want to say.
-          </h1>
-        </div>
-        <div
-          css={css`
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            ${bpMaxSM} {
-              justify-content: center;
-            }
-          `}
-        />
-      </div>
+        Your blog says the things you want to say.
+      </h1>
     </Container>
   </section>
 )
 
-export default function Index({ data: { site } }) {
+const PostTitle = styled.h2`
+  margin-bottom: ${rhythm(0.3)};
+`
+
+const Description = styled.p`
+  margin-bottom: ${rhythm(1.5)};
+`
+
+export default function Index({ data: { site, allMdx } }) {
   return (
-    <Layout site={site} dark>
+    <Layout site={site} headerBg={theme.colors.grey}>
       <Hero />
-      <section
-        css={css`
-          padding: 100px 0 20px 0;
-          ${bpMaxMD} {
-            padding: 40px 0;
-          }
-          ${bpMaxSM} {
-            padding: 20px 0;
-          }
-        `}
-      >
-        <Container maxWidth={920}>
-          <div
-            css={css`
-              margin-top: 50px;
-              ${bpMaxSM} {
-                margin-top: 50px;
-                border-top: 1px solid #f1f1f1;
-                padding-top: 30px;
-              }
-            `}
-          >
-            <Link to="/blog">There are things to see over here.</Link>
-            <div
-              css={css`
-                margin-top: 50px;
-                ${bpMaxSM} {
-                  margin-top: 50px;
-                  border-top: 1px solid #f1f1f1;
-                  padding-top: 30px;
-                }
-              `}
-            >
-              <SubscribeForm />
-            </div>
+      <Container>
+        {allMdx.edges.map(({ node: post }) => (
+          <div key={post.id}>
+            <Link to={post.frontmatter.slug}>
+              <PostTitle>{post.frontmatter.title}</PostTitle>
+            </Link>
+            <Description>{post.frontmatter.description}</Description>
           </div>
-        </Container>
-      </section>
+        ))}
+        <Link to="/blog">Show all blog posts</Link>
+      </Container>
     </Layout>
   )
 }
@@ -135,6 +72,45 @@ export const pageQuery = graphql`
   query {
     site {
       ...site
+      siteMetadata {
+        title
+      }
+    }
+    allMdx(
+      limit: 5
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { ne: false } } }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 285)
+          id
+          fields {
+            title
+            slug
+            date
+          }
+          parent {
+            ... on File {
+              sourceInstanceName
+            }
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            description
+            banner {
+              childImageSharp {
+                sizes(maxWidth: 720) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+            slug
+            keywords
+          }
+        }
+      }
     }
   }
 `

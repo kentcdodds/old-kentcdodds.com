@@ -1,7 +1,7 @@
 ---
 slug: demo-01
 date: 2017-01-01
-title: 'a lovely walk in the park'
+title: 'A Lovely Walk In The Park'
 description: 'this post has all of the right fields'
 published: true
 ---

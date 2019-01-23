@@ -1,7 +1,7 @@
 ---
 slug: demo-02
 date: 2018-01-01
-title: 'please, tell me more'
+title: 'Please, Tell Me More'
 description: 'this post has all of the right fields'
 published: true
 ---

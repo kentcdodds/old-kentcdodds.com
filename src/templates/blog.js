@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 import Container from 'components/Container'
-import { bpMaxMD } from '../lib/breakpoints'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
@@ -28,12 +27,7 @@ const Blog = ({
     <Layout site={site}>
       <SEO />
       <Container
-        maxWidth={920}
         css={css`
-          margin: 40px 0 0 0;
-          ${bpMaxMD} {
-            margin: 0;
-          }
           a,
           p {
             display: inline;
@@ -101,10 +95,10 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 285)
+          excerpt(pruneLength: 275)
           id
           fields {
             title
