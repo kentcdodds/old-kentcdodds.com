@@ -6,7 +6,11 @@ import Container from './Container'
 
 const Footer = ({ author }) => (
   <footer>
-    <Container>
+    <Container
+      css={css`
+        padding-top: 0;
+      `}
+    >
       <SubscribeForm />
       <br />
       <br />

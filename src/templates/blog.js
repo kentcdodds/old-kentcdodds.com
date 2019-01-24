@@ -48,7 +48,15 @@ const Blog = ({
           <div
             key={post.id}
             css={css`
-              margin-top: 50px;
+              :not(:first-of-type) {
+                margin-top: 80px;
+              }
+              :first-of-type {
+                margin-top: 40px;
+              }
+              .gatsby-image-wrapper {
+                max-width: 300px;
+              }
             `}
           >
             {post.frontmatter.banner && (
@@ -131,7 +139,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             banner {
               childImageSharp {
-                fluid(maxWidth: 720) {
+                fluid(maxWidth: 600) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }

@@ -17,11 +17,8 @@ module.exports = {
   googleAnalyticsID: '',
 
   // Manifest and Progress color
-  themeColor: '#7730ff',
+  themeColor: '#5348FF',
   backgroundColor: '#2b2e3c',
-
-  // Convertkit
-  convertkitFormId: '', // Your convertkit form id
 
   // Social component
   twitter: 'https://twitter.com/eggheadio/',

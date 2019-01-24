@@ -40,14 +40,14 @@ const Share = ({ url, title, twitterHandle }) => (
     <span>Share article</span>
     <TwitterShareButton
       url={url}
-      title={title}
+      quote={title}
       via={twitterHandle.split('@').join('')}
     >
       Twitter
     </TwitterShareButton>
     <FacebookShareButton
       url={url}
-      title={title}
+      quote={title}
       via={twitterHandle.split('@').join('')}
       css={css`
         cursor: pointer;

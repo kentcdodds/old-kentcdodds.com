@@ -5,10 +5,8 @@ import { css } from '@emotion/core'
 import theme from '../../../config/theme'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
-import config from '../../../config/website'
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
-// const FORM_ID = config.convertkitFormId
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
@@ -113,7 +111,6 @@ class SignUp extends React.Component {
                     flex-direction: column;
                     align-items: flex-start;
                     width: auto;
-
                     label,
                     input {
                       margin: 5px 0 0 0 !important;
@@ -121,7 +118,6 @@ class SignUp extends React.Component {
                       display: flex;
                       flex-direction: column;
                     }
-
                     button {
                       margin: 20px 0 0 0;
                     }
