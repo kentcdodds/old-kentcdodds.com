@@ -38,6 +38,12 @@ const Hero = () => (
         Your blog says the things you want to say.
       </h1>
     </Container>
+    <div
+      css={css`
+        height: 150px;
+        overflow: hidden;
+      `}
+    />
   </section>
 )
 
@@ -51,7 +57,7 @@ const PostTitle = styled.h2`
 `
 
 const Description = styled.p`
-  margin-bottom: ${rhythm(1.5)};
+  margin-bottom: 10px;
 `
 
 export default function Index({ data: { site, allMdx } }) {
@@ -68,14 +74,20 @@ export default function Index({ data: { site, allMdx } }) {
         `}
       >
         {allMdx.edges.map(({ node: post }) => (
-          <div key={post.id}>
+          <div
+            key={post.id}
+            css={css`
+              margin-bottom: 40px;
+            `}
+          >
             <Link to={post.frontmatter.slug}>
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
             <Description>{post.frontmatter.description}</Description>
+            <Link to={post.frontmatter.title}>Read Article →</Link>
           </div>
         ))}
-        <Link to="/blog">View all blog posts →</Link>
+        <Link to="/blog">View all blog posts</Link>
         <hr />
       </Container>
     </Layout>
