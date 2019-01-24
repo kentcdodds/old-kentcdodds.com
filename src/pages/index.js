@@ -84,7 +84,7 @@ export default function Index({ data: { site, allMdx } }) {
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
             <Description>{post.frontmatter.description}</Description>
-            <Link to={post.frontmatter.title}>Read Article →</Link>
+            <Link to={post.frontmatter.slug}>Read Article →</Link>
           </div>
         ))}
         <Link
