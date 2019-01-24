@@ -75,6 +75,7 @@ class SignUp extends React.Component {
           <h2
             css={css`
               margin-bottom: ${rhythm(1)};
+              margin-top: 0;
             `}
           >
             Join the Newsletter

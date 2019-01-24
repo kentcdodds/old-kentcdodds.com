@@ -3,7 +3,9 @@ import theme from '../../config/theme'
 import typography, { fonts } from '../lib/typography'
 
 const reset = css`
-
+form {
+  margin: 0;
+}
 ul, ol {
   list-style-position: inside;
   margin-left: 0;

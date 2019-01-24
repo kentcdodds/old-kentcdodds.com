@@ -1,5 +1,5 @@
 ---
-slug: demo-01
+slug: demo-09
 date: 2010-10-05
 title: 'Lorem ipsum dolor sit amet'
 description: 'Curabitur fringilla vel purus sit amet malesuada.'

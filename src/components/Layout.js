@@ -14,6 +14,20 @@ import config from '../../config/website'
 import Footer from '../components/Footer'
 
 export const globalStyles = css`
+  ${bpMaxSM} {
+    p,
+    em,
+    strong {
+      font-size: 90%;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+
   hr {
     margin: 50px 0;
     border: none;

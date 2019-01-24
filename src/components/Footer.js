@@ -10,6 +10,7 @@ const Footer = () => (
       <SubscribeForm />
       <br />
       <br />
+      <br />
       <Twitter />
       <GitHub />
     </Container>

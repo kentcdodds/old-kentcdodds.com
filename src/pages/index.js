@@ -43,6 +43,11 @@ const Hero = () => (
 
 const PostTitle = styled.h2`
   margin-bottom: ${rhythm(0.3)};
+  transition: ${theme.transition.ease};
+  :hover {
+    color: ${theme.brand.primary};
+    transition: ${theme.transition.ease};
+  }
 `
 
 const Description = styled.p`
@@ -71,6 +76,7 @@ export default function Index({ data: { site, allMdx } }) {
           </div>
         ))}
         <Link to="/blog">View all blog posts →</Link>
+        <hr />
       </Container>
     </Layout>
   )

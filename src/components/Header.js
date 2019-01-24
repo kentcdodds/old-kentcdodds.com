@@ -69,13 +69,6 @@ const Header = ({
           >
             Blog
           </Link>
-          <Link
-            to="/contact"
-            activeClassName="active"
-            aria-label="Go to contact form"
-          >
-            Contact us
-          </Link>
           */}
         </div>
       </nav>

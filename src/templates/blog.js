@@ -33,6 +33,11 @@ const Blog = ({
           p {
             display: inline;
           }
+          h2 {
+            a {
+              color: inherit;
+            }
+          }
           small {
             display: block;
             margin-bottom: 15px;
