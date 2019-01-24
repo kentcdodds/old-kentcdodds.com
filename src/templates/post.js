@@ -68,12 +68,13 @@ export default function Post({
         </Container>
         {/* <SubscribeForm /> */}
       </article>
-      <Container>
+      <Container noVerticalPadding>
         <Share
           url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
           title={title}
           twitterHandle={config.twitterHandle}
         />
+        <br />
       </Container>
     </Layout>
   )

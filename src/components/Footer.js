@@ -4,15 +4,33 @@ import SubscribeForm from './Forms/Subscribe'
 import { Twitter, GitHub, LinkedIn } from './Social'
 import Container from './Container'
 
-const Footer = () => (
+const Footer = ({ author }) => (
   <footer>
     <Container>
       <SubscribeForm />
       <br />
       <br />
       <br />
-      <Twitter />
-      <GitHub />
+      <div
+        css={css`
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        `}
+      >
+        <div
+          css={css`
+            font-size: 90%;
+            opacity: 0.6;
+          `}
+        >
+          {author && `${author}`} &#x40; {new Date().getFullYear()}
+        </div>
+        <div>
+          <Twitter />
+          <GitHub />
+        </div>
+      </div>
     </Container>
   </footer>
 )
