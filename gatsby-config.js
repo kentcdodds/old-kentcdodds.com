@@ -10,12 +10,13 @@ module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
     title: config.siteTitle,
+    twitterHandle: config.twitterHandle,
     description: config.siteDescription,
     keywords: ['Video Blogger'],
-    canonicalUrl: 'https://egghead.io',
+    canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     author: {
-      name: 'egghead.io',
+      name: config.author,
       minibio: `
         <strong>egghead</strong> is the premier place on the internet for 
         experienced developers to enhance their skills and stay current
@@ -23,12 +24,12 @@ module.exports = {
       `,
     },
     organization: {
-      name: 'egghead.io LLC',
-      url: 'https://egghead.io',
-      logo: 'https://egghead.io/android-chrome-512x512.png',
+      name: config.organization,
+      url: config.siteUrl,
+      logo: config.siteLogo,
     },
     social: {
-      twitter: '@eggheadio',
+      twitter: config.twitterHandle,
       fbAppID: '',
     },
   },

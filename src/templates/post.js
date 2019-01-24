@@ -7,18 +7,24 @@ import { css } from '@emotion/core'
 import Container from 'components/Container'
 import Layout from '../components/Layout'
 import { fonts } from '../lib/typography'
+import Share from '../components/Share'
+import config from '../../config/website'
 
 export default function Post({
   data: { site, mdx },
   pageContext: { next, prev },
 }) {
+  const author = mdx.frontmatter.author || config.author
+  const date = mdx.frontmatter.date
+  const title = mdx.frontmatter.title
+  const banner = mdx.frontmatter.banner
+
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
         css={css`
           width: 100%;
-          padding: 30px 0 50px 0;
           display: flex;
         `}
       >
@@ -26,24 +32,34 @@ export default function Post({
           <h1
             css={css`
               text-align: center;
+              margin-bottom: 20px;
             `}
           >
-            {mdx.frontmatter.title}
+            {title}
           </h1>
-          <h3
+          <div
             css={css`
-              text-align: center;
-              font-size: 15px;
-              opacity: 0.6;
-              font-family: ${fonts.regular}, sans-serif;
-              font-weight: normal;
+              display: flex;
+              justify-content: center;
+              margin-bottom: 20px;
+              h3,
+              span {
+                text-align: center;
+                font-size: 15px;
+                opacity: 0.6;
+                font-family: ${fonts.regular}, sans-serif;
+                font-weight: normal;
+                margin: 0 5px;
+              }
             `}
           >
-            {mdx.frontmatter.date}
-          </h3>
-          {mdx.frontmatter.banner && (
+            {author && <h3>{author}</h3>}
+            {author && <span>—</span>}
+            {date && <h3>{date}</h3>}
+          </div>
+          {banner && (
             <Img
-              sizes={mdx.frontmatter.banner.childImageSharp.sizes}
+              sizes={banner.childImageSharp.fluid}
               alt={site.siteMetadata.keywords.join(', ')}
             />
           )}
@@ -52,6 +68,13 @@ export default function Post({
         </Container>
         {/* <SubscribeForm /> */}
       </article>
+      <Container>
+        <Share
+          url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
+          title={title}
+          twitterHandle={config.twitterHandle}
+        />
+      </Container>
     </Layout>
   )
 }
@@ -65,10 +88,11 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        author
         banner {
           childImageSharp {
-            sizes(maxWidth: 900) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

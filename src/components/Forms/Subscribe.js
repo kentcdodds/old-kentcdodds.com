@@ -1,12 +1,14 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { Debug } from './Debug'
 import { css } from '@emotion/core'
 import theme from '../../../config/theme'
+import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
+import config from '../../../config/website'
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
+// const FORM_ID = config.convertkitFormId
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
@@ -16,7 +18,14 @@ const SubscribeSchema = Yup.object().shape({
 })
 
 const PostSubmissionMessage = ({ response }) => {
-  return <div>Thanks! You've been added to the list.</div>
+  return (
+    <div>
+      Thanks! {/* Double opt in */}
+      Please confirm your subscription and you'll be on your way.
+      {/* Single opt in
+      You've been added to the list. */}
+    </div>
+  )
 }
 
 class SignUp extends React.Component {
@@ -62,87 +71,116 @@ class SignUp extends React.Component {
 
     return (
       <div>
-        <h2>Join the Newsletter</h2>
-        {loading && <div>Submitting...</div>}
-        {!submitted &&
-          !loading && (
-            <Formik
-              initialValues={{
-                email_address: '',
-                first_name: '',
-              }}
-              validationSchema={SubscribeSchema}
-              onSubmit={values => this.handleSubmit(values)}
-              render={({ errors, touched }) => (
-                <Form
-                  css={css`
-                    display: flex;
-                    align-items: flex-end;
-                    label:not(:first-of-type),
-                    button {
-                      margin-left: 10px;
-                    }
-                    .field-error {
-                      display: block;
-                      position: absolute;
-                      color: ${theme.colors.red};
-                      font-size: 80%;
-                    }
-                    input,
-                    label {
-                      width: 280px;
-                    }
-                    ${bpMaxSM} {
+        {!successful && (
+          <h2
+            css={css`
+              margin-bottom: ${rhythm(1)};
+            `}
+          >
+            Join the Newsletter
+          </h2>
+        )}
+
+        {!successful && (
+          <Formik
+            initialValues={{
+              email_address: '',
+              first_name: '',
+            }}
+            validationSchema={SubscribeSchema}
+            onSubmit={values => this.handleSubmit(values)}
+            render={({ errors, touched }) => (
+              <Form
+                css={css`
+                  display: flex;
+                  align-items: flex-end;
+                  label:not(:first-of-type),
+                  button {
+                    margin-left: 10px;
+                  }
+                  .field-error {
+                    display: block;
+                    //position: absolute;
+                    color: ${theme.colors.red};
+                    font-size: 80%;
+                  }
+                  input,
+                  label {
+                    width: 100%;
+                  }
+                  ${bpMaxSM} {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: auto;
+
+                    label,
+                    input {
+                      margin: 5px 0 0 0 !important;
+                      width: 100%;
+                      display: flex;
                       flex-direction: column;
-                      align-items: center;
-                      width: auto;
-                      label {
-                        margin: 15px 0 !important;
-                      }
-                      button {
-                        margin-top: 20px;
-                      }
                     }
-                  `}
-                >
-                  <label htmlFor="first_name">
+
+                    button {
+                      margin: 20px 0 0 0;
+                    }
+                  }
+                `}
+              >
+                <label htmlFor="first_name">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
                     First Name
-                    <Field
-                      aria-label="your first name"
-                      aria-required="true"
-                      name="first_name"
-                      placeholder="Jane"
-                      type="text"
-                    />
                     <ErrorMessage
                       name="first_name"
                       component="span"
                       className="field-error"
                     />
-                  </label>
-                  <label htmlFor="email">
+                  </div>
+                  <Field
+                    aria-label="your first name"
+                    aria-required="false"
+                    name="first_name"
+                    placeholder="Jane"
+                    type="text"
+                  />
+                </label>
+                <label htmlFor="email">
+                  <div
+                    css={css`
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                    `}
+                  >
                     Email
-                    <Field
-                      aria-label="your email address"
-                      aria-required="true"
-                      name="email_address"
-                      placeholder="jane@acme.com"
-                      type="email"
-                    />
                     <ErrorMessage
                       name="email_address"
                       component="span"
                       className="field-error"
                     />
-                  </label>
-                  <button data-element="submit" type="submit">
-                    Submit
-                  </button>
-                  {/* <Debug /> */}
-                </Form>
-              )}
-            />
-          )}
+                  </div>
+                  <Field
+                    aria-label="your email address"
+                    aria-required="true"
+                    name="email_address"
+                    placeholder="jane@acme.com"
+                    type="email"
+                  />
+                </label>
+                <button data-element="submit" type="submit">
+                  {!loading && 'Submit'}
+                  {loading && 'Submitting...'}
+                </button>
+              </Form>
+            )}
+          />
+        )}
         {submitted && !loading && <PostSubmissionMessage response={response} />}
         {errorMessage && <div>{errorMessage}</div>}
       </div>

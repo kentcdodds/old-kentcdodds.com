@@ -9,10 +9,18 @@ import theme from '../../config/theme'
 import mdxComponents from './mdx'
 import Header from './Header'
 import reset from '../lib/reset'
-import { fonts } from '../lib/typography'
+import { fonts, rhythm } from '../lib/typography'
 import config from '../../config/website'
+import Footer from '../components/Footer'
 
 export const globalStyles = css`
+  hr {
+    margin: 50px 0;
+    border: none;
+    border-top: 1px solid ${theme.colors.gray};
+    background: none;
+  }
+
   em {
     font-family: ${fonts.regularItalic};
   }
@@ -23,7 +31,7 @@ export const globalStyles = css`
   }
   input {
     border-radius: 4px;
-    border: 1px solid ${theme.colors.gray_10};
+    border: 1px solid ${theme.colors.gray};
     padding: 5px 10px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     font-family: ${fonts.regular};
@@ -41,8 +49,11 @@ export const globalStyles = css`
     padding: 5px 10px;
     cursor: pointer;
     border: 1px solid ${theme.brand.primary};
+    transition: ${theme.transition.ease};
     :hover {
       background: ${theme.colors.link_color_hover};
+      border: 1px solid ${theme.colors.link_color_hover};
+      transition: ${theme.transition.ease};
     }
   }
 
@@ -75,7 +86,14 @@ export const globalStyles = css`
   ${reset};
 `
 
-export default ({ site, frontmatter = {}, children, dark, headerBg }) => {
+export default ({
+  site,
+  frontmatter = {},
+  children,
+  dark,
+  headerBg,
+  headerColor,
+}) => {
   const {
     title,
     description: siteDescription,
@@ -115,11 +133,12 @@ export default ({ site, frontmatter = {}, children, dark, headerBg }) => {
             siteTitle={site.siteMetadata.title}
             dark={dark}
             bgColor={headerBg}
+            headerColor={headerColor}
           />
           <MDXProvider components={mdxComponents}>
             <Fragment>{children}</Fragment>
           </MDXProvider>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Fragment>
     </ThemeProvider>

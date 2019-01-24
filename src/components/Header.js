@@ -6,7 +6,12 @@ import theme from '../../config/theme'
 
 import Container from './Container'
 
-const Header = ({ dark, bgColor = 'none', siteTitle }) => (
+const Header = ({
+  dark,
+  bgColor = 'none',
+  siteTitle,
+  headerColor = 'black',
+}) => (
   <header
     css={css`
       width: 100%;
@@ -23,8 +28,14 @@ const Header = ({ dark, bgColor = 'none', siteTitle }) => (
           display: flex;
           justify-content: space-between;
           align-items: center;
+          color: ${headerColor};
           a {
-            color: ${theme.colors.body_color};
+            color: ${headerColor ? headerColor : theme.colors.body_color};
+          }
+          a:hover {
+            color: ${headerColor === theme.colors.white
+              ? 'white'
+              : theme.colors.link_color_hover};
           }
         `}
       >

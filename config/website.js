@@ -3,11 +3,12 @@ module.exports = {
   siteTitle: 'My Blog', // Navigation and Site Title
   siteTitleAlt: 'The blog of an egghead creator', // Alternative Site title for SEO
   siteTitleShort: 'Starter Blog', // short_name for manifest
-  siteUrl: 'https://egghead.io/', // Domain of your site. No trailing slash!
+  siteUrl: 'https://your-site.io', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logo/egghead.png', // Used for SEO and manifest
+  siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription: 'This is where they post things!',
   author: 'egghead.io', // Author for schemaORGJSONLD
+  organization: 'egghead.io LLC',
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@eggheadio', // Twitter Username
@@ -18,4 +19,13 @@ module.exports = {
   // Manifest and Progress color
   themeColor: '#7730ff',
   backgroundColor: '#2b2e3c',
+
+  // Convertkit
+  convertkitFormId: '', // Your convertkit form id
+
+  // Social component
+  twitter: 'https://twitter.com/eggheadio/',
+  twitterHandle: '@eggheadio',
+  github: 'https://github.com/eggheadio/',
+  linkedin: '',
 }

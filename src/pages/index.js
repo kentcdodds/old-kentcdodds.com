@@ -11,11 +11,13 @@ import theme from '../../config/theme'
 const Hero = () => (
   <section
     css={css`
+      * {
+        color: ${theme.colors.white};
+      }
       width: 100%;
-      background: ${theme.colors.gray};
+      background: ${theme.brand.primary};
       padding: 20px 0 30px 0;
       display: flex;
-      margin-bottom: 20px;
     `}
   >
     <Container
@@ -30,9 +32,7 @@ const Hero = () => (
           z-index: 5;
           line-height: 1.5;
           margin: 0;
-          max-width: 440px;
-          text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
-          color: black;
+          max-width: ${rhythm(15)};
         `}
       >
         Your blog says the things you want to say.
@@ -51,9 +51,17 @@ const Description = styled.p`
 
 export default function Index({ data: { site, allMdx } }) {
   return (
-    <Layout site={site} headerBg={theme.colors.gray}>
+    <Layout
+      site={site}
+      headerColor={theme.colors.white}
+      headerBg={theme.brand.primary}
+    >
       <Hero />
-      <Container>
+      <Container
+        css={css`
+          padding-bottom: 0;
+        `}
+      >
         {allMdx.edges.map(({ node: post }) => (
           <div key={post.id}>
             <Link to={post.frontmatter.slug}>
@@ -62,7 +70,7 @@ export default function Index({ data: { site, allMdx } }) {
             <Description>{post.frontmatter.description}</Description>
           </div>
         ))}
-        <Link to="/blog">Show all blog posts</Link>
+        <Link to="/blog">View all blog posts →</Link>
       </Container>
     </Layout>
   )

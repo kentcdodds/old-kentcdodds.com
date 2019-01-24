@@ -6,6 +6,7 @@ import Container from 'components/Container'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
+import { fonts } from '../lib/typography'
 
 const Blog = ({
   data: { site, allMdx },
@@ -39,19 +40,29 @@ const Blog = ({
         `}
       >
         {posts.map(({ node: post }) => (
-          <div key={post.id}>
+          <div
+            key={post.id}
+            css={css`
+              margin-top: 50px;
+            `}
+          >
             {post.frontmatter.banner && (
-              <Img sizes={post.frontmatter.banner.childImageSharp.sizes} />
+              <Link
+                aria-label={`View "${post.frontmatter.title}" article`}
+                to={`/${post.fields.slug}`}
+              >
+                <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
+              </Link>
             )}
             <h2
               css={css`
-                margin-top: 50px;
+                margin-top: 30px;
                 margin-bottom: 10px;
               `}
             >
               <Link
                 aria-label={`View "${post.frontmatter.title}" article`}
-                to={post.frontmatter.slug}
+                to={`/${post.fields.slug}`}
               >
                 {post.frontmatter.title}
               </Link>
@@ -62,7 +73,7 @@ const Blog = ({
               to={`/${post.fields.slug}`}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Continue Reading →
+              Read Article →
             </Link>
           </div>
         ))}
@@ -98,7 +109,7 @@ export const pageQuery = graphql`
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 275)
+          excerpt(pruneLength: 255)
           id
           fields {
             title
@@ -115,8 +126,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             banner {
               childImageSharp {
-                sizes(maxWidth: 720) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 720) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
