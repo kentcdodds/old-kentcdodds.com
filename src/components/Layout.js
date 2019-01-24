@@ -54,7 +54,10 @@ export const globalStyles = css`
       opacity: 0.4;
     }
   }
-
+  .gatsby-resp-image-image {
+    background: none !important;
+    box-shadow: 0;
+  }
   button {
     border-radius: 4px;
     background-color: ${theme.brand.primary};

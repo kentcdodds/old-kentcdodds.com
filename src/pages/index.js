@@ -87,7 +87,16 @@ export default function Index({ data: { site, allMdx } }) {
             <Link to={post.frontmatter.title}>Read Article →</Link>
           </div>
         ))}
-        <Link to="/blog">View all blog posts</Link>
+        <Link
+          to="/blog"
+          css={css`
+            border-radius: 4px;
+            padding: 12px 12px;
+            background: ${theme.colors.primary_light};
+          `}
+        >
+          View all blog posts
+        </Link>
         <hr />
       </Container>
     </Layout>
