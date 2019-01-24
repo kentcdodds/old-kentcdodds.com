@@ -24,7 +24,7 @@ const Footer = ({ author }) => (
             opacity: 0.6;
           `}
         >
-          {author && `${author}`} &#x40; {new Date().getFullYear()}
+          {author && `${author} \u00A9 ${new Date().getFullYear()}`}
         </div>
         <div>
           <Twitter />
