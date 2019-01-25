@@ -9,6 +9,7 @@ import Layout from '../components/Layout'
 import { fonts } from '../lib/typography'
 import Share from '../components/Share'
 import config from '../../config/website'
+import { bpMaxSM } from '../lib/breakpoints'
 
 export default function Post({
   data: { site, mdx },
@@ -58,10 +59,19 @@ export default function Post({
             {date && <h3>{date}</h3>}
           </div>
           {banner && (
-            <Img
-              sizes={banner.childImageSharp.fluid}
-              alt={site.siteMetadata.keywords.join(', ')}
-            />
+            <div
+              css={css`
+                padding: 30px;
+                ${bpMaxSM} {
+                  padding: 0;
+                }
+              `}
+            >
+              <Img
+                sizes={banner.childImageSharp.fluid}
+                alt={site.siteMetadata.keywords.join(', ')}
+              />
+            </div>
           )}
           <br />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
