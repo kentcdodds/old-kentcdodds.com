@@ -65,7 +65,7 @@ const Header = ({
           <Link
             to="/blog"
             activeClassName="active"
-            aria-label="Read more about moon highway"
+            aria-label="View blog page"
           >
             Blog
           </Link>

@@ -14,6 +14,11 @@ import config from '../../config/website'
 import Footer from '../components/Footer'
 
 export const globalStyles = css`
+  .button-secondary {
+    border-radius: 4px;
+    padding: 12px 12px;
+    background: ${theme.colors.primary_light};
+  }
   ${bpMaxSM} {
     p,
     em,
@@ -141,6 +146,7 @@ export default ({
             ]}
           >
             <html lang="en" />
+            <noscript>This site runs best with JavaScript enabled.</noscript>
           </Helmet>
           <Header
             siteTitle={site.siteMetadata.title}

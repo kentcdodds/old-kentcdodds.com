@@ -81,23 +81,28 @@ export default function Index({ data: { site, allMdx } }) {
               margin-bottom: 40px;
             `}
           >
-            <Link to={post.frontmatter.slug}>
+            <Link
+              to={post.frontmatter.slug}
+              aria-label={`View ${post.frontmatter.title}`}
+            >
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
             <Description>
               {post.frontmatter.description}{' '}
-              <Link to={post.frontmatter.slug}>Read Article →</Link>
+              <Link
+                to={post.frontmatter.slug}
+                aria-label={`View ${post.frontmatter.title}`}
+              >
+                Read Article →
+              </Link>
             </Description>
             <span />
           </div>
         ))}
         <Link
           to="/blog"
-          css={css`
-            border-radius: 4px;
-            padding: 12px 12px;
-            background: ${theme.colors.primary_light};
-          `}
+          aria-label="Visit blog page"
+          className="button-secondary"
         >
           View all articles
         </Link>

@@ -61,7 +61,7 @@ const Blog = ({
           >
             {post.frontmatter.banner && (
               <Link
-                aria-label={`View "${post.frontmatter.title}" article`}
+                aria-label={`View ${post.frontmatter.title} article`}
                 to={`/${post.fields.slug}`}
               >
                 <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
@@ -74,7 +74,7 @@ const Blog = ({
               `}
             >
               <Link
-                aria-label={`View "${post.frontmatter.title}" article`}
+                aria-label={`View ${post.frontmatter.title} article`}
                 to={`/${post.fields.slug}`}
               >
                 {post.frontmatter.title}
@@ -97,12 +97,12 @@ const Blog = ({
         />
         <div>
           {nextPagePath && (
-            <Link to={nextPagePath} aria-label="view next page">
+            <Link to={nextPagePath} aria-label="View next page">
               Next Page →
             </Link>
           )}
           {previousPagePath && (
-            <Link to={previousPagePath} aria-label="view previous page">
+            <Link to={previousPagePath} aria-label="View previous page">
               ← Previous Page
             </Link>
           )}

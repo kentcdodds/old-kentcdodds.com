@@ -17,6 +17,7 @@ export const Twitter = ({
         color: ${theme.brand.primary};
       }
     `}
+    aria-label="Visit my Twitter"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +47,7 @@ export const LinkedIn = ({
         color: ${theme.brand.primary};
       }
     `}
+    aria-label="Visit my LinkedIn"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -74,6 +76,7 @@ export const GitHub = ({
         color: ${theme.brand.primary};
       }
     `}
+    aria-label="Visit my GitHub"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
