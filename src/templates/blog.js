@@ -29,6 +29,7 @@ const Blog = ({
     <Layout site={site}>
       <SEO />
       <Container
+        noVerticalPadding
         css={css`
           a,
           p {
@@ -48,7 +49,7 @@ const Blog = ({
             key={post.id}
             css={css`
               :not(:first-of-type) {
-                margin-top: 40px;
+                margin-top: 20px;
                 ${bpMaxSM} {
                   margin-top: 20px;
                 }
@@ -56,7 +57,7 @@ const Blog = ({
               :first-of-type {
                 margin-top: 20px;
                 ${bpMaxSM} {
-                  margin-top: 0;
+                  margin-top: 20px;
                 }
               }
               .gatsby-image-wrapper {
@@ -73,7 +74,7 @@ const Blog = ({
             {post.frontmatter.banner && (
               <div
                 css={css`
-                  padding: 40px 40px 20px 40px;
+                  padding: 60px 60px 40px 60px;
                   ${bpMaxSM} {
                     padding: 20px;
                   }
@@ -132,7 +133,7 @@ const Blog = ({
         </div>
         <hr
           css={css`
-            margin: 50px 0 0 0;
+            margin: 50px 0;
           `}
         />
       </Container>
