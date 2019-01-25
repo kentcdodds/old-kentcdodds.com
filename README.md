@@ -12,13 +12,12 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Prism.js: Syntax Highlighting
 - Pagination
 - Emotion
-- Self-hosted fonts - Inter UI
 - Typography.js
+- Self-hosted fonts (Inter UI)(https://rsms.me/inter/)
 - Social media share buttons
-- Config files
-  - Site - define all the site settings in one file
-  - Theme - change global colors easily
-- Newsletter subscribe form - for ConvertKit, made with Formik and Yup
+- Site & Theme config files
+- ConvertKit subscribe form (Formik and Yup)
+- Placeholder illustrations by [Katerina Limpitsouni](https://twitter.com/ninalimpi) from [undraw.co](https://undraw.co/)
 
 ## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
 
