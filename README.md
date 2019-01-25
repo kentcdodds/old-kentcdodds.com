@@ -12,6 +12,13 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Prism.js: Syntax Highlighting
 - Pagination
 - Emotion
+- Self-hosted fonts - Inter UI
+- Typography.js
+- Social media share buttons
+- Config files
+  - Site - define all the site settings in one file
+  - Theme - change global colors easily
+- Newsletter subscribe form - for ConvertKit, made with Formik and Yup
 
 ## Setup
 
