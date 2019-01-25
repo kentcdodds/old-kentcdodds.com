@@ -6,6 +6,8 @@ Lot's of nice pieces are also borrowed from Jason Lengstorf https://github.com/j
 
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
 
+## [demo → ](https://egghead-gatsby-starter.netlify.com/)
+
 ## Features
 
 - MDX: JavaScript/React in Markdown
