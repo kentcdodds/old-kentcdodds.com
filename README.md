@@ -13,7 +13,7 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Pagination
 - Emotion
 - Typography.js
-- Self-hosted fonts [Inter UI](https://rsms.me/inter/)
+- Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
 - Social media share buttons
 - Site & Theme config files
 - ConvertKit subscribe form (Formik and Yup)
