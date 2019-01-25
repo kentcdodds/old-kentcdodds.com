@@ -99,7 +99,7 @@ export default function Index({ data: { site, allMdx } }) {
             background: ${theme.colors.primary_light};
           `}
         >
-          View all blog posts
+          View all articles
         </Link>
         <hr />
       </Container>
