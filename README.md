@@ -6,8 +6,6 @@ Lot's of nice pieces are also borrowed from Jason Lengstorf https://github.com/j
 
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
 
-## [demo → ](https://egghead-gatsby-starter.netlify.com/)
-
 ## Features
 
 - MDX: JavaScript/React in Markdown
@@ -21,6 +19,8 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
   - Site - define all the site settings in one file
   - Theme - change global colors easily
 - Newsletter subscribe form - for ConvertKit, made with Formik and Yup
+
+## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
 
 ## Setup
 

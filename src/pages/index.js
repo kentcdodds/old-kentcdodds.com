@@ -88,7 +88,7 @@ export default function Index({ data: { site, allMdx } }) {
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
             <Description>
-              {post.frontmatter.description}{' '}
+              {post.excerpt}{' '}
               <Link
                 to={post.frontmatter.slug}
                 aria-label={`View ${post.frontmatter.title}`}
@@ -127,7 +127,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 285)
+          excerpt(pruneLength: 190)
           id
           fields {
             title

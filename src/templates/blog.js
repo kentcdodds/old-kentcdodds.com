@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import { fonts } from '../lib/typography'
+import { bpMaxSM } from '../lib/breakpoints'
 
 const Blog = ({
   data: { site, allMdx },
@@ -31,7 +32,6 @@ const Blog = ({
         css={css`
           a,
           p {
-            display: inline;
           }
           h2 {
             a {
@@ -40,7 +40,6 @@ const Blog = ({
           }
           small {
             display: block;
-            margin-bottom: 15px;
           }
         `}
       >
@@ -49,23 +48,44 @@ const Blog = ({
             key={post.id}
             css={css`
               :not(:first-of-type) {
-                margin-top: 80px;
+                margin-top: 40px;
+                ${bpMaxSM} {
+                  margin-top: 20px;
+                }
               }
               :first-of-type {
-                margin-top: 40px;
+                margin-top: 20px;
+                ${bpMaxSM} {
+                  margin-top: 0;
+                }
               }
               .gatsby-image-wrapper {
-                max-width: 300px;
               }
+              background: white;
+              padding: 40px;
+              ${bpMaxSM} {
+                padding: 20px;
+              }
+              display: flex;
+              flex-direction: column;
             `}
           >
             {post.frontmatter.banner && (
-              <Link
-                aria-label={`View ${post.frontmatter.title} article`}
-                to={`/${post.fields.slug}`}
+              <div
+                css={css`
+                  padding: 40px 40px 20px 40px;
+                  ${bpMaxSM} {
+                    padding: 20px;
+                  }
+                `}
               >
-                <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
-              </Link>
+                <Link
+                  aria-label={`View ${post.frontmatter.title} article`}
+                  to={`/${post.fields.slug}`}
+                >
+                  <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
+                </Link>
+              </div>
             )}
             <h2
               css={css`
@@ -80,8 +100,14 @@ const Blog = ({
                 {post.frontmatter.title}
               </Link>
             </h2>
-            <small>{post.frontmatter.date}</small>
-            <p>{post.excerpt}</p>{' '}
+            {/* <small>{post.frontmatter.date}</small> */}
+            <p
+              css={css`
+                margin-top: 10px;
+              `}
+            >
+              {post.excerpt}
+            </p>{' '}
             <Link
               to={`/${post.fields.slug}`}
               aria-label={`view "${post.frontmatter.title}" article`}
@@ -90,11 +116,8 @@ const Blog = ({
             </Link>
           </div>
         ))}
-        <hr
-          css={css`
-            margin: 50px 0;
-          `}
-        />
+        <br />
+        <br />
         <div>
           {nextPagePath && (
             <Link to={nextPagePath} aria-label="View next page">
@@ -107,6 +130,11 @@ const Blog = ({
             </Link>
           )}
         </div>
+        <hr
+          css={css`
+            margin: 50px 0 0 0;
+          `}
+        />
       </Container>
     </Layout>
   )
@@ -122,7 +150,7 @@ export const pageQuery = graphql`
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 255)
+          excerpt(pruneLength: 300)
           id
           fields {
             title
