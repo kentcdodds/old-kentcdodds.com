@@ -27,14 +27,12 @@ export const globalStyles = css`
       font-size: 24px;
     }
   }
-
   hr {
     margin: 50px 0;
     border: none;
     border-top: 1px solid ${theme.colors.gray};
     background: none;
   }
-
   em {
     font-family: ${fonts.regularItalic};
   }
@@ -73,16 +71,13 @@ export const globalStyles = css`
       transition: ${theme.transition.ease};
     }
   }
-
   pre {
     background-color: #061526 !important;
     border-radius: 4px;
     font-size: 16px;
     padding: 10px;
-    ${bpMaxSM} {
-      padding: 10px;
-    }
     overflow-x: auto;
+    white-space: nowrap;
     /* Track */
     ::-webkit-scrollbar {
       width: 100%;

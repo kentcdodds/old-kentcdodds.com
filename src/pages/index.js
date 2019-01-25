@@ -58,6 +58,7 @@ const PostTitle = styled.h2`
 
 const Description = styled.p`
   margin-bottom: 10px;
+  display: inline-block;
 `
 
 export default function Index({ data: { site, allMdx } }) {
@@ -83,8 +84,11 @@ export default function Index({ data: { site, allMdx } }) {
             <Link to={post.frontmatter.slug}>
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
-            <Description>{post.frontmatter.description}</Description>
-            <Link to={post.frontmatter.slug}>Read Article →</Link>
+            <Description>
+              {post.frontmatter.description}{' '}
+              <Link to={post.frontmatter.slug}>Read Article →</Link>
+            </Description>
+            <span />
           </div>
         ))}
         <Link

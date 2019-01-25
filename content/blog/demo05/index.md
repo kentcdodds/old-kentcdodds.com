@@ -2,7 +2,7 @@
 slug: demo-05
 date: 2018-08-22
 title: 'Do Less Better'
-description: 'Vestibulum quis bibendum nulla, dignissim faucibus orci.'
+description: 'Vestibulum quis bibendum nulla, dignissim faucibus orci. Sed purus nisl, hendrerit id suscipit sit amet.'
 published: true
 banner: './banner.png'
 ---
