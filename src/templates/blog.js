@@ -3,10 +3,11 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
 import Container from 'components/Container'
-import { bpMaxMD } from '../lib/breakpoints'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
+import { fonts } from '../lib/typography'
+import { bpMaxSM } from '../lib/breakpoints'
 
 const Blog = ({
   data: { site, allMdx },
@@ -28,67 +29,113 @@ const Blog = ({
     <Layout site={site}>
       <SEO />
       <Container
-        maxWidth={920}
+        noVerticalPadding
         css={css`
-          margin: 40px 0 0 0;
-          ${bpMaxMD} {
-            margin: 0;
-          }
           a,
           p {
-            display: inline;
+          }
+          h2 {
+            a {
+              color: inherit;
+            }
           }
           small {
             display: block;
-            margin-bottom: 15px;
           }
         `}
       >
         {posts.map(({ node: post }) => (
-          <div key={post.id}>
+          <div
+            key={post.id}
+            css={css`
+              :not(:first-of-type) {
+                margin-top: 20px;
+                ${bpMaxSM} {
+                  margin-top: 20px;
+                }
+              }
+              :first-of-type {
+                margin-top: 20px;
+                ${bpMaxSM} {
+                  margin-top: 20px;
+                }
+              }
+              .gatsby-image-wrapper {
+              }
+              background: white;
+              padding: 40px;
+              ${bpMaxSM} {
+                padding: 20px;
+              }
+              display: flex;
+              flex-direction: column;
+            `}
+          >
             {post.frontmatter.banner && (
-              <Img sizes={post.frontmatter.banner.childImageSharp.sizes} />
+              <div
+                css={css`
+                  padding: 60px 60px 40px 60px;
+                  ${bpMaxSM} {
+                    padding: 20px;
+                  }
+                `}
+              >
+                <Link
+                  aria-label={`View ${post.frontmatter.title} article`}
+                  to={`/${post.fields.slug}`}
+                >
+                  <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
+                </Link>
+              </div>
             )}
             <h2
               css={css`
-                margin-top: 50px;
+                margin-top: 30px;
                 margin-bottom: 10px;
               `}
             >
               <Link
-                aria-label={`View "${post.frontmatter.title}" article`}
-                to={post.frontmatter.slug}
+                aria-label={`View ${post.frontmatter.title} article`}
+                to={`/${post.fields.slug}`}
               >
                 {post.frontmatter.title}
               </Link>
             </h2>
-            <small>{post.frontmatter.date}</small>
-            <p>{post.excerpt}</p>{' '}
+            {/* <small>{post.frontmatter.date}</small> */}
+            <p
+              css={css`
+                margin-top: 10px;
+              `}
+            >
+              {post.excerpt}
+            </p>{' '}
             <Link
               to={`/${post.fields.slug}`}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Continue Reading →
+              Read Article →
             </Link>
           </div>
         ))}
+        <br />
+        <br />
+        <div>
+          {nextPagePath && (
+            <Link to={nextPagePath} aria-label="View next page">
+              Next Page →
+            </Link>
+          )}
+          {previousPagePath && (
+            <Link to={previousPagePath} aria-label="View previous page">
+              ← Previous Page
+            </Link>
+          )}
+        </div>
         <hr
           css={css`
             margin: 50px 0;
           `}
         />
-        <div>
-          {nextPagePath && (
-            <Link to={nextPagePath} aria-label="view next page">
-              Next Page →
-            </Link>
-          )}
-          {previousPagePath && (
-            <Link to={previousPagePath} aria-label="view previous page">
-              ← Previous Page
-            </Link>
-          )}
-        </div>
       </Container>
     </Layout>
   )
@@ -101,10 +148,10 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 285)
+          excerpt(pruneLength: 300)
           id
           fields {
             title
@@ -121,8 +168,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             banner {
               childImageSharp {
-                sizes(maxWidth: 720) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

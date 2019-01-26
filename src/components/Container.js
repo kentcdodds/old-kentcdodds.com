@@ -1,22 +1,25 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { bpMaxSM, bpMaxMD } from 'lib/breakpoints'
+import { bpMaxSM } from 'lib/breakpoints'
 
 const Container = props => {
-  const { maxWidth = 900, noPadding = false, ...restProps } = props
+  const {
+    maxWidth = 600,
+    noHorizontalPadding = false,
+    noVerticalPadding = false,
+    ...restProps
+  } = props
   return (
     <div
       css={css`
         width: 100%;
         margin: 0 auto;
-        max-width: ${maxWidth + (noPadding ? 0 : 80)}px;
-        padding: 0 ${noPadding ? 0 : '40px'};
-        ${bpMaxMD} {
-          padding: 0 ${noPadding ? 0 : '80px'};
-        }
+        max-width: ${maxWidth + (noHorizontalPadding ? 0 : 80)}px;
+        padding: ${noVerticalPadding ? 0 : '40'}px
+          ${noHorizontalPadding ? 0 : '40'}px;
         ${bpMaxSM} {
-          max-width: ${maxWidth + (noPadding ? 0 : 80)}px;
-          padding: 0 ${noPadding ? 0 : '20px'};
+          padding: ${noVerticalPadding ? 0 : '20'}px
+            ${noHorizontalPadding ? 0 : '20'}px;
         }
       `}
       {...restProps}

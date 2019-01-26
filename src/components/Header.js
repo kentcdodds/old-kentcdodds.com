@@ -2,34 +2,45 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { bpMaxSM } from '../lib/breakpoints'
+import theme from '../../config/theme'
 
 import Container from './Container'
 
-const Header = ({ dark }) => (
+const Header = ({
+  dark,
+  bgColor = 'none',
+  siteTitle,
+  headerColor = 'black',
+}) => (
   <header
     css={css`
-      position: relative;
-      z-index: 999;
       width: 100%;
       flex-shrink: 0;
       background: none;
       padding: 30px 0 0 0;
-      ${bpMaxSM} {
-        padding: 20px 0 0 0;
-      }
-      background: ${dark ? '#090909' : 'none'};
+      background: ${dark ? '#090909' : `${bgColor}` || 'none'};
     `}
   >
-    <Container>
+    <Container noVerticalPadding>
       <nav
         css={css`
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          color: ${headerColor};
+          a {
+            color: ${headerColor ? headerColor : theme.colors.body_color};
+          }
+          a:hover {
+            color: ${headerColor === theme.colors.white
+              ? 'white'
+              : theme.colors.link_color_hover};
+          }
         `}
       >
-        <Link to="/" aria-label="go to homepage">
-          home
+        <Link to="/" aria-label="go to homepage" activeClassName="active">
+          {siteTitle}
         </Link>
         <div
           css={css`
@@ -50,20 +61,15 @@ const Header = ({ dark }) => (
             }
           `}
         >
+          {/*
           <Link
-            to="/about"
+            to="/blog"
             activeClassName="active"
-            aria-label="Read more about moon highway"
+            aria-label="View blog page"
           >
-            About
+            Blog
           </Link>
-          <Link
-            to="/contact"
-            activeClassName="active"
-            aria-label="Go to contact form"
-          >
-            Contact us
-          </Link>
+          */}
         </div>
       </nav>
     </Container>
@@ -71,3 +77,13 @@ const Header = ({ dark }) => (
 )
 
 export default Header
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

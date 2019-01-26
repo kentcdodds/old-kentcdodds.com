@@ -1,18 +1,22 @@
+const config = require('./config/website')
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  pathPrefix: '/',
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: 'https://egghead.io/',
-    title: 'The blog of an egghead creator',
-    description: 'This is where they post things!',
+    siteUrl: config.siteUrl + pathPrefix,
+    title: config.siteTitle,
+    twitterHandle: config.twitterHandle,
+    description: config.siteDescription,
     keywords: ['Video Blogger'],
-    canonicalUrl: 'https://egghead.io',
-    image: 'https://egghead.io/images/egghead.png',
+    canonicalUrl: config.siteUrl,
+    image: config.siteLogo,
     author: {
-      name: 'egghead.io',
+      name: config.author,
       minibio: `
         <strong>egghead</strong> is the premier place on the internet for 
         experienced developers to enhance their skills and stay current
@@ -20,12 +24,12 @@ module.exports = {
       `,
     },
     organization: {
-      name: 'egghead.io LLC',
-      url: 'https://egghead.io',
-      logo: 'https://egghead.io/android-chrome-512x512.png',
+      name: config.organization,
+      url: config.siteUrl,
+      logo: config.siteLogo,
     },
     social: {
-      twitter: '@eggheadio',
+      twitter: config.twitterHandle,
       fbAppID: '',
     },
   },
@@ -45,6 +49,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
+              backgroundColor: '#fafafa',
               maxWidth: 1035,
               sizeByPixelDensity: true,
             },
@@ -60,13 +65,25 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Video Blogger',
-        short_name: 'EGGcreator',
-        start_url: '/',
-        background_color: '#fff',
-        theme_color: '#525dce',
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'standalone',
-        icon: 'assets/logo.png',
+        icons: [
+          {
+            src: '/favicons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/favicons/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
       },
     },
     {

@@ -1,8 +1,8 @@
 ---
-slug: demo-01
-date: 2017-01-01
-title: 'A Lovely Walk In The Park'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie leo ut sodales porta. Vivamus pharetra risus ac fermentum faucibus. Nam in sodales ex.'
+slug: demo-08
+date: 2010-10-05
+title: 'Lorem ipsum dolor sit amet'
+description: 'Ut elementum urna quis ex porta, eu porta ante porta. Curabitur a lectus fringilla, condimentum sem eu, efficitur ligula.'
 published: true
 banner: './banner.png'
 ---
