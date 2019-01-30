@@ -79,19 +79,18 @@ to, 100% {
   transform: scale(1, 1) rotate(0) skew(0);
 }
 `
-
 const TextFadeIn = keyframes`
 from, 0% {
     opacity: 0;
-    transform: rotate(-20deg);
+    //transform: rotate(-20deg);
 }
 5% {
   opacity: 0;
-    transform: rotate(-20deg);
+    //transform: rotate(-20deg);
 }
 to, 100% {
     opacity: 1;
-    transform: rotate(0);
+    //transform: rotate(0);
 }
 `
 
@@ -154,7 +153,7 @@ const Illustration = (
         <rect id="welcome-a" width="200" height="100" />
         <radialGradient
           id="welcome-c"
-          r="76.92%"
+          r="60%"
           fx="50%"
           fy="50%"
           gradientTransform="matrix(.52439 0 0 .30542 .238 .347)"
@@ -209,13 +208,12 @@ const Illustration = (
             stroke="#FFF"
             opacity="0.5"
             rx="3"
-            //strokeDasharray="5 2"
           />
           <text
             fill="#FFF"
-            font-family={fonts.regular}
-            font-size="14.3"
-            font-weight="500"
+            fontFamily={fonts.regular}
+            fontSize="14.3"
+            fontWeight="500"
           >
             <tspan x="13.713" y="39">
               WELCOME
