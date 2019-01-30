@@ -18,10 +18,8 @@ const SubscribeSchema = Yup.object().shape({
 const PostSubmissionMessage = ({ response }) => {
   return (
     <div>
-      Thanks! {/* Double opt in */}
-      Please confirm your subscription and you'll be on your way.
-      {/* Single opt in
-      You've been added to the list. */}
+      <h4>One last thing!</h4>
+      Please check your email to confirm subscription and you'll be on your way.
     </div>
   )
 }
