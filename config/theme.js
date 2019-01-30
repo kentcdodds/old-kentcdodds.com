@@ -21,7 +21,8 @@ const colors = {
   body_color: 'rgba(0,0,0,0.85)',
   link_color: brand.primary,
   link_color_hover: `${darken(0.07, brand.primary)}`,
-  red: '#E74C3C',
+  red: '#E86C60',
+  green: '#29B573',
 }
 
 const theme = {
