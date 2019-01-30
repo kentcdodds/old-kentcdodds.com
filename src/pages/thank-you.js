@@ -13,7 +13,7 @@ export default ({ data: { allMdx } }) => (
     {allMdx.totalCount >= 1 && (
       <div>
         {allMdx.edges.map(({ node: post }) => (
-          <Link to={post.frontmatter.slug}>
+          <Link to={`/${post.frontmatter.slug}`}>
             <h4>{post.frontmatter.title}</h4>
           </Link>
         ))}

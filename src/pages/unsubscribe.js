@@ -9,7 +9,8 @@ export default () => (
     <div>{Illustration}</div>
     <h2>I’m sorry to see you go!</h2>
     <p>
-      <Link to="#">Click here</Link> to unsubscribe.
+      <Link to="#">Click here</Link> to remove yourself from all future
+      mailings.
     </p>
   </Center>
 )
@@ -35,7 +36,7 @@ const Center = styled.div`
   p {
     font-family: ${fonts.regular};
     font-weight: normal;
-    max-width: 400px;
+    max-width: 310px;
   }
   h2 {
     animation: ${FadeIn} 500ms ease-in-out 1;
@@ -43,6 +44,9 @@ const Center = styled.div`
   p {
     padding-top: 10px;
     animation: ${FadeIn} 800ms ease-in-out 1;
+  }
+  a {
+    color: inherit !important;
   }
 `
 
@@ -59,7 +63,7 @@ from, 0% {
 }
 to, 100% {
     opacity: 1;
-    transform: translate(18px, 70px);
+    transform: translate(18px, 75px);
 }
 `
 
@@ -140,7 +144,7 @@ export const Illustration = (
       }
       .mail {
         animation: ${MailSlide} 4s linear infinite;
-        transform: translate(18px, 70px);
+        transform: translate(18px, 75px);
         transform-origin: center center;
       }
       .light {
