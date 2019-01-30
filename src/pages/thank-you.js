@@ -214,11 +214,11 @@ const Illustration = (
           <text
             fill="#FFF"
             font-family={fonts.regular}
-            font-size="16"
+            font-size="14.3"
             font-weight="500"
           >
-            <tspan x="13.713" y="40">
-              Welcome
+            <tspan x="13.713" y="39">
+              WELCOME
             </tspan>
           </text>
           <rect width="13" height="4" x="44" y="57" fill="#7C87AA" />
