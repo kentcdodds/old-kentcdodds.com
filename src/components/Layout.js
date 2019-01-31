@@ -9,7 +9,7 @@ import theme from '../../config/theme'
 import mdxComponents from './mdx'
 import Header from './Header'
 import reset from '../lib/reset'
-import { fonts, rhythm } from '../lib/typography'
+import { fonts } from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
 
@@ -114,7 +114,6 @@ export default ({
   noSubscribeForm,
 }) => {
   const {
-    title,
     description: siteDescription,
     keywords: siteKeywords,
   } = site.siteMetadata
