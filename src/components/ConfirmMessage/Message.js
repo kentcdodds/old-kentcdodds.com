@@ -26,7 +26,7 @@ export default ({
     <h2>{title}</h2>
     {body && <Markdown>{body}</Markdown>}
     {note && (
-      <p
+      <div
         className={css`
           color: rgba(0, 0, 0, 0.7);
           transform: scale(0.85);
@@ -39,7 +39,7 @@ export default ({
         <span>
           <Markdown>{note}</Markdown>
         </span>
-      </p>
+      </div>
     )}
     {articleTitle && (
       <div>
