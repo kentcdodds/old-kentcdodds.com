@@ -5,6 +5,8 @@ import { css } from '@emotion/core'
 import theme from '../../../config/theme'
 import { rhythm } from '../../lib/typography'
 import { bpMaxSM } from '../../lib/breakpoints'
+import Message from '../ConfirmMessage/Message'
+import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
 
@@ -18,8 +20,12 @@ const SubscribeSchema = Yup.object().shape({
 const PostSubmissionMessage = ({ response }) => {
   return (
     <div>
-      <h4>One last thing!</h4>
-      Please check your email to confirm subscription and you'll be on your way.
+      <Message
+        illustration={PleaseConfirmIllustration}
+        title={`Great, one last thing...`}
+        body={`I just sent you an email with the confirmation link. 
+          **Please check your inbox!**`}
+      />
     </div>
   )
 }

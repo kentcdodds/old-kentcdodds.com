@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Message from '../components/EmailLanding/Message'
+import Message from '../components/ConfirmMessage/Message'
 import {
   PleaseConfirmIllustration,
   ThankYouIllustration,
   UnsubscribeIllustration,
-} from '../components/EmailLanding/Illustrations'
+} from '../components/ConfirmMessage/Illustrations'
 
 export default ({ data: { site, allMdx, latestArticle } }) => {
   return (

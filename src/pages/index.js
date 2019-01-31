@@ -7,12 +7,6 @@ import Link from '../components/Link'
 import Container from 'components/Container'
 import { rhythm } from '../lib/typography'
 import theme from '../../config/theme'
-import {
-  PleaseConfirmIllustration,
-  ThankYouIllustration,
-  UnsubscribeIllustration,
-} from '../components/EmailLanding/Illustrations'
-import Message from '../components/EmailLanding/Message'
 
 const Hero = () => (
   <section
