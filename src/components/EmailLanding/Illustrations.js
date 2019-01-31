@@ -1,54 +1,9 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { css, keyframes } from '@emotion/core'
-import { fonts } from '../lib/typography'
-import theme from '../../config/theme'
+import { fonts } from '../../lib/typography'
+import theme from '../../../config/theme'
 
-export default () => (
-  <Center>
-    <div>{Illustration}</div>
-    <h2>Great, one last thing...</h2>
-    <p>
-      We just sent you an email with the confirmation link.{' '}
-      <strong>Please check your inbox!</strong>
-    </p>
-  </Center>
-)
-
-const FadeIn = keyframes`
-from, 0% {
-    opacity: 0;
-}
-to, 100% {
-    opacity: 1;
-}
-`
-
-const Center = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  text-align: center;
-  h2,
-  p {
-    font-family: ${fonts.regular};
-    font-weight: normal;
-    max-width: 400px;
-  }
-  h2 {
-    animation: ${FadeIn} 500ms ease-in-out 1;
-  }
-  p {
-    padding-top: 10px;
-    animation: ${FadeIn} 800ms ease-in-out 1;
-  }
-`
-
-// Animation
-
+// PleaseConfirmIllustration
 const PaperRollOut = keyframes`
 from, 0% {
     transform: translate(10px, 80px);
@@ -58,7 +13,6 @@ to, 100% {
     
 }
 `
-
 const ButtonRollOut = keyframes`
 from, 0% {
     opacity: 0;
@@ -78,7 +32,6 @@ to, 100% {
     transform-origin: center center;
 }
 `
-
 const TextCopyRollOut = keyframes`
 from, 0% {
     opacity: 0;
@@ -89,7 +42,6 @@ to, 100% {
     transform: translate(0px, 0);
 }
 `
-
 const TextCopyWidth1 = keyframes`
 from, 0% {
     width: 0;
@@ -98,7 +50,6 @@ to, 100% {
     width: 25;
 }
 `
-
 const TextCopyWidth2 = keyframes`
 from, 0% {
     width: 0;
@@ -107,7 +58,6 @@ to, 100% {
     width: 47;
 }
 `
-
 const NotificationFadeIn = keyframes`
 0% {
     opacity: 0;
@@ -123,10 +73,8 @@ const NotificationFadeIn = keyframes`
     
 }
 `
-
 // SVG
-
-export const Illustration = (
+export const PleaseConfirmIllustration = (
   <div
     css={css`
       .paper {
@@ -150,7 +98,6 @@ export const Illustration = (
       .text-button {
         animation: ${ButtonRollOut} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
       }
-
       .notification {
         position: absolute;
         animation: ${NotificationFadeIn} 1.4s cubic-bezier(0.19, 1, 0.22, 1) 1;
@@ -272,6 +219,348 @@ export const Illustration = (
           fill="#CFD6E9"
           d="M97.4615385,108.307692 L2.69230769,108.307692 C1.50123077,108.307692 0.538461538,107.342769 0.538461538,106.153846 L0.538461538,54.4615385 L98.4932308,104.262769 C99.3569231,104.734462 99.7941538,105.731692 99.5486154,106.685846 C99.3052308,107.64 98.4458462,108.307692 97.4615385,108.307692 Z"
         />
+      </g>
+    </svg>
+  </div>
+)
+
+// ThankYouIllustration
+const SlopeRollOut = keyframes`
+from, 0% {
+//transform: translate(0, 115px) rotate(90deg);
+transform: translate(0, 115px);
+}
+to, 100% {
+  //transform: translate(0, 0) rotate(0);
+  transform: translate(0, 0);
+}
+`
+const SheetGrow = keyframes`
+from, 0% {
+transform: scale(0, 1) rotate(-20deg) skew(30deg);
+}
+to, 100% {
+  transform: scale(1, 1) rotate(0) skew(0);
+}
+`
+const TextFadeIn = keyframes`
+from, 0% {
+    opacity: 0;
+    //transform: rotate(-20deg);
+}
+5% {
+  opacity: 0;
+    //transform: rotate(-20deg);
+}
+to, 100% {
+    opacity: 1;
+    //transform: rotate(0);
+}
+`
+const GrassGrow = keyframes`
+from, 0% {
+
+transform: translate(-35px, 20px);
+}
+40% {
+  transform: translate(-35px, 20px);
+}
+to, 100% {
+
+  transform: translate(-35px, 0);
+}
+`
+const SlopeGrow = keyframes`
+from, 0% {
+transform: translate(0, 80px);
+}
+to, 100% {
+  transform: translate(0, 0);
+}
+`
+// SVG
+export const ThankYouIllustration = (
+  <div
+    css={css`
+      .sign {
+        transform-origin: bottom center;
+        animation: ${SlopeRollOut} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      }
+      .sheet {
+        transform-origin: center center;
+        animation: ${SheetGrow} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      }
+      text {
+        transform-origin: center center;
+        animation: ${TextFadeIn} 1.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      }
+      .grass {
+        animation: ${GrassGrow} 2.2s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      }
+      .slope {
+        animation: ${SlopeGrow} 2.1s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      }
+    `}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="200"
+      height="100"
+      viewBox="0 0 100 100"
+    >
+      <defs>
+        <rect id="welcome-a" width="200" height="100" />
+        <radialGradient
+          id="welcome-c"
+          r="60%"
+          fx="50%"
+          fy="50%"
+          gradientTransform="matrix(.52439 0 0 .30542 .238 .347)"
+        >
+          <stop offset="0%" stopOpacity=".136" />
+          <stop offset="100%" stopColor="#F0F0F0" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <g fill="none" fillRule="evenodd">
+        <mask id="welcome-b" fill="#fff">
+          <use xlinkHref="#welcome-a" />
+        </mask>
+        <g mask="url(#welcome-b)" className="sign">
+          <rect
+            width="13"
+            height="100"
+            x="44"
+            fill="#B4BDDC"
+            rx="1"
+            className="slope"
+          />
+          <ellipse
+            cx="50"
+            cy="100"
+            fill="url(#welcome-c)"
+            fillRule="nonzero"
+            rx="82"
+            ry="43"
+          />
+          <path
+            className="grass"
+            fill={theme.colors.green}
+            css={css`
+              transform: translate(-35px, 0);
+            `}
+            d="M112.181818,95.2 L112.181818,96.9 C112.181818,92.2055796 108.518693,88.4 104,88.4 L104,93.5 C104,98.1944204 107.663125,102 112.181818,102 C114.785762,102 117.283055,100.92536 119.124321,99.0124892 C120.965587,97.0996181 122,94.5052082 122,91.8 L122,85 C116.577568,85 112.181818,89.5666956 112.181818,95.2 Z"
+          />
+          <rect
+            className="sheet"
+            width="100"
+            height="48"
+            y="9"
+            fill={theme.brand.primary}
+            rx="5"
+          />
+          <rect
+            className="sheet"
+            width="94"
+            height="42"
+            x="3"
+            y="12"
+            stroke="#FFF"
+            opacity="0.5"
+            rx="3"
+          />
+          <text
+            fill="#FFF"
+            fontFamily={fonts.regular}
+            fontSize="14.3"
+            fontWeight="500"
+          >
+            <tspan x="13.713" y="39">
+              WELCOME
+            </tspan>
+          </text>
+          <rect width="13" height="4" x="44" y="57" fill="#7C87AA" />
+        </g>
+      </g>
+    </svg>
+  </div>
+)
+
+// UnsubscribeIllustration
+const MailSlide = keyframes`
+from, 0% {
+    opacity: 0;
+    transform: translate(18px, 20px);
+}
+20% {
+    opacity: 1;
+    
+}
+to, 100% {
+    opacity: 1;
+    transform: translate(18px, 75px);
+}
+`
+const PiecesSlide = keyframes`
+from, 0% {
+    transform: scale(1, 0);
+    opacity: 0;
+}
+20% {
+    transform: scale(1, 0);
+    opacity: 1;
+}
+85% {
+    opacity: 1;
+    transform: scale(1, 1);    
+}
+to, 100% {
+    transform: scale(1,1) translate(0, 50px);
+    opacity: 1;
+}
+`
+const LightBlink = keyframes`
+from, 20% {
+opacity: 0.4;
+}
+80% {
+    fill: white;
+    opacity: 1;
+}
+to, 100% {
+    opacity: 0.4;
+}
+`
+const ShadowOpacity = keyframes`
+from, 0% {
+    opacity: 0;
+}
+80% {
+    opacity: 1;
+}
+to, 100% {
+    opacity: 0;
+}
+`
+const LoadShredder = keyframes`
+from, 0% {
+    transform: scale(0, 1) translate(0, 67px);
+}
+to, 100% {
+    transform: scale(1, 1) translate(0, 67px);
+}
+`
+// SVG
+export const UnsubscribeIllustration = (
+  <div
+    css={css`
+      .pieces {
+        rect {
+          animation: ${PiecesSlide} 4s linear infinite;
+          transform: scale(1, 1);
+          opacity: 0;
+          height: 80;
+        }
+        rect:nth-of-type(1) {
+          transform: translate(0, -10px);
+        }
+      }
+      .shredder {
+        animation: ${LoadShredder} 500ms cubic-bezier(0.19, 1, 0.22, 1) 1;
+        transform-origin: center center;
+        transform: translate(0, 67px);
+      }
+      .mail {
+        animation: ${MailSlide} 4s linear infinite;
+        transform: translate(18px, 75px);
+        transform-origin: center center;
+      }
+      .light {
+        animation: ${LightBlink} 4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+      }
+      .shadow {
+        animation: ${ShadowOpacity} 4s linear infinite;
+      }
+      svg {
+        transform: scale(1.5);
+        margin-bottom: 2rem;
+      }
+    `}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="85"
+      height="110"
+      viewBox="0 0 85 50"
+    >
+      <defs>
+        <rect id="unsubscribe-a" width="85" height="70" />
+        <radialGradient
+          className="shadow"
+          id="welcome-c"
+          r="80%"
+          fx="50%"
+          fy="50%"
+          gradientTransform="matrix(.52439 0 0 .30542 .238 .347)"
+        >
+          <stop offset="0%" stopOpacity=".13" />
+          <stop offset="100%" stopColor="#F0F0F0" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <g fill="none" fillRule="evenodd" transform="translate(0 -17)">
+        <mask id="unsubscribe-b" fill="#fff">
+          <use xlinkHref="#unsubscribe-a" />
+        </mask>
+        <g mask="url(#unsubscribe-b)">
+          <g className="mail" transform="translate(18 17)">
+            <path
+              fill="#B4BDDC"
+              d="M47.9347826,37 L1.06521739,37 C0.47691913,37 0,36.5127753 0,35.9117647 L0,1.08823529 C0,0.487224706 0.47691913,0 1.06521739,0 L47.9347826,0 C48.5230809,0 49,0.487224706 49,1.08823529 L49,35.9117647 C49,36.5127753 48.5230809,37 47.9347826,37 Z"
+            />
+            <path
+              fill="#9DA6C5"
+              d="M24.5000034,13 C24.7569448,13 25.0133642,13.0948109 25.2167358,13.2833855 L48.6515475,35.1015673 C48.9771422,35.4051891 49.0868917,35.8824618 48.9282593,36.3022109 C48.7696163,36.7230073 48.3748463,37 47.9348151,37 L1.06519171,37 C0.625160512,37 0.230390457,36.7230073 0.0717474343,36.3022 C-0.0868955885,35.8824509 0.0228538954,35.4051782 0.348459299,35.1015564 L23.783271,13.2833745 C23.9866425,13.0948109 24.243062,13 24.5000034,13 Z"
+            />
+            <path
+              fill="#CFD6E9"
+              d="M24.4999976,24 C24.2430563,24 23.9866368,23.9051891 23.7832653,23.7166145 L0.348454577,1.89843273 C0.0228491872,1.59481091 -0.0868896399,1.11753818 0.0717427241,0.6978 C0.23038574,0.276992727 0.625155778,0 1.06518696,0 L47.9348083,0 C48.3748395,0 48.7696096,0.276992727 48.9282526,0.6978 C49.0868956,1.11754909 48.9771461,1.59482182 48.6515407,1.89844364 L25.21673,23.7166255 C25.0133585,23.9051891 24.756939,24 24.4999976,24 Z"
+            />
+          </g>
+        </g>
+        <ellipse
+          className="shadow"
+          cx="40"
+          cy="100"
+          fill="url(#welcome-c)"
+          fillRule="nonzero"
+          rx="60"
+          ry="60"
+        />
+        <g
+          className="pieces"
+          fill="#CFD6E9"
+          fillRule="nonzero"
+          transform="translate(18 77)"
+        >
+          <rect width="2.816" height="30" />
+          <rect width="2.816" height="30" x="20.184" />
+          <rect width="2.816" height="30" x="9.857" />
+          <rect width="2.816" height="24" x="4.694" />
+          <rect width="2.816" height="24" x="15.02" />
+          <g transform="translate(26)">
+            <rect width="2.816" height="30" />
+            <rect width="2.816" height="30" x="20.184" />
+            <rect width="2.816" height="30" x="9.857" />
+            <rect width="2.816" height="24" x="4.694" />
+            <rect width="2.816" height="24" x="15.02" />
+          </g>
+        </g>
+
+        <g className="shredder" fillRule="nonzero" transform="translate(0 64)">
+          <rect width="85" height="13" fill="#737794" rx="5" />
+          <circle className="light" cx="7" cy="6" r="3" fill="#CFD6E9" />
+        </g>
       </g>
     </svg>
   </div>
