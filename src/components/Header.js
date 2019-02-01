@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
 import theme from '../../config/theme'
 
 import Container from './Container'

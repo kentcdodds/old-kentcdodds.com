@@ -9,7 +9,7 @@ import theme from '../../config/theme'
 import mdxComponents from './mdx'
 import Header from './Header'
 import reset from '../lib/reset'
-import { fonts, rhythm } from '../lib/typography'
+import { fonts } from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
 
@@ -111,9 +111,9 @@ export default ({
   headerBg,
   headerColor,
   noFooter,
+  noSubscribeForm,
 }) => {
   const {
-    title,
     description: siteDescription,
     keywords: siteKeywords,
   } = site.siteMetadata
@@ -157,7 +157,12 @@ export default ({
           <MDXProvider components={mdxComponents}>
             <Fragment>{children}</Fragment>
           </MDXProvider>
-          {!noFooter && <Footer author={site.siteMetadata.author.name} />}
+          {!noFooter && (
+            <Footer
+              author={site.siteMetadata.author.name}
+              noSubscribeForm={noSubscribeForm}
+            />
+          )}
         </div>
       </Fragment>
     </ThemeProvider>
