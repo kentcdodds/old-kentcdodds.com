@@ -4,7 +4,7 @@ import { bpMaxSM } from 'lib/breakpoints'
 
 const Container = props => {
   const {
-    maxWidth = 600,
+    maxWidth = 720,
     noHorizontalPadding = false,
     noVerticalPadding = false,
     ...restProps

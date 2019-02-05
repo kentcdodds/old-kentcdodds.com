@@ -27,6 +27,7 @@ export default function Post({
         css={css`
           width: 100%;
           display: flex;
+          margin-top: 50px;
         `}
       >
         <Container>
@@ -34,6 +35,7 @@ export default function Post({
             css={css`
               text-align: center;
               margin-bottom: 20px;
+              font-family: ${fonts.regular};
             `}
           >
             {title}

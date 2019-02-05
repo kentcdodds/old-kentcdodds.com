@@ -1,22 +1,40 @@
 import React from 'react'
+import Link from '../components/Link'
 import { css } from '@emotion/core'
 import { bpMaxSM } from '../lib/breakpoints'
 import SubscribeForm from './Forms/Subscribe'
-import { Twitter, GitHub } from './Social'
+import { Twitter, GitHub, YouTube } from './Social'
 import Container from './Container'
 
+import Signature from '../images/signature.png'
+
 const Footer = ({ author, noSubscribeForm }) => (
-  <footer>
+  <footer
+    css={css`
+      background: #231c42;
+      color: white;
+      margin-top: 70px;
+    `}
+  >
     <Container
       css={css`
         padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         ${bpMaxSM} {
           padding-top: 0;
+          flex-direction: column;
         }
       `}
     >
       {!noSubscribeForm && (
-        <div>
+        <div
+          css={css`
+            margin-top: -40px;
+          `}
+        >
           <SubscribeForm />
           <br />
           <br />
@@ -25,22 +43,35 @@ const Footer = ({ author, noSubscribeForm }) => (
       <div
         css={css`
           display: flex;
-          align-items: center;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-end;
+          div,
+          img {
+            margin: 50px 0;
+            ${bpMaxSM} {
+              margin: 20px 0;
+            }
+          }
+          ${bpMaxSM} {
+            align-items: center;
+          }
         `}
       >
-        <div
-          css={css`
-            font-size: 90%;
-            opacity: 0.7;
-          `}
-        >
-          {author && `${author} \u00A9 ${new Date().getFullYear()}`}
-        </div>
         <div>
           <Twitter />
           <GitHub />
+          <YouTube />
         </div>
+
+        <Link to="/" aria-label="Return to homepage">
+          <img
+            src={Signature}
+            alt="Kent C. Dodds"
+            css={css`
+              max-width: 100px;
+            `}
+          />
+        </Link>
       </div>
     </Container>
   </footer>

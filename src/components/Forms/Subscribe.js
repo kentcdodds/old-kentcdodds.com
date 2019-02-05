@@ -19,7 +19,13 @@ const SubscribeSchema = Yup.object().shape({
 
 const PostSubmissionMessage = ({ response }) => {
   return (
-    <div>
+    <div
+      css={css`
+        h2 {
+          color: white !important;
+        }
+      `}
+    >
       <Message
         illustration={PleaseConfirmIllustration}
         title={`Great, one last thing...`}
@@ -72,16 +78,30 @@ class SignUp extends React.Component {
     const successful = response && response.status === 'success'
 
     return (
-      <div>
+      <div
+        css={css`
+          max-width: 350px;
+          padding: 40px;
+          background: #231c42;
+          background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%),
+            linear-gradient(
+              32deg,
+              rgba(255, 255, 255, 0.25) 33%,
+              rgba(0, 0, 0, 0.25) 100%
+            );
+          border-radius: 5px;
+        `}
+      >
         {!successful && (
-          <h2
+          <h3
             css={css`
               margin-bottom: ${rhythm(1)};
               margin-top: 0;
+              color: white;
             `}
           >
             Join the Newsletter
-          </h2>
+          </h3>
         )}
 
         {!successful && (
@@ -96,20 +116,21 @@ class SignUp extends React.Component {
               <Form
                 css={css`
                   display: flex;
-                  align-items: flex-end;
-                  label:not(:first-of-type),
-                  button {
-                    margin-left: 10px;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  label {
+                    margin: 10px 0;
                   }
                   .field-error {
                     display: block;
                     //position: absolute;
-                    color: ${theme.colors.red};
+                    color: rgba(255, 255, 255, 0.75);
                     font-size: 80%;
                   }
                   input,
                   label {
                     width: 100%;
+                    font-size: 16px;
                   }
                   ${bpMaxSM} {
                     flex-direction: column;
@@ -122,9 +143,10 @@ class SignUp extends React.Component {
                       display: flex;
                       flex-direction: column;
                     }
-                    button {
-                      margin: 20px 0 0 0;
-                    }
+                  }
+                  button {
+                    margin-top: 20px;
+                    font-size: 16px;
                   }
                 `}
               >
@@ -175,7 +197,7 @@ class SignUp extends React.Component {
                   />
                 </label>
                 <button data-element="submit" type="submit">
-                  {!loading && 'Submit'}
+                  {!loading && 'Subscribe'}
                   {loading && 'Submitting...'}
                 </button>
               </Form>

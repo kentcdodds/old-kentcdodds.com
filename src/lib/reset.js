@@ -30,7 +30,7 @@ ul, ol {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
+    scroll-behavior: smooth;
   body {
     color: ${theme.colors.body_color};
     background-color: ${theme.colors.bg_color};

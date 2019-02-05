@@ -57,7 +57,7 @@ to, 100% {
     opacity: 1;
 }
 `
-const Center = styled.div`
+export const Center = styled.div`
   width: 100vw;
   max-width: 100% !important;
   padding: 30px;
@@ -66,6 +66,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
   p {
     margin-top: 10px;
     max-width: 400px;

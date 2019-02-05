@@ -2,14 +2,17 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import theme from '../../config/theme'
+import { fonts } from '../lib/typography'
 
 import Container from './Container'
+import { bpMaxSM } from '../lib/breakpoints'
 
 const Header = ({
   dark,
   bgColor = 'none',
   siteTitle,
   headerColor = 'black',
+  fixed = false,
 }) => (
   <header
     css={css`
@@ -18,6 +21,10 @@ const Header = ({
       background: none;
       padding: 30px 0 0 0;
       background: ${dark ? '#090909' : `${bgColor}` || 'none'};
+      z-index: 999;
+      position: ${fixed ? 'fixed' : 'absolute'};
+      top: 0;
+      font-family: ${fonts.light};
     `}
   >
     <Container noVerticalPadding>
@@ -48,27 +55,52 @@ const Header = ({
             display: flex;
             align-items: center;
             a {
-              color: ${dark ? '#fbfbfb' : 'rgba(0,0,0,0.85)'};
+              padding: 8px;
+              border-radius: 3px;
+              background: transparent;
+              color: ${headerColor ? headerColor : theme.colors.body_color};
               text-decoration: none;
+              opacity: 0.9;
+              :hover {
+                opacity: 1;
+              }
               & + a {
-                margin-left: 32px;
+                margin-left: 15px;
+              }
+              ${bpMaxSM} {
+                visibility: hidden;
+                display: none;
               }
             }
             .active {
-              display: none;
-              visibility: hidden;
+              background: rgba(40, 28, 77, 0.7);
             }
           `}
         >
-          {/*
+          <Link to="/blog" activeClassName="active" aria-label="View blog page">
+            Blog
+          </Link>
           <Link
-            to="/blog"
+            to="/talks"
             activeClassName="active"
             aria-label="View blog page"
           >
-            Blog
+            Talks
           </Link>
-          */}
+          <Link
+            to="/workshops"
+            activeClassName="active"
+            aria-label="View blog page"
+          >
+            Workshops
+          </Link>
+          <Link
+            to="/about"
+            activeClassName="active"
+            aria-label="View blog page"
+          >
+            About
+          </Link>
         </div>
       </nav>
     </Container>

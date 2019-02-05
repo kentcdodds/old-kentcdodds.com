@@ -63,12 +63,12 @@ export const globalStyles = css`
   }
   button {
     border-radius: 4px;
-    background-color: ${theme.brand.primary};
+    background-color: ${theme.colors.green};
     border: none;
     color: ${theme.colors.white};
-    padding: 5px 10px;
+    padding: 8px 15px;
     cursor: pointer;
-    border: 1px solid ${theme.brand.primary};
+    border: 1px solid ${theme.colors.green};
     transition: ${theme.transition.ease};
     :hover {
       background: ${theme.colors.link_color_hover};
@@ -112,6 +112,9 @@ export default ({
   headerColor,
   noFooter,
   noSubscribeForm,
+  backgroundColor,
+  backgroundImage,
+  fixedHeader,
 }) => {
   const {
     description: siteDescription,
@@ -136,6 +139,8 @@ export default ({
             flex-direction: column;
             width: 100%;
             min-height: 100vh;
+            ${backgroundColor && `background: ${backgroundColor}`};
+            ${backgroundImage && `background-image: url(${backgroundImage})`};
           `}
         >
           <Helmet
@@ -153,6 +158,7 @@ export default ({
             dark={dark}
             bgColor={headerBg}
             headerColor={headerColor}
+            fixed={fixedHeader}
           />
           <MDXProvider components={mdxComponents}>
             <Fragment>{children}</Fragment>
