@@ -65,8 +65,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "netlify": "yarn setup && mv public dist",
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "start": "serve public/"
+    "start": "serve public/",
+    "setup": "yarn && yarn build"
   }
 }
