@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, graphql} from 'gatsby'
+import {Link} from 'gatsby'
 import {css} from '@emotion/core'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
@@ -108,13 +108,3 @@ const Header = ({
 )
 
 export default Header
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
