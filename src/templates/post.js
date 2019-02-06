@@ -1,20 +1,17 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/SEO'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import Container from 'components/Container'
 import Layout from '../components/Layout'
-import { fonts } from '../lib/typography'
+import {fonts} from '../lib/typography'
 import Share from '../components/Share'
 import config from '../../config/website'
-import { bpMaxSM } from '../lib/breakpoints'
+import {bpMaxSM} from '../lib/breakpoints'
 
-export default function Post({
-  data: { site, mdx },
-  pageContext: { next, prev },
-}) {
+export default function Post({data: {site, mdx}}) {
   const author = mdx.frontmatter.author || config.author
   const date = mdx.frontmatter.date
   const title = mdx.frontmatter.title
@@ -97,7 +94,7 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    mdx(fields: { id: { eq: $id } }) {
+    mdx(fields: {id: {eq: $id}}) {
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

@@ -1,11 +1,11 @@
 import React from 'react'
-import { css, keyframes } from '@emotion/core'
+import {css, keyframes} from '@emotion/core'
 import styled from '@emotion/styled'
 import Markdown from 'react-markdown'
 import Link from '../Link'
-import { bpMaxSM } from '../../lib/breakpoints'
+import {bpMaxSM} from '../../lib/breakpoints'
 
-export default ({
+export default function Message({
   illustration,
   title,
   body,
@@ -13,41 +13,43 @@ export default ({
   fullscreen = false,
   articleTitle,
   articleSlug,
-}) => (
-  <Center
-    css={css`
-      min-height: ${fullscreen ? '70vh' : 'auto'};
-      ${bpMaxSM} {
-        min-height: auto;
-      }
-    `}
-  >
-    <div>{illustration}</div>
-    <h2>{title}</h2>
-    {body && <Markdown>{body}</Markdown>}
-    {note && (
-      <div
-        className={css`
-          color: rgba(0, 0, 0, 0.7);
-          transform: scale(0.85);
-          span:hover {
-            opacity: 1;
-            color: rgba(0, 0, 0, 1);
-          }
-        `}
-      >
-        <span>
-          <Markdown>{note}</Markdown>
-        </span>
-      </div>
-    )}
-    {articleTitle && (
-      <div>
-        <Link to={`/${articleSlug}`}>{articleTitle}</Link>
-      </div>
-    )}
-  </Center>
-)
+}) {
+  return (
+    <Center
+      css={css`
+        min-height: ${fullscreen ? '70vh' : 'auto'};
+        ${bpMaxSM} {
+          min-height: auto;
+        }
+      `}
+    >
+      <div>{illustration}</div>
+      <h2>{title}</h2>
+      {body && <Markdown>{body}</Markdown>}
+      {note && (
+        <div
+          className={css`
+            color: rgba(0, 0, 0, 0.7);
+            transform: scale(0.85);
+            span:hover {
+              opacity: 1;
+              color: rgba(0, 0, 0, 1);
+            }
+          `}
+        >
+          <span>
+            <Markdown>{note}</Markdown>
+          </span>
+        </div>
+      )}
+      {articleTitle && (
+        <div>
+          <Link to={`/${articleSlug}`}>{articleTitle}</Link>
+        </div>
+      )}
+    </Center>
+  )
+}
 
 const FadeIn = keyframes`
 from, 0% {

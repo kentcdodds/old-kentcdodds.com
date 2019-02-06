@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default class HTML extends React.Component {
   render() {
     return (
-      <html {...this.props.htmlAttributes}>
+      <html lang="en" {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -18,9 +18,9 @@ export default class HTML extends React.Component {
           {this.props.preBodyComponents}
           <noscript>This site runs best with JavaScript enabled.</noscript>
           <div
-            key={`body`}
+            key="body"
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
         </body>

@@ -25,7 +25,7 @@ const typography = new Typography({
   headerColor: 'hsla(0,0%,0%,0.9)',
   bodyColor: 'hsla(0,0%,0%,0.8)',
 
-  overrideStyles: ({ rhythm }) => ({
+  overrideStyles: ({rhythm}) => ({
     h1: {
       color: 'hsla(0,0%,0%,0.75)',
       fontFamily: fonts.thin,

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { css } from '@emotion/core'
+import {Link, graphql} from 'gatsby'
+import {css} from '@emotion/core'
 import theme from '../../config/theme'
-import { fonts } from '../lib/typography'
+import {fonts} from '../lib/typography'
 
 import Container from './Container'
-import { bpMaxSM } from '../lib/breakpoints'
+import {bpMaxSM} from '../lib/breakpoints'
 
 const Header = ({
   dark,

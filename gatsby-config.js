@@ -1,4 +1,5 @@
 const config = require('./config/website')
+
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require('dotenv').config({
@@ -17,11 +18,7 @@ module.exports = {
     image: config.siteLogo,
     author: {
       name: config.author,
-      minibio: `
-        <strong>egghead</strong> is the premier place on the internet for 
-        experienced developers to enhance their skills and stay current
-        in the fast-faced field of web development.
-      `,
+      minibio: config.minibio,
     },
     organization: {
       name: config.organization,
@@ -109,14 +106,15 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) => {
+            serialize: ({query: {site, allMdx}}) => {
               return allMdx.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+                return {
+                  ...edge.node.frontmatter,
                   description: edge.node.excerpt,
                   date: edge.node.fields.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                })
+                }
               })
             },
             query: `

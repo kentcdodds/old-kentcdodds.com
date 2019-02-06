@@ -1,10 +1,10 @@
 import React from 'react'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import theme from '../../config/theme'
 
-import { TwitterShareButton, FacebookShareButton } from 'react-share'
+import {TwitterShareButton, FacebookShareButton} from 'react-share'
 
-const Share = ({ url, title, twitterHandle }) => (
+const Share = ({url, title, twitterHandle}) => (
   <div
     css={css`
       display: flex;

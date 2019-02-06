@@ -1,11 +1,11 @@
 const path = require('path')
 
 const _ = require('lodash')
-const paginate = require('gatsby-awesome-pagination')
+
 const PAGINATION_OFFSET = 7
 
 const createPosts = (createPage, createRedirect, edges) => {
-  edges.forEach(({ node }, i) => {
+  edges.forEach(({node}, i) => {
     const prev = i === 0 ? null : edges[i - 1].node
     const next = i === edges.length - 1 ? null : edges[i + 1].node
     const pagePath = node.fields.slug
@@ -33,12 +33,12 @@ const createPosts = (createPage, createRedirect, edges) => {
   })
 }
 
-exports.createPages = ({ actions, graphql }) =>
+exports.createPages = ({actions, graphql}) =>
   graphql(`
     query {
       allMdx(
-        filter: { frontmatter: { published: { ne: false } } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: {frontmatter: {published: {ne: false}}}
+        sort: {order: DESC, fields: [frontmatter___date]}
       ) {
         edges {
           node {
@@ -62,7 +62,7 @@ exports.createPages = ({ actions, graphql }) =>
         }
       }
     }
-  `).then(({ data, errors }) => {
+  `).then(({data, errors}) => {
     if (errors) {
       return Promise.reject(errors)
     }
@@ -71,15 +71,16 @@ exports.createPages = ({ actions, graphql }) =>
       return Promise.reject('There are no posts!')
     }
 
-    const { edges } = data.allMdx
-    const { createRedirect, createPage } = actions
+    const {edges} = data.allMdx
+    const {createRedirect, createPage} = actions
     createPosts(createPage, createRedirect, edges)
     createPaginatedPages(actions.createPage, edges, '/blog', {
       categories: [],
     })
+    return null
   })
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({actions}) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -90,7 +91,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
+function createPaginatedPages(createPage, edges, pathPrefix, context) {
   const pages = edges.reduce((acc, value, index) => {
     const pageIndex = Math.floor(index / PAGINATION_OFFSET)
 
@@ -125,8 +126,8 @@ const createPaginatedPages = (createPage, edges, pathPrefix, context) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({node, getNode, actions}) => {
+  const {createNodeField} = actions
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)

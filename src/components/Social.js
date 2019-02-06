@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from './Link'
-import theme from '../../config/theme'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import config from '../../config/website'
 
 export const Twitter = ({

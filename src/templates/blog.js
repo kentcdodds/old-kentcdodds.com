@@ -1,20 +1,17 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import Container from 'components/Container'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
-import { bpMaxSM } from '../lib/breakpoints'
-import { Hero } from '../pages/talks'
+import {bpMaxSM} from '../lib/breakpoints'
+import {Hero} from '../pages/talks'
 import theme from '../../config/theme'
 
-const Blog = ({
-  data: { site, allMdx },
-  pageContext: { pagination, categories },
-}) => {
-  const { page, nextPagePath, previousPagePath } = pagination
+const Blog = ({data: {site, allMdx}, pageContext: {pagination}}) => {
+  const {page, nextPagePath, previousPagePath} = pagination
 
   const posts = page
     .map(id =>
@@ -47,7 +44,7 @@ const Blog = ({
           }
         `}
       >
-        {posts.map(({ node: post }) => (
+        {posts.map(({node: post}) => (
           <div
             key={post.id}
             css={css`
@@ -151,7 +148,7 @@ export const pageQuery = graphql`
     site {
       ...site
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
           excerpt(pruneLength: 300)

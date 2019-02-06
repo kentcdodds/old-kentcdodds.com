@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import { MDXProvider } from '@mdx-js/tag'
-import { Global, css } from '@emotion/core'
-import { ThemeProvider } from 'emotion-theming'
-import { bpMaxSM } from '../lib/breakpoints'
+import {graphql} from 'gatsby'
+import {MDXProvider} from '@mdx-js/tag'
+import {Global, css} from '@emotion/core'
+import {ThemeProvider} from 'emotion-theming'
+import {bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 import mdxComponents from './mdx'
 import Header from './Header'
 import reset from '../lib/reset'
-import { fonts } from '../lib/typography'
+import {fonts} from '../lib/typography'
 import config from '../../config/website'
 import Footer from '../components/Footer'
 
@@ -103,7 +103,7 @@ export const globalStyles = css`
   ${reset};
 `
 
-export default ({
+export default function Layout({
   site,
   frontmatter = {},
   children,
@@ -115,7 +115,7 @@ export default ({
   backgroundColor,
   backgroundImage,
   fixedHeader,
-}) => {
+}) {
   const {
     description: siteDescription,
     keywords: siteKeywords,
@@ -146,8 +146,8 @@ export default ({
           <Helmet
             title={config.siteTitle}
             meta={[
-              { name: 'description', content: description },
-              { name: 'keywords', content: keywords },
+              {name: 'description', content: description},
+              {name: 'keywords', content: keywords},
             ]}
           >
             <html lang="en" />

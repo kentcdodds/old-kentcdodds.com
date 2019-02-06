@@ -1,11 +1,11 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
+import {graphql} from 'gatsby'
+import {css} from '@emotion/core'
 import Layout from '../components/Layout'
-import { isEmpty } from 'lodash'
+import {isEmpty} from 'lodash'
 import Container from 'components/Container'
 import theme from '../../config/theme'
-import { bpMaxMD, bpMaxSM } from '../lib/breakpoints'
+import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import talks from '../data/talks'
 import Markdown from 'react-markdown'
 
@@ -157,8 +157,8 @@ const Talk = ({
     </ul>
     {!isEmpty(resources) && <h4>Resources</h4>}
     <ul>
-      {resources.map(resource => (
-        <li>
+      {resources.map((resource, i) => (
+        <li key={i}>
           <Markdown source={resource} />
         </li>
       ))}
@@ -166,7 +166,7 @@ const Talk = ({
   </div>
 )
 
-export default function Talks({ data: { site, allMdx } }) {
+export default function Talks({data: {site}}) {
   return (
     <Layout site={site} headerColor={theme.colors.white}>
       <Hero />

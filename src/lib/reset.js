@@ -1,6 +1,6 @@
-import { css } from '@emotion/core'
+import {css} from '@emotion/core'
 import theme from '../../config/theme'
-import typography, { fonts } from '../lib/typography'
+import typography, {fonts} from '../lib/typography'
 
 const reset = css`
 form {

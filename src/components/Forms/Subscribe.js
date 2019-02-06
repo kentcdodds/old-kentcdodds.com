@@ -1,12 +1,11 @@
 import React from 'react'
-import { Formik, Field, Form, ErrorMessage } from 'formik'
+import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
-import { css } from '@emotion/core'
-import theme from '../../../config/theme'
-import { rhythm } from '../../lib/typography'
-import { bpMaxSM } from '../../lib/breakpoints'
+import {css} from '@emotion/core'
+import {rhythm} from '../../lib/typography'
+import {bpMaxSM} from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
-import { PleaseConfirmIllustration } from '../ConfirmMessage/Illustrations'
+import {PleaseConfirmIllustration} from '../ConfirmMessage/Illustrations'
 
 const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
 
@@ -17,7 +16,7 @@ const SubscribeSchema = Yup.object().shape({
   first_name: Yup.string(),
 })
 
-const PostSubmissionMessage = ({ response }) => {
+function PostSubmissionMessage() {
   return (
     <div
       css={css`
@@ -28,9 +27,9 @@ const PostSubmissionMessage = ({ response }) => {
     >
       <Message
         illustration={PleaseConfirmIllustration}
-        title={`Great, one last thing...`}
-        body={`I just sent you an email with the confirmation link. 
-          **Please check your inbox!**`}
+        title="Great, one last thing..."
+        body="I just sent you an email with the confirmation link. 
+          **Please check your inbox!**"
       />
     </div>
   )
@@ -42,7 +41,7 @@ class SignUp extends React.Component {
   }
 
   async handleSubmit(values) {
-    this.setState({ submitted: true, loading: true })
+    this.setState({submitted: true, loading: true})
     try {
       const response = await fetch(
         `https://app.convertkit.com/forms/${FORM_ID}/subscriptions`,
@@ -74,7 +73,7 @@ class SignUp extends React.Component {
   }
 
   render() {
-    const { submitted, loading, response, errorMessage } = this.state
+    const {submitted, loading, response, errorMessage} = this.state
     const successful = response && response.status === 'success'
 
     return (
@@ -112,7 +111,7 @@ class SignUp extends React.Component {
             }}
             validationSchema={SubscribeSchema}
             onSubmit={values => this.handleSubmit(values)}
-            render={({ errors, touched }) => (
+            render={() => (
               <Form
                 css={css`
                   display: flex;

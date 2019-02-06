@@ -1,13 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import { css } from '@emotion/core'
+import {graphql} from 'gatsby'
+import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Container from 'components/Container'
-import { rhythm, fonts } from '../lib/typography'
+import {rhythm, fonts} from '../lib/typography'
 import theme from '../../config/theme'
-import { bpMaxMD, bpMaxSM } from '../lib/breakpoints'
+import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 
 import heroImageRight from '../images/hero/path-right.svg'
 import heroImageLeft from '../images/hero/path-left.svg'
@@ -109,7 +109,7 @@ const Hero = () => (
   </section>
 )
 
-const Card = ({ backgroundColor = '#E75248', image, title, link }) => (
+const Card = ({backgroundColor = '#E75248', image, title, link}) => (
   <Link
     to={link}
     css={css`
@@ -156,7 +156,7 @@ const Description = styled.p`
   display: inline-block;
 `
 
-export default function Index({ data: { site, allMdx } }) {
+export default function Index({data: {site, allMdx}}) {
   return (
     <Layout site={site} headerColor={theme.colors.white}>
       <Hero />
@@ -178,7 +178,7 @@ export default function Index({ data: { site, allMdx } }) {
       >
         <h2>Blog</h2>
         <br />
-        {allMdx.edges.map(({ node: post }) => (
+        {allMdx.edges.map(({node: post}) => (
           <div
             key={post.id}
             css={css`
@@ -254,8 +254,8 @@ export const pageQuery = graphql`
     }
     allMdx(
       limit: 5
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { ne: false } } }
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {published: {ne: false}}}
     ) {
       edges {
         node {

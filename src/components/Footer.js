@@ -1,14 +1,14 @@
 import React from 'react'
 import Link from '../components/Link'
-import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
+import {css} from '@emotion/core'
+import {bpMaxSM} from '../lib/breakpoints'
 import SubscribeForm from './Forms/Subscribe'
-import { Twitter, GitHub, YouTube } from './Social'
+import {Twitter, GitHub, YouTube} from './Social'
 import Container from './Container'
 
 import Signature from '../images/signature.png'
 
-const Footer = ({ author, noSubscribeForm }) => (
+const Footer = ({noSubscribeForm}) => (
   <footer
     css={css`
       background: #231c42;

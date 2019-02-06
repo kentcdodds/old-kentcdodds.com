@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-egghead-blog",
-  "description": "This is a starter for egghead content creator blogs",
+  "name": "kentcdodds.com",
+  "private": true,
+  "description": "Kent's personal website",
   "version": "1.0.0",
-  "author": "egghead.io <support@egghead.io> (https://egghead.io)",
-  "repository": "https://github.com/eggheadio/gatsby-starter-egghead-blog",
+  "author": "Kent C. Dodds <kent@doddsfamily.us> (https://kentcdodds.com)",
+  "repository": "https://github.com/kentcdodds/kentcdodds.com",
   "dependencies": {
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
@@ -37,11 +38,13 @@
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.10",
+    "lodash": "^4.17.11",
     "mdx-utils": "0.0.2",
     "polished": "^2.3.3",
     "prism-react-renderer": "^0.1.5",
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
     "react-helmet": "~5.2.0",
@@ -56,16 +59,14 @@
   },
   "devDependencies": {
     "babel-preset-gatsby": "^0.1.6",
+    "eslint-config-kentcdodds": "^14.1.1",
     "prettier": "1.14.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "serve public/"
   }
 }

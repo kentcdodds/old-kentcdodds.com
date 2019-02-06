@@ -4,7 +4,7 @@ import Title from './Title'
 import Subtitle from './Subtitle'
 import Paragraph from './Paragraph'
 import Code from './Code'
-import { preToCodeBlock } from 'mdx-utils'
+import {preToCodeBlock} from 'mdx-utils'
 
 export default {
   h1: props => <Title {...props} />,
@@ -21,3 +21,5 @@ export default {
     }
   },
 }
+
+/* eslint react/display-name:0 */
