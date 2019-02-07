@@ -1,3 +1,8 @@
+import {
+  preparePresentationData,
+  sortByPresentationDate,
+} from '../lib/prepare-presentation-data'
+
 export default [
   // {
   //   title: '',
@@ -989,3 +994,5 @@ export default [
       `,
   },
 ]
+  .map(preparePresentationData)
+  .sort(sortByPresentationDate)

@@ -6,7 +6,7 @@ import {isEmpty} from 'lodash'
 import Container from 'components/Container'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
-import talks from '../data/talks'
+import workshops from '../data/workshops'
 import Markdown from 'react-markdown'
 
 export const Hero = () => (
@@ -48,7 +48,7 @@ export const Hero = () => (
   </section>
 )
 
-const Talk = ({
+const Workshop = ({
   title,
   abstract,
   presentations = [],
@@ -166,7 +166,7 @@ const Talk = ({
   </div>
 )
 
-export default function Talks({data: {site}}) {
+export default function Workshops({data: {site}}) {
   return (
     <Layout site={site} headerColor={theme.colors.white}>
       <Hero />
@@ -176,14 +176,14 @@ export default function Talks({data: {site}}) {
           margin-top: 30px;
         `}
       >
-        {talks.map(talk => (
-          <Talk
-            key={talk.title}
-            title={talk.title}
-            abstract={talk.abstract}
-            presentations={talk.presentations}
-            resources={talk.resources}
-            tags={talk.tags}
+        {workshops.map(workshop => (
+          <Workshop
+            key={workshop.title}
+            title={workshop.title}
+            abstract={workshop.abstract}
+            presentations={workshop.presentations}
+            resources={workshop.resources}
+            tags={workshop.tags}
           />
         ))}
       </Container>
