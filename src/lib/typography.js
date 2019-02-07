@@ -3,17 +3,17 @@ import '../fonts/fonts.css'
 
 export const fonts = {
   thin: 'Inter Thin',
-  thinItalic: 'Inter Thin Italic',
+  // thinItalic: 'Inter Thin Italic',
   light: 'Inter Light',
-  lightItalic: 'Inter Light Italic',
+  // lightItalic: 'Inter Light Italic',
   regular: 'Inter Regular',
-  regularItalic: 'Inter Regular Italic',
-  medium: 'Inter Medium',
-  mediumItalic: 'Inter Medium Italic',
+  // regularItalic: 'Inter Regular Italic',
+  // medium: 'Inter Medium',
+  // mediumItalic: 'Inter Medium Italic',
   semibold: 'Inter Semibold',
-  semiboldItalic: 'Inter Semibold Italic',
-  bold: 'Inter Bold',
-  boldItalic: 'Inter Bold Italic',
+  // semiboldItalic: 'Inter Semibold Italic',
+  // bold: 'Inter Bold',
+  // boldItalic: 'Inter Bold Italic',
 }
 
 const typography = new Typography({
@@ -32,6 +32,7 @@ const typography = new Typography({
     },
     h2: {
       color: 'hsla(0,0%,0%,0.775)',
+      fontFamily: fonts.semibold,
     },
     h3: {
       color: 'hsla(0,0%,0%,0.8)',

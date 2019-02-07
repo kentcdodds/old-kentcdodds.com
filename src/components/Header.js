@@ -21,7 +21,7 @@ const Header = ({
       background: none;
       padding: 30px 0 0 0;
       background: ${dark ? '#090909' : `${bgColor}` || 'none'};
-      z-index: 999;
+      z-index: 10;
       position: ${fixed ? 'fixed' : 'absolute'};
       top: 0;
       font-family: ${fonts.light};

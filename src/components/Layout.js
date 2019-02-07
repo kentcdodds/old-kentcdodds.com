@@ -131,7 +131,7 @@ export default function Layout({
 
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
+      <>
         <Global styles={globalStyles} />
         <div
           css={css`
@@ -161,7 +161,7 @@ export default function Layout({
             fixed={fixedHeader}
           />
           <MDXProvider components={mdxComponents}>
-            <Fragment>{children}</Fragment>
+            <>{children}</>
           </MDXProvider>
           {!noFooter && (
             <Footer
@@ -170,7 +170,7 @@ export default function Layout({
             />
           )}
         </div>
-      </Fragment>
+      </>
     </ThemeProvider>
   )
 }

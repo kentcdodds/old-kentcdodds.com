@@ -7,8 +7,6 @@ import {bpMaxSM} from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
 import {PleaseConfirmIllustration} from '../ConfirmMessage/Illustrations'
 
-const FORM_ID = process.env.CONVERTKIT_SIGNUP_FORM
-
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
     .email('Invalid email address')
@@ -44,7 +42,7 @@ class SignUp extends React.Component {
     this.setState({submitted: true, loading: true})
     try {
       const response = await fetch(
-        `https://app.convertkit.com/forms/${FORM_ID}/subscriptions`,
+        `https://app.convertkit.com/forms/827139/subscriptions`,
         {
           method: 'post',
           body: JSON.stringify(values, null, 2),

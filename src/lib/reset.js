@@ -81,6 +81,7 @@ ul, ol {
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
+    white-space: pre;
   }
   figure {
     margin: 0 0 1rem 0;

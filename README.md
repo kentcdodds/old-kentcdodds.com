@@ -1,10 +1,16 @@
-# egghead.io creator MDX Blog Starter Project
+# Kent C. Dodds personal website
 
-This is based on Robin Wieruch's https://github.com/rwieruch/gatsby-mdx-blog-starter-project
+This was bootstrapped via
+[egghead-gatsby-starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
 
-Lot's of nice pieces are also borrowed from Jason Lengstorf https://github.com/jlengstorf/lengstorf.com
+This is based on Robin Wieruch's
+https://github.com/rwieruch/gatsby-mdx-blog-starter-project
 
-A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx).
+Lot's of nice pieces are also borrowed from Jason Lengstorf
+https://github.com/jlengstorf/lengstorf.com
+
+A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with
+[MDX](https://github.com/mdx-js/mdx).
 
 ## Features
 
@@ -17,7 +23,9 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 - Social media share buttons
 - Site & Theme config files
 - ConvertKit subscribe form (Formik and Yup)
-- Placeholder illustrations by [Katerina Limpitsouni](https://twitter.com/ninalimpi) from [undraw.co](https://undraw.co/)
+- Placeholder illustrations by
+  [Katerina Limpitsouni](https://twitter.com/ninalimpi) from
+  [undraw.co](https://undraw.co/)
 
 ## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
 
