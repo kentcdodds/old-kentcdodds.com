@@ -1,11 +1,43 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {css} from '@emotion/core'
+import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
 
 import Container from './Container'
 import {bpMaxSM} from '../lib/breakpoints'
+
+const HeaderLink = styled(Link)(({headerColor}) => ({
+  textDecoration: 'none',
+  color: headerColor ? headerColor : theme.colors.body_color,
+  '&:hover,&:focus': {
+    color:
+      headerColor === theme.colors.white
+        ? 'white'
+        : theme.colors.link_color_hover,
+  },
+}))
+HeaderLink.defaultProps = {
+  activeClassName: 'active',
+}
+
+const NavLink = styled(HeaderLink)({
+  padding: '8px',
+  borderRadius: '3px',
+  background: 'transparent',
+  opacity: 0.8,
+  '& + &': {marginLeft: 15},
+  '&:hover': {
+    opacity: 1,
+  },
+  [bpMaxSM]: {
+    display: 'none',
+  },
+  '&.active': {
+    background: 'rgba(40, 28, 77, 0.7)',
+  },
+})
 
 const Header = ({
   dark,
@@ -29,83 +61,56 @@ const Header = ({
   >
     <Container noVerticalPadding>
       <nav
-        css={css`
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: ${headerColor};
-          a {
-            color: ${headerColor ? headerColor : theme.colors.body_color};
-          }
-          a:hover,
-          a:focus {
-            color: ${headerColor === theme.colors.white
-              ? 'white'
-              : theme.colors.link_color_hover};
-          }
-        `}
+        css={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
       >
-        <Link to="/" aria-label="go to homepage" activeClassName="active">
+        <HeaderLink
+          to="/"
+          aria-label="go to homepage"
+          headerColor={headerColor}
+        >
           {siteTitle}
-        </Link>
+        </HeaderLink>
         <div
           css={css`
             font-size: 16px;
             line-height: 1.25;
             display: flex;
             align-items: center;
-            a {
-              padding: 8px;
-              border-radius: 3px;
-              background: transparent;
-              color: ${headerColor ? headerColor : theme.colors.body_color};
-              text-decoration: none;
-              opacity: 0.9;
-              :hover {
-                opacity: 1;
-              }
-              & + a {
-                margin-left: 15px;
-              }
-              ${bpMaxSM} {
-                visibility: hidden;
-                display: none;
-              }
-              &:focus,
-              &:hover {
-                color: ${headerColor ? headerColor : theme.colors.body_color};
-              }
-              &.active {
-                background: rgba(40, 28, 77, 0.7);
-              }
-            }
           `}
         >
-          <Link to="/blog" activeClassName="active" aria-label="View blog page">
+          <NavLink
+            headerColor={headerColor}
+            to="/blog"
+            aria-label="View blog page"
+          >
             Blog
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            headerColor={headerColor}
             to="/talks"
-            activeClassName="active"
             aria-label="View blog page"
           >
             Talks
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            headerColor={headerColor}
             to="/workshops"
-            activeClassName="active"
             aria-label="View blog page"
           >
             Workshops
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
+            headerColor={headerColor}
             to="/about"
-            activeClassName="active"
             aria-label="View blog page"
           >
             About
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </Container>

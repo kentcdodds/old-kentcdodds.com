@@ -80,7 +80,7 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}}) => {
               >
                 <Link
                   aria-label={`View ${post.frontmatter.title} article`}
-                  to={`/${post.fields.slug}`}
+                  to={post.fields.slug}
                 >
                   <Img sizes={post.frontmatter.banner.childImageSharp.fluid} />
                 </Link>
@@ -94,7 +94,7 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}}) => {
             >
               <Link
                 aria-label={`View ${post.frontmatter.title} article`}
-                to={`/${post.fields.slug}`}
+                to={post.fields.slug}
               >
                 {post.frontmatter.title}
               </Link>
@@ -108,7 +108,7 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}}) => {
               {post.excerpt}
             </p>{' '}
             <Link
-              to={`/${post.fields.slug}`}
+              to={post.fields.slug}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
               Read Article →

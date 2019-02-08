@@ -134,14 +134,8 @@ exports.onCreateNode = ({node, getNode, actions}) => {
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
-    const titleSlugged = _.join(_.drop(parent.name.split('-'), 3), '-')
-
     const slug =
-      parent.sourceInstanceName === 'legacy'
-        ? `blog/${node.frontmatter.date
-            .split('T')[0]
-            .replace(/-/g, '/')}/${titleSlugged}`
-        : node.frontmatter.slug || titleSlugged
+      node.frontmatter.slug || _.join(_.drop(parent.name.split('-'), 3), '-')
 
     createNodeField({
       name: 'id',
@@ -162,6 +156,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     })
 
     createNodeField({
+      name: 'author',
+      node,
+      value: node.frontmatter.author || 'Kent C. Dodds',
+    })
+
+    createNodeField({
       name: 'description',
       node,
       value: node.frontmatter.description,
@@ -170,7 +170,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     createNodeField({
       name: 'slug',
       node,
-      value: slug,
+      value: `/blog/${slug}`,
     })
 
     createNodeField({
@@ -182,7 +182,13 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     createNodeField({
       name: 'banner',
       node,
-      banner: node.frontmatter.banner,
+      value: node.frontmatter.banner,
+    })
+
+    createNodeField({
+      name: 'bannerCredit',
+      node,
+      value: node.frontmatter.bannerCredit,
     })
 
     createNodeField({

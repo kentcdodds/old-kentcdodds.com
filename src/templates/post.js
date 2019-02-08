@@ -5,21 +5,24 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/SEO'
 import {css} from '@emotion/core'
 import Container from 'components/Container'
-import Layout from '../components/Layout'
+import Layout from 'components/Layout'
+import Share from 'components/Share'
+import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
-import Share from '../components/Share'
 import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
 
 export default function Post({data: {site, mdx}}) {
   const author = config.author
-  const date = mdx.frontmatter.date
-  const title = mdx.frontmatter.title
-  const banner = mdx.frontmatter.banner
+  const date = mdx.fields.date
+  const title = mdx.fields.title
+  const description = mdx.fields.description
+  const banner = mdx.fields.banner
+  const bannerCredit = mdx.fields.bannerCredit
 
   return (
-    <Layout site={site} frontmatter={mdx.frontmatter}>
-      <SEO frontmatter={mdx.frontmatter} isBlogPost />
+    <Layout site={site} frontmatter={mdx.fields} pageTitle="Kent C. Dodds Blog">
+      <SEO frontmatter={mdx.fields} isBlogPost />
       <article
         css={css`
           width: 100%;
@@ -60,7 +63,11 @@ export default function Post({data: {site, mdx}}) {
           {banner && (
             <div
               css={css`
+                text-align: center;
                 padding: 30px;
+                p {
+                  margin-bottom: 0;
+                }
                 ${bpMaxSM} {
                   padding: 0;
                 }
@@ -70,16 +77,18 @@ export default function Post({data: {site, mdx}}) {
                 sizes={banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}
               />
+              {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
             </div>
           )}
           <br />
+          {description ? <Markdown>{description}</Markdown> : null}
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
         </Container>
         {/* <SubscribeForm /> */}
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}/${mdx.frontmatter.slug}/`}
+          url={`${config.siteUrl}/${mdx.fields.slug}/`}
           title={title}
           twitterHandle={config.twitterHandle}
         />
@@ -97,8 +106,9 @@ export const pageQuery = graphql`
       }
     }
     mdx(fields: {id: {eq: $id}}) {
-      frontmatter {
+      fields {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         author
         banner {
@@ -108,6 +118,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        bannerCredit
         slug
         keywords
       }

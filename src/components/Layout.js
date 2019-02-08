@@ -109,12 +109,16 @@ const DefaultHero = styled.section`
     color: ${theme.colors.white};
   }
   width: 100%;
-  background: #3155dc;
-  background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%);
-  background-position: center right, center left;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
+  ${({headerColor}) =>
+    headerColor
+      ? css`
+          background: #3155dc;
+          background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%);
+          background-position: center right, center left;
+          background-repeat: no-repeat;
+          background-size: contain;
+        `
+      : null} position: relative;
   z-index: 0;
   align-items: center;
   display: flex;
@@ -129,6 +133,7 @@ const DefaultHero = styled.section`
 
 function Layout({
   data,
+  pageTitle,
   frontmatter = {},
   Hero = DefaultHero,
   children,
@@ -179,9 +184,9 @@ function Layout({
           `}
         >
           <div css={{flex: '1 0 auto'}}>
-            <Hero />
+            <Hero headerColor={headerColor} />
             <Header
-              siteTitle={siteMetadata.title}
+              siteTitle={pageTitle || siteMetadata.title}
               dark={dark}
               bgColor={headerBg}
               headerColor={headerColor}

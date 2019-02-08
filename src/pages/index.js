@@ -128,7 +128,11 @@ function SubscribeConfirmation() {
 
 export default function Index({data: {allMdx}}) {
   return (
-    <Layout headerColor={theme.colors.white} Hero={Hero}>
+    <Layout
+      headerColor={theme.colors.white}
+      Hero={Hero}
+      pageTitle="Home of Kent C. Dodds"
+    >
       <SubscribeConfirmation />
       <Container
         css={css`
@@ -157,7 +161,7 @@ export default function Index({data: {allMdx}}) {
             `}
           >
             <Link
-              to={post.frontmatter.slug}
+              to={post.fields.slug}
               aria-label={`View ${post.frontmatter.title}`}
             >
               <PostTitle>{post.frontmatter.title}</PostTitle>
@@ -165,7 +169,7 @@ export default function Index({data: {allMdx}}) {
             <Description>
               {post.excerpt}{' '}
               <Link
-                to={post.frontmatter.slug}
+                to={post.fields.slug}
                 aria-label={`View ${post.frontmatter.title}`}
               >
                 Read →
@@ -250,7 +254,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            slug
             keywords
           }
         }

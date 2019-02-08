@@ -7,6 +7,7 @@ description: 'this post has all of the right fields'
 categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
+bannerCredit: 'someone'
 published: false
 useBigHero: false
 noFooter: false
