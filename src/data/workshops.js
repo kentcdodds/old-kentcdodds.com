@@ -9,14 +9,14 @@ export default [
   //   resources: [
   //   ],
   //   tags: [],
-  //   presentations: [
+  //   deliveries: [
   //     {
   //       event: '',
   //       date: '',
   //       recording: '',
   //     },
   //   ],
-  //   abstract: `
+  //   description: `
   //   `,
   // },
   {
@@ -25,7 +25,7 @@ export default [
       '[repo](https://github.com/kentcdodds/react-hooks-and-suspense-egghead-playlist)',
     ],
     tags: ['react', 'testing'],
-    presentations: [
+    deliveries: [
       {
         event: '[Egghead.io](https://kcd.im/egghead) Course',
         date: '2018-10-27',
@@ -33,7 +33,7 @@ export default [
           'https://egghead.io/playlists/react-hooks-and-suspense-650307f2',
       },
     ],
-    abstract: `
+    description: `
       React Suspense has been released in React 16.6.0 and React Hooks is currently in alpha! Let's see
       how we can use these and more features of React together to write simpler React components.
     `,
@@ -42,7 +42,7 @@ export default [
     title: 'Simplify React Apps with React Hooks',
     resources: ['[repo](https://github.com/kentcdodds/react-github-profile)'],
     tags: ['react', 'testing'],
-    presentations: [
+    deliveries: [
       {
         event: '[Egghead.io](https://kcd.im/egghead) Course',
         date: '2018-12-04',
@@ -50,7 +50,7 @@ export default [
           'https://egghead.io/courses/simplify-react-apps-with-react-hooks',
       },
     ],
-    abstract: `
+    description: `
       With the massive improvements to function components in React via hooks and suspense, you may be interested in seeing how to
       refactor a typical class component to a simpler class component that uses React Hooks features. In this course, we'll take
       [a modern React codebase](https://github.com/kentcdodds/react-github-profile) that uses classes and refactor the entire thing
@@ -64,7 +64,7 @@ export default [
     title: 'Modern React Workshop: Hooks and Suspense',
     resources: ['[repo](https://github.com/kentcdodds/modern-react)'],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event: 'Self-organized PayPal workshop day (Part 2)',
         date: '2018-11-28',
@@ -78,7 +78,7 @@ export default [
           'https://www.youtube.com/watch?v=xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
       React has two new upcoming features that will blow your socks off making writing applications much easier.
       In this extremely hands-on workshop, you'll be able to play with these new features and have the skills you
       need to take them to your own applications.
@@ -88,7 +88,7 @@ export default [
     title: 'Testing React and Web Applications',
     resources: ['[repo](https://github.com/kentcdodds/testing-workshop)'],
     tags: ['testing', 'automation', 'jest', 'cypress', 'react'],
-    presentations: [
+    deliveries: [
       {
         event: 'Workshop.me in San Francisco',
         date: '2018-03-27',
@@ -99,7 +99,7 @@ export default [
         date: '2018-04-19',
       },
     ],
-    abstract: `
+    description: `
       Developing and deploying production applications with React is one thing, but being confident that you're not
       shipping a hidden bug is something else! Knowing how to configure and use testing tools is critical to your
       success in shipping with confidence, and React's model opens up testing productivity most of us couldn't even
@@ -126,7 +126,7 @@ export default [
       '[repo](https://github.com/kentcdodds/testing-workshop)',
     ],
     tags: ['testing', 'automation', 'jest', 'cypress'],
-    presentations: [
+    deliveries: [
       {
         event: '[Assert(JS)](https://www.assertjs.com/training)',
         date: '2018-02-21',
@@ -143,7 +143,7 @@ export default [
         date: '2018-04-18',
       },
     ],
-    abstract: `
+    description: `
       The goal of a test is to increase your confidence that the subject of your test is functioning the way it should
       be. Not all tests provide the same level of confidence (some provide very little confidence at all). If you're not
       doing things correctly, you could be wasting your time and giving yourself a false sense of security (even worse
@@ -168,7 +168,7 @@ export default [
       '[repo](https://github.com/kentcdodds/advanced-react-patterns)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)',
@@ -197,7 +197,7 @@ export default [
         date: '2018-07-11',
       },
     ],
-    abstract: `
+    description: `
       Making React components that can be used in multiple places is not hard. What is hard is when the use cases
       differ. Without the right patterns, you can find yourself with a highly complex component that requires a lot of
       configuration props and way too many if statements. With this course, you'll not only learn great patterns you can
@@ -223,7 +223,7 @@ export default [
       '[repo](https://github.com/eggheadio-projects/the-beginner-s-guide-to-reactjs)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
@@ -239,7 +239,7 @@ export default [
         date: '2018-10-01',
       },
     ],
-    abstract: `
+    description: `
       This course is for React newbies and those looking to get a better understanding of React fundamentals.
       With a focus on React fundamentals, you'll come out of this course knowing what problems React can solve
       for you and how it goes about solving those problems. You will have a good grasp on what JSX is and how
@@ -260,7 +260,7 @@ export default [
       '[repo](https://github.com/kentcdodds/asts-workshop)',
     ],
     tags: ['babel', 'eslint', 'codemod', 'Abstract Syntax Trees', 'asts'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
@@ -273,7 +273,7 @@ export default [
           'https://www.youtube.com/watch?v=-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
       Have you ever needed to change the API to a widely used function in your JavaScript application?
       Find and replace can really only take you so far. What about the frustration of iterating over and
       over again on pull requests because of simple code mistakes developers keep making? These are only some
@@ -291,7 +291,7 @@ export default [
       '[repo](https://github.com/kentcdodds/testing-workshop)',
     ],
     tags: ['testing', 'jest', 'cypress'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
@@ -304,7 +304,7 @@ export default [
           'https://youtu.be/DdqiXcYDv-8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
       Building and deploying web applications with confidence is challenging. Verifying that what you're
       deploying to production actually works requires a solid suite of automated tests. Knowing how to
       configure tools and write tests that enhance your development experience is vital to your success.
@@ -322,7 +322,7 @@ export default [
       '[app repo](https://github.com/kentcdodds/es6-todomvc)',
     ],
     tags: ['ES.next', 'ES6', 'webpack'],
-    presentations: [
+    deliveries: [
       {
         event: 'Self-organized PayPal workshop day (Part 2)',
         date: '2017-03-07',
@@ -363,7 +363,7 @@ export default [
         recording: 'https://youtu.be/_Pn32tTtbuQ',
       },
     ],
-    abstract: `
+    description: `
       The ECMAScript standard is now on a yearly release cycle. Keeping up with the latest features can make you more
       productive and your code more expressive and maintainable. In this workshop, we'll learn about the features from
       ES6 to today that you're likely to use and benefit from on a day-to-day basis.
@@ -391,7 +391,7 @@ export default [
       '[app](https://github.com/kentcdodds/react-github-profile)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event: 'Internally at PayPal',
         recording: 'https://youtu.be/VZaQfb2y6BI',
@@ -407,7 +407,7 @@ export default [
         date: '2016-08-10',
       },
     ],
-    abstract: `TODO 😅`,
+    description: `TODO 😅`,
   },
   {
     title: 'Webpack Deep Dive',
@@ -416,7 +416,7 @@ export default [
       '[app repo](https://github.com/kentcdodds/es6-todomvc)',
     ],
     tags: ['webpack'],
-    presentations: [
+    deliveries: [
       {
         event: '[Frontend Masters](http://kcd.im/fem-webpack)',
         date: '2016-08-08',
@@ -436,7 +436,7 @@ export default [
           'https://youtu.be/a96r7Tjf0Ps?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
       },
     ],
-    abstract: `
+    description: `
       Building and deploying complex frontend applications can get complicated quickly. Webpack simplifies this with a
       huge list of features that cater to all kinds of JavaScript apps. In this class, we'll explore these features to
       optimize an application for performance and simplicity. In this workshop, you'll learn:
@@ -455,7 +455,7 @@ export default [
     title: 'How to Write an Open Source JavaScript Library',
     resources: ['[repo](https://github.com/kentcdodds/starwars-names)'],
     tags: ['open source'],
-    presentations: [
+    deliveries: [
       {
         event: '[Frontend Masters](http://kcd.im/fem-oss)',
         date: '2016-08-09',
@@ -467,7 +467,7 @@ export default [
         recording: 'http://kcd.im/write-oss',
       },
     ],
-    abstract: `
+    description: `
       Participating in open source has been one of the most rewarding experiences of my career. The feeling of sharing
       something I've created, and hearing that others are using it in their applications is incredible. But writing and
       managing an open source project is challenging. I want to help you get started with open source or improve your
@@ -486,7 +486,7 @@ export default [
     title: 'React + AVA = ❤️',
     resources: ['[repo](https://github.com/kentcdodds/react-ava-workshop)'],
     tags: ['react', 'testing'],
-    presentations: [
+    deliveries: [
       {
         event: 'Internally at PayPal',
         date: '2016-02-16',
@@ -498,7 +498,7 @@ export default [
         recording: 'https://youtu.be/RxLW6-3dk5A',
       },
     ],
-    abstract: `
+    description: `
       **NOTE**: _I no longer recommend using AVA in React Projects_. Instead I recommend using Jest. Incidentally, I
       have a workshop for that too: [react-jest-workshop](https://github.com/kentcdodds/react-jest-workshop).
     `,
@@ -506,7 +506,7 @@ export default [
   {
     title: 'How to Contribute to an Open Source Project on GitHub',
     tags: ['open source'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
@@ -515,7 +515,7 @@ export default [
           'https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github',
       },
     ],
-    abstract: `
+    description: `
       "Feel free to submit a PR!" - words often found in GitHub issues, but met with confusion and fear by many.
       Getting started with contributing open source is not always straightforward and can be tricky. With this series,
       you'll be equipped with the the tools, knowledge, and understanding you need to be productive and contribute to
@@ -531,7 +531,7 @@ export default [
       '[repo](https://github.com/kentcdodds/require-to-webpack-todomvc)',
     ],
     tags: ['webpack'],
-    presentations: [
+    deliveries: [
       {
         event: 'JS @ PayPal',
         date: '2015-12-17',
@@ -542,7 +542,7 @@ export default [
   {
     title: 'Angular and Webpack for Modular Applications',
     tags: ['angular', 'webpack'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
@@ -551,7 +551,7 @@ export default [
           'https://egghead.io/courses/angular-and-webpack-for-modular-applications',
       },
     ],
-    abstract: `
+    description: `
       How much work would it take for you to move all of your directives and their templates to several different new
       directories? You'd have to update the templateUrl, script tags, etc., etc. With webpack, this can be trivial. For
       example, you don't need to worry about loading your templates in the $templateCache ever again. Webpack will help
@@ -566,7 +566,7 @@ export default [
       '[repo](https://github.com/kentcdodds/angular-formly-convert)',
     ],
     tags: ['angular'],
-    presentations: [
+    deliveries: [
       {
         event: '[ng-conf](https://www.ng-conf.org/)',
         date: '2015-03-04',
@@ -576,7 +576,7 @@ export default [
   {
     title: 'AngularJS Authentication with JWT',
     tags: ['angular'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
@@ -585,7 +585,7 @@ export default [
           'https://egghead.io/courses/angularjs-authentication-with-jwt',
       },
     ],
-    abstract: `
+    description: `
       JSON Web Tokens (JWT) are a more modern approach to authentication. As the web moves to a greater separation
       between the client and server, JWT provides a terrific alternative to traditional cookie based authentication
       models. For more information on JWT visit http://jwt.io/
@@ -606,7 +606,7 @@ export default [
       '[workshop](http://kentcdodds.com/ng-workshop/)',
     ],
     tags: ['angular'],
-    presentations: [
+    deliveries: [
       {
         event: '[JFokus 2015](http://www.jfokus.se/jfokus/)',
         date: '2015-02-06',
@@ -617,7 +617,7 @@ export default [
         recording: 'https://youtu.be/GmVUw_Efi_M',
       },
     ],
-    abstract: `
+    description: `
       AngularJS is one of the most popular frontend frameworks out there right now. If you haven't tried it yet,
       prepare to be amazed! Here's what we'll cover:
 

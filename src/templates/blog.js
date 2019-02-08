@@ -7,10 +7,9 @@ import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import {bpMaxSM} from '../lib/breakpoints'
-import {Hero} from '../pages/talks'
 import theme from '../../config/theme'
 
-const Blog = ({data: {site, allMdx}, pageContext: {pagination}}) => {
+const Blog = ({data: {allMdx}, pageContext: {pagination}}) => {
   const {page, nextPagePath, previousPagePath} = pagination
 
   const posts = page
@@ -24,9 +23,8 @@ const Blog = ({data: {site, allMdx}, pageContext: {pagination}}) => {
     .filter(post => post !== undefined)
 
   return (
-    <Layout site={site} headerColor={theme.colors.white}>
+    <Layout headerColor={theme.colors.white}>
       <SEO />
-      <Hero />
       <Container
         noVerticalPadding
         css={css`
@@ -145,9 +143,6 @@ export default Blog
 
 export const pageQuery = graphql`
   query {
-    site {
-      ...site
-    }
     allMdx(sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {

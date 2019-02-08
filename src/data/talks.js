@@ -8,14 +8,14 @@ export default [
   //   title: '',
   //   resources: [],
   //   tags: [],
-  //   presentations: [
+  //   deliveries: [
   //     {
   //       event: '',
   //       date: '',
   //       recording: '',
   //     }
   //   ],
-  //   abstract: `
+  //   description: `
   //   `,
   // },
   {
@@ -25,7 +25,7 @@ export default [
       '[course](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
     ],
     tags: ['open source'],
-    presentations: [
+    deliveries: [
       {
         event: 'BYU Presentation',
         date: '2018-12-06',
@@ -33,7 +33,7 @@ export default [
           'https://www.youtube.com/watch?v=k6KcaMffxac&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjsh',
       },
     ],
-    abstract: `
+    description: `
         Let's talk about contributing to open source. In this talk, we'll go through the process of contributing to an open source project on GitHub.
       `,
   },
@@ -44,7 +44,7 @@ export default [
       '[chat app](https://geo-chat.netlify.com)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[GDG Salt Lake DevFest 2018](https://sites.google.com/view/gdgsaltlakedevfest2018)',
@@ -58,7 +58,7 @@ export default [
         date: '2019-01-26',
       },
     ],
-    abstract: `
+    description: `
         In October, the React team announced a new feature coming 🔜 to React called "hooks." In this talk we'll
         go over what this feature is and why this feature is necessary. We'll also see a real-world example of
         an application that uses React hooks.
@@ -68,13 +68,13 @@ export default [
     title: 'A Render Prop by Any Other Name',
     resources: [],
     tags: ['react', 'vue', 'angular'],
-    presentations: [
+    deliveries: [
       {
         event: '[Framework Summit](https://www.frameworksummit.com/sessions)',
         date: '2018-10-02',
       },
     ],
-    abstract: `
+    description: `
         Can Vue use Render Props? Does React have a concept like Directives?
         Can Angular go Renderless the way the young ’uns do? All my developer
         friends in that other framework keep using words I don’t understand.
@@ -91,7 +91,7 @@ export default [
       '[repo](https://github.com/kentcdodds/react-suspense-simple-example)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[SLC Frontend Meetup](https://www.meetup.com/SLC-FE-DEV/events/254256621/)',
@@ -100,33 +100,16 @@ export default [
           'https://www.youtube.com/watch?v=7LmrS2sdMlo&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
         React Suspense is coming and it's going to be awesome. It's currently in alpha and you can play around with it.
         In this talk we'll focus on the fundamentals of how React Suspense works.
-      `,
-  },
-  {
-    title: `The introduction to React you've been missing`,
-    resources: [],
-    tags: ['react'],
-    presentations: [
-      {
-        event: '[UtahJS Conf](https://conf.utahjs.com/)',
-        date: '2018-09-14',
-      },
-    ],
-    abstract: `
-        In this talk I teach React from scratch in a single index.html file with
-        no magic up my sleeves. We start with a basic Hello World in vanilla
-        JavaScript and incrementally iterate through React APIs and JSX. We
-        continue with introducing more of React's APIs.
       `,
   },
   {
     title: 'Simply React',
     resources: ['[slides](https://simply-react.netlify.com)'],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event: 'Practice Run',
         date: '2018-06-01',
@@ -156,7 +139,7 @@ export default [
           'https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
         One of the things I love about React is how easy it is to encapsulate UI code into a component. I love this
         because it makes reuse of those components easy. But is it easy? I’ve made my fair share of components that had to
         accept a bunch of props to handle a growing list of different use cases resulting in a complex render function
@@ -176,7 +159,7 @@ export default [
       '[react-testing-library-examples codesandbox](https://codesandbox.io/s/github/kentcdodds/react-testing-library-examples)',
     ],
     tags: ['react', 'testing'],
-    presentations: [
+    deliveries: [
       {
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
@@ -194,7 +177,7 @@ export default [
         date: '2018-08-31',
       },
     ],
-    abstract: `
+    description: `
         We want to make sure that when we ship new code, our users can use the
         application. The best way we've found to do that is to write automated
         tests that run before we deploy a new version of the app. But if our tests
@@ -210,13 +193,13 @@ export default [
     title: 'PayPal and Node Tooling',
     resources: [],
     tags: ['node'],
-    presentations: [
+    deliveries: [
       {
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
       },
     ],
-    abstract: `
+    description: `
         This is a keynote at JS@PayPal about how PayPal is investing in
         JavaScript, NodeJS, and tooling.
       `,
@@ -228,7 +211,7 @@ export default [
       '[blog](http://kcd.im/how-to-react)',
     ],
     tags: ['react'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[React Dev Summit](https://devchat.tv/event/react-dev-summit-2018/)',
@@ -239,7 +222,7 @@ export default [
         date: '2018-06-08',
       },
     ],
-    abstract: `
+    description: `
         Learning React can be confusing. React is a library, but even more than that, React is an ecosystem of tools that
         you piece together to create a program. This is a powerful property of the React community, however that ecosystem
         can be frustratingly distracting when you’re a newcomer trying to get your feet wet. The key to avoiding this
@@ -252,13 +235,13 @@ export default [
     title: 'How open source has made me and the stuff I make better',
     resources: ['[slides](https://slides.com/kentcdodds/oss-better#/)'],
     tags: ['open source'],
-    presentations: [
+    deliveries: [
       {
         event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018/)',
         date: '2018-04-13',
       },
     ],
-    abstract: `
+    description: `
         The open source community and ecosystem have made me a better software developer and helped me develop better
         software. I get to see how other people work. Other people get to see how I work. It encourages me to put forth my
         best effort, think critically about the software I'm creating, and ensure it has great documentation. It's also
@@ -272,7 +255,7 @@ export default [
     title: 'All about macros with babel-plugin-macros 🎣',
     resources: ['[slides](http://slides.com/kentcdodds/macros)'],
     tags: ['babel'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/)',
@@ -281,7 +264,7 @@ export default [
           'https://www.youtube.com/watch?v=nlAHtAQlFGk&t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
       },
     ],
-    abstract: `
+    description: `
         Customize babel without configuration or ejecting from create-react-app
       `,
   },
@@ -289,7 +272,7 @@ export default [
     title: 'Write tests. Not too many. Mostly integration.',
     resources: ['[slides](https://slides.com/kentcdodds/write-tests)'],
     tags: ['testing'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[UtahJS Orem Meetup](https://www.meetup.com/UtahJS/events/246047733/)',
@@ -309,7 +292,7 @@ export default [
           'https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
         Automated tests are an important part of raising your confidence when releasing software. They can speed you up
         or slow you down depending on how you write them and which form of testing you focus your test writing on. In
         this talk, we’ll cover the value of automated testing and where your efforts should be focused to strike the best
@@ -322,7 +305,11 @@ export default [
       `[The Beginner's guide to ReactJS ⚛️](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)`,
     ],
     tags: ['react', 'jsx', 'intro'],
-    presentations: [
+    deliveries: [
+      {
+        event: '[UtahJS Conf](https://conf.utahjs.com/)',
+        date: '2018-09-14',
+      },
       {
         event:
           '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227/)',
@@ -331,7 +318,7 @@ export default [
           'https://www.youtube.com/watch?v=pugPxYH96TU&t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
-    abstract: `
+    description: `
         In this talk I teach React from scratch in a single \`index.html\` file with no magic up my sleeves. We start with
         a basic Hello World in vanilla JavaScript and incrementally iterate through React APIs and JSX. We continue with
         introducing more of React's APIs.
@@ -341,7 +328,7 @@ export default [
     title: 'Maintainable CSS in React',
     resources: ['[slides](http://slides.com/kentcdodds/glamorous#/)'],
     tags: ['glamorous', 'css', 'css-in-js', 'react'],
-    presentations: [
+    deliveries: [
       {
         event: 'JS@PayPal Summer 2017 (internal conference)',
         date: '2017-07-20',
@@ -355,7 +342,7 @@ export default [
           'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
     ],
-    abstract: `
+    description: `
         I no longer care about: specificity, CSS linters, CSS preprocessors, vendor prefixing, removing unused CSS,
         finding CSS dependencies and dependents. I now care more about: whether it’s fast enough, whether it’s small
         enough, whether it’s familiar enough. These are some of my trade-offs. Because I use CSS-in-JS. I’ve made
@@ -368,13 +355,13 @@ export default [
     title: 'Tools of modern JavaScript projects',
     resources: ['[slides](http://slides.com/kentcdodds/js-tools#/)'],
     tags: ['javascript', 'tools'],
-    presentations: [
+    deliveries: [
       {
         event: '[Open West 2017](https://www.openwest.org)',
         date: '2017-07-13',
       },
     ],
-    abstract: `
+    description: `
         The cry of JavaScript fatigue still echoes in the minds of developers everywhere as they try to wade through the
         waters of outdated blog posts, tutorials, Stack Overflow answers, and GitHub repos. Just when things seem to start
         settling in JavaScript, something new comes to shake things up a little bit. I’ll be you tour guide as we navigate
@@ -386,7 +373,7 @@ export default [
     title: 'Faster JavaScript',
     resources: ['[slides](https://slides.com/kentcdodds/faster-javascript)'],
     tags: ['javascript', 'babel'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[JS Remote Conf](https://devchat.tv/conferences/js-remote-conf-2017)',
@@ -401,7 +388,7 @@ export default [
         recording: 'https://www.youtube.com/watch?v=kI_OiAUFLkQ',
       },
     ],
-    abstract: `
+    description: `
         The more code you have, the more problems you have. One of these is the ability to learn the code. Code often has
         logic to handle edge cases which can distract a new contributor from the core logic of the code, making it
         challenging to learn. Another one of the problems with more code that's specific to JavaScript and the browser is
@@ -420,7 +407,7 @@ export default [
       '[repo 2](https://github.com/angular-todo-mvc/angular-todo-escape)',
     ],
     tags: ['open source', 'live coding'],
-    presentations: [
+    deliveries: [
       {
         event: '[Angular Remote Conf](http://angularremoteconf.com)',
         recording: 'https://www.youtube.com/watch?v=Zlu3QvuwruY',
@@ -440,7 +427,7 @@ export default [
         date: '2018-04-13',
       },
     ],
-    abstract: `
+    description: `
         Building things so they work well in isolation, then piece them together to make the full application makes
         building applications easier. One thing that really helps with this kind of strategy is to open source your stuff.
         In this talk, we'll take a look at an existing application, identify a good candidate component for open sourcing,
@@ -457,7 +444,7 @@ export default [
       '[slides](https://kcd.im/manage-oss)',
     ],
     tags: ['open source', 'soft skills'],
-    presentations: [
+    deliveries: [
       {
         event: '[Space City JS](http://spacecity.codes/)',
         date: '2016-05-14',
@@ -468,7 +455,7 @@ export default [
         date: '2016-10-27',
       },
     ],
-    abstract: `
+    description: `
         Awesome! You’ve made it big! You’ve published an open source project and people are actually using it to make the
         world a better place. Achievement unlocked! Great job! But wait… what’s this? An issue? Oh, it’s just a bug.
         Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What’s this? A PR? How cool! Wait… That’s not quite
@@ -493,7 +480,7 @@ export default [
       '[react-ava-workshop](https://github.com/kentcdodds/react-ava-workshop)',
     ],
     tags: ['react', 'testing', 'live coding'],
-    presentations: [
+    deliveries: [
       {
         event: '[Connect.tech](http://connect.tech/)',
         date: '2016-10-21',
@@ -507,7 +494,7 @@ export default [
         date: '2016-08-11',
       },
     ],
-    abstract: `
+    description: `
         I hope you're excited about testing! We all know we need to get testing better, but it can be really hard to know
         how and what to test. We'll learn about the four inputs to React components (user input, props, data, and context)
         and how to test for each of them. You'll discover that if you slightly modify the way you're writing your
@@ -519,7 +506,7 @@ export default [
     title: 'More than you want to know about ES6 Modules',
     resources: ['[slides](https://slides.com/kentcdodds/es6-modules)'],
     tags: ['ES6', 'babel'],
-    presentations: [
+    deliveries: [
       {
         event: '[MidwestJS](http://midwestjs.com/)',
         date: '2016-08-12',
@@ -541,7 +528,7 @@ export default [
         date: '2016-03-19',
       },
     ],
-    abstract: `
+    description: `
         ES6 Modules have been standardized and many have already started using them. They have a lot of benefits over
         CommonJS, AMD, and Globals.
         Unfortunately, there are many ways to deal with modules with this new syntax and it can be a bit confusing. In
@@ -556,7 +543,7 @@ export default [
       '[code](http://kcd.im/beginner-asts-code)',
     ],
     tags: ['ECMAScript', 'babel', 'eslint', 'live coding'],
-    presentations: [
+    deliveries: [
       {
         event: '[Open West 2017](https://www.openwest.org/schedule/#talk-99)',
         date: '2017-07-13',
@@ -584,7 +571,7 @@ export default [
         date: '2016-06-06',
       },
     ],
-    abstract: `
+    description: `
         The Abstract Syntax Tree. It sounds a lot worse than it is. It’s actually quite simple and enables some powerful
         tools. BabelJS uses it to transform your code from ES.Next to ES5. ESLint uses it to lint your code. And with a
         knowledge of how it works, you can extend these and other tools to do some mind bustingly powerful things. Prepare
@@ -595,7 +582,7 @@ export default [
     title: 'The First Pull Request',
     resources: ['[slides](http://slides.com/kentcdodds/1st-pr)'],
     tags: ['open source', 'soft skills'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Fluent Conf](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/46612)',
@@ -603,7 +590,7 @@ export default [
         date: '2016-03-09',
       },
     ],
-    abstract: `
+    description: `
         "Feel free to submit a pull request." For some, this is a welcome invitation, but for many developers, pull
         requests are intimidating, discouraging them from contributing to the community. Kent Dodds demonstrates how easy
         and fun it is to create a pull request as a first timer.
@@ -630,7 +617,7 @@ export default [
       '[slides](https://drive.google.com/file/d/0BxZDtibcRzVWNFU3VXM2RzJ1SG8/view?usp=sharing)',
     ],
     tags: ['testing', 'lightning'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Ignite Fluent](http://conferences.oreilly.com/fluent/javascript-html-us/public/schedule/detail/48271)',
@@ -639,7 +626,7 @@ export default [
         date: '2016-03-08',
       },
     ],
-    abstract: `
+    description: `
         Knowing what and how to test is almost more difficult than actually writing the test. If you write only end-to-end
         tests, you'll struggle with reliability and speed. If you write only unit tests, you'll struggle with surprising
         bugs integrating things together.
@@ -651,7 +638,7 @@ export default [
     title: 'Zero to 60 in software development: How to jumpstart your career',
     resources: ['[slides](https://slides.com/kentcdodds/zero-to-60)'],
     tags: ['soft skills'],
-    presentations: [
+    deliveries: [
       {
         event: '[Foward 4 Web Summit](http://forwardjs.com/)',
         recording:
@@ -663,7 +650,7 @@ export default [
         date: '2016-10-13',
       },
     ],
-    abstract: `
+    description: `
         Our industry has a problem. We have a "talent shortage," so we're loading the industry with new developers from
         various bootcamps, but they're having trouble finding jobs because many companies are unwilling to hire and train
         them. So these new developers are left to themselves to try and find ways to develop the skills they need to be
@@ -682,14 +669,14 @@ export default [
       '[tweet](https://twitter.com/ngnebraska/status/669319695015673856)',
     ],
     tags: ['soft skills'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455/)',
         date: '2015-11-24',
       },
     ],
-    abstract: `
+    description: `
         Angular is amazing and has contributed to a major change in the landscape of frontend web development forever.
         But frameworks come and go. Even though Angular 1.x will still be around for a few years, it will eventually be
         totally antiquated and you'll need to show off other kinds of skills to attract employers. What if there were a
@@ -702,7 +689,7 @@ export default [
     title: 'ES6, Webpack, Karma, and Code Coverage',
     resources: ['[repo](https://github.com/kentcdodds/random-user-coverage)'],
     tags: ['babel', 'testing', 'webpack', 'live coding'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472/)',
@@ -710,12 +697,12 @@ export default [
         date: '2015-06-16',
       },
     ],
-    abstract: `Setting up test coverage reporting with ES6 and Karma`,
+    description: `Setting up test coverage reporting with ES6 and Karma`,
   },
   {
     title: 'Angular Directive Scope: Explained and Code Structure',
     resources: ['[blog post](https://medium.com/@kentcdodds/19eee9e90e45)'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910/)',
@@ -727,7 +714,7 @@ export default [
   {
     title: 'ES6',
     resources: ['[repo](https://github.com/kentcdodds/es6-workshop)'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
@@ -735,7 +722,7 @@ export default [
         date: '2015-04-21',
       },
     ],
-    abstract: `
+    description: `
         Kent C. Dodds is going to be introducing ECMAScript 6, which is the next version of JavaScript. If you want to
         look ahead, check this out: [github.com/lukehoban/es6features](https://github.com/lukehoban/es6features)
       `,
@@ -746,14 +733,14 @@ export default [
       '[slides](http://slides.com/kentcdodds/moxee#/)',
       '[repo](https://github.com/alianza-dev/moxee)',
     ],
-    presentations: [
+    deliveries: [
       {
         event:
           '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',
         date: '2015-03-26',
       },
     ],
-    abstract: `
+    description: `
         Moxee will create tests for you which will ensure that no injectable function is requiring anything that the
         module doesn't provide on its own (or via one of its dependencies).
       `,
@@ -764,7 +751,7 @@ export default [
       '[slides](http://slides.com/kentcdodds/angular-formly)',
       '[repo](https://github.com/kentcdodds/angular-formly-convert)',
     ],
-    presentations: [
+    deliveries: [
       {
         event: '[ng-nl](http://www.ng-nl.org)',
         recording: 'https://youtu.be/o90TMDL3OYc',
@@ -776,7 +763,7 @@ export default [
         date: '2015-08-13',
       },
     ],
-    abstract: `
+    description: `
         We're all really tired of writing the same code for every form. You need a label here and an input here and make
         sure their IDs are the same and unique and now you want me to add validation!? Daah! I got fed up with this pretty
         quick and found that I enjoy writing JavaScript a lot more than repeating myself with HTML. If you're like me,
@@ -791,7 +778,7 @@ export default [
       '[slides](http://slides.com/kentcdodds/ng2-introduction)',
       '[repo](https://github.com/kentcdodds/ng2-random-user/)',
     ],
-    presentations: [
+    deliveries: [
       {
         event:
           '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
@@ -799,7 +786,7 @@ export default [
         date: '2015-04-08',
       },
     ],
-    abstract: `
+    description: `
         Angular 2 is built for huge web applications that stand the test of time. To accomplish this, Angular 2 utilizes
         the latest and greatest web technologies like ES6 modules/classes and Web Components. Come get a preview of what
         this looks like with Egghead.io instructor Kent C. Dodds as he live codes an application using the pre-release
@@ -813,14 +800,14 @@ export default [
       '[JSBin](http://jsbin.com/qocekak/edit)',
       '[blog post](https://www.airpair.com/angularjs/posts/ngmodeloptions-total-model-control)',
     ],
-    presentations: [
+    deliveries: [
       {
         event: '[ng-conf](http://www.ng-conf.org/)',
         recording: 'https://youtu.be/k3t3ov6xHDw',
         date: '2015-03-06',
       },
     ],
-    abstract: `
+    description: `
         Angular 1.3 brought a sweet new directive to the table called ng-model-options. It gives you more control over how
         your model gets updated and is very easy to use. Get a quick intro and start using this today!
       `,
@@ -831,7 +818,7 @@ export default [
       '[app](http://kentcdodds.com/react-in-angular/app/)',
       '[repo](https://github.com/kentcdodds/react-in-angular)',
     ],
-    presentations: [
+    deliveries: [
       {
         event: '[Jfokus](http://www.jfokus.se/jfokus/)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
@@ -844,7 +831,7 @@ export default [
         date: '2015-01-27',
       },
     ],
-    abstract: `
+    description: `
         ReactJS is an amazing View library that promises (and delivers) high performance, composability, and
         maintainability. AngularJS is an amazing MV* framework.
         Tons of shops have adopted and totally bought into AngularJS for their entire frontend application. They're loving
@@ -862,7 +849,7 @@ export default [
       '[slides](https://slides.com/kentcdodds/genie)',
       '[workshop](https://kentcdodds.github.io/genie/workshop/)',
     ],
-    presentations: [
+    deliveries: [
       {
         event: '[MidwestJS](http://midwestjs.com/)',
         recording: 'https://youtu.be/lqf5mrrf4ZY',
@@ -874,7 +861,7 @@ export default [
         date: '2014-02-06',
       },
     ],
-    abstract: `
+    description: `
         I believe that people are so much more productive when they don't need to use the mouse to click on something.
         One implementation intended to help with this is keyboard shortcuts. Unfortunately, these are limited to the
         number of sensible keys and key combinations and can be difficult for users to discover, remember, and use.
@@ -894,7 +881,7 @@ export default [
       '[slides](http://slides.com/kentcdodds/angular-bindonce#/)',
       '[kcd-angular](http://kentcdodds.com/kcd-angular)',
     ],
-    presentations: [
+    deliveries: [
       {
         event:
           '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/184204692/)',
@@ -902,7 +889,7 @@ export default [
         date: '2014-08-12',
       },
     ],
-    abstract: `
+    description: `
         If you're not careful (especially with your ng-repeats) your watch count in your app can grow pretty quick. This
         isn't a problem itself, but its what that does to your digest cycle. Lots of watchers makes your digest cycle take
         longer. In my talk, we'll talk about what Angular 1.3 is doing to help solve this problem, the problem their
@@ -911,7 +898,7 @@ export default [
   },
   {
     title: 'Sharing code between Ionic and Web Angular Apps',
-    presentations: [
+    deliveries: [
       {
         event:
           '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/160366932/)',
@@ -919,14 +906,14 @@ export default [
         date: '2014-08-08',
       },
     ],
-    abstract: `
+    description: `
         This was an impromptu talk while we were waiting for the actual speakers to come, so I'm not on the schedule.
       `,
   },
   {
     title: 'How to Build a Demo with GitHub Pages',
     resources: ['[slides](http://slides.com/kentcdodds/gh-pages#/)'],
-    presentations: [
+    deliveries: [
       {
         event:
           '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152/)',
@@ -941,7 +928,7 @@ export default [
       '[site](http://kentcdodds.com/ng-jwt-workshop/frontend/)',
       '[repo](https://github.com/kentcdodds/ng-jwt-workshop)',
     ],
-    presentations: [
+    deliveries: [
       {
         event:
           '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/173788512/)',
@@ -949,7 +936,7 @@ export default [
         date: '2014-06-10',
       },
     ],
-    abstract: `
+    description: `
         Cookies and sessions are the traditional way to keep track of user state on the server, but it can bite you later.
         JSON Web Tokens (JWT) is a stateless way to deal with users. I'll show how to use \`$httpInterceptors\` to make
         this easy as pie. :-)
@@ -961,7 +948,7 @@ export default [
       '[slides](https://slides.com/kentcdodds/intro-to-angularjs)',
       '[workshop](http://kentcdodds.com/ng-workshop/)',
     ],
-    presentations: [
+    deliveries: [
       {
         event: 'To my classmates at BYU',
         recording: 'https://youtu.be/GmVUw_Efi_M',
@@ -976,7 +963,7 @@ export default [
         date: '2015-02-03',
       },
     ],
-    abstract: `
+    description: `
         AngularJS is one of the most popular frontend frameworks out there right now. If you haven't tried it yet,
         prepare to be amazed! Here's what we'll cover:
         1. Templates/Expressions - Your View

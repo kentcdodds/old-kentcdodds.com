@@ -8,9 +8,9 @@ import {
   UnsubscribeIllustration,
 } from '../components/ConfirmMessage/Illustrations'
 
-export default function Messages({data: {site, latestArticle}}) {
+export default function Messages({data: {latestArticle}}) {
   return (
-    <Layout site={site} noSubscribeForm>
+    <Layout noSubscribeForm>
       <div>
         <Message
           fullscreen
@@ -48,12 +48,6 @@ export default function Messages({data: {site, latestArticle}}) {
 
 export const latestArticle = graphql`
   query {
-    site {
-      ...site
-      siteMetadata {
-        title
-      }
-    }
     latestArticle: allMdx(
       limit: 1
       sort: {fields: [frontmatter___date], order: DESC}

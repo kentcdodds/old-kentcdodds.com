@@ -7,9 +7,9 @@ function preparePresentationData(presentation) {
 
     // overrides
     title: stripIndent(presentation.title || ''),
-    abstract: stripIndent(presentation.abstract || ''),
+    description: stripIndent(presentation.description || ''),
     resources: (presentation.resources || []).map(r => stripIndent(r)),
-    presentations: (presentation.presentations || [])
+    deliveries: (presentation.deliveries || [])
       .map(delivery => ({
         ...delivery,
         endDate: delivery.endDate || delivery.date,
@@ -23,8 +23,8 @@ function preparePresentationData(presentation) {
 }
 
 function sortByPresentationDate(a, b) {
-  const mostRecentA = mostRecent(a.presentations.map(({date}) => date))
-  const mostRecentB = mostRecent(b.presentations.map(({date}) => date))
+  const mostRecentA = mostRecent(a.deliveries.map(({date}) => date))
+  const mostRecentB = mostRecent(b.deliveries.map(({date}) => date))
   return moreRecent(mostRecentA, mostRecentB) ? -1 : 1
 }
 

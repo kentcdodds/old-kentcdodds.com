@@ -92,7 +92,9 @@ export default function Post({data: {site, mdx}}) {
 export const pageQuery = graphql`
   query($id: String!) {
     site {
-      ...site
+      siteMetadata {
+        keywords
+      }
     }
     mdx(fields: {id: {eq: $id}}) {
       frontmatter {

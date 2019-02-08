@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
-import {graphql} from 'gatsby'
+import {graphql, StaticQuery} from 'gatsby'
 import {MDXProvider} from '@mdx-js/tag'
 import {Global, css} from '@emotion/core'
+import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
-import {bpMaxSM} from '../lib/breakpoints'
+import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 import mdxComponents from './mdx'
 import Header from './Header'
@@ -103,9 +104,32 @@ export const globalStyles = css`
   ${reset};
 `
 
-export default function Layout({
-  site,
+const DefaultHero = styled.section`
+  * {
+    color: ${theme.colors.white};
+  }
+  width: 100%;
+  background: #3155dc;
+  background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%);
+  background-position: center right, center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  align-items: center;
+  display: flex;
+  height: 100px;
+  ${bpMaxMD} {
+    background-size: cover;
+  }
+  ${bpMaxSM} {
+    padding-top: 60px;
+  }
+`
+
+function Layout({
+  data,
   frontmatter = {},
+  Hero = DefaultHero,
   children,
   dark,
   headerBg,
@@ -117,9 +141,11 @@ export default function Layout({
   fixedHeader,
 }) {
   const {
-    description: siteDescription,
-    keywords: siteKeywords,
-  } = site.siteMetadata
+    site: {
+      siteMetadata,
+      siteMetadata: {description: siteDescription, keywords: siteKeywords},
+    },
+  } = data
 
   const {
     keywords: frontmatterKeywords,
@@ -131,8 +157,18 @@ export default function Layout({
 
   return (
     <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
+      <Helmet
+        title={config.siteTitle}
+        meta={[
+          {name: 'description', content: description},
+          {name: 'keywords', content: keywords},
+        ]}
+      >
+        <html lang="en" />
+        <noscript>This site runs best with JavaScript enabled.</noscript>
+      </Helmet>
       <>
-        <Global styles={globalStyles} />
         <div
           css={css`
             display: flex;
@@ -143,18 +179,9 @@ export default function Layout({
             ${backgroundImage && `background-image: url(${backgroundImage})`};
           `}
         >
-          <Helmet
-            title={config.siteTitle}
-            meta={[
-              {name: 'description', content: description},
-              {name: 'keywords', content: keywords},
-            ]}
-          >
-            <html lang="en" />
-            <noscript>This site runs best with JavaScript enabled.</noscript>
-          </Helmet>
+          <Hero />
           <Header
-            siteTitle={site.siteMetadata.title}
+            siteTitle={siteMetadata.title}
             dark={dark}
             bgColor={headerBg}
             headerColor={headerColor}
@@ -165,7 +192,7 @@ export default function Layout({
           </MDXProvider>
           {!noFooter && (
             <Footer
-              author={site.siteMetadata.author.name}
+              author={siteMetadata.author.name}
               noSubscribeForm={noSubscribeForm}
             />
           )}
@@ -175,15 +202,24 @@ export default function Layout({
   )
 }
 
-export const pageQuery = graphql`
-  fragment site on Site {
-    siteMetadata {
-      title
-      description
-      author {
-        name
-      }
-      keywords
-    }
-  }
-`
+export default function LayoutWithSiteData(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              author {
+                name
+              }
+              keywords
+            }
+          }
+        }
+      `}
+      render={data => <Layout data={data} {...props} />}
+    />
+  )
+}

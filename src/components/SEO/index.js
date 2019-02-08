@@ -44,7 +44,7 @@ const SEO = ({postData, frontmatter = {}, postImage, isBlogPost}) => (
       const datePublished = isBlogPost ? postMeta.datePublished : false
 
       return (
-        <React.Fragment>
+        <>
           <Helmet>
             {/* General tags */}
             <title>{title}</title>
@@ -78,7 +78,7 @@ const SEO = ({postData, frontmatter = {}, postImage, isBlogPost}) => (
             organization={seo.organization}
             defaultTitle={seo.title}
           />
-        </React.Fragment>
+        </>
       )
     }}
   />
