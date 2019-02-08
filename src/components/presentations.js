@@ -1,9 +1,8 @@
 import React from 'react'
-import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
 import {isEmpty} from 'lodash'
-import {bpMaxSM} from '../lib/breakpoints'
 import Markdown from 'react-markdown'
+import {bpMaxSM} from '../lib/breakpoints'
 
 function Presentations({presentations}) {
   return presentations.map(
