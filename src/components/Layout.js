@@ -114,6 +114,7 @@ const DefaultHero = styled.section`
   background-position: center right, center left;
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
   z-index: 0;
   align-items: center;
   display: flex;

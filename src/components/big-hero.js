@@ -24,6 +24,7 @@ function Hero({children}) {
         background-repeat: no-repeat;
         background-size: contain;
         z-index: 0;
+        position: relative;
         align-items: center;
         display: flex;
         padding-top: 40px;
@@ -72,6 +73,7 @@ function Hero({children}) {
         />
         <h1
           css={css`
+            position: relative;
             z-index: 5;
             line-height: 1.5;
             margin: 0;

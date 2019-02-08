@@ -133,6 +133,7 @@ export default function Index({data: {allMdx}}) {
       <Container
         css={css`
           margin-top: -20px;
+          position: relative;
           z-index: 10;
           padding-bottom: 0;
           background: white;
@@ -219,7 +220,10 @@ export const pageQuery = graphql`
     allMdx(
       limit: 5
       sort: {fields: [frontmatter___date], order: DESC}
-      filter: {frontmatter: {published: {ne: false}}}
+      filter: {
+        frontmatter: {published: {ne: false}}
+        fileAbsolutePath: {regex: "//content/blog//"}
+      }
     ) {
       edges {
         node {

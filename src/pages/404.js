@@ -2,7 +2,7 @@ import React from 'react'
 import {css} from '@emotion/core'
 import {UnsubscribeIllustration} from '../components/ConfirmMessage/Illustrations'
 
-export default function FourOFour() {
+function FourOFour() {
   return (
     <div
       css={css`
@@ -20,3 +20,5 @@ export default function FourOFour() {
     </div>
   )
 }
+
+export default FourOFour

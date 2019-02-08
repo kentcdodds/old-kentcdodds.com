@@ -51,7 +51,10 @@ export const latestArticle = graphql`
     latestArticle: allMdx(
       limit: 1
       sort: {fields: [frontmatter___date], order: DESC}
-      filter: {frontmatter: {published: {ne: false}}}
+      filter: {
+        frontmatter: {published: {ne: false}}
+        fileAbsolutePath: {regex: "//content/blog//"}
+      }
     ) {
       totalCount
       edges {
