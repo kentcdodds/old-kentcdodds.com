@@ -1,5 +1,7 @@
+const path = require('path')
 const config = require('./config/website')
 
+const here = (...p) => path.join(__dirname, ...p)
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require('dotenv').config({
@@ -39,8 +41,18 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
+      },
+    },
+    {
       resolve: `gatsby-mdx`,
       options: {
+        defaultLayouts: {
+          default: here('./src/templates/markdown-page.js'),
+        },
         extensions: ['.mdx', '.md', '.markdown'],
         gatsbyRemarkPlugins: [
           {
@@ -86,7 +98,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `GOOGLE_ID`,
+        trackingId: `UA-62924965-1`,
       },
     },
     {
@@ -112,8 +124,8 @@ module.exports = {
                   ...edge.node.frontmatter,
                   description: edge.node.excerpt,
                   date: edge.node.fields.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
                 }
               })
             },

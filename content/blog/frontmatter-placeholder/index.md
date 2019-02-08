@@ -8,6 +8,8 @@ categories: ['test']
 keywords: ['test']
 banner: './images/banner.jpg'
 published: false
+useBigHero: false
+noFooter: false
 redirects:
   - '/invisible-post-423123'
 ---

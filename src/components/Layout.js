@@ -148,21 +148,19 @@ function Layout({
   } = data
 
   const {
-    keywords: frontmatterKeywords,
-    description: frontmatterDescription,
+    keywords = siteKeywords,
+    description = siteDescription,
+    title = config.siteTitle,
   } = frontmatter
-
-  const keywords = (frontmatterKeywords || siteKeywords).join(', ')
-  const description = frontmatterDescription || siteDescription
 
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalStyles} />
       <Helmet
-        title={config.siteTitle}
+        title={title}
         meta={[
           {name: 'description', content: description},
-          {name: 'keywords', content: keywords},
+          {name: 'keywords', content: keywords.join()},
         ]}
       >
         <html lang="en" />
@@ -179,23 +177,27 @@ function Layout({
             ${backgroundImage && `background-image: url(${backgroundImage})`};
           `}
         >
-          <Hero />
-          <Header
-            siteTitle={siteMetadata.title}
-            dark={dark}
-            bgColor={headerBg}
-            headerColor={headerColor}
-            fixed={fixedHeader}
-          />
-          <MDXProvider components={mdxComponents}>
-            <>{children}</>
-          </MDXProvider>
-          {!noFooter && (
-            <Footer
-              author={siteMetadata.author.name}
-              noSubscribeForm={noSubscribeForm}
+          <div css={{flex: '1 0 auto'}}>
+            <Hero />
+            <Header
+              siteTitle={siteMetadata.title}
+              dark={dark}
+              bgColor={headerBg}
+              headerColor={headerColor}
+              fixed={fixedHeader}
             />
-          )}
+            <MDXProvider components={mdxComponents}>
+              <>{children}</>
+            </MDXProvider>
+          </div>
+          <div css={{flexShrink: '0'}}>
+            {noFooter ? null : (
+              <Footer
+                author={siteMetadata.author.name}
+                noSubscribeForm={noSubscribeForm}
+              />
+            )}
+          </div>
         </div>
       </>
     </ThemeProvider>

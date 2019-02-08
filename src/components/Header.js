@@ -38,7 +38,8 @@ const Header = ({
           a {
             color: ${headerColor ? headerColor : theme.colors.body_color};
           }
-          a:hover {
+          a:hover,
+          a:focus {
             color: ${headerColor === theme.colors.white
               ? 'white'
               : theme.colors.link_color_hover};
@@ -71,9 +72,13 @@ const Header = ({
                 visibility: hidden;
                 display: none;
               }
-            }
-            .active {
-              background: rgba(40, 28, 77, 0.7);
+              &:focus,
+              &:hover {
+                color: ${headerColor ? headerColor : theme.colors.body_color};
+              }
+              &.active {
+                background: rgba(40, 28, 77, 0.7);
+              }
             }
           `}
         >
