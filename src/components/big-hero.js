@@ -85,22 +85,26 @@ function Hero({children}) {
             padding-bottom: 40px;
           `}
         >
-          {`Hi, I’m Kent C. Dodds. I help people make the world better through
-          quality software.`}
+          {`Hi, I’m Kent C. Dodds.
+          I help people make the world better through quality software.`}
         </h1>
-        <img
-          src={photoOfKent}
-          alt="Kent C. Dodds"
-          css={css`
-            max-width: 380px;
-            margin-right: -160px;
-            margin-bottom: 0;
-            ${bpMaxMD} {
-              display: none;
-              visibility: hidden;
-            }
-          `}
-        />
+        <div
+          css={{
+            marginRight: '-160px',
+            width: 380,
+            height: 336,
+            [bpMaxMD]: {
+              display: 'none',
+              visibility: 'hidden',
+            },
+          }}
+        >
+          <img
+            src={photoOfKent}
+            alt="Kent C. Dodds"
+            css={{maxWidth: '100%', marginBottom: 0}}
+          />
+        </div>
       </Container>
     </section>
   )
