@@ -6,6 +6,7 @@
     "react/jsx-pascal-case": "off",
     "import/order": "off",
     "babel/camelcase": "off",
-    "jsx-a11y/label-has-for": "off"
+    "jsx-a11y/label-has-for": "off",
+    "max-lines-per-function": "off"
   }
 }
