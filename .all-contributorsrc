@@ -8,7 +8,18 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "contributorsPerLine": 7,
   "contributors": [
+      {
+      "login": "kentcdodds",
+      "name": "Kent C. Dodds",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
+      "profile": "https://kentcdodds.com",
+      "contributions": [
+        "code",
+        "infra"
+      ]
+    },
     {
       "login": "jgierer12",
       "name": "Jonas Gierer",
@@ -18,6 +29,5 @@
         "code"
       ]
     }
-  ],
-  "contributorsPerLine": 7
+  ]
 }
