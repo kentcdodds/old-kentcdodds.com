@@ -31,6 +31,8 @@ function Presentations({presentations}) {
           }
           h2 {
             margin: 0;
+            margin-right: 5px;
+            flex: 1 1;
             ${bpMaxSM} {
               margin-bottom: 10px;
             }
@@ -56,13 +58,19 @@ function Presentations({presentations}) {
             justify-content: space-between;
           }
 
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -2.5px;
+          }
+
           .tag {
             padding: 8px 10px;
             background: white;
             border: 1px solid #f1f1f1;
             border-radius: 3px;
             font-size: 16px;
-            margin-right: 5px;
+            margin: 2.5px;
             ${bpMaxSM} {
               padding: 6px 8px;
               font-size: 14px;
@@ -82,7 +90,7 @@ function Presentations({presentations}) {
           `}
         >
           <h2>{title}</h2>
-          <div>
+          <div className="tags">
             {tags.map((tag, index) => (
               <span key={index} className="tag">
                 {tag}
