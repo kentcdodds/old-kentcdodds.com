@@ -65,6 +65,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "rwieruch",
+      "name": "Robin Wieruch",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2479967?v=4",
+      "profile": "https://www.robinwieruch.de",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
