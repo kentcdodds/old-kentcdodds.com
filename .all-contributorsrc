@@ -10,7 +10,7 @@
   "commit": false,
   "contributorsPerLine": 7,
   "contributors": [
-      {
+    {
       "login": "kentcdodds",
       "name": "Kent C. Dodds",
       "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
@@ -27,6 +27,16 @@
       "profile": "https://github.com/jgierer12",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "vojtaholik",
+      "name": "Vojta Holik",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/25487857?v=4",
+      "profile": "https://github.com/vojtaholik",
+      "contributions": [
+        "code",
+        "design"
       ]
     }
   ]
