@@ -38,6 +38,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "joelhooks",
+      "name": "Joel Hooks",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/86834?v=4",
+      "profile": "http://joelhooks.com",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
