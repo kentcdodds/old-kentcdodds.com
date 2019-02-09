@@ -8,17 +8,9 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "contributorsPerLine": 7,
   "contributors": [
-    {
-      "login": "jgierer12",
-      "name": "Jonas Gierer",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/4331946?v=4",
-      "profile": "https://github.com/jgierer12",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
+      {
       "login": "kentcdodds",
       "name": "Kent C. Dodds",
       "avatar_url": "https://avatars0.githubusercontent.com/u/1500684?v=4",
@@ -27,7 +19,15 @@
         "code",
         "infra"
       ]
+    },
+    {
+      "login": "jgierer12",
+      "name": "Jonas Gierer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4331946?v=4",
+      "profile": "https://github.com/jgierer12",
+      "contributions": [
+        "code"
+      ]
     }
-  ],
-  "contributorsPerLine": 7
+  ]
 }
