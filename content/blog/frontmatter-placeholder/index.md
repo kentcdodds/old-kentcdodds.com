@@ -10,6 +10,7 @@ banner: './images/banner.jpg'
 bannerCredit: 'someone'
 published: false
 useBigHero: false
+heroMessage: 'the is a message'
 noFooter: false
 redirects:
   - '/invisible-post-423123'

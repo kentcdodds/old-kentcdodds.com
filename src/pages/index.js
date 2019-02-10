@@ -130,7 +130,7 @@ export default function Index({data: {allMdx}}) {
   return (
     <Layout
       headerColor={theme.colors.white}
-      Hero={Hero}
+      hero={<Hero />}
       pageTitle="Home of Kent C. Dodds"
     >
       <SubscribeConfirmation />

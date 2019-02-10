@@ -9,7 +9,10 @@ import heroImageRight from '../images/hero/path-right.svg'
 import heroImageLeft from '../images/hero/path-left.svg'
 import photoOfKent from '../images/hero/kent.png'
 
-function Hero({children}) {
+function Hero({
+  children,
+  message = `Hi, I’m Kent C. Dodds. I help people make the world better through quality software.`,
+}) {
   return (
     <section
       css={css`
@@ -85,8 +88,7 @@ function Hero({children}) {
             padding-bottom: 40px;
           `}
         >
-          {`Hi, I’m Kent C. Dodds.
-          I help people make the world better through quality software.`}
+          {message}
         </h1>
         <div
           css={{

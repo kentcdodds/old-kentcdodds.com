@@ -135,7 +135,7 @@ function Layout({
   data,
   pageTitle,
   frontmatter = {},
-  Hero = DefaultHero,
+  hero = <DefaultHero />,
   children,
   dark,
   headerBg,
@@ -184,7 +184,7 @@ function Layout({
           `}
         >
           <div css={{flex: '1 0 auto'}}>
-            <Hero headerColor={headerColor} />
+            {React.cloneElement(hero, {headerColor})}
             <Header
               siteTitle={pageTitle || siteMetadata.title}
               dark={dark}

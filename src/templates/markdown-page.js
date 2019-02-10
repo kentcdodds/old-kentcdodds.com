@@ -10,7 +10,13 @@ function MarkdownPage({children, pageContext: {frontmatter}}) {
     <>
       <SEO />
       <Layout
-        Hero={frontmatter.useBigHero ? BigHero : undefined}
+        hero={
+          frontmatter.useBigHero ? (
+            <BigHero message={frontmatter.heroMessage} />
+          ) : (
+            undefined
+          )
+        }
         noFooter={frontmatter.noFooter}
         frontmatter={frontmatter}
         headerColor={theme.colors.white}
