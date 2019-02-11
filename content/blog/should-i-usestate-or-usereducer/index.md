@@ -16,4 +16,14 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/uncertain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 ---
 
-This is a sweet blog post
+Whenever there are two things to do the same thing, people inevitably ask: "When
+do I use one over the other?"
+
+For example
+["When do I use `useEffect` and `useLayoutEffect`?"](/blog/useeffect-vs-uselayouteffect)
+Or
+["When do I use Unit, Integration, or E2E tests?"](/blog/unit-vs-integration-vs-e2e-tests)
+Or
+["When to use Control Props or State Reducers?"](/blog/control-props-vs-state-reducers)
+
+I think `useState` and `useReducer` are no exception to this at all.

@@ -88,7 +88,7 @@ export default function Post({data: {site, mdx}}) {
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}/${mdx.fields.slug}/`}
+          url={`${config.siteUrl}${mdx.fields.slug}`}
           title={title}
           twitterHandle={config.twitterHandle}
         />
