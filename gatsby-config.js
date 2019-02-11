@@ -119,13 +119,22 @@ module.exports = {
         feeds: [
           {
             serialize: ({query: {site, allMdx}}) => {
+              // Removes the trailing `/` from a slug (fixes #18)
+              const stripSlash = slug =>
+                slug.startsWith('/') ? slug.slice(1) : slug
+
               return allMdx.edges.map(edge => {
                 return {
                   ...edge.node.frontmatter,
                   description: edge.node.excerpt,
                   date: edge.node.fields.date,
-                  url: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}/${edge.node.fields.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/${stripSlash(
+                    edge.node.fields.slug,
+                  )}`,
+                  guid: `${site.siteMetadata.siteUrl}/${stripSlash(
+                    edge.node.fields.slug,
+                  )}`,
+                  custom_elements: [{'content:encoded': edge.node.html}],
                 }
               })
             },
@@ -142,7 +151,8 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
-                      fields { 
+                      html
+                      fields {
                         slug
                         date
                       }
