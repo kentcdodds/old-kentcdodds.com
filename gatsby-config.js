@@ -134,6 +134,7 @@ module.exports = {
                   guid: `${site.siteMetadata.siteUrl}/${stripSlash(
                     edge.node.fields.slug,
                   )}`,
+                  custom_elements: [{'content:encoded': edge.node.html}],
                 }
               })
             },
@@ -150,6 +151,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
+                      html
                       fields {
                         slug
                         date
