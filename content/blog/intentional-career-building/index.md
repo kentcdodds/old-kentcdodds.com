@@ -170,3 +170,5 @@ building your career:
   [a11y and JS - A Seemingly Unconventional Romance](https://dev.to/lkopacz/a11y-and-js---a-seemingly-unconventional-romance-24i0)
   both by [Lindsey Kopacz](https://twitter.com/littlekope0903) are both terrific
   articles about accessibility I recommend you read.
+
+> [Share and participate in the discussion on twitter](https://twitter.com/kentcdodds/status/1095101380631584769)
