@@ -124,7 +124,9 @@ function Presentations({presentations}) {
                     css={{fontSize: '0.8rem', marginLeft: 10}}
                     href={delivery.recording}
                   >
-                    (recording)
+                    <span role="img" aria-label="recording">
+                      📺
+                    </span>
                   </a>
                 ) : null}
               </div>
