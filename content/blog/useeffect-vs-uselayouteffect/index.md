@@ -49,8 +49,7 @@ trigger a synchronous re-render by updating state.
 
 ### Summary
 
-- **useLayoutEffect:** If you need to mutate the DOM and/or DO need to perform
-  measurements
+- **useLayoutEffect:** If you need to mutate the DOM and those mutations are observable
 - **useEffect:** If you don’t need to interact with the DOM at all or your DOM
   changes are unobservable (seriously, most of the time you should use this).
 
