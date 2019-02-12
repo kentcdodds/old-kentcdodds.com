@@ -9,6 +9,7 @@ keywords: ['test']
 banner: './images/banner.jpg'
 bannerCredit: 'someone'
 published: false
+unlisted: true
 useBigHero: false
 heroMessage: 'the is a message'
 noFooter: false

@@ -38,7 +38,7 @@ exports.createPages = ({actions, graphql}) =>
     query {
       allMdx(
         filter: {
-          frontmatter: {published: {ne: false}}
+          frontmatter: {unlisted: {ne: true}}
           fileAbsolutePath: {regex: "//content/blog//"}
         }
         sort: {order: DESC, fields: [frontmatter___date]}
