@@ -57,6 +57,11 @@ export default [
           '[ReactKHI Meetup #3](https://www.facebook.com/events/312802822683639/)',
         date: '2019-01-26',
       },
+      {
+        event:
+          '[RVA.js Meetup](https://www.meetup.com/rva-js/events/jrgfhpyzdbhb/)',
+        date: '2019-02-12',
+      },
     ],
     description: `
         In October, the React team announced a new feature coming 🔜 to React called "hooks." In this talk we'll
