@@ -95,7 +95,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/workshops/testing-react-apps/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-react/)',
         date: '2018-04-19',
       },
     ],
@@ -139,7 +139,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/workshops/testing-practices-principles/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-practices-principles/)',
         date: '2018-04-18',
       },
     ],
@@ -178,7 +178,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)',
         date: '2018-04-17',
       },
       {
@@ -263,7 +263,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/linting-asts/)',
         date: '2017-04-26',
       },
       {
@@ -294,7 +294,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/workshops/unit-testing-javascript/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-javascript/)',
         date: '2017-04-25',
       },
       {
