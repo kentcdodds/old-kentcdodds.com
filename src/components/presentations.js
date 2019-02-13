@@ -6,7 +6,7 @@ import {bpMaxSM} from '../lib/breakpoints'
 
 function Presentations({presentations}) {
   return presentations.map(
-    ({title, description, deliveries, resources, tags}) => (
+    ({title, slug, description, deliveries, resources, tags}) => (
       <div
         key={title}
         css={css`
@@ -49,12 +49,12 @@ function Presentations({presentations}) {
             float: right;
             font-size: 14px;
             opacity: 0.8;
-            margin-bottom: 10px;
           }
           li {
             display: flex;
             align-items: center;
             margin: 0;
+            margin-bottom: 10px;
             justify-content: space-between;
           }
 
@@ -89,7 +89,11 @@ function Presentations({presentations}) {
             }
           `}
         >
-          <h2>{title}</h2>
+          <h2>
+            <a href={`#${slug}`} name={slug}>
+              {title}
+            </a>
+          </h2>
           <div className="tags">
             {tags.map((tag, index) => (
               <span key={index} className="tag">
@@ -111,7 +115,25 @@ function Presentations({presentations}) {
         <ul>
           {deliveries.map((delivery, index) => (
             <li key={index}>
-              <Markdown source={delivery.event} />
+              <div
+                css={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  '& > p': {marginBottom: 0},
+                }}
+              >
+                <Markdown source={delivery.event} />
+                {delivery.recording ? (
+                  <a
+                    css={{fontSize: '0.8rem', marginLeft: 10}}
+                    href={delivery.recording}
+                  >
+                    <span role="img" aria-label="recording">
+                      📺
+                    </span>
+                  </a>
+                ) : null}
+              </div>
               <time>{delivery.date}</time>
             </li>
           ))}

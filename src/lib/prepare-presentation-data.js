@@ -1,4 +1,5 @@
 import stripIndent from 'strip-indent'
+import slugify from '@sindresorhus/slugify'
 
 function preparePresentationData(presentation) {
   return {
@@ -7,6 +8,7 @@ function preparePresentationData(presentation) {
 
     // overrides
     title: stripIndent(presentation.title || ''),
+    slug: slugify(presentation.title || ''),
     description: stripIndent(presentation.description || ''),
     resources: (presentation.resources || []).map(r => stripIndent(r)),
     deliveries: (presentation.deliveries || [])

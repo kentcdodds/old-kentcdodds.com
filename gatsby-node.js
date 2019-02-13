@@ -1,5 +1,6 @@
 const path = require('path')
-
+const slugify = require('@sindresorhus/slugify')
+const {createFilePath} = require('gatsby-source-filesystem')
 const _ = require('lodash')
 
 const PAGINATION_OFFSET = 7
@@ -33,18 +34,25 @@ const createPosts = (createPage, createRedirect, edges) => {
   })
 }
 
-exports.createPages = ({actions, graphql}) =>
+function createBlogPages({
+  blogPath,
+  filterRegex,
+  paginationTemplate,
+  actions,
+  graphql,
+}) {
   graphql(`
     query {
       allMdx(
         filter: {
           frontmatter: {unlisted: {ne: true}}
-          fileAbsolutePath: {regex: "//content/blog//"}
+          fileAbsolutePath: {regex: "${filterRegex}"}
         }
         sort: {order: DESC, fields: [frontmatter___date]}
       ) {
         edges {
           node {
+            fileAbsolutePath
             id
             parent {
               ... on File {
@@ -77,11 +85,35 @@ exports.createPages = ({actions, graphql}) =>
     const {edges} = data.allMdx
     const {createRedirect, createPage} = actions
     createPosts(createPage, createRedirect, edges)
-    createPaginatedPages(actions.createPage, edges, '/blog', {
-      categories: [],
-    })
+    createPaginatedPages(
+      actions.createPage,
+      edges,
+      blogPath,
+      paginationTemplate,
+      {
+        categories: [],
+      },
+    )
     return null
   })
+}
+
+exports.createPages = ({actions, graphql}) => {
+  createBlogPages({
+    blogPath: '/blog',
+    filterRegex: '//content/blog//',
+    paginationTemplate: path.resolve(`src/templates/blog.js`),
+    actions,
+    graphql,
+  })
+  createBlogPages({
+    blogPath: '/writing/blog',
+    filterRegex: '//content/writing-blog//',
+    paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
+    actions,
+    graphql,
+  })
+}
 
 exports.onCreateWebpackConfig = ({actions}) => {
   actions.setWebpackConfig({
@@ -94,7 +126,13 @@ exports.onCreateWebpackConfig = ({actions}) => {
   })
 }
 
-function createPaginatedPages(createPage, edges, pathPrefix, context) {
+function createPaginatedPages(
+  createPage,
+  edges,
+  pathPrefix,
+  paginationTemplate,
+  context,
+) {
   const pages = edges.reduce((acc, value, index) => {
     const pageIndex = Math.floor(index / PAGINATION_OFFSET)
 
@@ -113,7 +151,7 @@ function createPaginatedPages(createPage, edges, pathPrefix, context) {
 
     createPage({
       path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
-      component: path.resolve(`src/templates/blog.js`),
+      component: paginationTemplate,
       context: {
         pagination: {
           page,
@@ -134,8 +172,15 @@ exports.onCreateNode = ({node, getNode, actions}) => {
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
-    const slug =
-      node.frontmatter.slug || _.join(_.drop(parent.name.split('-'), 3), '-')
+    let slug =
+      node.frontmatter.slug ||
+      createFilePath({node, getNode, basePath: `pages`})
+
+    if (node.fileAbsolutePath.includes('content/blog/')) {
+      slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    } else if (node.fileAbsolutePath.includes('content/writing-blog/')) {
+      slug = `/writing/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    }
 
     createNodeField({
       name: 'id',
@@ -170,7 +215,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     createNodeField({
       name: 'slug',
       node,
-      value: `/blog/${slug}`,
+      value: slug,
     })
 
     createNodeField({
