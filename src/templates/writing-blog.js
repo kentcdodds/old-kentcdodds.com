@@ -2,11 +2,11 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Blog from 'components/blog'
 
-function CodingBlog(props) {
-  return <Blog {...props} />
+function WritingBlog(props) {
+  return <Blog noFooter={true} {...props} />
 }
 
-export default CodingBlog
+export default WritingBlog
 
 export const pageQuery = graphql`
   query {
@@ -14,7 +14,7 @@ export const pageQuery = graphql`
       sort: {fields: [frontmatter___date], order: DESC}
       filter: {
         frontmatter: {published: {ne: false}}
-        fileAbsolutePath: {regex: "//content/blog//"}
+        fileAbsolutePath: {regex: "//content/writing-blog//"}
       }
     ) {
       edges {

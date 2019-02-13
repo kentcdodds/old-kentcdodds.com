@@ -43,6 +43,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/content/writing-blog`,
+        name: 'writing-blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src`,
         name: 'src',
       },
@@ -63,6 +70,7 @@ module.exports = {
               sizeByPixelDensity: true,
             },
           },
+          {resolve: require.resolve('./plugins/remark-embedder')},
         ],
       },
     },

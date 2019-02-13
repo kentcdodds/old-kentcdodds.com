@@ -28,6 +28,10 @@ export default function Post({data: {site, mdx}}) {
           width: 100%;
           display: flex;
           margin-top: 50px;
+          twitter-widget {
+            margin-left: auto;
+            margin-right: auto;
+          }
         `}
       >
         <Container>
