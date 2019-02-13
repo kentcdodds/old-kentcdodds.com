@@ -1,5 +1,5 @@
-import { darken, lighten } from 'polished'
-import { fonts } from '../src/lib/typography'
+import {darken, lighten} from 'polished'
+import {fonts} from '../src/lib/typography'
 
 const brand = {
   primary: '#573EDE',
@@ -19,6 +19,7 @@ const colors = {
   green: '#17A974',
   blue: '#327CDC',
   yellow: '#FFB700',
+  purple: '#8242F6',
 }
 
 const theme = {
