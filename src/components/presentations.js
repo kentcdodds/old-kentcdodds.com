@@ -6,7 +6,7 @@ import {bpMaxSM} from '../lib/breakpoints'
 
 function Presentations({presentations}) {
   return presentations.map(
-    ({title, description, deliveries, resources, tags}) => (
+    ({title, slug, description, deliveries, resources, tags}) => (
       <div
         key={title}
         css={css`
@@ -89,7 +89,11 @@ function Presentations({presentations}) {
             }
           `}
         >
-          <h2>{title}</h2>
+          <h2>
+            <a href={`#${slug}`} name={slug}>
+              {title}
+            </a>
+          </h2>
           <div className="tags">
             {tags.map((tag, index) => (
               <span key={index} className="tag">

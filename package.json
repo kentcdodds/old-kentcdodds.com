@@ -10,6 +10,7 @@
     "@emotion/styled": "^10.0.5",
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
+    "@sindresorhus/slugify": "^0.8.0",
     "core-js": "^2.6.1",
     "dotenv": "^6.2.0",
     "dotenv-parse-variables": "^0.2.0",
