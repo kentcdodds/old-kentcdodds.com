@@ -15,34 +15,92 @@ import Hero from 'components/big-hero'
 import workshopsImg from '../images/workshops.svg'
 import talksImg from '../images/talks.svg'
 import minutesImg from '../images/3-minutes.svg'
+import devtipsImg from '../images/devtips.svg'
 
-const Card = ({backgroundColor = '#E75248', image, title, link}) => (
+const Card = ({
+  backgroundColor = '#E75248',
+  image,
+  title,
+  description,
+  link,
+  big = false,
+}) => (
   <Link
     to={link}
+    aria-label={`View ${title}`}
     css={css`
       * {
         color: white;
         margin: 0;
       }
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+      align-items: center;
+      h4 {
+        font-size: 22px;
+        padding: ${big ? '0 20px 0 40px' : '40px 40px 0 40px'};
+      }
+      p {
+        padding: 20px 40px 0 40px;
+        font-size: 16px;
+        opacity: 0.85;
+        ${bpMaxSM} {
+          padding: 20px 20px 0 40px;
+        }
+      }
+      ${bpMaxMD} {
+          flex-direction: column;
+          align-items: center;
+          ${big &&
+            `
+          text-align: center;
+          h4 {
+            padding: 40px 40px 0 40px;
+          }
+          img {
+            width: 100%;
+          }
+          p {
+            padding-bottom: 40px;
+          }
+          `}
+        }
+      ${!big &&
+        `
+        align-items: flex-start;
+        flex-direction: column; 
+        img {
+          margin-top: 20px;
+        }
+        ${bpMaxMD} {
+          align-items: center;
+          img {
+            width: 100%;
+          }
+         h4 {
+           padding: 40px 0 0 0;
+         }
+        }
+      `}
       background: ${backgroundColor};
       overflow: hidden;
       border-radius: 5px;
-      h4 {
-        padding: 40px 40px 0 40px;
-      }
+      margin-bottom: ${big ? '20px' : '0'};
       img {
-        margin-top: 20px;
+        transition: ${theme.transition.ease};
       }
-      :hover {
+      @media (hover: hover) {
+      :hover:not(.touch) {
         transform: scale(1.03);
         box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15);
       }
+      }
     `}
   >
-    <h4>{title}</h4>
+    <div>
+      <h4>{title}</h4>
+      {description && <p>{description}</p>}
+    </div>
     <img src={image} alt={title} />
   </Link>
 )
@@ -143,16 +201,19 @@ export default function Index({data: {allMdx}}) {
           background: white;
           border-radius: 5px;
           padding: 40px 80px 60px 80px;
+          margin-bottom: ${rhythm(1)};
           ${bpMaxMD} {
             padding: auto;
           }
           ${bpMaxSM} {
             border-radius: 0;
           }
+          h2 {
+            margin-bottom: ${rhythm(1.5)};
+          }
         `}
       >
         <h2>Blog</h2>
-        <br />
         {allMdx.edges.map(({node: post}) => (
           <div
             key={post.id}
@@ -183,20 +244,26 @@ export default function Index({data: {allMdx}}) {
         </Link>
       </Container>
       <Container>
-        <br />
+        <Card
+          big
+          backgroundColor={theme.colors.red}
+          title="DevTips"
+          description="My YouTube channel where I livestream every weekday about Web Development. Come join me and learn something new."
+          image={devtipsImg}
+          link="http://kcd.im/devtips"
+        />
         <div
           css={css`
             display: grid;
             grid-template-columns: repeat(auto-fit, 226px);
             grid-gap: 20px;
-
             ${bpMaxSM} {
               grid-template-columns: 1fr;
             }
           `}
         >
           <Card
-            backgroundColor={theme.colors.red}
+            backgroundColor={theme.colors.purple}
             title="Workshops"
             image={workshopsImg}
             link="/workshops"
