@@ -21,7 +21,12 @@ export default function Post({data: {site, mdx}}) {
   const bannerCredit = mdx.fields.bannerCredit
 
   return (
-    <Layout site={site} frontmatter={mdx.fields} pageTitle="Kent C. Dodds Blog">
+    <Layout
+      site={site}
+      frontmatter={mdx.fields}
+      pageTitle="Kent C. Dodds Blog"
+      noFooter={mdx.fields.noFooter}
+    >
       <SEO frontmatter={mdx.fields} isBlogPost />
       <article
         css={css`
@@ -112,6 +117,7 @@ export const pageQuery = graphql`
     mdx(fields: {id: {eq: $id}}) {
       fields {
         title
+        noFooter
         description
         date(formatString: "MMMM DD, YYYY")
         author

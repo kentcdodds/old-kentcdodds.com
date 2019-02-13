@@ -253,5 +253,11 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       node,
       value: node.frontmatter.redirects,
     })
+
+    createNodeField({
+      name: 'noFooter',
+      node,
+      value: node.frontmatter.noFooter || false,
+    })
   }
 }
