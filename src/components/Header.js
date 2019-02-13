@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
 
+import MobileNav from './MobileNav'
 import Container from './Container'
 import {bpMaxSM} from '../lib/breakpoints'
 
@@ -52,6 +53,9 @@ const Header = ({
       flex-shrink: 0;
       background: none;
       padding: 30px 0 0 0;
+      ${bpMaxSM} {
+        padding: 35px 0 0 0;
+      }
       background: ${dark ? '#090909' : `${bgColor}` || 'none'};
       z-index: 10;
       position: ${fixed ? 'fixed' : 'absolute'};
@@ -81,8 +85,17 @@ const Header = ({
             line-height: 1.25;
             display: flex;
             align-items: center;
+            .mobile-nav {
+              display: none;
+              visibility: hidden;
+              ${bpMaxSM} {
+                display: block;
+                visibility: visible;
+              }
+            }
           `}
         >
+          <MobileNav />
           <NavLink
             headerColor={headerColor}
             to="/blog"
@@ -93,21 +106,21 @@ const Header = ({
           <NavLink
             headerColor={headerColor}
             to="/talks"
-            aria-label="View blog page"
+            aria-label="View talks page"
           >
             Talks
           </NavLink>
           <NavLink
             headerColor={headerColor}
             to="/workshops"
-            aria-label="View blog page"
+            aria-label="View workshops page"
           >
             Workshops
           </NavLink>
           <NavLink
             headerColor={headerColor}
             to="/about"
-            aria-label="View blog page"
+            aria-label="View about page"
           >
             About
           </NavLink>
