@@ -9,18 +9,23 @@ import MobileNav from './MobileNav'
 import Container from './Container'
 import {bpMaxSM} from '../lib/breakpoints'
 
-const HeaderLink = styled(Link)(({headerColor}) => ({
-  textDecoration: 'none',
-  color: headerColor ? headerColor : theme.colors.body_color,
-  '&:hover,&:focus': {
-    color:
-      headerColor === theme.colors.white
-        ? 'white'
-        : theme.colors.link_color_hover,
-  },
-}))
-HeaderLink.defaultProps = {
-  activeClassName: 'active',
+function HeaderLink({headerColor, ...props}) {
+  return (
+    <Link
+      activeClassName="active"
+      css={{
+        textDecoration: 'none',
+        color: headerColor ? headerColor : theme.colors.body_color,
+        '&:hover,&:focus': {
+          color:
+            headerColor === theme.colors.white
+              ? 'white'
+              : theme.colors.link_color_hover,
+        },
+      }}
+      {...props}
+    />
+  )
 }
 
 const NavLink = styled(HeaderLink)({
