@@ -6,7 +6,6 @@ author: 'Kent C. Dodds'
 description: _Feelings going to my first writer's workshop tomorrow._
 categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
-noFooter: true
 banner: './banner.jpg'
 bannerCredit:
   Photo by [Jonas
