@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {css} from '@emotion/core'
+import styled from '@emotion/styled'
 import {rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Message from '../ConfirmMessage/Message'
@@ -33,7 +34,95 @@ function PostSubmissionMessage() {
   )
 }
 
-function Subscribe(props) {
+const SubscribeFormWrapper = styled.div({
+  color: 'white',
+  maxWidth: '350px',
+  padding: '40px',
+  background: '#231c42',
+  backgroundImage:
+    'linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%), linear-gradient(32deg, rgba(255, 255, 255, 0.25) 33%, rgba(0, 0, 0, 0.25) 100%)',
+  borderRadius: '5px',
+})
+
+const StyledForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  label {
+    margin: 10px 0;
+  }
+  .field-error {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 80%;
+  }
+  input,
+  label {
+    width: 100%;
+    font-size: 16px;
+  }
+  ${bpMaxSM} {
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    label,
+    input {
+      margin: 5px 0 0 0 !important;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  button {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+`
+
+export function TinyLetterSubscribe() {
+  return (
+    <SubscribeFormWrapper>
+      <StyledForm
+        action="https://tinyletter.com/shurlan"
+        method="post"
+        target="popupwindow"
+        onSubmit={() => {
+          window.open(
+            'https://tinyletter.com/shurlan',
+            'popupwindow',
+            'scrollbars=yes,width=800,height=600',
+          )
+          return true
+        }}
+      >
+        <h3
+          css={css`
+            margin-bottom: ${rhythm(1)};
+            margin-top: 0;
+            color: white;
+          `}
+        >
+          Join the Writing Newsletter
+        </h3>
+        <p>
+          <label htmlFor="tlemail">Email address:</label>
+          <input
+            aria-label="your email address"
+            aria-required="true"
+            placeholder="jane@acme.com"
+            type="email"
+            name="email"
+            id="tlemail"
+          />
+        </p>
+        <input type="hidden" value="1" name="embed" />
+        <button type="submit">Subscribe</button>
+      </StyledForm>
+    </SubscribeFormWrapper>
+  )
+}
+
+function Subscribe({style}) {
   const [submitted, setSubmitted] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const [response, setResponse] = React.useState(null)
@@ -67,22 +156,7 @@ function Subscribe(props) {
   const successful = response && response.status === 'success'
 
   return (
-    <div
-      {...props}
-      css={css`
-        color: white;
-        max-width: 350px;
-        padding: 40px;
-        background: #231c42;
-        background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%),
-          linear-gradient(
-            32deg,
-            rgba(255, 255, 255, 0.25) 33%,
-            rgba(0, 0, 0, 0.25) 100%
-          );
-        border-radius: 5px;
-      `}
-    >
+    <SubscribeFormWrapper style={style}>
       {!successful && (
         <h3
           css={css`
@@ -104,43 +178,7 @@ function Subscribe(props) {
           validationSchema={SubscribeSchema}
           onSubmit={values => handleSubmit(values)}
           render={() => (
-            <Form
-              css={css`
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                label {
-                  margin: 10px 0;
-                }
-                .field-error {
-                  display: block;
-                  //position: absolute;
-                  color: rgba(255, 255, 255, 0.75);
-                  font-size: 80%;
-                }
-                input,
-                label {
-                  width: 100%;
-                  font-size: 16px;
-                }
-                ${bpMaxSM} {
-                  flex-direction: column;
-                  align-items: flex-start;
-                  width: auto;
-                  label,
-                  input {
-                    margin: 5px 0 0 0 !important;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                  }
-                }
-                button {
-                  margin-top: 20px;
-                  font-size: 16px;
-                }
-              `}
-            >
+            <StyledForm>
               <label htmlFor="first_name">
                 <div
                   css={css`
@@ -191,13 +229,13 @@ function Subscribe(props) {
                 {!loading && 'Subscribe'}
                 {loading && 'Submitting...'}
               </button>
-            </Form>
+            </StyledForm>
           )}
         />
       )}
       {submitted && !loading && <PostSubmissionMessage response={response} />}
       {errorMessage && <div>{errorMessage}</div>}
-    </div>
+    </SubscribeFormWrapper>
   )
 }
 

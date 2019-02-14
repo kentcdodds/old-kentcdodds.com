@@ -1,9 +1,10 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Blog from 'components/blog'
+import {TinyLetterSubscribe} from 'components/Forms/Subscribe'
 
 function WritingBlog(props) {
-  return <Blog noFooter={true} {...props} />
+  return <Blog {...props} subscribeForm={<TinyLetterSubscribe />} />
 }
 
 export default WritingBlog
@@ -23,6 +24,7 @@ export const pageQuery = graphql`
           id
           fields {
             title
+            isWriting
             slug
             date
           }

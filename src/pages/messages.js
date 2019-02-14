@@ -10,7 +10,7 @@ import {
 
 export default function Messages({data: {latestArticle}}) {
   return (
-    <Layout noSubscribeForm>
+    <Layout subscribeForm={null}>
       <div>
         <Message
           fullscreen

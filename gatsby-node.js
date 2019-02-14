@@ -175,10 +175,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     let slug =
       node.frontmatter.slug ||
       createFilePath({node, getNode, basePath: `pages`})
+    let isWriting = false
 
     if (node.fileAbsolutePath.includes('content/blog/')) {
       slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
     } else if (node.fileAbsolutePath.includes('content/writing-blog/')) {
+      isWriting = true
       slug = `/writing/blog/${node.frontmatter.slug || slugify(parent.name)}`
     }
 
@@ -257,7 +259,13 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     createNodeField({
       name: 'noFooter',
       node,
-      value: node.frontmatter.noFooter || false,
+      value: isWriting ? false : node.frontmatter.noFooter || false,
+    })
+
+    createNodeField({
+      name: 'isWriting',
+      node,
+      value: isWriting,
     })
   }
 }

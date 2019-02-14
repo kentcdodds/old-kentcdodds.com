@@ -8,7 +8,7 @@ import Container from './Container'
 
 import Signature from '../images/signature.png'
 
-const Footer = ({noSubscribeForm}) => (
+const Footer = ({subscribeForm = <SubscribeForm />}) => (
   <footer
     css={css`
       background: #231c42;
@@ -29,17 +29,13 @@ const Footer = ({noSubscribeForm}) => (
         }
       `}
     >
-      {!noSubscribeForm && (
-        <div
-          css={css`
-            margin-top: -40px;
-          `}
-        >
-          <SubscribeForm />
+      {subscribeForm ? (
+        <div css={{marginTop: -40}}>
+          {subscribeForm}
           <br />
           <br />
         </div>
-      )}
+      ) : null}
       <div
         css={css`
           display: flex;

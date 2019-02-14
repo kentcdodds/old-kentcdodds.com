@@ -1,11 +1,31 @@
 ---
-title: Kent Writes
-useBigHero: true
+title: Kent C. Dodds Writes
 heroMessage: Hi, I’m Kent C. Dodds and I write epic fantasy.
-noFooter: true
 ---
 
-# Kent Writes
+import Container from 'components/Container'
+import SEO from 'components/SEO'
+import Layout from 'components/Layout'
+import BigHero from 'components/big-hero'
+import {TinyLetterSubscribe} from 'components/Forms/Subscribe'
+import theme from '../../../config/theme'
+
+export default function MarkdownPage({children, pageContext: {frontmatter}}) {
+  return (
+    <>
+      <SEO frontmatter={frontmatter} />
+      <Layout
+        pageTitle={frontmatter.title}
+        hero={<BigHero message={frontmatter.heroMessage} />}
+        frontmatter={frontmatter}
+        headerColor={theme.colors.white}
+        subscribeForm={<TinyLetterSubscribe />}
+      >
+        <Container>{children}</Container>
+      </Layout>
+    </>
+  )
+}
 
 > “There is no greater agony than bearing an untold story inside you.” ― Maya
 > Angelou

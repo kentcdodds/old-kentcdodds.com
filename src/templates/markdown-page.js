@@ -8,8 +8,9 @@ import theme from '../../config/theme'
 function MarkdownPage({children, pageContext: {frontmatter}}) {
   return (
     <>
-      <SEO />
+      <SEO frontmatter={frontmatter} />
       <Layout
+        pageTitle={frontmatter.title}
         hero={
           frontmatter.useBigHero ? (
             <BigHero message={frontmatter.heroMessage} />

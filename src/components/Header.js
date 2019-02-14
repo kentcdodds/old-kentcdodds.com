@@ -49,6 +49,7 @@ const Header = ({
   dark,
   bgColor = 'none',
   siteTitle,
+  headerLink = '/',
   headerColor = 'black',
   fixed = false,
 }) => (
@@ -78,7 +79,7 @@ const Header = ({
         }}
       >
         <HeaderLink
-          to="/"
+          to={headerLink}
           aria-label="go to homepage"
           headerColor={headerColor}
         >

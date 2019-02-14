@@ -7,25 +7,33 @@ import {css} from '@emotion/core'
 import Container from 'components/Container'
 import Layout from 'components/Layout'
 import Share from 'components/Share'
+import SubscribeForm, {TinyLetterSubscribe} from 'components/Forms/Subscribe'
 import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
 
 export default function Post({data: {site, mdx}}) {
-  const author = config.author
-  const date = mdx.fields.date
-  const title = mdx.fields.title
-  const description = mdx.fields.description
-  const banner = mdx.fields.banner
-  const bannerCredit = mdx.fields.bannerCredit
+  const {
+    isWriting,
+    author = config.author,
+    title,
+    slug,
+    date,
+    description,
+    banner,
+    bannerCredit,
+    noFooter,
+  } = mdx.fields
 
   return (
     <Layout
       site={site}
       frontmatter={mdx.fields}
-      pageTitle="Kent C. Dodds Blog"
-      noFooter={mdx.fields.noFooter}
+      pageTitle={`Kent C. Dodds ${isWriting ? 'Writing ' : ''}Blog`}
+      headerLink={isWriting ? '/writing/blog' : '/blog'}
+      noFooter={noFooter}
+      subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
     >
       <SEO frontmatter={mdx.fields} isBlogPost />
       <article
@@ -97,7 +105,7 @@ export default function Post({data: {site, mdx}}) {
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}${mdx.fields.slug}`}
+          url={`${config.siteUrl}${slug}`}
           title={title}
           twitterHandle={config.twitterHandle}
         />
@@ -116,6 +124,7 @@ export const pageQuery = graphql`
     }
     mdx(fields: {id: {eq: $id}}) {
       fields {
+        isWriting
         title
         noFooter
         description

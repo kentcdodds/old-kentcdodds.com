@@ -134,14 +134,15 @@ const DefaultHero = styled.section`
 function Layout({
   data,
   pageTitle,
+  headerLink,
   frontmatter = {},
   hero = <DefaultHero />,
+  subscribeForm,
   children,
   dark,
   headerBg,
   headerColor,
   noFooter,
-  noSubscribeForm,
   backgroundColor,
   backgroundImage,
   fixedHeader,
@@ -172,40 +173,39 @@ function Layout({
         <html lang="en" />
         <noscript>This site runs best with JavaScript enabled.</noscript>
       </Helmet>
-      <>
-        <div
-          css={css`
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100vh;
-            ${backgroundColor && `background: ${backgroundColor}`};
-            ${backgroundImage && `background-image: url(${backgroundImage})`};
-          `}
-        >
-          <div css={{flex: '1 0 auto'}}>
-            {React.cloneElement(hero, {headerColor})}
-            <Header
-              siteTitle={pageTitle || siteMetadata.title}
-              dark={dark}
-              bgColor={headerBg}
-              headerColor={headerColor}
-              fixed={fixedHeader}
-            />
-            <MDXProvider components={mdxComponents}>
-              <>{children}</>
-            </MDXProvider>
-          </div>
-          <div css={{flexShrink: '0'}}>
-            {noFooter ? null : (
-              <Footer
-                author={siteMetadata.author.name}
-                noSubscribeForm={noSubscribeForm}
-              />
-            )}
-          </div>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          min-height: 100vh;
+          ${backgroundColor && `background: ${backgroundColor}`};
+          ${backgroundImage && `background-image: url(${backgroundImage})`};
+        `}
+      >
+        <div css={{flex: '1 0 auto'}}>
+          {React.cloneElement(hero, {headerColor})}
+          <Header
+            siteTitle={pageTitle || siteMetadata.title}
+            headerLink={headerLink}
+            dark={dark}
+            bgColor={headerBg}
+            headerColor={headerColor}
+            fixed={fixedHeader}
+          />
+          <MDXProvider components={mdxComponents}>
+            <>{children}</>
+          </MDXProvider>
         </div>
-      </>
+        <div css={{flexShrink: '0'}}>
+          {noFooter ? null : (
+            <Footer
+              author={siteMetadata.author.name}
+              subscribeForm={subscribeForm}
+            />
+          )}
+        </div>
+      </div>
     </ThemeProvider>
   )
 }
