@@ -21,12 +21,17 @@ a lot of notes in today's workshop with
 
 https://twitter.com/kent_writes/status/1095723663137984513
 
-To be honest it was really just a bunch of leactures bunched onto one day. I was
+To be honest it was really just a bunch of lectures bunched onto one day. I was
 kind of expecting exercises and things of that nature, but it's ok. I still
 think there were some useful tools that I learned in his class so I'm glad that
 I went.
 
 https://twitter.com/kent_writes/status/1095760850827132928
+
+It was really interesting to be an attendee of a workshop. So often I'm the one
+up front giving the workshops (as a coder) and it was kinda fun experiencing
+things as an attendee. I also developed a greater sympathy for attendees who
+are exhausted by the end of a long workshop day. 😩
 
 Mostly I had much of what I've been studying re-affirmed which is good. The more
 that I hear this stuff, the more it internalize it and the more likely I'll be
