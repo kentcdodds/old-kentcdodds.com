@@ -101,7 +101,7 @@ const Header = ({
             }
           `}
         >
-          <MobileNav />
+          <MobileNav color={headerColor} />
           <NavLink
             headerColor={headerColor}
             to="/blog"

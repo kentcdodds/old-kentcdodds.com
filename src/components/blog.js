@@ -71,7 +71,7 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
             {post.frontmatter.banner && (
               <div
                 css={css`
-                  padding: 60px 60px 40px 60px;
+                  padding-bottom: 10px;
                   ${bpMaxSM} {
                     padding: 20px;
                   }
@@ -105,12 +105,12 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
               `}
             >
               {post.excerpt}
-            </p>{' '}
+            </p>
             <Link
               to={post.fields.slug}
               aria-label={`view "${post.frontmatter.title}" article`}
             >
-              Read Article →
+              Read →
             </Link>
           </div>
         ))}
@@ -128,11 +128,6 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
             </Link>
           )}
         </div>
-        <hr
-          css={css`
-            margin: 50px 0;
-          `}
-        />
       </Container>
     </Layout>
   )

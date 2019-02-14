@@ -40,7 +40,6 @@ export default function Post({data: {site, mdx}}) {
         css={css`
           width: 100%;
           display: flex;
-          margin-top: 50px;
           twitter-widget {
             margin-left: auto;
             margin-right: auto;
@@ -52,7 +51,8 @@ export default function Post({data: {site, mdx}}) {
             css={css`
               text-align: center;
               margin-bottom: 20px;
-              font-family: ${fonts.regular};
+              margin-top: 0;
+              font-family: ${fonts.light};
             `}
           >
             {title}
@@ -81,7 +81,7 @@ export default function Post({data: {site, mdx}}) {
             <div
               css={css`
                 text-align: center;
-                padding: 30px;
+
                 p {
                   margin-bottom: 0;
                 }

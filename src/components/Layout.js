@@ -83,7 +83,10 @@ export const globalStyles = css`
     font-size: 16px;
     padding: 10px;
     overflow-x: auto;
-    white-space: nowrap;
+    /* Safari needs this */
+    * {
+      white-space: nowrap;
+    }
     /* Track */
     ::-webkit-scrollbar {
       width: 100%;

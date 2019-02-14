@@ -87,6 +87,9 @@ function Presentations({presentations}) {
               flex-direction: column;
               align-items: flex-start;
             }
+            a {
+              color: inherit;
+            }
           `}
         >
           <h2>
