@@ -5,8 +5,9 @@ import {StaticQuery, graphql} from 'gatsby'
 import PropTypes from 'prop-types'
 import SchemaOrg from './SchemaOrg'
 import config from '../../../config/website'
+import defaultMetaImage from '../../../static/images/metaImage.jpg'
 
-const SEO = ({postData, frontmatter = {}, postImage, isBlogPost}) => (
+const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
   <StaticQuery
     query={graphql`
       {
@@ -37,7 +38,9 @@ const SEO = ({postData, frontmatter = {}, postImage, isBlogPost}) => (
         frontmatter || postData.childMarkdownRemark.frontmatter || {}
       const title = isBlogPost ? postMeta.title : config.siteTitle
       const description = postMeta.description || seo.description
-      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
+      const image = metaImage
+        ? `${seo.canonicalUrl}${metaImage}`
+        : `${defaultMetaImage}`
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
@@ -92,13 +95,13 @@ SEO.propTypes = {
       excerpt: PropTypes.any,
     }),
   }),
-  postImage: PropTypes.string,
+  metaImage: PropTypes.string,
 }
 
 SEO.defaultProps = {
   isBlogPost: false,
   postData: {childMarkdownRemark: {}},
-  postImage: null,
+  metaImage: null,
 }
 
 export default SEO
