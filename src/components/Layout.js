@@ -83,7 +83,6 @@ export const globalStyles = css`
     font-size: 16px;
     padding: 10px;
     overflow-x: auto;
-    /* Safari needs this */
     * {
       white-space: nowrap;
     }

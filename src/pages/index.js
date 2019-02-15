@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
 import styled from '@emotion/styled'
+import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Container from 'components/Container'
@@ -191,6 +192,7 @@ export default function Index({data: {allMdx}}) {
       hero={<Hero />}
       pageTitle="Home of Kent C. Dodds"
     >
+      <SEO />
       <SubscribeConfirmation />
       <Container
         css={css`

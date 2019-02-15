@@ -12,6 +12,7 @@ import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
+import {get} from 'lodash'
 
 export default function Post({data: {site, mdx}}) {
   const {
@@ -35,7 +36,11 @@ export default function Post({data: {site, mdx}}) {
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
     >
-      <SEO frontmatter={mdx.fields} isBlogPost />
+      <SEO
+        frontmatter={mdx.fields}
+        metaImage={get(mdx, 'fields.banner.childImageSharp.fluid.src')}
+        isBlogPost
+      />
       <article
         css={css`
           width: 100%;
@@ -139,6 +144,7 @@ export const pageQuery = graphql`
         }
         bannerCredit
         slug
+        description
         keywords
       }
       code {

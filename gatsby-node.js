@@ -64,6 +64,7 @@ function createBlogPages({
             fields {
               title
               slug
+              description
               date
             }
             code {
