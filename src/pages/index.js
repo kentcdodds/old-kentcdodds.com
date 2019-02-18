@@ -293,7 +293,7 @@ export const pageQuery = graphql`
       limit: 5
       sort: {fields: [frontmatter___date], order: DESC}
       filter: {
-        frontmatter: {published: {ne: false}}
+        frontmatter: {published: {ne: false}, unlisted: {ne: true}}
         fileAbsolutePath: {regex: "//content/blog//"}
       }
     ) {

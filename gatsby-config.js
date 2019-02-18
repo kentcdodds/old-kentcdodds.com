@@ -110,75 +110,22 @@ module.exports = {
         trackingId: `UA-62924965-1`,
       },
     },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({query: {site, allMdx}}) => {
-              // Removes the trailing `/` from a slug (fixes #18)
-              const stripSlash = slug =>
-                slug.startsWith('/') ? slug.slice(1) : slug
-
-              return allMdx.edges.map(edge => {
-                return {
-                  ...edge.node.frontmatter,
-                  description: edge.node.excerpt,
-                  date: edge.node.fields.date,
-                  url: `${site.siteMetadata.siteUrl}/${stripSlash(
-                    edge.node.fields.slug,
-                  )}`,
-                  guid: `${site.siteMetadata.siteUrl}/${stripSlash(
-                    edge.node.fields.slug,
-                  )}`,
-                  custom_elements: [{'content:encoded': edge.node.html}],
-                }
-              })
-            },
-            query: `
-              {
-                allMdx(
-                  limit: 1000,
-                  filter: {
-                    frontmatter: {published: {ne: false}}
-                    fileAbsolutePath: {regex: "//content/blog//"}
-                  }
-                  sort: { order: DESC, fields: [frontmatter___date] }
-                ) {
-                  edges {
-                    node {
-                      excerpt(pruneLength: 250)
-                      html
-                      fields {
-                        slug
-                        date
-                      }
-                      frontmatter {
-                        title
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/blog/rss.xml',
-            title: 'Blog RSS Feed',
-          },
-        ],
+    getBlogFeed({
+      filePathRegex: '//content/blog//',
+      blogUrl: 'https://kentcdodds.com/blog',
+      overrides: {
+        output: '/blog/rss.xml',
+        title: 'Kent C. Dodds Blog RSS Feed',
       },
-    },
+    }),
+    getBlogFeed({
+      filePathRegex: '//content/writing-blog//',
+      blogUrl: 'https://kentcdodds.com/writing/blog',
+      overrides: {
+        output: '/writing/blog/rss.xml',
+        title: `Kent's Writing Blog RSS Feed`,
+      },
+    }),
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -187,4 +134,81 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
+}
+
+function getBlogFeed({filePathRegex, blogUrl, overrides}) {
+  return {
+    resolve: `gatsby-plugin-feed`,
+    options: {
+      query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
+            }
+          }
+        }
+      `,
+      feeds: [
+        {
+          serialize: ({query: {site, allMdx}}) => {
+            const stripSlash = slug =>
+              slug.startsWith('/') ? slug.slice(1) : slug
+            return allMdx.edges.map(edge => {
+              const siteUrl = site.siteMetadata.siteUrl
+              const url = `${blogUrl}/${stripSlash(edge.node.fields.slug)}`
+
+              const postText = `<div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
+
+              // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
+              const html = edge.node.html
+                .replace(/href="\//g, `href="${siteUrl}/`)
+                .replace(/src="\//g, `src="${siteUrl}/`)
+                .replace(/"\/static\//g, `"${siteUrl}/static/`)
+                .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+
+              return {
+                ...edge.node.frontmatter,
+                description: edge.node.excerpt,
+                date: edge.node.fields.date,
+                url,
+                guid: url,
+                custom_elements: [{'content:encoded': html + postText}],
+              }
+            })
+          },
+          query: `
+            {
+              allMdx(
+                limit: 1000,
+                filter: {
+                  frontmatter: {published: {ne: false}}
+                  fileAbsolutePath: {regex: "${filePathRegex}"}
+                }
+                sort: { order: DESC, fields: [frontmatter___date] }
+              ) {
+                edges {
+                  node {
+                    excerpt(pruneLength: 250)
+                    html
+                    fields {
+                      slug
+                      date
+                    }
+                    frontmatter {
+                      title
+                    }
+                  }
+                }
+              }
+            }
+          `,
+          ...overrides,
+        },
+      ],
+    },
+  }
 }
