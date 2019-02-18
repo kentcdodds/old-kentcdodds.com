@@ -86,8 +86,6 @@ that I really enjoyed.
 
 > Don't compare your early work with the finished/polished work of others.
 
-https://twitter.com/kent_writes/status/1096478393736908800
-
 > Creative jobs are collaborative, so learn to work with the people you're
 > collaborating with.
 
