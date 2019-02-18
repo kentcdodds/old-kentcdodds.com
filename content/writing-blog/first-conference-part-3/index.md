@@ -14,6 +14,9 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/magic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 ---
 
+I had a great day today as well. Here are the sessions I attended at day 2 of
+LTUE.
+
 ## 4 Part Pacing
 
 _J. Scott Savage_
