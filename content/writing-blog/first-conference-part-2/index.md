@@ -3,7 +3,7 @@ slug: first-conference-part-2
 date: 2019-02-14
 title: 'First Conference: Part 2'
 author: 'Kent C. Dodds'
-description: _Description_
+description: _Thoughts after my first real writer's conference day!_
 categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'

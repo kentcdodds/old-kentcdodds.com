@@ -1,9 +1,9 @@
 ---
 slug: first-conference-part-
-date: 2019-02-14
-title: 'First Conference: Part '
+date: 2019-02-15
+title: 'First Conference: Part 3'
 author: 'Kent C. Dodds'
-description: _Description_
+description: _Thoughts on sessions of day 2 at LTUE_
 categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
