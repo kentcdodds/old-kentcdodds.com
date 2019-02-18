@@ -45,7 +45,7 @@ function createBlogPages({
     query {
       allMdx(
         filter: {
-          frontmatter: {unlisted: {ne: true}}
+          frontmatter: {published: {ne: false}}
           fileAbsolutePath: {regex: "${filterRegex}"}
         }
         sort: {order: DESC, fields: [frontmatter___date]}
