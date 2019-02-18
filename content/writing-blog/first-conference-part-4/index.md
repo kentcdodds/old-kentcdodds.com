@@ -1,6 +1,6 @@
 ---
 slug: first-conference-part-4
-date: 2019-02-14
+date: 2019-02-16
 title: 'First Conference: Part 4'
 author: 'Kent C. Dodds'
 description: _My experience on the final day of the LTUE conference_
@@ -126,9 +126,9 @@ Hambly. He went to the library and looked up books around the same title
 capture his interest. Interestingly, they all had covers illustrated by
 [Michael Whelan](https://www.michaelwhelan.com) and he decided to read more
 books with covers illustrated by Michael. He even got his parents to buy him a
-$60 art book from Michael that had some book covers and other fine art. One such
-creation was this work titled "Passage: Verge" which served as inspiration for
-the seons in Elantris:
+\$60 art book from Michael that had some book covers and other fine art. One
+such creation was this work titled "Passage: Verge" which served as inspiration
+for the seons in Elantris:
 
 [![Passage: Verge](./passageverge.jpg)](https://www.michaelwhelan.com/galleries/passage-verge/)
 
