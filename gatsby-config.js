@@ -173,7 +173,7 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
+            output: '/blog/rss.xml',
             title: 'Blog RSS Feed',
           },
         ],
