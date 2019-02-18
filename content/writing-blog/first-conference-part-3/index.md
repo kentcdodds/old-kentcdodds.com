@@ -1,5 +1,5 @@
 ---
-slug: first-conference-part-
+slug: first-conference-part-3
 date: 2019-02-15
 title: 'First Conference: Part 3'
 author: 'Kent C. Dodds'
