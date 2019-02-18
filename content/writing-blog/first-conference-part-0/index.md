@@ -80,3 +80,11 @@ https://twitter.com/kent_writes/status/1094256956657721345
 
 So we'll see how things go! I'll definitely be taking notes and plan to share
 the things that I learn as I go. Wish me luck!
+
+_This is multi-part of a series of posts about LTUE 2019:_
+
+- [Read Part 0 (that's this post)](./first-conference-part-0)
+- [Read Part 1](./first-conference-part-1)
+- [Read Part 2](./first-conference-part-2)
+- [Read Part 3](./first-conference-part-3)
+- [Read Part 4](./first-conference-part-4)

@@ -30,8 +30,8 @@ https://twitter.com/kent_writes/status/1095760850827132928
 
 It was really interesting to be an attendee of a workshop. So often I'm the one
 up front giving the workshops (as a coder) and it was kinda fun experiencing
-things as an attendee. I also developed a greater sympathy for attendees who
-are exhausted by the end of a long workshop day. 😩
+things as an attendee. I also developed a greater sympathy for attendees who are
+exhausted by the end of a long workshop day. 😩
 
 Mostly I had much of what I've been studying re-affirmed which is good. The more
 that I hear this stuff, the more it internalize it and the more likely I'll be
@@ -48,3 +48,11 @@ I also spent a couple hours this evening updating the writing corner of this
 website to be a bit better including fixing the subscribe form to subscribe you
 to my writing newsletter (rather than my coding one). So if you'd like to hear
 about my adventures writing, please subscribe!
+
+_This is multi-part of a series of posts about LTUE 2019:_
+
+- [Read Part 0](./first-conference-part-0)
+- [Read Part 1 (that's this post)](./first-conference-part-1)
+- [Read Part 2](./first-conference-part-2)
+- [Read Part 3](./first-conference-part-3)
+- [Read Part 4](./first-conference-part-4)

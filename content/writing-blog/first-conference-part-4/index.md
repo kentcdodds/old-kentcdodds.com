@@ -165,3 +165,11 @@ the opportunity to attend and meet so many awesome individuals. Especially my
 personal writing inspiration, Brandon Sanderson:
 
 https://twitter.com/kent_writes/status/1096918174581157888
+
+_This is multi-part of a series of posts about LTUE 2019:_
+
+- [Read Part 0](./first-conference-part-0)
+- [Read Part 1](./first-conference-part-1)
+- [Read Part 2](./first-conference-part-2)
+- [Read Part 3](./first-conference-part-3)
+- [Read Part 4 (that's this post)](./first-conference-part-4)

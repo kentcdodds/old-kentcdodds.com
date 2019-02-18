@@ -219,3 +219,11 @@ wife and my children sent her short Marco Polo video messages. I showed them to
 her after the session and she loved it. She sent them one back. It made my kids'
 day for sure and I think she's pretty awesome too, so it was cool for me as
 well.
+
+_This is multi-part of a series of posts about LTUE 2019:_
+
+- [Read Part 0](./first-conference-part-0)
+- [Read Part 1](./first-conference-part-1)
+- [Read Part 2](./first-conference-part-2)
+- [Read Part 3 (that's this post)](./first-conference-part-3)
+- [Read Part 4](./first-conference-part-4)
