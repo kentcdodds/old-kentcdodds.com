@@ -14,7 +14,7 @@ export default function CodingBlogWithData(props) {
           allMdx(
             sort: {fields: [frontmatter___date], order: DESC}
             filter: {
-              frontmatter: {published: {ne: false}}
+              frontmatter: {published: {ne: false}, unlisted: {ne: true}}
               fileAbsolutePath: {regex: "//content/blog//"}
             }
           ) {
