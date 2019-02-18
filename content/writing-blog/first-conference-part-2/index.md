@@ -242,6 +242,18 @@ that compares this to direct and indirect speech:
 
 I just love that feeling of the narrator being the POV character.
 
+One thing that Mary said that I absolutely loved was this:
+
+> When a reader says they are confused, they're right. When they tell you how to
+> fix it, they're wrong.
+
+And a final piece of advice that I thought was interesting was:
+
+> Don't read things you don't enjoy.
+
+If you don't enjoy it, then it's probably not good and you don't want to be
+unconciously internalizing those things.
+
 # Conclusion
 
 I loved this day. I met a ton of people, took just as many notes, and was left
