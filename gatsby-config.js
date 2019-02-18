@@ -159,7 +159,7 @@ function getBlogFeed({filePathRegex, blogUrl, overrides}) {
               slug.startsWith('/') ? slug.slice(1) : slug
             return allMdx.edges.map(edge => {
               const siteUrl = site.siteMetadata.siteUrl
-              const url = `${blogUrl}/${stripSlash(edge.node.fields.slug)}`
+              const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
 
               const postText = `<div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
 
