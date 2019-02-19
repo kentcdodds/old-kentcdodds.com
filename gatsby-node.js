@@ -41,7 +41,7 @@ function createBlogPages({
   actions,
   graphql,
 }) {
-  graphql(`
+  return graphql(`
     query {
       allMdx(
         filter: {
@@ -99,21 +99,23 @@ function createBlogPages({
   })
 }
 
-exports.createPages = ({actions, graphql}) => {
-  createBlogPages({
-    blogPath: '/blog',
-    filterRegex: '//content/blog//',
-    paginationTemplate: path.resolve(`src/templates/blog.js`),
-    actions,
-    graphql,
-  })
-  createBlogPages({
-    blogPath: '/writing/blog',
-    filterRegex: '//content/writing-blog//',
-    paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
-    actions,
-    graphql,
-  })
+exports.createPages = async ({actions, graphql}) => {
+  await Promise.all([
+    createBlogPages({
+      blogPath: '/blog',
+      filterRegex: '//content/blog//',
+      paginationTemplate: path.resolve(`src/templates/blog.js`),
+      actions,
+      graphql,
+    }),
+    createBlogPages({
+      blogPath: '/writing/blog',
+      filterRegex: '//content/writing-blog//',
+      paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
+      actions,
+      graphql,
+    })
+  ])
 }
 
 exports.onCreateWebpackConfig = ({actions}) => {
