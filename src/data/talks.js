@@ -81,12 +81,12 @@ export default [
     ],
     description: `
         Can Vue use Render Props? Does React have a concept like Directives?
-        Can Angular go Renderless the way the young ’uns do? All my developer
-        friends in that other framework keep using words I don’t understand.
+        Can Angular go Renderless the way the young 'uns do? All my developer
+        friends in that other framework keep using words I don't understand.
         Help! Join Kent C. Dodds, Isaac Mann and Divya Sasidharan as they
         demonstrate UI component patterns that are common across React, Angular
         and Vue. Consider this your language primer before a trip to a foreign
-        framework land. You’ll see that we’re all talking about the same concepts,
+        framework land. You'll see that we're all talking about the same concepts,
         even when we use different words.
       `,
   },
@@ -146,13 +146,13 @@ export default [
     ],
     description: `
         One of the things I love about React is how easy it is to encapsulate UI code into a component. I love this
-        because it makes reuse of those components easy. But is it easy? I’ve made my fair share of components that had to
+        because it makes reuse of those components easy. But is it easy? I've made my fair share of components that had to
         accept a bunch of props to handle a growing list of different use cases resulting in a complex render function
-        full of conditional statements and a confusing API for people using this “reusable” component. Eventually it
+        full of conditional statements and a confusing API for people using this "reusable" component. Eventually it
         becomes too much and I had to make a new version of the same component to handle slightly different use cases.
-        Lots of code/bug duplication there because my reusable component wasn’t reusable enough.
+        Lots of code/bug duplication there because my reusable component wasn't reusable enough.
         There are patterns that have emerged in React that allow you to promote code reuse without sacrificing the
-        simplicity or flexibility of the component. In this talk we’ll go over 5 of these patterns that will make your
+        simplicity or flexibility of the component. In this talk we'll go over 5 of these patterns that will make your
         React components more useful.
       `,
   },
@@ -230,10 +230,10 @@ export default [
     description: `
         Learning React can be confusing. React is a library, but even more than that, React is an ecosystem of tools that
         you piece together to create a program. This is a powerful property of the React community, however that ecosystem
-        can be frustratingly distracting when you’re a newcomer trying to get your feet wet. The key to avoiding this
+        can be frustratingly distracting when you're a newcomer trying to get your feet wet. The key to avoiding this
         frustration and confusion is to learn React (and its ecosystem) in the right order.
-        In this talk, we’ll go over what that order is and give a roadmap so you can have a vision of where you’re going.
-        Let’s learn how to React!
+        In this talk, we'll go over what that order is and give a roadmap so you can have a vision of where you're going.
+        Let's learn how to React!
       `,
   },
   {
@@ -300,7 +300,7 @@ export default [
     description: `
         Automated tests are an important part of raising your confidence when releasing software. They can speed you up
         or slow you down depending on how you write them and which form of testing you focus your test writing on. In
-        this talk, we’ll cover the value of automated testing and where your efforts should be focused to strike the best
+        this talk, we'll cover the value of automated testing and where your efforts should be focused to strike the best
         balance of confidence and effort.
       `,
   },
@@ -349,10 +349,10 @@ export default [
     ],
     description: `
         I no longer care about: specificity, CSS linters, CSS preprocessors, vendor prefixing, removing unused CSS,
-        finding CSS dependencies and dependents. I now care more about: whether it’s fast enough, whether it’s small
-        enough, whether it’s familiar enough. These are some of my trade-offs. Because I use CSS-in-JS. I’ve made
+        finding CSS dependencies and dependents. I now care more about: whether it's fast enough, whether it's small
+        enough, whether it's familiar enough. These are some of my trade-offs. Because I use CSS-in-JS. I've made
         trade-offs because I write HTML-in-JS. Despite these, I still do it, because the cost is minimal enough, and the
-        benefit is great enough. Let’s tell stories, talk use-cases, explore trade-offs, and inspire more innovation to
+        benefit is great enough. Let's tell stories, talk use-cases, explore trade-offs, and inspire more innovation to
         make the CSS-in-JS trade-offs less trade-offy.
       `,
   },
@@ -369,8 +369,8 @@ export default [
     description: `
         The cry of JavaScript fatigue still echoes in the minds of developers everywhere as they try to wade through the
         waters of outdated blog posts, tutorials, Stack Overflow answers, and GitHub repos. Just when things seem to start
-        settling in JavaScript, something new comes to shake things up a little bit. I’ll be you tour guide as we navigate
-        through the tooling set up of a modern JavaScript project that’s leveraging these tools in a way that actually
+        settling in JavaScript, something new comes to shake things up a little bit. I'll be you tour guide as we navigate
+        through the tooling set up of a modern JavaScript project that's leveraging these tools in a way that actually
         enhances the experience of users using the project and developers working on it.
       `,
   },
@@ -461,15 +461,15 @@ export default [
       },
     ],
     description: `
-        Awesome! You’ve made it big! You’ve published an open source project and people are actually using it to make the
-        world a better place. Achievement unlocked! Great job! But wait… what’s this? An issue? Oh, it’s just a bug.
-        Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What’s this? A PR? How cool! Wait… That’s not quite
-        right… Oh, a question! Cool! And another! And another… eh… and another… Uh oh… I think I’ve just sold my soul to
+        Awesome! You've made it big! You've published an open source project and people are actually using it to make the
+        world a better place. Achievement unlocked! Great job! But wait... what's this? An issue? Oh, it's just a bug.
+        Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What's this? A PR? How cool! Wait... That's not quite
+        right... Oh, a question! Cool! And another! And another... eh... and another... Uh oh... I think I've just sold my soul to
         this project.
         You start an open source project to scratch your own itch and suddenly other people start using it and they need
         your help. This can easily start eating up your time big time and before you know it, your kids start feeling
         neglected.
-        I’ve had to deal with this in a few projects and I’ve learned a thing or two about work/life/oss balance. I have a
+        I've had to deal with this in a few projects and I've learned a thing or two about work/life/oss balance. I have a
         few tricks that help you make the project manage itself a bit more while still being friendly and helpful to users
         of the project.
       `,
@@ -577,7 +577,7 @@ export default [
       },
     ],
     description: `
-        The Abstract Syntax Tree. It sounds a lot worse than it is. It’s actually quite simple and enables some powerful
+        The Abstract Syntax Tree. It sounds a lot worse than it is. It's actually quite simple and enables some powerful
         tools. BabelJS uses it to transform your code from ES.Next to ES5. ESLint uses it to lint your code. And with a
         knowledge of how it works, you can extend these and other tools to do some mind bustingly powerful things. Prepare
         to be amazed by ASTs!
@@ -663,7 +663,7 @@ export default [
         I graduated from college in April 2014, just shy of two years ago. In that time, I've been able to learn a ton,
         build a bunch of stuff, teach workshops, create egghead screencasts, speak at conferences, and generally
         contribute quite a bit to the JavaScript community. In this talk, I'll cover some solid principles of things that
-        I’ve learned in my experience. This will help new-comers to jumpstart their career. And help old-timers know how
+        I've learned in my experience. This will help new-comers to jumpstart their career. And help old-timers know how
         they can help new-comers.
       `,
   },

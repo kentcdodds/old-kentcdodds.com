@@ -54,7 +54,7 @@ export default [
       With the massive improvements to function components in React via hooks and suspense, you may be interested in seeing how to
       refactor a typical class component to a simpler class component that uses React Hooks features. In this course, we'll take
       [a modern React codebase](https://github.com/kentcdodds/react-github-profile) that uses classes and refactor the entire thing
-      to use function components as much as possible. We’ll look at state, side effects, async code, caching, and more!
+      to use function components as much as possible. We'll look at state, side effects, async code, caching, and more!
 
       Want a primer on hooks and suspense?
       [Watch my React Hooks and Suspense Playlist](https://egghead.io/playlists/react-hooks-and-suspense-650307f2)!
@@ -214,7 +214,7 @@ export default [
       - Give full rendering power to users with the Render Props Pattern
       - Improve the render prop API with the Prop Collections and Prop Getters Patterns
       - Provide total logic control with the Controlled Props and State Reducer Patterns
-      - Take advantage of React’s Context API to share state throughout the application with the Provider Pattern
+      - Take advantage of React's Context API to share state throughout the application with the Provider Pattern
     `,
   },
   {

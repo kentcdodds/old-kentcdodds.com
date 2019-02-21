@@ -27,7 +27,7 @@ export default function Messages({data: {latestArticle}}) {
             key={post.id}
             illustration={ThankYouIllustration}
             title="Success! Thank you!"
-            body="In case you haven’t seen already, here’s my latest article:"
+            body="In case you haven't seen already, here's my latest article:"
             articleTitle={post.frontmatter.title}
             articleSlug={post.frontmatter.slug}
           />

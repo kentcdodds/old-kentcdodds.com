@@ -11,7 +11,7 @@ import photoOfKent from '../images/hero/kent.png'
 
 function Hero({
   children,
-  message = `Hi, I’m Kent C. Dodds. I help people make the world better through quality software.`,
+  message = `Hi, I'm Kent C. Dodds. I help people make the world better through quality software.`,
 }) {
   return (
     <section
