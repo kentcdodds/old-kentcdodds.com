@@ -1,16 +1,20 @@
 ---
 slug: testing-implementation-details
-date: 2018-11-19
-title: 'Testing Implementation Details'
-description:
-  '_Testing implementation details is a recipe for disaster. Why is that? And
-  what does it even mean?_'
-categories: ['testing']
-keywords: ['javascript', 'testing', 'react']
-banner: './images/banner.jpg'
+title: Testing Implementation Details
+date: '2018-11-20'
+author: Kent C. Dodds
+description: >-
+  _Testing implementation details is a recipe for disaster. Why is that? And
+  what does it even mean?_
+keywords:
+  - JavaScript
+  - Testing
+  - React
+banner: ./images/banner.jpg
 bannerCredit:
-  '[rawpixel](https://unsplash.com/photos/1Z15APktAiY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by
+  [rawpixel](https://unsplash.com/photos/1Z15APktAiY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
 
 Last year when I was using enzyme (like everyone else at the time), I stepped
@@ -23,18 +27,18 @@ test implementation details of your components. People often ask me what I mean
 by "implementation details." I mean, it's hard enough to test as it is! Why do
 we have to make all these rules to make it harder?
 
-## Why is testing implementation details bad?
+### Why is testing implementation details bad?
 
 There are two distinct reasons that it's important to avoid testing
 implementation details. Tests which test implementation details:
 
-1. Can break when you refactor application code. **False negatives**
-2. May not fail when you break application code. **False positives**
+1.  Can break when you refactor application code. **False negatives**
+2.  May not fail when you break application code. **False positives**
 
 Let's take a look at each of these in turn, using the following simple accordion
 component as an example:
 
-```javascript
+```jsx
 // accordion.js
 import React from 'react'
 import AccordionContents from './accordion-contents'
@@ -66,7 +70,7 @@ export default Accordion
 
 And here's a test that tests implementation details:
 
-```javascript
+```jsx
 // __tests__/accordion.enzyme.js
 import React from 'react'
 // if you're wondering why not shallow,
@@ -115,7 +119,7 @@ existing behavior at all, it just changes the **implementation**. So let's
 change the **implementation** in a way that doesn't change the behavior:
 
 ```diff
- class Accordion extends React.Component {
+class Accordion extends React.Component {
 -  state = {openIndex: 0}
 -  setOpenIndex = openIndex => this.setState({openIndex})
 +  state = {openIndexes: [0]}
@@ -166,15 +170,16 @@ but it was because of a broken test, not broken app code. I honestly cannot
 think of a more annoying test failure situation. Oh well, let's go ahead and fix
 our test:
 
-```diff
- test('setOpenIndex sets the open index state properly', () => {
-   const wrapper = mount(<Accordion items={[]} />)
--  expect(wrapper.state('openIndex')).toEqual(0)
-+  expect(wrapper.state('openIndexes')).toEqual([0])
-   wrapper.instance().setOpenIndex(1)
--  expect(wrapper.state('openIndex')).toEqual(1)
-+  expect(wrapper.state('openIndexes')).toEqual([1])
- })
+```jsx
+test('setOpenIndex sets the open index state properly', () => {
+  const wrapper =
+    mount(<Accordion items={[]} />) -
+    expect(wrapper.state('openIndex')).toEqual(0) +
+    expect(wrapper.state('openIndexes')).toEqual([0])
+  wrapper.instance().setOpenIndex(1) -
+    expect(wrapper.state('openIndex')).toEqual(1) +
+    expect(wrapper.state('openIndexes')).toEqual([1])
+})
 ```
 
 The takeaway: Tests which test implementation details can give you a false
@@ -186,7 +191,7 @@ tests that seem to break anytime you so much as look at the code.
 Ok, so now let's say your co-worker is working in the Accordion and they see
 this code:
 
-```javascript
+```jsx
 <button onClick={() => this.setOpenIndex(index)}>{item.title}</button>
 ```
 
@@ -196,7 +201,7 @@ say to themselves, "hey! inline arrow functions in `render` are
 so I'll just clean that up! I think this should work, I'll just change it really
 quick and run tests."
 
-```javascript
+```jsx
 <button onClick={this.setOpenIndex}>{item.title}</button>
 ```
 
@@ -228,14 +233,15 @@ THE TESTS! Wouldn't it be nice if we had a tool that had a wider
 [success](https://blog.codinghorror.com/falling-into-the-pit-of-success/)? Yes
 it would! And guess what, we DO have such a tool!
 
-## Implementation detail free testing
+### Implementation detail free testing
 
 So we could rewrite all these tests with enzyme, limiting ourselves to APIs that
 are free of implementation details, but instead, I'm just going to use
-react-testing-library which will make it very difficult to include
-implementation details in my tests. Let's check that out now!
+[react-testing-library](https://github.com/kentcdodds/react-testing-library)
+which will make it very difficult to include implementation details in my tests.
+Let's check that out now!
 
-```javascript
+```jsx
 // __tests__/accordion.rtl.js
 import React from 'react'
 import {render, fireEvent} from 'react-testing-library'
@@ -270,12 +276,12 @@ ESLint plugins. I just use the tool in the typical usage, and I get a test that
 actually can give me confidence my accordion is working as the user wants it
 too.
 
-## So... What are implementation details then?
+### So... What are implementation details then?
 
 Here's the simplest definition I can come up with:
 
-> Implementation details are things which users of your code will not typically
-> use, see, or even know about.
+> _Implementation details are things which users of your code will not typically
+> use, see, or even know about._
 
 So the first question we need an answer to is: "Who is the user of this code."
 Well, the end user who will be interacting with our component in the browser is
@@ -291,10 +297,12 @@ method. The developer will see/interact with the props they pass to the
 component. So our test should typically only see/interact with the props that
 are passed, and the rendered output.
 
-This is precisely what the react-testing-library test does. It passes fake props
-to the Accordion, then it interacts with the rendered output by querying the
-output for the contents that will be displayed to the user (or ensuring that it
-wont be displayed) and clicking the buttons that are rendered.
+This is precisely what the
+[react-testing-library](https://github.com/kentcdodds/react-testing-library)
+test does. It passes fake props to the Accordion, then it interacts with the
+rendered output by querying the output for the contents that will be displayed
+to the user (or ensuring that it wont be displayed) and clicking the buttons
+that are rendered.
 
 Now consider the enzyme test. With enzyme, we access the `state` of `openIndex`.
 This is not something that either of our users care about directly. They don't
@@ -311,17 +319,17 @@ application code to consider the tests. What a complete waste of time. I don't
 want tests that are written for their own sake. _Automated tests should verify
 that the application code works for the production users._
 
-> The more your tests resemble the way your software is used, the more
-> confidence they can give you. -
-> [me](https://twitter.com/kentcdodds/status/977018512689455106)
+> [_The more your tests resemble the way your software is used, the more confidence they can give you._](https://twitter.com/kentcdodds/status/977018512689455106)_ — me_
 
 Oh, and [React Hooks](https://reactjs.org/hooks) got you all excited? If you
 rewrite that accordion component to use React hooks, the enzyme test fails
-terribly, while the react-testing-library test continues to work.
+terribly, while the
+[react-testing-library](https://github.com/kentcdodds/react-testing-library)
+test continues to work.
 
-![jumping goats](https://i.giphy.com/9rPANvP50RSWA.gif)
+![](./images/0.gif)
 
-## Conclusion
+### Conclusion
 
 So how do you avoid testing implementation details? Using the right tools is a
 good start. A few weeks ago I sent this process for how to know what to test,
@@ -331,11 +339,11 @@ will naturally avoid implementation details:
 1.  What part of your untested codebase would be really bad if it broke? (The
     checkout process)
 2.  Try to narrow it down to a unit or a few units of code (When clicking the
-    “checkout” button a request with the cart items is sent to /checkout)
-3.  Look at that code and consider who the “users” are (The developer rendering
+    "checkout" button a request with the cart items is sent to /checkout)
+3.  Look at that code and consider who the "users" are (The developer rendering
     the checkout form, the end user clicking on the button)
 4.  Write down a list of instructions for that user to manually test that code
-    to make sure it’s not broken. (render the form with some fake data in the
+    to make sure it's not broken. (render the form with some fake data in the
     cart, click the checkout button, ensure the mocked /checkout API was called
     with the right data, respond with a fake successful response, make sure the
     success message is displayed).
@@ -343,7 +351,7 @@ will naturally avoid implementation details:
 
 I hope that's helpful to you! If you really want to take your testing to the
 next level, then I definitely recommend you get a Pro license for
-[TestingJavaScript.com](https://testingjavascript.com) 🏆
+[TestingJavaScript.com](https://testingjavascript.com/)🏆
 
 Good luck!
 
@@ -354,19 +362,17 @@ P.S.P.S. As an exercise for you... What happens to that second enzyme test if I
 change the name of the `AccordionContents` component? {insert biggest eye roll
 ever}
 
----
-
 **Things to not miss**:
 
-- [React Hooks and Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) -
-  I made a free playlist of ~35 minutes worth of videos to demo React Hooks and
+- [React Hooks and Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) — I
+  made a free playlist of ~35 minutes worth of videos to demo React Hooks and
   Suspense. Includes two videos about testing hooks!
-- [WPACK.IO](https://wpack.io) - wpack._io_ is a fine-tuned
+- [WPACK.IO](https://wpack.io/) — wpack._io_ is a fine-tuned
   _webpack/browser-sync_ configuration made specifically for _WordPress Theme
   and Plugin Development_. It gives a fine Developer Experience (DX) and a
-  single dev dependency for all your _javascript_ and _css/sass/scss_ bundling.
-- [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) -
-  Really interesting take on my
+  single dev dependency for all your*javascript* and _css/sass/scss_ bundling.
+- [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) — Really
+  interesting take on my
   [shallow rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7)
   blog post that has a number of great gems.
 - ["A brief analysis and comparison of the CSS for Twitter's PWA vs Twitter's legacy desktop website. The difference is dramatic and I'll touch on some reasons why."](https://twitter.com/necolas/status/1058949372837122048)
