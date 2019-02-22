@@ -110,22 +110,25 @@ module.exports = {
         trackingId: `UA-62924965-1`,
       },
     },
-    getBlogFeed({
-      filePathRegex: '//content/blog//',
-      blogUrl: 'https://kentcdodds.com/blog',
-      overrides: {
-        output: '/blog/rss.xml',
-        title: 'Kent C. Dodds Blog RSS Feed',
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          getBlogFeed({
+            filePathRegex: `//content/blog//`,
+            blogUrl: 'https://kentcdodds.com/blog',
+            output: '/blog/rss.xml',
+            title: 'Kent C. Dodds Blog RSS Feed',
+          }),
+          getBlogFeed({
+            filePathRegex: `//content/writing-blog//`,
+            blogUrl: 'https://kentcdodds.com/writing/blog',
+            output: '/writing/blog/rss.xml',
+            title: `Kent's Writing Blog RSS Feed`,
+          }),
+        ],
       },
-    }),
-    getBlogFeed({
-      filePathRegex: '//content/writing-blog//',
-      blogUrl: 'https://kentcdodds.com/writing/blog',
-      overrides: {
-        output: '/writing/blog/rss.xml',
-        title: `Kent's Writing Blog RSS Feed`,
-      },
-    }),
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -136,79 +139,67 @@ module.exports = {
   ],
 }
 
-function getBlogFeed({filePathRegex, blogUrl, overrides}) {
+function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
   return {
-    resolve: `gatsby-plugin-feed`,
-    options: {
-      query: `
-        {
-          site {
-            siteMetadata {
+    serialize: ({query: {site, allMdx}}) => {
+      const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
+      return allMdx.edges.map(edge => {
+        const siteUrl = site.siteMetadata.siteUrl
+        const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
+
+        const postText = `<div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
+
+        // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
+        const html = (edge.node.html || ``)
+          .replace(/href="\//g, `href="${siteUrl}/`)
+          .replace(/src="\//g, `src="${siteUrl}/`)
+          .replace(/"\/static\//g, `"${siteUrl}/static/`)
+          .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+
+        return {
+          ...edge.node.frontmatter,
+          description: edge.node.excerpt,
+          date: edge.node.fields.date,
+          url,
+          guid: url,
+          custom_elements: [{'content:encoded': html + postText}],
+        }
+      })
+    },
+    query: `
+    {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
+          site_url: siteUrl
+        }
+      }
+
+      allMdx(
+        limit: 1000,
+        filter: {
+          frontmatter: {published: {ne: false}}
+          fileAbsolutePath: {regex: "${filePathRegex}"}
+        }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 250)
+            fields {
+              slug
+              date
+            }
+            frontmatter {
               title
-              description
-              siteUrl
-              site_url: siteUrl
             }
           }
         }
-      `,
-      feeds: [
-        {
-          serialize: ({query: {site, allMdx}}) => {
-            const stripSlash = slug =>
-              slug.startsWith('/') ? slug.slice(1) : slug
-            return allMdx.edges.map(edge => {
-              const siteUrl = site.siteMetadata.siteUrl
-              const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
-
-              const postText = `<div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
-
-              // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
-              const html = edge.node.html
-                .replace(/href="\//g, `href="${siteUrl}/`)
-                .replace(/src="\//g, `src="${siteUrl}/`)
-                .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
-
-              return {
-                ...edge.node.frontmatter,
-                description: edge.node.excerpt,
-                date: edge.node.fields.date,
-                url,
-                guid: url,
-                custom_elements: [{'content:encoded': html + postText}],
-              }
-            })
-          },
-          query: `
-            {
-              allMdx(
-                limit: 1000,
-                filter: {
-                  frontmatter: {published: {ne: false}}
-                  fileAbsolutePath: {regex: "${filePathRegex}"}
-                }
-                sort: { order: DESC, fields: [frontmatter___date] }
-              ) {
-                edges {
-                  node {
-                    excerpt(pruneLength: 250)
-                    html
-                    fields {
-                      slug
-                      date
-                    }
-                    frontmatter {
-                      title
-                    }
-                  }
-                }
-              }
-            }
-          `,
-          ...overrides,
-        },
-      ],
-    },
+      }
+    }
+  `,
+    ...overrides,
   }
 }

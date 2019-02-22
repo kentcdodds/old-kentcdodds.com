@@ -36,86 +36,101 @@ const createPosts = (createPage, createRedirect, edges) => {
 
 function createBlogPages({
   blogPath,
-  filterRegex,
+  data,
   paginationTemplate,
   actions,
-  graphql,
 }) {
-  return graphql(`
+  if (_.isEmpty(data.edges)) {
+    return Promise.reject('There are no posts!')
+  }
+
+  const {edges} = data
+  const {createRedirect, createPage} = actions
+  createPosts(createPage, createRedirect, edges)
+  createPaginatedPages(
+    actions.createPage,
+    edges,
+    blogPath,
+    paginationTemplate,
+    {
+      categories: [],
+    },
+  )
+  return null
+}
+
+exports.createPages = async ({actions, graphql}) => {
+  const { data, errors } = await graphql(`
+    fragment PostDetails on Mdx {
+      fileAbsolutePath
+      id
+      parent {
+        ... on File {
+          name
+          sourceInstanceName
+        }
+      }
+      excerpt(pruneLength: 250)
+      fields {
+        title
+        slug
+        description
+        date
+      }
+      code {
+        scope
+      }
+    }
+
     query {
-      allMdx(
+      blog: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
-          fileAbsolutePath: {regex: "${filterRegex}"}
+          fileAbsolutePath: {regex: "//content/blog//"}
         }
         sort: {order: DESC, fields: [frontmatter___date]}
       ) {
         edges {
           node {
-            fileAbsolutePath
-            id
-            parent {
-              ... on File {
-                name
-                sourceInstanceName
-              }
-            }
-            excerpt(pruneLength: 250)
-            fields {
-              title
-              slug
-              description
-              date
-            }
-            code {
-              scope
-            }
+            ...PostDetails
+          }
+        }
+      }
+
+      writing: allMdx(
+        filter: {
+          frontmatter: {published: {ne: false}}
+          fileAbsolutePath: {regex: "//content/writing-blog//"}
+        }
+        sort: {order: DESC, fields: [frontmatter___date]}
+      ) {
+        edges {
+          node {
+            ...PostDetails
           }
         }
       }
     }
-  `).then(({data, errors}) => {
-    if (errors) {
-      return Promise.reject(errors)
-    }
+  `)
 
-    if (_.isEmpty(data.allMdx)) {
-      return Promise.reject('There are no posts!')
-    }
+  if (errors) {
+    return Promise.reject(errors)
+  }
 
-    const {edges} = data.allMdx
-    const {createRedirect, createPage} = actions
-    createPosts(createPage, createRedirect, edges)
-    createPaginatedPages(
-      actions.createPage,
-      edges,
-      blogPath,
-      paginationTemplate,
-      {
-        categories: [],
-      },
-    )
-    return null
+  const { blog, writing } = data
+
+  createBlogPages({
+    blogPath: '/blog',
+    data: blog,
+    paginationTemplate: path.resolve(`src/templates/blog.js`),
+    actions,
+  }),
+  createBlogPages({
+    blogPath: '/writing/blog',
+    data: writing,
+    paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
+    actions,
   })
-}
-
-exports.createPages = async ({actions, graphql}) => {
-  await Promise.all([
-    createBlogPages({
-      blogPath: '/blog',
-      filterRegex: '//content/blog//',
-      paginationTemplate: path.resolve(`src/templates/blog.js`),
-      actions,
-      graphql,
-    }),
-    createBlogPages({
-      blogPath: '/writing/blog',
-      filterRegex: '//content/writing-blog//',
-      paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
-      actions,
-      graphql,
-    })
-  ])
 }
 
 exports.onCreateWebpackConfig = ({actions}) => {
