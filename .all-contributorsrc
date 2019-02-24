@@ -119,6 +119,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lasota-piotr",
+      "name": "Piotr lasota",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9272629?v=4",
+      "profile": "https://github.com/lasota-piotr",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
