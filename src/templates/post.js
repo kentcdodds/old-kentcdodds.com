@@ -18,6 +18,7 @@ export default function Post({data: {site, mdx}}) {
   const {
     isWriting,
     author = config.author,
+    editLink,
     title,
     slug,
     date,
@@ -116,6 +117,11 @@ export default function Post({data: {site, mdx}}) {
         />
         <br />
       </Container>
+      <Container noVerticalPadding>
+        <p>
+          <a href={editLink}>Edit post on GitHub</a>
+        </p>
+      </Container>
     </Layout>
   )
 }
@@ -129,6 +135,7 @@ export const pageQuery = graphql`
     }
     mdx(fields: {id: {eq: $id}}) {
       fields {
+        editLink
         isWriting
         title
         noFooter

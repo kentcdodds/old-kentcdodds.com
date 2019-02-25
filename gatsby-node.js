@@ -34,12 +34,7 @@ const createPosts = (createPage, createRedirect, edges) => {
   })
 }
 
-function createBlogPages({
-  blogPath,
-  data,
-  paginationTemplate,
-  actions,
-}) {
+function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   if (_.isEmpty(data.edges)) {
     return Promise.reject('There are no posts!')
   }
@@ -60,7 +55,7 @@ function createBlogPages({
 }
 
 exports.createPages = async ({actions, graphql}) => {
-  const { data, errors } = await graphql(`
+  const {data, errors} = await graphql(`
     fragment PostDetails on Mdx {
       fileAbsolutePath
       id
@@ -117,14 +112,14 @@ exports.createPages = async ({actions, graphql}) => {
     return Promise.reject(errors)
   }
 
-  const { blog, writing } = data
+  const {blog, writing} = data
 
   createBlogPages({
     blogPath: '/blog',
     data: blog,
     paginationTemplate: path.resolve(`src/templates/blog.js`),
     actions,
-  }),
+  })
   createBlogPages({
     blogPath: '/writing/blog',
     data: writing,
@@ -272,6 +267,15 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       name: 'redirects',
       node,
       value: node.frontmatter.redirects,
+    })
+
+    createNodeField({
+      name: 'editLink',
+      node,
+      value: `https://github.com/kentcdodds/kentcdodds.com/edit/master${node.fileAbsolutePath.replace(
+        __dirname,
+        '',
+      )}`,
     })
 
     createNodeField({

@@ -12,7 +12,7 @@ keywords:
   - Babel
   - Destructuring
   - React Hooks
-banner: ./images/banner.jpg
+banner: ./images/banner.png
 bannerCredit:
   I made this all by myself... Well... Except for [the react
   logo](https://arcweb.co/is-react-native-a-viable-framework-for-financial-applications/react-logo-1000-transparent/)...
