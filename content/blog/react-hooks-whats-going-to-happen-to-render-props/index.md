@@ -206,18 +206,12 @@ Good luck!
 
 **Learn more about Refactoring to React Hooks from me**:
 
-[My new egghead.io course](https://blog.kentcdodds.com/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense-e0f9799b2677)
+[My new egghead.io course](blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
 will show you how to refactor a typical app's components to use react hooks (and
 React.lazy/suspense). It's a good time!
 
-[**Introducing a new course: Simplify React Apps with React Hooks and Suspense**  
-\_Learn about the massive improvements coming to function components in React via a fresh new course showing you how to...\_blog.kentcdodds.com](https://blog.kentcdodds.com/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense-e0f9799b2677 'https://blog.kentcdodds.com/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense-e0f9799b2677')[](https://blog.kentcdodds.com/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense-e0f9799b2677)
-
 Also, check out
 [this free egghead playlist about hooks and suspense](http://kcd.im/hooks-and-suspense)!
-
-[**React Hooks and Suspense**  
-\_React Suspense has been released in React 16.6.0 and React Hooks is currently in alpha! Let's see how we can use these...\_kcd.im](http://kcd.im/hooks-and-suspense 'http://kcd.im/hooks-and-suspense')[](http://kcd.im/hooks-and-suspense)
 
 **Things to not miss**:
 

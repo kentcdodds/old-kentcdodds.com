@@ -83,7 +83,7 @@ will be helpful to you as well). Good luck!
 - [Learn React Fundamentals and Advanced Patterns](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db) — I'm
   just pretty excited about the course release!
 - [Egghead.io Sale](https://egghead.io/gifts) — Save 30% on a year subscription!
-- [`ReactPrimer`](https://github.com/ReactPrimer/ReactPrimer) \- React component
+- [`ReactPrimer`](https://github.com/ReactPrimer/ReactPrimer) - React component
   prototyping tool that generates fully connected class component code.
 - [Partial Application & Lambda Parameter Syntax for JavaScript](https://medium.com/@citycide/partial-application-lambda-parameters-for-js-aa16f4d94df4) — Awesome
   use of [`babel-macros`](https://github.com/kentcdodds/babel-macros)

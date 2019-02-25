@@ -1,6 +1,6 @@
 ---
 slug: downshift-2-0-0-released
-title: "\U0001F3CE downshift 2.0.0 released \U0001F389"
+title: '🏎 downshift 2.0.0 released 🎉'
 date: '2018-06-15'
 author: Kent C. Dodds
 description: >-
@@ -98,11 +98,12 @@ ready for contributions!
 
 Find it and contribute
 ([right in the browser!](https://hackernoon.com/announcing-codesandbox-2-0-938cff3a0fcb))
-on codesandbox!  
-\- Codesandbox:
-[codesandbox.io/s/github/kentcdodds/downshift-examples](https://codesandbox.io/s/github/kentcdodds/downshift-examples)  
-\- GitHub:
-[https://github.com/kentcdodds/downshift-examples](https://github.com/kentcdodds/downshift-examples)
+on codesandbox!
+
+- Codesandbox:
+  [codesandbox.io/s/github/kentcdodds/downshift-examples](https://codesandbox.io/s/github/kentcdodds/downshift-examples)
+- GitHub:
+  [https://github.com/kentcdodds/downshift-examples](https://github.com/kentcdodds/downshift-examples)
 
 <figcaption>The codesandbox for the examples site</figcaption>
 
@@ -124,8 +125,7 @@ train, you'll get more type-safety when working with downshift!
 
 ### We're on spectrum!
 
-[**downshift**  
-\_🏎 Primitives to build simple, flexible, WAI-ARIA compliant enhanced input React components_spectrum.chat](https://spectrum.chat/downshift 'https://spectrum.chat/downshift')[](https://spectrum.chat/downshift)
+[**downshift**](https://spectrum.chat/downshift)
 
 Yeehaw! Join us there to talk about the present and future of downshift and get
 help/help others.

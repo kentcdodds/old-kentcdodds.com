@@ -133,7 +133,7 @@ to go.
   remarkably simple method for deploying ES5 and ES2015 code to browsers based
   on whether they support `<script type="module">`. See also:
   [bundle.sh](https://bundle.sh/).
-- [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) \- an
+- [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) - an
   example by [John Lindquist](https://twitter.com/johnlindquist). Uses
   [`preval`](https://github.com/kentcdodds/babel-plugin-preval) to run mdx.
   Pretty rad TBH :)

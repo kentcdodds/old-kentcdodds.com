@@ -198,15 +198,14 @@ with my specific usage. I guess that's what they mean by "EXPERIMENTAL" 😅
 I created a repo on GitHub to demonstrate how this all could work in a really
 simple example.
 
-[**kentcdodds/dist-flow-example**  
-\_Contribute to dist-flow-example development by creating an account on GitHub.\_github.com](https://github.com/kentcdodds/dist-flow-example 'https://github.com/kentcdodds/dist-flow-example')[](https://github.com/kentcdodds/dist-flow-example)
+[**kentcdodds/dist-flow-example**](https://github.com/kentcdodds/dist-flow-example)
 
 I hope this was helpful! Good luck to you all and keep learning!
 
 **Things to not miss**:
 
 - [`prettier@1.8`](https://github.com/prettier/prettier/releases/tag/1.8.0)
-  [released](https://github.com/prettier/prettier/releases/tag/1.8.0) \- My
+  [released](https://github.com/prettier/prettier/releases/tag/1.8.0) - My
   favorite part of this release is support for formatting markdown (including
   markdown codeblocks!!!)
 - [`Making a custom React renderer`](https://github.com/nitin42/Making-a-custom-React-renderer) -

@@ -1,6 +1,6 @@
 ---
 slug: concerning-toolkits
-title: "Concerning toolkits \U0001F6E0 \U0001F4E6"
+title: 'Concerning toolkits 🛠 📦'
 date: '2018-01-29'
 author: Kent C. Dodds
 description: >-

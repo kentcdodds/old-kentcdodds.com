@@ -29,8 +29,7 @@ I make an important observation:
 
 > You contribute best to something you use regularly.
 
-[**Open Source Stamina**  
-\_You contribute best to something you use regularly.\_blog.kentcdodds.com](https://blog.kentcdodds.com/open-source-stamina-dafd063f9932 'https://blog.kentcdodds.com/open-source-stamina-dafd063f9932')[](https://blog.kentcdodds.com/open-source-stamina-dafd063f9932)
+[**Open Source Stamina**](https://blog.kentcdodds.com/open-source-stamina-dafd063f9932)
 
 So while it can be a lot of fun to just jump into any open source project and
 help out. Sustainable contributions are best found in projects that you use on a
@@ -73,8 +72,7 @@ In my blogpost
 ["What open source project should I contribute to?"](https://medium.com/@kentcdodds/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
 I talk a little bit about how to find where the code is for a specific API.
 
-[**What open source project should I contribute to?**  
-\_My silver bullet answer to this frequently posed question, and how to get started_blog.kentcdodds.com](https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4 'https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4')[](https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
+[**What open source project should I contribute to?**](https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
 
 ### Break things
 
@@ -88,16 +86,12 @@ a codebase. 👍 Even better if you can run it in the browser DevTools that's al
 great.
 [Read more about NodeJS debugging in Chrome DevTools](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27).
 
-[**Debugging Node.js with Chrome DevTools**  
-\_Support for Node.js debuggability landed in Node.js in 2016. Here's how to get up and running. (Post updated Jan 2018)\_medium.com](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27 'https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27')[](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27)
+[**Debugging Node.js with Chrome DevTools**](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27)
 
 One other thing you might try is running the project's code in the context of
 your application. I talk about this a fair amount in my blog post from a few
 weeks ago
-["Spelunking in node_modules 👷"](https://blog.kentcdodds.com/spelunking-in-node-modules-bf165af19968).
-
-[**Spelunking in node_modules 👷**  
-\_Deep dive into Jest, React, and jsdom: A story about how I go about finding and fixing bugs in my dependencies.\_blog.kentcdodds.com](https://blog.kentcdodds.com/spelunking-in-node-modules-bf165af19968 'https://blog.kentcdodds.com/spelunking-in-node-modules-bf165af19968')[](https://blog.kentcdodds.com/spelunking-in-node-modules-bf165af19968)
+["Spelunking in node_modules 👷"](/blog/spelunking-in-node-modules-bf165af19968).
 
 ### Conclusion
 

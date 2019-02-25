@@ -30,9 +30,9 @@ necessarily. I'm just going to touch on what I learned about my own code when
 Babel fixed a bug I relied on heavily... Here are some resources I recommend you
 check out before you try to upgrade your stuff from Babel 5 to Babel 6:
 
-[**Clearing up the Babel 6 Ecosystem**medium.com](https://medium.com/p/c7678a314bf3 'https://medium.com/p/c7678a314bf3')[](https://medium.com/p/c7678a314bf3)
+[**Clearing up the Babel 6 Ecosystem**](https://medium.com/p/c7678a314bf3)
 
-[**Quick guide: how to update Babel 5.x -> 6.x**medium.com](https://medium.com/p/d828c230ec53 'https://medium.com/p/d828c230ec53')[](https://medium.com/p/d828c230ec53)
+[**Quick guide: how to update Babel 5.x -> 6.x**](https://medium.com/p/d828c230ec53)
 
 #### ES6 Modules
 
@@ -59,14 +59,14 @@ expected that I could import the object.
 I always assumed that I could export an object as the default and then
 destructure the pieces out of that object I needed, like so:
 
-````js
+```js
 // foo.js
 const foo = {baz: 42, bar: false}
 export default foo
-```js
+
 // bar.js
 import {baz} from './foo'
-````
+```
 
 Babel 5 allowed this because of how it transpiled the export default statement.
 However this is technically incorrect according to the spec which is why Babel 6
@@ -90,28 +90,28 @@ Here's the basic idea: ES6 modules are supposed to be statically analyzable
 example above, I could change the _foo_ object's properties at runtime and then
 my _import_ statement could import that dynamic property, like this:
 
-````
+```js
 // foo.js
 const foo = {}
 export default foo
 somethingAsync().then(result => foo\[result.key\] = result.value)
-```js
+
 // bar.js
 import {foobar} from './foo'
-````
+```
 
 We'll assume that _result.key_ is 'foobar'. In CommonJS this would work just
 fine because the require statements happen at runtime (when they're required):
 
-````
+```js
 // foo.js
 const foo = {}
 module.exports = foo
 somethingAsync().then(result => foo\[result.key\] = result.value)
-```js
+
 // bar.js
 const {foobar} = require('./foo')
-````
+```
 
 > However, because the ES6 specification states that imports and exports must be
 > statically analyzable, you can't accomplish this dynamic behavior in ES6.
@@ -127,46 +127,46 @@ hope a bunch of code examples and comparisons will be instructive_
 The problem I had was I was combining ES6 _exports_ with CommonJS _require_. I
 would do something like this:
 
-````js
+```js
 // add.js
 export default (x, y) => x + y
-```js
+
 // bar.js
 const three = require('./add')(1, 2)
-````
+```
 
 With the changes that Babel made, I had three choices:
 
 **Option 1:** require with default
 
-````js
+```js
 // add.js
 export default (x, y) => x + y
-```js
+
 // bar.js
 const three = require('./add').default(1, 2)
-````
+```
 
 **Option 2:** ES6 modules 100%
 
-````js
+```js
 // add.js
 export default (x, y) => x + y
-```js
+
 // bar.js
 import add from './add'
 const three = add(1, 2)
-````
+```
 
 **Option 3:** CommonJS 100%
 
-````js
+```js
 // add.js
 module.exports = (x, y) => x + y
-```js
+
 // bar.js
 const three = require('./add')(1, 2)
-````
+```
 
 #### How did I fix it?
 
@@ -195,8 +195,6 @@ enough benefit IMO.
 If you feel like you must combine them, you might consider using one of the
 following babel plugins/presets:
 
-[**babel-preset-es2015-node5**  
-\_npm is the package manager for javascript_www.npmjs.com](https://www.npmjs.com/package/babel-preset-es2015-node5 'https://www.npmjs.com/package/babel-preset-es2015-node5')[](https://www.npmjs.com/package/babel-preset-es2015-node5)
+[**babel-preset-es2015-node5**](https://www.npmjs.com/package/babel-preset-es2015-node5)
 
-[**babel-plugin-add-module-exports**  
-\_npm is the package manager for javascript_www.npmjs.com](https://www.npmjs.com/package/babel-plugin-add-module-exports 'https://www.npmjs.com/package/babel-plugin-add-module-exports')[](https://www.npmjs.com/package/babel-plugin-add-module-exports)
+[**babel-plugin-add-module-exports**](https://www.npmjs.com/package/babel-plugin-add-module-exports)

@@ -395,7 +395,7 @@ and the direction you're going. You can do it! Good luck!
   React. We cover a lot of subjects that you may find interesting!
 - [React Fire 🔥🔥🔥](https://github.com/facebook/react/issues/13525) — An
   initiative to modernize react-dom
-- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues/)\-
+- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues/)-
   A great blog post by [Shawn Wang](https://twitter.com/swyx) about an awesome
   new feature in the React DevTools!
 - [ui.reach.tech](https://ui.reach.tech/) — An awesome collection of highly

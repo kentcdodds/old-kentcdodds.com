@@ -98,7 +98,7 @@ I hope this is helpful to you! Good luck to you all! 👍
 
 **Things to not miss:**
 
-- [`statty`](https://github.com/vesparny/statty) \- a brand new app state
+- [`statty`](https://github.com/vesparny/statty) - a brand new app state
   management library for `React` that'll knock your `redux` socks off.
 - [Code Sponsor](https://codesponsor.io/) — a new way to help fund open source.
   I've been using it on all of my repos and I'm loving it :)

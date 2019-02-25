@@ -1,6 +1,6 @@
 ---
 slug: glamorous-v4-is-here
-title: "Glamorous v4 is here \U0001F484 \U0001F389 \U0001F38A"
+title: "Glamorous v4 is here 💄 \U0001F389 \U0001F38A"
 date: '2017-08-03'
 author: Kent C. Dodds
 description: >-
@@ -29,8 +29,7 @@ jest-glamor-react v3 has been released
 [**https://glamorous.rocks**](https://glamorous.rocks) **(try out**
 [**the getting started page**](https://glamorous.rocks/getting-started/)**)!**
 
-[**glamorous - React component styling solved 💄**  
-\_React component styling solved with an elegant API, small footprint, and great performance_glamorous.rocks](https://glamorous.rocks 'https://glamorous.rocks')[](https://glamorous.rocks)
+[**glamorous - React component styling solved 💄**](https://glamorous.rocks)
 
 ### Status update
 

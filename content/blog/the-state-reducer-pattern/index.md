@@ -101,8 +101,7 @@ So, @notruth opened
 `modifyStateChange`. After considering it a little further, I decided that this
 could be generalized into a pattern that could be really useful for other
 libraries. Patterns are much easier to evangelize when they have a name, so
-[I looked for one](https://twitter.com/kentcdodds/status/958707800292470784).
-🕵️
+[I looked for one](https://twitter.com/kentcdodds/status/958707800292470784). 🕵️
 
 ### Introducing the state reducer pattern
 
@@ -170,8 +169,7 @@ reducer pattern). Good luck! 👍
 
 **Things to not miss**
 
-[**jamiebuilds/unstated**  
-\_unstated - State so simple, it goes without saying_github.com](https://github.com/jamiebuilds/unstated 'https://github.com/jamiebuilds/unstated')[](https://github.com/jamiebuilds/unstated)
+[**jamiebuilds/unstated**](https://github.com/jamiebuilds/unstated)
 
 A new library from [James Kyle](https://twitter.com/thejameskyle) that I'm
 pretty sure is my new favorite thing in state management. I'd suggest giving it

@@ -164,7 +164,7 @@ Keep practicing! Good luck :D
 - [How and Why to Speak at Tech Conferences](https://hackernoon.com/how-and-why-to-speak-at-tech-conferences-1d50a3f548e0)
   by [Nick Heiner](https://twitter.com/nickheiner) — A great blog post that goes
   deeper on this subject.
-- [Test and Code Episode 45: David Heinemeier Hansson — Software Development and Testing, TDD, and exploratory QA](http://testandcode.com/45)\-
+- [Test and Code Episode 45: David Heinemeier Hansson — Software Development and Testing, TDD, and exploratory QA](http://testandcode.com/45)-
   A refreshingly practical view of testing software from the creator of Ruby on
   Rails.
 - [DevTips](http://kcd.im/devtips) — If you're not reviewing these on a regular

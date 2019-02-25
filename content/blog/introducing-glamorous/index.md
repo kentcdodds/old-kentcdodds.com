@@ -1,11 +1,11 @@
 ---
 slug: introducing-glamorous
-title: "Introducing glamorous \U0001F484"
+title: 'Introducing glamorous 💄'
 date: '2017-04-04'
 author: Kent C. Dodds
 description:
-  "_A styled-components \U0001F485 and jsxstyle inspired solution for styling ⚛
-  React Components from PayPal_"
+  '_A styled-components 💅 and jsxstyle inspired solution for styling ⚛️ React
+  Components from PayPal_'
 keywords:
   - React
   - JavaScript
@@ -62,8 +62,7 @@ solutions to be what I wanted them to be, I decided to create my own.
 
 ### Enter [glamorous](https://github.com/paypal/glamorous) 💄!
 
-[**paypal/glamorous**  
-\_glamorous - React component styling solved 💄_github.com](https://github.com/paypal/glamorous 'https://github.com/paypal/glamorous')[](https://github.com/paypal/glamorous)
+[**paypal/glamorous**](https://github.com/paypal/glamorous)
 
 `glamorous` is React component styling solved with an elegant
 ([inspired](https://github.com/kentcdodds/glamorous#inspiration)) API, small
@@ -76,7 +75,7 @@ https://twitter.com/kentcdodds/status/842881773180731392
 
 Let's get a quick look at what a glamorous component looks like:
 
-````js
+```jsx
 // Create a <Title> react component that renders an <h1> which is
 // centered, palevioletred and sized at 1.5em
 const Title = glamorous.h1({
@@ -84,24 +83,22 @@ const Title = glamorous.h1({
   textAlign: 'center',
   color: 'palevioletred',
 })
-```js
+
 // Create a <Wrapper> react component that renders a <section> with
 // some padding and a papayawhip background
 const Wrapper = glamorous.section({
   padding: '4em',
   background: 'papayawhip',
 })
-```jsx
+
 function App() {
   return (
     <Wrapper>
-      <Title>
-        Hello World, this is my first glamorous component!
-      </Title>
+      <Title>Hello World, this is my first glamorous component!</Title>
     </Wrapper>
   )
 }
-````
+```
 
 _(thanks to styled-components for the example inspiration)._
 
@@ -122,19 +119,21 @@ const MyLink = glamorous.a({
 [**child-selectors**](https://github.com/threepointone/glamor/blob/5e7d988211330b8e2fca5bb8da78e35051444efd/docs/howto.md#child-selectors)
 (the escape hatch you should rarely use, but is nice to have)
 
-````js
+```jsx
 const MyDiv = glamorous.div({
   display: 'block',
-  '& .bold': { fontWeight: 'bold' },
-  '& .one': { color: 'blue' },
-  ':hover .two': { color: 'red' }
+  '& .bold': {fontWeight: 'bold'},
+  '& .one': {color: 'blue'},
+  ':hover .two': {color: 'red'},
 })
-```jsx
-<MyDiv>
-  <div className="one bold">is blue-bold!</div>
-  <div className="two">hover red!</div>
-</MyDiv>
-````
+
+const ui = (
+  <MyDiv>
+    <div className="one bold">is blue-bold!</div>
+    <div className="two">hover red!</div>
+  </MyDiv>
+)
+```
 
 [**media queries**](https://github.com/threepointone/glamor/blob/5e7d988211330b8e2fca5bb8da78e35051444efd/docs/howto.md#media-queries)
 
@@ -151,22 +150,22 @@ const MyResponsiveDiv = glamorous.div({
 
 [**animations**](https://github.com/threepointone/glamor/blob/5e7d988211330b8e2fca5bb8da78e35051444efd/docs/howto.md#animations)
 
-````js
+```js
 import {css} from 'glamor' // or require or whatever...
-```js
+
 const bounce = css.keyframes({
-  '0%': { transform: 'scale(1)', opacity: 0.3 },
-  '55%': { transform: 'scale(1.2)', opacity: 1 },
-  '100%': { transform: 'scale(1)', opacity: 0.3 }
+  '0%': {transform: 'scale(1)', opacity: 0.3},
+  '55%': {transform: 'scale(1.2)', opacity: 1},
+  '100%': {transform: 'scale(1)', opacity: 0.3},
 })
-```js
+
 const MyBouncyDiv = glamorous.div({
   animation: `${bounce} 1s infinite`,
   width: 50,
   height: 50,
   backgroundColor: 'red',
 })
-````
+```
 
 **theming**
 
@@ -174,29 +173,36 @@ With the new `ThemeProvider` (recently added by
 [Alessandro Arnodo](https://medium.com/u/4f41b6fff014)), glamorous also supports
 theming:
 
-```
-const Title = glamorous.h1({
-  fontSize: '10px'
-}, (props, theme) => ({
-  color: theme.main.color
-}))
+```jsx
+const Title = glamorous.h1(
+  {
+    fontSize: '10px',
+  },
+  (props, theme) => ({
+    color: theme.main.color,
+  }),
+)
 
 // use <ThemeProvider> to pass theme down the tree
-<ThemeProvider theme={theme}>
-  <Title>Hello!</Title>
-</ThemeProvider>
+const ui1 = (
+  <ThemeProvider theme={theme}>
+    <Title>Hello!</Title>
+  </ThemeProvider>
+)
 
 // it is possible to nest themes
 // inner themes will be merged with outers
-<ThemeProvider theme={theme}>
-  <div>
-    <Title>Hello!</Title>
-    <ThemeProvider theme={secondaryTheme}>
-      {/\* this will be blue */}
-      <Title>Hello from here!</Title>
-    </ThemeProvider>
-  </div>
-</ThemeProvider>
+const ui2 = (
+  <ThemeProvider theme={theme}>
+    <div>
+      <Title>Hello!</Title>
+      <ThemeProvider theme={secondaryTheme}>
+        {/\* this will be blue */}
+        <Title>Hello from here!</Title>
+      </ThemeProvider>
+    </div>
+  </ThemeProvider>
+)
 ```
 
 And if you need global styles, you can just

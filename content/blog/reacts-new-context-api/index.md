@@ -264,4 +264,4 @@ So much to look forward to! Good luck! 👍
 
 https://twitter.com/acdlite/status/960288610229473280
 
-[**What's new in React 16.3(.0-alpha)**](https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b 'https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b')[](https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b)
+[**What's new in React 16.3(.0-alpha)**](https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b)

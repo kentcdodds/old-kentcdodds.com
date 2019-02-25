@@ -3,8 +3,7 @@ slug: answers-to-common-questions-about-render-props
 title: Answers to common questions about render props
 date: '2018-02-12'
 author: Kent C. Dodds
-description:
-  "_Because there's a ton of hype, and a bunch of questions ⚛️ \U0001F914_"
+description: _Because there's a ton of hype, and a bunch of questions ⚛️_
 keywords:
   - JavaScript
   - React
@@ -45,14 +44,14 @@ post! Read
 ["React, Inline Functions, and Performance"](https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578).
 "In summary" (to quote the article:
 
-> \- Write your code naturally, code to the design.
+> - Write your code naturally, code to the design.
 
-> \- Measure your interactions to find slow paths.
-> [Here's how](https://reactjs.org/blog/2016/11/16/react-v15.4.0.html#profiling-components-with-chrome-timeline).
+> - Measure your interactions to find slow paths.
+>   [Here's how](https://reactjs.org/blog/2016/11/16/react-v15.4.0.html#profiling-components-with-chrome-timeline).
 
-> \- Use `PureComponent` and `shouldComponentUpdate` only when you need to,
-> skipping prop functions (unless they are used in lifecycle hooks for
-> side-effects).
+> - Use `PureComponent` and `shouldComponentUpdate` only when you need to,
+>   skipping prop functions (unless they are used in lifecycle hooks for
+>   side-effects).
 
 > _If you really believe that premature optimization is bad practice, then you
 > won't need proof that inline functions are fast, you need proof that they are

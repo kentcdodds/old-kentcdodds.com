@@ -96,8 +96,8 @@ could give you some direction. You'll waste less time by making sure your pull
 request will be accepted before you make it (just like how I was certain my wife
 would answer "yes" when I asked her to marry me _before_ I asked 😃).
 
-_Also, see_ [_this page_](http://24pullrequests.com/contributing) _for more tips
-on contributing._
+_Also, see [this page](http://24pullrequests.com/contributing) for more tips on
+contributing._
 
 #### Your First Pull Request
 
@@ -114,7 +114,7 @@ someone who has time and patience to mentor you.
 You might also be interested in watching my recently released series about how
 to contribute to open source projects on GitHub:
 
-[**Introducing: How to Contribute to Open Source**medium.com](https://medium.com/p/be67917eb704 'https://medium.com/p/be67917eb704')[](https://medium.com/p/be67917eb704)
+[**Introducing: How to Contribute to Open Source**](/blog/introducing-how-to-contribute-to-open-source)
 
 #### Resources
 
@@ -131,15 +131,15 @@ _need_ to standardize on this).
 
 Also, here are good resources for finding simple ways to contribute:
 
-[**Your First PR (@yourfirstpr) | Twitter**twitter.com](https://twitter.com/yourfirstpr 'https://twitter.com/yourfirstpr')[](https://twitter.com/yourfirstpr)
+[**Your First PR (@yourfirstpr)**](https://twitter.com/yourfirstpr)
 
-[**first-timers-only (@first_tmrs_only) | Twitter**twitter.com](https://twitter.com/first_tmrs_only 'https://twitter.com/first_tmrs_only')[](https://twitter.com/first_tmrs_only)
+[**first-timers-only (@first_tmrs_only)**](https://twitter.com/first_tmrs_only)
 
-[**24 Pull Requests**24pullrequests.com](http://24pullrequests.com/ 'http://24pullrequests.com/')[](http://24pullrequests.com/)
+[**24 Pull Requests**](http://24pullrequests.com/)
 
-[**Up For Grabs**up-for-grabs.net](http://up-for-grabs.net/#/ 'http://up-for-grabs.net/#/')[](http://up-for-grabs.net/#/)
+[**Up For Grabs**](http://up-for-grabs.net/#/)
 
-[**MunGell/awesome-for-beginners**github.com](https://github.com/MunGell/awesome-for-beginners 'https://github.com/MunGell/awesome-for-beginners')[](https://github.com/MunGell/awesome-for-beginners)
+[**MunGell/awesome-for-beginners**](https://github.com/MunGell/awesome-for-beginners)
 
 [My first PR](http://firstpr.me/#kentcdodds) was to fix a typo in a comment
 ([find yours](http://firstpr.me/)). It was super small and it was to a project
@@ -162,21 +162,14 @@ and there. Keep working at it. You'll do great! Good luck!
 
 Do you need an introduction to GitHub and Git? Check this out from GitHub:
 
-[**GitHub for Developers \* GitHub Training**training.github.com](https://training.github.com/classes/developers/ 'https://training.github.com/classes/developers/')[](https://training.github.com/classes/developers/)
+[**GitHub for Developers \* GitHub Training**](https://training.github.com/classes/developers/)
 
 And if you're interested in creating your own project, be sure to check out my
 series on Egghead.io:
 
-[**How to Write an Open Source JavaScript Library - Course by @kentcdodds**egghead.io](https://egghead.io/series/how-to-write-an-open-source-javascript-library 'https://egghead.io/series/how-to-write-an-open-source-javascript-library')[](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
+[**How to Write an Open Source JavaScript Library - Course by @kentcdodds**](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
 
 And as always, I'll see you around on [Twitter](https://twitter.com/kentcdodds)
 and [GitHub](https://github.com/kentcdodds) :-)
 
 ![](./images/2.png)
-
-#### One more thing
-
-If you thought this was interesting, you might like to
-[check out the rest of my blog](https://blog.kentcdodds.com) and
-[subscribe to my newsletter 💌](https://kcd.im/news) (newsletters are published
-to my blog 2 weeks after they're emailed out).

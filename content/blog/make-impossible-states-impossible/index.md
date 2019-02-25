@@ -118,7 +118,7 @@ https://twitter.com/yminsky/status/1034947939364425731
   In my ReactRally talk ⚛️I tell a familiar story about an component that you
   can probably relate to. Then I explain how it could have gone better. I think
   you'll enjoy this!
-- [`fastpack`](https://github.com/fastpack/fastpack) \- a JavaScript bundler
+- [`fastpack`](https://github.com/fastpack/fastpack) - a JavaScript bundler
   (like webpack, but with fewer features at the moment) that is BLAZING FAST
   🔥🔥🔥🔥 (bundles 1000 modules in < 1 second!)
 - [Byteconf React](https://byteconf.com/) — Byteconf React is a 100% free

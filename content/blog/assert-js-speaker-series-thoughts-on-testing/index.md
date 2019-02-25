@@ -59,8 +59,7 @@ details.
 For more on this, I suggest checking out my blog post: "Write tests. Not too
 many. Mostly integration."
 
-[**Write tests. Not too many. Mostly integration.**  
-\_Guillermo Rauch tweeted this a while back. Let's take a quick dive into what it means.\_blog.kentcdodds.com](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c 'https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c')[](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c)
+[**Write tests. Not too many. Mostly integration.**](/blog/write-tests)
 
 ### A lot of people in the JS world don't have a lot of experience in testing. How would you recommend they get started?
 
@@ -68,7 +67,7 @@ I think one of the things that makes testing hard is not understanding what's
 going on with testing frameworks. That's why I wrote the blog post "But really,
 what is a JavaScript test?"
 
-[**But really, what is a JavaScript test?**](https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77 'https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77')[](https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77)
+[**But really, what is a JavaScript test?**](/blog/but-really-what-is-a-javascript-test)
 
 In it I show what a test is, define a few terms, and help folks come to
 understand what a test is. Once you get that basic concept down, then everything

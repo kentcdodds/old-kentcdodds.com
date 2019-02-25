@@ -379,8 +379,7 @@ because they're in place).
 I do think that snapshots can be useful though. For more about this from me,
 checkout another blog post:
 
-[**Effective Snapshot Testing**  
-\_Snapshot testing can be useless, or super useful. Your choice. Let's talk about how to make them useful.\_blog.kentcdodds.com](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca 'https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca')[](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca)
+[**Effective Snapshot Testing**](/blog/effective-snapshot-testing)
 
 I hope that helps!
 

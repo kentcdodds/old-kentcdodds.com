@@ -1,6 +1,6 @@
 ---
 slug: updated-advanced-react-component-patterns
-title: "\U0001F4AF UPDATED: Advanced React Component Patterns ⚛️"
+title: '💯 UPDATED: Advanced React Component Patterns ⚛️'
 date: '2018-06-01'
 author: Kent C. Dodds
 description: >-
@@ -46,17 +46,17 @@ patterns.
 In particular, [the Context API](https://reactjs.org/docs/context.html) makes
 compound components much easier to make more flexible:
 
-[**Make Compound React Components Flexible**egghead.io](https://egghead.io/lessons/react-make-compound-react-components-flexible-ba049f22 'https://egghead.io/lessons/react-make-compound-react-components-flexible-ba049f22')[](https://egghead.io/lessons/react-make-compound-react-components-flexible-ba049f22)
+[**Make Compound React Components Flexible**](https://egghead.io/lessons/react-make-compound-react-components-flexible-ba049f22)
 
 I also have a few extra lessons to show you how you can validate that your
 Context Consumers are used properly:
 
-[**Validate Compound Component Context Consumers**egghead.io](https://egghead.io/lessons/react-validate-compound-component-context-consumers 'https://egghead.io/lessons/react-validate-compound-component-context-consumers')[](https://egghead.io/lessons/react-validate-compound-component-context-consumers)
+[**Validate Compound Component Context Consumers**](https://egghead.io/lessons/react-validate-compound-component-context-consumers)
 
 And here's another that shows you how to properly use the Context Provider to
 avoid unnecessary re-renders of your consumers:
 
-[**Prevent Unnecessary Rerenders of Compound Components using React Context**egghead.io](https://egghead.io/lessons/react-prevent-unnecessary-rerenders-of-compound-components-using-react-context 'https://egghead.io/lessons/react-prevent-unnecessary-rerenders-of-compound-components-using-react-context')[](https://egghead.io/lessons/react-prevent-unnecessary-rerenders-of-compound-components-using-react-context)
+[**Prevent Unnecessary Rerenders of Compound Components using React Context**](https://egghead.io/lessons/react-prevent-unnecessary-rerenders-of-compound-components-using-react-context)
 
 #### Render Props
 
@@ -64,7 +64,7 @@ The render prop lessons have also been re-recorded, though no new React APIs
 were needed to make it remain an awesome pattern 😉 People have told me that
 they really appreciate the way I teach render props:
 
-[**Use Render Props with React**egghead.io](https://egghead.io/lessons/react-use-render-props-with-react-5ce29321 'https://egghead.io/lessons/react-use-render-props-with-react-5ce29321')[](https://egghead.io/lessons/react-use-render-props-with-react-5ce29321)
+[**Use Render Props with React**](https://egghead.io/lessons/react-use-render-props-with-react-5ce29321)
 
 We also still have the
 [prop collections](https://egghead.io/lessons/react-use-prop-collections-with-render-props-ea6ca5c2)
@@ -79,9 +79,9 @@ original course** that I implemented a while ago in
 [downshift](https://github.com/paypal/downshift) called
 [**the state reducer pattern**](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57):
 
-[**Implement Component State Reducers**egghead.io](https://egghead.io/lessons/react-implement-component-state-reducers 'https://egghead.io/lessons/react-implement-component-state-reducers')[](https://egghead.io/lessons/react-implement-component-state-reducers)
+[**Implement Component State Reducers**](https://egghead.io/lessons/react-implement-component-state-reducers)
 
-[**Improve the usability of Component State Reducers with state change types**egghead.io](https://egghead.io/lessons/react-improve-the-usability-of-component-state-reducers-with-state-change-types 'https://egghead.io/lessons/react-improve-the-usability-of-component-state-reducers-with-state-change-types')[](https://egghead.io/lessons/react-improve-the-usability-of-component-state-reducers-with-state-change-types)
+[**Improve the usability of Component State Reducers with state change types**](https://egghead.io/lessons/react-improve-the-usability-of-component-state-reducers-with-state-change-types)
 
 #### Control Props
 
@@ -90,13 +90,13 @@ update to have more lessons about this subject and simplified the examples while
 making the implementation more real-world as well so you can focus on learning
 how to effectively use the pattern:
 
-[**Make Controlled React Components with Control Props**egghead.io](https://egghead.io/lessons/react-make-controlled-react-components-with-control-props-97f6aaa1 'https://egghead.io/lessons/react-make-controlled-react-components-with-control-props-97f6aaa1')[](https://egghead.io/lessons/react-make-controlled-react-components-with-control-props-97f6aaa1)
+[**Make Controlled React Components with Control Props**](https://egghead.io/lessons/react-make-controlled-react-components-with-control-props-97f6aaa1)
 
-[**Support Control Props for all state**egghead.io](https://egghead.io/lessons/react-support-control-props-for-all-state 'https://egghead.io/lessons/react-support-control-props-for-all-state')[](https://egghead.io/lessons/react-support-control-props-for-all-state)
+[**Support Control Props for all state**](https://egghead.io/lessons/react-support-control-props-for-all-state)
 
-[**Support a state change handler for all control props**egghead.io](https://egghead.io/lessons/react-support-a-state-change-handler-for-all-control-props 'https://egghead.io/lessons/react-support-a-state-change-handler-for-all-control-props')[](https://egghead.io/lessons/react-support-a-state-change-handler-for-all-control-props)
+[**Support a state change handler for all control props**](https://egghead.io/lessons/react-support-a-state-change-handler-for-all-control-props)
 
-[**Improve the usability of Control Props with state change types**egghead.io](https://egghead.io/lessons/react-improve-the-usability-of-control-props-with-state-change-types 'https://egghead.io/lessons/react-improve-the-usability-of-control-props-with-state-change-types')[](https://egghead.io/lessons/react-improve-the-usability-of-control-props-with-state-change-types)
+[**Improve the usability of Control Props with state change types**](https://egghead.io/lessons/react-improve-the-usability-of-control-props-with-state-change-types)
 
 #### The Provider Pattern
 
@@ -108,7 +108,7 @@ I give a demonstration of what
 how the Provider Pattern can simplify things considerably making your React
 codebase much more manageable.
 
-[**Implement the Provider Pattern with React Context**egghead.io](https://egghead.io/lessons/react-implement-the-provider-pattern-with-react-context 'https://egghead.io/lessons/react-implement-the-provider-pattern-with-react-context')[](https://egghead.io/lessons/react-implement-the-provider-pattern-with-react-context)
+[**Implement the Provider Pattern with React Context**](https://egghead.io/lessons/react-implement-the-provider-pattern-with-react-context)
 
 #### Higher Order Components
 
@@ -121,7 +121,7 @@ place and value in the discussion of react patterns. This lesson is built on top
 of the provider pattern lesson so you can see how to turn a Context Consumer
 into a Higher Order Component.
 
-[**Implement a Higher Order Component**egghead.io](https://egghead.io/lessons/react-implement-a-higher-order-component 'https://egghead.io/lessons/react-implement-a-higher-order-component')[](https://egghead.io/lessons/react-implement-a-higher-order-component)
+[**Implement a Higher Order Component**](https://egghead.io/lessons/react-implement-a-higher-order-component)
 
 ### Now go watch it!
 
@@ -131,9 +131,9 @@ entirely new pattern) because React keeps getting better at enabling these
 patterns. I hope you love it!
 
 > 👇👇👇👇👇👇👇👇👇
-
+>
 > [kcd.im/advanced-react](http://kcd.im/advanced-react)
-
+>
 > 👆👆👆👆👆👆👆👆👆
 
 Please share this blog post and the course link with your friends!

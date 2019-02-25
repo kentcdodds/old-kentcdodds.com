@@ -296,17 +296,17 @@ diff).
   great blog post by a great person [Rach Smith](https://rachsmith.com/) (who
   happens to also tweet interesting things, I suggest you
   [give her a follow](https://twitter.com/rachsmithtweets))
-- [`seapig`](https://github.com/enkidevs/seapig) \- 🌊🐷 Utility for generalized
+- [`seapig`](https://github.com/enkidevs/seapig) - 🌊🐷 Utility for generalized
   composition of React components
 - [`eslint-plugin-no-editor-code`](https://github.com/lukebelliveau/eslint-plugin-no-editor-code)
-  \- ESlint plugin to remove vscode folding comments. Because
+  - ESlint plugin to remove vscode folding comments. Because
   [code folding is super annoying](https://twitter.com/kentcdodds/status/918321670183514119).
-- [`is-ci`](https://github.com/watson/is-ci) \- Detect if your code is running
+- [`is-ci`](https://github.com/watson/is-ci) - Detect if your code is running
   on a CI server
   ([I used this recently](https://twitter.com/kentcdodds/status/918605888373559296)
   and it was great)
-- [`pullit`](https://github.com/jkup/pullit) \- Display and pull branches from
+- [`pullit`](https://github.com/jkup/pullit) - Display and pull branches from
   GitHub pull requests. Pretty handy!
-- [`downshift-hoc`](https://codesandbox.io/s/017n1jqo00) \- `withDownshift` HOC
+- [`downshift-hoc`](https://codesandbox.io/s/017n1jqo00) - `withDownshift` HOC
   and a few components you can use to avoid a render prop. A pretty interesting
   example!

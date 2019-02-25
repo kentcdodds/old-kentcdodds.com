@@ -63,23 +63,23 @@ Here's the little marketing spiel about the course:
 > bit of a beast to learn. I've spent hours upon hours learning and using
 > Webpack. I'm so excited to share my experiences with you." ~Kent C. Dodds_
 
-> \- Learn the role of webpack and fundamental concepts like loaders and plugins
+> - Learn the role of webpack and fundamental concepts like loaders and plugins
 
-> \- Learn how to setup a webpack file (and use webpack-validator to save
+> - Learn how to setup a webpack file (and use webpack-validator to save
 > yourself hours of debugging typos)
 
-> \- Learn how to setup a unit testing environment for a webpack project
+> - Learn how to setup a unit testing environment for a webpack project
 
-> \- Learn how tree-shaking works and how to leverage it for smaller bundles
+> - Learn how tree-shaking works and how to leverage it for smaller bundles
 
-> \- Learn how to maintain sane file sizes with webpack code splitting
+> - Learn how to maintain sane file sizes with webpack code splitting
 
-> \- Learn how to leverage hashing for long term caching
+> - Learn how to leverage hashing for long term caching
 
-> \- Learn how to group vendor/common files with the CommonsChunkPlugin to save
+> - Learn how to group vendor/common files with the CommonsChunkPlugin to save
 > bytes in the code that changes regularly
 
-> \- Learn the latest features of Webpack 2!
+> - Learn the latest features of Webpack 2!
 
 If you want to get a little preview of the course materials, start with
 [the full slide deck](http://kcd.im/webpack-workshop) 😎
