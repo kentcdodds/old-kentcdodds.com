@@ -163,11 +163,9 @@ by [Christoph](https://medium.com/u/9ea60eb6fc7c)).
 > I don't care how good you are at regex, you can do way better with a custom
 > babel plugin.
 
-### But what on earth is an AST? I'm not a rocket scientist 🚀 !
+### But what on earth is an AST? I'm not a rocket scientist 🚀!
 
-![](./images/2.png)
-
-<figcaption>astexplorer.net with a "You Might Not Need jQuery" babel plugin demo. Open it here: [http://kcd.im/asteymnnj](http://kcd.im/asteymnnj)</figcaption>
+[![astexplorer.net with a You Might Not Need jQuery babel plugin demo.](./images/2.png)](https://kcd.im/asteymnnj)
 
 Babel and ESLint both operate on what's called an Abstract Syntax Tree (commonly
 abbreviated to AST). It's effectively how the computer sees your code. Babel has
@@ -190,19 +188,15 @@ stuff. I'll walk you through it. And the course has a bunch of great exercises
 to help you get going. Learning how to write custom ESLint and Babel plugins can
 improve your life as a software developer and make your applications better 👍
 
-[**Learn Code Transformation and Linting with Abstract Syntax Trees (ASTs)**frontendmasters.com](http://kcd.im/fm-asts 'http://kcd.im/fm-asts')[](http://kcd.im/fm-asts)
+[**Learn Code Transformation and Linting with Abstract Syntax Trees (ASTs)**](http://kcd.im/fm-asts)
 
 ### Please share
 
 This is a topic that people often are scared or confused by. If this blog post
 has helped you understand things a little better, please share it so more people
 see that learning how to write custom Babel and ESLint plugins can be an
-invaluable skill. You can share it via Medium's 💚,
+invaluable skill. You can
 [tweet it yourself](https://twitter.com/intent/tweet?text=%22How%20writing%20custom%20Babel%20%26%20ESLint%20plugins%20can%20increase%20productivity%20%26%20improve%20user%20experience%22%20https://medium.com/@kentcdodds/fd6dd8076e26%20by%20@kentcdodds%20%F0%9F%91%8D),
 and/or simply retweet this:
 
 https://twitter.com/kentcdodds/status/886945519909711872
-
-![](./images/3.png)
-
-<figcaption>See you around! [@kentcdodds](https://twitter.com/kentcdodds)</figcaption>
