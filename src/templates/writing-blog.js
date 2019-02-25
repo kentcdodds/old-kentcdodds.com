@@ -38,11 +38,7 @@ export default function WritingBlogWithData(props) {
                   title
                   date(formatString: "MMMM DD, YYYY")
                   banner {
-                    childImageSharp {
-                      fluid(maxWidth: 600) {
-                        ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                      }
-                    }
+                    ...bannerImage640
                   }
                   slug
                   keywords

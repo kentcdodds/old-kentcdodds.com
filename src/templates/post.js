@@ -136,11 +136,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         author
         banner {
-          childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
+          ...bannerImage720
         }
         bannerCredit
         slug
