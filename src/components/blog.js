@@ -116,16 +116,20 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
         ))}
         <br />
         <br />
-        <div>
-          {nextPagePath && (
-            <Link to={nextPagePath} aria-label="View next page">
-              Next Page →
-            </Link>
-          )}
-          {previousPagePath && (
+        <div css={{display: 'flex', justifyContent: 'space-around'}}>
+          {previousPagePath ? (
             <Link to={previousPagePath} aria-label="View previous page">
               ← Previous Page
             </Link>
+          ) : (
+            <div />
+          )}
+          {nextPagePath ? (
+            <Link to={nextPagePath} aria-label="View next page">
+              Next Page →
+            </Link>
+          ) : (
+            <div />
           )}
         </div>
       </Container>
