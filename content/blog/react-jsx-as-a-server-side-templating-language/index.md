@@ -15,10 +15,10 @@ bannerCredit:
   on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
 
-> _Another note:_ >
-> [_I've been teasing_](https://twitter.com/kentcdodds/status/1041712678970875904) >
-> _about something big that I have coming. I'm totally not joking. I'm working
-> on something really huge and y'all will be the first to know about it. Stay
+> _Another note:
+> [I've been teasing](https://twitter.com/kentcdodds/status/1041712678970875904)
+> about something big that I have coming. I'm totally not joking. I'm working on
+> something really huge and y'all will be the first to know about it. Stay
 > tuned. It's weeks away and I think you're going to love it._
 
 Last week at PayPal, one of my pull requests was merged in an express codebase
@@ -40,11 +40,10 @@ data/interactivity needed on the page.
 
 > _I should note that generally I'd suggest that if you're doing any server
 > rendering at all, you'd probably find better performance doing server
-> rendering for everything (using something like_ >
-> [_Next.js_](https://nextjs.org/) _or_ [_gatsby_](https://www.gatsbyjs.org/) >
-> _if you can), not just the skeleton_ `_index.html_` _as we're doing on_ >
-> [_paypal.me_](http://paypal.me/)_. We have our reasons (there's nuance in
-> everything and I'm not going to get into this)._
+> rendering for everything (using something like [Next.js](https://nextjs.org/)
+> or [gatsby](https://www.gatsbyjs.org/) if you can), not just the skeleton
+> `index.html` as we're doing on [paypal.me](http://paypal.me/). We have our
+> reasons (there's nuance in everything and I'm not going to get into this)._
 
 Before my PR, we actually had two systems in place. We used
 [`express-es6-template-engine`](https://github.com/dondido/express-es6-template-engine)
@@ -144,7 +143,7 @@ function RawText({children}) {
 
 So this will result in:
 
-```jsx
+```html
 <head>
   <raw-text>
     <script src="hello.js" />
@@ -175,7 +174,7 @@ function removeRawText(string) {
 
 So, effectively what our `rendered` string looks like is this:
 
-```jsx
+```html
 <head>
   <script src="hello.js" />
 </head>
@@ -191,11 +190,11 @@ this problem would be for React to
 [`dangerouslySetInnerHTML`](https://github.com/facebook/react/issues/12014)
 [on Fragments](https://github.com/facebook/react/issues/12014)).
 
-> **_NOTE:_** _The fact that this logic lives in a function right next to the
-> definition of the_ `_RawText_` _component rather than just hard-coding the
+> _**NOTE:** The fact that this logic lives in a function right next to the
+> definition of the `RawText` component rather than just hard-coding the
 > replacement where it happens is IMPORTANT. Anyone coming to the codebase and
-> seeing_ `_RawText_` _or_ `_removeRawText_` _will be able to find out what's
-> going on much more quickly._
+> seeing `RawText` or `removeRawText` will be able to find out what's going on
+> much more quickly._
 
 ### Localization
 
