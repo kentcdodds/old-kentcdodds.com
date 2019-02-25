@@ -7,9 +7,8 @@ description:
   _I regularly find inaccessible forms. In this post we'll check out some common
   accessibility problems and fix them._
 keywords:
-  - Git
-  - Github
-  - Code
+  - Accessibility
+  - Forms
 banner: ./images/banner.jpg
 bannerCredit:
   Photo by [Goran

@@ -8,7 +8,7 @@ description: >-
   2019._
 keywords:
   - JavaScript
-  - React
+  - 2018 in Review
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Geran de
