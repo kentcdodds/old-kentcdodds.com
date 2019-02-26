@@ -69,7 +69,7 @@ If you're interested in what I'm doing next, I plan on doing more stuff for
 that I'm working on and I'm really excited about.
 [Follow me on twitter](https://twitter.com/kentcdodds) to keep up with that :)
 
-![](./images/0.png)
+![See you on Twitter!](./images/0.png)
 
 #### P.S.
 

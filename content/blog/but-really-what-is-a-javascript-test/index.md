@@ -377,7 +377,7 @@ Ran all test suites.
 You can't tell from the text, but that output is colored. Here's an image of the
 output:
 
-![](./images/0.png)
+![Screenshot of the output from running jest](./images/0.png)
 
 <figcaption>Screenshot of the output from running jest</figcaption>
 

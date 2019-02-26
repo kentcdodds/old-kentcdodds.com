@@ -44,7 +44,7 @@ so I'll focus on a few and hopefully that'll touch on what you're doing...
 
 ### [Open source](https://github.com/kentcdodds)
 
-![](https://cdn-images-1.medium.com/max/800/0*BWSrkLIqaJDxY5QA)
+![a person touch typing on a laptop](https://cdn-images-1.medium.com/max/800/0*BWSrkLIqaJDxY5QA)
 
 ### [geniejs 🧞‍](https://github.com/kentcdodds/genie)
 
@@ -150,7 +150,7 @@ way to promote your project and has no good place in the world.
 
 ### [Speaking](https://kentcdodds.com/talks) & [Teaching](https://kentcdodds.com/workshops)
 
-![](./images/1.jpeg)
+![me teaching people at a workshop](./images/1.jpeg)
 
 <figcaption>me teaching people at a workshop</figcaption>
 
@@ -228,7 +228,7 @@ And so began my relationship with Frontend Masters. I now have
 blog post, but you gotta know that there were plenty of rejections as well. But
 it's ok! Have the courage to ask.
 
-![](./images/2.jpg)
+!["You miss 100% of the shots you don't take -Wayne Gretzky" — Michael Scott](./images/2.jpg)
 
 <figcaption>
   "You miss 100% of the shots you don't take -Wayne Gretzky" — Michael Scott
@@ -236,7 +236,7 @@ it's ok! Have the courage to ask.
 
 ### Podcasting
 
-![](https://cdn-images-1.medium.com/max/800/0*EeCNIRPaIik-ZDTT)
+![Microphone](https://cdn-images-1.medium.com/max/800/0*EeCNIRPaIik-ZDTT)
 
 I have to mention my podcasts as a form of widening my reach and getting
 noticed. Back in November 2014, Todd Motto and I kicked off our bi-weekly Google
@@ -282,7 +282,7 @@ But maybe one day I'll start it back up again. It was awesome.
 
 ### [Newslettering](http://kcd.im/news) & [Blogging](https://blog.kentcdodds.com/)
 
-![](https://cdn-images-1.medium.com/max/800/0*8jjrEmQ6zo-zufxj)
+![A notebook and a pen](https://cdn-images-1.medium.com/max/800/0*8jjrEmQ6zo-zufxj)
 
 This newsletter email is being sent as the last email to complete a full year of
 weekly newsletters! Without fail, I've sent out an email every week for an
@@ -308,7 +308,7 @@ that I'm helping educate PayPal every week as well as the community at large.
 
 ### [Tweeting](https://twitter.com/kentcdodds)
 
-![](https://cdn-images-1.medium.com/max/800/0*iAo4-GjsJi2FomFr)
+![blue bird](https://cdn-images-1.medium.com/max/800/0*iAo4-GjsJi2FomFr)
 
 Most of my reach is found on twitter. Twitter is a funny and unique place that
 we all love to hate (and most of us secretly love). I've found the best way to
@@ -327,7 +327,7 @@ which leads me to my next point...
 
 ### [Ask Me Anything](https://github.com/kentcdodds/ama)
 
-![](https://cdn-images-1.medium.com/max/800/0*6xA68OpIPnQNgtNR)
+![mountain](https://cdn-images-1.medium.com/max/800/0*6xA68OpIPnQNgtNR)
 
 In July 2015, I noticed [Sindre Sorhus](https://twitter.com/sindresorhus)
 created a new repo called [ama](https://github.com/sindresorhus/ama). It's
@@ -347,7 +347,7 @@ do get to everything eventually in one form or another.
 
 ### The Unquestionable Influence of Privilege
 
-![](https://cdn-images-1.medium.com/max/800/0*jKWkNYjMtS-EU5wG)
+![a heart on grass](https://cdn-images-1.medium.com/max/800/0*jKWkNYjMtS-EU5wG)
 
 We all need to acknowledge something very important: Privilege. If you've not
 heard Kyle Simpson talk about

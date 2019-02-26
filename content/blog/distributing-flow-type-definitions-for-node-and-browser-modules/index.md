@@ -186,7 +186,7 @@ Now... As I was writing this, I realized it should be possible to run
 `gen-flow-files` as I was before and then simply make two copies of the
 `index.js` file for the `.esm.js.flow`and `.cjs.js.flow` files.
 
-![](./images/0.gif)
+![ah ha](./images/0.gif)
 
 I'm 99% sure that'll work and I plan on implementing that soon! I'll let you all
 know if that doesn't work!

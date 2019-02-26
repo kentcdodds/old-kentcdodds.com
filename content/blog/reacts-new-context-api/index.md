@@ -23,7 +23,7 @@ bannerCredit:
 Have you heard of the context API in React? If you've heard of it, are you like
 many others afraid to use it directly because you saw this in the official docs:
 
-![](./images/0.png)
+![search result of "context" on the official react documentation site](./images/0.png)
 
 The first result of that search is showing
 ["Why Not To Use Context"](https://reactjs.org/docs/context.html#why-not-to-use-context).

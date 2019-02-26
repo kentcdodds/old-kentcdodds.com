@@ -23,7 +23,7 @@ maintainer. The easiest way to do this is to create your own project from
 scratch, but often what's more needed than a new project is to improve an
 existing project. So how do you get involved?
 
-![](./images/0.gif)
+![good question](./images/0.gif)
 
 Well,
 ["You contribute best to something you use regularly."](https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
@@ -55,7 +55,7 @@ the project than he was at the time, so the transition worked well.
 
 So here's the key takeaway:
 
-![](./images/1.gif)
+![Are you ready for this?](./images/1.gif)
 
 **_To become a project maintainer, act like a project maintainer._**
 

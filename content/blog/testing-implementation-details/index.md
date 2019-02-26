@@ -327,7 +327,7 @@ terribly, while the
 [react-testing-library](https://github.com/kentcdodds/react-testing-library)
 test continues to work.
 
-![](./images/0.gif)
+![happy dogs](./images/0.gif)
 
 ### Conclusion
 

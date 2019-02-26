@@ -99,7 +99,7 @@ Recently, the (seriously) amazing [Brent Jackson](https://twitter.com/jxnblk)
 created and [announced](https://twitter.com/jxnblk/status/1023667155324346373)
 something absolutely amazing: [**mdx-deck**](https://github.com/jxnblk/mdx-deck)
 
-![](https://cdn-images-1.medium.com/max/800/0*a059awYOdtDkSgnx)
+![gif showing mdx-deck demo](https://cdn-images-1.medium.com/max/800/0*a059awYOdtDkSgnx)
 
 It's got the ease of slides that I love because it's just markdown. Couldn't be
 much easier than that! Then, to top that off, if I want something to be

@@ -29,7 +29,7 @@ In that tweet, Justin shares a screenshot of a bunch of his thoughts on snapshot
 testing. For the sake of accessibility, I've typed out the entirety of what he
 wrote below. I'll then talk about some of my thoughts on what he says.
 
-![](./images/0.png)
+![Justin Searls' tweet](./images/0.png)
 
 > **_Thoughts on snapshot testing_**
 
@@ -86,7 +86,7 @@ personally experienced many of the pitfalls with snapshot testing that Justin
 calls out (with myself and with others). So thanks for sharing your thoughts
 Justin!
 
-![](./images/1.gif)
+![You're awesome](./images/1.gif)
 
 <figcaption>You're awesome</figcaption>
 

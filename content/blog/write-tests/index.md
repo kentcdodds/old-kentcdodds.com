@@ -32,7 +32,7 @@ A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 company behind a ton of the awesome stuff coming out lately))
 [tweeted something profound](https://twitter.com/rauchg/status/807626710350839808):
 
-![](./images/1.png)
+![Screenshot of the tweet](./images/1.png)
 
 <figcaption>Screenshot of the tweet</figcaption>
 
@@ -94,7 +94,7 @@ Here's [a slide](http://slides.com/kentcdodds/testing-workshop#/4/8) from my
 Frontend Masters workshop:
 ["Testing JavaScript Applications"](https://frontendmasters.com/courses/testing-javascript/).
 
-![](./images/2.png)
+![testing pyramid](./images/2.png)
 
 <figcaption>testing pyramid</figcaption>
 
@@ -123,7 +123,7 @@ has to do with the main issue with unit tests:
 
 > _Still love this one. Unit testers be like: "Looks like it's working"_
 
-![](./images/3.gif)
+![Man in three pieces. Legs running in place. Torso doing push-ups.Head reading.](./images/3.gif)
 
 <figcaption>
   Man in three pieces. Legs running in place. Torso doing push-ups.

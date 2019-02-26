@@ -30,7 +30,7 @@ it (the gif is a summary preview...)!
 
 [**Use React DevTools**](https://youtu.be/DQjMiKEwl_E)**:**
 
-![](./images/0.gif)
+![gif of react devtools demo](./images/0.gif)
 
 Good luck!
 

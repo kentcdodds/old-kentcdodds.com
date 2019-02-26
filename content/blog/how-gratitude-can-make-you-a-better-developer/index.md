@@ -34,7 +34,7 @@ and gratitude.
 
 He presented this graphic:
 
-![](./images/0.png)
+![The Wheel of Experience: Positive](./images/0.png)
 
 <figcaption>The Wheel of Experience: Positive</figcaption>
 
@@ -45,7 +45,7 @@ feelings, actions, and results.
 
 Then he presented this alternative graphic:
 
-![](./images/1.png)
+![The Wheel of Experience: Negative](./images/1.png)
 
 <figcaption>The Wheel of Experience: Negative</figcaption>
 
@@ -56,7 +56,7 @@ results.
 What's the big difference between these two experiences? Here we have them
 together:
 
-![](./images/2.png)
+![The Wheel of Experience: Both — Attitude](./images/2.png)
 
 <figcaption>The Wheel of Experience: Both — Attitude</figcaption>
 
@@ -112,7 +112,7 @@ So science 👩‍🔬🔬📊⚗️👨‍🔬 tells us that gratitude makes us
 a challenge, and this is the slide my brother showed us for his "Happiness
 Invitation"
 
-![](./images/3.png)
+![Happiness Invitation](./images/3.png)
 
 <figcaption>Happiness Invitation</figcaption>
 
