@@ -19,8 +19,7 @@ bannerCredit:
 This last week I gave
 [a talk at React Dev Summit called "How to React."](https://kentcdodds.com/talks/#how-to-react).
 It's basically an updated version of
-[Pete Hunt's](https://twitter.com/floydophone)
-[react-howto](https://github.com/petehunt/react-howto) GitHub repo. I thought
+[Pete Hunt's](https://twitter.com/floydophone) [react-howto](https://github.com/petehunt/react-howto) GitHub repo. I thought
 I'd just jot down a few things from this talk for you to enjoy in your inbox
 today :)
 
