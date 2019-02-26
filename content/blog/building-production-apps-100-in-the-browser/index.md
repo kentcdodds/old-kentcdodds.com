@@ -75,8 +75,6 @@ quick demo of the new version of the app to get an idea of what it's useful for:
 
 ![demo of repeat todo](./images/1.gif)
 
-<figcaption>demo of repeat todo</figcaption>
-
 It was awesome, but pretty limited because it uses local storage which means you
 can only enter in the items on the device you'll use it on and if you get a new
 device all the data is totally lost.

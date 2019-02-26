@@ -30,8 +30,6 @@ I thought You'd be interested to hear what I learned.
 
 ![I see what you did there](./images/0.gif)
 
-<figcaption>I see what you did there</figcaption>
-
 ### Context
 
 So `react-i18n` (not the npm one... one we made at PayPal internally) has this
@@ -201,8 +199,6 @@ So... I made my function iterable 😉
 
 ![easy button](./images/1.gif)
 
-<figcaption>easy button</figcaption>
-
 ```js
 const ITERATOR_SYMBOL =
   (typeof Symbol === 'function' && Symbol.iterator) || '@@iterator'
@@ -233,8 +229,6 @@ I made a handy function for this and created
 Enjoy!
 
 ![You're welcome](./images/2.gif)
-
-<figcaption>You're welcome</figcaption>
 
 The cool thing about this too is that I can log an error with a bunch of context
 to help the developer figure out what's going on. This is possible because if

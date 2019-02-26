@@ -248,9 +248,6 @@ platforms.
 
 ![glamorous-primitives loaded in Sketch, native iOS, and the browser](./images/0.gif)
 
-<figcaption>
-  glamorous-primitives loaded in Sketch, native iOS, and the browser
-</figcaption>
 
 Here's the code from that example:
 
@@ -343,8 +340,6 @@ release makes it even better:
 
 ![Jest snapshot showing CSS-only changes in our output](./images/2.png)
 
-<figcaption>Jest snapshot showing CSS-only changes in our output</figcaption>
-
 Shoutout to [@jhurley23](https://github.com/jhurley23) for implementing the
 [class name placeholder](https://github.com/kentcdodds/jest-glamor-react/pull/12)
 making reviewing snapshot changes even easier than before!
@@ -370,8 +365,6 @@ And GSM Studio makes a donation of \$1 for every shirt purchased to
 [glamorous shirt with the name](https://www.amazon.com/dp/B0714JQW67))
 
 ![glamorous SWAG](./images/3.png)
-
-<figcaption>glamorous SWAG</figcaption>
 
 ### Breaking Changes
 
@@ -433,9 +426,8 @@ make it easier than ever to build React applications with maintainable CSS.
 
 ![See you on twitter!](./images/4.png)
 
-<figcaption>
-  [See you on twitter! @glamorousCSS](https://twitter.com/glamorousCSS)
-</figcaption>
+[See you on twitter! @glamorousCSS](https://twitter.com/glamorousCSS)
+
 
 **Please share this with your friends and family.** You can share it via
 Medium's 💚,

@@ -379,8 +379,6 @@ output:
 
 ![Screenshot of the output from running jest](./images/0.png)
 
-<figcaption>Screenshot of the output from running jest</figcaption>
-
 It has color coding which is really helpful in identifying the parts that are
 relevant 😀 **It also shows the code where the error was thrown! Now _that's_ a
 helpful error message!**

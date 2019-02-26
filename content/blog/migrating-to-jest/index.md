@@ -218,11 +218,8 @@ more tests in the after numbers):
 
 ![before and after comparison of jest tests](./images/0.png)
 
-<figcaption>
-  If you're unfamiliar with the time command see
-  [this](https://linux.die.net/man/1/time). "real" is the thing we're focusing
-  on here.
-</figcaption>
+
+  _If you're unfamiliar with the time command see [this](https://linux.die.net/man/1/time). "real" is the thing we're focusing on here._
 
 _Note: This is with the cache in all cases. I ran the tests several times in a
 row with my machine otherwise idle to get the best numbers I could for all
@@ -252,7 +249,7 @@ a solid look. Seriously. Oh, and don't forget to
 
 ![See you on twitter!](./images/1.png)
 
-<figcaption>See you on [twitter](https://twitter.com/kentcdodds)!</figcaption>
+See you on [twitter](https://twitter.com/kentcdodds)!
 
 P.S. PayPal is hiring 😃
 

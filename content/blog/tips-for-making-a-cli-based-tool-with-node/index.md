@@ -88,4 +88,4 @@ I hope this was helpful! Good luck!
 
 ![See you on Twitter!](./images/0.png)
 
-<figcaption>See you on [Twitter](https://twitter.com/kentcdodds)</figcaption>
+See you on [Twitter](https://twitter.com/kentcdodds)

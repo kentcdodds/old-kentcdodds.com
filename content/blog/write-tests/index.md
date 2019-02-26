@@ -34,8 +34,6 @@ company behind a ton of the awesome stuff coming out lately))
 
 ![Screenshot of the tweet](./images/1.png)
 
-<figcaption>Screenshot of the tweet</figcaption>
-
 > **_Write tests. Not too many. Mostly integration._**
 
 This is deep, albeit short, so let's dive in:
@@ -96,8 +94,6 @@ Frontend Masters workshop:
 
 ![testing pyramid](./images/2.png)
 
-<figcaption>testing pyramid</figcaption>
-
 This testing pyramid is a combination of one I got from
 [Martin Fowler's blog](https://martinfowler.com/bliki/TestPyramid.html) and one
 I got from
@@ -124,11 +120,6 @@ has to do with the main issue with unit tests:
 > _Still love this one. Unit testers be like: "Looks like it's working"_
 
 ![Man in three pieces. Legs running in place. Torso doing push-ups.Head reading.](./images/3.gif)
-
-<figcaption>
-  Man in three pieces. Legs running in place. Torso doing push-ups.
-  Head reading.
-</figcaption>
 
 We've written unit tests that verify the man can run in place, do pushups, and
 read, but the man isn't integrating with his various body parts very

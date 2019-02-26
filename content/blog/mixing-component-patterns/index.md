@@ -152,8 +152,7 @@ a consumer's point of view.
 Enjoy [the codesandbox](https://codesandbox.io/s/534rnk5yyx). And good luck!
 
 <figcaption>
-  Subscribe now for more content like this directly in your inbox 2 weeks before
-  it's published.
+  Subscribe now for more content like this directly in your inbox 2 weeks before it's published.
 </figcaption>
 
 **Learn more about React from me**:

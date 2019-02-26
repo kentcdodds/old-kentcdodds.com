@@ -152,8 +152,6 @@ way to promote your project and has no good place in the world.
 
 ![me teaching people at a workshop](./images/1.jpeg)
 
-<figcaption>me teaching people at a workshop</figcaption>
-
 I recently published a blog post called
 [Why and How I started public speaking](https://blog.kentcdodds.com/why-and-how-i-started-public-speaking-d5ae78303707).
 I'm just going to link you to that story rather than re-iterate the whole thing

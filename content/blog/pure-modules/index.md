@@ -207,8 +207,7 @@ mentioned and bring more clarity to your codebase. I hope these examples (while
 slightly contrived) have been helpful. Good luck!
 
 <figcaption>
-  Subscribe now for more content like this directly in your inbox 2 weeks before
-  it's published.
+  Subscribe now for more content like this directly in your inbox 2 weeks before it's published.
 </figcaption>
 
 **Learn more about JavaScript from me**:
