@@ -7,7 +7,6 @@ description:
   Two built-in React hooks that handle state, which one should you use?
 categories: ['react']
 keywords: ['react', 'javascript', 'hooks']
-published: false
 banner: './banner.png'
 bannerCredit:
   Photo by [Kyle
