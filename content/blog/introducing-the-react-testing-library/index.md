@@ -29,8 +29,6 @@ Read on to get an idea of what I mean by "damaging practices."
 
 ![The library emoji is the goat. No particular reason...](./images/0.png)
 
-<figcaption>The library emoji is the goat. No particular reason...</figcaption>
-
 > Simple and complete React DOM testing utilities that encourage good testing
 > practices.
 

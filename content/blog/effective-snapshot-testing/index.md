@@ -88,8 +88,6 @@ Justin!
 
 ![You're awesome](./images/1.gif)
 
-<figcaption>You're awesome</figcaption>
-
 _One thing I want to make clear before continuing is that snapshot testing is an
 assertion, just like the_ `_toBe_` _in:_ `_expect('foo').toBe('foo')_`_. I think
 there's sometimes confusion on this point, so I just wanted to clear that up._

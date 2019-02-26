@@ -51,8 +51,6 @@ plugin can help do so much better at this than a find/replace regex.
 
 ![ESLint logo](./images/0.png)
 
-<figcaption>ESLint logo</figcaption>
-
 The next time you're fixing a bug, you're going to want to make sure it doesn't
 come back. Instead of starting out with
 [test driven development](https://egghead.io/lessons/javascript-use-test-driven-development)
@@ -94,8 +92,6 @@ tests ([learn how to test JavaScript projects here](http://kcd.im/fm-testing)).
 ### When to write a custom Babel plugin
 
 ![Babel logo](./images/1.png)
-
-<figcaption>Babel logo</figcaption>
 
 The next time you think: "That API is way too tedious" or "We can't do that,
 because performance would suffer big time." then you should consider writing a

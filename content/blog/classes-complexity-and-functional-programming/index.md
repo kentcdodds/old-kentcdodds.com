@@ -32,8 +32,6 @@ properties as well as a couple of methods. With that, if we type out the
 
 ![A Person instance with methods on __proto__](./images/0.png)
 
-<figcaption>A Person instance with methods on __proto__</figcaption>
-
 The real benefit to notice here is that most of the properties for this `person`
 live on the `prototype` (shown as `__proto__` in the screenshot) rather than the
 instance of `person`. This is not insignificant because if we had ten thousand
@@ -125,8 +123,6 @@ think about:
 
 ![The person3 object with just greeting and name](./images/1.png)
 
-<figcaption>The person3 object with just greeting and name</figcaption>
-
 Another nice property of functional programming that I won't delve into very far
 is that it's very easy to unit test. You simply call a function with some input
 and assert on its output. You don't need to set up any state beforehand. That's
@@ -163,6 +159,4 @@ simple to understand: functions and objects.
 
 ![See you on twitter!](./images/2.png)
 
-<figcaption>
-  See you [around](https://twitter.com/kentcdodds) friends!
-</figcaption>
+See you [around](https://twitter.com/kentcdodds) friends!

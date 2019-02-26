@@ -114,8 +114,6 @@ Invitation"
 
 ![Happiness Invitation](./images/3.png)
 
-<figcaption>Happiness Invitation</figcaption>
-
 Step 1
 
 - Journal for 1 week

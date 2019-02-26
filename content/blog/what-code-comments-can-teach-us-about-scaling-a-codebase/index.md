@@ -249,7 +249,7 @@ well. If you've never tried it out, I recommend you give it a shot.
 
 ![See you on Twitter!](./images/1.png)
 
-<figcaption>See you on [twitter](https://twitter.com/kentcdodds)!</figcaption>
+See you on [twitter](https://twitter.com/kentcdodds)!
 
 P.S. If you're concerned about violating "separation of concerns" I recommend
 you check out [this talk](https://youtu.be/x7cQ3mrcKaY) by

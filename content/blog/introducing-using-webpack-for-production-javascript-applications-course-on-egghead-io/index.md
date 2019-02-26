@@ -26,8 +26,6 @@ people wanting to watch the course.
 
 https://twitter.com/kentcdodds/status/743915472626712578
 
-<figcaption>[https://twitter.com/kentcdodds/status/743915472626712578](https://twitter.com/kentcdodds/status/743915472626712578)</figcaption>
-
 This course is a compilation of 16 lessons (including a
 [course intro lesson](https://egghead.io/lessons/tools-intro-to-the-production-webpack-course?course=using-webpack-for-production-javascript-applications))
 about some of the more advanced features of Webpack. From
@@ -71,8 +69,6 @@ the same time have plenty to say by way of questions and feedback.
 **Isolated lessons vs. follow along**
 
 https://twitter.com/kentcdodds/status/744374161624072192
-
-<figcaption>[https://twitter.com/kentcdodds/status/744374161624072192](https://twitter.com/kentcdodds/status/744374161624072192)</figcaption>
 
 Originally, it was planned that this would be more of a "Cookbook Course" rather
 than a follow along course. Meaning that each lesson would be isolated from the

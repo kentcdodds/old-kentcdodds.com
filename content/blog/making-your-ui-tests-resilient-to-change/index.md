@@ -25,8 +25,6 @@ you're writing some tests to make sure you don't. Let's get a quick look at
 
 ![Login form from the Conduit App](./images/0.png)
 
-<figcaption>Login form from the Conduit App</figcaption>
-
 ```jsx
 const form = (  
   <form onSubmit={this.submitForm}>  
@@ -91,8 +89,6 @@ Whelp, that's going to break our tests. Total bummer.
 
 ![total bummer...](./images/1.gif)
 
-<figcaption>total bummer...</figcaption>
-
 But that'd be pretty easy to fix right?
 
 ```js
@@ -123,10 +119,6 @@ solve the problem. Well guess what! There's actually an existing API for this!
 It's `data-` attributes!
 
 ![Data from "Star Trek: The Next Generation" saying "YES!"](./images/2.gif)
-
-<figcaption>
-  Data from "Star Trek: The Next Generation" saying "YES!"
-</figcaption>
 
 So let's update our form to use `data-` attributes:
 

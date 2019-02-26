@@ -28,10 +28,6 @@ One common component on the web is autocomplete:
 
 ![Example of Google.com autocomplete/typeahead functionality](./images/0.gif)
 
-<figcaption>
-  Example of Google.com autocomplete/typeahead functionality
-</figcaption>
-
 I've personally implemented 5 unique autocomplete abstractions in the last 4
 years 😱 It's not an easy component to get right. And while you're busy doing
 all that work, don't forget to **make it accessible**! That's also a pretty big
@@ -166,7 +162,7 @@ render(
 
 ![gif showing the interaction](./images/1.gif)
 
-<figcaption>gif showing the interaction</figcaption><figcaption>Play with the example above in codesandbox here</figcaption>
+<figcaption>Play with the example above in codesandbox here</figcaption>
 
 This is a pretty minimal example, and if you were to build similar minimal
 examples with other autocomplete libraries you could certainly do it in fewer
@@ -237,8 +233,6 @@ rather than track it internally with state.
 [`isOpen`](https://codesandbox.io/s/0mrl1819qw)
 [state](https://codesandbox.io/s/0mrl1819qw)
 
-<figcaption>An example that controls the isOpen state</figcaption>
-
 This allows you to have complete control over the state of your component.
 [Ryan Florence](https://medium.com/u/162352c45b6e) teaches about
 [controllable components (like](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)
@@ -286,13 +280,9 @@ I built `downshift` for
 
 ![gif of a country selector experience on PayPal](./images/2.gif)
 
-<figcaption>gif of a country selector experience on PayPal</figcaption>
-
 We also use the same component in the recipient selector:
 
 ![gif of a recipient selector experience on PayPal](./images/3.gif)
-
-<figcaption>gif of a recipient selector experience on PayPal</figcaption>
 
 _You can_
 [_watch me build part of these PayPal experiences here_](https://www.youtube.com/watch?v=rB62gSER9fg&index=14&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=456s)_._
@@ -374,9 +364,7 @@ Thanks!
 
 ![See you on twitter!](./images/5.png)
 
-<figcaption>
-  [See you on twitter! (@kentcdodds)](https://twitter.com/kentcdodds)
-</figcaption>
+[See you on twitter! (@kentcdodds)](https://twitter.com/kentcdodds)
 
 #### One more thing
 

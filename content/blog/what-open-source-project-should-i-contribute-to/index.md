@@ -18,10 +18,7 @@ This is a question I've had countless times:
 
 https://twitter.com/sarna_pranu/status/672438850724175872
 
-<figcaption>
-  Pranu just made his first pull request:
-  [https://github.com/Automattic/mongoose/pull/3644](https://github.com/Automattic/mongoose/pull/3644)
-</figcaption>
+_Pranu just made his first pull request: [https://github.com/Automattic/mongoose/pull/3644](https://github.com/Automattic/mongoose/pull/3644)_
 
 https://twitter.com/geraldchecka/status/670445392706736128
 

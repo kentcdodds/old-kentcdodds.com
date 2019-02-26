@@ -99,4 +99,4 @@ So what are you waiting for!? Give it a look! 😃
 
 ![See you on twitter!](./images/0.png)
 
-<figcaption>See you on [twitter](https://twitter.com/kentcdodds)!</figcaption>
+See you on [twitter](https://twitter.com/kentcdodds)!
