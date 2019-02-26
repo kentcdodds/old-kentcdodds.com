@@ -64,7 +64,7 @@ With these, if you
 [run them through babel's env preset](http://babeljs.io/repl/#?babili=false&browsers=ie%2010&build=&builtIns=false&spec=false&loose=false&code_lz=MYewdgzgLgBKZQIbChGBeGBtA5AIQCcQQBrAUxwBoZ8zhhEqaA5RKAC0TCZwEEATRAFseAWQCWwTmQA2OALoAocQDMYACnhIUEAHTiwwGQFd-ZCOpwAlZO1k4AlA5gBvRTDjgIIGWV0yQAHNLAE0QYxhOADcyGEQYGylZAEJHRQBfRSA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&sourceType=module&lineWrap=true&presets=env&prettier=false&targets=&version=6.26.0&envVersion=1.6.2)
 the `includes` function is not transpiled because it's not a syntax issue, but a
 built-in API one and babel's env preset only includes transforms for syntax
-transformations. You _could_
+transformations. You _could_ 
 [write your own babel plugin](https://kentcdodds.com/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 ([like this](https://astexplorer.net/#/gist/538b72e2af148a14d7c0f5824b431cd6/47a57f42697199d6cfa1d4b1027951ef170a980e))
 to transform the code, but for _some_ APIs it just wouldn't be practical because
