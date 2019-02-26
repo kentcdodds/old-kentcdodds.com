@@ -27,6 +27,10 @@ export default [
     tags: ['react'],
     deliveries: [
       {
+        event: '[React.Amsterdam](https://react.amsterdam/workshops)',
+        date: '2019-04-10',
+      },
+      {
         event:
           '[Salt Lake City, UT](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019)',
         date: '2019-05-14',
@@ -144,6 +148,10 @@ export default [
         event:
           '[Frontend Masters](https://frontendmasters.com/courses/testing-react/)',
         date: '2018-04-19',
+      },
+      {
+        event: '[React.Amsterdam](https://react.amsterdam/workshops)',
+        date: '2019-04-11',
       },
     ],
     description: `

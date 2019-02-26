@@ -137,7 +137,7 @@ function Presentations({presentations}) {
                   </a>
                 ) : null}
               </div>
-              <time>{delivery.date}</time>
+              <FutureTime date={delivery.date} />
             </li>
           ))}
         </ul>
@@ -151,6 +151,17 @@ function Presentations({presentations}) {
         </ul>
       </div>
     ),
+  )
+}
+
+function FutureTime({date: dateString}) {
+  const date = new Date(...dateString.split('-'))
+  const isFuture = date > new Date()
+  return (
+    <span>
+      <time>{dateString}</time>
+      <small css={{opacity: '0.8'}}>{isFuture ? ' future ⚡️' : null}</small>
+    </span>
   )
 }
 
