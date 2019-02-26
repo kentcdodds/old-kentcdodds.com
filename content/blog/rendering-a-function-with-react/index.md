@@ -74,7 +74,7 @@ getContent('pages')('home.nav')('about')
 
 So thinking about this in the context of React:
 
-```
+```jsx
 const getHomeContent = getContent('pages.home')
 const ui = (
   <a href="/about">
@@ -89,7 +89,7 @@ So far so good. But, **what if you mess up and have a typo**?
 
 Before this week, here's what happened:
 
-```
+```jsx
 const ui = (
   <a href="/about">
     {getContent('pages.typo.nav.about')}
@@ -132,7 +132,7 @@ long if you want. No problem.
 So now this wont throw an error, but we lose rendering the path if there's no
 content!
 
-```
+```jsx
 const getHomeContent = getContent('pages.typo')
 const ui = (
   <a href="/about">
