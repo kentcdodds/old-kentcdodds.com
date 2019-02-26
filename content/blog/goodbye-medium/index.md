@@ -29,7 +29,7 @@ just bought YouTube).
 I've had many blogs on many platforms since then: Blogger, wordpress.org, custom
 wordpress, ghost, Jekyll, and finally Medium.com.
 
-For me, blogging is all about convenience. I've regularly been more motivated
+For me, blogging is all about convenience. I've always been more motivated
 to create content than create a blogging platform, so I always looked for the
 easiest way to do that. That said, I did want to differentiate myself (which is
 why I tried wordpress). Every time I tried, I was reminded that building a
@@ -82,9 +82,8 @@ So... What did Medium do that made it worth leaving? Well,
 [Dan Abramov described it pretty well here](https://medium.com/@dan_abramov/why-my-new-blog-isnt-on-medium-3b280282fbae).
 To sum up:
 
-> 1. Some of my Medium articles unexpectedly got behind a paywall (as far as I
->    know, this hasn't happened to me, but it bothers me that this has happened
->    to other people)
+> 1. Some of my Medium articles unexpectedly got behind a paywall (this doesn't
+>    actually happen, but it's an understandable misunderstanding 🤔)
 > 2. My views on some topics have changed. (I also took the opportunity to leave
 >    behind some old posts that aren't really applicable to me anymore).
 > 3. I want to dogfood React. (This is a fantastic place for me to play around
