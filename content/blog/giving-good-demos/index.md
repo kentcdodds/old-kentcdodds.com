@@ -24,7 +24,7 @@ announcement of
 [paypal-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
 at work. And it went super well! Hooray!
 
-![](./images/0.gif)
+![Hooray!](./images/0.gif)
 
 The paypal-scripts demo was a big deal for me because I know the impact that
 paypal-scripts can have on JavaScript engineers at PayPal and I want it to be
@@ -88,7 +88,7 @@ ramble when you're talking about stuff like this. If you pre-record it, you can
 edit that unnecessary and distracting rambling out and focus on what you really
 want to get across. Doing this will help you avoid this:
 
-![](./images/1.gif)
+![cookie monster thinking](./images/1.gif)
 
 That said, make sure that you'll be able to deliver a live demo in case folks
 have questions about things not covered in the recording, or if people want to

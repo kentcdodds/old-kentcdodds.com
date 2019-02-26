@@ -26,7 +26,7 @@ autocomplete/typeahead/dropdown/select/combobox/etc (AKA "item selection")
 
 One common component on the web is autocomplete:
 
-![](./images/0.gif)
+![Example of Google.com autocomplete/typeahead functionality](./images/0.gif)
 
 <figcaption>
   Example of Google.com autocomplete/typeahead functionality
@@ -164,7 +164,7 @@ render(
 )
 ```
 
-![](./images/1.gif)
+![gif showing the interaction](./images/1.gif)
 
 <figcaption>gif showing the interaction</figcaption><figcaption>Play with the example above in codesandbox here</figcaption>
 
@@ -284,13 +284,13 @@ out to [Jason Miller](https://medium.com/u/30b8f5921914) and
 I built `downshift` for
 [this country selector experience on PayPal](https://www.paypal.com/myaccount/transfer/fx/fees):
 
-![](./images/2.gif)
+![gif of a country selector experience on PayPal](./images/2.gif)
 
 <figcaption>gif of a country selector experience on PayPal</figcaption>
 
 We also use the same component in the recipient selector:
 
-![](./images/3.gif)
+![gif of a recipient selector experience on PayPal](./images/3.gif)
 
 <figcaption>gif of a recipient selector experience on PayPal</figcaption>
 
@@ -317,7 +317,7 @@ of is in [codesandbox](https://codesandbox.io/) from
 [Ives van Hoorne](https://medium.com/u/ee6691f0bd65)
 ([gif from his tweet](https://twitter.com/CompuIves/status/897970526832013315)):
 
-![](./images/4.gif)
+![The codesandbox.io file chooser](./images/4.gif)
 
 <figcaption>The codesandbox.io file chooser (press ⌘+P to open it)</figcaption>
 
@@ -372,7 +372,7 @@ https://twitter.com/kentcdodds/status/900361058069630977
 
 Thanks!
 
-![](./images/5.png)
+![See you on twitter!](./images/5.png)
 
 <figcaption>
   [See you on twitter! (@kentcdodds)](https://twitter.com/kentcdodds)

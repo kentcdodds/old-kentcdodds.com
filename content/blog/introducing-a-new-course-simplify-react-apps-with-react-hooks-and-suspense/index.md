@@ -156,4 +156,4 @@ know that
 [egghead.io is putting on it's biggest sale of the year: 45% off a year-long membership!](https://egghead.io/pricing)
 How cool is that!?
 
-![](https://cdn-images-1.medium.com/max/800/0*3HZ4zSI3RnF49MER)
+![Egghead promotion countdown clock](https://cdn-images-1.medium.com/max/800/0*3HZ4zSI3RnF49MER)

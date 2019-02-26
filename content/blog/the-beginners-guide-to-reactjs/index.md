@@ -22,7 +22,7 @@ than I had expected. The announcement post got in
 and my courses have had over 250 hours watched already! If you haven't seen them
 yet, give them a look! If you have, I hope you loved them!
 
-![](./images/0.gif)
+![I just wanted to say, Thanks, partner](./images/0.gif)
 
 One other thing before we get this newsletter going. I want you to know that if
 the gifs make it difficult for you to read the newsletter, I have a more
@@ -69,7 +69,7 @@ simple abstraction on top of `React.createElement`. Once they get that, then
 learning the rest will come much more easily. Then they too can feel like they
 can do magic!
 
-![](./images/1.gif)
+![magic](./images/1.gif)
 
 I hope that's helpful (and that
 [the free course](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)

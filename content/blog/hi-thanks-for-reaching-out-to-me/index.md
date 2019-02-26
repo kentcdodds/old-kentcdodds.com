@@ -64,4 +64,4 @@ Sorry if this sounds heartless 💔. I really do care and I really do want to
 help. I just can't all the time. I hope you find the answer to your question and
 share that learning with the world.
 
-![](./images/0.png)
+![hand wave](./images/0.png)

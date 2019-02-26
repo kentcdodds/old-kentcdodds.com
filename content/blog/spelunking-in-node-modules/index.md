@@ -128,7 +128,7 @@ C/C++ Header 20     1115      325       5571
 > _I clipped the output because it's so big._ >
 > [_See this gist for the full output of the last command_](https://gist.github.com/kentcdodds/0d02347d420459f4aac2cba4b3e8bef7#file-npx-clock-node_modules)_._
 
-![](./images/0.jpg)
+![Wow](./images/0.jpg)
 
 Wow! Look at all that JavaScript (1.7 **_MILLION_** lines of _code_ (excludes
 blank lines and comments)... note: this has `kcd-scripts` which has some heavy

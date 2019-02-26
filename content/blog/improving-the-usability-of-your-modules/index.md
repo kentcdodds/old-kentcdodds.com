@@ -74,7 +74,7 @@ better, but please spare me the "well actually." I'm aware of them, I promise).
 Now that you understand basically how this works, **I want to talk about a few
 things that I changed about it to make it more usable**.
 
-![](./images/0.gif)
+![I'll show you](./images/0.gif)
 
 ### No [side-effects](https://en.wikipedia.org/wiki/Side_effect_%28computer_science%29) on import
 
@@ -206,7 +206,7 @@ generic without sacraficing usability or implementation complexity.
 
 Good luck! And stay awesome 😎
 
-![](./images/1.gif)
+![Who's awesome? You are!](./images/1.gif)
 
 **Things to not miss**:
 

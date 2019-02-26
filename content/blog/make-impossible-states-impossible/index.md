@@ -33,7 +33,7 @@ To illustrate what this means, let's checkout at
 <Alert danger>Watch out!</Alert>
 ```
 
-![](./images/0.png)
+![Rendered example](./images/0.png)
 
 You may have used or written a component that has this kind of API. It's nice
 and clean (in case you're unfamiliar, in JSX, a non-assigned prop like that is

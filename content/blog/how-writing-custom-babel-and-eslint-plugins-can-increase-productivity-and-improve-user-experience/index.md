@@ -49,7 +49,7 @@ plugin can help do so much better at this than a find/replace regex.
 
 ### When to write a custom ESLint plugin
 
-![](./images/0.png)
+![ESLint logo](./images/0.png)
 
 <figcaption>ESLint logo</figcaption>
 
@@ -93,7 +93,7 @@ tests ([learn how to test JavaScript projects here](http://kcd.im/fm-testing)).
 
 ### When to write a custom Babel plugin
 
-![](./images/1.png)
+![Babel logo](./images/1.png)
 
 <figcaption>Babel logo</figcaption>
 

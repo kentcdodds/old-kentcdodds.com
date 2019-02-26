@@ -39,7 +39,7 @@ First off, my kids love it. So it's a super success. Also, it's only 3 files. It
 _doesn't_ use redux or even react-router. In fact, all the state lives in the
 top-level component. Here's the entire component tree:
 
-![](./images/0.png)
+![entire component tree](./images/0.png)
 
 You'll notice there are only 3 components. It's a ridiculously simple app. It
 depends on `react`, `react-dom` and `animate.css`. I have a component to make
@@ -73,7 +73,7 @@ A while back I created [repeat todo](https://repeat-todo.surge.sh/) for my wife
 because she wanted an app where she could rotate chores/meals etc. Here's a
 quick demo of the new version of the app to get an idea of what it's useful for:
 
-![](./images/1.gif)
+![demo of repeat todo](./images/1.gif)
 
 <figcaption>demo of repeat todo</figcaption>
 

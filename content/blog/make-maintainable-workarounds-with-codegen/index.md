@@ -39,14 +39,14 @@ which is the problem. It's not transpiled due to the aforementioned issue.
 
 This is the part where we get frustrated at our tools and their authors right?
 
-![](./images/0.gif)
+![a bird saying "nope"](./images/0.gif)
 
 Definitely not! What we do is we
 [file an issue with a reproduction](https://gist.github.com/Rich-Harris/88c5fc2ac6dc941b22e7996af05d70ff)
 and suggest a solution! Then we implement the solution when the maintainer says
 they're good with the solution! Woo!
 
-![](./images/1.gif)
+![The big bird saying "Yep"](./images/1.gif)
 
 In my case, I had no idea where to start and I don't have time to look into it
 any further (I did, just have my fourth kid less than two weeks ago afterall).

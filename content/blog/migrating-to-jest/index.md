@@ -216,7 +216,7 @@ Here's some clipped output from running the test commands with `time` before and
 after (note that the before tests are from over a month ago so there are a few
 more tests in the after numbers):
 
-![](./images/0.png)
+![before and after comparison of jest tests](./images/0.png)
 
 <figcaption>
   If you're unfamiliar with the time command see
@@ -250,7 +250,7 @@ see a wider gap with more tests.
 a solid look. Seriously. Oh, and don't forget to
 [give it a star](https://github.com/facebook/jest/stargazers) 🌟!
 
-![](./images/1.png)
+![See you on twitter!](./images/1.png)
 
 <figcaption>See you on [twitter](https://twitter.com/kentcdodds)!</figcaption>
 

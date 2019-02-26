@@ -78,7 +78,7 @@ export {Counter}
 
 Here's a rendered version of the component:
 
-![](./images/0.gif)
+![a rendered version of the component](./images/0.gif)
 
 ### Our first test suite
 
@@ -128,7 +128,7 @@ and the other tests rely on that fact to pass. If we were to delete (or `.skip`
 the test called "when clicked, the counter increments the click" it would break
 all the following tests:
 
-![](./images/1.png)
+![broken tests](./images/1.png)
 
 This is a problem because it means that we can't reliably refactor these tests,
 or run a single test in isolation of the others for debugging purposes because
@@ -322,7 +322,7 @@ single test) is because it was hard to tell which part of the test broke. But
 now we have much better error output and it's really easy to identify what part
 of the test broke. For example:
 
-![](./images/2.png)
+![broken tests](./images/2.png)
 
 The code frame is especially helpful. It shows not only the line number, but the
 code around the failed assertion which shows our comments and other code to

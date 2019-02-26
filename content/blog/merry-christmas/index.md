@@ -39,7 +39,7 @@ offline (thanks create-react-app/codesandbox.io!).
 In addition to that, I also worked hard to help an idea my wife had become a
 reality:
 
-![](./images/0.png)
+![Invitation to neighborhood nativity night](./images/0.png)
 
 I'm a member of
 [The Church of Jesus Christ of Latter-Day Saints](https://lds.org/) (aka

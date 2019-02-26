@@ -110,7 +110,7 @@ That said, I don't think anyone's excited about actually updating their codebase
 to handle these changes. This is another reason toolkits are so great. Check out
 [this git diff](https://twitter.com/kentcdodds/status/906238861067657221):
 
-![](./images/0.jpg)
+![git diff](./images/0.jpg)
 
 <figcaption>That's a lot of config code removal 😍</figcaption>
 

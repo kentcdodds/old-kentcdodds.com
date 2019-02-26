@@ -17,7 +17,7 @@ World's Largest Education Hackathon_ 👍
 
 My first contribution to open source was extremely small:
 
-![](./images/0.png)
+![first open source contribution](./images/0.png)
 
 <figcaption>
   [https://github.com/playframework/playframework/pull/616](https://github.com/playframework/playframework/pull/616)
@@ -29,7 +29,7 @@ as a programmer. I recently reminisced over the PR and made a thank you comment.
 Which was later followed up by a total stranger and resulted in me getting some
 digital cake!
 
-![](./images/1.png)
+![first open source contribution comment thread](./images/1.png)
 
 How cool is that!? 🍰
 
