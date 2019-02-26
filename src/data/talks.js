@@ -19,6 +19,43 @@ export default [
   //   `,
   // },
   {
+    title: 'All Things Open Keynote',
+    resources: [],
+    tags: ['open source'],
+    deliveries: [
+      {
+        event:
+          '[All Things Open 2019](https://allthingsopen.org/speakers/kent-c-dodds/)',
+        date: '2019-10-13',
+      },
+    ],
+    description: `
+      More details forthcoming...
+    `,
+  },
+  {
+    title: 'Requisite React',
+    resources: [],
+    tags: ['react'],
+    deliveries: [
+      {
+        event: '[React.Amsterdam](https://react.amsterdam/)',
+        date: '2019-04-12',
+      },
+    ],
+    description: `
+      React  is a brilliant JavaScript library for building simple and complex
+      user interfaces. In our eagerness to apply  React  to our most complex of
+      problems and ship solutions today, we can get lost in the
+      🌲🌲🌲 forest of abstractions 🌲🌲🌲. When it comes to leveling up our
+      skills in anything, I find the most effective method is to take a step
+      back and understand the foundational fundamentals. To strip away all
+      abstraction until what we're left with is the bare bones.
+      [The better you understand an abstraction, the more effective you will be at using it.](https://twitter.com/kentcdodds/status/1074724545003581440)
+      In this talk, we'll get more effective at using React Hooks, React Suspense, and JSX.
+    `,
+  },
+  {
     title: 'Contributing to Open Source on GitHub for beginners',
     resources: [
       '[repo](https://github.com/eggheadio-github/stack-overflow-copy-paste)',
