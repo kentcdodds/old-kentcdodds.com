@@ -29,7 +29,7 @@ just bought YouTube).
 I've had many blogs on many platforms since then: Blogger, wordpress.org, custom
 wordpress, ghost, Jekyll, and finally Medium.com.
 
-For me, blogging has all about convenience. I've regularly been more motivated
+For me, blogging is all about convenience. I've regularly been more motivated
 to create content than create a blogging platform, so I always looked for the
 easiest way to do that. That said, I did want to differentiate myself (which is
 why I tried wordpress). Every time I tried, I was reminded that building a
