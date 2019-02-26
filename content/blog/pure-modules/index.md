@@ -101,8 +101,8 @@ What's especially annoying is when the wasted effort results in a cryptic error.
 Not only did I have to figure out what the error was all about, but I don't even
 need that code to run in the first place!
 
-**As a related (and very important) part of this, you cannot**
-[**treeshake**](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
+**As a related (and very important) part of this, you cannot** 
+[**treeshake**](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking) 
 **that unused code!**
 
 ### Inability to choose the order of operations 😡
