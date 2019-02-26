@@ -20,6 +20,53 @@ export default [
   //   `,
   // },
   {
+    title: 'Advanced React Patterns with Hooks',
+    resources: [
+      '[repo](https://github.com/kentcdodds/advanced-react-patterns)',
+    ],
+    tags: ['react'],
+    deliveries: [
+      {
+        event:
+          '[Salt Lake City, UT](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019)',
+        date: '2019-05-14',
+      },
+    ],
+    description: `
+      Advanced React Patterns with Hooks is an ADVANCED workshop. Making React
+      components that can be used in multiple places is not hard. What is hard
+      is when the use cases differ. Without the right patterns, you can find
+      yourself with a highly complex component that requires a lot of
+      configuration props and way too many if statements.
+      
+      With this course, you'll not only learn great patterns you can use but
+      also the strengths and weaknesses of each, so you know which to reach for
+      to provide your components the flexibility and power you need. If you're
+      already experienced with React, you'll enjoy the fact that this is all
+      using React's latest "Hooks" feature which makes these patterns even
+      better and even introduces some new ones.
+    `,
+  },
+  {
+    title: 'Learn React Hooks',
+    resources: ['[repo](https://github.com/kentcdodds/learn-react)'],
+    tags: ['react'],
+    deliveries: [
+      {
+        event:
+          '[Salt Lake City, UT](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019)',
+        date: '2019-05-13',
+      },
+    ],
+    description: `
+      Learn React Hooks is a BEGINNER workshop. React's new "Hooks" feature will
+      blow your socks off. It makes writing applications even easier than
+      before. In this extremely hands-on workshop, you'll be able to play with
+      these new features and have the skills you need to take them to your
+      applications.
+    `,
+  },
+  {
     title: 'React Hooks and Suspense',
     resources: [
       '[repo](https://github.com/kentcdodds/react-hooks-and-suspense-egghead-playlist)',
@@ -165,7 +212,7 @@ export default [
   {
     title: 'Advanced React Component Patterns',
     resources: [
-      '[repo](https://github.com/kentcdodds/advanced-react-patterns)',
+      '[repo](https://github.com/kentcdodds/advanced-react-patterns-v2)',
     ],
     tags: ['react'],
     deliveries: [
@@ -219,6 +266,7 @@ export default [
   },
   {
     title: `The Beginner's Guide to ReactJS`,
+    slug: 'the-beginner-s-guide-to-react-js',
     resources: [
       '[repo](https://github.com/eggheadio-projects/the-beginner-s-guide-to-reactjs)',
     ],
@@ -228,6 +276,7 @@ export default [
         event:
           '[Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
         date: '2017-12-04',
+        recording: 'https://egghead.io/courses/the-beginner-s-guide-to-reactjs',
       },
       {
         event: 'Workshop.me in Salt Lake City',
@@ -237,6 +286,8 @@ export default [
         event:
           '[Framework Summit 2018](https://www.frameworksummit.com/workshop/introduction-to-react)',
         date: '2018-10-01',
+        recording:
+          'https://thinkster.io/tutorials/one-day-introduction-to-react-with-kent-c-dodds',
       },
     ],
     description: `
@@ -251,6 +302,8 @@ export default [
       environment and even how to deploy your app to a great service like Netlify.
 
       Enjoy!
+
+      > NOTE: This content is pre-[hooks](https://reactjs.org/hooks), but 80% of it is still super relevant.
     `,
   },
   {
