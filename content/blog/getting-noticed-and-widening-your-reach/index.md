@@ -226,7 +226,7 @@ And so began my relationship with Frontend Masters. I now have
 blog post, but you gotta know that there were plenty of rejections as well. But
 it's ok! Have the courage to ask.
 
-!["You miss 100% of the shots you don't take -Wayne Gretzky" — Michael Scott](./images/2.jpg)
+![You miss 100% of the shots you don't take -Wayne Gretzky — Michael Scott](./images/2.jpg)
 
 <figcaption>
   "You miss 100% of the shots you don't take -Wayne Gretzky" — Michael Scott

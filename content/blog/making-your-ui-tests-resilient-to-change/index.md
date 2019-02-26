@@ -118,7 +118,7 @@ If we could add some metadata to the element we're trying to select that would
 solve the problem. Well guess what! There's actually an existing API for this!
 It's `data-` attributes!
 
-![Data from "Star Trek: The Next Generation" saying "YES!"](./images/2.gif)
+![Data from Star Trek The Next Generation saying YES](./images/2.gif)
 
 So let's update our form to use `data-` attributes:
 
