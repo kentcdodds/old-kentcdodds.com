@@ -18,10 +18,10 @@ bannerCredit:
 
 I've been a blogger for over 15 years. When I was a teenager, I had a blog on
 blogger all about what Google was working on. I was one of the first bloggers to
-report on Google's Acquisition of YouTube (my blog got an insane number of views
+report on Google's acquisition of YouTube (my blog got an insane number of views
 that day).
 
-I also used to write (on blogger) was called "Google Video Highlights" where I
+I also used to write (on blogger) one called "Google Video Highlights" where I
 and some random stranger I "met" on the internet would take turns posting random
 videos that we found on Google Video (Google's answer to YouTube before they
 just bought YouTube).
