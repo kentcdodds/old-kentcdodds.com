@@ -705,7 +705,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
   integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
@@ -885,10 +885,10 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@mdx-js/mdx@^0.17.5":
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.17.5.tgz#0c760562e9ad66458c40c78c09cdeea768d5e073"
-  integrity sha512-GVJCWbgVonPelL74Ec/uNyUzH0DGce6ob50L8gySCKQmgIvPvYYd0PflalhxVwMfmaQdcalDAzUVsUR7P2l/3w==
+"@mdx-js/mdx@^0.18.1":
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.18.1.tgz#bbb2dc96d65e22c73b5f66a9428eb4561fdc33b7"
+  integrity sha512-NYD0CwCx5m48PPN2sUjvltQpVmmn71MpGvisYU+rAxxk0Ev2YgedMLomjmSiNZNywA52J8495M3q9tozObwzUA==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -902,10 +902,10 @@
     unist-builder "^1.0.1"
     unist-util-visit "^1.3.0"
 
-"@mdx-js/tag@^0.17.5":
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.17.5.tgz#7eef984a9433776f2fc5ca0352fac523d28e43f0"
-  integrity sha512-Qjfo9nkFY7qAN1DkAx7oKPZ3xLWSNtVJ22+m58FxYLfVzCXlElj0OXka4lC6ERPnW40q8v5rmJKJfqnI8mKr8g==
+"@mdx-js/tag@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/tag/-/tag-0.18.0.tgz#386d687deaed7133699a420d74612acdd1ed1c26"
+  integrity sha512-3g1NOnbw+sJZohNOEN9NlaYYDdzq1y34S7PDimSn3zLV8etCu7pTCMFbnFHMSe6mMmm4yJ1gfbS3QiE7t+WMGA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1822,13 +1822,21 @@ babel-plugin-emotion@^10.0.7:
     find-root "^1.1.0"
     source-map "^0.5.7"
 
-babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.4.2:
+babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.2.2, babel-plugin-macros@^2.4.2:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.5.0.tgz#01f4d3b50ed567a67b80a30b9da066e94f4097b6"
   integrity sha512-BWw0lD0kVZAXRD3Od1kMrdmfudqzDzYv2qrN3l2ISR1HVp1EgLKfbOrYV9xmY5k3qx3RIu5uPAUZZZHpo0o5Iw==
   dependencies:
     cosmiconfig "^5.0.5"
     resolve "^1.8.1"
+
+babel-plugin-preval@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-3.0.1.tgz#a26f9690114a864a54a5cbdf865496ebf541a9c3"
+  integrity sha512-s8hmTlRSmzcL7cHSIi0s6WxmpOAxfIlWqSVQwBIt7V5bNBaac+8JMZ6kJXLOazMJ8gCIcb5AJgQUgPHvbSYUzw==
+  dependencies:
+    babel-plugin-macros "^2.2.2"
+    require-from-string "^2.0.2"
 
 babel-plugin-remove-graphql-queries@^2.6.1:
   version "2.6.1"
@@ -5340,10 +5348,10 @@ gatsby-plugin-emotion@^4.0.4:
     "@babel/runtime" "^7.0.0"
     "@emotion/babel-preset-css-prop" "^10.0.5"
 
-gatsby-plugin-feed@^2.0.11:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.13.tgz#4a457a81d28cbe1ebb6d944272711b0a0671bbd3"
-  integrity sha512-wipPT35r+siQih+rZnKUxGFpA30RstnqtB/2JVuXeTX9ivkIjD697MOEqZTgM/8Y2IiQvr667pmDLukPPcwwuQ==
+gatsby-plugin-feed@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.14.tgz#e2f0b0df85bc3532ead7a37b2eadb2752f3b8d4f"
+  integrity sha512-ubj4Vk+Qfp79xpw1RZrgPHkDkD8ikqcnF9YnR2NIB06Fs40U3gY1jCZhHzBlTBxOnDY6atXQZ8akGbCmzSebNA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     lodash.merge "^4.6.0"
@@ -5505,10 +5513,10 @@ gatsby-source-filesystem@^2.0.12:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@^2.1.19:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.2.6.tgz#6f310ebc72e7182d6181904a7a6d7ae59995cad7"
-  integrity sha512-Cb90xsOVhH8T6phxgtUFWzmaKjaKbLJe17bSg1EXQz95ro5PevTO9Z7My05nZ3rHTrS2bnJkPEJb19d7d0tOVA==
+gatsby-transformer-remark@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.0.tgz#4caa1194a78ce2470c2d0b2ea0e0f9351487e7d9"
+  integrity sha512-m5yInZ02Bii/SqoUwL4KDtNHKR5LQ/fcQKBI8jqBCl14O/0F8UejWpzelb5FJyiVZyUKaECONVdQh9CbHowFOA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -9365,12 +9373,13 @@ pngquant-bin@^5.0.0:
     execa "^0.10.0"
     logalot "^2.0.0"
 
-polished@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.3.tgz#bdbaba962ba8271b0e11aa287f2befd4c87be99a"
-  integrity sha512-59V4fDbdxtH4I1m9TWxFsoGJbC8nnOpUYo5uFmvMfKp9Qh+6suo4VMUle1TGIIUZIGxfkW+Rs485zPk0wcwR2Q==
+polished@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.0.0.tgz#72a61e9729f8cfbcf2d6968441dc1f6f723a9fd6"
+  integrity sha512-qgxFjrkdnOrcHm/ulPjvK4jwzFv2zOdwY7JmaOX2iqTkLw2tA8U+YqYd5EDo5plPOZ2xpsGXeWWwj/C+/3nL5g==
   dependencies:
-    "@babel/runtime" "^7.2.0"
+    "@babel/runtime" "^7.3.1"
+    babel-plugin-preval "3.0.1"
 
 portfinder@^1.0.9:
   version "1.0.20"
@@ -9775,12 +9784,7 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prettier@1.14.3:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
-  integrity sha512-qZDVnCrnpsRJJq5nSsiHCE3BYMED2OtsI+cmzIzF1QIfqm5ALf8tEJcO27zV1gKNKRPdhjO0dNWnrzssDQ1tFg==
-
-prettier@^1.16.0:
+prettier@1.16.4, prettier@^1.16.0:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
@@ -10624,7 +10628,7 @@ require-directory@^2.1.1:
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
 
-require-from-string@^2.0.1:
+require-from-string@^2.0.1, require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
