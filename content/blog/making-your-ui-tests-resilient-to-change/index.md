@@ -23,9 +23,9 @@ You're a developer and you want to avoid shipping a broken login experience, so
 you're writing some tests to make sure you don't. Let's get a quick look at
 [an example of such a form](https://github.com/kentcdodds/testing-workshop/blob/1938d6fc2048e55362679905f700f938a3b497c4/client/src/screens/login.js#L50-L82):
 
-![](./images/0.png)
+![Login form from the Conduit App](./images/0.png)
 
-<figcaption>Login form from the Conduit App</figcaption>```jsx
+```jsx
 const form = (  
   <form onSubmit={this.submitForm}>  
     <fieldset>  
@@ -87,9 +87,7 @@ What if we added a "Sign up" button before the "Sign in" button?
 
 Whelp, that's going to break our tests. Total bummer.
 
-![](./images/1.gif)
-
-<figcaption>total bummer...</figcaption>
+![total bummer...](./images/1.gif)
 
 But that'd be pretty easy to fix right?
 
@@ -120,11 +118,7 @@ If we could add some metadata to the element we're trying to select that would
 solve the problem. Well guess what! There's actually an existing API for this!
 It's `data-` attributes!
 
-![](./images/2.gif)
-
-<figcaption>
-  Data from "Star Trek: The Next Generation" saying "YES!"
-</figcaption>
+![Data from Star Trek The Next Generation saying YES](./images/2.gif)
 
 So let's update our form to use `data-` attributes:
 

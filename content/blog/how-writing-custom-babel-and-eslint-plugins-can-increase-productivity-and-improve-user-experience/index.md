@@ -49,9 +49,7 @@ plugin can help do so much better at this than a find/replace regex.
 
 ### When to write a custom ESLint plugin
 
-![](./images/0.png)
-
-<figcaption>ESLint logo</figcaption>
+![ESLint logo](./images/0.png)
 
 The next time you're fixing a bug, you're going to want to make sure it doesn't
 come back. Instead of starting out with
@@ -93,9 +91,7 @@ tests ([learn how to test JavaScript projects here](http://kcd.im/fm-testing)).
 
 ### When to write a custom Babel plugin
 
-![](./images/1.png)
-
-<figcaption>Babel logo</figcaption>
+![Babel logo](./images/1.png)
 
 The next time you think: "That API is way too tedious" or "We can't do that,
 because performance would suffer big time." then you should consider writing a

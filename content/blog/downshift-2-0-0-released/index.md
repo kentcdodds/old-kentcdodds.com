@@ -55,12 +55,7 @@ that this is great! This is largely thanks to work by
 [Eli Perkins](https://github.com/eliperkins)! They've already shipped downshift
 to production in their iOS app:
 
-![](./images/0.png)
-
-<figcaption>
-  [Screenshot of downshift code in React Native
-  from Eli](https://github.com/paypal/downshift/issues/185#issuecomment-365965566)
-</figcaption>
+[![Screenshot of downshift code in React Native from Eli](./images/0.png)](https://github.com/paypal/downshift/issues/185#issuecomment-365965566)
 
 ### ReasonReact Support
 

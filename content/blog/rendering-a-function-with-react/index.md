@@ -28,9 +28,7 @@ I thought You'd be interested to hear what I learned.
 > [_render props_](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)_.
 > If you were hoping for that... callback later 😉_
 
-![](./images/0.gif)
-
-<figcaption>I see what you did there</figcaption>
+![I see what you did there](./images/0.gif)
 
 ### Context
 
@@ -199,9 +197,7 @@ function iterable (if you're unfamiliar,
 
 So... I made my function iterable 😉
 
-![](./images/1.gif)
-
-<figcaption>easy button</figcaption>
+![easy button](./images/1.gif)
 
 ```js
 const ITERATOR_SYMBOL =
@@ -232,9 +228,7 @@ I made a handy function for this and created
 [a CodeSandbox demo](https://codesandbox.io/s/mj5020xz98) for you to try out!
 Enjoy!
 
-![](./images/2.gif)
-
-<figcaption>You're welcome</figcaption>
+![You're welcome](./images/2.gif)
 
 The cool thing about this too is that I can log an error with a bunch of context
 to help the developer figure out what's going on. This is possible because if

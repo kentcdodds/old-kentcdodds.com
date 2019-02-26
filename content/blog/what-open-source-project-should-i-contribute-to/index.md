@@ -18,10 +18,7 @@ This is a question I've had countless times:
 
 https://twitter.com/sarna_pranu/status/672438850724175872
 
-<figcaption>
-  Pranu just made his first pull request:
-  [https://github.com/Automattic/mongoose/pull/3644](https://github.com/Automattic/mongoose/pull/3644)
-</figcaption>
+_Pranu just made his first pull request: [https://github.com/Automattic/mongoose/pull/3644](https://github.com/Automattic/mongoose/pull/3644)_
 
 https://twitter.com/geraldchecka/status/670445392706736128
 
@@ -70,7 +67,7 @@ way to do this is by stepping into function calls with a debugger. For example,
 what happens when you call angular.module? (gif below may take time to load,
 sorry).
 
-![](./images/0.gif)
+![a gif showing angular.module call in Chrome console](./images/0.gif)
 
 _So nobody feels left out, see_ [_React's_](https://infinit.io/_/QzJrScq.gif)
 _and_ [_Ember's_](https://infinit.io/_/XkZD3JH.gif)_ :-)_
@@ -158,7 +155,7 @@ but once you get over the first contribution, making future contributions is
 much easier. It's not all roses. The open source community has its warts here
 and there. Keep working at it. You'll do great! Good luck!
 
-![](./images/1.png)
+![thumbs up](./images/1.png)
 
 Do you need an introduction to GitHub and Git? Check this out from GitHub:
 
@@ -172,4 +169,4 @@ series on Egghead.io:
 And as always, I'll see you around on [Twitter](https://twitter.com/kentcdodds)
 and [GitHub](https://github.com/kentcdodds) :-)
 
-![](./images/2.png)
+![See you on Twitter!](./images/2.png)

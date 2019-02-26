@@ -30,9 +30,7 @@ So we've declared a `Person` class with a constructor instantiating a few member
 properties as well as a couple of methods. With that, if we type out the
 `person` object in the Chrome console, it looks like this:
 
-![](./images/0.png)
-
-<figcaption>A Person instance with methods on __proto__</figcaption>
+![A Person instance with methods on __proto__](./images/0.png)
 
 The real benefit to notice here is that most of the properties for this `person`
 live on the `prototype` (shown as `__proto__` in the screenshot) rather than the
@@ -123,9 +121,7 @@ basically no state you need to keep in your head at all with these functions
 which makes it very nice! And the person object is just data, so even easier to
 think about:
 
-![](./images/1.png)
-
-<figcaption>The person3 object with just greeting and name</figcaption>
+![The person3 object with just greeting and name](./images/1.png)
 
 Another nice property of functional programming that I won't delve into very far
 is that it's very easy to unit test. You simply call a function with some input
@@ -161,8 +157,6 @@ optimization. They don't make your code simpler, they make it more complex. It's
 better to narrow your focus on things that are not only simple to learn but
 simple to understand: functions and objects.
 
-![](./images/2.png)
+![See you on twitter!](./images/2.png)
 
-<figcaption>
-  See you [around](https://twitter.com/kentcdodds) friends!
-</figcaption>
+See you [around](https://twitter.com/kentcdodds) friends!

@@ -67,7 +67,7 @@ mess that I don't want to touch. I must have done something wrong...
 I did. TDD is a three-step process. It's often referred to as the "red, green,
 refactor cycle"
 
-![](./images/0.jpg)
+![TDD Cycle](./images/0.jpg)
 
 Here's the way it works:
 

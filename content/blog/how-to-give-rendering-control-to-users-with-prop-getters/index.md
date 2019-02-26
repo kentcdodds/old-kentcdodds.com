@@ -33,7 +33,7 @@ implement it. If you're unfamiliar with downshift, please read
 [the intro post](https://medium.com/@kentcdodds/introducing-downshift-for-react-b1de3fca0817)
 before you continue. Don't worry, I'll wait...
 
-![](./images/0.gif)
+![dog wagging the tail while waiting](./images/0.gif)
 
 So, to recap from what you read, **prop getters are one piece to the puzzle to
 let you hand rendering over to the users of your components** (a great idea). I
@@ -48,7 +48,7 @@ To talk about this, we'll actually use a different component I wrote recently
 that uses this pattern called
 [`react-toggled`](https://github.com/kentcdodds/react-toggled).
 
-![](./images/1.png)
+![React toggled logo](./images/1.png)
 
 It's pretty small, so I'm just going to paste all of it here for you
 ([see the syntax highlighted file here](https://github.com/kentcdodds/react-toggled/blob/master/src/index.js)):

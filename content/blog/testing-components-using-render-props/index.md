@@ -104,7 +104,7 @@ point. The higher you're up on the
 implementation details matter, as you go down the pyramid, you have to deal with
 implementation details a little more.
 
-![](./images/0.png)
+![UI, Service, Unit](./images/0.png)
 
 > _Sorry, no example of E2E tests today. Maybe when I publish this to_ >
 > [_my blog_](https://blog.kentcdodds.com/) _I'll have some..._

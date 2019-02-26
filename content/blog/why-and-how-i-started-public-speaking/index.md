@@ -14,7 +14,7 @@ bannerCredit:
   on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
 
-![](./images/0.jpg)
+![Kent C. Dodds in front of an audience at a meetup](./images/0.jpg)
 
 When I was still in school in the Information Systems program at
 [BYU](https://www.byu.edu/), I discovered and started listening to
@@ -34,7 +34,7 @@ was part of how I eventually got
 [my first job](https://github.com/kentcdodds/ama/issues/1)) and thought if they
 needed a speaker I could talk about genie! So I offered to fill their slot:
 
-![](./images/1.png)
+![a comment thread showing a request to speak at a meetup](./images/1.png)
 
 And just like that, the first meetup I attended I was a speaker. Turns out
 meetup organizers are often willing to give a speaking slot to anyone who so

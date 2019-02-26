@@ -88,7 +88,7 @@ If I have a "datepicker/logic.js" file, then I'll have
 "datepicker/logic.test.js" right next to it. Here's a comparison of the two
 approaches:
 
-![](./images/0.png)
+![test/ directory on the left, *.test.js on the right](./images/0.png)
 
 <figcaption>test/ directory on the left, *.test.js on the right</figcaption>
 
@@ -247,9 +247,9 @@ The same benefits of **maintainability**, **applicability**, and **ease of use**
 we get from co-locating our comments we get by co-location of other things as
 well. If you've never tried it out, I recommend you give it a shot.
 
-![](./images/1.png)
+![See you on Twitter!](./images/1.png)
 
-<figcaption>See you on [twitter](https://twitter.com/kentcdodds)!</figcaption>
+See you on [twitter](https://twitter.com/kentcdodds)!
 
 P.S. If you're concerned about violating "separation of concerns" I recommend
 you check out [this talk](https://youtu.be/x7cQ3mrcKaY) by

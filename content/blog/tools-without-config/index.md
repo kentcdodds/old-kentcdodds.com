@@ -36,7 +36,7 @@ all the users? 😑
 **_It's a_**
 [**_Sisyphean task_**](https://en.wikipedia.org/wiki/Sisyphus)**_..._**
 
-![](./images/0.gif)
+![a dog trying to climb a slider but failing](./images/0.gif)
 
 One thing that has been awesome for the productivity of the entire React
 community has been

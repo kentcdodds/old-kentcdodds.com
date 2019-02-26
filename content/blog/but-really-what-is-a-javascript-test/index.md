@@ -377,9 +377,7 @@ Ran all test suites.
 You can't tell from the text, but that output is colored. Here's an image of the
 output:
 
-![](./images/0.png)
-
-<figcaption>Screenshot of the output from running jest</figcaption>
+![Screenshot of the output from running jest](./images/0.png)
 
 It has color coding which is really helpful in identifying the parts that are
 relevant 😀 **It also shows the code where the error was thrown! Now _that's_ a

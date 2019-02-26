@@ -246,11 +246,8 @@ As always, if performance is a real concern of yours, you might also consider
 provide a means of writing components that are usable across multiple target
 platforms.
 
-![](./images/0.gif)
+![glamorous-primitives loaded in Sketch, native iOS, and the browser](./images/0.gif)
 
-<figcaption>
-  glamorous-primitives loaded in Sketch, native iOS, and the browser
-</figcaption>
 
 Here's the code from that example:
 
@@ -322,7 +319,7 @@ In addition to support for all the new features and breaking changes announced,
 there has been significant improvements to the coverage of existing typing. With
 a few exceptions (see the release notes) glamorous should now be fully typed!
 
-![](./images/1.gif)
+![Oh my! CSS in JS Autocomplete](./images/1.gif)
 
 <figcaption>Oh my! CSS in JS Autocomplete 😱</figcaption>
 
@@ -341,9 +338,7 @@ to take snapshots of react components and include the CSS that would be rendered
 with them. It makes finding CSS regressions reasonably possible! And the latest
 release makes it even better:
 
-![](./images/2.png)
-
-<figcaption>Jest snapshot showing CSS-only changes in our output</figcaption>
+![Jest snapshot showing CSS-only changes in our output](./images/2.png)
 
 Shoutout to [@jhurley23](https://github.com/jhurley23) for implementing the
 [class name placeholder](https://github.com/kentcdodds/jest-glamor-react/pull/12)
@@ -369,9 +364,7 @@ And GSM Studio makes a donation of \$1 for every shirt purchased to
 ([glamorous Shirt without the name](https://www.amazon.com/dp/B072LV68S2),
 [glamorous shirt with the name](https://www.amazon.com/dp/B0714JQW67))
 
-![](./images/3.png)
-
-<figcaption>glamorous SWAG</figcaption>
+![glamorous SWAG](./images/3.png)
 
 ### Breaking Changes
 
@@ -431,11 +424,10 @@ We'd especially appreciate
 to make it more complete and accessible to more of the world. Together we can
 make it easier than ever to build React applications with maintainable CSS.
 
-![](./images/4.png)
+![See you on twitter!](./images/4.png)
 
-<figcaption>
-  [See you on twitter! @glamorousCSS](https://twitter.com/glamorousCSS)
-</figcaption>
+[See you on twitter! @glamorousCSS](https://twitter.com/glamorousCSS)
+
 
 **Please share this with your friends and family.** You can share it via
 Medium's 💚,

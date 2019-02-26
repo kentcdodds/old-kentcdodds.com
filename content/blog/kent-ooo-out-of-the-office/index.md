@@ -33,7 +33,7 @@ I'll be down in Southern Utah, trekking across miles and miles of desert with a
 few dozen teenagers dressed in 19th century pioneer clothing for four days.
 Sound like fun? We'll see! I think it will be an amazing experience.
 
-![](./images/0.jpeg)
+![me wearing an awesome hat with a superman logo](./images/0.jpeg)
 
 I'm a youth leader for 16 - 18 year old young men in my church (the technical
 term is "Priest Quorum Advisor"). [My church](https://mormon.org) has a rich
@@ -44,11 +44,7 @@ and determination of the pioneers. It gives them a taste of what it was like for
 pioneers to cross the country with nothing but a handcart holding all of their
 worldly possessions they could fit and cary.
 
-![](./images/1.jpeg)
-
-<figcaption>
-  [http://kuer.org/post/new-tools-looking-pioneer-ancestors](http://kuer.org/post/new-tools-looking-pioneer-ancestors)
-</figcaption>
+[![Records of the Mormon pioneer handcart companies are included in the Overland Travel database](./images/1.jpeg)](http://kuer.org/post/new-tools-looking-pioneer-ancestors)
 
 I never went on a pioneer trek when I was growing up, so I'm excited to
 experience this myself. While I'm out there I will have just as much access to

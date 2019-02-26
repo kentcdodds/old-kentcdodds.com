@@ -56,7 +56,7 @@ my trick. I go to [astexplorer.net](https://astexplorer.net) and paste in
 [the code](https://astexplorer.net/#/gist/c6480f8f68861065fd0f91871540a21f/1dfec03fcab33fb1c4b63e9821c4fc69bcf15973)
 that I don't understand:
 
-![ASTExplorer.net with the code showing "ArrayPattern"](https://i.imgur.com/oZGLSfr.png)
+![ASTExplorer.net with the code showing ArrayPattern](https://i.imgur.com/oZGLSfr.png)
 
 Cool! Babel calls that an "ArrayPattern." So let's go ahead and Google for that.
 We'll search for "site:https://developer.mozilla.org array pattern" (that way

@@ -17,11 +17,7 @@ World's Largest Education Hackathon_ 👍
 
 My first contribution to open source was extremely small:
 
-![](./images/0.png)
-
-<figcaption>
-  [https://github.com/playframework/playframework/pull/616](https://github.com/playframework/playframework/pull/616)
-</figcaption>
+[![first open source contribution](./images/0.png)](https://github.com/playframework/playframework/pull/616)
 
 Seriously, that was it. A comment typo that I found while debugging. The PR was
 merged a few hours after I made it back in December of 2012 in my brand new days
@@ -29,7 +25,7 @@ as a programmer. I recently reminisced over the PR and made a thank you comment.
 Which was later followed up by a total stranger and resulted in me getting some
 digital cake!
 
-![](./images/1.png)
+![first open source contribution comment thread](./images/1.png)
 
 How cool is that!? 🍰
 
