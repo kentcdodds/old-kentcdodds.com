@@ -1,0 +1,105 @@
+---
+title: Contact Kent C. Dodds
+---
+
+import CountupTextarea from 'components/countup-textarea'
+import SubjectSelector from 'components/subject-selector'
+
+You can contact me by filling out the form below:
+
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label htmlFor="name-input">Name</label>
+    <br />
+    <input id="name-input" type="text" name="name" />
+  </p>
+  <p>
+    <label htmlFor="email-input">Email</label>
+    <br />
+    <input id="email-input" type="email" name="email" />
+  </p>
+  <p>
+    <label htmlFor="subject-input">Subject</label>
+    <br />
+    <SubjectSelector
+      options={{
+        workshop: {
+          display: 'Enterprise Workshop Inquiry',
+          ui: (
+            <div>
+              <small>My organization needs training</small>
+              <input
+                value="My organization needs training"
+                type="hidden"
+                name="subject"
+              />
+            </div>
+          ),
+        },
+        help: {
+          display: 'Help',
+          ui: (
+            <div>
+              <small>
+                If you need help with one of my open source projects, please
+                either ask on the official support channel for the project or
+                open an issue on GitHub. Please do not ask here.
+              </small>
+              <br />
+              <label htmlFor="subject-input">Help Subject</label>
+              <br />
+              <input type="text" name="subject" defaultValue="I need help" />
+            </div>
+          ),
+        },
+        ama: {
+          display: 'Ask a question',
+          ui: (
+            <div>
+              <small>
+                I prefer general questions to be asked on{' '}
+                <a href="https://kcd.im/ama">my AMA</a>. If you ask here,{' '}
+                <strong>
+                  I can't make any promises that{' '}
+                  <a href="https://kcd.im/no-time">I'll have time</a> to respond
+                </strong>
+                , but I'll try.
+              </small>
+              <br />
+              <label htmlFor="subject-input">AMA Subject</label>
+              <br />
+              <input
+                type="text"
+                name="subject"
+                defaultValue="I have a question"
+              />
+            </div>
+          ),
+        },
+        other: {
+          display: 'Other...',
+          ui: (
+            <div>
+              <label htmlFor="subject-input">Subject</label>
+              <br />
+              <input type="text" name="subject" />
+            </div>
+          ),
+        },
+      }}
+    />
+  </p>
+  <p>
+    <label htmlFor="body-textarea">How can I help you?</label>
+    <CountupTextarea
+      id="body-textarea"
+      name="body"
+      style={{width: '100%'}}
+      rows="10"
+      maxLength="1000"
+    />
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>

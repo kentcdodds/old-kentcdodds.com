@@ -47,7 +47,8 @@ export const globalStyles = css`
       font-family: ${fonts.semiboldItalic};
     }
   }
-  input {
+  input,
+  textarea {
     border-radius: 4px;
     border: 1px solid ${theme.colors.gray};
     padding: 5px 10px;
