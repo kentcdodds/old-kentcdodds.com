@@ -215,7 +215,9 @@ function ContactForm() {
 
 function getFormValues(formNode) {
   return Object.getOwnPropertyNames(formNode.elements).reduce((obj, key) => {
-    obj[key] = formNode.elements[key].value
+    if (isNaN(parseInt(key, 10))) {
+      obj[key] = formNode.elements[key].value
+    }
     return obj
   }, {})
 }
