@@ -7,20 +7,25 @@ import SubjectSelector from 'components/subject-selector'
 
 You can contact me by filling out the form below:
 
-<form name="contact" method="POST" data-netlify="true">
+<form
+  name="contact"
+  method="post"
+  action="/contact/success"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
   <p>
     <label htmlFor="name-input">Name</label>
     <br />
-    <input id="name-input" type="text" name="name" />
+    <input id="name-input" type="text" name="name" required />
   </p>
   <p>
     <label htmlFor="email-input">Email</label>
     <br />
-    <input id="email-input" type="email" name="email" />
+    <input id="email-input" type="email" name="email" required />
   </p>
   <p>
-    <label htmlFor="subject-input">Subject</label>
-    <br />
     <SubjectSelector
       options={{
         workshop: {
@@ -48,7 +53,12 @@ You can contact me by filling out the form below:
               <br />
               <label htmlFor="subject-input">Help Subject</label>
               <br />
-              <input type="text" name="subject" defaultValue="I need help" />
+              <input
+                type="text"
+                name="subject"
+                defaultValue="I need help"
+                required
+              />
             </div>
           ),
         },
@@ -72,6 +82,7 @@ You can contact me by filling out the form below:
                 type="text"
                 name="subject"
                 defaultValue="I have a question"
+                required
               />
             </div>
           ),
@@ -82,7 +93,7 @@ You can contact me by filling out the form below:
             <div>
               <label htmlFor="subject-input">Subject</label>
               <br />
-              <input type="text" name="subject" />
+              <input type="text" name="subject" required />
             </div>
           ),
         },
@@ -97,6 +108,8 @@ You can contact me by filling out the form below:
       style={{width: '100%'}}
       rows="10"
       maxLength="1000"
+      minLength="10"
+      required
     />
   </p>
   <p>
