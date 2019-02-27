@@ -56,6 +56,24 @@ export default [
     `,
   },
   {
+    title: 'LIVE! Learn React Hooks with Kent C. Dodds',
+    resources: [],
+    tags: ['react'],
+    deliveries: [
+      {
+        event:
+          '[Webinar Registration](https://zoom.us/webinar/register/5015513098499/WN_jT_uHTTxQ5yI047qzGw4MA)',
+        date: '2019-03-06',
+      },
+    ],
+    description: `
+      There's a lot of chatter about React Hooks. They really change the game,
+      but they are also a totally new mind-bending approach in some cases. In
+      this webinar, I'll go over what React Hooks are, why they're useful, and
+      demo what you can do with them.
+    `,
+  },
+  {
     title: 'Contributing to Open Source on GitHub for beginners',
     resources: [
       '[repo](https://github.com/eggheadio-github/stack-overflow-copy-paste)',

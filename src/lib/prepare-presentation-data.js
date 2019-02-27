@@ -39,7 +39,13 @@ function mostRecent(dates) {
 
 // returns true if a is more recent than b
 function moreRecent(a, b = new Date()) {
-  return new Date(a).getTime() > new Date(b).getTime()
+  if (typeof a === 'string') {
+    a = new Date(...a.split('-'))
+  }
+  if (typeof b === 'string') {
+    b = new Date(...b.split('-'))
+  }
+  return a > b
 }
 
 export {preparePresentationData, sortByPresentationDate}
