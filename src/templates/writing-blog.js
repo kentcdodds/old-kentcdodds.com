@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql, StaticQuery} from 'gatsby'
 import Blog from 'components/blog'
-import {TinyLetterSubscribe} from 'components/Forms/Subscribe'
+import {TinyLetterSubscribe} from 'components/forms/subscribe'
 
 function WritingBlog(props) {
   return <Blog {...props} subscribeForm={<TinyLetterSubscribe />} />

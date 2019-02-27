@@ -2,7 +2,7 @@ import React from 'react'
 import Link from '../components/Link'
 import {css} from '@emotion/core'
 import {bpMaxSM} from '../lib/breakpoints'
-import SubscribeForm from './Forms/Subscribe'
+import SubscribeForm from './forms/subscribe'
 import {Twitter, GitHub, YouTube} from './Social'
 import Container from './Container'
 
