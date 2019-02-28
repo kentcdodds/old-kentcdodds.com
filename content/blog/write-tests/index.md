@@ -34,7 +34,7 @@ A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 company behind a ton of the awesome stuff coming out lately))
 [tweeted something profound](https://twitter.com/rauchg/status/807626710350839808):
 
-![Screenshot of the tweet](./images/1.png)
+https://twitter.com/rauchg/status/807626710350839808
 
 > **_Write tests. Not too many. Mostly integration._**
 
