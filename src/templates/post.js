@@ -97,7 +97,7 @@ export default function Post({data: {site, mdx}}) {
               `}
             >
               <Img
-                sizes={banner.childImageSharp.fluid}
+                fluid={banner.childImageSharp.fluid}
                 alt={site.siteMetadata.keywords.join(', ')}
               />
               {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
