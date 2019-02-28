@@ -36,7 +36,7 @@ const createPosts = (createPage, createRedirect, edges) => {
 
 function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   if (_.isEmpty(data.edges)) {
-    return Promise.reject('There are no posts!')
+    throw new Error('There are no posts!')
   }
 
   const {edges} = data
