@@ -27,6 +27,8 @@ Current Available Translations:
 
 I've given this blog post as a talk which you can watch here:
 
+https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+
 A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 [Socket.io](https://socket.io/) and founder of [Zeit.co](https://zeit.co/) (the
 company behind a ton of the awesome stuff coming out lately))
@@ -126,9 +128,11 @@ read, but the man isn't integrating with his various body parts very
 effectively. It doesn't matter if your button component calls the `onClick`
 handler if that handler doesn't make the right request with the right data! So
 while having some unit tests to verify these pieces work in isolation isn't a
-bad thing, _it doesn't do you any good if you don't_ **_also_** _verify that
-they work together._
+bad thing, _it doesn't do you any good if you don't **also** verify that they
+work together._
 
 **Integration tests strike a great balance on the trade-offs between confidence
 and speed/expense.** This is why it's advisable to spend _most_ (not all, mind
 you) of your effort there.
+
+[![TestingJavaScript.com Learn the smart, efficient way to test any JavaScript application.](/images/testingjavascript-promos/tjs-5.jpg)](https://testingjavascript.com)
