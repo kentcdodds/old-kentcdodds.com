@@ -116,12 +116,11 @@ This is why I created "The Testing Trophy" 🏆
 
 https://twitter.com/kentcdodds/status/960723172591992832
 
-[My all-time most retweeted tweet](https://twitter.com/kentcdodds/status/628658648001048577)
-has to do with the main issue with unit tests:
+---
 
-> _Still love this one. Unit testers be like: "Looks like it's working"_
+Here's another illustration of the importance of integration tests:
 
-![Man in three pieces. Legs running in place. Torso doing push-ups.Head reading.](./images/3.gif)
+https://twitter.com/kentcdodds/status/628658648001048577
 
 We've written unit tests that verify the man can run in place, do pushups, and
 read, but the man isn't integrating with his various body parts very
