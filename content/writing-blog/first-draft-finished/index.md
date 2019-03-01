@@ -1,6 +1,6 @@
 ---
 slug: first-draft-finished
-date: 2019-02-13
+date: 2019-03-01
 title: 'First Draft Finished!'
 author: 'Kent C. Dodds'
 description: _I've finally finished the first draft of Shurlan_
