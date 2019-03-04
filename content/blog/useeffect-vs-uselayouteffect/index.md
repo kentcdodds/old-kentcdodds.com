@@ -15,8 +15,6 @@ bannerCredit:
   on_[Unsplash](https://unsplash.com/search/photos/special-effects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
 
-_The simple rules for when to use each..._
-
 > _Note also... If the words "React Hooks" doesn't ring any bells for you, then
 > stop for a moment and_ [_go here_](https://reactjs.org/hooks) _to read/watch
 > about them._ **_NOTE THAT REACT HOOKS ARE NOT STABLE, SO PLEASE KEEP THAT IN
@@ -36,7 +34,7 @@ from `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` to
 **The one catch** is that this runs _after_ react renders your component and
 ensures that your effect callback does not block browser painting. This differs
 from the behavior in class components where `componentDidMount` and
-`componentDidUpdate`run synchronously after rendering. It's more performant this
+`componentDidUpdate` run synchronously after rendering. It's more performant this
 way and most of the time this is what you want.
 
 However, if your effect is mutating the DOM (via a DOM node ref) **_and_** the
