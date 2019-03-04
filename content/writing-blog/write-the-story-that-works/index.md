@@ -5,7 +5,6 @@ title: 'Write the Story That Works'
 author: 'Kent C. Dodds'
 description:
   _You can write all kinds of stories. Only write the one that works._
-unlisted: true
 categories:
   - writing
 keywords:
