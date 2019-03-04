@@ -4,7 +4,6 @@ title: Goodbye Medium
 date: '2019-02-25'
 author: Kent C. Dodds
 description: _I've migrated from Medium to kentcdodds.com/blog... Here's why_
-unlisted: true
 keywords:
   - Control
   - Personal Branding
@@ -29,8 +28,8 @@ just bought YouTube).
 I've had many blogs on many platforms since then: Blogger, wordpress.org, custom
 wordpress, ghost, Jekyll, and finally Medium.com.
 
-For me, blogging is all about convenience. I've always been more motivated
-to create content than create a blogging platform, so I always looked for the
+For me, blogging is all about convenience. I've always been more motivated to
+create content than create a blogging platform, so I always looked for the
 easiest way to do that. That said, I did want to differentiate myself (which is
 why I tried wordpress). Every time I tried, I was reminded that building a
 blogging platform was distracting me from creating content (not that building a

@@ -6,7 +6,6 @@ author: 'Kent C. Dodds'
 description: How do compound components change with React hooks?
 categories: ['react']
 keywords: ['react', 'javascript', 'hooks']
-unlisted: true
 banner: './banner.jpg'
 bannerCredit:
   Photo by [karl
@@ -141,12 +140,9 @@ function useEffectAfterMount(cb, dependencies) {
 function Toggle(props) {
   const [on, setOn] = React.useState(false)
   const toggle = React.useCallback(() => setOn(oldOn => !oldOn), [])
-  useEffectAfterMount(
-    () => {
-      props.onToggle(on)
-    },
-    [on],
-  )
+  useEffectAfterMount(() => {
+    props.onToggle(on)
+  }, [on])
   const value = React.useMemo(() => ({on, toggle}), [on])
   return (
     <ToggleContext.Provider value={value}>
