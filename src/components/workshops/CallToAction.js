@@ -116,6 +116,7 @@ const CallToAction = props => {
           color: ${theme.colors.white};
         }
         h1 {
+          font-size: 28px;
           max-width: ${rhythm(13)};
           margin-bottom: ${rhythm(1)};
           margin-top: 0;
@@ -184,7 +185,10 @@ const CallToAction = props => {
           text-align: left;
           flex-direction: column;
           padding: ${rhythm(2)};
-          //box-shadow: inset -10 0 30px hsla(0, 0%, 0%, 0.05);
+          box-shadow: inset 10px 0 30px hsla(0, 0%, 0%, 0.05);
+          p {
+            font-family: ${fonts.light};
+          }
           ${bpMaxSM} {
             padding: ${rhythm(1)};
             align-items: center;
