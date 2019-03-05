@@ -35,10 +35,6 @@ happens. Don't worry, I'll wait...
 What happens will be different for everyone, but here's an example of what some
 of you might have seen:
 
-![warnings](./images/warnings.png)
-
-Here's a copy/paste of those warnings:
-
 ```
 Warning: A string ref, "myDiv", has been found within a strict mode tree. String refs are a source of potential bugs and should be avoided. We recommend using createRef() instead.
 
@@ -91,7 +87,7 @@ import PropTypes from 'prop-types'
 
 class WillMount extends React.Component {
   componentWillMount() {
-    // nope. Use componentDidMount instead
+    // Use componentDidMount instead
   }
   render() {
     return null
@@ -100,7 +96,7 @@ class WillMount extends React.Component {
 
 class WillReceiveProps extends React.Component {
   componentWillReceiveProps() {
-    // nope. Use static getDerivedStateFromProps
+    // Use static getDerivedStateFromProps
   }
   render() {
     return null
@@ -109,7 +105,7 @@ class WillReceiveProps extends React.Component {
 
 class WillUpdate extends React.Component {
   componentWillUpdate() {
-    // nope. Use componentDidUpdate instead
+    // Use componentDidUpdate instead
   }
   render() {
     return null
@@ -118,14 +114,14 @@ class WillUpdate extends React.Component {
 
 class StringRef extends React.Component {
   render() {
-    // nope. Use React.createRef instead
+    // Use React.createRef instead
     return <div ref="myDiv" />
   }
 }
 
 class FindDOMNode extends React.Component {
   componentDidMount() {
-    // nope. Use React.createRef instead
+    // Use React.createRef instead
     ReactDOM.findDOMNode(this)
   }
   render() {
@@ -134,7 +130,7 @@ class FindDOMNode extends React.Component {
 }
 
 class MyColorDiv extends React.Component {
-  // nope. Use React.createContext().Consumer instead (or even better useContext)
+  // Use React.createContext().Consumer instead (or even better useContext)
   static contextTypes = {color: PropTypes.string}
   render() {
     return <div style={{color: this.context.color}} />
@@ -142,7 +138,7 @@ class MyColorDiv extends React.Component {
 }
 
 class MyColorProvider extends React.Component {
-  // nope. Use React.createContext().Provider instead
+  // Use React.createContext().Provider instead
   static childContextTypes = {color: PropTypes.string}
   getChildContext() {
     return {color: 'purple'}
@@ -155,7 +151,7 @@ class MyColorProvider extends React.Component {
 
 function App() {
   return (
-    <React.StrictMode>
+    <>
       <WillMount />
       <WillReceiveProps />
       <WillUpdate />
@@ -164,11 +160,16 @@ function App() {
       <MyColorProvider>
         <MyColorDiv />
       </MyColorProvider>
-    </React.StrictMode>
+    </>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+)
 ```
 
 > And you can check this out for yourself in
@@ -179,6 +180,11 @@ various ways (most of them are related to concurrent mode which should hopefully
 come to React later this year). Getting these warnings taken care of today will
 make it much easier for you to upgrade to concurrent react bug-free when it
 comes along.
+
+> That said, don't freak out if you have a ton of warnings in your app. Your
+> code will continue to work in the future. There's also an `UNSAFE_` prefix for
+> those lifecycle methods you can use to silence the warning if you need. React
+> wont leave you in the dust here.
 
 ---
 
@@ -218,7 +224,7 @@ you during development and will not impact you in production.
 ## Conclusion
 
 Again, you should be rendering your app in `React.StrictMode` because it will
-warn you when a component is using a deprecated method or API and it will help
+warn you when a component is using a suboptimal method or API and it will help
 you catch things that can cause nasty bugs that can be hard to debug.
 
 So what do you do when you get a warning like this in a third-party component? I
@@ -227,7 +233,32 @@ recommend seeing how easy it would be to
 out, then you could just "vendor" (download and commit it) or "fork" that
 dependency and move on.
 
-I hope that doing this will help you catch nasty bugs in your React codebases!
+Remember, **your code will continue to work** whether you're using strict mode
+and fixing the warnings or not.
+
+One approach that I think many teams are adopting (and I recommend) is to start
+by wrapping parts of your app in `<React.StrictMode />` instead of the entire
+app:
+
+```jsx
+function App() {
+  return (
+    <div>
+      <OldPartOfTheApp />
+      <React.StrictMode>
+        <SomeNewFeature />
+      </React.StrictMode>
+      <AnotherOlderPartOfTheApp />
+    </div>
+  )
+}
+```
+
+You can use `<React.StrictMode />` anywhere in your app at any depth. This can
+be great way to opt certain parts of your app into strict mode without getting a
+ton of warnings everywhere.
+
+I hope that doing this will help you catch bugs in your React codebases!
 
 See you around 💯
 
