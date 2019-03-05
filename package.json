@@ -47,6 +47,7 @@
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
+    "react-countdown-now": "^2.1.0",
     "react-dom": "^16.8.2",
     "react-helmet": "~5.2.0",
     "react-live": "^1.12.0",
