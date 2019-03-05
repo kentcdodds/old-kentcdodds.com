@@ -148,6 +148,36 @@ const CallToAction = props => {
     >
       <div
         css={css`
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: ${rhythm(2)};
+          padding-top: ${rhythm(1)};
+          ${bpMaxSM} {
+            h2 {
+              margin-top: 0;
+            }
+            padding: ${rhythm(1)};
+            justify-content: flex-start;
+            text-align: center;
+            align-items: center;
+          }
+        `}
+      >
+        <>
+          <h2>
+            $300 <del>$499</del>
+          </h2>
+          <p>Spots left: {SpotsLeft}</p>
+          <p>{props.children}</p>
+        </>
+        <Link to={link} className="button">
+          {buttonText}
+        </Link>
+      </div>
+      <div
+        css={css`
           width: 100%;
           display: flex;
           align-items: flex-start;
@@ -169,36 +199,6 @@ const CallToAction = props => {
           in:
         </p>
         <Counter />
-      </div>
-      <div
-        css={css`
-          display: flex;
-          align-items: flex-start;
-          flex-direction: column;
-          justify-content: space-between;
-          padding: ${rhythm(2)};
-          padding-top: ${rhythm(1)};
-          ${bpMaxSM} {
-            h2 {
-              margin-top: 0;
-            }
-            padding: ${rhythm(1)};
-            justify-content: flex-start;
-            text-align: center;
-            align-items: center;
-          }
-        `}
-      >
-        <>
-          <h2>
-            $300 <del>$500</del>
-          </h2>
-          <p>Spots left: {SpotsLeft}</p>
-          <p>{props.children}</p>
-        </>
-        <Link to={link} className="button">
-          {buttonText}
-        </Link>
       </div>
     </div>
   )
