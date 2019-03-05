@@ -64,6 +64,7 @@ const CallToAction = props => {
   const {title, buttonText, link, restProps} = props
   return (
     <div
+      id="register"
       css={css`
         width: 100%;
         margin: 0 auto;

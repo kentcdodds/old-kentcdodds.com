@@ -3,6 +3,8 @@ import {css} from '@emotion/core'
 import {fonts, rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Calendar from '../../images/icons/calendar.svg'
+import theme from '../../../config/theme'
+import {lighten} from 'polished'
 
 const Banner = ({children, title, date, image}) => {
   return (
@@ -51,6 +53,19 @@ const Banner = ({children, title, date, image}) => {
                 align-items: center;
             }
       `};
+        .button {
+          margin-top: ${rhythm(1.5)};
+          padding: 10px 15px;
+          background: ${lighten(0.4, `${theme.brand.primary}`)};
+          border: 1px solid transparent;
+          color: ${theme.brand.primary};
+          font-size: 16px;
+          border-radius: 5px;
+          :hover {
+            border: 1px solid transparent;
+            background: ${theme.colors.green_lighten};
+          }
+        }
       `}
     >
       <div
@@ -69,6 +84,13 @@ const Banner = ({children, title, date, image}) => {
         {title && <h1>{title}</h1>}
         <time>{date}</time>
         {children}
+        <a
+          href="#register"
+          className="button"
+          aria-label="scroll to registration"
+        >
+          Reserve a spot
+        </a>
       </div>
       {image && (
         <div
