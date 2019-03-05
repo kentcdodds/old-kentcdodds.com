@@ -1,6 +1,6 @@
 ---
 slug: react-strict-mode
-title: Enable React Strict Mode
+title: How to Enable React Strict Mode
 date: '2019-03-04'
 author: Kent C. Dodds
 description: _What it is and how to add it to your app._
@@ -186,7 +186,7 @@ comes along.
 > those lifecycle methods you can use to silence the warning if you need. React
 > wont leave you in the dust here.
 
----
+## It runs code TWICE
 
 Another thing that React Strict Mode does is run certain callbacks/methods twice
 (in DEV mode ONLY). You read that right! The following callbacks/methods will be
@@ -221,17 +221,20 @@ You'll note that if you download either of my codesandbox projects and run the
 the callbacks are only called once. This is because these are only there to help
 you during development and will not impact you in production.
 
-## Conclusion
+## Third Party Code
 
-Again, you should be rendering your app in `React.StrictMode` because it will
-warn you when a component is using a suboptimal method or API and it will help
-you catch things that can cause nasty bugs that can be hard to debug.
+Rendering your app in `React.StrictMode` will warn you when a component is using
+a suboptimal method or API and it will help you catch things that can cause bugs
+that can be hard to debug. But sometimes the code that's violating strict mode
+isn't your own code, but code in a library.
 
 So what do you do when you get a warning like this in a third-party component? I
 recommend seeing how easy it would be to
 [open a PR](http://makeapullrequest.com) to the project. If that doesn't work
 out, then you could just "vendor" (download and commit it) or "fork" that
 dependency and move on.
+
+## Conclusion
 
 Remember, **your code will continue to work** whether you're using strict mode
 and fixing the warnings or not.
