@@ -179,6 +179,7 @@ const CallToAction = props => {
           padding: ${rhythm(2)};
           padding-top: ${rhythm(1)};
           ${bpMaxSM} {
+            width: 100%;
             h2 {
               margin-top: 0;
             }
@@ -192,7 +193,15 @@ const CallToAction = props => {
         <>
           <h2>$299</h2>
           <del>$499</del>
-          <p>Spots left: {SpotsLeft}</p>
+          <p
+            css={css`
+              ${bpMaxSM} {
+                margin-bottom: 0;
+              }
+            `}
+          >
+            Spots left: {SpotsLeft}
+          </p>
           <p>{props.children}</p>
         </>
         <Link to={link} className="button">
