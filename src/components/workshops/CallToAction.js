@@ -5,6 +5,7 @@ import {rhythm, fonts} from '../../lib/typography'
 import Link from '../Link'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
+import {lighten} from 'polished'
 
 const SpotsLeft = 20
 
@@ -33,7 +34,20 @@ export const Counter = () => (
     date={1553036399000} //3/19/2019 23:59:59
     renderer={({days, hours, minutes, seconds, completed}) => {
       return (
-        <div>
+        <div
+          css={css`
+            padding: 11px 15px;
+            //background: ${lighten(0.4, `${theme.brand.primary}`)};
+            background: white;
+            border: 1px solid #f1f1f1;
+            span,
+            div {
+              //color: ${theme.brand.primary} !important;
+              color: ${theme.colors.body_color};
+            }
+            border-radius: 5px;
+          `}
+        >
           {!completed && (
             <div
               css={css`
@@ -84,7 +98,7 @@ export const Counter = () => (
 )
 
 const CallToAction = props => {
-  const {title, buttonText, link, restProps} = props
+  const {title, buttonText, link, restProps, light = false} = props
   return (
     <div
       id="register"
@@ -95,12 +109,16 @@ const CallToAction = props => {
         grid-template-columns: 1fr 1fr;
         border-radius: 5px;
         margin-top: ${rhythm(2.5)};
+        margin-bottom: 50px;
+        ${!light &&
+          `
         background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%),
           linear-gradient(
             32deg,
             rgba(255, 255, 255, 0.25) 33%,
             rgba(0, 0, 0, 0.25) 100%
-          );
+          );`};
+        background: ${light && 'white'};
         ${bpMaxSM} {
           display: flex;
           flex-direction: column;
@@ -113,7 +131,9 @@ const CallToAction = props => {
         h3,
         p,
         div {
-          color: ${theme.colors.white};
+          color: ${light
+            ? `${theme.colors.body_color}`
+            : `${theme.colors.white}`};
         }
         h1 {
           font-size: 28px;
@@ -123,15 +143,16 @@ const CallToAction = props => {
         }
         h2 {
           font-size: 48px;
+          margin-bottom: 0;
         }
 
         .button {
           width: 100%;
           padding: 20px 25px;
-          background: white;
+          background: ${light ? `${theme.brand.primary}` : 'white'};
           text-align: center;
           border: 1px solid transparent;
-          color: ${theme.colors.body_color};
+          color: ${light ? 'white' : `${theme.colors.body_color}`};
           border-radius: 5px;
           :hover {
             border: 1px solid transparent;
@@ -139,8 +160,8 @@ const CallToAction = props => {
           }
         }
         del {
+          font-size: 24px;
           text-transform: line-through;
-          font-size: 50%;
           opacity: 0.8;
           font-family: ${fonts.regular};
         }
@@ -152,6 +173,8 @@ const CallToAction = props => {
           display: flex;
           align-items: flex-start;
           flex-direction: column;
+          border: 1px solid #f1f1f1;
+          border-radius: 5px 0 0 5px;
           justify-content: space-between;
           padding: ${rhythm(2)};
           padding-top: ${rhythm(1)};
@@ -167,9 +190,8 @@ const CallToAction = props => {
         `}
       >
         <>
-          <h2>
-            $300 <del>$499</del>
-          </h2>
+          <h2>$299</h2>
+          <del>$499</del>
           <p>Spots left: {SpotsLeft}</p>
           <p>{props.children}</p>
         </>
@@ -179,6 +201,7 @@ const CallToAction = props => {
       </div>
       <div
         css={css`
+          border-radius: 0 5px 5px 0;
           width: 100%;
           display: flex;
           align-items: flex-start;
@@ -186,6 +209,9 @@ const CallToAction = props => {
           flex-direction: column;
           padding: ${rhythm(2)};
           box-shadow: inset 10px 0 30px hsla(0, 0%, 0%, 0.05);
+          ${bpMaxSM} {
+            box-shadow: inset 0 10px 30px hsla(0, 0%, 0%, 0.05);
+          }
           p {
             font-family: ${fonts.light};
           }
@@ -194,7 +220,7 @@ const CallToAction = props => {
             align-items: center;
             text-align: center;
           }
-          background: hsla(0, 0%, 0%, 0.2);
+          background: hsla(0, 0%, 0%, 0.05);
         `}
       >
         {title && <h1>{title}</h1>}

@@ -15,8 +15,8 @@ const Banner = ({children, title, date, location, image}) => {
         background: white;
         border-radius: 5px;
         padding: 40px;
-        margin-left: -40px;
-        margin-right: -40px;
+        //margin-left: -40px;
+        //margin-right: -40px;
         ${bpMaxSM} {
           padding: 20px;
           margin-left: 0;
@@ -28,7 +28,7 @@ const Banner = ({children, title, date, location, image}) => {
           margin-top: 10px;
         }
         h4 {
-          font-size: 15px;
+          font-size: 14px;
           text-transform: uppercase;
           letter-spacing: 1px;
           margin: 0;
