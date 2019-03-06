@@ -35,7 +35,7 @@ const Share = ({url, title, twitterHandle}) => (
     <span>Share article</span>
     <TwitterShareButton
       url={url}
-      quote={title}
+      title={title}
       via={twitterHandle.split('@').join('')}
     >
       Twitter
