@@ -5,8 +5,8 @@ import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
 
-import MobileNav from './MobileNav'
-import Container from './Container'
+import MobileNav from './mobile-nav'
+import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
 
 function HeaderLink({headerColor, ...props}) {

@@ -3,7 +3,7 @@ import {css} from '@emotion/core'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import {rhythm} from '../lib/typography'
-import Container from 'components/Container'
+import Container from 'components/container'
 
 import heroImageRight from '../images/hero/path-right.svg'
 import heroImageLeft from '../images/hero/path-left.svg'

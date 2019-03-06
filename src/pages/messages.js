@@ -1,12 +1,12 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Layout from '../components/Layout'
-import Message from '../components/ConfirmMessage/Message'
+import Layout from 'components/layout'
+import Message from 'components/confirm-message/message'
 import {
   PleaseConfirmIllustration,
   ThankYouIllustration,
   UnsubscribeIllustration,
-} from '../components/ConfirmMessage/Illustrations'
+} from 'components/confirm-message/illustrations'
 
 export default function Messages({data: {latestArticle}}) {
   return (

@@ -5,8 +5,8 @@ import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 import {rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
-import Message from '../ConfirmMessage/Message'
-import {PleaseConfirmIllustration} from '../ConfirmMessage/Illustrations'
+import Message from '../confirm-message/message'
+import {PleaseConfirmIllustration} from '../confirm-message/illustrations'
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()

@@ -8,11 +8,11 @@ import {ThemeProvider} from 'emotion-theming'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 import mdxComponents from './mdx'
-import Header from './Header'
+import Header from './header'
 import reset from '../lib/reset'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
-import Footer from '../components/Footer'
+import Footer from '../components/footer'
 
 export const globalStyles = css`
   .button-secondary {

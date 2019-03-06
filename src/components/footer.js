@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from '../components/Link'
+import Link from '../components/link'
 import {css} from '@emotion/core'
 import {bpMaxSM} from '../lib/breakpoints'
 import SubscribeForm from './forms/subscribe'
-import {Twitter, GitHub, YouTube} from './Social'
-import Container from './Container'
+import {Twitter, GitHub, YouTube} from './social'
+import Container from './container'
 
 import Signature from '../images/signature.png'
 
