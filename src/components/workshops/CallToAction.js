@@ -2,12 +2,82 @@ import React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {rhythm, fonts} from '../../lib/typography'
-import Link from '../Link'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
 import {lighten} from 'polished'
 
-const SpotsLeft = 20
+const discountAvailable = true
+
+const titoWidget = (
+  <div
+    css={css`
+      .tito-ticket {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .clearfix {
+        display: flex;
+        flex-direction: column;
+      }
+      .tito-badge-link,
+      .tito-discount-code,
+      .tito-ticket-description,
+      .tito-ticket-quantity > span {
+        display: none;
+      }
+      .tito-ticket-name-wrapper {
+        padding: 20px 0;
+      }
+      .tito-ticket-name {
+        visibility: hidden;
+        position: absolute;
+        span {
+          width: 200px;
+          height: auto;
+          position: absolute;
+          left: 0;
+          visibility: visible;
+        }
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: flex-start;
+      }
+      li {
+        list-style: none;
+      }
+      .tito-ticket-price > span {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        font-family: ${fonts.semibold}, sans-serif;
+        margin-bottom: 7px;
+      }
+      .price-was {
+        padding-top: 10px;
+        padding-left: 5px;
+      }
+      .tito-ticket-quantity {
+        margin-left: 90px;
+      }
+      .tito-ticket-quantity::before {
+        content: 'Quantity:';
+        position: absolute;
+        margin-left: -90px;
+        margin-top: 10px;
+        color: black;
+      }
+      .tito-ticket-quantity-field {
+        width: 95px;
+      }
+    `}
+  >
+    <tito-widget
+      discount-code={discountAvailable && 'early'}
+      event="/kent-c-dodds/learn-react-hooks-with-kent"
+    />
+  </div>
+)
 
 export const DaysLeft = () => (
   <Countdown
@@ -37,13 +107,13 @@ export const Counter = () => (
         <div
           css={css`
             padding: 11px 15px;
-            //background: ${lighten(0.4, `${theme.brand.primary}`)};
-            background: white;
-            border: 1px solid #f1f1f1;
+            background: ${lighten(0.41, `${theme.brand.primary}`)};
+            //background: white;
+            //border: 1px solid #f1f1f1;
             span,
             div {
-              //color: ${theme.brand.primary} !important;
-              color: ${theme.colors.body_color};
+              color: ${theme.brand.primary} !important;
+              //color: ${theme.colors.body_color};
             }
             border-radius: 5px;
           `}
@@ -98,7 +168,7 @@ export const Counter = () => (
 )
 
 const CallToAction = props => {
-  const {title, buttonText, link, restProps, light = false} = props
+  const {title, restProps, light = false} = props
   return (
     <div
       id="register"
@@ -141,12 +211,14 @@ const CallToAction = props => {
           margin-bottom: ${rhythm(1)};
           margin-top: 0;
         }
-        h2 {
+        h2,
+        .tito-ticket-price {
           font-size: 48px;
           margin-bottom: 0;
         }
 
-        .button {
+        .button,
+        .tito-submit {
           width: 100%;
           padding: 20px 25px;
           background: ${light ? `${theme.brand.primary}` : 'white'};
@@ -159,7 +231,7 @@ const CallToAction = props => {
             background: ${theme.colors.green_lighten};
           }
         }
-        del {
+        s {
           font-size: 24px;
           text-transform: line-through;
           opacity: 0.8;
@@ -177,8 +249,8 @@ const CallToAction = props => {
           border-radius: 5px 0 0 5px;
           justify-content: space-between;
           padding: ${rhythm(2)};
-          padding-top: ${rhythm(1)};
           ${bpMaxSM} {
+            border-radius: 5px 5px 0 0;
             width: 100%;
             h2 {
               margin-top: 0;
@@ -191,8 +263,9 @@ const CallToAction = props => {
         `}
       >
         <>
-          <h2>$299</h2>
-          <del>$499</del>
+          {titoWidget}
+          {/* <h2>$299</h2>
+          <s>$499</s>
           <p
             css={css`
               ${bpMaxSM} {
@@ -200,13 +273,13 @@ const CallToAction = props => {
               }
             `}
           >
-            Spots left: {SpotsLeft}
-          </p>
+             Spots left: {spotsLeft} 
+          </p>*/}
           <p>{props.children}</p>
         </>
-        <Link to={link} className="button">
+        {/* <Link to={link} className="button">
           {buttonText}
-        </Link>
+        </Link> */}
       </div>
       <div
         css={css`
@@ -220,6 +293,7 @@ const CallToAction = props => {
           box-shadow: inset 10px 0 30px hsla(0, 0%, 0%, 0.05);
           ${bpMaxSM} {
             box-shadow: inset 0 10px 30px hsla(0, 0%, 0%, 0.05);
+            border-radius: 0 0 5px 5px;
           }
           p {
             font-family: ${fonts.light};
@@ -229,15 +303,21 @@ const CallToAction = props => {
             align-items: center;
             text-align: center;
           }
-          background: hsla(0, 0%, 0%, 0.05);
+          //background: hsla(0, 0%, 0%, 0.05);
+          background: #fafafa;
+          border: 1px solid #f1f1f1;
         `}
       >
         {title && <h1>{title}</h1>}
-        <p>
-          Your chance to save <strong>$200</strong> in early bird discount ends
-          in:
-        </p>
-        <Counter />
+        {discountAvailable && (
+          <>
+            <p>
+              Your chance to save <strong>$200</strong> in early bird discount
+              ends in:
+            </p>
+            <Counter />
+          </>
+        )}
       </div>
     </div>
   )

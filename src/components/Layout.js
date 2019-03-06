@@ -166,6 +166,7 @@ function Layout({
         ]}
       >
         <html lang="en" />
+        <script src="https://js.tito.io/v1" async />
         <noscript>This site runs best with JavaScript enabled.</noscript>
       </Helmet>
       <div

@@ -114,12 +114,7 @@ const Banner = ({children, title, date, location, image}) => {
         <div
           css={css`
             display: flex;
-            opacity: 0.8;
             transition: ${theme.transition.ease};
-            :hover {
-              opacity: 1;
-              transition: ${theme.transition.ease};
-            }
           `}
         >
           {date && <time>{date}</time>}
