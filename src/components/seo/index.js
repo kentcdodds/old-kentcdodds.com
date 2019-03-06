@@ -3,7 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 import PropTypes from 'prop-types'
-import SchemaOrg from './SchemaOrg'
+import SchemaOrg from './schema-org'
 import config from '../../../config/website'
 import defaultMetaImage from '../../../static/images/metaImage.jpg'
 

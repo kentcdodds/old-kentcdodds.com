@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './Link'
+import Link from './link'
 import {css} from '@emotion/core'
 import config from '../../config/website'
 

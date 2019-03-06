@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom'
 import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
 import styled from '@emotion/styled'
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
-import Link from '../components/Link'
-import Container from 'components/Container'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import Link from '../components/link'
+import Container from 'components/container'
 import {rhythm, fonts} from '../lib/typography'
 import parseQueryString from '../lib/parse-query-string'
 import theme from '../../config/theme'
@@ -150,15 +150,12 @@ function SubscribeConfirmation() {
       }, 200)
     }
   }, [])
-  React.useEffect(
-    () => {
-      if (showMessage) {
-        setAnimateIn(true)
-        setTimeout(() => setAnimateIn(false), 4000)
-      }
-    },
-    [showMessage],
-  )
+  React.useEffect(() => {
+    if (showMessage) {
+      setAnimateIn(true)
+      setTimeout(() => setAnimateIn(false), 4000)
+    }
+  }, [showMessage])
 
   if (showMessage) {
     return ReactDOM.createPortal(

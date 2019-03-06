@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {css} from '@emotion/core'
 import theme from '../../config/theme'
-import Container from './Container'
+import Container from './container'
 import {Link} from 'gatsby'
 
 const Toggle = ({color = 'white'}) => {
