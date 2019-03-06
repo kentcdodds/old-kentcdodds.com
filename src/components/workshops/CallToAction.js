@@ -6,78 +6,79 @@ import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
 import {lighten} from 'polished'
 
-const discountAvailable = true
-
-const titoWidget = (
-  <div
-    css={css`
-      .tito-ticket {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      .clearfix {
-        display: flex;
-        flex-direction: column;
-      }
-      .tito-badge-link,
-      .tito-discount-code,
-      .tito-ticket-description,
-      .tito-ticket-quantity > span {
-        display: none;
-      }
-      .tito-ticket-name-wrapper {
-        padding: 20px 0;
-      }
-      .tito-ticket-name {
-        visibility: hidden;
-        position: absolute;
-        span {
-          width: 200px;
-          height: auto;
-          position: absolute;
-          left: 0;
-          visibility: visible;
+const TitoWidget = props => {
+  const {discountAvailable} = props
+  return (
+    <div
+      css={css`
+        .tito-ticket {
+          display: flex;
+          flex-direction: column-reverse;
         }
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: flex-start;
-      }
-      li {
-        list-style: none;
-      }
-      .tito-ticket-price > span {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        font-family: ${fonts.semibold}, sans-serif;
-        margin-bottom: 7px;
-      }
-      .price-was {
-        padding-top: 10px;
-        padding-left: 5px;
-      }
-      .tito-ticket-quantity {
-        margin-left: 90px;
-      }
-      .tito-ticket-quantity::before {
-        content: 'Quantity:';
-        position: absolute;
-        margin-left: -90px;
-        margin-top: 10px;
-        color: black;
-      }
-      .tito-ticket-quantity-field {
-        width: 95px;
-      }
-    `}
-  >
-    <tito-widget
-      discount-code={discountAvailable && 'early'}
-      event="/kent-c-dodds/learn-react-hooks-with-kent"
-    />
-  </div>
-)
+        .clearfix {
+          display: flex;
+          flex-direction: column;
+        }
+        .tito-badge-link,
+        .tito-discount-code,
+        .tito-ticket-description,
+        .tito-ticket-quantity > span {
+          display: none;
+        }
+        .tito-ticket-name-wrapper {
+          padding: 20px 0;
+        }
+        .tito-ticket-name {
+          visibility: hidden;
+          position: absolute;
+          span {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            left: 0;
+            visibility: visible;
+          }
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          justify-content: flex-start;
+        }
+        li {
+          list-style: none;
+        }
+        .tito-ticket-price > span {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          font-family: ${fonts.semibold}, sans-serif;
+          margin-bottom: 7px;
+        }
+        .price-was {
+          padding-top: 10px;
+          padding-left: 5px;
+        }
+        .tito-ticket-quantity {
+          margin-left: 90px;
+        }
+        .tito-ticket-quantity::before {
+          content: 'Quantity:';
+          position: absolute;
+          margin-left: -90px;
+          margin-top: 10px;
+          color: black;
+        }
+        .tito-ticket-quantity-field {
+          width: 95px;
+        }
+      `}
+    >
+      <tito-widget
+        discount-code={discountAvailable && 'early'}
+        event="/kent-c-dodds/learn-react-hooks-with-kent"
+      />
+    </div>
+  )
+}
 
 export const DaysLeft = () => (
   <Countdown
@@ -168,7 +169,7 @@ export const Counter = () => (
 )
 
 const CallToAction = props => {
-  const {title, restProps, light = false} = props
+  const {title, restProps, light, discountAvailable} = props
   return (
     <div
       id="register"
@@ -263,7 +264,7 @@ const CallToAction = props => {
         `}
       >
         <>
-          {titoWidget}
+          <TitoWidget discountAvailable={discountAvailable} />
           {/* <h2>$299</h2>
           <s>$499</s>
           <p
