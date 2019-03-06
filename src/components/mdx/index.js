@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Title from './Title'
-import Subtitle from './Subtitle'
-import SmallTitle from './SmallTitle'
-import Paragraph from './Paragraph'
-import List from './List'
-import Code from './Code'
+import Title from './title'
+import Subtitle from './subtitle'
+import SmallTitle from './small-title'
+import Paragraph from './paragraph'
+import List from './list'
+import Code from './code'
 import {preToCodeBlock} from 'mdx-utils'
 
 export default {
