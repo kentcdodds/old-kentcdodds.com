@@ -6,7 +6,7 @@ import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import CalendarIcon from '../../images/icons/calendar.svg'
 import LocationIcon from '../../images/icons/location.svg'
-import {DaysLeft} from './CallToAction'
+import {DaysLeft} from './register'
 
 const Banner = ({children, title, date, location, image}) => {
   return (

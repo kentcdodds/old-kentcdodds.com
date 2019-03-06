@@ -1,10 +1,10 @@
 import React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
+import {lighten} from 'polished'
 import {rhythm, fonts} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
-import {lighten} from 'polished'
 
 const TitoWidget = props => {
   const {discountAvailable} = props
@@ -168,7 +168,7 @@ export const Counter = () => (
   />
 )
 
-const CallToAction = props => {
+const Register = props => {
   const {title, restProps, light, discountAvailable} = props
   return (
     <div
@@ -324,4 +324,4 @@ const CallToAction = props => {
   )
 }
 
-export default CallToAction
+export default Register
