@@ -8,7 +8,7 @@ import CalendarIcon from '../../images/icons/calendar.svg'
 import LocationIcon from '../../images/icons/location.svg'
 import {DaysLeft} from './register'
 
-const Banner = ({children, title, date, location, image}) => {
+const Banner = ({children, title, date, location, buttonText, image}) => {
   return (
     <div
       css={css`
@@ -121,14 +121,17 @@ const Banner = ({children, title, date, location, image}) => {
           {location && <address>{location}</address>}
         </div>
         {children}
-        <DaysLeft />
-        <a
-          href="#register"
-          className="button"
-          aria-label="scroll to registration"
-        >
-          Reserve a spot
-        </a>
+        {/* <DaysLeft /> */}
+        Sold out.
+        {buttonText && (
+          <a
+            href="#register"
+            className="button"
+            aria-label="scroll to registration"
+          >
+            {buttonText}
+          </a>
+        )}
       </div>
       {image && (
         <div

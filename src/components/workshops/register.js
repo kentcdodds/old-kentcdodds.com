@@ -207,7 +207,7 @@ const Register = props => {
             : `${theme.colors.white}`};
         }
         h1 {
-          font-size: 28px;
+          font-size: 24px;
           max-width: ${rhythm(13)};
           margin-bottom: ${rhythm(1)};
           margin-top: 0;
@@ -219,8 +219,10 @@ const Register = props => {
         }
 
         .button,
-        .tito-submit {
+        .tito-submit,
+        .btn-waitlist {
           width: 100%;
+          font-size: 18px;
           padding: 20px 25px;
           background: ${light ? `${theme.brand.primary}` : 'white'};
           text-align: center;
@@ -310,7 +312,7 @@ const Register = props => {
         `}
       >
         {title && <h1>{title}</h1>}
-        {discountAvailable && (
+        {/* {discountAvailable && (
           <>
             <p>
               Your chance to save <strong>$200</strong> in early bird discount
@@ -318,7 +320,7 @@ const Register = props => {
             </p>
             <Counter />
           </>
-        )}
+        )} */}
       </div>
     </div>
   )
