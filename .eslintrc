@@ -1,6 +1,10 @@
 {
-  "extends": ["kentcdodds", "kentcdodds/react", "kentcdodds/jsx-a11y"],
-  "plugins": ["jest"],
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/react",
+    "kentcdodds/jsx-a11y",
+    "kentcdodds/jest"
+  ],
   "rules": {
     "import/no-unresolved": "off",
     "react/prop-types": "off",
@@ -9,8 +13,5 @@
     "babel/camelcase": "off",
     "jsx-a11y/label-has-for": "off",
     "max-lines-per-function": "off"
-  },
-  "env": {
-    "jest/globals": true
   }
 }
