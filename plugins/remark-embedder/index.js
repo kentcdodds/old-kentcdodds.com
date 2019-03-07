@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const visit = require('unist-util-visit')
 const getYouTubeHTML = require('./get-youtube-html')
 const getTwitterHTML = require('./get-twitter-html')

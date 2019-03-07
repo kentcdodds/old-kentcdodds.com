@@ -291,3 +291,5 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     })
   }
 }
+
+/* eslint consistent-return:0 */

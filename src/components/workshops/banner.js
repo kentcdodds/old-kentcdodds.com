@@ -6,7 +6,6 @@ import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import CalendarIcon from '../../images/icons/calendar.svg'
 import LocationIcon from '../../images/icons/location.svg'
-import {DaysLeft} from './register'
 
 const Banner = ({children, title, date, location, buttonText, image}) => {
   return (
@@ -15,8 +14,6 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
         background: white;
         border-radius: 5px;
         padding: 40px;
-        //margin-left: -40px;
-        //margin-right: -40px;
         ${bpMaxSM} {
           padding: 20px;
           margin-left: 0;
@@ -121,7 +118,6 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
           {location && <address>{location}</address>}
         </div>
         {children}
-        {/* <DaysLeft /> */}
         Sold out.
         {buttonText && (
           <a
