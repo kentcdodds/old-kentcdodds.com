@@ -27,7 +27,7 @@ function PostSubmissionMessage() {
       <Message
         illustration={PleaseConfirmIllustration}
         title="Great, one last thing..."
-        body="I just sent you an email with the confirmation link. 
+        body="I just sent you an email with the confirmation link.
           **Please check your inbox!**"
       />
     </div>
@@ -194,14 +194,15 @@ function Subscribe({style}) {
                     className="field-error"
                   />
                 </div>
-                <Field
-                  aria-label="your first name"
-                  aria-required="false"
-                  name="first_name"
-                  placeholder="Jane"
-                  type="text"
-                />
               </label>
+              <Field
+                id="first_name"
+                aria-label="your first name"
+                aria-required="false"
+                name="first_name"
+                placeholder="Jane"
+                type="text"
+              />
               <label htmlFor="email">
                 <div
                   css={css`
@@ -217,14 +218,15 @@ function Subscribe({style}) {
                     className="field-error"
                   />
                 </div>
-                <Field
-                  aria-label="your email address"
-                  aria-required="true"
-                  name="email_address"
-                  placeholder="jane@acme.com"
-                  type="email"
-                />
               </label>
+              <Field
+                id="email"
+                aria-label="your email address"
+                aria-required="true"
+                name="email_address"
+                placeholder="jane@acme.com"
+                type="email"
+              />
               <button data-element="submit" type="submit">
                 {!loading && 'Subscribe'}
                 {loading && 'Submitting...'}
