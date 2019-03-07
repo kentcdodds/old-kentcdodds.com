@@ -1,5 +1,10 @@
 {
-  "extends": ["kentcdodds", "kentcdodds/react", "kentcdodds/jsx-a11y"],
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/react",
+    "kentcdodds/jsx-a11y",
+    "kentcdodds/jest"
+  ],
   "rules": {
     "import/no-unresolved": "off",
     "react/prop-types": "off",
