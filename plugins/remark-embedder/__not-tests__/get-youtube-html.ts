@@ -7,16 +7,16 @@ import {
 
 cases(
   'url validation',
-  ({ url, valid }: { url: string; valid: boolean }) => {
+  ({url, valid}: {url: string; valid: boolean}) => {
     expect(shouldTransform(url)).toBe(valid)
   },
   {
-    nothing: { url: 'nothing', valid: false },
+    nothing: {url: 'nothing', valid: false},
     'not a url but with youtube in it': {
       url: 'not a youtube url',
       valid: false,
     },
-    'url with youtube': { url: 'https://not-a-youtube-url.com', valid: false },
+    'url with youtube': {url: 'https://not-a-youtube-url.com', valid: false},
     'short url': {
       url: 'https://youtu.be/dQw4w9WgXcQ',
       valid: true,
@@ -24,11 +24,11 @@ cases(
   },
 )
 
-type Options = { url: string; iframe: string }
+type Options = {url: string; iframe: string}
 
 cases(
   'get youtube ids',
-  ({ url, iframe }: Options) => {
+  ({url, iframe}: Options) => {
     expect(getYouTubeIFrameSrc(url)).toBe(iframe)
   },
   {
@@ -73,14 +73,14 @@ cases(
 
 cases(
   'getTimeValueInSeconds',
-  ({ value, seconds }) => {
+  ({value, seconds}) => {
     expect(getTimeValueInSeconds(value)).toBe(seconds)
   },
   [
-    { value: '23s', seconds: '23' },
-    { value: '2m1s', seconds: '121' },
-    { value: '1h', seconds: '3600' },
-    { value: '1h1m1s', seconds: '3661' },
+    {value: '23s', seconds: '23'},
+    {value: '2m1s', seconds: '121'},
+    {value: '1h', seconds: '3600'},
+    {value: '1h1m1s', seconds: '3661'},
   ].map(opts => ({
     name: `${opts.value} -> ${opts.seconds}`,
     ...opts,

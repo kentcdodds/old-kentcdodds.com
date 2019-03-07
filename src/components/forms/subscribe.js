@@ -194,14 +194,14 @@ function Subscribe({style}) {
                     className="field-error"
                   />
                 </div>
-                <Field
-                  aria-label="your first name"
-                  aria-required="false"
-                  name="first_name"
-                  placeholder="Jane"
-                  type="text"
-                />
               </label>
+              <Field
+                id="first_name"
+                aria-required="false"
+                name="first_name"
+                placeholder="Jane"
+                type="text"
+              />
               <label htmlFor="email">
                 <div
                   css={css`
@@ -217,14 +217,14 @@ function Subscribe({style}) {
                     className="field-error"
                   />
                 </div>
-                <Field
-                  aria-label="your email address"
-                  aria-required="true"
-                  name="email_address"
-                  placeholder="jane@acme.com"
-                  type="email"
-                />
               </label>
+              <Field
+                id="email"
+                aria-required="true"
+                name="email_address"
+                placeholder="jane@acme.com"
+                type="email"
+              />
               <button data-element="submit" type="submit">
                 {!loading && 'Subscribe'}
                 {loading && 'Submitting...'}

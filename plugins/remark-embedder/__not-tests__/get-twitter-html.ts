@@ -1,6 +1,6 @@
 import cases from 'jest-in-case'
 import fetchMock from 'node-fetch'
-import getTwitterHtml, { shouldTransform } from '../get-twitter-html'
+import getTwitterHtml, {shouldTransform} from '../get-twitter-html'
 
 jest.mock('node-fetch', () =>
   jest.fn().mockResolvedValue({
@@ -20,16 +20,16 @@ beforeEach(() => {
 
 cases(
   'url validation',
-  ({ url, valid }: { url: string; valid: boolean }) => {
+  ({url, valid}: {url: string; valid: boolean}) => {
     expect(shouldTransform(url)).toBe(valid)
   },
   {
-    nothing: { url: 'nothing', valid: false },
+    nothing: {url: 'nothing', valid: false},
     'not a url but with twitter in it': {
       url: 'not a twitter url',
       valid: false,
     },
-    'url with twitter': { url: 'https://not-a-twitter-url.com', valid: false },
+    'url with twitter': {url: 'https://not-a-twitter-url.com', valid: false},
     'not a status': {
       url: 'https://twitter.com/mentions',
       valid: false,
