@@ -71,6 +71,7 @@ exports.createPages = async ({actions, graphql}) => {
         slug
         description
         date
+        redirects
       }
       code {
         scope
