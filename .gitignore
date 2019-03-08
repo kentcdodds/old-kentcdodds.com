@@ -33,3 +33,4 @@ public
 
 cypress/videos
 cypress/screenshots
+.env
