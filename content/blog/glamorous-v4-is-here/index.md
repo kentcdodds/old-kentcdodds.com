@@ -248,7 +248,6 @@ platforms.
 
 ![glamorous-primitives loaded in Sketch, native iOS, and the browser](./images/0.gif)
 
-
 Here's the code from that example:
 
 ```jsx
@@ -427,7 +426,6 @@ make it easier than ever to build React applications with maintainable CSS.
 ![See you on twitter!](./images/4.png)
 
 [See you on twitter! @glamorousCSS](https://twitter.com/glamorousCSS)
-
 
 **Please share this with your friends and family.** You can share it via
 Medium's 💚,

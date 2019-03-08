@@ -1,4 +1,5 @@
 # Kent C. Dodds personal website
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors)
 
 This was bootstrapped via
@@ -48,7 +49,8 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+Thanks goes to these wonderful people
+([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
@@ -57,6 +59,9 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 | [<img src="https://avatars1.githubusercontent.com/u/12673605?v=4" width="100px;" alt="Ahmed T. Ali"/><br /><sub><b>Ahmed T. Ali</b></sub>](https://ahmed.sd)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=z0al "Code") | [<img src="https://avatars2.githubusercontent.com/u/18516855?v=4" width="100px;" alt="Maciej Leszczyński"/><br /><sub><b>Maciej Leszczyński</b></sub>](http://asista.pl)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=asistapl "Code") | [<img src="https://avatars0.githubusercontent.com/u/2705717?v=4" width="100px;" alt="Ken Greeff"/><br /><sub><b>Ken Greeff</b></sub>](http://www.kengreeff.com)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=kengreeff "Code") | [<img src="https://avatars1.githubusercontent.com/u/450495?v=4" width="100px;" alt="Andrew Torres"/><br /><sub><b>Andrew Torres</b></sub>](https://andrewjtorr.es)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=ajtorres9 "Code") | [<img src="https://avatars1.githubusercontent.com/u/2944237?v=4" width="100px;" alt="Gokulakrishnan Kalaikovan"/><br /><sub><b>Gokulakrishnan Kalaikovan</b></sub>](https://gokul.site)<br />[🖋](#content-gokulkrishh "Content") | [<img src="https://avatars3.githubusercontent.com/u/9272629?v=4" width="100px;" alt="Piotr lasota"/><br /><sub><b>Piotr lasota</b></sub>](https://github.com/lasota-piotr)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=lasota-piotr "Code") | [<img src="https://avatars2.githubusercontent.com/u/5922913?v=4" width="100px;" alt="Chris Lusk"/><br /><sub><b>Chris Lusk</b></sub>](https://www.chrismlusk.com)<br />[🖋](#content-chrismlusk "Content") |
 | [<img src="https://avatars0.githubusercontent.com/u/894797?v=4" width="100px;" alt="Adam Laycock"/><br /><sub><b>Adam Laycock</b></sub>](https://adamlaycock.ca)<br />[🖋](#content-alaycock "Content") | [<img src="https://avatars3.githubusercontent.com/u/2327532?v=4" width="100px;" alt="Zama Khan Mohammed"/><br /><sub><b>Zama Khan Mohammed</b></sub>](https://www.linkedin.com/in/mohammedzamakhan)<br />[🐛](https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3Amohammedzamakhan "Bug reports") | [<img src="https://avatars2.githubusercontent.com/u/15987317?v=4" width="100px;" alt="Juan David Castro"/><br /><sub><b>Juan David Castro</b></sub>](http://juandc.co)<br />[🐛](https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3Ajuandc "Bug reports") | [<img src="https://avatars1.githubusercontent.com/u/8465237?v=4" width="100px;" alt="Sung M. Kim"/><br /><sub><b>Sung M. Kim</b></sub>](https://twitter.com/dance2die)<br />[🖋](#content-dance2die "Content") | [<img src="https://avatars0.githubusercontent.com/u/8397708?v=4" width="100px;" alt="Michael Fix"/><br /><sub><b>Michael Fix</b></sub>](https://www.buymeacoffee.com/fix)<br />[🖋](#content-mfix22 "Content") | [<img src="https://avatars1.githubusercontent.com/u/19828824?v=4" width="100px;" alt="Christian Hansen"/><br /><sub><b>Christian Hansen</b></sub>](http://Chriswcs.github.io)<br />[🐛](https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3AChrisWcs "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/4655428?v=4" width="100px;" alt="danielo"/><br /><sub><b>danielo</b></sub>](https://twitter.com/danielofair)<br />[🖋](#content-danielart "Content") |
 | [<img src="https://avatars2.githubusercontent.com/u/3683168?v=4" width="100px;" alt="Brian Mitchell"/><br /><sub><b>Brian Mitchell</b></sub>](https://brianm.me/)<br />[🖋](#content-BrianMitchL "Content") | [<img src="https://avatars0.githubusercontent.com/u/3297859?v=4" width="100px;" alt="Jeff Wen"/><br /><sub><b>Jeff Wen</b></sub>](https://sinchang.me)<br />[💻](https://github.com/kentcdodds/kentcdodds.com/commits?author=sinchang "Code") |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind welcome!

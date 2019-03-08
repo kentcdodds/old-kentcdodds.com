@@ -66,7 +66,7 @@ Here's the little marketing spiel about the course:
 > - Learn the role of webpack and fundamental concepts like loaders and plugins
 
 > - Learn how to setup a webpack file (and use webpack-validator to save
-> yourself hours of debugging typos)
+>   yourself hours of debugging typos)
 
 > - Learn how to setup a unit testing environment for a webpack project
 
@@ -77,7 +77,7 @@ Here's the little marketing spiel about the course:
 > - Learn how to leverage hashing for long term caching
 
 > - Learn how to group vendor/common files with the CommonsChunkPlugin to save
-> bytes in the code that changes regularly
+>   bytes in the code that changes regularly
 
 > - Learn the latest features of Webpack 2!
 

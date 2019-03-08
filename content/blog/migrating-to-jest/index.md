@@ -218,8 +218,9 @@ more tests in the after numbers):
 
 ![before and after comparison of jest tests](./images/0.png)
 
-
-  _If you're unfamiliar with the time command see [this](https://linux.die.net/man/1/time). "real" is the thing we're focusing on here._
+_If you're unfamiliar with the time command see
+[this](https://linux.die.net/man/1/time). "real" is the thing we're focusing
+on here._
 
 _Note: This is with the cache in all cases. I ran the tests several times in a
 row with my machine otherwise idle to get the best numbers I could for all
