@@ -170,15 +170,14 @@ but it was because of a broken test, not broken app code. I honestly cannot
 think of a more annoying test failure situation. Oh well, let's go ahead and fix
 our test:
 
-```jsx
-test('setOpenIndex sets the open index state properly', () => {
-  const wrapper =
-    mount(<Accordion items={[]} />) -
-    expect(wrapper.state('openIndex')).toEqual(0) +
-    expect(wrapper.state('openIndexes')).toEqual([0])
-  wrapper.instance().setOpenIndex(1) -
-    expect(wrapper.state('openIndex')).toEqual(1) +
-    expect(wrapper.state('openIndexes')).toEqual([1])
+```diff
+ test('setOpenIndex sets the open index state properly', () => {
+    const wrapper = mount(<Accordion items={[]} />)
+-   expect(wrapper.state('openIndex')).toEqual(0)
++   expect(wrapper.state('openIndexes')).toEqual([0])
+    wrapper.instance().setOpenIndex(1)
+-   expect(wrapper.state('openIndex')).toEqual(1)
++   expect(wrapper.state('openIndexes')).toEqual([1])
 })
 ```
 
@@ -319,7 +318,7 @@ application code to consider the tests. What a complete waste of time. I don't
 want tests that are written for their own sake. _Automated tests should verify
 that the application code works for the production users._
 
-> [_The more your tests resemble the way your software is used, the more confidence they can give you._](https://twitter.com/kentcdodds/status/977018512689455106)_ — me_
+> _[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106) — me_
 
 Oh, and [React Hooks](https://reactjs.org/hooks) got you all excited? If you
 rewrite that accordion component to use React hooks, the enzyme test fails
@@ -327,7 +326,7 @@ terribly, while the
 [react-testing-library](https://github.com/kentcdodds/react-testing-library)
 test continues to work.
 
-![happy dogs](./images/0.gif)
+![happy goats](./images/0.gif)
 
 ### Conclusion
 
@@ -367,10 +366,10 @@ ever}
 - [React Hooks and Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) — I
   made a free playlist of ~35 minutes worth of videos to demo React Hooks and
   Suspense. Includes two videos about testing hooks!
-- [WPACK.IO](https://wpack.io/) — wpack._io_ is a fine-tuned
-  _webpack/browser-sync_ configuration made specifically for _WordPress Theme
-  and Plugin Development_. It gives a fine Developer Experience (DX) and a
-  single dev dependency for all your*javascript* and _css/sass/scss_ bundling.
+- [WPACK.IO](https://wpack.io/) — _wpack.io is a fine-tuned
+  webpack/browser-sync configuration made specifically for WordPress Theme
+  and Plugin Development. It gives a fine Developer Experience (DX) and a
+  single dev dependency for all your javascript and css/sass/scss bundling._
 - [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) — Really
   interesting take on my
   [shallow rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7)
