@@ -46,7 +46,7 @@ async function generateBlogPost() {
     {
       type: 'input',
       name: 'categories',
-      message: 'Categories (camma separated)',
+      message: 'Categories (comma separated)',
     },
     {
       type: 'input',
