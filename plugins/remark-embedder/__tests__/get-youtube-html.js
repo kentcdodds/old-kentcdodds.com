@@ -7,7 +7,7 @@ import {
 
 cases(
   'url validation',
-  ({url, valid}: {url: string; valid: boolean}) => {
+  ({url, valid}) => {
     expect(shouldTransform(url)).toBe(valid)
   },
   {
@@ -24,11 +24,9 @@ cases(
   },
 )
 
-type Options = {url: string; iframe: string}
-
 cases(
   'get youtube ids',
-  ({url, iframe}: Options) => {
+  ({url, iframe}) => {
     expect(getYouTubeIFrameSrc(url)).toBe(iframe)
   },
   {

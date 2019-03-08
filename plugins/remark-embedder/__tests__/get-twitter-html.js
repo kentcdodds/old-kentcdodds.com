@@ -8,19 +8,18 @@ jest.mock('node-fetch', () =>
       Promise.resolve({
         html: `
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">example</p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/1078755736455278592?ref_src=twsrc%5Etfw">December 28, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     `.trim(),
       }),
   }),
 )
 
 beforeEach(() => {
-  ;((fetchMock as unknown) as jest.Mock).mockClear()
+  fetchMock.mockClear()
 })
 
 cases(
   'url validation',
-  ({url, valid}: {url: string; valid: boolean}) => {
+  ({url, valid}) => {
     expect(shouldTransform(url)).toBe(valid)
   },
   {
