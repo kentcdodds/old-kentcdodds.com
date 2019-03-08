@@ -10,9 +10,8 @@ keywords:
   - React Hooks
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mohamed
-  Nohassi](https://unsplash.com/photos/sNYSV3t2w58?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/search/photos/special-effects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mohamed Nohassi](https://unsplash.com/photos/sNYSV3t2w58) on
+  [Unsplash](https://unsplash.com/search/photos/special-effects)'
 ---
 
 All three of these can be used to do basically the same thing, but some are more
@@ -29,8 +28,8 @@ from `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` to
 **The one catch** is that this runs _after_ react renders your component and
 ensures that your effect callback does not block browser painting. This differs
 from the behavior in class components where `componentDidMount` and
-`componentDidUpdate` run synchronously after rendering. It's more performant this
-way and most of the time this is what you want.
+`componentDidUpdate` run synchronously after rendering. It's more performant
+this way and most of the time this is what you want.
 
 However, if your effect is mutating the DOM (via a DOM node ref) **_and_** the
 DOM mutation will change the appearance of the DOM node between the time that it

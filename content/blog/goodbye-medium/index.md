@@ -9,10 +9,8 @@ keywords:
   - Personal Branding
 banner: ./images/banner.jpg
 bannerCredit:
-  Photo by [Bobby
-  Johnson](https://unsplash.com/photos/swCOXlxmr5U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Bobby Johnson](https://unsplash.com/photos/swCOXlxmr5U) on
+  [Unsplash](https://unsplash.com)
 ---
 
 I've been a blogger for over 15 years. When I was a teenager, I had a blog on

@@ -12,9 +12,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by
-  [rawpixel](https://unsplash.com/photos/1Z15APktAiY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [rawpixel](https://unsplash.com/photos/1Z15APktAiY) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Last year when I was using enzyme (like everyone else at the time), I stepped
@@ -366,10 +365,10 @@ ever}
 - [React Hooks and Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) — I
   made a free playlist of ~35 minutes worth of videos to demo React Hooks and
   Suspense. Includes two videos about testing hooks!
-- [WPACK.IO](https://wpack.io/) — _wpack.io is a fine-tuned
-  webpack/browser-sync configuration made specifically for WordPress Theme
-  and Plugin Development. It gives a fine Developer Experience (DX) and a
-  single dev dependency for all your javascript and css/sass/scss bundling._
+- [WPACK.IO](https://wpack.io/) — *wpack.io is a fine-tuned webpack/browser-sync
+  configuration made specifically for WordPress Theme and Plugin Development. It
+  gives a fine Developer Experience (DX) and a single dev dependency for all
+  your javascript and css/sass/scss bundling.*
 - [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) — Really
   interesting take on my
   [shallow rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7)

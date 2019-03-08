@@ -8,10 +8,8 @@ categories: ['react']
 keywords: ['react', 'javascript', 'hooks']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [karl
-  S](https://unsplash.com/photos/remgiCyeqHI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [karl S](https://unsplash.com/photos/remgiCyeqHI) on
+  [Unsplash](https://unsplash.com)
 ---
 
 A few weeks ago I did a [DevTips with Kent](https://kcd.im/devtips) livestream

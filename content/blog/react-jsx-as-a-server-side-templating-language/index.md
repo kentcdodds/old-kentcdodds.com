@@ -10,9 +10,8 @@ keywords:
   - Jsx
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Dwinanda Nurhanif
-  Mujito](https://unsplash.com/photos/3vp_7D1xd2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Dwinanda Nurhanif Mujito](https://unsplash.com/photos/3vp_7D1xd2A)
+  on [Unsplash](https://unsplash.com)'
 ---
 
 > _Another note:

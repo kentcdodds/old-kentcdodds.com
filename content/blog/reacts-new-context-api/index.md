@@ -11,9 +11,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [JJ
-  Ying](https://unsplash.com/photos/7JX0-bfiuxQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [JJ Ying](https://unsplash.com/photos/7JX0-bfiuxQ) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 > Curious about what's going to happen to the context API when

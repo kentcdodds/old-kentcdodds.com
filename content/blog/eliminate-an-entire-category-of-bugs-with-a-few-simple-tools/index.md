@@ -11,9 +11,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Matt
-  Artz](https://unsplash.com/photos/4mAcustUNPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/tools?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Matt Artz](https://unsplash.com/photos/4mAcustUNPs) on
+  [Unsplash](https://unsplash.com/search/photos/tools)'
 ---
 
 You've probably heard of ESLint, Prettier, and Flow/TypeScript. These are static

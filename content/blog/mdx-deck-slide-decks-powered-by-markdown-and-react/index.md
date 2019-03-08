@@ -10,9 +10,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Ash
-  Edmonds](https://unsplash.com/photos/Koxa-GX_5zs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Ash Edmonds](https://unsplash.com/photos/Koxa-GX_5zs) on
+  [Unsplash](https://unsplash.com/search/photos/computer)'
 ---
 
 I've been giving presentations for years. I like many others started with

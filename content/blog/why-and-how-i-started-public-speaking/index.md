@@ -9,9 +9,8 @@ keywords:
   - Public Speaking
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Bogomil
-  Mihaylov](https://unsplash.com/photos/ekHSHvgr27k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Bogomil Mihaylov](https://unsplash.com/photos/ekHSHvgr27k) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 ![Kent C. Dodds in front of an audience at a meetup](./images/0.jpg)

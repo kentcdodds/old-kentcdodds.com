@@ -13,9 +13,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Stefan
-  Kunze](https://unsplash.com/photos/BiyVuXGiF7s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Stefan Kunze](https://unsplash.com/photos/BiyVuXGiF7s) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 One of the hardest parts of software development is managing state. Life could

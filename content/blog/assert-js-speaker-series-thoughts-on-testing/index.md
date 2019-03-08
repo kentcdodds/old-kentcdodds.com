@@ -9,9 +9,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Vincent
-  Guth](https://unsplash.com/photos/ISI5DlnYvuY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Vincent Guth](https://unsplash.com/photos/ISI5DlnYvuY) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 [The Assert(js) Conference](https://www.assertjs.com/) is just about a month

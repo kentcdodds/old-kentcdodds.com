@@ -11,9 +11,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Paul
-  Gilmore](https://unsplash.com/photos/36plOdZK_uY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Paul Gilmore](https://unsplash.com/photos/36plOdZK_uY) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 In the next few weeks, you're going to get bonus emails from me as I prepare to

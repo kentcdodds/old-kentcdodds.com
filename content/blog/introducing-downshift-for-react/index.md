@@ -14,9 +14,8 @@ keywords:
   - Preact
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Isaac
-  Jenks](https://unsplash.com/photos/j7lTi6MtYgk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Isaac Jenks](https://unsplash.com/photos/j7lTi6MtYgk) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 [_downshift 🏎_](https://github.com/paypal/downshift) _is the primitive you need

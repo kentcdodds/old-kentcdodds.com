@@ -9,10 +9,8 @@ categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [C.
-  Swabdesign](https://unsplash.com/photos/RVeMWH40sls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [C. Swabdesign](https://unsplash.com/photos/RVeMWH40sls) on
+  [Unsplash](https://unsplash.com)
 ---
 
 Whew! What a first day of learning writing in person with a professional. I took

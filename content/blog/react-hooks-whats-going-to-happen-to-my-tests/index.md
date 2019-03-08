@@ -10,9 +10,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mat
-  Reding](https://unsplash.com/photos/OFVMOjjjIic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mat Reding](https://unsplash.com/photos/OFVMOjjjIic) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 One of the most common questions I hear about the upcoming React Hooks feature
@@ -221,12 +220,9 @@ function Counter() {
     Number(window.localStorage.getItem('count') || 0),
   )
   const incrementCount = () => setCount(c => c + 1)
-  useEffect(
-    () => {
-      window.localStorage.setItem('count', count)
-    },
-    [count],
-  )
+  useEffect(() => {
+    window.localStorage.setItem('count', count)
+  }, [count])
   return <button onClick={incrementCount}>{count}</button>
 }
 

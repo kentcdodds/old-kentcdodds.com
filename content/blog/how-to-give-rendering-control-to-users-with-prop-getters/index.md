@@ -12,9 +12,8 @@ keywords:
   - Components
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Annie
-  Spratt](https://unsplash.com/photos/rx1iJ59jRyU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Annie Spratt](https://unsplash.com/photos/rx1iJ59jRyU) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 > If you're an Egghead.io subscriber, you can also learn about this pattern with

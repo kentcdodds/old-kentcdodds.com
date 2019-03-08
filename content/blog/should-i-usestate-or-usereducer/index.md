@@ -9,10 +9,8 @@ categories: ['react']
 keywords: ['react', 'javascript', 'hooks']
 banner: './banner.png'
 bannerCredit:
-  Photo by [Kyle
-  Glenn](https://unsplash.com/photos/IFLgWYlT2fI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/uncertain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Kyle Glenn](https://unsplash.com/photos/IFLgWYlT2fI) on
+  [Unsplash](https://unsplash.com/search/photos/uncertain)
 ---
 
 Whenever there are two things to do the same thing, people inevitably ask: "When

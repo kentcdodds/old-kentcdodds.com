@@ -8,10 +8,8 @@ categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Neil
-  Rosenstech](https://unsplash.com/photos/OxnhDqLcjU4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/mountain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Neil Rosenstech](https://unsplash.com/photos/OxnhDqLcjU4) on
+  [Unsplash](https://unsplash.com/search/photos/mountain)
 ---
 
 Today was awesome. As I've mentioned, I've been to many conferences in my time

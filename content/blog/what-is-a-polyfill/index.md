@@ -9,9 +9,8 @@ keywords:
   - Polyfill
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Everaldo
-  Coelho](https://unsplash.com/photos/2GW4S08kd-8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/search/photos/bridge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Everaldo Coelho](https://unsplash.com/photos/2GW4S08kd-8) on
+  [Unsplash](https://unsplash.com/search/photos/bridge)'
 ---
 
 A few weeks back I found a bug with IE where all the user saw was a blank white

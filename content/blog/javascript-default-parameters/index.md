@@ -9,9 +9,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Jude
-  Beck](https://unsplash.com/photos/YErQe8LQkyA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Jude Beck](https://unsplash.com/photos/YErQe8LQkyA) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Today I thought I'd take you through one of the examples from

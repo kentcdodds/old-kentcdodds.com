@@ -9,9 +9,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [tom
-  coe](https://unsplash.com/photos/cWprUH8sZ9M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/traffic-light?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [tom coe](https://unsplash.com/photos/cWprUH8sZ9M) on
+  [Unsplash](https://unsplash.com/search/photos/traffic-light)'
 ---
 
 This is a phrase I first heard from

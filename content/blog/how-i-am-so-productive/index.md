@@ -12,9 +12,8 @@ keywords:
   - Self Improvement
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [lalo
-  Hernandez](https://unsplash.com/photos/2p7BD4T5GSE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/fast?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [lalo Hernandez](https://unsplash.com/photos/2p7BD4T5GSE) on
+  [Unsplash](https://unsplash.com/search/photos/fast)'
 ---
 
 I get asked about this at least twice a week, so I thought I'd save myself some

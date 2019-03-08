@@ -12,11 +12,8 @@ keywords:
   - Jsx
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Matt
-  Bowden](https://unsplash.com/photos/Er3WYEslTBk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  (plus the react_logo)'
+  'Photo by [Matt Bowden](https://unsplash.com/photos/Er3WYEslTBk) on
+  [Unsplash](https://unsplash.com) (plus the react_logo)'
 ---
 
 I think a critical part of understanding how to use React effectively is

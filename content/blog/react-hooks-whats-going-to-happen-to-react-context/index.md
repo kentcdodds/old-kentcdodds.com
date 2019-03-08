@@ -13,9 +13,8 @@ keywords:
   - React Hooks
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Joel
-  Fulgencio](https://unsplash.com/photos/VSrHD079L78?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Joel Fulgencio](https://unsplash.com/photos/VSrHD079L78) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Earlier this year, the React team introduced the first official context API.

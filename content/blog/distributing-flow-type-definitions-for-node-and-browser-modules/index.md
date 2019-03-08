@@ -12,9 +12,8 @@ keywords:
   - Flowtype
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Bill
-  Williams](https://unsplash.com/photos/ozwiCDVCeiw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Bill Williams](https://unsplash.com/photos/ozwiCDVCeiw) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This week I spent a lot of time working on improving

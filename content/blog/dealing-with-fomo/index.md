@@ -10,9 +10,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [frank
-  mckenna](https://unsplash.com/photos/iVVBVb2RqLc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [frank mckenna](https://unsplash.com/photos/iVVBVb2RqLc) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 🚨 **Announcements** 🚨

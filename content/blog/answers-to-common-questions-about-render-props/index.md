@@ -9,9 +9,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Sharon
-  McCutcheon](https://unsplash.com/photos/gYxVSeZazXU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Sharon McCutcheon](https://unsplash.com/photos/gYxVSeZazXU) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 As I was preparing this article, I was getting ready to give a training to

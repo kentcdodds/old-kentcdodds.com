@@ -11,9 +11,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Jonny
-  Caspari](https://unsplash.com/photos/DVzt7cvRKRo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/struggle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Jonny Caspari](https://unsplash.com/photos/DVzt7cvRKRo) on
+  [Unsplash](https://unsplash.com/search/photos/struggle)'
 ---
 
 The argument is long ended: **You should be testing your mission-critical

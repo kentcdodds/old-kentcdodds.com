@@ -9,10 +9,8 @@ categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Ben
-  White](https://unsplash.com/photos/qDY9ahp0Mto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/finished-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Ben White](https://unsplash.com/photos/qDY9ahp0Mto) on
+  [Unsplash](https://unsplash.com/search/photos/finished-book)
 ---
 
 # How did we get here?

@@ -11,9 +11,8 @@ keywords:
   - Teaching
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Aaron
-  Burden](https://unsplash.com/photos/BojuZpqw4zM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Aaron Burden](https://unsplash.com/photos/BojuZpqw4zM) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 — [ashley williams](https://medium.com/u/1978eb600702) on

@@ -10,9 +10,8 @@ keywords:
   - Babel
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mervyn
-  Chan](https://unsplash.com/photos/RFXxBTHze_M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mervyn Chan](https://unsplash.com/photos/RFXxBTHze_M) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 If you haven't heard,

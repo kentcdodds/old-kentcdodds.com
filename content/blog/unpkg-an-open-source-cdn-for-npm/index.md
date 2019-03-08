@@ -10,9 +10,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [David
-  Marcu](https://unsplash.com/photos/TQVu4pnjTbc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/cloud-mountain?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [David Marcu](https://unsplash.com/photos/TQVu4pnjTbc) on
+  [Unsplash](https://unsplash.com/search/photos/cloud-mountain)'
 ---
 
 A few years ago, [Michael Jackson](https://twitter.com/mjackson) had an idea. He

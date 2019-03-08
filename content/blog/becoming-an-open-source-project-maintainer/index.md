@@ -6,9 +6,8 @@ author: Kent C. Dodds
 description: _Some tips and tricks that have worked for me._
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Will
-  Oey](https://unsplash.com/photos/GtYFwFrFbMA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Will Oey](https://unsplash.com/photos/GtYFwFrFbMA) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I have a lot of open source projects that I maintain. I have personally

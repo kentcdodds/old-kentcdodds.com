@@ -9,10 +9,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  Photo by [Martin
-  Sanchez](https://unsplash.com/photos/PgQgGuCGZNw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/lines?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Martin Sanchez](https://unsplash.com/photos/PgQgGuCGZNw) on
+  [Unsplash](https://unsplash.com/search/photos/lines)
 ---
 
 In January 2018, [Brian Vaughn](https://twitter.com/brian_d_vaughn)

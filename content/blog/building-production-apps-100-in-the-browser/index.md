@@ -10,9 +10,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [BRUNO
-  CERVERA](https://unsplash.com/photos/azsk_6IMT3I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [BRUNO CERVERA](https://unsplash.com/photos/azsk_6IMT3I) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Earlier, [I mentioned](https://blog.kentcdodds.com/merry-christmas-77b4380b8cf9)

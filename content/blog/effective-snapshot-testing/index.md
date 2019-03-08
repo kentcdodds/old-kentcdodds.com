@@ -13,9 +13,8 @@ keywords:
   - Snapshot Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Paul
-  Skorupskas](https://unsplash.com/photos/7KLa-xLbSXA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Paul Skorupskas](https://unsplash.com/photos/7KLa-xLbSXA) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I guess I've been on a bit of a testing kick recently, I promise this newsletter
@@ -298,9 +297,9 @@ diff).
   composition of React components
 - [`eslint-plugin-no-editor-code`](https://github.com/lukebelliveau/eslint-plugin-no-editor-code)
   - ESlint plugin to remove vscode folding comments. Because
-  [code folding is super annoying](https://twitter.com/kentcdodds/status/918321670183514119).
-- [`is-ci`](https://github.com/watson/is-ci) - Detect if your code is running
-  on a CI server
+    [code folding is super annoying](https://twitter.com/kentcdodds/status/918321670183514119).
+- [`is-ci`](https://github.com/watson/is-ci) - Detect if your code is running on
+  a CI server
   ([I used this recently](https://twitter.com/kentcdodds/status/918605888373559296)
   and it was great)
 - [`pullit`](https://github.com/jkup/pullit) - Display and pull branches from

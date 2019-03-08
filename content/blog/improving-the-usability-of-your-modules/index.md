@@ -10,9 +10,8 @@ keywords:
   - Open Source
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by
-  [NASA](https://unsplash.com/photos/rTZW4f02zY8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [NASA](https://unsplash.com/photos/rTZW4f02zY8) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week I worked on my team's internationalization (aka `i18n`) solution.

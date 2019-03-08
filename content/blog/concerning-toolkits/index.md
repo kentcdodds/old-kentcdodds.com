@@ -11,9 +11,8 @@ keywords:
   - Tools
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [elizabeth
-  lies](https://unsplash.com/photos/LUP8Tnwy7Ro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [elizabeth lies](https://unsplash.com/photos/LUP8Tnwy7Ro) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Current Translations:

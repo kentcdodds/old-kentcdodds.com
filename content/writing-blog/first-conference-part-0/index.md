@@ -8,10 +8,8 @@ categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Jonas
-  Jacobsson](https://unsplash.com/photos/0FRJ2SCuY4k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/nervous-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Jonas Jacobsson](https://unsplash.com/photos/0FRJ2SCuY4k) on
+  [Unsplash](https://unsplash.com/search/photos/nervous-book)
 ---
 
 Biggest feeling right now: Excitement. Tomorrow I'm attending the workshop day

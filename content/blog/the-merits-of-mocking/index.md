@@ -11,8 +11,8 @@ keywords:
 banner: ./images/banner.jpg
 bannerCredit:
   "Photo by [Charles Deluvio
-  \U0001F1F5\U0001F1ED\U0001F1E8\U0001F1E6](https://unsplash.com/photos/pOUA8Xay514?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)"
+  \U0001F1F5\U0001F1ED\U0001F1E8\U0001F1E6](https://unsplash.com/photos/pOUA8Xay514)
+  on [Unsplash](https://unsplash.com)"
 ---
 
 > _The more your tests resemble the way your software is used, the more

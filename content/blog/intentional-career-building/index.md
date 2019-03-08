@@ -9,10 +9,8 @@ categories: ['career']
 keywords: ['career', 'social media', 'branding']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Radek
-  Grzybowski](https://unsplash.com/photos/8tem2WpFPhM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/stack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Radek Grzybowski](https://unsplash.com/photos/8tem2WpFPhM) on
+  [Unsplash](https://unsplash.com/search/photos/stack)
 ---
 
 I've been thinking a lot about this newsletter and what I want to do with it.

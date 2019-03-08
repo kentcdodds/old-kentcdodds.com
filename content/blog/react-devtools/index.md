@@ -9,9 +9,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Aron
-  Visuals](https://unsplash.com/photos/_l4yffWjgt4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Aron Visuals](https://unsplash.com/photos/_l4yffWjgt4) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week I had someone criticize using React component state because:

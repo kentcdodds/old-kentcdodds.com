@@ -8,10 +8,8 @@ categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Anton Darius |
-  @theSollers](https://unsplash.com/photos/5Kt4DKFUiQk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/magic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Anton Darius | @theSollers](https://unsplash.com/photos/5Kt4DKFUiQk)
+  on [Unsplash](https://unsplash.com/search/photos/magic)
 ---
 
 I had a great day today as well. Here are the sessions I attended at day 2 of

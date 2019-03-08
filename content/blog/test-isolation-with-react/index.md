@@ -12,9 +12,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mika
-  Matin](https://unsplash.com/photos/MMylZHPsO2I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/alone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mika Matin](https://unsplash.com/photos/MMylZHPsO2I) on
+  [Unsplash](https://unsplash.com/search/photos/alone)'
 ---
 
 **Read to the end, I've got some cool things in the "things not to miss"
@@ -53,8 +52,8 @@ class Counter extends React.Component {
   state = this.initialState
   handleReset = () => this.setState(this.initialState)
   handleClick = () =>
-    this.setState(
-      ({count}) => (this.clicksAreTooMany(count) ? null : {count: count + 1}),
+    this.setState(({count}) =>
+      this.clicksAreTooMany(count) ? null : {count: count + 1},
     )
   clicksAreTooMany(count) {
     return count >= this.props.maxClicks

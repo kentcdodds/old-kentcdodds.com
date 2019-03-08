@@ -12,9 +12,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Teddy
-  Kelley](https://unsplash.com/photos/okavjRLgnjo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Teddy Kelley](https://unsplash.com/photos/okavjRLgnjo) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I remember a few years ago when I got started with React I decided I needed to

@@ -10,9 +10,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by
-  [rawpixel.com](https://unsplash.com/photos/AWX44zfMV-M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [rawpixel.com](https://unsplash.com/photos/AWX44zfMV-M) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 _Let's make a component that supports Render Props, Component Injection,

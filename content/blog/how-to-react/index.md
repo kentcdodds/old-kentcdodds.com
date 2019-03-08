@@ -11,9 +11,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Artem
-  Sapegin](https://unsplash.com/photos/7UYzLZB9BM0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Artem Sapegin](https://unsplash.com/photos/7UYzLZB9BM0) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week I gave

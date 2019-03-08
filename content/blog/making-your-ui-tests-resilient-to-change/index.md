@@ -14,9 +14,8 @@ keywords:
   - Integration Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Warren
-  Wong](https://unsplash.com/photos/tHiGKAJxaA8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Warren Wong](https://unsplash.com/photos/tHiGKAJxaA8) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 You're a developer and you want to avoid shipping a broken login experience, so
@@ -26,32 +25,32 @@ you're writing some tests to make sure you don't. Let's get a quick look at
 ![Login form from the Conduit App](./images/0.png)
 
 ```jsx
-const form = (  
-  <form onSubmit={this.submitForm}>  
-    <fieldset>  
-      <fieldset className="form-group">  
-        <input  
-          className="email-field form-control form-control-lg"  
-          type="email"  
-          placeholder="Email"  
-        />  
-      </fieldset>  
-      <fieldset className="form-group">  
-        <input  
-          className="password-field form-control form-control-lg"  
-          type="password"  
-          placeholder="Password"  
-        />  
-      </fieldset>  
-      <button  
-        className="btn btn-lg btn-primary pull-xs-right"  
-        type="submit"  
-        disabled={this.props.inProgress}  
-      >  
-        Sign in  
-      </button>  
-    </fieldset>  
-  </form>  
+const form = (
+  <form onSubmit={this.submitForm}>
+    <fieldset>
+      <fieldset className="form-group">
+        <input
+          className="email-field form-control form-control-lg"
+          type="email"
+          placeholder="Email"
+        />
+      </fieldset>
+      <fieldset className="form-group">
+        <input
+          className="password-field form-control form-control-lg"
+          type="password"
+          placeholder="Password"
+        />
+      </fieldset>
+      <button
+        className="btn btn-lg btn-primary pull-xs-right"
+        type="submit"
+        disabled={this.props.inProgress}
+      >
+        Sign in
+      </button>
+    </fieldset>
+  </form>
 )
 ```
 

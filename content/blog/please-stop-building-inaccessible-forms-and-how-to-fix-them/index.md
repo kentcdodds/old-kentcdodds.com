@@ -11,10 +11,8 @@ keywords:
   - Forms
 banner: ./images/banner.jpg
 bannerCredit:
-  Photo by [Goran
-  Ivos](https://unsplash.com/photos/iacpoKgpBAM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Goran Ivos](https://unsplash.com/photos/iacpoKgpBAM) on
+  [Unsplash](https://unsplash.com/search/photos/computer)
 ---
 
 > Note, today's blog post is very heavily inspired by the

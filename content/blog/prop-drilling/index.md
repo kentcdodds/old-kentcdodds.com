@@ -11,9 +11,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Simon
-  Caspersen](https://unsplash.com/photos/oJ7SV6vQfBA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/drill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Simon Caspersen](https://unsplash.com/photos/oJ7SV6vQfBA) on
+  [Unsplash](https://unsplash.com/search/photos/drill)'
 ---
 
 The goal of this post is to not only help you understand what prop drilling is

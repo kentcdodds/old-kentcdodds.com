@@ -12,9 +12,8 @@ keywords:
   - Render Props
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Erwan
-  Hesry](https://unsplash.com/photos/h-ACUrBngrw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Erwan Hesry](https://unsplash.com/photos/h-ACUrBngrw) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 > _🚨 Announcement: I am now on Patreon! Support these newsletters and other

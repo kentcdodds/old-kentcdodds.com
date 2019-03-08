@@ -9,9 +9,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Geran de
-  Klerk](https://unsplash.com/photos/KsMD_tAdjg0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Geran de Klerk](https://unsplash.com/photos/KsMD_tAdjg0) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 ### Myth 1: "Tests always break when I make any changes to the code"

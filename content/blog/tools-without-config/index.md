@@ -13,9 +13,8 @@ keywords:
   - Create React App
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [LoboStudio
-  Hamburg](https://unsplash.com/photos/E3rMBrxqKRo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [LoboStudio Hamburg](https://unsplash.com/photos/E3rMBrxqKRo) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I work on a team at PayPal that tries to make other teams more productive. One

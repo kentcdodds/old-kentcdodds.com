@@ -11,9 +11,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Jeremy
-  Bishop](https://unsplash.com/photos/KputBgWH-Ek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/turtle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Jeremy Bishop](https://unsplash.com/photos/KputBgWH-Ek) on
+  [Unsplash](https://unsplash.com/search/photos/turtle)'
 ---
 
 ### Mistake Number 0

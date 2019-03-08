@@ -10,9 +10,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Geoff
-  Greenwood](https://unsplash.com/photos/Dj5evF5JCjI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Geoff Greenwood](https://unsplash.com/photos/Dj5evF5JCjI) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 My heart aches for the dozens of engineer's I've met so far **this year** who

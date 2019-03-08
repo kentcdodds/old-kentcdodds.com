@@ -11,9 +11,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Rob
-  Potter](https://unsplash.com/photos/mrZVkCKyaPk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/goat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Rob Potter](https://unsplash.com/photos/mrZVkCKyaPk) on
+  [Unsplash](https://unsplash.com/search/photos/goat)'
 ---
 
 Two weeks ago, I wrote

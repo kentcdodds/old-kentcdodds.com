@@ -12,9 +12,8 @@ keywords:
   - Render Props
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Nadine
-  Shaabana](https://unsplash.com/photos/anXB3AhQcJ0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/inverted?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Nadine Shaabana](https://unsplash.com/photos/anXB3AhQcJ0) on
+  [Unsplash](https://unsplash.com/search/photos/inverted)'
 ---
 
 About a year ago, I published

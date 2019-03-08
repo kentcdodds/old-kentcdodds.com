@@ -8,9 +8,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Marion
-  Michele](https://unsplash.com/photos/z_eFLP9aS6s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Marion Michele](https://unsplash.com/photos/z_eFLP9aS6s) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 With
@@ -193,11 +192,11 @@ render props (as opposed to the static composability of the old API).
 
 One very common pitfall that I'm sure we'll be battling with forever is the
 importance that the `value` prop you give to the `Provider` component is only
-changed when you want consumers to re-render. **This means that doing 
-`value={{on: this.state.on, toggle: this.toggle}}` in our `render` 
-method is inadvisable because that creates a new object every time
-`render` is called, even if state didn't actually change.** Because it's a
-new object, all the consumers will also be re-rendered.
+changed when you want consumers to re-render. **This means that doing
+`value={{on: this.state.on, toggle: this.toggle}}` in our `render` method is
+inadvisable because that creates a new object every time `render` is called,
+even if state didn't actually change.** Because it's a new object, all the
+consumers will also be re-rendered.
 
 The impact of this will vary greatly in practice, but in general it's better to
 provide a value that only changes when state changes (and consumers need to be

@@ -10,9 +10,8 @@ keywords:
   - Render Props
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by
-  [rawpixel.com](https://unsplash.com/photos/noorSVMhuPU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [rawpixel.com](https://unsplash.com/photos/noorSVMhuPU) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Today's newsletter will be short as my time's a bit limited, but I wanted to

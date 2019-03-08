@@ -11,9 +11,8 @@ keywords:
   - Career Advice
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Tadeusz
-  Lakota](https://unsplash.com/photos/i1Mf6EkLf9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Tadeusz Lakota](https://unsplash.com/photos/i1Mf6EkLf9E) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week I had three people complaining to me (in individual interactions)

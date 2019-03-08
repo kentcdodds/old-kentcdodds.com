@@ -14,9 +14,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Philip
-  Veater](https://unsplash.com/photos/eQQfYv7bhwU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/race-car?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Philip Veater](https://unsplash.com/photos/eQQfYv7bhwU) on
+  [Unsplash](https://unsplash.com/search/photos/race-car)'
 ---
 
 _Even better accessibility, React Native and ReasonReact support, even simpler

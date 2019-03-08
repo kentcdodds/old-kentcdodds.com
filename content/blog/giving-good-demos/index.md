@@ -11,9 +11,8 @@ keywords:
   - Demo
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Martin
-  Jernberg](https://unsplash.com/photos/UdURxHDhrgY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Martin Jernberg](https://unsplash.com/photos/UdURxHDhrgY) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 [This week was exhausting](https://twitter.com/kentcdodds/status/931716752047665153)!

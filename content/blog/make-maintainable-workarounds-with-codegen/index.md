@@ -13,9 +13,8 @@ keywords:
   - Macros
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Alexandre
-  Godreau](https://unsplash.com/photos/4NwJVVrsULk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Alexandre Godreau](https://unsplash.com/photos/4NwJVVrsULk) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week [Andrew Blick](https://github.com/blicksky) filed

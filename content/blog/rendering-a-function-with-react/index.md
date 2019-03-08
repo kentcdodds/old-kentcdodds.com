@@ -12,9 +12,8 @@ keywords:
   - ES6
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [paul
-  morris](https://unsplash.com/photos/Ovn1hyBge38?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [paul morris](https://unsplash.com/photos/Ovn1hyBge38) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 **EDIT: This "feature" will soon be removed from React 16, so please don't rely

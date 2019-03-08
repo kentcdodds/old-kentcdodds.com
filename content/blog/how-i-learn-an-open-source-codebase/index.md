@@ -11,9 +11,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Robert
-  Collins](https://unsplash.com/photos/tvc5imO5pXk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/community?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Robert Collins](https://unsplash.com/photos/tvc5imO5pXk) on
+  [Unsplash](https://unsplash.com/search/photos/community)'
 ---
 
 [Participating in open source has been awesome for me](https://blog.kentcdodds.com/how-getting-into-open-source-has-been-awesome-for-me-8480cd756a80).

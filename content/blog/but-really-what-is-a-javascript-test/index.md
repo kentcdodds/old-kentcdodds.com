@@ -12,9 +12,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Joshua
-  Earle](https://unsplash.com/photos/xEh4hvxRKXM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Joshua Earle](https://unsplash.com/photos/xEh4hvxRKXM) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Testing software. There are a ton of reasons we do it. Here are a two of mine:

@@ -9,9 +9,8 @@ keywords:
   - Software Development
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by
-  [rawpixel](https://unsplash.com/photos/75AhQoP-DW0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [rawpixel](https://unsplash.com/photos/75AhQoP-DW0) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I spent the last week at [React Rally](https://www.reactrally.com/) in Salt Lake
@@ -133,7 +132,7 @@ to go.
   remarkably simple method for deploying ES5 and ES2015 code to browsers based
   on whether they support `<script type="module">`. See also:
   [bundle.sh](https://bundle.sh/).
-- [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) - an
-  example by [John Lindquist](https://twitter.com/johnlindquist). Uses
+- [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) - an example
+  by [John Lindquist](https://twitter.com/johnlindquist). Uses
   [`preval`](https://github.com/kentcdodds/babel-plugin-preval) to run mdx.
   Pretty rad TBH :)

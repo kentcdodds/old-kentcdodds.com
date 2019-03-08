@@ -11,9 +11,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Samuel
-  Scrimshaw](https://unsplash.com/photos/kp_87tExCwI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/broken?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Samuel Scrimshaw](https://unsplash.com/photos/kp_87tExCwI) on
+  [Unsplash](https://unsplash.com/search/photos/broken)'
 ---
 
 Did you know that you could write any React Application as a single React

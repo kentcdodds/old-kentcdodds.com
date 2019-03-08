@@ -12,9 +12,8 @@ keywords:
   - Mocking
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Dmitri
-  Popov](https://unsplash.com/photos/cnOlhGQY-SI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/swiss-cheese?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Dmitri Popov](https://unsplash.com/photos/cnOlhGQY-SI) on
+  [Unsplash](https://unsplash.com/search/photos/swiss-cheese)'
 ---
 
 Last year, I gave

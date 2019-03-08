@@ -11,9 +11,8 @@ keywords:
   - Nodejs
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Colin
-  Rex](https://unsplash.com/photos/uDiyX2bdpp4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Colin Rex](https://unsplash.com/photos/uDiyX2bdpp4) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 This last week I started work again after over a month away. What's the first

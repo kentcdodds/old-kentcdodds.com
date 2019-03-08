@@ -8,9 +8,8 @@ keywords:
   - Self Improvement
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Sebastián León
-  Prado](https://unsplash.com/photos/dBiIcdxMWfE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/happiness?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Sebastián León Prado](https://unsplash.com/photos/dBiIcdxMWfE) on
+  [Unsplash](https://unsplash.com/search/photos/happiness)'
 ---
 
 This week in the United States we celebrate

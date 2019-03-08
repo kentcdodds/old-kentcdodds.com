@@ -12,9 +12,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Scott
-  Walsh](https://unsplash.com/photos/CQl3Y5bV6FA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Scott Walsh](https://unsplash.com/photos/CQl3Y5bV6FA) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 With the release of my

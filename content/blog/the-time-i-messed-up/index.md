@@ -12,9 +12,8 @@ keywords:
   - Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Jelleke
-  Vanooteghem](https://unsplash.com/photos/kabtmcdcAbk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/oops?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Jelleke Vanooteghem](https://unsplash.com/photos/kabtmcdcAbk) on
+  [Unsplash](https://unsplash.com/search/photos/oops)'
 ---
 
 We all have stories where automated tests could've saved us from disaster, but I

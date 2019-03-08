@@ -14,9 +14,8 @@ keywords:
   - Angular
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Andrea
-  Natali](https://unsplash.com/photos/3ud_v3x1lZI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/react?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Andrea Natali](https://unsplash.com/photos/3ud_v3x1lZI) on
+  [Unsplash](https://unsplash.com/search/photos/react)'
 ---
 
 I'm **so excited** about the response to my new

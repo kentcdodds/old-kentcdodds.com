@@ -11,9 +11,8 @@ keywords:
   - React
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Geran de
-  Klerk](https://unsplash.com/photos/bKhETeDV1WM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Geran de Klerk](https://unsplash.com/photos/bKhETeDV1WM) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 I don't know that I've ever been more excited about an

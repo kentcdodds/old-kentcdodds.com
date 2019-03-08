@@ -10,9 +10,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mohan
-  Murugesan](https://unsplash.com/photos/aPUi7w4kKbI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on [Unsplash](https://unsplash.com/search/photos/pure?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mohan Murugesan](https://unsplash.com/photos/aPUi7w4kKbI) on
+  [Unsplash](https://unsplash.com/search/photos/pure)'
 ---
 
 A few weeks ago, I saw
@@ -69,7 +68,9 @@ The `c.js` module would need the `index.html` to have been rendered with
 something like:
 
 ```html
-<script type="application/json" id="server-data">{"user": null}</script>
+<script type="application/json" id="server-data">
+  {"user": null}
+</script>
 ```
 
 I expect this code would work in production as expected. There are a few
@@ -102,8 +103,8 @@ Not only did I have to figure out what the error was all about, but I don't even
 need that code to run in the first place!
 
 **As a related (and very important) part of this, you cannot
-[treeshake](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
-that unused code!**
+[treeshake](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking) that
+unused code!**
 
 ### Inability to choose the order of operations 😡
 
@@ -194,10 +195,10 @@ How does this resolve the above problems?
   test as many times, re-initializing the DOM before each test with exactly what
   we need without any trouble or hacks. 🎉
 
-> _Note that the `a.js` module is not pure. At some point one of your
-> modules needs to do something to kick everything off. This is the purpose
-> the `a.js` module is serving. These modules should normally be very
-> small (and often it'll be your `index.js` entry module)._
+> _Note that the `a.js` module is not pure. At some point one of your modules
+> needs to do something to kick everything off. This is the purpose the `a.js`
+> module is serving. These modules should normally be very small (and often
+> it'll be your `index.js` entry module)._
 
 ### Conclusion
 

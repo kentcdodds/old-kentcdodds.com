@@ -9,9 +9,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Vidar
-  Nordli-Mathisen](https://unsplash.com/photos/xgP0GNl9Gzg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Vidar Nordli-Mathisen](https://unsplash.com/photos/xgP0GNl9Gzg) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Have you read the book ["Start With Why"](https://startwithwhy.com/books/)? If

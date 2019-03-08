@@ -14,9 +14,8 @@ keywords:
   - Unit Testing
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Elena
-  Cordery](https://unsplash.com/photos/RLlcbkemwnw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Elena Cordery](https://unsplash.com/photos/RLlcbkemwnw) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Current Available Translations:

@@ -15,10 +15,8 @@ keywords:
   - story grid
 banner: './banner.jpg'
 bannerCredit:
-  Photo by [Aaron
-  Burden](https://unsplash.com/photos/6jYoil2GhVk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on
-  [Unsplash](https://unsplash.com/search/photos/reading?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  Photo by [Aaron Burden](https://unsplash.com/photos/6jYoil2GhVk) on
+  [Unsplash](https://unsplash.com/search/photos/reading)
 ---
 
 This morning I tied my shoes successfully and continued on my day. That's a

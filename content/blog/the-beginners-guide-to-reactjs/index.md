@@ -8,9 +8,8 @@ description: >-
   even developers experienced with React ⚛️_
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Mathias
-  Jensen](https://unsplash.com/photos/5x4U6InVXpc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Mathias Jensen](https://unsplash.com/photos/5x4U6InVXpc) on
+  [Unsplash](https://unsplash.com)'
 ---
 
 Yesterday my two new ReactJS courses were published on

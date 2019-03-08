@@ -11,9 +11,8 @@ keywords:
   - JavaScript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Daniel
-  Wallace](https://unsplash.com/photos/IliTEyruu7U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/waterfall?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  'Photo by [Daniel Wallace](https://unsplash.com/photos/IliTEyruu7U) on
+  [Unsplash](https://unsplash.com/search/photos/waterfall)'
 ---
 
 > Have you heard? I made
