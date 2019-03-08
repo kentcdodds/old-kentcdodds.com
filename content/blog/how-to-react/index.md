@@ -194,13 +194,9 @@ conceptually for you. Here's some resources on why:
 
 - Colocation of concerns
 
-I'm the creator of [glamorous](https://glamorous.rocks/) which I developed for
-PayPal and is a great library. We're loving it and it's quite popular. That
-said, if I were starting an app from scratch today, I would use
-[emotion](https://emotion.sh/). I recommend emotion because I'm pretty sure it
-can do everything glamorous can do, except it's smaller, faster, and more memory
-efficient. There's also [styled-components](https://www.styled-components.com/)
-which is the most popular solution, but I prefer object syntax for my styles.
+I recommend [emotion](https://emotion.sh) because it has all the features you
+could want out of a solution like this and it's the smallest, fastest, and more
+memory efficient solution.
 
 ### And on...
 
@@ -225,21 +221,6 @@ I hope that this gives you (and your friends) a path for how to learn react as
 well as where to start when building React applications. Adding abstractions to
 your application too early makes them less flexible, so I would generally follow
 this pattern when building apps as well. Good luck!
-
-**Learn more about React from me**:
-
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/) — I'm
-  giving my Advanced Component Patterns workshop in person in Minneapolis this
-  week! **You can watch live and totally free on the website homepage during the
-  workshop!**
-- [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Portland in July!
-- [Workshop.me](https://workshop.me/2018-07-es6?a=kent) — I'm giving my ES6 and
-  Beyond workshop in person in Salt Lake City in July!
-- [Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) — I'm giving my
-  Intro to React workshop in person in Salt Lake City in August!
-- [Workshop.me](https://workshop.me/2018-08-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Salt Lake City in August!
 
 **Things to not miss**:
 
