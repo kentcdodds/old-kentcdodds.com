@@ -12,13 +12,8 @@ banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mohamed
   Nohassi](https://unsplash.com/photos/sNYSV3t2w58?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/special-effects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  on [Unsplash](https://unsplash.com/search/photos/special-effects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
-
-> _Note also... If the words "React Hooks" doesn't ring any bells for you, then
-> stop for a moment and_ [_go here_](https://reactjs.org/hooks) _to read/watch
-> about them._ **_NOTE THAT REACT HOOKS ARE NOT STABLE, SO PLEASE KEEP THAT IN
-> MIND WHEN READING THIS BLOG POST._**
 
 All three of these can be used to do basically the same thing, but some are more
 optimal than others. So here are some rules for you to consider when deciding
