@@ -42,7 +42,7 @@ want to dedicate this newsletter to showing you how to get started playing
 around with writing your own.
 
 Let's start off with a contrived macro that can split a string of text and
-replace every space with `🐶`. We'll call it `gemmafy`because my dog's name is
+replace every space with `🐶`. We'll call it `gemmafy` because my dog's name is
 "Gemma." Woof!
 
 1.  Go to [astexplorer.net](https://astexplorer.net/)
@@ -76,8 +76,8 @@ function gemmafyMacro({references, state, babel}) {
 }
 ```
 
-> _Alternatively, you can_ >
-> [_open this_](https://astexplorer.net/#/gist/b93bac9c0cdeddd6a1888ad7e82f4cbe/e84e9536951bd0d6fec76b9b50e5f6b01539a4c5)
+> _Alternatively, you can
+> [open this](https://astexplorer.net/#/gist/9d287441b6bd345f9e113c9c3b2b2aee/d5ebca867a522f8aa0120643883b97b83ee23fb4)_
 
 TADA 🎉! You've written your (probably) very first babel plugin via a macro!
 
@@ -180,8 +180,8 @@ function myMacro({references, state, babel}) {
 Next, open up your developer console and check out the console logs. Have fun
 with that!
 
-> _Alternatively, you can just_ >
-> [_go here_](https://astexplorer.net/#/gist/bee085792657d68468353b868a34a2a6/97e09889c85de1f839717a8b351ad4ec1376501a)
+> _Alternatively, you can just
+> [go here](https://astexplorer.net/#/gist/6efcadfda8975787d515a4a37c1a600a/635ba8b54af89d52171739c43a9a8a41627d461a)_
 
 ### Conclusion
 
