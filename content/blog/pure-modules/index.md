@@ -12,7 +12,7 @@ banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mohan
   Murugesan](https://unsplash.com/photos/aPUi7w4kKbI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-  on_[Unsplash](https://unsplash.com/search/photos/pure?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
+  on [Unsplash](https://unsplash.com/search/photos/pure?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)'
 ---
 
 A few weeks ago, I saw
@@ -68,7 +68,7 @@ export const serverData = JSON.parse(json)
 The `c.js` module would need the `index.html` to have been rendered with
 something like:
 
-```
+```html
 <script type="application/json" id="server-data">{"user": null}</script>
 ```
 
@@ -101,9 +101,9 @@ What's especially annoying is when the wasted effort results in a cryptic error.
 Not only did I have to figure out what the error was all about, but I don't even
 need that code to run in the first place!
 
-**As a related (and very important) part of this, you cannot**
-[**treeshake**](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
-**that unused code!**
+**As a related (and very important) part of this, you cannot
+[treeshake](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
+that unused code!**
 
 ### Inability to choose the order of operations 😡
 
@@ -142,9 +142,9 @@ impure functions. The same applies with modules. What if I wanted to test the
 weird things with the module system to re-import those modules again after
 initializing the DOM differently.
 
-> _With jest, you have_ >
-> [`jest.resetModules()`](https://facebook.github.io/jest/docs/en/jest-object.html#jestresetmodules) >
-> _which makes this much easier, but it's still not super simple, nor is it
+> _With jest, you have
+> [`jest.resetModules()`](https://facebook.github.io/jest/docs/en/jest-object.html#jestresetmodules)
+> which makes this much easier, but it's still not super simple, nor is it
 > straightforward for anyone maintaining those tests._
 
 ### The Alternative
@@ -153,7 +153,7 @@ So here's how I would rewrite things to be pure (in the sense that importing
 modules has no side-effects, though the functions they expose are not pure
 themselves):
 
-```
+```javascript
 // a.js
 import {init} from './b'
 init()
@@ -194,10 +194,10 @@ How does this resolve the above problems?
   test as many times, re-initializing the DOM before each test with exactly what
   we need without any trouble or hacks. 🎉
 
-> _Note that the_ `_a.js_` _module is not pure. At some point one of your
+> _Note that the `a.js` module is not pure. At some point one of your
 > modules needs to do something to kick everything off. This is the purpose
-> the_ > `_a.js_` _module is serving. These modules should normally be very
-> small (and often it'll be your_ `_index.js_`_/entry module)._
+> the `a.js` module is serving. These modules should normally be very
+> small (and often it'll be your `index.js` entry module)._
 
 ### Conclusion
 
@@ -205,18 +205,6 @@ Keeping your modules pure means limiting the amount of stuff they're doing at
 the root-level of the module. It allows you to completely avoid the issues
 mentioned and bring more clarity to your codebase. I hope these examples (while
 slightly contrived) have been helpful. Good luck!
-
-<figcaption>
-  Subscribe now for more content like this directly in your inbox 2 weeks before it's published.
-</figcaption>
-
-**Learn more about JavaScript from me**:
-
-- [Workshop.me](https://workshop.me/2018-07-es6?a=kent) — I'm giving my ES6 and
-  Beyond workshop in person in Salt Lake City in July!
-
-I'm planning on releasing some more JavaScript stuff on
-[egghead.io](http://egghead.io/) soon!
 
 **Things to not miss**:
 
