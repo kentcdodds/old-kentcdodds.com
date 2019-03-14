@@ -171,6 +171,14 @@ start making abstractions.
 Oh, and if you're prototyping, the code can be as unmaintainable as you want :)
 So who cares? Do what's faster.
 
+## One situation when `useReducer` is basically always better
+
+**If your one element of your state relies on the value of another element of
+your state, then it's almost always best to use `useReducer`**
+
+Please ping me on twitter later to update this and explain my reasoning a bit
+more. At the time I'm writing this I need to go to bed. I'll update this later.
+
 ## Conclusion
 
 So what's the answer? Really, it depends. `useState` is literally built on top

@@ -59,18 +59,6 @@ request with a given query string and variables and uses a GitHub graphql client
 that is in React context to make the request. Let's refactor this to a function
 component that uses the hooks useReducer, useContext, and useEffect.
 
-### [Ensure all React useEffect Effects Run Synchronously in Tests with react-testing-library](https://egghead.io/lessons/react-ensure-all-react-useeffect-effects-run-synchronously-in-tests-with-react-testing-library)
-
-Thanks to
-[`react-testing-library`](https://github.com/kentcdodds/react-testing-library)
-our tests are free of implementation details, so when we refactor components to
-hooks we generally don't need to make any changes to our tests. However,
-`useEffect` is slightly different from `componentDidMount` in that it's actually
-executed asynchronously _after_ the render has taken place. So all of our query
-tests which relied on the HTTP requests being sent immediately after render are
-failing. Let's use the `flushEffects`utility from `react-testing-library` to
-ensure that the pending effect callbacks are run before we make assertions.
-
 ### [Handle Deep Object Comparison in React's useEffect hook with the useRef Hook](https://egghead.io/lessons/react-handle-deep-object-comparison-in-react-s-useeffect-hook-with-the-useref-hook)
 
 The second argument to React's `useEffect` hook is an array of dependencies for
