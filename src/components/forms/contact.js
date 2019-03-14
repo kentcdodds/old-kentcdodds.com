@@ -71,16 +71,13 @@ function ContactForm() {
   function handleSubmit(e) {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
+    fetch(`${process.env.NETLIFY_FUNCTIONS_URL}/contact`, {
       method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...getFormValues(form),
-      }),
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(getFormValues(form)),
     }).then(
       () => {
-        navigate(form.getAttribute('action'))
+        navigate('/contact/success')
       },
       error => {
         /* eslint no-alert:0 */
@@ -96,17 +93,12 @@ function ContactForm() {
     <form
       name="contact"
       onSubmit={handleSubmit}
-      method="post"
-      action="/contact/success"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       css={{
         '& > div': {
           marginBottom: 20,
         },
       }}
     >
-      <input type="hidden" name="form-name" value="contact" />
       <div>
         <label htmlFor="name-input">Name</label>
         <br />
@@ -215,22 +207,13 @@ function ContactForm() {
 
 function getFormValues(formNode) {
   return Object.getOwnPropertyNames(formNode.elements).reduce((obj, key) => {
-    if (isNaN(parseInt(key, 10))) {
-      obj[key] = formNode.elements[key].value
+    const formControl = formNode.elements[key]
+    const name = formControl.getAttribute('name')
+    if (name && !obj[name]) {
+      obj[name] = formControl.value
     }
     return obj
   }, {})
-}
-
-function encode(data) {
-  return Object.keys(data)
-    .map(
-      key =>
-        `${window.encodeURIComponent(key)}=${window.encodeURIComponent(
-          data[key],
-        )}`,
-    )
-    .join('&')
 }
 
 export default ContactForm
