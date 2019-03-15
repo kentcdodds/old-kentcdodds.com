@@ -106,6 +106,23 @@ exports.createPages = async ({actions, graphql}) => {
           }
         }
       }
+
+      remoteWorkshops: allMdx(
+        filter: {
+          frontmatter: {published: {ne: false}}
+          fileAbsolutePath: {regex: "//content/workshops//"}
+        }
+        sort: {order: DESC, fields: [frontmatter___date]}
+      ) {
+        edges {
+          node {
+            ...PostDetails
+            frontmatter {
+              topic
+            }
+          }
+        }
+      }
     }
   `)
 

@@ -80,6 +80,14 @@
   src: url('Inter-SemiBold.woff2') format('woff2'),
     url('Inter-SemiBold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Inter Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('Inter-Bold.woff2') format('woff2'),
+    url('Inter-Bold.woff') format('woff');
+}
 /* @font-face {
   font-family: 'Inter SemiBold Italic';
   font-style: italic;

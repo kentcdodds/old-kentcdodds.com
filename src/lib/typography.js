@@ -12,7 +12,7 @@ export const fonts = {
   // mediumItalic: 'Inter Medium Italic',
   semibold: 'Inter Semibold',
   // semiboldItalic: 'Inter Semibold Italic',
-  // bold: 'Inter Bold',
+  bold: 'Inter Bold',
   // boldItalic: 'Inter Bold Italic',
 }
 

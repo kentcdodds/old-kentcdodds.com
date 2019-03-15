@@ -4,13 +4,13 @@ import {fonts, rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import theme from '../../../config/theme'
 import {lighten} from 'polished'
-import CalendarIcon from '../../images/icons/calendar.svg'
-import LocationIcon from '../../images/icons/location.svg'
+import styles from './styles'
 
 const Banner = ({children, title, date, location, buttonText, image}) => {
   return (
     <div
       css={css`
+        ${styles}
         background: white;
         border-radius: 5px;
         padding: 40px;
@@ -40,32 +40,9 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
             max-width: 200px;
           }
         }
-        time {
-          margin-left: 22px;
-          ::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            background-size: 16px 16px;
-            background: url(${CalendarIcon}) no-repeat 0 0 transparent;
-            margin-left: -22px;
-            margin-top: 5px;
-          }
-        }
+
         address {
           margin-left: ${date ? '40px' : '22px'};
-          font-style: normal;
-          ::before {
-            content: '';
-            width: 13px;
-            height: 17px;
-            position: absolute;
-            background-size: 13px 17px;
-            background: url(${LocationIcon}) no-repeat 0 0 transparent;
-            margin-left: -20px;
-            margin-top: 5px;
-          }
         }
         ${image &&
           `display: grid;
@@ -77,17 +54,7 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
             }
       `};
         .button {
-          margin-top: ${rhythm(0.5)};
-          padding: 10px 15px;
           background: ${lighten(0.4, `${theme.brand.primary}`)};
-          border: 1px solid transparent;
-          color: ${theme.brand.primary};
-          font-size: 16px;
-          border-radius: 5px;
-          :hover {
-            border: 1px solid transparent;
-            background: ${theme.colors.green_lighten};
-          }
         }
       `}
     >
@@ -98,7 +65,6 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
           align-items: flex-start;
           justify-content: center;
           padding-right: 10px;
-
           ${bpMaxSM} {
             margin-top: ${rhythm(2)};
             width: 100%;
