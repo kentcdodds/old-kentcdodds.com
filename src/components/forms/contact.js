@@ -1,5 +1,6 @@
 import React from 'react'
 import {navigate} from 'gatsby-link'
+import parseQueryString from '../../lib/parse-query-string'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
   return (
@@ -42,14 +43,14 @@ function CountupTextarea({
   const level = Math.pow(length, 6) / Math.pow(maxLength, 6)
   return (
     <div>
-      <LocalStorageFormControl>
+      <StoredFormControl>
         <textarea
           maxLength={maxLength}
           defaultValue={defaultValue}
           onChange={handleChange}
           {...rest}
         />
-      </LocalStorageFormControl>
+      </StoredFormControl>
       <div
         style={{
           opacity: level,
@@ -69,14 +70,18 @@ function CountupTextarea({
 
 const callAll = (...fns) => (...args) => fns.forEach(fn => fn && fn(...args))
 
-function LocalStorageFormControl({
+function StoredFormControl({
   children,
   formControl = React.Children.only(children),
   lsKey = `lsfc:${formControl.props.name}`,
+  queryParamName = lsKey.replace(/lsfc:/, ''),
 }) {
+  const queryParams = parseQueryString(window.location.search)
+  const queryParamValue = queryParams[queryParamName]
   const [hasChanged, setHasChanged] = React.useState(false)
   const [value, setValue] = React.useState(
     () =>
+      queryParamValue ||
       window.localStorage.getItem(lsKey) ||
       formControl.props.defaultValue ||
       '',
@@ -143,19 +148,19 @@ function ContactForm() {
       <div>
         <label htmlFor="name-input">Name</label>
         <br />
-        <LocalStorageFormControl>
+        <StoredFormControl>
           <input id="name-input" type="text" name="name" required />
-        </LocalStorageFormControl>
+        </StoredFormControl>
       </div>
       <div>
         <label htmlFor="email-input">Email</label>
         <br />
-        <LocalStorageFormControl>
+        <StoredFormControl>
           <input id="email-input" type="email" name="email" required />
-        </LocalStorageFormControl>
+        </StoredFormControl>
       </div>
       <div css={{display: 'grid', gridGap: 20}}>
-        <LocalStorageFormControl>
+        <StoredFormControl>
           <SubjectSelector
             label="Email Type"
             name="type"
@@ -167,7 +172,7 @@ function ContactForm() {
                     <div>
                       <label htmlFor="company-name-input">Company Name</label>
                       <br />
-                      <LocalStorageFormControl>
+                      <StoredFormControl>
                         <input
                           type="text"
                           id="company-name-input"
@@ -175,12 +180,12 @@ function ContactForm() {
                           required
                           css={{width: '100%'}}
                         />
-                      </LocalStorageFormControl>
+                      </StoredFormControl>
                     </div>
                     <div>
                       <label htmlFor="subject-input">Email Subject</label>
                       <br />
-                      <LocalStorageFormControl lsKey="lsfc:training-subject">
+                      <StoredFormControl lsKey="lsfc:training-subject">
                         <input
                           defaultValue="My organization needs training"
                           type="text"
@@ -189,7 +194,7 @@ function ContactForm() {
                           required
                           css={{width: '100%'}}
                         />
-                      </LocalStorageFormControl>
+                      </StoredFormControl>
                     </div>
                   </>
                 ),
@@ -209,7 +214,7 @@ function ContactForm() {
                     <div>
                       <label htmlFor="subject-input">Email Subject</label>
                       <br />
-                      <LocalStorageFormControl lsKey="lsfc:testimonial-subject">
+                      <StoredFormControl lsKey="lsfc:testimonial-subject">
                         <input
                           defaultValue="I want to submit a testimonial"
                           type="text"
@@ -218,7 +223,7 @@ function ContactForm() {
                           required
                           css={{width: '100%'}}
                         />
-                      </LocalStorageFormControl>
+                      </StoredFormControl>
                     </div>
                     <div>
                       <label htmlFor="link-input">
@@ -236,9 +241,9 @@ function ContactForm() {
                         {`)`}
                       </small>
                       <br />
-                      <LocalStorageFormControl lsKey="lsfc:testimonial-url">
+                      <StoredFormControl lsKey="lsfc:testimonial-url">
                         <input type="url" name="link" css={{width: '100%'}} />
-                      </LocalStorageFormControl>
+                      </StoredFormControl>
                     </div>
                   </>
                 ),
@@ -270,7 +275,7 @@ function ContactForm() {
                     <div>
                       <label htmlFor="subject-input">Help Subject</label>
                       <br />
-                      <LocalStorageFormControl lsKey="lsfc:help-subject">
+                      <StoredFormControl lsKey="lsfc:help-subject">
                         <input
                           type="text"
                           name="subject"
@@ -279,7 +284,7 @@ function ContactForm() {
                           css={{width: '100%'}}
                           defaultValue="I need help"
                         />
-                      </LocalStorageFormControl>
+                      </StoredFormControl>
                     </div>
                   </>
                 ),
@@ -290,7 +295,7 @@ function ContactForm() {
                   <div>
                     <label htmlFor="subject-input">Subject</label>
                     <br />
-                    <LocalStorageFormControl lsKey="lsfc:other-subject">
+                    <StoredFormControl lsKey="lsfc:other-subject">
                       <input
                         type="text"
                         name="subject"
@@ -298,13 +303,13 @@ function ContactForm() {
                         required
                         css={{width: '100%'}}
                       />
-                    </LocalStorageFormControl>
+                    </StoredFormControl>
                   </div>
                 ),
               },
             }}
           />
-        </LocalStorageFormControl>
+        </StoredFormControl>
       </div>
       <div>
         <div>
