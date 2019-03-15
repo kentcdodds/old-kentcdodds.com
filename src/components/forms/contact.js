@@ -1,26 +1,13 @@
 import React from 'react'
 import {navigate} from 'gatsby-link'
 
-function SubjectSelector({
-  options,
-  noSelectionUi,
-  onChange = () => {},
-  label,
-  ...rest
-}) {
-  const [value, setValue] = React.useState(
-    rest.defaultValue || Object.keys(options)[0],
-  )
-  function handleChange(e) {
-    setValue(e.target.selectedOptions[0].value)
-    onChange(e)
-  }
+function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
   return (
     <>
       <div>
         <label htmlFor="subject-selector">{label}</label>
         <br />
-        <select id="subject-selector" {...rest} onChange={handleChange}>
+        <select id="subject-selector" value={value} {...rest}>
           {Object.keys(options).map(key => (
             <option key={key} value={key}>
               {options[key].display}
@@ -28,7 +15,13 @@ function SubjectSelector({
           ))}
         </select>
       </div>
-      {options[value] ? options[value].ui : noSelectionUi}
+      {options[value] ? (
+        <React.Fragment key={options[value].display}>
+          {options[value].ui}
+        </React.Fragment>
+      ) : (
+        noSelectionUi
+      )}
     </>
   )
 }
@@ -49,12 +42,14 @@ function CountupTextarea({
   const level = Math.pow(length, 6) / Math.pow(maxLength, 6)
   return (
     <div>
-      <textarea
-        maxLength={maxLength}
-        defaultValue={defaultValue}
-        onChange={handleChange}
-        {...rest}
-      />
+      <LocalStorageFormControl>
+        <textarea
+          maxLength={maxLength}
+          defaultValue={defaultValue}
+          onChange={handleChange}
+          {...rest}
+        />
+      </LocalStorageFormControl>
       <div
         style={{
           opacity: level,
@@ -70,6 +65,48 @@ function CountupTextarea({
       </div>
     </div>
   )
+}
+
+const callAll = (...fns) => (...args) => fns.forEach(fn => fn && fn(...args))
+
+function LocalStorageFormControl({
+  children,
+  formControl = React.Children.only(children),
+  lsKey = `lsfc:${formControl.props.name}`,
+}) {
+  const [hasChanged, setHasChanged] = React.useState(false)
+  const [value, setValue] = React.useState(
+    () =>
+      window.localStorage.getItem(lsKey) ||
+      formControl.props.defaultValue ||
+      '',
+  )
+
+  if (
+    formControl.props.value !== undefined &&
+    formControl.props.value !== value
+  ) {
+    setValue(formControl.props.value)
+  }
+
+  React.useEffect(() => {
+    if (hasChanged) {
+      if (value) {
+        window.localStorage.setItem(lsKey, value)
+      } else {
+        window.localStorage.removeItem(lsKey)
+      }
+    }
+  }, [value, lsKey, hasChanged])
+
+  return React.cloneElement(formControl, {
+    onChange: callAll(formControl.props.onChange, e => {
+      setHasChanged(true)
+      setValue(e.target.value)
+    }),
+    value,
+    defaultValue: undefined,
+  })
 }
 
 function ContactForm() {
@@ -106,156 +143,174 @@ function ContactForm() {
       <div>
         <label htmlFor="name-input">Name</label>
         <br />
-        <input id="name-input" type="text" name="name" required />
+        <LocalStorageFormControl>
+          <input id="name-input" type="text" name="name" required />
+        </LocalStorageFormControl>
       </div>
       <div>
         <label htmlFor="email-input">Email</label>
         <br />
-        <input id="email-input" type="email" name="email" required />
+        <LocalStorageFormControl>
+          <input id="email-input" type="email" name="email" required />
+        </LocalStorageFormControl>
       </div>
       <div css={{display: 'grid', gridGap: 20}}>
-        <SubjectSelector
-          label="Email Type"
-          name="type"
-          options={{
-            workshop: {
-              display: 'Enterprise Workshop Inquiry',
-              ui: (
-                <>
-                  <div>
-                    <label htmlFor="company-name-input">Company Name</label>
-                    <br />
-                    <input
-                      type="text"
-                      id="company-name-input"
-                      name="company"
-                      required
-                      css={{width: '100%'}}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="subject-input">Email Subject</label>
-                    <br />
-                    <input
-                      key="enterprise-workshop-subject"
-                      defaultValue="My organization needs training"
-                      type="text"
-                      id="subject-input"
-                      name="subject"
-                      required
-                      css={{width: '100%'}}
-                    />
-                  </div>
-                </>
-              ),
-            },
-            testimonial: {
-              display: 'Submit a testimonial',
-              ui: (
-                <>
-                  <small>
-                    {`
+        <LocalStorageFormControl>
+          <SubjectSelector
+            label="Email Type"
+            name="type"
+            options={{
+              workshop: {
+                display: 'Enterprise Workshop Inquiry',
+                ui: (
+                  <>
+                    <div>
+                      <label htmlFor="company-name-input">Company Name</label>
+                      <br />
+                      <LocalStorageFormControl>
+                        <input
+                          type="text"
+                          id="company-name-input"
+                          name="company"
+                          required
+                          css={{width: '100%'}}
+                        />
+                      </LocalStorageFormControl>
+                    </div>
+                    <div>
+                      <label htmlFor="subject-input">Email Subject</label>
+                      <br />
+                      <LocalStorageFormControl lsKey="lsfc:training-subject">
+                        <input
+                          defaultValue="My organization needs training"
+                          type="text"
+                          id="subject-input"
+                          name="subject"
+                          required
+                          css={{width: '100%'}}
+                        />
+                      </LocalStorageFormControl>
+                    </div>
+                  </>
+                ),
+              },
+              testimonial: {
+                display: 'Submit a testimonial',
+                ui: (
+                  <>
+                    <small>
+                      {`
                       I love hearing about people that I've helped.
                       I ocassionally use testimonials on my website.
                       If you had a good experience with some of my material,
                       I'd love to hear about it!
                     `}
-                  </small>
-                  <div>
-                    <label htmlFor="subject-input">Email Subject</label>
-                    <br />
-                    <input
-                      key="testimonial-subject"
-                      defaultValue="I want to submit a testimonial"
-                      type="text"
-                      name="subject"
-                      id="subject-input"
-                      required
-                      css={{width: '100%'}}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="link-input">
-                      {`Link to testimonial (tweet/blog post/etc.)`}
-                    </label>
-                    <small css={{marginLeft: 6}}>
-                      {`(optional, but `}
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://twitter.com/intent/tweet"
-                      >
-                        appreciated
-                      </a>
-                      {`)`}
                     </small>
-                    <br />
-                    <input type="url" name="link" css={{width: '100%'}} />
-                  </div>
-                </>
-              ),
-            },
-            help: {
-              display: 'Help / Ask a question',
-              ui: (
-                <>
+                    <div>
+                      <label htmlFor="subject-input">Email Subject</label>
+                      <br />
+                      <LocalStorageFormControl lsKey="lsfc:testimonial-subject">
+                        <input
+                          defaultValue="I want to submit a testimonial"
+                          type="text"
+                          name="subject"
+                          id="subject-input"
+                          required
+                          css={{width: '100%'}}
+                        />
+                      </LocalStorageFormControl>
+                    </div>
+                    <div>
+                      <label htmlFor="link-input">
+                        {`Link to testimonial (tweet/blog post/etc.)`}
+                      </label>
+                      <small css={{marginLeft: 6}}>
+                        {`(optional, but `}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://twitter.com/intent/tweet"
+                        >
+                          appreciated
+                        </a>
+                        {`)`}
+                      </small>
+                      <br />
+                      <LocalStorageFormControl lsKey="lsfc:testimonial-url">
+                        <input type="url" name="link" css={{width: '100%'}} />
+                      </LocalStorageFormControl>
+                    </div>
+                  </>
+                ),
+              },
+              help: {
+                display: 'Help / Ask a question',
+                ui: (
+                  <>
+                    <div>
+                      <small>
+                        If you need help with one of my open source projects,
+                        please either ask on the official support channel for
+                        the project or open an issue on GitHub. Please do not
+                        ask here.
+                      </small>
+                      <br />
+                      <small>
+                        {`I prefer general questions to be asked on `}
+                        <a href="https://kcd.im/ama">{`my AMA`}</a>
+                        {`. If you ask here, `}
+                        <strong>
+                          {`I can't make any promises that `}
+                          <a href="https://kcd.im/no-time">{`I'll have time`}</a>
+                          {` to respond,`}
+                        </strong>
+                        {`but I'll try.`}
+                      </small>
+                    </div>
+                    <div>
+                      <label htmlFor="subject-input">Help Subject</label>
+                      <br />
+                      <LocalStorageFormControl lsKey="lsfc:help-subject">
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject-input"
+                          required
+                          css={{width: '100%'}}
+                          defaultValue="I need help"
+                        />
+                      </LocalStorageFormControl>
+                    </div>
+                  </>
+                ),
+              },
+              other: {
+                display: 'Other...',
+                ui: (
                   <div>
-                    <small>
-                      If you need help with one of my open source projects,
-                      please either ask on the official support channel for the
-                      project or open an issue on GitHub. Please do not ask
-                      here.
-                    </small>
+                    <label htmlFor="subject-input">Subject</label>
                     <br />
-                    <small>
-                      {`I prefer general questions to be asked on `}
-                      <a href="https://kcd.im/ama">{`my AMA`}</a>
-                      {`. If you ask here, `}
-                      <strong>
-                        {`I can't make any promises that `}
-                        <a href="https://kcd.im/no-time">{`I'll have time`}</a>
-                        {` to respond,`}
-                      </strong>
-                      {`but I'll try.`}
-                    </small>
+                    <LocalStorageFormControl lsKey="lsfc:other-subject">
+                      <input
+                        type="text"
+                        name="subject"
+                        id="subject-input"
+                        required
+                        css={{width: '100%'}}
+                      />
+                    </LocalStorageFormControl>
                   </div>
-                  <div>
-                    <label htmlFor="subject-input">Help Subject</label>
-                    <br />
-                    <input
-                      key="help-subject"
-                      type="text"
-                      name="subject"
-                      id="subject-input"
-                      required
-                      css={{width: '100%'}}
-                      defaultValue="I need help"
-                    />
-                  </div>
-                </>
-              ),
-            },
-            other: {
-              display: 'Other...',
-              ui: (
-                <div>
-                  <label htmlFor="subject-input">Subject</label>
-                  <br />
-                  <input
-                    key="other-subject"
-                    type="text"
-                    name="subject"
-                    id="subject-input"
-                    required
-                  />
-                </div>
-              ),
-            },
-          }}
-        />
+                ),
+              },
+            }}
+          />
+        </LocalStorageFormControl>
       </div>
       <div>
-        <label htmlFor="body-textarea">Email body</label>
+        <div>
+          <label htmlFor="body-textarea">Email body</label>
+          <small css={{marginLeft: 6}}>(**markdown** _supported_)</small>
+        </div>
         <CountupTextarea
           id="body-textarea"
           name="body"
