@@ -137,6 +137,7 @@ function ContactForm() {
                     <label htmlFor="subject-input">Email Subject</label>
                     <br />
                     <input
+                      key="enterprise-workshop-subject"
                       defaultValue="My organization needs training"
                       type="text"
                       id="subject-input"
@@ -164,6 +165,7 @@ function ContactForm() {
                     <label htmlFor="subject-input">Email Subject</label>
                     <br />
                     <input
+                      key="testimonial-subject"
                       defaultValue="I want to submit a testimonial"
                       type="text"
                       name="subject"
@@ -221,6 +223,7 @@ function ContactForm() {
                     <label htmlFor="subject-input">Help Subject</label>
                     <br />
                     <input
+                      key="help-subject"
                       type="text"
                       name="subject"
                       id="subject-input"
@@ -239,6 +242,7 @@ function ContactForm() {
                   <label htmlFor="subject-input">Subject</label>
                   <br />
                   <input
+                    key="other-subject"
                     type="text"
                     name="subject"
                     id="subject-input"
