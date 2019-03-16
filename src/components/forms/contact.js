@@ -76,13 +76,18 @@ function StoredFormControl({
   lsKey = `lsfc:${formControl.props.name}`,
   queryParamName = lsKey.replace(/lsfc:/, ''),
 }) {
-  const queryParams = parseQueryString(window.location.search)
+  const queryParams =
+    typeof window === 'undefined'
+      ? {}
+      : parseQueryString(window.location.search)
   const queryParamValue = queryParams[queryParamName]
   const [hasChanged, setHasChanged] = React.useState(false)
   const [value, setValue] = React.useState(
     () =>
       queryParamValue ||
-      window.localStorage.getItem(lsKey) ||
+      (typeof window === 'undefined'
+        ? false
+        : window.localStorage.getItem(lsKey)) ||
       formControl.props.defaultValue ||
       '',
   )
