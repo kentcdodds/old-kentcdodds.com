@@ -66,10 +66,12 @@ exports.handler = async event => {
   const otherDataString = JSON.stringify(otherData, null, 2)
 
   const text = `${body}\n\n---\n\nOther form data:\n\`\`\`${otherDataString}\`\`\`\n`
+  const sender = `"${name}" <${email}>`
 
   const message = {
-    from: `"${name}" <${email}>`,
+    from: sender,
     to: `"Kent C. Dodds" <kent@doddsfamily.us>`,
+    cc: sender,
     subject,
     text,
     html: await markdownToHtml(text),
