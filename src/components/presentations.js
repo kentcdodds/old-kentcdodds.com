@@ -155,7 +155,8 @@ function Presentations({presentations}) {
 }
 
 function FutureTime({date: dateString}) {
-  const date = new Date(...dateString.split('-'))
+  const [year, month, day] = dateString.split('-')
+  const date = new Date(year, month - 1, day)
   const isFuture = date > new Date()
   return (
     <span>
