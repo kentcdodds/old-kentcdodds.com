@@ -93,14 +93,14 @@ Here's what
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 has to say about `this`:
 
-> A **function's** `**_this_**` **keyword** behaves a little differently in
-> JavaScript compared to other languages. It also has some differences between
+> A function's `this` keyword behaves a little differently in JavaScript
+> compared to other languages. It also has some differences between
 > [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)
 > and non-strict mode.
 
-> In most cases, the value of `_this_` is determined by how a function is
-> called. It can't be set by assignment during execution, and it may be
-> different each time the function is called. ES5 introduced the
+> In most cases, the value of `this` is determined by how a function is called.
+> It can't be set by assignment during execution, and it may be different each
+> time the function is called. ES5 introduced the
 > [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)method
 > to
 > [set the value of a function's](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#The_bind_method) >
@@ -108,7 +108,7 @@ has to say about `this`:
 > [regardless of how it's called](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#The_bind_method),
 > and ES2015 introduced
 > [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-> whose `_this_` is lexically scoped (it is set to the `_this_` value of the
+> whose `this` is lexically scoped (it is set to the `this` value of the
 > enclosing execution context).
 
 Maybe not rocket science 🚀, but it's an implicit relationship and it's
@@ -160,7 +160,7 @@ component. There are various ways to fix this
 > The fact that you have to think about `this` adds cognitive load that would be
 > nice to avoid.
 
-### How to avoid ``` this` ``
+### How to avoid `this`
 
 So, if `this` adds so much complexity (as I'm asserting), how do we avoid it
 without adding even more complexity to our code? How about instead of the
