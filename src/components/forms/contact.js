@@ -274,7 +274,7 @@ function ContactForm() {
                           <a href="https://kcd.im/no-time">{`I'll have time`}</a>
                           {` to respond,`}
                         </strong>
-                        {`but I'll try.`}
+                        {` but I'll try.`}
                       </small>
                     </div>
                     <div>
