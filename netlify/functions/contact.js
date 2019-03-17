@@ -65,7 +65,7 @@ exports.handler = async event => {
 
   const otherDataString = JSON.stringify(otherData, null, 2)
 
-  const text = `${body}\n\n---\n\nOther form data:\n\`\`\`${otherDataString}\`\`\`\n`
+  const text = `${body}\n\n---\n\nOther form data:\n\`\`\`\n${otherDataString}\n\`\`\`\n`
   const sender = `"${name}" <${email}>`
 
   const message = {
