@@ -74,3 +74,7 @@ there to help improve their stamina, not deplete it. And when their motivating
 factors have been removed, don't hate them for handing off their projects to
 someone else, love them for the work they've done already. Most of the time, it
 cost them more than you know.
+
+> _Thanks to [TJ Holowaychuk](https://medium.com/@tjholowaychuk),
+> [Friedel Ziegelmayer](https://medium.com/@dignifiedquire), and
+> [Mark Trostler](https://medium.com/@zzoass) for reviewing this post_
