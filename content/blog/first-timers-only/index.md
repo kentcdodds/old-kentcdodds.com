@@ -75,7 +75,7 @@ and added
 [this comment](https://github.com/formly-js/angular-formly/issues/343#issuecomment-111495740)
 to the issue:
 
-![screenshot of the issue comment](./0.png)
+![screenshot of the issue comment](./images/0.png)
 
 Make it as is easy as possible. Say exactly where the code needs to go and
 recommend a good approach.
