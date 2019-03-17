@@ -33,7 +33,7 @@ I thought You'd be interested to hear what I learned.
 
 So `react-i18n` (not the npm one... one we made at PayPal internally) has this
 API that I call "sorta-curried". I wrote about it a bit in
-[my last newsletter](https://tinyletter.com/kentcdodds/letters/improving-the-usability-of-your-modules).
+[my last newsletter](/blog/improving-the-usability-of-your-modules).
 
 So here's an example:
 
