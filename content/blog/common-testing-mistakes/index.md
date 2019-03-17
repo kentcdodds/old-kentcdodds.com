@@ -27,7 +27,7 @@ coming next week). It's because it's a huge problem in testing and leads to
 tests that don't give nearly as much confidence as they could. Here's a very
 simple example of a test that's testing implementation details:
 
-```
+```jsx
 // counter.js
 import React from 'react'
 

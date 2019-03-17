@@ -136,12 +136,3 @@ While users are filling out the form on our home page, it would be a good idea
 to pre-load the next page they will be going to so they don't have to wait for
 it to load once they've finished filling out the form. React's `useEffect` hook
 makes this really easy.
-
-### It's free for a limited time + Egghead's doing a sale!!
-
-I hope you enjoy the course! It's **_free_** for a limited time. You should also
-know that
-[egghead.io is putting on it's biggest sale of the year: 45% off a year-long membership!](https://egghead.io/pricing)
-How cool is that!?
-
-![Egghead promotion countdown clock](https://cdn-images-1.medium.com/max/800/0*3HZ4zSI3RnF49MER)
