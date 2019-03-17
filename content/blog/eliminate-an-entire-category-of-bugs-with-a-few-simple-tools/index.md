@@ -112,7 +112,7 @@ property name is missing in object literal [1].
 So without changing our code at all, we get notified something's wrong. Nice!
 Now, what if we add type annotations?
 
-```
+```js
 // @flow
 
 type User = {
@@ -123,7 +123,9 @@ type User = {
   },
 }
 function getFullName(user: User): string {
-  const {name: {first, middle, last}} = user
+  const {
+    name: {first, middle, last},
+  } = user
   return [first, middle, last].filter(Boolean).join('')
 }
 
