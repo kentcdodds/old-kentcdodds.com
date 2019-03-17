@@ -198,10 +198,10 @@ I demo some advanced features of destructuring!
 
 **Things to not miss**:
 
-- [`express-async-errors`](https://github.com/davidbanham/express-async-errors)
-  - a nice package that allows me to use `async/await`on express route
-    handlers/middleware without worrying about rejected promises being ignored
-    and making my server hang :)
+- [`express-async-errors`](https://github.com/davidbanham/express-async-errors) -
+  a nice package that allows me to use `async/await`on express route
+  handlers/middleware without worrying about rejected promises being ignored and
+  making my server hang :)
 - [ReactJS Denver: Confidently Testing React Apps](https://youtu.be/2HnNo4t8534?t=541) — A
   great talk at [React Denver](https://www.meetup.com/ReactDenver/) by
   [Matt Parrish](https://twitter.com/mattparrish).
