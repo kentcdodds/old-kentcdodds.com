@@ -44,20 +44,21 @@ And on top of all of that, it's **totally free**! (egghead.io ♥️ open source
 
 This means that instead of just saying: "_I'll get to it when I can_" or "_I
 probably don't have time to do that, but feel free to make a pull request._" You
-can now say: "_Feel free to_
-[_makeapullrequest.com_](http://makeapullrequest.com)_!_"
+can now say: "_Feel free to
+[makeapullrequest.com](http://makeapullrequest.com)!_"
 
 So, **if you maintain an open source project**, help make it easier for
 beginners by adding this to your README:
 
-```
-\[!\[PRs Welcome\](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)\](http://makeapullrequest.com)
+```md
+[![PRs Welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ```
 
 And this to your CONTRIBUTING.md
 
-```
-\*\*Working on your first Pull Request?\*\* You can learn how from this \*free\* series \[How to Contribute to an Open Source Project on GitHub\](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
+<!-- prettier-ignore -->
+```md
+**Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)
 ```
 
 **If you don't maintain a project**, you could always submit a PR to your
