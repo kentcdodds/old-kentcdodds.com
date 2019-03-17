@@ -67,7 +67,7 @@ and the world's collective minds were blown
 
 Here's a quick example of what's possible with MDX:
 
-```
+```md
 import InteractiveGraph from './my-d3-graph'
 
 # Checkout this cool graph!
@@ -76,7 +76,7 @@ import InteractiveGraph from './my-d3-graph'
 
 <InteractiveGraph />
 
-**That's right!** We're rendering a __React Component__ in Markdown!
+**That's right!** We're rendering a **React Component** in Markdown!
 ```
 
 There's a bunch that's awesome from this. I've been wanting something like this
