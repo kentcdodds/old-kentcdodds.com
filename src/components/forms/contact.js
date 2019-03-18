@@ -3,7 +3,6 @@ import {navigate} from 'gatsby-link'
 import parseQueryString from '../../lib/parse-query-string'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
-  console.log({value})
   return (
     <>
       <div>
