@@ -207,3 +207,18 @@ backend with a database and server farm to allow you to send me
 to Netlify, I don't have to. It's pretty slick!
 
 Give it a try! I think you'll love it too.
+
+## P.S.
+
+My friend [Shawn Wang](https://twitter.com/swyx) works at Netlify and he
+mentioned he's working on a few neat things that he'll be announcing at
+[jamstackconf](https://twitter.com/jamstackconf) 2019. He gave me a discount
+code you can use to get \$100 off a ticket if you want to go: `friendsofswyx`.
+
+Also, Shawn mentioned that Netlify does have a Forms service built-in for
+contact forms like I have. I originally used that, but it doesn't actually send
+emails (you have to integrate with Zapier and it's an ok experience).
+
+Also, while `/.netlify/functions` is not configurable, you can alias it to
+anything with a redirect, including serving your entire site from a function
+which is pretty legit.
