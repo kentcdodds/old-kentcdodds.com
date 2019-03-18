@@ -3,6 +3,7 @@ import {navigate} from 'gatsby-link'
 import parseQueryString from '../../lib/parse-query-string'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
+  console.log({value})
   return (
     <>
       <div>
@@ -75,6 +76,7 @@ function StoredFormControl({
   formControl = React.Children.only(children),
   lsKey = `lsfc:${formControl.props.name}`,
   queryParamName = lsKey.replace(/lsfc:/, ''),
+  defaultValue = formControl.props.defaultValue,
 }) {
   const queryParams =
     typeof window === 'undefined'
@@ -88,8 +90,7 @@ function StoredFormControl({
       (typeof window === 'undefined'
         ? false
         : window.localStorage.getItem(lsKey)) ||
-      formControl.props.defaultValue ||
-      '',
+      defaultValue,
   )
 
   if (
@@ -215,7 +216,7 @@ function ContactForm() {
         </StoredFormControl>
       </div>
       <div css={{display: 'grid', gridGap: 20}}>
-        <StoredFormControl>
+        <StoredFormControl defaultValue="workshop">
           <SubjectSelector
             label="Email Type"
             name="type"
