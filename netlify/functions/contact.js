@@ -31,6 +31,18 @@ const headers = {
 }
 
 exports.handler = async event => {
+  const origin = new URL(event.headers.origin)
+  const acceptable =
+    (origin.hostname === 'localhost' &&
+      process.env.NODE_ENV !== 'production') ||
+    origin.hostname === 'kentcdodds.com'
+  if (!acceptable) {
+    return Promise.reject({
+      statusCode: 403,
+      body: 'Unacceptable request',
+      headers,
+    })
+  }
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
