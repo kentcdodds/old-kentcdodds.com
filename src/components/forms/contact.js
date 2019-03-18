@@ -253,6 +253,44 @@ function ContactForm() {
                   </>
                 ),
               },
+              consulting: {
+                display: 'Consulting',
+                ui: (
+                  <>
+                    <div>
+                      <div>
+                        You can schedule your own consultation time with me at{' '}
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://kcd.im/consult"
+                        >
+                          kcd.im/consult
+                        </a>
+                      </div>
+                      <div>
+                        {`However, if you'd like more time or have special requirements, feel free to complete this form and I'll be in touch.`}
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="subject-input">
+                        Consulting Email Subject
+                      </label>
+                      <br />
+                      <StoredFormControl lsKey="lsfc:consulting-subject">
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject-input"
+                          required
+                          css={{width: '100%'}}
+                          defaultValue="I need some special consulting"
+                        />
+                      </StoredFormControl>
+                    </div>
+                  </>
+                ),
+              },
               help: {
                 display: 'Help / Ask a question',
                 ui: (
