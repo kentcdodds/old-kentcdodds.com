@@ -67,10 +67,14 @@ export const globalStyles = css`
     cursor: pointer;
     border: 1px solid ${theme.colors.green};
     transition: ${theme.transition.ease};
-    :hover {
+    :hover:not(:disabled) {
       background: ${theme.colors.link_color_hover};
       border: 1px solid ${theme.colors.link_color_hover};
       transition: ${theme.transition.ease};
+    }
+    :disabled {
+      opacity: 0.6;
+      cursor: auto;
     }
   }
   pre {

@@ -119,26 +119,76 @@ function StoredFormControl({
   })
 }
 
+function fetchReducer(state, {type, response, error}) {
+  switch (type) {
+    case 'fetching': {
+      return {fetching: true, response: null, error: null}
+    }
+    case 'fetched': {
+      return {fetching: false, response, error: null}
+    }
+    case 'error': {
+      return {fetching: false, response: null, error}
+    }
+    default:
+      throw new Error(`Unsupported type: ${type}`)
+  }
+}
+
+function useFetch({url, body}) {
+  const [state, dispatch] = React.useReducer(fetchReducer, {
+    fetching: false,
+    response: null,
+    error: null,
+  })
+  React.useEffect(() => {
+    if (body) {
+      dispatch({type: 'fetching'})
+      fetch(url, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body,
+      }).then(
+        response => {
+          dispatch({type: 'fetched', response})
+          navigate('/contact/success')
+        },
+        error => {
+          dispatch({type: 'error', error})
+        },
+      )
+    }
+  }, [url, body])
+  return state
+}
+
 function ContactForm() {
+  const [body, setBody] = React.useState()
+
+  const {fetching, response, error} = useFetch({
+    url: `${process.env.NETLIFY_FUNCTIONS_URL}/contact`,
+    body,
+  })
+
+  React.useEffect(() => {
+    if (fetching) {
+      return
+    }
+    if (response) {
+      navigate('/contact/success')
+    }
+    if (error) {
+      /* eslint no-alert:0 */
+      window.alert('There was a problem. Check the developer console.')
+      /* eslint no-console:0 */
+      console.log(error)
+      throw error
+    }
+  }, [fetching, response, error])
+
   function handleSubmit(e) {
     e.preventDefault()
-    const form = e.target
-    fetch(`${process.env.NETLIFY_FUNCTIONS_URL}/contact`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(getFormValues(form)),
-    }).then(
-      () => {
-        navigate('/contact/success')
-      },
-      error => {
-        /* eslint no-alert:0 */
-        window.alert('There was a problem. Check the developer console.')
-        /* eslint no-console:0 */
-        console.log(error)
-        throw error
-      },
-    )
+    setBody(JSON.stringify(getFormValues(e.target)))
   }
 
   return (
@@ -370,7 +420,10 @@ function ContactForm() {
         />
       </div>
       <div>
-        <button type="submit">Send</button>
+        <button type="submit" disabled={fetching}>
+          Send
+        </button>
+        {fetching ? <span css={{marginLeft: 10}}>...</span> : null}
       </div>
     </form>
   )
