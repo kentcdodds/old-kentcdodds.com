@@ -41,6 +41,7 @@ const NavLink = styled(HeaderLink)({
     display: 'none',
   },
   '&.active': {
+    opacity: 1,
     background: 'rgba(40, 28, 77, 0.7)',
   },
 })
@@ -82,6 +83,9 @@ const Header = ({
           to={headerLink}
           aria-label="go to homepage"
           headerColor={headerColor}
+          css={{
+            fontFamily: fonts.semibold,
+          }}
         >
           {siteTitle}
         </HeaderLink>
