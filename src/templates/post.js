@@ -28,6 +28,8 @@ export default function Post({data: {site, mdx}}) {
     noFooter,
   } = mdx.fields
 
+  const blogPostUrl = `${config.siteUrl}${slug}`
+
   return (
     <Layout
       site={site}
@@ -111,7 +113,7 @@ export default function Post({data: {site, mdx}}) {
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}${slug}`}
+          url={blogPostUrl}
           title={title}
           twitterHandle={config.twitterHandle}
         />
@@ -119,7 +121,19 @@ export default function Post({data: {site, mdx}}) {
       </Container>
       <Container noVerticalPadding>
         <p>
-          <a href={editLink}>Edit post on GitHub</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://twitter.com/search?q=${encodeURIComponent(
+              blogPostUrl,
+            )}`}
+          >
+            Discuss on Twitter
+          </a>
+          {` • `}
+          <a target="_blank" rel="noopener noreferrer" href={editLink}>
+            Edit post on GitHub
+          </a>
         </p>
       </Container>
     </Layout>
@@ -140,6 +154,7 @@ export const pageQuery = graphql`
         title
         noFooter
         description
+        plainTextDescription
         date(formatString: "MMMM DD, YYYY")
         author
         banner {
@@ -147,7 +162,6 @@ export const pageQuery = graphql`
         }
         bannerCredit
         slug
-        description
         keywords
       }
       code {

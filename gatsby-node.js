@@ -1,9 +1,18 @@
 const path = require('path')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
+const remark = require('remark')
+const stripMarkdownPlugin = require('strip-markdown')
 const _ = require('lodash')
 
 const PAGINATION_OFFSET = 7
+
+function stripMarkdown(markdownString) {
+  return remark()
+    .use(stripMarkdownPlugin)
+    .processSync(markdownString)
+    .toString()
+}
 
 const createPosts = (createPage, createRedirect, edges) => {
   edges.forEach(({node}, i) => {
@@ -226,6 +235,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       name: 'description',
       node,
       value: node.frontmatter.description,
+    })
+
+    createNodeField({
+      name: 'plainTextDescription',
+      node,
+      value: stripMarkdown(node.frontmatter.description),
     })
 
     createNodeField({
