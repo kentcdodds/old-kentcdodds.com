@@ -1,3 +1,4 @@
+const {URL} = require('url')
 const nodemailer = require('nodemailer')
 const ow = require('ow')
 const {markdownToHtml} = require('../utils')
