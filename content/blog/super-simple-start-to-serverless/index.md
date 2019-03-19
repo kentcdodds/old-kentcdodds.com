@@ -210,10 +210,12 @@ Give it a try! I think you'll love it too.
 
 ## P.S.
 
+<!-- prettier escapes the $ https://github.com/prettier/prettier/issues/5483 -->
+<!-- prettier-ignore -->
 My friend [Shawn Wang](https://twitter.com/swyx) works at Netlify and he
 mentioned he's working on a few neat things that he'll be announcing at
 [jamstackconf](https://twitter.com/jamstackconf) 2019. He gave me a discount
-code you can use to get \$100 off a ticket if you want to go: `friendsofswyx`.
+code you can use to get $100 off a ticket if you want to go: `friendsofswyx`.
 
 Also, Shawn mentioned that Netlify does have a Forms service built-in for
 contact forms like I have. I originally used that, but it doesn't actually send
