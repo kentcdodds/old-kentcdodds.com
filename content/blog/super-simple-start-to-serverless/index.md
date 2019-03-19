@@ -50,7 +50,7 @@ etc. What's cool about this is you can write your server code without worrying
 about managing servers or paying to have them sit around waiting for requests
 all day long (which is particularly useful for a contact form like mine).
 
-I remember years ago when those starting getting popular, I tried them out a bit
+I remember years ago when those started getting popular, I tried them out a bit
 and was reminded why I don't enjoy working with backend/devops stuff. As cool as
 these functions were conceptually, I just didn't feel like I was smart enough to
 navigate the complexities of the offerings.
