@@ -9,9 +9,11 @@ import SEO from 'components/seo'
 import theme from '../../../config/theme'
 import Hero from 'components/big-hero'
 import {uniq, includes, truncate} from 'lodash'
-import Illustration from '../../images/workshops-hero.svg'
+import HeaderImage from '../../images/workshops-hero.svg'
+
 import ScheduledWorkshop from 'components/workshops/scheduled-workshop'
 import Workshop from 'components/workshops/workshop'
+
 import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
@@ -23,8 +25,16 @@ export default function RemoteWorkshops({data: {workshops}}) {
 
   const [displayedTech, setDisplayedTech] = React.useState(workshopTech)
 
-  const techIsDisplayed = tech => {
-    return includes(displayedTech, tech)
+  const techToggleIsActive = (getDisplayedTech, tech) => {
+    return includes(getDisplayedTech, tech) && getDisplayedTech.length === 1
+  }
+
+  const techImage = tech => {
+    return (
+      (tech === 'react' && `${reactIcon}`) ||
+      (tech === 'javascript' && `${jsIcon}`) ||
+      (tech === 'testing' && `${testingIcon}`)
+    )
   }
 
   const TechToggle = styled.button`
@@ -56,7 +66,7 @@ export default function RemoteWorkshops({data: {workshops}}) {
         <Hero
           title="Remote Workshops"
           text="Interdum et malesuada fames ac ante ipsum [primis](#primis) in **faucibus**. Phasellus ac interdum elit. Pellentesque sodales neque eros, a vehicula."
-          image={Illustration}
+          image={HeaderImage}
           background="linear-gradient(213deg, #854BF1 0%, #4335DF 100%), linear-gradient(32deg, rgba(255,255,255,0.25) 33%, rgba(153,153,153,0.25) 100%)"
         />
       }
@@ -82,26 +92,6 @@ export default function RemoteWorkshops({data: {workshops}}) {
             tech="react"
             discountAvailable
           />
-          {/* <ScheduledWorkshop
-            title="React JS Fundamentals"
-            description="In this workshop, we’ll go over all of those things and more to help you become productive with using the ReactJS framework for building applications for the web."
-            date="April 3, 2019"
-            spotsRemaining="20"
-            bookUrl="#"
-            waitlistUrl="#"
-            url="react-fundamentals"
-            tech="react"
-          />
-          <ScheduledWorkshop
-            title="Testing Fundamentals"
-            description="In this workshop, we’ll learn how testing frameworks, assertion libraries, and mocking libraries work by building our own, simple version of each."
-            date="April 3, 2019"
-            spotsRemaining="20"
-            bookUrl="#"
-            waitlistUrl="#"
-            url="testing-fundamentals"
-            tech="testing"
-          /> */}
         </div>
         <div
           css={css`
@@ -122,34 +112,28 @@ export default function RemoteWorkshops({data: {workshops}}) {
             {workshopTech.map(tech => (
               <TechToggle
                 css={css`
-                  ${includes(displayedTech, tech) && displayedTech.length === 1
-                    ? `color: white; background: #2F313E;
-             :hover {
-           color: white;
-           background: #232323;}`
-                    : `color: black; background: white;
-             :hover {
-           color: black;
-          background: #fafafa;}`}
+                  ${techToggleIsActive(displayedTech, tech)
+                    ? `
+                  color: white; background: #2F313E;
+                  :hover {
+                    color: white;
+                    background: #232323;}`
+                    : `
+                  color: black; background: white;
+                  :hover {
+                    color: black;
+                    background: #fafafa;}`}
                 `}
                 key={tech}
                 onClick={() => {
-                  if (techIsDisplayed(tech) && displayedTech.length === 1) {
+                  if (techToggleIsActive(displayedTech, tech)) {
                     setDisplayedTech(workshopTech)
                   } else {
                     setDisplayedTech([tech])
                   }
                 }}
               >
-                <img
-                  src={
-                    (tech === 'react' && `${reactIcon}`) ||
-                    (tech === 'javascript' && `${jsIcon}`) ||
-                    (tech === 'testing' && `${testingIcon}`)
-                  }
-                  alt={tech}
-                />{' '}
-                {tech}
+                <img src={techImage(tech)} alt={tech} /> {tech}
               </TechToggle>
             ))}
           </div>
@@ -207,6 +191,7 @@ export const remoteWorkshopsQuery = graphql`
           }
         }
       }
+      totalCount
     }
   }
 `

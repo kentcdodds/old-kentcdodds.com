@@ -23,6 +23,13 @@ function ScheduledWorkshop({
   tech,
   discountAvailable,
 }) {
+  const techImage = workshopTech => {
+    return (
+      (workshopTech === 'react' && `${reactIcon}`) ||
+      (workshopTech === 'javascript' && `${jsIcon}`) ||
+      (workshopTech === 'testing' && `${testingIcon}`)
+    )
+  }
   const Stripe = props => (
     <div
       css={css`
@@ -102,14 +109,7 @@ function ScheduledWorkshop({
                 padding-right: 10px;
               `}
             >
-              <img
-                src={
-                  (tech === 'javascript' && `${jsIcon}`) ||
-                  (tech === 'react' && `${reactIcon}`) ||
-                  (tech === 'testing' && `${testingIcon}`)
-                }
-                alt={tech}
-              />
+              <img src={techImage(tech)} alt={tech} />
             </span>
             <span
               css={css`
@@ -138,24 +138,6 @@ function ScheduledWorkshop({
             }
           `}
         >
-          {/* <div
-            css={css`
-              font-size: 15px;
-              margin-bottom: 8px;
-              text-align: center;
-              ${bpMaxSM} {
-                text-align: left;
-              }
-            `}
-          >
-            {spotsRemaining == 0 ? (
-              <b>Sold out</b>
-            ) : (
-              <div>
-                <b>{spotsRemaining}</b> spots remaining
-              </div>
-            )}
-          </div> */}
           <Link
             to={spotsRemaining == 0 ? `${waitlistUrl}` : `${bookUrl}`}
             className="button"

@@ -11,9 +11,15 @@ import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 
 function Workshop({title, description, url, tech}) {
+  const techImage = workshopTech => {
+    return (
+      (workshopTech === 'react' && `${reactIcon}`) ||
+      (workshopTech === 'javascript' && `${jsIcon}`) ||
+      (tech === 'testing' && `${testingIcon}`)
+    )
+  }
   return (
     <Link to={`/workshops${url}`}>
-      {/* <Link to={`/workshops/${url}`}> */}
       <div
         css={css`
           ${styles}
@@ -60,14 +66,7 @@ function Workshop({title, description, url, tech}) {
           >
             Learn more
           </span>
-          <img
-            src={
-              (tech === 'javascript' && `${jsIcon}`) ||
-              (tech === 'react' && `${reactIcon}`) ||
-              (tech === 'testing' && `${testingIcon}`)
-            }
-            alt={tech}
-          />
+          <img src={techImage(tech)} alt={tech} />
         </div>
       </div>
     </Link>
