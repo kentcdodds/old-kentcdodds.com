@@ -4,14 +4,16 @@ import Link from '../link'
 import theme from '../../../config/theme'
 import {rhythm} from '../../lib/typography'
 import styles from './styles'
+import {bpMaxSM} from '../../lib/breakpoints'
 import Markdown from 'react-markdown'
 import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 
-function Workshop({title, description, url, topic}) {
+function Workshop({title, description, url, tech}) {
   return (
-    <Link to={`/workshops/${url}`}>
+    <Link to={`/workshops${url}`}>
+      {/* <Link to={`/workshops/${url}`}> */}
       <div
         css={css`
           ${styles}
@@ -19,9 +21,12 @@ function Workshop({title, description, url, topic}) {
           h1 {
             font-size: 22px;
             min-height: 55px;
+            ${bpMaxSM} {
+              min-height: auto;
+            }
           }
           img {
-            margin: 0;
+            margin-bottom: 0;
           }
         `}
       >
@@ -57,11 +62,11 @@ function Workshop({title, description, url, topic}) {
           </span>
           <img
             src={
-              (topic === 'javascript' && `${jsIcon}`) ||
-              (topic === 'react' && `${reactIcon}`) ||
-              (topic === 'testing' && `${testingIcon}`)
+              (tech === 'javascript' && `${jsIcon}`) ||
+              (tech === 'react' && `${reactIcon}`) ||
+              (tech === 'testing' && `${testingIcon}`)
             }
-            alt={topic}
+            alt={tech}
           />
         </div>
       </div>

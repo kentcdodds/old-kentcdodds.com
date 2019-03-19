@@ -6,7 +6,15 @@ import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import styles from './styles'
 
-const Banner = ({children, title, date, location, buttonText, image}) => {
+const Header = ({
+  children,
+  title,
+  date,
+  location,
+  isSoldOut = false,
+  buttonText,
+  image,
+}) => {
   return (
     <div
       css={css`
@@ -20,6 +28,7 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
           margin-right: 0;
         }
         h1 {
+          font-size: 28px;
           font-family: ${fonts.semibold}, sans-serif;
           font-weight: normal;
           margin-top: 10px;
@@ -28,8 +37,8 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
           font-size: 14px;
           text-transform: uppercase;
           letter-spacing: 1px;
-          margin: 0;
-          opacity: 0.8;
+          margin: 0 0 5px 0;
+          opacity: 0.7;
         }
         img {
           margin: 0;
@@ -40,61 +49,24 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
             max-width: 200px;
           }
         }
-
         address {
           margin-left: ${date ? '40px' : '22px'};
         }
         ${image &&
           `display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
             ${bpMaxSM} {
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
             }
       `};
-        .button {
+        /* .button {
           background: ${lighten(0.4, `${theme.brand.primary}`)};
-        }
+        } */
       `}
     >
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: center;
-          padding-right: 10px;
-          ${bpMaxSM} {
-            margin-top: ${rhythm(2)};
-            width: 100%;
-            padding-right: 0;
-          }
-        `}
-      >
-        <h4>Online Workshop</h4>
-        {title && <h1>{title}</h1>}
-        <div
-          css={css`
-            display: flex;
-            transition: ${theme.transition.ease};
-          `}
-        >
-          {date && <time>{date}</time>}
-          {location && <address>{location}</address>}
-        </div>
-        {children}
-        Sold out.
-        {buttonText && (
-          <a
-            href="#register"
-            className="button"
-            aria-label="scroll to registration"
-          >
-            {buttonText}
-          </a>
-        )}
-      </div>
       {image && (
         <div
           css={css`
@@ -111,8 +83,46 @@ const Banner = ({children, title, date, location, buttonText, image}) => {
           <img src={image} alt={title} />
         </div>
       )}
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding-left: ${image ? '40px' : '0'};
+          ${bpMaxSM} {
+            margin-top: ${rhythm(2)};
+            width: 100%;
+            padding-right: 0;
+          }
+        `}
+      >
+        <h4>Remote Workshop</h4>
+        {title && <h1>{title}</h1>}
+        <div
+          css={css`
+            display: flex;
+            transition: ${theme.transition.ease};
+          `}
+        >
+          {date && <time>{date}</time>}
+          {location && <address>{location}</address>}
+        </div>
+        {children}
+        <br />
+        {isSoldOut && 'Sold out!'}
+        {buttonText && (
+          <a
+            href="#register"
+            className="button"
+            aria-label="scroll to registration"
+          >
+            {buttonText}
+          </a>
+        )}
+      </div>
     </div>
   )
 }
 
-export default Banner
+export default Header

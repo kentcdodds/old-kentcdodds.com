@@ -1,17 +1,55 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
+import styled from '@emotion/styled'
 import Layout from 'components/layout'
 import Container from 'components/container'
 import {rhythm} from '../../lib/typography'
 import SEO from 'components/seo'
 import theme from '../../../config/theme'
 import Hero from 'components/big-hero'
+import {uniq, includes, truncate} from 'lodash'
 import Illustration from '../../images/workshops-hero.svg'
-import UpcomingWorkshop from 'components/workshops/upcoming-workshop'
+import ScheduledWorkshop from 'components/workshops/scheduled-workshop'
 import Workshop from 'components/workshops/workshop'
+import jsIcon from '../../images/icons/js.svg'
+import reactIcon from '../../images/icons/react.svg'
+import testingIcon from '../../images/icons/testing.svg'
 
-export default function RemoteWorkshops({data: {remoteWorkshops}}) {
+export default function RemoteWorkshops({data: {workshops}}) {
+  const workshopTech = uniq(
+    workshops.edges.map(({node: workshop}) => workshop.frontmatter.tech),
+  )
+
+  const [displayedTech, setDisplayedTech] = React.useState(workshopTech)
+
+  const techIsDisplayed = tech => {
+    return includes(displayedTech, tech)
+  }
+
+  const TechToggle = styled.button`
+    padding: 8px 15px 8px 12px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    margin: 5px;
+    :focus {
+      outline: none;
+    }
+    img {
+      margin: 0;
+      margin-right: 10px;
+    }
+    :hover,
+    :focus {
+      color: inherit;
+      background: inherit;
+      border: none;
+    }
+  `
+
   return (
     <Layout
       hero={
@@ -25,55 +63,96 @@ export default function RemoteWorkshops({data: {remoteWorkshops}}) {
       headerColor={theme.colors.white}
     >
       <SEO />
-      <Container
-        noVerticalPadding
-        css={css`
-          margin-top: 30px;
-        `}
-      >
+      <Container noVerticalPadding>
         <div
           css={css`
-            margin-top: -60px;
+            margin-top: -30px;
             position: relative;
-            z-index: 999;
+            z-index: 5;
           `}
         >
-          <UpcomingWorkshop
+          <ScheduledWorkshop
+            title="Learn React Hooks"
+            description="In this workshop, you’ll learn everything you need to be effective with the fundamental building block of React applications. When you’re finished, you’ll go back to your applications and refactor your components to be simpler, more flexible, and easier to maintain because of what you’ve learned."
+            date="April 3rd, 2019"
+            spotsRemaining="0"
+            bookUrl="hooks#register"
+            waitlistUrl="hooks#register"
+            url="hooks"
+            tech="react"
+            discountAvailable
+          />
+          {/* <ScheduledWorkshop
             title="React JS Fundamentals"
             description="In this workshop, we’ll go over all of those things and more to help you become productive with using the ReactJS framework for building applications for the web."
             date="April 3, 2019"
             spotsRemaining="20"
             bookUrl="#"
             waitlistUrl="#"
-            url="#"
+            url="react-fundamentals"
+            tech="react"
           />
-          <UpcomingWorkshop
+          <ScheduledWorkshop
             title="Testing Fundamentals"
             description="In this workshop, we’ll learn how testing frameworks, assertion libraries, and mocking libraries work by building our own, simple version of each."
             date="April 3, 2019"
             spotsRemaining="20"
             bookUrl="#"
             waitlistUrl="#"
-            url="#"
-          />
-          <UpcomingWorkshop
-            title="Learn React Hooks"
-            description="In this workshop, you’ll learn everything you need to be effective with the fundamental building block of React applications. When you’re finished, you’ll go back to your applications and refactor your components to be simpler, more flexible, and easier to maintain because of what you’ve learned."
-            date="April 3, 2019"
-            spotsRemaining="0"
-            bookUrl="#"
-            waitlistUrl="#"
-            url="#"
-          />
+            url="testing-fundamentals"
+            tech="testing"
+          /> */}
         </div>
         <div
           css={css`
             text-align: center;
-            margin: ${rhythm(2)} 0;
+            margin: ${rhythm(2)} 0 ${rhythm(1.5)} 0;
           `}
         >
           <h1>Lorem Ipsum</h1>
           <p>Lorem ipsum dolor sit amet, lorem ipsum.</p>
+          <div
+            css={css`
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+            `}
+          >
+            {workshopTech.map(tech => (
+              <TechToggle
+                css={css`
+                  ${includes(displayedTech, tech) && displayedTech.length === 1
+                    ? `color: white; background: #2F313E;
+             :hover {
+           color: white;
+           background: #232323;}`
+                    : `color: black; background: white;
+             :hover {
+           color: black;
+          background: #fafafa;}`}
+                `}
+                key={tech}
+                onClick={() => {
+                  if (techIsDisplayed(tech) && displayedTech.length === 1) {
+                    setDisplayedTech(workshopTech)
+                  } else {
+                    setDisplayedTech([tech])
+                  }
+                }}
+              >
+                <img
+                  src={
+                    (tech === 'react' && `${reactIcon}`) ||
+                    (tech === 'javascript' && `${jsIcon}`) ||
+                    (tech === 'testing' && `${testingIcon}`)
+                  }
+                  alt={tech}
+                />{' '}
+                {tech}
+              </TechToggle>
+            ))}
+          </div>
         </div>
         <div
           css={css`
@@ -83,15 +162,25 @@ export default function RemoteWorkshops({data: {remoteWorkshops}}) {
             margin-bottom: ${rhythm(2)};
           `}
         >
-          {remoteWorkshops.edges.map(({node: workshop}) => (
-            <Workshop
-              key={workshop.id}
-              title={workshop.frontmatter.title}
-              description={workshop.frontmatter.description}
-              url={workshop.fields.slug}
-              topic={workshop.frontmatter.topic}
-            />
-          ))}
+          {workshops.edges
+            .filter(({node: workshop}) => {
+              return includes(displayedTech, workshop.frontmatter.tech)
+            })
+            .map(({node: workshop}) => (
+              <Workshop
+                key={workshop.id}
+                title={workshop.frontmatter.title}
+                description={truncate(workshop.frontmatter.description, {
+                  length: 190,
+                })}
+                url={
+                  workshop.frontmatter.slug
+                    ? `/${workshop.frontmatter.slug}`
+                    : workshop.fields.slug
+                }
+                tech={workshop.frontmatter.tech}
+              />
+            ))}
         </div>
       </Container>
     </Layout>
@@ -100,19 +189,18 @@ export default function RemoteWorkshops({data: {remoteWorkshops}}) {
 
 export const remoteWorkshopsQuery = graphql`
   query {
-    remoteWorkshops: allMdx(
-      filter: {
-        frontmatter: {published: {ne: false}}
-        fileAbsolutePath: {regex: "//src/pages/workshops//"}
-      }
-      sort: {order: ASC, fields: [frontmatter___topic]}
+    workshops: allMdx(
+      filter: {fileAbsolutePath: {regex: "//src/pages/workshops//"}}
+      sort: {order: ASC, fields: [frontmatter___tech]}
     ) {
       edges {
         node {
+          id
           frontmatter {
             title
             description
-            topic
+            tech
+            slug
           }
           fields {
             slug

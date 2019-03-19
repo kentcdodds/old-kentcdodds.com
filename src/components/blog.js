@@ -81,7 +81,7 @@ const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
                   aria-label={`View ${post.frontmatter.title} article`}
                   to={post.fields.slug}
                 >
-                  <Img fluid={post.frontmatter.banner.childImageSharp.fluid} />
+                  <Img fixed={post.frontmatter.banner.childImageSharp.fixed} />
                 </Link>
               </div>
             )}

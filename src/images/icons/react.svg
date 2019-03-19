@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24">
-  <g fill="none" fill-rule="evenodd" transform="translate(1 -1)">
-    <ellipse cx="12.518" cy="13.006" stroke="#61DAFB" stroke-width=".96" rx="12.464" ry="4.681"/>
-    <ellipse cx="12.482" cy="12.988" fill="#61DAFB" fill-rule="nonzero" rx="2.285" ry="2.252"/>
-    <ellipse cx="12.513" cy="13.01" stroke="#61DAFB" stroke-width=".96" rx="4.732" ry="12.331" transform="rotate(149.999 12.513 13.01)"/>
-    <ellipse cx="12.523" cy="13.012" stroke="#61DAFB" stroke-width=".96" rx="4.732" ry="12.331" transform="rotate(30.001 12.523 13.012)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="26" height="26" fill="#61DAFB" opacity=".2" rx="3"/>
+    <g transform="translate(3.5 2.5)">
+      <ellipse cx="9.5" cy="10.272" stroke="#55CCEC" rx="9.5" ry="3.5"/>
+      <circle cx="9.5" cy="10.272" r="1.5" fill="#55CCEC" fill-rule="nonzero"/>
+      <ellipse cx="9.51" cy="10.279" stroke="#55CCEC" rx="3.586" ry="9.279" transform="rotate(149.999 9.51 10.28)"/>
+      <ellipse cx="9.517" cy="10.281" stroke="#55CCEC" rx="3.586" ry="9.279" transform="rotate(30.001 9.517 10.28)"/>
+    </g>
   </g>
 </svg>
