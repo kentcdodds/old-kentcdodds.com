@@ -214,3 +214,103 @@ other cool things you can do with glamor (including
 Another great feature of `glamorous` is it will merge glamor class names
 together automatically for you. Learn more about that
 [here](https://github.com/kentcdodds/glamorous/blob/2c5cba47ed83a744b8dec1ac8f85b560eae818b7/README.md#classname).
+
+---
+
+In addition to the styled-components inspired API, `glamorous` exposes a
+[jsxstyle](https://github.com/smyte/jsxstyle) inspired API. Sometimes, you don’t
+want to give something a name because naming things is hard. Especially with
+this stuff, you wind up with names like `Container` and `Wrapper` and who knows
+which is which!? So, if you find that something doesn’t really need a name, then
+don’t give it one!
+
+```jsx
+const {Div, A} = glamorous
+
+function App() {
+  return (
+    <Div textAlign="center" color="red">
+      <A
+        href="[https://brave.com/](https://brave.com/)"
+        textDecoration="none"
+        color="darkorange"
+        textShadow="1px 1px 2px orange"
+      >
+        Browse faster and safer with Brave.
+      </A>
+      <div>It's fast, fun, and safe!</div>
+    </Div>
+  )
+}
+```
+
+(fun tip: this works too: `<glamorous.Div>JSX!!</glamorous.Div>`)
+
+---
+
+Oh, and just for fun, all this excitement around CSS Grid got you salivating?
+It’s trivially supported by glamorous:
+
+```jsx
+// Example inspired by
+// [http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12/)
+const MyGrid = glamorous.div({
+  margin: 'auto',
+  backgroundColor: '#fff',
+  color: '#444',
+  // You can use [@supports](http://twitter.com/supports "Twitter profile for @supports") with glamor!
+  // So you can use [@supports](http://twitter.com/supports "Twitter profile for @supports") with glamorous as well!
+  '[@supports](http://twitter.com/supports "Twitter profile for @supports") (display: grid)': {
+    display: 'grid',
+    gridGap: 10,
+    gridTemplateAreas: `  
+      "....... header header"  
+      "sidebar content content"  
+      "footer  footer  footer"  
+    `,
+  },
+})
+
+const Box = glamorous.div({
+  backgroundColor: '#444',
+  color: '#fff',
+  borderRadius: 5,
+  padding: 10,
+  fontSize: '150%',
+})
+
+const HeaderFooter = glamorous(Box)({
+  backgroundColor: '#999',
+})
+
+function App() {
+  return (
+    <MyGrid>
+      <HeaderFooter css={{gridArea: 'header'}}>Header</HeaderFooter>
+      <Box css={{gridArea: 'sidebar'}}>Sidebar</Box>
+      <Box css={{gridArea: 'content'}}>
+        Content
+        <br />
+        More content than we had before so this column is now quite tall.
+      </Box>
+      <HeaderFooter css={{gridArea: 'footer'}}>Footer</HeaderFooter>
+    </MyGrid>
+  )
+}
+```
+
+And [you get](https://codesandbox.io/s/2k8yll8qj):
+
+![](./images/0.png)
+
+Example inspired by
+[http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12/)
+
+I hope you enjoy [glamorous](https://github.com/paypal/glamorous) 💄
+[🌟](https://github.com/paypal/glamorous/stargazers)
+[👀](https://github.com/paypal/glamorous/watchers)!
+
+See you around on twitter: [@glamorousCSS](https://twitter.com/glamorousCSS) and
+[@kentcdods](https://twitter.com/kentcdodds)
+
+With ❤️ from PayPal ([we’re hiring](https://jobsearch.paypal-corp.com/search)!)
