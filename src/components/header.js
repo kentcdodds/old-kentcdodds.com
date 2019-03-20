@@ -5,7 +5,6 @@ import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
 
-import kent from '../images/kent@2x.png'
 import MobileNav from './mobile-nav'
 import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
@@ -54,7 +53,6 @@ const Header = ({
   headerLink = '/',
   headerColor = 'black',
   fixed = false,
-  headerImage = true,
 }) => (
   <header
     css={css`
@@ -89,19 +87,9 @@ const Header = ({
             fontFamily: fonts.regular,
             display: 'flex',
             alignItems: 'center',
-            img: {
-              marginBottom: 0,
-              maxWidth: '45px',
-              //marginTop: '-5px',
-              position: 'absolute',
-            },
-            span: {
-              marginLeft: headerImage ? '60px' : 0,
-            },
           }}
         >
-          {headerImage && <img src={kent} alt="Kent C. Dodds" />}{' '}
-          <span>{siteTitle}</span>
+          {siteTitle}
         </HeaderLink>
         <div
           css={css`
