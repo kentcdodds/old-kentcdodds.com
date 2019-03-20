@@ -95,7 +95,7 @@ function ScheduledWorkshop({
         `}
       >
         <div>
-          <Link to={url}>
+          <Link to={`/workshops/${url}`}>
             <h1>{title}</h1>
           </Link>
           <div
@@ -114,7 +114,7 @@ function ScheduledWorkshop({
             <span
               css={css`
                 padding-right: 15px;
-                color: hsla(0, 0%, 0%, 0.9);
+                color: ${theme.colors.body_color};
               `}
             >
               {spotsRemaining == 0 ? (
@@ -139,7 +139,11 @@ function ScheduledWorkshop({
           `}
         >
           <Link
-            to={spotsRemaining == 0 ? `${waitlistUrl}` : `${bookUrl}`}
+            to={
+              spotsRemaining == 0
+                ? `/workshops/${waitlistUrl}`
+                : `/workshops/${bookUrl}`
+            }
             className="button"
           >
             {spotsRemaining == 0 ? 'Get on the wait list' : `${buttonText}`}
@@ -151,14 +155,14 @@ function ScheduledWorkshop({
         css={css`
           p {
             margin-bottom: ${rhythm(1)};
-            color: hsla(0, 0%, 0%, 0.93);
+            color: ${theme.colors.body_color};
           }
         `}
       >
         {description}
       </Markdown>
       <Link
-        to={url}
+        to={`/workshops/${url}`}
         css={css`
           color: ${theme.brand.primary};
         `}

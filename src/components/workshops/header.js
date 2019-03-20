@@ -5,6 +5,7 @@ import {bpMaxSM} from '../../lib/breakpoints'
 import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import styles from './styles'
+import discountStripe from '../../images/icons/stripe.svg'
 
 const Header = ({
   children,
@@ -14,7 +15,38 @@ const Header = ({
   isSoldOut = false,
   buttonText,
   image,
+  discountAvailable = false,
 }) => {
+  const Stripe = props => (
+    <div
+      css={css`
+        ${discountAvailable
+          ? `
+          display: block;
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          background-image: url(${discountStripe});
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        margin-top: -42px;
+        margin-left: -42px;
+        ${bpMaxSM} {
+          margin-top: -21px;
+          margin-left: -21px;
+          width: 40px;
+          height: 40px;
+          h1 {
+            margin-top: ${discountAvailable ? '40px' : 'auto'};
+          }
+        }
+        `
+          : `display: none;`}
+      `}
+      {...props}
+    />
+  )
+
   return (
     <div
       css={css`
@@ -28,10 +60,10 @@ const Header = ({
           margin-right: 0;
         }
         h1 {
-          font-size: 28px;
+          font-size: 1.75rem;
           font-family: ${fonts.semibold}, sans-serif;
-          font-weight: normal;
           margin-top: 10px;
+          margin-bottom: ${date ? location : buttonText ? '0.775rem' : 0};
         }
         h4 {
           font-size: 14px;
@@ -62,11 +94,18 @@ const Header = ({
                 align-items: center;
             }
       `};
-        /* .button {
+        .button {
+          margin-top: ${rhythm(1)};
           background: ${lighten(0.4, `${theme.brand.primary}`)};
-        } */
+          color: ${theme.brand.primary};
+          :hover {
+            background: ${lighten(0.35, `${theme.brand.primary}`)};
+            color: ${theme.brand.primary};
+          }
+        }
       `}
     >
+      <Stripe />
       {image && (
         <div
           css={css`
@@ -102,6 +141,7 @@ const Header = ({
         <div
           css={css`
             display: flex;
+            flex-wrap: wrap;
             transition: ${theme.transition.ease};
           `}
         >
@@ -109,15 +149,13 @@ const Header = ({
           {location && <address>{location}</address>}
         </div>
         {children}
-        <br />
-        {isSoldOut && 'Sold out!'}
         {buttonText && (
           <a
             href="#register"
             className="button"
             aria-label="scroll to registration"
           >
-            {buttonText}
+            {isSoldOut && `Sold out -`} {buttonText}
           </a>
         )}
       </div>

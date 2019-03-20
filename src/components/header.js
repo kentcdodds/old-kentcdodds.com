@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
 
+import kent from '../images/kent@2x.png'
 import MobileNav from './mobile-nav'
 import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
@@ -32,7 +33,7 @@ const NavLink = styled(HeaderLink)({
   padding: '8px',
   borderRadius: '3px',
   background: 'transparent',
-  opacity: 0.8,
+  opacity: 0.9,
   '& + &': {marginLeft: 15},
   '&:hover': {
     opacity: 1,
@@ -53,6 +54,7 @@ const Header = ({
   headerLink = '/',
   headerColor = 'black',
   fixed = false,
+  headerImage = true,
 }) => (
   <header
     css={css`
@@ -84,10 +86,22 @@ const Header = ({
           aria-label="go to homepage"
           headerColor={headerColor}
           css={{
-            fontFamily: fonts.semibold,
+            fontFamily: fonts.regular,
+            display: 'flex',
+            alignItems: 'center',
+            img: {
+              marginBottom: 0,
+              maxWidth: '45px',
+              //marginTop: '-5px',
+              position: 'absolute',
+            },
+            span: {
+              marginLeft: headerImage ? '60px' : 0,
+            },
           }}
         >
-          {siteTitle}
+          {headerImage && <img src={kent} alt="Kent C. Dodds" />}{' '}
+          <span>{siteTitle}</span>
         </HeaderLink>
         <div
           css={css`
