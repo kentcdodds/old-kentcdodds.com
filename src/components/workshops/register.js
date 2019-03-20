@@ -7,7 +7,7 @@ import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
 
 const TitoWidget = props => {
-  const {event, discountAvailable} = props
+  const {event, discount} = props
   return (
     <div
       css={css`
@@ -73,7 +73,7 @@ const TitoWidget = props => {
       `}
     >
       <tito-widget
-        discount-code={discountAvailable && 'early'}
+        discount-code={discount && 'early'}
         event={`/kent-c-dodds/${event}`}
       />
     </div>
@@ -165,7 +165,7 @@ export const Counter = () => (
 )
 
 const Register = props => {
-  const {title, restProps, light, discountAvailable, event} = props
+  const {title, restProps, light, discount, event} = props
   return (
     <div
       id="register"
@@ -262,7 +262,7 @@ const Register = props => {
         `}
       >
         <>
-          <TitoWidget discountAvailable={discountAvailable} event={event} />
+          <TitoWidget discount={discount} event={event} />
           <p>{props.children}</p>
         </>
       </div>
@@ -296,7 +296,7 @@ const Register = props => {
         `}
       >
         {title && <h1>{title}</h1>}
-        {/* {discountAvailable && (
+        {/* {discount && (
           <>
             <p>
               Your chance to save <strong>$200</strong> in early bird discount

@@ -18,7 +18,7 @@ import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 
-export default function RemoteWorkshops({data: {workshops}}) {
+export default function RemoteWorkshops({data: {workshops, scheduled}}) {
   const workshopTech = uniq(
     workshops.edges.map(({node: workshop}) => workshop.frontmatter.tech),
   )
@@ -81,17 +81,25 @@ export default function RemoteWorkshops({data: {workshops}}) {
             z-index: 5;
           `}
         >
-          <ScheduledWorkshop
-            title="Learn React Hooks"
-            description="In this workshop, you’ll learn everything you need to be effective with the fundamental building block of React applications. When you’re finished, you’ll go back to your applications and refactor your components to be simpler, more flexible, and easier to maintain because of what you’ve learned."
-            date="April 3rd, 2019"
-            spotsRemaining="0"
-            bookUrl="hooks#register"
-            waitlistUrl="hooks#register"
-            url="hooks"
-            tech="react"
-            discountAvailable
-          />
+          {scheduled.edges.map(({node: workshop}) => (
+            <ScheduledWorkshop
+              title={workshop.frontmatter.title}
+              description={workshop.frontmatter.description}
+              date={workshop.frontmatter.date}
+              spotsRemaining={workshop.frontmatter.spotsRemaining}
+              bookUrl={`${workshop.fields.slug}#register`}
+              waitlistUrl={`${workshop.fields.slug}#register`}
+              url={
+                workshop.frontmatter.slug
+                  ? workshop.frontmatter.slug
+                  : workshop.fields.slug
+              }
+              tech={workshop.frontmatter.tech}
+              discount={workshop.frontmatter.discount}
+              soldOut={workshop.frontmatter.soldOut}
+              key={workshop.id}
+            />
+          ))}
         </div>
         <div
           css={css`
@@ -174,7 +182,7 @@ export default function RemoteWorkshops({data: {workshops}}) {
 export const remoteWorkshopsQuery = graphql`
   query {
     workshops: allMdx(
-      filter: {fileAbsolutePath: {regex: "//src/pages/workshops//"}}
+      filter: {fields: {isWorkshop: {eq: true}}}
       sort: {order: ASC, fields: [frontmatter___tech]}
     ) {
       edges {
@@ -182,6 +190,7 @@ export const remoteWorkshopsQuery = graphql`
           id
           frontmatter {
             title
+            date
             description
             tech
             slug
@@ -192,6 +201,31 @@ export const remoteWorkshopsQuery = graphql`
         }
       }
       totalCount
+    }
+
+    scheduled: allMdx(
+      filter: {fields: {isScheduled: {eq: true}}}
+      sort: {order: ASC, fields: [frontmatter___date]}
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            discount
+            description
+            tech
+            slug
+            spotsRemaining
+            soldOut
+          }
+          fields {
+            slug
+            isScheduled
+          }
+        }
+      }
     }
   }
 `

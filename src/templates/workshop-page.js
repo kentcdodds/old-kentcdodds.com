@@ -1,39 +1,25 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/seo'
 import {css} from '@emotion/core'
 import Container from 'components/container'
 import Layout from 'components/layout'
-import Share from 'components/share'
 import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
-import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
-import config from '../../config/website'
-import {bpMaxSM} from '../lib/breakpoints'
 import {get} from 'lodash'
+import Header from '../components/workshops/header'
 
-export default function Post({data: {site, mdx}}) {
-  const {
-    isWriting,
-    author = config.author,
-    editLink,
-    title,
-    slug,
-    date,
-    description,
-    banner,
-    bannerCredit,
-    noFooter,
-  } = mdx.fields
+export default function Workshop({data: {site, mdx}}) {
+  const {isWriting, title, date, banner, noFooter} = mdx.fields
+
+  const {location, soldOut} = mdx.frontmatter
 
   return (
     <Layout
       site={site}
       frontmatter={mdx.fields}
-      pageTitle={`Kent C. Dodds ${isWriting ? 'Writing ' : ''}Blog`}
-      headerLink={isWriting ? '/writing/blog' : '/blog'}
+      headerLink="/workshops"
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
     >
@@ -54,24 +40,21 @@ export default function Post({data: {site, mdx}}) {
       >
         <Container
           css={css`
-            padding-top: 20px;
+            padding-top: 0;
           `}
         >
-          <h1
-            css={css`
-              text-align: center;
-              margin-bottom: 20px;
-              margin-top: 0;
-              font-family: ${fonts.light};
-            `}
-          >
-            {title}
-          </h1>
+          <Header
+            soldOut={soldOut}
+            title={title}
+            date={date}
+            location={location}
+            image={banner ? banner.childImageSharp.fluid : false}
+            buttonText="Get on the wait list"
+          />
           <div
             css={css`
               display: flex;
               justify-content: center;
-              margin-bottom: 20px;
               h3,
               span {
                 text-align: center;
@@ -82,50 +65,10 @@ export default function Post({data: {site, mdx}}) {
                 margin: 0 5px;
               }
             `}
-          >
-            {author && <h3>{author}</h3>}
-            {author && <span>—</span>}
-            {date && <h3>{date}</h3>}
-          </div>
-          {banner && (
-            <div
-              css={css`
-                text-align: center;
-
-                p {
-                  margin-bottom: 0;
-                }
-                ${bpMaxSM} {
-                  padding: 0;
-                }
-              `}
-            >
-              <Img
-                fluid={banner.childImageSharp.fluid}
-                alt={site.siteMetadata.keywords.join(', ')}
-              />
-              {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
-            </div>
-          )}
-          <br />
-          {description ? <Markdown>{description}</Markdown> : null}
+          />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
         </Container>
-        {/* <SubscribeForm /> */}
       </article>
-      <Container noVerticalPadding>
-        <Share
-          url={`${config.siteUrl}${slug}`}
-          title={title}
-          twitterHandle={config.twitterHandle}
-        />
-        <br />
-      </Container>
-      <Container noVerticalPadding>
-        <p>
-          <a href={editLink}>Edit post on GitHub</a>
-        </p>
-      </Container>
     </Layout>
   )
 }
@@ -138,6 +81,10 @@ export const pageQuery = graphql`
       }
     }
     mdx(fields: {id: {eq: $id}}) {
+      frontmatter {
+        soldOut
+        location
+      }
       fields {
         editLink
         isWriting

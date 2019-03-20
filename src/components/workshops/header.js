@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import {css} from '@emotion/core'
 import {fonts, rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
@@ -12,15 +13,15 @@ const Header = ({
   title,
   date,
   location,
-  isSoldOut = false,
+  soldOut = false,
   buttonText,
-  image,
-  discountAvailable = false,
+  image = {},
+  discount = false,
 }) => {
   const Stripe = props => (
     <div
       css={css`
-        ${discountAvailable
+        ${discount
           ? `
           display: block;
           position: absolute;
@@ -37,7 +38,7 @@ const Header = ({
           width: 40px;
           height: 40px;
           h1 {
-            margin-top: ${discountAvailable ? '40px' : 'auto'};
+            margin-top: ${discount ? '40px' : 'auto'};
           }
         }
         `
@@ -72,7 +73,9 @@ const Header = ({
           margin: 0 0 5px 0;
           opacity: 0.7;
         }
-        img {
+
+        img,
+        .gatsby-image-wrapper {
           margin: 0;
           width: 100%;
           max-width: 280px;
@@ -82,11 +85,11 @@ const Header = ({
           }
         }
         address {
-          margin-left: ${date ? '40px' : '22px'};
+          margin-left: 40px;
         }
         ${image &&
           `display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: ${image ? '1fr 2fr' : '2fr'};
             grid-gap: 20px;
             ${bpMaxSM} {
                 display: flex;
@@ -119,9 +122,10 @@ const Header = ({
             }
           `}
         >
-          <img src={image} alt={title} />
+          <Img fluid={image} />
         </div>
       )}
+
       <div
         css={css`
           display: flex;
@@ -145,8 +149,8 @@ const Header = ({
             transition: ${theme.transition.ease};
           `}
         >
-          {date && <time>{date}</time>}
-          {location && <address>{location}</address>}
+          {date ? <time>{date}</time> : <time>TBA</time>}
+          {location ? <address>{location}</address> : <address>Zoom</address>}
         </div>
         {children}
         {buttonText && (
@@ -155,7 +159,7 @@ const Header = ({
             className="button"
             aria-label="scroll to registration"
           >
-            {isSoldOut && `Sold out -`} {buttonText}
+            {soldOut && `Sold out -`} {buttonText}
           </a>
         )}
       </div>

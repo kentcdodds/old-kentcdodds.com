@@ -19,9 +19,11 @@ function ScheduledWorkshop({
   description,
   date,
   buttonText = 'Book a seat',
-  spotsRemaining,
+  spotsRemaining = '20',
   tech,
-  discountAvailable,
+  location,
+  discount,
+  soldOut = false,
 }) {
   const techImage = workshopTech => {
     return (
@@ -33,7 +35,7 @@ function ScheduledWorkshop({
   const Stripe = props => (
     <div
       css={css`
-        ${discountAvailable
+        ${discount
           ? `
           display: block;
           position: absolute;
@@ -50,7 +52,7 @@ function ScheduledWorkshop({
           width: 40px;
           height: 40px;
           h1 {
-            margin-top: ${discountAvailable ? '40px' : 'auto'};
+            margin-top: ${discount ? '40px' : 'auto'};
           }
         }
         `
@@ -67,7 +69,7 @@ function ScheduledWorkshop({
         time {
           margin-right: ${date ? '40px' : '22px'};
         }
-        ${spotsRemaining == 0 &&
+        ${soldOut &&
           `
         .button {
          color: ${theme.brand.primary};
@@ -94,8 +96,12 @@ function ScheduledWorkshop({
           }
         `}
       >
-        <div>
-          <Link to={`/workshops/${url}`}>
+        <div
+          css={css`
+            max-width: 450px;
+          `}
+        >
+          <Link to={url}>
             <h1>{title}</h1>
           </Link>
           <div
@@ -117,7 +123,7 @@ function ScheduledWorkshop({
                 color: ${theme.colors.body_color};
               `}
             >
-              {spotsRemaining == 0 ? (
+              {soldOut ? (
                 <b>Sold out</b>
               ) : (
                 <span>
@@ -126,13 +132,14 @@ function ScheduledWorkshop({
               )}
             </span>
             <time>{date}</time>
-            <address>Zoom</address>
+            {location ? <address>{location}</address> : <address>Zoom</address>}
           </div>
         </div>
         <div
           css={css`
             display: flex;
             flex-direction: column;
+            width: 200px;
             ${bpMaxSM} {
               margin-top: 30px;
             }
@@ -140,7 +147,7 @@ function ScheduledWorkshop({
         >
           <Link
             to={
-              spotsRemaining == 0
+              spotsRemaining === 0
                 ? `/workshops/${waitlistUrl}`
                 : `/workshops/${bookUrl}`
             }

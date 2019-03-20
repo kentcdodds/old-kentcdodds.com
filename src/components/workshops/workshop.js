@@ -19,7 +19,7 @@ function Workshop({title, description, url, tech}) {
     )
   }
   return (
-    <Link to={`/workshops${url}`}>
+    <Link to={url}>
       <div
         css={css`
           ${styles}
