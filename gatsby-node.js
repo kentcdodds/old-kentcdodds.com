@@ -115,7 +115,6 @@ exports.createPages = async ({actions, graphql}) => {
         scope
       }
     }
-
     query {
       blog: allMdx(
         filter: {
@@ -130,7 +129,6 @@ exports.createPages = async ({actions, graphql}) => {
           }
         }
       }
-
       writing: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
@@ -144,7 +142,6 @@ exports.createPages = async ({actions, graphql}) => {
           }
         }
       }
-
       workshops: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
@@ -247,26 +244,26 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     let slug =
       node.frontmatter.slug ||
       createFilePath({node, getNode, basePath: `pages`})
-    let isWriting = false
-    let isWorkshop = true
-    let isScheduled = false
+    let {isWriting, isWorkshop, isScheduled} = false
 
     if (node.fileAbsolutePath.includes('content/blog/')) {
       slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
-    } else node.fileAbsolutePath.includes('content/writing-blog/')
-    isWriting = true
-    isWorkshop = false
-    slug = `/writing/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    }
+
     if (node.fileAbsolutePath.includes('src/pages/workshops/')) {
       isWriting = false
       isWorkshop = true
       if (node.frontmatter.date) {
+        isWriting = false
         isScheduled = true
       }
       slug = `/workshops/${node.frontmatter.slug ||
         slugify(node.frontmatter.title)}`
     }
-
+    if (node.fileAbsolutePath.includes('content/writing-blog/')) {
+      isWriting = true
+      slug = `/writing/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    }
     createNodeField({
       name: 'id',
       node,

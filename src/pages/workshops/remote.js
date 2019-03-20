@@ -91,7 +91,7 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
               waitlistUrl={`${workshop.fields.slug}#register`}
               url={
                 workshop.frontmatter.slug
-                  ? workshop.frontmatter.slug
+                  ? `/workshops/${workshop.frontmatter.slug}`
                   : workshop.fields.slug
               }
               tech={workshop.frontmatter.tech}
