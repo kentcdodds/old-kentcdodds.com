@@ -12,7 +12,7 @@ export const fonts = {
   // mediumItalic: 'Inter Medium Italic',
   semibold: 'Inter Semibold',
   // semiboldItalic: 'Inter Semibold Italic',
-  // bold: 'Inter Bold',
+  bold: 'Inter Bold',
   // boldItalic: 'Inter Bold Italic',
 }
 
@@ -44,6 +44,10 @@ const typography = new Typography({
       lineHeight: 1.25,
       marginTop: rhythm(1),
       marginBottom: rhythm(1 / 2),
+    },
+    strong: {
+      fontFamily: fonts.bold,
+      fontStyle: 'bold',
     },
   }),
 })
