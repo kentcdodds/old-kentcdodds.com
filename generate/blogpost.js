@@ -21,7 +21,7 @@ tinify.key = process.env.TINY_PNG_API_KEY
 
 const padLeft0 = n => n.toString().padStart(2, '0')
 const formatDate = d =>
-  `${d.getFullYear()}-${padLeft0(d.getMonth() + 1)}-${padLeft0(d.getDay())}`
+  `${d.getFullYear()}-${padLeft0(d.getMonth() + 1)}-${padLeft0(d.getDate())}`
 
 const listify = a =>
   a && a.trim().length
@@ -94,7 +94,7 @@ async function generateBlogPost() {
       title,
       date: formatDate(new Date()),
       author: 'Kent C. Dodds',
-      description,
+      description: `_${description}_`,
       categories: listify(categories),
       keywords: listify(keywords),
       banner: './images/banner.jpg',

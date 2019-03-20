@@ -1,10 +1,10 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import Link from './link'
 import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
-
+import kent from '../images/kent.png'
 import MobileNav from './mobile-nav'
 import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
@@ -17,6 +17,7 @@ function HeaderLink({headerColor, ...props}) {
         textDecoration: 'none',
         color: headerColor ? headerColor : theme.colors.body_color,
         '&:hover,&:focus': {
+          background: 'rgba(40, 28, 77, 0.2)',
           color:
             headerColor === theme.colors.white
               ? 'white'
@@ -29,19 +30,14 @@ function HeaderLink({headerColor, ...props}) {
 }
 
 const NavLink = styled(HeaderLink)({
-  padding: '8px',
+  padding: '8px 10px',
   borderRadius: '3px',
   background: 'transparent',
-  opacity: 0.9,
-  '& + &': {marginLeft: 15},
-  '&:hover': {
-    opacity: 1,
-  },
+  '& + &': {marginLeft: 10},
   [bpMaxSM]: {
     display: 'none',
   },
   '&.active': {
-    opacity: 1,
     background: 'rgba(40, 28, 77, 0.7)',
   },
 })
@@ -53,6 +49,7 @@ const Header = ({
   headerLink = '/',
   headerColor = 'black',
   fixed = false,
+  headerImage = true,
 }) => (
   <header
     css={css`
@@ -87,9 +84,24 @@ const Header = ({
             fontFamily: fonts.regular,
             display: 'flex',
             alignItems: 'center',
+            img: {
+              marginBottom: 0,
+              maxWidth: '50px',
+              position: 'absolute',
+              borderRadius: '100%',
+              background:
+                headerColor === '#fff' ? 'rgba(40, 28, 77, 0.7)' : '#f1f1f1',
+            },
+            ':hover, :focus': {
+              background: 'transparent',
+            },
+            span: {
+              transform: headerImage && 'translateX(60px)',
+            },
           }}
         >
-          {siteTitle}
+          {headerImage && <img src={kent} alt="Kent C. Dodds" />}{' '}
+          <span>{siteTitle}</span>
         </HeaderLink>
         <div
           css={css`
@@ -110,28 +122,28 @@ const Header = ({
           <MobileNav color={headerColor} />
           <NavLink
             headerColor={headerColor}
-            to="/blog"
+            to="/blog/"
             aria-label="View blog page"
           >
             Blog
           </NavLink>
           <NavLink
             headerColor={headerColor}
-            to="/talks"
+            to="/talks/"
             aria-label="View talks page"
           >
             Talks
           </NavLink>
           <NavLink
             headerColor={headerColor}
-            to="/workshops"
+            to="/workshops/"
             aria-label="View workshops page"
           >
             Workshops
           </NavLink>
           <NavLink
             headerColor={headerColor}
-            to="/about"
+            to="/about/"
             aria-label="View about page"
           >
             About

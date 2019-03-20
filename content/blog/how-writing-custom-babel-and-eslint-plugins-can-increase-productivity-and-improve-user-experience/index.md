@@ -196,3 +196,30 @@ invaluable skill. You can
 and/or simply retweet this:
 
 https://twitter.com/kentcdodds/status/886945519909711872
+
+---
+
+P.S. There are several other (free) resources to help you learn ASTs:
+
+- [babel-plugin-handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md)
+- [asts-workshop](https://github.com/kentcdodds/asts-workshop) (the repo used
+  for the Frontend Masters course)
+- [Writing custom Babel and ESLint plugins with ASTs](https://www.youtube.com/watch?v=VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
+- [A couple lessons on ASTs on Egghead.io](http://kcd.im/egghead-asts)
+
+P.S.P.S. I thought I’d mention two babel plugins I’ve written recently that I’m
+pretty excited about
+([I’m](https://twitter.com/threepointone/status/885884698093899777)
+[not](https://twitter.com/mitchellhamiltn/status/886441807420182528)
+[alone](https://twitter.com/rauchg/status/886449097770541057)
+[either](https://twitter.com/souporserious/status/886803870743121920)). I think
+you should really take a look at these. I wrote the first working version of
+each of them in about a half hour:
+
+- [babel-plugin-preval](https://github.com/kentcdodds/babel-plugin-preval):
+  Pre-evaluate code at build-time
+- [babel-macros](https://github.com/kentcdodds/babel-macros): Enables
+  zero-config, importable babel plugins
+
+And in [the course](http://kcd.im/fm-asts) I teach you everything you need to
+know to be able to write plugins like these.

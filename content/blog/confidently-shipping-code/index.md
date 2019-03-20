@@ -86,8 +86,6 @@ know what to test. I've been working hard putting together **the most
 comprehensive work of my life**, and I think it'll knock your socks off. Stay
 tuned.
 
-Subscribe to [my newsletter](http://kcd.im/news) for me like this in your inbox:
-
 **Things to not miss**:
 
 - [TestingJavaScript.com ](https://testingjavascript.com)— I'm about to release

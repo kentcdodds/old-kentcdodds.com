@@ -30,7 +30,7 @@ const reset = css`
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    scroll-behavior: smooth;
+    //scroll-behavior: smooth;
   }
   body {
     color: ${theme.colors.body_color};
@@ -79,6 +79,9 @@ const reset = css`
     margin-bottom: 1rem;
     overflow: auto;
     white-space: pre;
+  }
+  pre, code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
   figure {
     margin: 0 0 1rem 0;

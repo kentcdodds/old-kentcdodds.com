@@ -17,7 +17,6 @@ import {get} from 'lodash'
 export default function Post({data: {site, mdx}}) {
   const {
     isWriting,
-    author = config.author,
     editLink,
     title,
     slug,
@@ -28,11 +27,12 @@ export default function Post({data: {site, mdx}}) {
     noFooter,
   } = mdx.fields
 
+  const blogPostUrl = `${config.siteUrl}${slug}`
+
   return (
     <Layout
       site={site}
       frontmatter={mdx.fields}
-      pageTitle={`Kent C. Dodds ${isWriting ? 'Writing ' : ''}Blog`}
       headerLink={isWriting ? '/writing/blog' : '/blog'}
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
@@ -83,8 +83,6 @@ export default function Post({data: {site, mdx}}) {
               }
             `}
           >
-            {author && <h3>{author}</h3>}
-            {author && <span>—</span>}
             {date && <h3>{date}</h3>}
           </div>
           {banner && (
@@ -115,7 +113,7 @@ export default function Post({data: {site, mdx}}) {
       </article>
       <Container noVerticalPadding>
         <Share
-          url={`${config.siteUrl}${slug}`}
+          url={blogPostUrl}
           title={title}
           twitterHandle={config.twitterHandle}
         />
@@ -123,7 +121,19 @@ export default function Post({data: {site, mdx}}) {
       </Container>
       <Container noVerticalPadding>
         <p>
-          <a href={editLink}>Edit post on GitHub</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://twitter.com/search?q=${encodeURIComponent(
+              blogPostUrl,
+            )}`}
+          >
+            Discuss on Twitter
+          </a>
+          {` • `}
+          <a target="_blank" rel="noopener noreferrer" href={editLink}>
+            Edit post on GitHub
+          </a>
         </p>
       </Container>
     </Layout>
@@ -144,6 +154,7 @@ export const pageQuery = graphql`
         title
         noFooter
         description
+        plainTextDescription
         date(formatString: "MMMM DD, YYYY")
         author
         banner {
@@ -151,7 +162,6 @@ export const pageQuery = graphql`
         }
         bannerCredit
         slug
-        description
         keywords
       }
       code {

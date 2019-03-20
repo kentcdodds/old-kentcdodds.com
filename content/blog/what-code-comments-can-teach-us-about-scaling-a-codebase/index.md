@@ -30,7 +30,7 @@ can all agree that this is a great ideal that we should strive for in our
 codebases. There are a lot of different tools and techniques at our disposal to
 accomplish this.
 
-#### Where Code Comments Go
+## Where Code Comments Go
 
 One practice that we all exercise on a regular basis is to comment our code. You
 explain why you're doing something unexpected in the comments so people coming
@@ -60,7 +60,7 @@ We could definitely come up with a convention for this kind of code commenting
 style, but why would we want to? Isn't it simpler to keep the comments
 co-located with the code they're explaining?
 
-#### So what?
+## So what?
 
 Now, you're probably thinking to yourself: "Yeah, duh, this is why nobody does
 this docs/ thing and everyone just co-locates their comments with the code.
@@ -117,7 +117,7 @@ This technique can be boiled down to this fundamental principle:
 You might also say: "Things that change together should be located as close as
 reasonable." (Dan Abramov said something like this to me once).
 
-#### Open Source made easy(-er)
+## Open Source made easy(-er)
 
 Aside from avoiding the problems discussed earlier, there are other benefits to
 structuring your projects this way. Taking a component and turning it into an
@@ -125,7 +125,7 @@ open source project is often as simple as copy/pasting the folder to another
 project and publishing that to npm. Then you just install it in your project and
 update your require/import statements and you're good to go.
 
-#### Tradeoffs/Drawbacks
+## Tradeoffs/Drawbacks
 
 Some pushback that I normally get from this approach is that it makes your
 folders really big. But that's easily resolved (and improved) by following a
@@ -218,7 +218,7 @@ expose everything needed by the datepicker component.
 Although this is a contrived example, I hope it demonstrates a way in which you
 can use co-location to your advantage in larger projects.
 
-#### Exceptions
+## Exceptions
 
 Sure there's a good argument for documentation that spans the whole or part of a
 system and how things integrate together. And where would you put integration or
@@ -240,7 +240,7 @@ really care how the "src/" is organized at all. Refactoring and moving around
 files in the "src/" directory should not necessitate changing the E2E tests at
 all.
 
-#### Conclusion
+## Conclusion
 
 Our goal here is to build software that is as simple to maintain as possible.
 The same benefits of **maintainability**, **applicability**, and **ease of use**

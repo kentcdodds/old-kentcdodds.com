@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {css} from '@emotion/core'
+import theme from '../../../config/theme'
 import styled from '@emotion/styled'
 import {rhythm} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
@@ -38,7 +39,7 @@ const SubscribeFormWrapper = styled.div({
   color: 'white',
   maxWidth: '350px',
   padding: '40px',
-  background: '#231c42',
+  background: theme.colors.purple_dark,
   backgroundImage:
     'linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%), linear-gradient(32deg, rgba(255, 255, 255, 0.25) 33%, rgba(0, 0, 0, 0.25) 100%)',
   borderRadius: '5px',

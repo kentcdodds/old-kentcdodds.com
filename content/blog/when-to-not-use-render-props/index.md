@@ -8,12 +8,21 @@ description: >-
   pattern_
 keywords:
   - React
-  - Javascrip
+  - JavaScript
   - Render Props
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Erwan Hesry](https://unsplash.com/photos/h-ACUrBngrw) on
   [Unsplash](https://unsplash.com)'
+---
+
+---
+
+**UPDATE: If you can use react@16.8.0 then the answer is to rarely use render
+props and almost always use a custom hook. HOOKS ARE ALMOST ALWAYS THE SUPERIOR
+PATTERN.**
+[Read about when you might still use render props](https://kentcdodds.com/blog/react-hooks-whats-going-to-happen-to-render-props)
+
 ---
 
 > _🚨 Announcement: I am now on Patreon! Support these newsletters and other

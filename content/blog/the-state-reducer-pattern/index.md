@@ -182,6 +182,3 @@ weeks ago. If you're curious what
 all about and why it's so cool it's
 [built-into create-react-app](https://github.com/facebookincubator/create-react-app/pull/3675),
 then give this a watch!
-
-These are some things I believe in. You probably believe in some of these things
-too.

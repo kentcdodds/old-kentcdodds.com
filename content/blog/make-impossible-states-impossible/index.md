@@ -25,7 +25,7 @@ Googling around it looks like it's a pretty popular phrase in the
 To illustrate what this means, let's checkout at
 [a very simple example](https://codesandbox.io/s/j71ljpvvww):
 
-```
+```jsx
 <Alert>Just FYI</Alert>
 <Alert success>It worked!</Alert>
 <Alert warning>Head's up</Alert>
@@ -60,7 +60,7 @@ So what do we do with our simple example? Whelp, all these different props
 represent is the _type_ of alert that should be rendered. So what if instead of
 simply accepting the prop itself, we accept a `type` prop?
 
-```
+```jsx
 <AlertBetter>Just FYI</AlertBetter>
 <AlertBetter type="success">It worked!</AlertBetter>
 <AlertBetter type="warning">Head's up</AlertBetter>
@@ -95,9 +95,6 @@ by [@stereobooster](https://twitter.com/stereobooster).
 P.S.P.S. Further revelation about the origin of a similar phrase:
 
 https://twitter.com/yminsky/status/1034947939364425731
-
-**Looking for a job? Looking for a developer? Check out my job board:**
-[**kcd.im/jobs**](http://kcd.im/jobs)
 
 **Learn more about React from me**:
 

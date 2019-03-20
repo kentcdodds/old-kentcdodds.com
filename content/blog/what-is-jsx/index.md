@@ -4,8 +4,8 @@ title: What is JSX?
 date: '2018-07-09'
 author: Kent C. Dodds
 description: >-
-  _You may use it every day, but have you seen what happens after Babel
-  transpiles it?_
+  _You may use it every day, but have you seen what happens after Babel compiles
+  it?_
 keywords:
   - React
   - JavaScript
@@ -18,18 +18,21 @@ bannerCredit:
 
 I think a critical part of understanding how to use React effectively is
 understanding JavaScript and JavaScript expressions. So I'm going to show you a
-few examples of JSX and it's transpiled version to help give you an idea of how
-this all works. As soon as you can transpile JSX in your head, you can use the
+few examples of JSX and it's compiled version to help give you an idea of how
+this all works. As soon as you can compile JSX in your head, you can use the
 abstraction more powerfully.
 
 Here's our simplest example:
 
+> Note, all examples assign to a variable `ui` just to illustrate that these are
+> regular JavaScript expressions that you can assign to a variable.
+
 ```jsx
-;<div id="root">Hello world</div>
-React.createElement('div', {id: 'root'}, 'Hello world')
+ui = <div id="root">Hello world</div>
+ui = React.createElement('div', {id: 'root'}, 'Hello world')
 ```
 
-As shown above, the JSX is transpiled to `React.createElement`. The API to
+As shown above, the JSX is compiled to `React.createElement`. The API to
 `React.createElement` is:
 
 ```js
@@ -44,16 +47,18 @@ function createElement(elementType, props, ...children) {}
   just a convenience and we could write an equivalent to above with:
 
 ```js
-React.createElement('div', {id: 'root', children: 'Hello world'})
+ui = React.createElement('div', {id: 'root', children: 'Hello world'})
 ```
 
 If you have more than one child then you use an array:
 
 ```jsx
-;<div>
-  <span>Hello</span> <span>World</span>
-</div>
-React.createElement('div', {
+ui = (
+  <div>
+    <span>Hello</span> <span>World</span>
+  </div>
+)
+ui = React.createElement('div', {
   children: [
     React.createElement('span', null, 'Hello'),
     ' ',
@@ -62,7 +67,7 @@ React.createElement('div', {
 })
 
 // Note: babel uses the third argument for children:
-React.createElement(
+ui = React.createElement(
   'div', // type
   null, // props
   // children are the rest:
@@ -74,7 +79,7 @@ React.createElement(
 
 What you get back from a `React.createElement` call is actually a simple object:
 
-```
+```js
 // <div id="root">Hello world</div>
 {
   type: "div",
@@ -93,28 +98,36 @@ whatever else out of it. Neat right?!
 Here are a few more examples for you:
 
 ```jsx
-;<div>Hello {subject}</div>
-React.createElement('div', null, 'Hello ', subject)
-;<div>
-  {greeting} {subject}
-</div>
-React.createElement('div', null, greeting, ' ', subject)
-;<button onClick={() => {}}>click me</button>
-React.createElement('button', {onClick: () => {}}, 'click me')
-;<div>{error ? <span>{error}</span> : <span>good to go</span>}</div>
-React.createElement(
+ui = <div>Hello {subject}</div>
+ui = React.createElement('div', null, 'Hello ', subject)
+
+ui = (
+  <div>
+    {greeting} {subject}
+  </div>
+)
+ui = React.createElement('div', null, greeting, ' ', subject)
+
+ui = <button onClick={() => {}}>click me</button>
+ui = React.createElement('button', {onClick: () => {}}, 'click me')
+
+ui = <div>{error ? <span>{error}</span> : <span>good to go</span>}</div>
+ui = React.createElement(
   'div',
   null,
   error
     ? React.createElement('span', null, error)
     : React.createElement('span', null, 'good to go'),
 )
-;<div>
-  {items.map(i => (
-    <span key={i.id}>{i.content}</span>
-  ))}
-</div>
-React.createElement(
+
+ui = (
+  <div>
+    {items.map(i => (
+      <span key={i.id}>{i.content}</span>
+    ))}
+  </div>
+)
+ui = React.createElement(
   'div',
   null,
   items.map(i => React.createElement('span', {key: i.id}, i.content)),

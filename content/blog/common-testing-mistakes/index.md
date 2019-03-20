@@ -22,12 +22,12 @@ One of the biggest mistakes you could make would be missing out on my full
 
 ### Mistake Number 1: Testing Implementation Details
 
-I harp on this a lot (I even have a more complete blog post about this topic
-coming next week). It's because it's a huge problem in testing and leads to
-tests that don't give nearly as much confidence as they could. Here's a very
-simple example of a test that's testing implementation details:
+I harp on this a lot ([read more](/blog/testing-implementation-details)). It's
+because it's a huge problem in testing and leads to tests that don't give nearly
+as much confidence as they could. Here's a very simple example of a test that's
+testing implementation details:
 
-```
+```jsx
 // counter.js
 import React from 'react'
 
@@ -159,80 +159,3 @@ your test is doing isn't bringing you more confidence, then consider whether you
 can stop doing it!
 
 Good luck!
-
-### [Course FAQ](https://testingjavascript.com)
-
-A lot of folks have had questions about buying the course, so I wanted to answer
-them here.
-
-**The site is behaving oddly. Do you know what is wrong?**
-
-We had a couple of technical issues around service workers and helped get Gatsby
-patched so others won't experience the same thing. If the site is behaving
-poorly in anyway please email
-[help@testingjavascript.com](mailto:help@testingjavascript.com) and the team
-will help you!
-
-**Are Team Licenses be available?**
-
-Yes! Look below the Pro tier for team pricing. The bulk discount goes up to a
-savings of 72%!!
-
-**Is this content new, or is it the same as your Frontend Masters workshops**
-
-This is new content recorded exclusively for this course. It is very dense, with
-a lot more information, and a lot of fantastic bonuses. You'll like it.
-
-**What if this material doesn't suit my needs?**
-
-😢 I guarantee it will, but if it doesn't, send an email to
-[help@testingjavascript.com](mailto:help@testingjavascript.com) within 30-days
-for a full refund.
-
-**Who is this course for?**
-
-This course is for anybody building web applications with JavaScript. It assumes
-that you know how to use modern JavaScript and have some experience building
-applications.
-
-If you've never tested your apps before, this is a great place to start. If you
-are a seasoned pro delivering well tested applications, this should be a solid
-review, reference, and will definitely teach you some new patterns and
-practices.
-
-This course isn't for you if you believe shipping well-tested quality JavaScript
-apps to your users is a waste of time.
-
-**I live in a region that doesn't have the purchasing power. Do you support
-purchase power parity or regional pricing?**
-
-Yes! If it's supported for your region, then there will be a link for you to
-access the regional pricing.
-
-**Can I get more details on this course?**
-
-Yes!! I recorded a detailed walk through of the entire course and what you will
-get:
-
-**What font/theme is that?**
-
-https://twitter.com/kentcdodds/status/1011999102492504064
-
-**I need more help, what should I do.**
-
-Send an email to [help@testingjavascript.com](mailto:help@testingjavascript.com)
-
-**Things to not miss**:
-
-- [TestingJavaScript spectrum community](https://spectrum.chat/testingjavascript):
-  A place where you can chat with other people who want to learn the smart,
-  efficient way to test any JavaScript application!
-- [React Conf](https://conf.reactjs.org/): Tickets are all sold out, but this is
-  going to be a HUGE conference. Even if you're not a react user, you'll want to
-  watch the livestream.
-- [VSCode in Codesandbox](https://twitter.com/CompuIves/status/1052594462768148480):
-  This is seriously awesome. You can enable it in the experimental area of your
-  preferences. I tried it and it's AMAZING. Seriously, incredible work by Ives.
-  It's
-  [noticeably faster](https://twitter.com/kentcdodds/status/1053635470788190208)
-  and just an all around amazing experience.

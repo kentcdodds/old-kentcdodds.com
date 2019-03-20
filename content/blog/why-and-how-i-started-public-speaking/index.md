@@ -145,9 +145,6 @@ more able you will be to take that nervous energy and turn it into positive
 energy to get the audience engaged which will help you connect with them better.
 Keep practicing! Good luck :D
 
-**Looking for a job? Looking for a developer? Check out my job board:**
-[**kcd.im/jobs**](http://kcd.im/jobs)
-
 **Learn more about "self improvement" from me**:
 
 - [Zero to 60 in Software Development: How to Jumpstart Your Career](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A

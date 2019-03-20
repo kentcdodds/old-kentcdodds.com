@@ -1,3 +1,4 @@
+const {URL} = require('url')
 const nodemailer = require('nodemailer')
 const ow = require('ow')
 const {markdownToHtml} = require('../utils')
@@ -31,6 +32,18 @@ const headers = {
 }
 
 exports.handler = async event => {
+  const origin = new URL(event.headers.origin)
+  const acceptable =
+    (origin.hostname === 'localhost' &&
+      process.env.NODE_ENV !== 'production') ||
+    origin.hostname === 'kentcdodds.com'
+  if (!acceptable) {
+    return Promise.reject({
+      statusCode: 403,
+      body: 'Unacceptable request',
+      headers,
+    })
+  }
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
@@ -39,19 +52,19 @@ exports.handler = async event => {
     }
   }
   await transporter.verify()
-  const body = JSON.parse(event.body)
+  const {name, email, subject, body, ...otherData} = JSON.parse(event.body)
 
   try {
-    ow(body.name, 'Name is too short', ow.string.minLength(1))
-    ow(body.name, 'Name is too long', ow.string.maxLength(60))
-    ow(body.email, 'Email is invalid', isEmail)
+    ow(name, 'Name is too short', ow.string.minLength(1))
+    ow(name, 'Name is too long', ow.string.maxLength(60))
+    ow(email, 'Email is invalid', isEmail)
     ow(
-      body.subject,
+      subject,
       'Please keep the subject to a reasonable length',
       ow.any(ow.string.minLength(5), ow.string.maxLength(120)),
     )
     ow(
-      body.body,
+      body,
       'Please keep the body to a reasonable length',
       ow.any(ow.string.minLength(40), ow.string.maxLength(1001)),
     )
@@ -63,12 +76,18 @@ exports.handler = async event => {
     })
   }
 
+  const otherDataString = JSON.stringify(otherData, null, 2)
+
+  const text = `${body}\n\n---\n\nOther form data:\n\`\`\`\n${otherDataString}\n\`\`\`\n`
+  const sender = `"${name}" <${email}>`
+
   const message = {
-    from: `"${body.name}" <${body.email}>`,
+    from: sender,
     to: `"Kent C. Dodds" <kent@doddsfamily.us>`,
-    subject: body.subject,
-    text: body.body,
-    html: await markdownToHtml(body.body),
+    cc: sender,
+    subject,
+    text,
+    html: await markdownToHtml(text),
   }
 
   try {

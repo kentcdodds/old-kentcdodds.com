@@ -34,7 +34,7 @@ check out before you try to upgrade your stuff from Babel 5 to Babel 6:
 
 [**Quick guide: how to update Babel 5.x -> 6.x**](https://medium.com/p/d828c230ec53)
 
-#### ES6 Modules
+## ES6 Modules
 
 Upgrading for me would not have been that difficult if I had understood the ES6
 Modules specification correctly. Babel 5 allowed misuse of _export_ and _import_
@@ -44,7 +44,7 @@ and [Logan Smyth](https://medium.com/u/d632d7a778d5) informed me that I
 fundamentally misunderstood ES6 modules and that Babel 5 had facilitated that
 misunderstanding (writing a transpiler is hard).
 
-#### Near-midlife crisis
+## Near-midlife crisis
 
 At first, I didn't quite understand what Logan meant, but when I had the time to
 dedicate to upgrading my app,
@@ -119,7 +119,7 @@ const {foobar} = require('./foo')
 So that's the _why_ for Babel's change. It's no longer possible to do this and
 that's a good thing.
 
-#### What does this mean?
+## What does this mean?
 
 _Coming up with a good way to describe this in prose has proven difficult, so I
 hope a bunch of code examples and comparisons will be instructive_
@@ -168,7 +168,7 @@ module.exports = (x, y) => x + y
 const three = require('./add')(1, 2)
 ```
 
-#### How did I fix it?
+## How did I fix it?
 
 After a few hours I got the build running and the tests passing. I had two
 different approaches for different scenarios:
@@ -184,7 +184,7 @@ the ES6 modules spec works and how Babel transpiles it down to CommonJS so it
 can interoperate. Once I figured that out it was just monkey work to update my
 code to follow this convention.
 
-#### Recommendations
+## Recommendations
 
 Try to avoid mixing ES6 modules and CommonJS. I personally would say just go
 with ES6 modules for everything. One of the reasons that I mixed them in the
@@ -198,3 +198,69 @@ following babel plugins/presets:
 [**babel-preset-es2015-node5**](https://www.npmjs.com/package/babel-preset-es2015-node5)
 
 [**babel-plugin-add-module-exports**](https://www.npmjs.com/package/babel-plugin-add-module-exports)
+
+## Conclusion
+
+The real lesson from all of this is that we should learn how things are supposed
+to work. I could have saved myself a great deal of time if I had just understood
+how the ES6 module spec actually is intended to work.
+
+You may benefit from this Egghead.io lesson I made demonstrating how to upgrade
+from Babel 5 to Babel 6:
+
+[https://egghead.io/lessons/angularjs-updating-babel-5-to-6](https://egghead.io/lessons/angularjs-updating-babel-5-to-6)
+
+Also, remember that nobody’s perfect and we’re all learning here :-) See you on
+[Twitter](https://twitter.com/)!
+
+---
+
+## Appendix…
+
+**More examples:**
+
+Before the change with Babel, a require statement was similar to:
+
+```javascript
+import add from './add'
+const three = add(1, 2)
+```
+
+But after the change in Babel, the require statement now becomes more like:
+
+```javascript
+import * as add from './add'
+const three = add.default(1, 2)
+```
+
+What caused the problem for me was that now the add variable is no longer the
+default export, but an object that has all the named exports and the default
+export (under the default key).
+
+**Named Exports:**
+
+It’s notable that you can also use named exports and I recommend this with
+utility modules. This will allow you to do the destructuring-like syntax in the
+import statement (**warning, despite what it looks like it’s not actually
+destructing due to the static analysis reasons mentioned earlier**). So you
+could do:
+
+```javascript
+// math.js
+const add = (x, y) => x + y
+const subtract = (x, y) => x - y
+const multiply = (x, y) => x \* y
+export {add, subtract, multiply}
+
+// foo.js
+import {subtract, multiply} from './math'
+```
+
+This gets really awesome/exciting with
+[tree shaking](http://www.2ality.com/2015/12/webpack-tree-shaking.html).
+
+Personally, I generally recommend that for a component (like a React component
+or an Angular service) you’ll want to use default exports (you’re importing a
+specific thing, single file, single component, you know 😀). But for utility
+modules you generally have various pure functions that can be used
+independently. This is a great use case for named exports.

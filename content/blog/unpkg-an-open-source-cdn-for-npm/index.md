@@ -109,9 +109,6 @@ package. Simply add a `/` at the end of the URL and you'll see an index of the
 files as well as a version chooser which is pretty awesome:
 [`https://unpkg.com/d3/`](https://unpkg.com/d3/)
 
-**Looking for a job? Looking for a developer? Check out my job board:**
-[**kcd.im/jobs**](http://kcd.im/jobs)
-
 **Learn more about JavaScript from me**:
 
 - [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)

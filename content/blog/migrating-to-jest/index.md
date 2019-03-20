@@ -255,10 +255,3 @@ See you on [twitter](https://twitter.com/kentcdodds)!
 P.S. PayPal is hiring 😃
 
 https://twitter.com/kentcdodds/status/783330287035887616
-
-#### One more thing
-
-If you thought this was interesting, you might like to
-[check out the rest of my blog](https://blog.kentcdodds.com) and
-[subscribe to my newsletter 💌](https://kcd.im/news) (newsletters are published
-to my blog 2 weeks after they're emailed out).

@@ -12,7 +12,7 @@ const colors = {
   black: '#000',
   white: '#fff',
   bg_color: '#fafafa',
-  body_color: 'rgba(0,0,0,0.85)',
+  body_color: '#222426',
   link_color: brand.primary,
   link_color_hover: `${darken(0.07, brand.primary)}`,
   red: '#E75248',
@@ -20,6 +20,7 @@ const colors = {
   blue: '#327CDC',
   yellow: '#FFB700',
   purple: '#8242F6',
+  purple_dark: '#231c42',
 }
 
 const theme = {
