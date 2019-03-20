@@ -33,9 +33,9 @@ export default function Post({data: {site, mdx}}) {
     <Layout
       site={site}
       frontmatter={mdx.fields}
+      headerLink={isWriting ? '/writing/blog' : '/blog'}
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
-      pageTitle={mdx.fields.title}
     >
       <SEO
         frontmatter={mdx.fields}

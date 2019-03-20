@@ -79,9 +79,14 @@ export const globalStyles = css`
   }
   code {
     padding: 2px 4px;
-    background: #f1f1f1;
+    background: #f4f3fa;
     color: ${theme.colors.body_color};
     border-radius: 3px;
+  }
+  a {
+    code {
+      color: ${theme.brand.primary};
+    }
   }
   pre {
     background-color: #061526 !important;
