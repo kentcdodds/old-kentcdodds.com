@@ -119,7 +119,7 @@ rendering. In fact, if I were to take the `render` method of the `HiddenMessage`
 component and `console.log` what it's returning, I'd get something that looks a
 bit like this:
 
-```
+```js
 {
   "type": "div",
   "props": {
@@ -127,7 +127,7 @@ bit like this:
       {
         "type": "button",
         "props": {
-	  "onClick": [Function],
+          "onClick": [Function],
           "children": "Toggle"
         }
       },

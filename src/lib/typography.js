@@ -45,6 +45,10 @@ const typography = new Typography({
       marginTop: rhythm(1),
       marginBottom: rhythm(1 / 2),
     },
+    strong: {
+      fontFamily: fonts.bold,
+      fontStyle: 'bold',
+    },
   }),
 })
 // Hot reload typography in development.

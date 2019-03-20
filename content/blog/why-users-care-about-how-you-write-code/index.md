@@ -42,3 +42,48 @@ less.
 So did the way the app code was written impact the end user? You betcha. Did the
 user care that they had to wait weeks rather than days for the new feature?
 Yeah, they totally cared.
+
+---
+
+So yes, it’s true. The only thing that matters in software is the experience of
+the user. We created computers to improve our lives, and if the software we’re
+using doesn’t do that then it’s failed.
+
+> The experience of the user is indirectly, but strongly coupled to how we build
+> software
+
+So the big question: Does it matter to the user that we’re using the latest JS
+framework, build tool, or deployment service? Of course not!
+
+> Our measure of success should be how well we deliver what the user wants (and
+> no more). Our choice of tools should be based on that fundamental goal.
+
+At the same time, the latest tech and a good UX are not mutually exclusive. The
+latest and greatest technology can be a great way to accomplish this goal.
+
+#### So why does this matter?
+
+We waste time endlessly debating minutiae that has little impact — whether we
+should use semicolons in our JavaScript (no), or how many spaces to use for
+indentation (two), but we should instead focus on the tech choices that make a
+significant impact: solid design patterns, linting, testing, continuous
+integration, delivery, and deployment. These choices are the basis for an app
+that delivers a quality user experience. A great app is never truly
+finished.Requirements change, and our choices as developers determine how easily
+and quickly we are able to deliver new features, while keeping the product as
+polished as possible.
+
+So yes, our users don’t really care how we build our application, or what
+abstractions we use in doing so. Remember that we use JavaScript and the web
+because, with them, we can deliver an awesome experience to the user who doesn’t
+want to download, install, and regularly update our app. If we found another
+solution to accomplish that better, we’d all jump ship.
+
+User Experience includes a lot more than just base functionality. How your
+application is written, built, and deployed can make a big difference.
+
+---
+
+Big thanks to the people who helped review and edit this post, especially
+[Kyle Robinson](https://medium.com/@ksr583) for basically being the article’s
+editor.

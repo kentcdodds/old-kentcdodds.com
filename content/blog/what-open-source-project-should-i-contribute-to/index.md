@@ -31,7 +31,7 @@ post and are hoping to find a project that is friendly to newcomers
 [making](https://help.github.com/articles/creating-a-pull-request/)
 [pull requests](https://help.github.com/articles/using-pull-requests/).
 
-#### The Answer
+## The Answer
 
 My silver bullet answer comes from my blog post
 [Open Source Stamina](https://medium.com/@kentcdodds/open-source-stamina-dafd063f9932):
@@ -51,7 +51,7 @@ Angular module that could use a little polish. One thing's certain, whatever
 you're building, you're probably using an open source project or tool that you
 could personally benefit from contributing to.
 
-#### Contributing
+## Contributing
 
 Once you've found the project you want to contribute to, how do you know what to
 contribute? Many projects have
@@ -97,7 +97,7 @@ would answer "yes" when I asked her to marry me _before_ I asked 😃).
 _Also, see [this page](http://24pullrequests.com/contributing) for more tips on
 contributing._
 
-#### Your First Pull Request
+## Your First Pull Request
 
 For your first
 [pull request](https://help.github.com/articles/using-pull-requests/), feel free
@@ -114,7 +114,7 @@ to contribute to open source projects on GitHub:
 
 [**Introducing: How to Contribute to Open Source**](/blog/introducing-how-to-contribute-to-open-source)
 
-#### Resources
+## Resources
 
 Take a look at GitHub's issues for issues labeled
 [first-timers-only](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Afirst-timers-only),
@@ -147,7 +147,7 @@ though I didn't really make a lasting impact on the project and I wasn't
 motivated to continue contributing, it got me over the hump of contributing for
 the first time which is the hardest part.
 
-#### Conclusion
+## Conclusion
 
 Contributing to open source
 [has been awesome for me](https://medium.com/@kentcdodds/how-getting-into-open-source-has-been-awesome-for-me-8480cd756a80)

@@ -74,7 +74,7 @@ Of course it’d be nice for saving some time; that’s obvious, but like I said
 this is more than just about saving time. Let’s look at some of the other
 reasons this is awesome.
 
-#### Context
+## Context
 
 One of my favorite benefits of automating repetitive workflows is that I can
 keep my brain focused on the task at hand rather than shifting gears to deal
@@ -94,7 +94,7 @@ to go back to be reminded (or hit the foosball table for a minute ⚽️).
 > The ability to stay focused on the task at hand is a huge benefit to
 > automating workflows.
 
-#### Human Error
+## Human Error
 
 Something we humans do much better than computers is the creative process of
 understanding a problem and coming up with a solution. So computers have been
@@ -105,7 +105,7 @@ we can hand over to the computer what it’s been designed to do (and does reall
 well) and focus on what we’re really good at (back to the idea of context
 there).
 
-#### Sharing
+## Sharing
 
 Once you’ve finished automating your workflow, you can share the automation
 you’ve developed with others. This is one area where the math can totally blow
@@ -128,7 +128,7 @@ that’s shared a ton of his automation is
 [Gleb Bahmutov](https://medium.com/@bahmutov), who is one of my personal heros;
 check his tools out [on npm](https://www.npmjs.com/~bahmutov).)_
 
-#### Learning
+## Learning
 
 One of the things I love about our industry is that it favors and encourages
 lifelong learning.
@@ -152,7 +152,7 @@ recommend you automate that with the aforementioned
 
 ---
 
-#### Conclusion
+## Conclusion
 
 I’m not claiming that everything you do should be automated and open sourced.
 Certainly not. We’ve got to get our jobs done and ship stuff. But there are
@@ -169,7 +169,7 @@ Catch you on [Twitter](https://twitter.com/kentcdodds) and
 
 ---
 
-#### Appendix (automation tools)
+## Appendix (automation tools)
 
 Here are a few automation related NodeJS tools I have used or had recommended to
 me that you might want to check out (in no particular order):
@@ -185,10 +185,3 @@ me that you might want to check out (in no particular order):
 - [next-update](http://npm.im/next-update)
 
 Feel free to recommend more :-)
-
-#### One more thing
-
-If you thought this was interesting, you might like to
-[check out the rest of my blog](https://blog.kentcdodds.com/) and
-[subscribe to my newsletter 💌](https://kcd.im/news) (newsletters are published
-to my blog 2 weeks after they’re emailed out).

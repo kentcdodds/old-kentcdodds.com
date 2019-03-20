@@ -216,3 +216,41 @@ It does what it says. Calls all the functions it's given, if they exist. In our
 case, both of our `onClick` handlers will be called as we need. (See
 [the transpiled version](http://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYewdgzgLgBMCGAbRBBZMC8MAUA6fAZpAJSYB8O-u8ATgOYSkYVES4Eg0Ci8wAFtiLkYQgGSiRYPPloNixIA&debug=false&circleciRepo=&evaluate=true&lineWrap=false&presets=env&prettier=false&targets=&version=6.26.0)
 if you're less accustomed to arrow functions).
+
+---
+
+**To summarize**, prop getters are one of the patterns that enable you to hand
+rendering responsibility to the user of your components (a really awesome idea).
+You can only really implement it with the render prop pattern (in our case we
+use the `children` prop, but you could use a `render` prop if you prefer).
+
+Here are a few projects that implement the prop getters pattern:
+
+- `[downshift](https://github.com/paypal/downshift)`
+  [🏎](https://github.com/paypal/downshift) - Primitive for building simple,
+  flexible, WAI-ARIA compliant enhanced input React components
+- `[react-toggled](https://github.com/kentcdodds/react-toggled)` - Component to
+  build simple, flexible, and accessible toggle components
+- `[dub-step](https://github.com/infiniteluke/dub-step)`
+  [🕺](https://github.com/infiniteluke/dub-step) - Step through an index with
+  style
+- `[react-stepper-primitive](https://github.com/ajoslin/react-stepper-primitive)` -
+  React primitives for a "stepper" component.
+
+I hope to see more folks doing stuff like this in the future! Good luck to you
+all! 👍
+
+**Things to not miss:**
+
+- `[import-all.macro](https://github.com/kentcdodds/import-all.macro)` - A work
+  in progress babel-macro that allows you to import all files that match a glob
+- `[react-powerplug](https://github.com/renatorib/react-powerplug)` - Pretty
+  neat/interesting idea with the render prop pattern.
+- `[graphql-tag.macro](https://github.com/leoasis/graphql-tag.macro)` -
+  Impressive babel-macro that precompiles graphql queries.
+- `[size-limit](https://github.com/ai/size-limit)` - Prevent JS libraries bloat.
+  If you accidentally add a massive dependency, Size Limit will throw an error.
+- [left-pad not found sticker](https://www.stickermule.com/marketplace/11354-left-pad) — See
+  below. This was created by my friend
+  [Tyler McGinnis](https://medium.com/u/c52389e3ee63) (of Tyler McGinnis fame)
+  and I think it’s pretty funny.

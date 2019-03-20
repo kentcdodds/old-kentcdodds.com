@@ -82,7 +82,7 @@ React Native with
 
 ### Practical Example
 
-```
+```jsx
 import React from 'react'
 import {render, Simulate, wait} from 'react-testing-library'
 // this adds custom expect matchers
@@ -94,32 +94,25 @@ test('displays greeting when clicking Load Greeting', async () => {
   // Arrange
   axiosMock.get.mockImplementationOnce(({name}) =>
     Promise.resolve({
-      data: {greeting: `Hello ${name}`}
-    })
+      data: {greeting: `Hello ${name}`},
+    }),
   )
-  const {
-    getByLabelText,
-    getByText,
-    getByTestId,
-    container
-  } = render(<GreetingFetcher />)
-```
+  const {getByLabelText, getByText, getByTestId, container} = render(
+    <GreetingFetcher />,
+  )
 
-// Act  
- getByLabelText('name').value = 'Mary'  
- Simulate.click(getByText('Load Greeting'))  
- // let's wait for our mocked `get` request promise to resolve  
- // wait will wait until the callback doesn't throw an error  
- await wait(() => getByTestId('greeting-text'))
+  // Act
+  getByLabelText('name').value = 'Mary'
+  Simulate.click(getByText('Load Greeting'))
+  // let's wait for our mocked `get` request promise to resolve
+  // wait will wait until the callback doesn't throw an error
+  await wait(() => getByTestId('greeting-text'))
 
-```
   // Assert
   expect(axiosMock.get).toHaveBeenCalledTimes(1)
   expect(axiosMock.get).toHaveBeenCalledWith(url)
   // here's a custom matcher!
-  expect(getByTestId('greeting-text')).toHaveTextContent(
-    'Hello Mary'
-  )
+  expect(getByTestId('greeting-text')).toHaveTextContent('Hello Mary')
   // snapshots work great with regular DOM nodes!
   expect(container.firstChild).toMatchSnapshot()
 })
@@ -168,14 +161,13 @@ We simply say: "Hey, wait until the `greeting-text` node appears." (Note, in
 this case it's using a `data-testid` attribute which is an escape hatch for
 situations where it doesn't make sense to find an element by any other
 mechanism.
-[A](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)
-[`data-testid`](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)[is definitely better then alternatives](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269).
+[A `data-testid` is definitely better then alternatives.](/blog/making-your-ui-tests-resilient-to-change)
 
 ### High-level Overview API
 
 Originally, the library only provided `queryByTestId` as a utility as suggested
 in my blog post
-"[Making your UI tests resilient to change](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)".
+"[Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)".
 But thanks to feedback on that blog post from
 [Bergé Greg](https://medium.com/u/2210cd491fe0) as well as inspiration from
 [a fantastic (and short!) talk](https://www.youtube.com/watch?v=qfnkDyHVJzs&feature=youtu.be&t=5h39m19s)
@@ -251,6 +243,10 @@ some handy custom Jest matchers as well:
   Assert whether an element present in the DOM or not.
 - [`toHaveTextContent`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#tohavetextcontent):
   Check whether the given element has a text content or not.
+
+> Note: now these have been extracted to
+> [jest-dom](https://github.com/gnapse/jest-dom) which is maintained by
+> [Ernesto García](https://github.com/gnapse)
 
 ### Conclusion
 

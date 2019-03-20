@@ -184,11 +184,7 @@ function SubscribeConfirmation() {
 
 export default function Index({data: {allMdx}}) {
   return (
-    <Layout
-      headerColor={theme.colors.white}
-      hero={<Hero />}
-      pageTitle="Home of Kent C. Dodds"
-    >
+    <Layout headerColor={theme.colors.white} logo={false} hero={<Hero />}>
       <SEO />
       <SubscribeConfirmation />
       <Container

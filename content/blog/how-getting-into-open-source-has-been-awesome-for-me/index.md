@@ -38,7 +38,7 @@ There's so much you need to learn about to contribute to open source, and it can
 be daunting, but it's seriously rewarding and there are several reasons why it's
 been so great for me.
 
-#### Learning Experiences
+## Learning Experiences
 
 I have learned so many valuable skills from my time using and contributing to
 open source projects. Whether it's a pull request to another project or creating
@@ -63,7 +63,7 @@ services and [automation](https://github.com/commitizen/cz-cli)
 [tools](https://github.com/semantic-release/semantic-release). It's been a lot
 of fun and helped keep my skills sharp.
 
-#### Job opportunities
+## Job opportunities
 
 I can't count the number of emails I've received from recruiters to my GitHub
 email address alias. And by developing some street credibility on GitHub, people
@@ -93,7 +93,7 @@ got their job from other community contributions like blog posts
 contributions, these are also valuable contributions to the open source
 community and I recommend you do this as well.
 
-#### Friends
+## Friends
 
 One of the most rewarding experiences I get out of using and collaborating on
 open source comes from the relationships that I build with other developers
@@ -104,7 +104,7 @@ Lots of conversations that start on GitHub turn into friendships that extend to
 Twitter (a whole other blog post). It gets really fun when you meet these
 awesome people in real life. Friends make open source fun and rewarding.
 
-#### Helping Others
+## Helping Others
 
 One of the most rewarding things when working in open source is when someone
 says something like: "This is amazing!" "Thank you so much!" "It's saved me so
@@ -113,7 +113,7 @@ the 5 hours I've spent on my project has saved 500 developers days or weeks
 worth of development time. That's cool. **Call to action:** If a project has
 saved you some time, go ahead and file an issue to simply tell them thanks. 🎁
 
-#### Conclusion
+## Conclusion
 
 If you haven't contributed to open source before, I recommend you give it a
 whirl. It's fun, it's rewarding, and it's good for your career. If you're

@@ -67,7 +67,7 @@ and the world's collective minds were blown
 
 Here's a quick example of what's possible with MDX:
 
-```
+```md
 import InteractiveGraph from './my-d3-graph'
 
 # Checkout this cool graph!
@@ -76,7 +76,7 @@ import InteractiveGraph from './my-d3-graph'
 
 <InteractiveGraph />
 
-**That's right!** We're rendering a __React Component__ in Markdown!
+**That's right!** We're rendering a **React Component** in Markdown!
 ```
 
 There's a bunch that's awesome from this. I've been wanting something like this
@@ -98,7 +98,7 @@ Recently, the (seriously) amazing [Brent Jackson](https://twitter.com/jxnblk)
 created and [announced](https://twitter.com/jxnblk/status/1023667155324346373)
 something absolutely amazing: [**mdx-deck**](https://github.com/jxnblk/mdx-deck)
 
-![gif showing mdx-deck demo](https://cdn-images-1.medium.com/max/800/0*a059awYOdtDkSgnx)
+![gif showing mdx-deck demo](https://camo.githubusercontent.com/c12c8d143a3509f9aa6fde5629ea0c7f78e68437/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6a786e626c6b2f6d64782d6465636b2e676966)
 
 It's got the ease of slides that I love because it's just markdown. Couldn't be
 much easier than that! Then, to top that off, if I want something to be

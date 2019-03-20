@@ -87,6 +87,8 @@ discussion in there. A few days later, Andrew opened a PR to React called
 So what does it look like? Whelp, it's about a million times more intuitive than
 the old context API. Here's the simplest useful example I can come up with:
 
+https://codesandbox.io/s/n4r0qq898j
+
 Here's an even simpler version so you don't have to open the codesandbox:
 
 ```jsx
@@ -215,6 +217,8 @@ Makes sense right? I hope it does anyway 😅
 I have another example here that really shows how bad the nesting can get and
 how to use a utility called `react-composer` by
 [jmeas](https://medium.com/u/6c546af62f4a) to make it great:
+
+https://codesandbox.io/s/92pj14134y
 
 I should mention that I don't expect you to need to nest render props components
 a whole lot in practice. Whenever you do, you can create a simple component that

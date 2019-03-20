@@ -69,10 +69,25 @@ export const globalStyles = css`
     cursor: pointer;
     border: 1px solid ${theme.colors.green};
     transition: ${theme.transition.ease};
-    :hover {
+    :hover:not(:disabled) {
       background: ${theme.colors.link_color_hover};
       border: 1px solid ${theme.colors.link_color_hover};
       transition: ${theme.transition.ease};
+    }
+    :disabled {
+      opacity: 0.6;
+      cursor: auto;
+    }
+  }
+  code {
+    padding: 2px 4px;
+    background: #f4f3fa;
+    color: ${theme.colors.body_color};
+    border-radius: 3px;
+  }
+  a {
+    code {
+      color: ${theme.brand.primary};
     }
   }
   pre {
@@ -130,7 +145,6 @@ const DefaultHero = styled.section`
 
 function Layout({
   data,
-  pageTitle,
   headerLink,
   frontmatter = {},
   hero = <DefaultHero />,
@@ -143,6 +157,7 @@ function Layout({
   backgroundColor,
   backgroundImage,
   fixedHeader,
+  logo,
 }) {
   const {
     site: {
@@ -184,12 +199,13 @@ function Layout({
         <div css={{flex: '1 0 auto'}}>
           {React.cloneElement(hero, {headerColor})}
           <Header
-            siteTitle={pageTitle || siteMetadata.title}
+            siteTitle="Kent C. Dodds"
             headerLink={headerLink}
             dark={dark}
             bgColor={headerBg}
             headerColor={headerColor}
             fixed={fixedHeader}
+            headerImage={logo}
           />
           <MDXProvider components={mdxComponents}>
             <>{children}</>
