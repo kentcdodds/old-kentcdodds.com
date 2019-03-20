@@ -17,7 +17,6 @@ import {get} from 'lodash'
 export default function Post({data: {site, mdx}}) {
   const {
     isWriting,
-    author = config.author,
     editLink,
     title,
     slug,
@@ -34,8 +33,6 @@ export default function Post({data: {site, mdx}}) {
     <Layout
       site={site}
       frontmatter={mdx.fields}
-      pageTitle={`Kent C. Dodds ${isWriting ? 'Writing ' : ''}Blog`}
-      headerLink={isWriting ? '/writing/blog' : '/blog'}
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
     >
@@ -81,8 +78,6 @@ export default function Post({data: {site, mdx}}) {
               }
             `}
           >
-            {author && <h3>{author}</h3>}
-            {author && <span>—</span>}
             {date && <h3>{date}</h3>}
           </div>
           {banner && (

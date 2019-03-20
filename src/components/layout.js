@@ -77,6 +77,12 @@ export const globalStyles = css`
       cursor: auto;
     }
   }
+  code {
+    padding: 2px 4px;
+    background: #f1f1f1;
+    color: ${theme.colors.body_color};
+    border-radius: 3px;
+  }
   pre {
     background-color: #061526 !important;
     border-radius: 4px;
@@ -132,7 +138,6 @@ const DefaultHero = styled.section`
 
 function Layout({
   data,
-  pageTitle,
   headerLink,
   frontmatter = {},
   hero = <DefaultHero />,
@@ -145,6 +150,7 @@ function Layout({
   backgroundColor,
   backgroundImage,
   fixedHeader,
+  logo,
 }) {
   const {
     site: {
@@ -186,12 +192,13 @@ function Layout({
         <div css={{flex: '1 0 auto'}}>
           {React.cloneElement(hero, {headerColor})}
           <Header
-            siteTitle={pageTitle || siteMetadata.title}
+            siteTitle="Kent C. Dodds"
             headerLink={headerLink}
             dark={dark}
             bgColor={headerBg}
             headerColor={headerColor}
             fixed={fixedHeader}
+            headerImage={logo}
           />
           <MDXProvider components={mdxComponents}>
             <>{children}</>

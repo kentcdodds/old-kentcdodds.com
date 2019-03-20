@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from '../components/link'
 import {css} from '@emotion/core'
+import theme from '../../config/theme'
 import {bpMaxSM} from '../lib/breakpoints'
 import SubscribeForm from './forms/subscribe'
 import {Twitter, GitHub, YouTube} from './social'
@@ -11,7 +12,7 @@ import Signature from '../images/signature.png'
 const Footer = ({subscribeForm = <SubscribeForm />}) => (
   <footer
     css={css`
-      background: #231c42;
+      background: ${theme.colors.purple_dark};
       color: white;
       margin-top: 70px;
     `}
