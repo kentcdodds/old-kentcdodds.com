@@ -217,6 +217,8 @@ case, both of our `onClick` handlers will be called as we need. (See
 [the transpiled version](http://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&code_lz=MYewdgzgLgBMCGAbRBBZMC8MAUA6fAZpAJSYB8O-u8ATgOYSkYVES4Eg0Ci8wAFtiLkYQgGSiRYPPloNixIA&debug=false&circleciRepo=&evaluate=true&lineWrap=false&presets=env&prettier=false&targets=&version=6.26.0)
 if you're less accustomed to arrow functions).
 
+---
+
 **To summarize**, prop getters are one of the patterns that enable you to hand
 rendering responsibility to the user of your components (a really awesome idea).
 You can only really implement it with the render prop pattern (in our case we
