@@ -35,6 +35,7 @@ export default function Post({data: {site, mdx}}) {
       frontmatter={mdx.fields}
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
+      pageTitle={mdx.fields.title}
     >
       <SEO
         frontmatter={mdx.fields}
