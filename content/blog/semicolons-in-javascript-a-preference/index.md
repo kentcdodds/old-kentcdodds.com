@@ -12,7 +12,7 @@ banner: ./images/banner.jpg
 bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy/)'
 ---
 
-### Update:
+## Update:
 
 Now that I use [prettier](https://github.com/prettier/prettier), it’s really a
 matter of what you like to look at (because prettier means that I don’t have to
@@ -31,7 +31,7 @@ topics of all time (right after spaces vs. tabs... 2 spaces please).
 why semicolons are not necessary. Here's some criteria that need to be in place
 before I will sanction omitting semicolons in a project.
 
-#### Transpilation and/or Uglification
+## Transpilation and/or Uglification
 
 The first thing that you need to know is something called Automatic Semicolon
 Insertion (ASI). It's the "feature" that allows us to even have this
@@ -49,7 +49,7 @@ So for me to say you're good to go on omitting semicolons in your source code,
 you first need to make sure that whatever you end up shipping to production
 (whether browser or node) has the semicolons added back.
 
-#### Linting the bad parts
+## Linting the bad parts
 
 There are a few gotchas with ASI. However, if you are using ESLint and you
 enable the
@@ -58,7 +58,7 @@ rule, then you're safe. Just make sure that your build pipeline will fail if
 that rule is broken because most assuredly your app will! You may also be
 interested in the [semi](http://eslint.org/docs/rules/semi) rule.
 
-#### Why omit semicolons anyway?
+## Why omit semicolons anyway?
 
 With these things in place, this is no longer a discussion about what works and
 what doesn’t but becomes a simple matter of preference.
@@ -78,7 +78,7 @@ omitting semicolons (and gotten used to how ugly it looks at first) I actually
 feel like it leaves my code looking cleaner (you’ve just gotta be untrained to
 think that you need semicolons).
 
-#### Why should you use semicolons?
+## Why should you use semicolons?
 
 I should note that [Kyle](https://medium.com/@getify)’s post (linked earlier) is
 not arguing only about ASI but he’s also arguing his reasoning for his own
@@ -93,7 +93,7 @@ about it.
 
 ---
 
-#### Conclusion
+## Conclusion
 
 If you don’t transpile/uglify and lint your code properly then I do not
 recommend you omit semicolons in your code (it’s not a matter of preference in

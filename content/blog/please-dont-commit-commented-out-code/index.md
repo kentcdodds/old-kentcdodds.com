@@ -49,7 +49,7 @@ codebase **forever**!!"
 
 Here are a few of the reasons you should probably not commit commented out code:
 
-#### **Focus and cognitive load**
+## **Focus and cognitive load**
 
 For me, **this is the biggest reason** and reason enough to avoid doing it
 altogether. I don't know about you, but when I come to commented out code, I'll
@@ -57,7 +57,7 @@ often stop what I'm doing to read it. I think "maybe it's important" or I may
 simply be curious. **Either way,**
 [**my workflow has been derailed**](http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/)**.**
 
-#### Hides what's important
+## Hides what's important
 
 I have seen stuff like this:
 
@@ -93,7 +93,7 @@ It can be possible to skip over _someImportantCode()_ when scanning over a file.
 This is less likely with the right syntax highlighting but it can happen, and
 the comments are simply not worth keeping around.
 
-#### Out of date
+## Out of date
 
 I've long held the opinion that the only thing that can tell you the truth about
 the code is the code. The instant you add a comment, it's out of date.
@@ -106,7 +106,7 @@ before that commented code is out of context, no longer tested, linted, or run,
 the APIs it was using have changed or been removed, and now it's just in the
 way.
 
-#### Conclusion
+## Conclusion
 
 Again, the main problem is commented code adds confusion with no real benefit.
 Just rely on your version control system to
@@ -123,7 +123,7 @@ His enthusiasm for it will convince you that you should try it out :-)
 
 ---
 
-#### QYMAM
+## QYMAM
 
 > _k-why-mahm _ —  Questions You Might Ask Me:
 

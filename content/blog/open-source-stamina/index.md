@@ -20,7 +20,7 @@ This is also probably why [Vojta Jína](https://medium.com/u/d265189b4f01) hande
 [Mark Trostler](https://medium.com/u/85bf364db998) and
 [Friedel Ziegelmayer](https://medium.com/u/732a70d99f08).
 
-#### Motivation
+## Motivation
 
 Something must motivate us to action for everything we do. When we're working on
 open source, we're motivated by many things. Personally I'm motivated by the
@@ -38,7 +38,7 @@ The exception to this is when you're paid to do it. I work for
 never use the product personally, but I work on the project because I have a
 wife and three kids to support and I care about the mission.
 
-#### Context
+## Context
 
 If you don't use a tool or a library often enough, you begin to lose touch with
 the common use-cases.
@@ -56,7 +56,7 @@ regularly at work (a lot). If one day I stopped working with forms and/or
 Angular, it's likely that I would be searching around for someone else to take
 over the project for me. Hopefully this does not shock anyone.
 
-#### Conclusion
+## Conclusion
 
 People who hand off projects to others aren't doing it because they don't care
 about it anymore or anything. For example
