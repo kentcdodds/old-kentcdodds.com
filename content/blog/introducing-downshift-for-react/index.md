@@ -1,11 +1,11 @@
 ---
 slug: introducing-downshift-for-react
-title: "Introducing downshift \U0001F3CE️ for React ⚛️"
+title: 'Introducing downshift 🏎 for React ⚛️'
 date: '2017-08-23'
 author: Kent C. Dodds
 description:
-  "_downshift \U0001F3CE is the primitive you need to build simple, flexible,
-  WAI-ARIA compliant React..._"
+  '_downshift 🏎 is the primitive you need to build simple, flexible, WAI-ARIA
+  compliant React..._'
 keywords:
   - JavaScript
   - React
@@ -42,7 +42,7 @@ another one on the scene. It's called
 [downshift](https://github.com/paypal/downshift), its emoji is the race car 🏎,
 and it's taking a different approach.
 
-### The state of item selection
+## The state of item selection
 
 The existing solutions for item selection inputs
 (autocomplete/typeahead/dropdown/select/combobox/etc) components in React will
@@ -61,7 +61,7 @@ are doing the rendering
 ([React.createElement](https://facebook.github.io/react/docs/react-api.html#createelement))
 for you.
 
-### How downshift 🏎 is different
+## How downshift 🏎 is different
 
 There are two design decisions that provide distinguishing characteristics about
 `downshift` that sets it apart from existing solutions:
@@ -72,7 +72,7 @@ There are two design decisions that provide distinguishing characteristics about
 Let's talk about how each of these works to bring you an incredible amount of
 value and flexibility.
 
-### render callback
+## render callback
 
 _There's actually not one instance of React.createElement (or JSX) anywhere in
 the_ [`downshift`](https://github.com/paypal/downshift/tree/master/src)
@@ -91,7 +91,7 @@ solutions because there's no rendering to configure.
 > It turns out that rendering nothing increases simplicity, decreases bundle
 > size, and enhances flexibility.
 
-#### **So what does it look like?**
+## **So what does it look like?**
 
 Here's a bare-bones autocomplete component with `downshift`:
 
@@ -99,17 +99,15 @@ Here's a bare-bones autocomplete component with `downshift`:
 import React from 'react'
 import {render} from 'react-dom'
 import Downshift from 'downshift'
-```
 
-const items = \[  
- {value: 'apple'},  
- {value: 'pear'},  
- {value: 'orange'},  
- {value: 'grape'},  
- {value: 'banana'},  
-\]
+const items = [
+  {value: 'apple'},
+  {value: 'pear'},
+  {value: 'orange'},
+  {value: 'grape'},
+  {value: 'banana'},
+]
 
-```
 render(
   <Downshift
     onChange={selection => alert(`You selected ${selection.value}`)}
@@ -119,39 +117,37 @@ render(
       getInputProps,
       getItemProps,
       getLabelProps,
+      getMenuProps,
       isOpen,
       inputValue,
       highlightedIndex,
       selectedItem,
-    }) =\> (
+    }) => (
       <div>
         <label {...getLabelProps()}>Enter a fruit</label>
         <input {...getInputProps()} />
-        {isOpen ? (
-          <div>
-            {items
-              .filter(item => !inputValue || item.value.includes(inputValue))
-              .map((item, index) => (
-                <div
-                  {...getItemProps({
-                    key: item.value,
-                    index,
-                    item,
-                    style: {
-                      backgroundColor: highlightedIndex === index
-                        ? 'lightgray'
-                        : 'white',
-                      fontWeight: selectedItem === item
-                        ? 'bold'
-                        : 'normal',
-                    },
-                  })}
-                >
-                  {item.value}
-                </div>
-              ))}
-          </div>
-        ) : null}
+        <ul {...getMenuProps()}>
+          {isOpen
+            ? items
+                .filter(item => !inputValue || item.value.includes(inputValue))
+                .map((item, index) => (
+                  <li
+                    {...getItemProps({
+                      key: item.value,
+                      index,
+                      item,
+                      style: {
+                        backgroundColor:
+                          highlightedIndex === index ? 'lightgray' : 'white',
+                        fontWeight: selectedItem === item ? 'bold' : 'normal',
+                      },
+                    })}
+                  >
+                    {item.value}
+                  </li>
+                ))
+            : null}
+        </ul>
       </div>
     )}
   </Downshift>,
@@ -161,7 +157,7 @@ render(
 
 ![gif showing the interaction](./images/1.gif)
 
-<figcaption>Play with the example above in codesandbox here</figcaption>
+https://codesandbox.io/s/6z67jvklw3
 
 This is a pretty minimal example, and if you were to build similar minimal
 examples with other autocomplete libraries you could certainly do it in fewer
@@ -175,7 +171,7 @@ on that state.**
 > Your autocomplete component is literally a function of the state of
 > `downshift`
 
-#### **prop getters**
+## **prop getters**
 
 Another thing you'll notice about the example above is the `render` function is
 passed more than just state. You're also given `getInputProps` and
@@ -192,7 +188,7 @@ them asynchronously
 [this example using Algolia Instantsearch](https://codesandbox.io/s/kvn0lpp83))
 and you can control how you filter things (see this
 [example that integrates geniejs](https://codesandbox.io/s/jRLKrxwgl)
-\[[watch me build geniejs integration here](https://www.youtube.com/watch?v=gjqB-YAxjWg&index=4&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=4s)\]).
+[watch me build geniejs integration here](https://www.youtube.com/watch?v=gjqB-YAxjWg&index=4&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=4s)).
 This means that you don't need to learn or work around an API and can do it
 however works best for your use case.
 
@@ -208,7 +204,7 @@ accessibility easier). See
 [docs](https://github.com/paypal/downshift/blob/8563d4bae2af19fdc7242c66b551d46396234cf9/README.md#prop-getters)
 for more info.
 
-### controlled props
+## controlled props
 
 The other design decision `downshift` has made is the use of controlled props.
 
@@ -228,9 +224,9 @@ prop to the `downshift` component (for example `<Downshift isOpen={true} />`),
 it becomes "controlled" and `downshift` will reference the value of your prop
 rather than track it internally with state.
 
-[Here's an example that controls the](https://codesandbox.io/s/0mrl1819qw)
-[`isOpen`](https://codesandbox.io/s/0mrl1819qw)
-[state](https://codesandbox.io/s/0mrl1819qw)
+[Here's an example that controls the `isOpen` state](https://codesandbox.io/s/0mrl1819qw):
+
+https://codesandbox.io/s/0mrl1819qw
 
 This allows you to have complete control over the state of your component.
 [Ryan Florence](https://medium.com/u/162352c45b6e) teaches about
@@ -239,7 +235,7 @@ This allows you to have complete control over the state of your component.
 (I highly recommend it). And you can
 [watch me build the first iteration of the implementation here](https://www.youtube.com/watch?v=iy0znrRA2h8&index=13&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=1s).
 
-### Accessibility
+## Accessibility
 
 Accessibility (#a11y) is a really important feature, and quite frankly, it's not
 easy to get right for an item selection component like autocomplete. While
@@ -254,7 +250,7 @@ be impressed! We've worked hard to make sure that it's accessible
 and based on my survey of the existing solutions, `downshift` is the most
 accessible component of its kind.
 
-### Size
+## Size
 
 `downshift` is quite a bit smaller than other similar solutions.
 [The UMD build rolls in at 14.34kb](https://unpkg.com/downshift@1.0.0-rc.11/dist/)
@@ -265,14 +261,14 @@ No need to add preact-compat). I was able to create
 [an experiment using preact-habitat](https://github.com/kentcdodds/autocomplete-widget)
 that gives
 [**a completely frameworkless implementation of autocomplete**](https://dist-woxxqrsspd.now.sh/)
-**in less than 26kb (uncompressed)**. That size _includes_ `downshift` \+
-`preact` \+ `preact-habitat`. You have my permission to jump for joy 😉. Shout
+**in less than 26kb (uncompressed)**. That size _includes_ `downshift` +
+`preact` + `preact-habitat`. You have my permission to jump for joy 😉. Shout
 out to [Jason Miller](https://medium.com/u/30b8f5921914) and
 [Zouhir](https://medium.com/u/1ea4ac63ade6) for
 [`preact`](https://preactjs.com/) and
 [`preact-habitat`](https://github.com/zouhir/preact-habitat)!
 
-### Where is it?
+## Where is it?
 
 I built `downshift` for
 [this country selector experience on PayPal](https://www.paypal.com/myaccount/transfer/fx/fees):
@@ -283,8 +279,8 @@ We also use the same component in the recipient selector:
 
 ![gif of a recipient selector experience on PayPal](./images/3.gif)
 
-_You can_
-[_watch me build part of these PayPal experiences here_](https://www.youtube.com/watch?v=rB62gSER9fg&index=14&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=456s)_._
+_You can
+[watch me build part of these PayPal experiences here](https://www.youtube.com/watch?v=rB62gSER9fg&index=14&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=456s)._
 
 We actually have several other item selection experiences in our app that have
 slightly different use cases and necessitated us having multiple implementations
@@ -306,15 +302,13 @@ of is in [codesandbox](https://codesandbox.io/) from
 [Ives van Hoorne](https://medium.com/u/ee6691f0bd65)
 ([gif from his tweet](https://twitter.com/CompuIves/status/897970526832013315)):
 
-![The codesandbox.io file chooser](./images/4.gif)
-
-<figcaption>The codesandbox.io file chooser (press ⌘+P to open it)</figcaption>
+![The codesandbox.io file chooser (press ⌘+P to open it)](./images/4.gif)
 
 Fun fact: both of these solutions are also using
 [match-sorter](https://github.com/kentcdodds/match-sorter), which is a user
 friendly best-match sorting library. I highly recommend it!
 
-### What's next
+## What's next
 
 `downshift` is a pretty minimal component by design. It does take a little bit
 more work to get things that you get out of the box from other solutions. But
@@ -323,17 +317,17 @@ I'm hoping that the community can help build `downshift`-powered versions of
 some of these features and get those published to npm.
 [Here's a great place to get started](http://kcd.im/ds-example)!
 
-### Conclusion
+## Conclusion
 
 I need to give a big shoutout to
 [Ryan Florence](https://medium.com/u/162352c45b6e). His lesson on
 ["Compound Components"](https://courses.reacttraining.com/courses/advanced-react/lectures/3060560)
 got me started on this. `downshift` doesn't actually use compound components
 anymore, but the first incarnation did! So thanks to Ryan! And _you can watch me
-develop most of_ `_downshift_` _on_
-[_this YouTube playlist_](https://www.youtube.com/playlist?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE)
-_(starting with_
-[_this first video_](https://www.youtube.com/watch?v=2kzD1IjDy5s&t=2468s&index=16&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE)_)
+develop most of `downshift` on
+[this YouTube playlist](https://www.youtube.com/playlist?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE)
+(starting with
+[this first video](https://www.youtube.com/watch?v=2kzD1IjDy5s&t=2468s&index=16&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE))
 📺._
 
 And again, a big shoutout to [Jared Forsyth](https://medium.com/u/ecb657c8b22d)
@@ -351,23 +345,3 @@ Please give `downshift`
 [a star 🌟](https://github.com/paypal/downshift/stargazers),
 [a watch 👀](https://github.com/paypal/downshift/watchers), and
 [a try 😎](http://kcd.im/ds-example).
-
-Oh, and please share this with your friends! You can press (and hold) the Medium
-clap button,
-[tweet about it 🐦](https://twitter.com/intent/tweet?text=%22Introducing%20downshift%20for%20React%22%20by%20@kentcdodds%20%F0%9F%8F%8E%20Build%20@reactjs%20item%20selection%20components.%20From%20@PayPalEng%20https://medium.com/@kentcdodds/b1de3fca0817%20%F0%9F%92%99),
-and/or retweet this tweet:
-
-https://twitter.com/kentcdodds/status/900361058069630977
-
-Thanks!
-
-![See you on twitter!](./images/5.png)
-
-[See you on twitter! (@kentcdodds)](https://twitter.com/kentcdodds)
-
-#### One more thing
-
-If you thought this was interesting, you might like to
-[check out the rest of my blog](https://blog.kentcdodds.com) and
-[subscribe to my newsletter 💌](https://kcd.im/news) (newsletters are published
-to my blog 2 weeks after they're emailed out).
