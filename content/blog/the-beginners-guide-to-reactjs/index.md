@@ -23,12 +23,6 @@ yet, give them a look! If you have, I hope you loved them!
 
 ![I just wanted to say, Thanks, partner](./images/0.gif)
 
-One other thing before we get this newsletter going. I want you to know that if
-the gifs make it difficult for you to read the newsletter, I have a more
-accessible version of the newsletter that I send out. It's exactly the same
-except without the gifs. You can find it here:
-[http://kcd.im/news-a11y](http://kcd.im/news-a11y)
-
 Two weeks ago, my newsletter was an overview of the
 [Advanced React Component Patterns course](https://egghead.io/courses/advanced-react-component-patterns)
 ([that's been published today](https://blog.kentcdodds.com/56af2b74bc5f)!) This
