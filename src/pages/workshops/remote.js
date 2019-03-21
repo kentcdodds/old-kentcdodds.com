@@ -183,7 +183,7 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
 export const remoteWorkshopsQuery = graphql`
   query {
     workshops: allMdx(
-      filter: {fields: {isWorkshop: {eq: true}}}
+      filter: {fields: {isWorkshop: {eq: true}, isScheduled: {eq: false}}}
       sort: {order: ASC, fields: [frontmatter___tech]}
     ) {
       edges {

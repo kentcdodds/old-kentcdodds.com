@@ -253,6 +253,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     if (node.fileAbsolutePath.includes('content/workshops/')) {
       isWriting = false
       isWorkshop = true
+      isScheduled = false
       if (node.frontmatter.date) {
         isWriting = false
         isScheduled = true
