@@ -6313,10 +6313,10 @@ gatsby-link@^2.0.11, gatsby-link@^2.0.14:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-mdx@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.4.2.tgz#81a44a39417911f752ebf1847ac0aec9bcb2497b"
-  integrity sha512-QML0XE/fKjTuKgoi0y2H+c5GBWcAKluuYF69xEttPHmb1ptqIwJ0a6o7PsK1jU8KuhE+gbklyHlX5iWB1kZKpA==
+gatsby-mdx@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.4.4.tgz#1297101f6018c6cf03319c6e0acd508a01478fa6"
+  integrity sha512-OOJqN4nQjo0dmfyWGk8R3nOdc2duGYydbxDdjCfFqRLQCxkVvRvAWNqxZG7LzAqdwqRUYW7pRWm9RNrwwttsmw==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.0.0"
     debug "^4.0.1"
