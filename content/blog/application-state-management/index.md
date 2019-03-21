@@ -17,7 +17,6 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-
 Current Available Translations:
 
 - [Korean](https://edykim.com/ko/post/applicaiton-state-management)
