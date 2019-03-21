@@ -12,7 +12,7 @@ ow(
 )
 ow(
   process.env.EMAIL_USERNAME,
-  'EMAIL_USERNAME environment variable is not set',
+  'EMAIL_USERNAME environment variable is not set to an email',
   isEmail,
 )
 
