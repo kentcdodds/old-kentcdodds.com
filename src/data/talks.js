@@ -64,6 +64,8 @@ export default [
         event:
           '[Webinar Registration](https://zoom.us/webinar/register/5015513098499/WN_jT_uHTTxQ5yI047qzGw4MA)',
         date: '2019-03-06',
+        recording:
+          'https://egghead.io/lessons/react-understanding-how-react-testing-library-works-with-kent-c-dodds',
       },
     ],
     description: `
