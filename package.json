@@ -21,7 +21,7 @@
     "gatsby": "2.1.9",
     "gatsby-image": "^2.0.31",
     "gatsby-link": "^2.0.14",
-    "gatsby-mdx": "^0.4.2",
+    "gatsby-mdx": "^0.4.4",
     "gatsby-plugin-catch-links": "^2.0.12",
     "gatsby-plugin-emotion": "^4.0.4",
     "gatsby-plugin-feed": "^2.0.14",
