@@ -24,6 +24,7 @@ function ScheduledWorkshop({
   location,
   discount,
   soldOut = false,
+  time,
 }) {
   const techImage = workshopTech => {
     return (
@@ -66,8 +67,12 @@ function ScheduledWorkshop({
     <div
       css={css`
         ${styles}
+        margin-bottom: 20px;
         time {
-          margin-right: ${date ? '40px' : '22px'};
+          margin-right: ${date ? '20px' : '22px'};
+        }
+        .date {
+          margin-right: 20px;
         }
         ${soldOut &&
           `
@@ -117,7 +122,7 @@ function ScheduledWorkshop({
             >
               <img src={techImage(tech)} alt={tech} />
             </span>
-            <span
+            <div
               css={css`
                 padding-right: 15px;
                 color: ${theme.colors.body_color};
@@ -130,18 +135,17 @@ function ScheduledWorkshop({
                   <b>{spotsRemaining}</b> spots remaining
                 </span>
               )}
-            </span>
-            <time>{date}</time>
-            {location ? <address>{location}</address> : <address>Zoom</address>}
+            </div>
           </div>
         </div>
+
         <div
           css={css`
             display: flex;
             flex-direction: column;
             width: 200px;
             ${bpMaxSM} {
-              margin-top: 30px;
+              margin: 10px 0;
             }
           `}
         >
@@ -153,9 +157,20 @@ function ScheduledWorkshop({
             }
             className="button"
           >
-            {spotsRemaining == 0 ? 'Get on the wait list' : `${buttonText}`}
+            {soldOut ? 'Get on the wait list' : `${buttonText}`}
           </Link>
         </div>
+      </div>
+      <div
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        `}
+      >
+        <div className="date">{date}</div>
+        {time ? <time>{time}</time> : <time>TBA</time>}
+        {location ? <address>{location}</address> : <address>Zoom</address>}
       </div>
       <br />
       <Markdown

@@ -203,6 +203,7 @@ const Register = props => {
             : `${theme.colors.white}`};
         }
         h1 {
+          color: ${theme.colors.body_color};
           font-size: 24px;
           max-width: ${rhythm(13)};
           margin-bottom: ${rhythm(1)};
@@ -220,7 +221,9 @@ const Register = props => {
           width: 100%;
           font-size: 18px;
           padding: 20px 25px;
-          background-image: linear-gradient(-180deg, #8161ff 0%, #5b36d0 100%);
+          ${light
+            ? `background-image: linear-gradient(-180deg, #8161ff 0%, #5b36d0 100%);`
+            : `background: white;`}
           text-align: center;
           border: 1px solid transparent;
           color: ${light ? 'white' : `${theme.colors.body_color}`};

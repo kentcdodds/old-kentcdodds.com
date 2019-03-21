@@ -2,18 +2,18 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/seo'
-import {css} from '@emotion/core'
 import Container from 'components/container'
 import Layout from 'components/layout'
 import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
+import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import {get} from 'lodash'
 import Header from '../components/workshops/header'
+import Register from '../components/workshops/register'
 
 export default function Workshop({data: {site, mdx}}) {
   const {isWriting, title, date, banner, noFooter} = mdx.fields
-
-  const {location, soldOut} = mdx.frontmatter
+  const {location, discount, event, soldOut, time} = mdx.frontmatter
 
   return (
     <Layout
@@ -50,6 +50,7 @@ export default function Workshop({data: {site, mdx}}) {
             location={location}
             image={banner ? banner.childImageSharp.fluid : false}
             buttonText="Get on the wait list"
+            time={time}
           />
           <div
             css={css`
@@ -67,6 +68,12 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <Register
+            light
+            event={event}
+            discountAvailable={discount}
+            title="Join the waiting list to get notified of future workshops."
+          />
         </Container>
       </article>
     </Layout>
@@ -84,6 +91,9 @@ export const pageQuery = graphql`
       frontmatter {
         soldOut
         location
+        discount
+        event
+        time
       }
       fields {
         editLink

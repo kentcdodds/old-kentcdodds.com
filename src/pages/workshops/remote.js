@@ -98,6 +98,7 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
               discount={workshop.frontmatter.discount}
               soldOut={workshop.frontmatter.soldOut}
               key={workshop.id}
+              time={workshop.frontmatter.time}
             />
           ))}
         </div>
@@ -219,6 +220,7 @@ export const remoteWorkshopsQuery = graphql`
             slug
             spotsRemaining
             soldOut
+            time
           }
           fields {
             slug

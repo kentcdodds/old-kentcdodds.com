@@ -17,6 +17,7 @@ const Header = ({
   buttonText,
   image = {},
   discount = false,
+  time,
 }) => {
   const Stripe = props => (
     <div
@@ -79,13 +80,9 @@ const Header = ({
           margin: 0;
           width: 100%;
           max-width: 280px;
-          height: auto;
           ${bpMaxSM} {
             max-width: 200px;
           }
-        }
-        address {
-          margin-left: 40px;
         }
         ${image &&
           `display: grid;
@@ -93,8 +90,8 @@ const Header = ({
             grid-gap: 20px;
             ${bpMaxSM} {
                 display: flex;
-                flex-direction: column-reverse;
-                align-items: center;
+                flex-direction: column;
+                //align-items: center;
             }
       `};
         .button {
@@ -137,6 +134,7 @@ const Header = ({
             margin-top: ${rhythm(2)};
             width: 100%;
             padding-right: 0;
+            padding-left: 0;
           }
         `}
       >
@@ -145,12 +143,37 @@ const Header = ({
         <div
           css={css`
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            //flex-wrap: wrap;
+            //display: grid;
+            //grid-gap: 10px;
+            //grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             transition: ${theme.transition.ease};
+            i {
+              font-size: 16px;
+            }
           `}
         >
-          {date ? <time>{date}</time> : <time>TBA</time>}
-          {location ? <address>{location}</address> : <address>Zoom</address>}
+          {date ? (
+            <div className="date">{date}</div>
+          ) : (
+            <div className="date">TBA</div>
+          )}
+          {time ? (
+            <time>
+              {time} <a href="https://www.thetimezoneconverter.com/">MT</a>
+            </time>
+          ) : (
+            <time>TBA</time>
+          )}
+          {location ? (
+            <address>{location}</address>
+          ) : (
+            <address>
+              <a href="https://zoom.us/">Zoom</a>{' '}
+              <i>(you will receive a link via email)</i>
+            </address>
+          )}
         </div>
         {children}
         {buttonText && (
