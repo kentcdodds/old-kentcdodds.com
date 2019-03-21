@@ -146,7 +146,7 @@ exports.createPages = async ({actions, graphql}) => {
       workshops: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
-          fileAbsolutePath: {regex: "//src/pages/workshops//"}
+          fileAbsolutePath: {regex: "//content/workshops//"}
         }
         sort: {order: DESC, fields: [frontmatter___date]}
       ) {
@@ -250,7 +250,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
     }
 
-    if (node.fileAbsolutePath.includes('src/pages/workshops/')) {
+    if (node.fileAbsolutePath.includes('content/workshops/')) {
       isWriting = false
       isWorkshop = true
       if (node.frontmatter.date) {

@@ -47,6 +47,7 @@ export default function Workshop({data: {site, mdx}}) {
             soldOut={soldOut}
             title={title}
             date={date}
+            discount={discount}
             image={banner ? banner.childImageSharp.fluid : false}
             buttonText="Get on the wait list"
             time={time}
