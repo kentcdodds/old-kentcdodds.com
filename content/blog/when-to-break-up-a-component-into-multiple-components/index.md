@@ -15,6 +15,10 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/broken)'
 ---
 
+Current Available Translations:
+
+- [Korean](https://edykim.com/ko/post/when-to-break-up-a-component-into-multiple-components/)
+
 Did you know that you could write any React Application as a single React
 Component? There's absolutely nothing technically stopping React from putting
 your entire application into one giant component. You'd have a HUGE `render`
