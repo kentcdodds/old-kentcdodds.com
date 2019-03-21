@@ -15,6 +15,10 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/drill)'
 ---
 
+Current Available Translations:
+
+- [Korean](https://edykim.com/ko/post/prop-drilling/)
+
 The goal of this post is to not only help you understand what prop drilling is
 (some also refer to it as "threading"), but also when it can be a problem and
 mechanisms you can use to side-step or avoid it.
