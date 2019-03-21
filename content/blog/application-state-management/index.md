@@ -19,7 +19,7 @@ bannerCredit:
 
 Current Available Translations:
 
-- [Korean](https://edykim.com/ko/post/applicaiton-state-management)
+- [Korean](https://edykim.com/ko/post/application-state-management/)
 
 One of the hardest parts of software development is managing state. Life could
 be so simple if the user couldn't interact with the application at all, but that
