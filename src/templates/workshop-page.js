@@ -4,7 +4,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/seo'
 import Container from 'components/container'
 import Layout from 'components/layout'
-import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
+import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import {get} from 'lodash'
@@ -12,7 +12,7 @@ import Header from '../components/workshops/header'
 import Register from '../components/workshops/register'
 
 export default function Workshop({data: {site, mdx}}) {
-  const {isWriting, title, date, banner, noFooter} = mdx.fields
+  const {title, date, banner, noFooter} = mdx.fields
   const {discount, event, soldOut, time, dealEndDate} = mdx.frontmatter
 
   return (
@@ -21,7 +21,7 @@ export default function Workshop({data: {site, mdx}}) {
       frontmatter={mdx.fields}
       headerLink="/workshops"
       noFooter={noFooter}
-      subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
+      subscribeForm={<SubscribeForm />}
     >
       <SEO
         frontmatter={mdx.fields}
@@ -98,7 +98,6 @@ export const pageQuery = graphql`
       }
       fields {
         editLink
-        isWriting
         title
         noFooter
         description
