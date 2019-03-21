@@ -13,7 +13,7 @@ import Register from '../components/workshops/register'
 
 export default function Workshop({data: {site, mdx}}) {
   const {isWriting, title, date, banner, noFooter} = mdx.fields
-  const {location, discount, event, soldOut, time} = mdx.frontmatter
+  const {discount, event, soldOut, time} = mdx.frontmatter
 
   return (
     <Layout
@@ -47,7 +47,6 @@ export default function Workshop({data: {site, mdx}}) {
             soldOut={soldOut}
             title={title}
             date={date}
-            location={location}
             image={banner ? banner.childImageSharp.fluid : false}
             buttonText="Get on the wait list"
             time={time}
@@ -90,7 +89,6 @@ export const pageQuery = graphql`
     mdx(fields: {id: {eq: $id}}) {
       frontmatter {
         soldOut
-        location
         discount
         event
         time
