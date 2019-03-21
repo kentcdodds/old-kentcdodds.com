@@ -17,6 +17,11 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
+
+Current Available Translations:
+
+- [Korean](https://edykim.com/ko/post/applicaiton-state-management)
+
 One of the hardest parts of software development is managing state. Life could
 be so simple if the user couldn't interact with the application at all, but that
 sounds like a 90s website and most of us are building interactive applications,
