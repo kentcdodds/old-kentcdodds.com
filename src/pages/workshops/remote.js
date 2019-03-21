@@ -40,7 +40,7 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
   const TechToggle = styled.button`
     padding: 8px 15px 8px 12px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    border: none;
+    border: none !important;
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -54,8 +54,8 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
     }
     :hover,
     :focus {
-      color: inherit;
-      background: inherit;
+      color: ${theme.colors.body_color};
+      background: #fafafa !important;
       border: none;
     }
   `
@@ -124,13 +124,13 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
                     ? `
                   color: white; background: #2F313E;
                   :hover {
-                    color: white;
-                    background: #232323;}`
+                    color: white !important;
+                    background: #232323 !important;}`
                     : `
                   color: black; background: white;
                   :hover {
-                    color: black;
-                    background: #fafafa;}`}
+                    color: black !important;
+                    background: #fafafa; !important}`}
                 `}
                 key={tech}
                 onClick={() => {
@@ -167,7 +167,7 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
                 })}
                 url={
                   workshop.frontmatter.slug
-                    ? `/${workshop.frontmatter.slug}`
+                    ? `/workshops/${workshop.frontmatter.slug}`
                     : workshop.fields.slug
                 }
                 tech={workshop.frontmatter.tech}

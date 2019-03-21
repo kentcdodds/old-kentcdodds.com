@@ -25,7 +25,7 @@ const createWorkshops = (createPage, edges) => {
   })
 }
 
-function createWorkshopPages({blogPath, data, paginationTemplate, actions}) {
+function createWorkshopPages({data, actions}) {
   if (_.isEmpty(data.edges)) {
     throw new Error('There are no workshops!')
   }
@@ -33,15 +33,7 @@ function createWorkshopPages({blogPath, data, paginationTemplate, actions}) {
   const {edges} = data
   const {createPage} = actions
   createWorkshops(createPage, edges)
-  createPaginatedPages(
-    actions.createPage,
-    edges,
-    blogPath,
-    paginationTemplate,
-    {
-      categories: [],
-    },
-  )
+
   return null
 }
 
@@ -187,7 +179,6 @@ exports.createPages = async ({actions, graphql}) => {
   })
   createWorkshopPages({
     data: workshops,
-    paginationTemplate: path.resolve(`src/templates/markdown-page.js`),
     actions,
   })
 }
