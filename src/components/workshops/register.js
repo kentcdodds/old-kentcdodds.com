@@ -80,9 +80,9 @@ const TitoWidget = props => {
   )
 }
 
-export const DaysLeft = () => (
+export const DaysLeft = ({dealEndDate}) => (
   <Countdown
-    date={1553036399000} //3/19/2019 23:59:59
+    date={dealEndDate}
     renderer={({days}) => {
       return (
         <div>
@@ -100,9 +100,9 @@ export const DaysLeft = () => (
   />
 )
 
-export const Counter = () => (
+export const Counter = ({dealEndDate}) => (
   <Countdown
-    date={1553036399000} //3/19/2019 23:59:59
+    date={dealEndDate}
     renderer={({days, hours, minutes, seconds, completed}) => {
       return (
         <div
@@ -165,7 +165,7 @@ export const Counter = () => (
 )
 
 const Register = props => {
-  const {title, restProps, light, discount, event} = props
+  const {title, restProps, light, discount, event, dealEndDate} = props
   return (
     <div
       id="register"
@@ -218,6 +218,7 @@ const Register = props => {
         .button,
         .tito-submit,
         .btn-waitlist {
+          min-width: 230px;
           width: 100%;
           font-size: 18px;
           padding: 20px 25px;
@@ -299,15 +300,15 @@ const Register = props => {
         `}
       >
         {title && <h1>{title}</h1>}
-        {/* {discount && (
+        {dealEndDate && (
           <>
             <p>
               Your chance to save <strong>$200</strong> in early bird discount
               ends in:
             </p>
-            <Counter />
+            <Counter dealEndDate={dealEndDate} />
           </>
-        )} */}
+        )}
       </div>
     </div>
   )

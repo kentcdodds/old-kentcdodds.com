@@ -157,7 +157,7 @@ function ScheduledWorkshop({
             }
             className="button"
           >
-            {soldOut ? 'Get on the wait list' : `${buttonText}`}
+            {soldOut ? 'Join the waiting list' : `${buttonText}`}
           </Link>
         </div>
       </div>
