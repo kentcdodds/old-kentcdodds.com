@@ -1,4 +1,5 @@
 import React from 'react'
+import {noop} from 'lodash'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {lighten} from 'polished'
@@ -8,6 +9,26 @@ import Countdown from 'react-countdown-now'
 
 const TitoWidget = props => {
   const {event, discount} = props
+  const [titoWidgetReady, setWidgetReady] = React.useState(
+    window.hasOwnProperty('TitoWidget'),
+  )
+
+  React.useEffect(() => {
+    if (!titoWidgetReady) {
+      const original = window.titoWidgetCallback || noop
+      window.titoWidgetCallback = () => {
+        original()
+        setWidgetReady(true)
+      }
+    }
+  }, [titoWidgetReady])
+
+  React.useEffect(() => {
+    if (titoWidgetReady) {
+      window.TitoWidget.buildWidgets()
+    }
+  }, [discount, event, titoWidgetReady])
+
   return (
     <div
       css={css`

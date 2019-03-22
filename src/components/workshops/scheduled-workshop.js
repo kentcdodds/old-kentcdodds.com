@@ -45,17 +45,17 @@ function ScheduledWorkshop({
           background-image: url(${discountStripe});
           background-size: 100% 100%;
           background-repeat: no-repeat;
-        margin-top: -42px;
-        margin-left: -42px;
-        ${bpMaxSM} {
-          margin-top: -21px;
-          margin-left: -21px;
-          width: 40px;
-          height: 40px;
-          h1 {
-            margin-top: ${discount ? '40px' : 'auto'};
+          margin-top: -42px;
+          margin-left: -42px;
+          ${bpMaxSM} {
+            margin-top: -21px;
+            margin-left: -21px;
+            width: 40px;
+            height: 40px;
+            h1 {
+              margin-top: ${discount ? '40px' : 'auto'};
+            }
           }
-        }
         `
           : `display: none;`}
       `}
@@ -150,14 +150,10 @@ function ScheduledWorkshop({
           `}
         >
           <Link
-            to={
-              spotsRemaining === 0
-                ? `/workshops/${waitlistUrl}`
-                : `/workshops/${bookUrl}`
-            }
+            to={spotsRemaining === 0 ? waitlistUrl : bookUrl}
             className="button"
           >
-            {soldOut ? 'Join the waiting list' : `${buttonText}`}
+            {soldOut ? 'Join the waiting list' : buttonText}
           </Link>
         </div>
       </div>
