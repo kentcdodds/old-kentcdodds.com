@@ -16,6 +16,10 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/inverted)'
 ---
 
+Current Available Translations:
+
+- [Korean](https://edykim.com/ko/post/react-hooks-whats-going-to-happen-to-render-props/)
+
 About a year ago, I published
 ["How to give rendering control to users with prop getters"](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf).
 In that post, I show the entire implementation (at the time) of
