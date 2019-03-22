@@ -15,7 +15,6 @@ export default function MarkdownPage({children, pageContext: {frontmatter}}) {
     <>
       <SEO frontmatter={frontmatter} />
       <Layout
-        pageTitle={frontmatter.title}
         hero={<BigHero message={frontmatter.heroMessage} />}
         frontmatter={frontmatter}
         headerColor={theme.colors.white}

@@ -7,7 +7,7 @@ import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
 
 const TitoWidget = props => {
-  const {discountAvailable} = props
+  const {event, discount} = props
   return (
     <div
       css={css`
@@ -73,16 +73,16 @@ const TitoWidget = props => {
       `}
     >
       <tito-widget
-        discount-code={discountAvailable && 'early'}
-        event="/kent-c-dodds/learn-react-hooks-with-kent"
+        discount-code={discount && 'early'}
+        event={`/kent-c-dodds/${event}`}
       />
     </div>
   )
 }
 
-export const DaysLeft = () => (
+export const DaysLeft = ({dealEndDate}) => (
   <Countdown
-    date={1553036399000} //3/19/2019 23:59:59
+    date={dealEndDate}
     renderer={({days}) => {
       return (
         <div>
@@ -100,21 +100,18 @@ export const DaysLeft = () => (
   />
 )
 
-export const Counter = () => (
+export const Counter = ({dealEndDate}) => (
   <Countdown
-    date={1553036399000} //3/19/2019 23:59:59
+    date={dealEndDate}
     renderer={({days, hours, minutes, seconds, completed}) => {
       return (
         <div
           css={css`
             padding: 11px 15px;
             background: ${lighten(0.41, `${theme.brand.primary}`)};
-            //background: white;
-            //border: 1px solid #f1f1f1;
             span,
             div {
               color: ${theme.brand.primary} !important;
-              //color: ${theme.colors.body_color};
             }
             border-radius: 5px;
           `}
@@ -126,7 +123,6 @@ export const Counter = () => (
                 text-align: center;
                 flex-wrap: nowrap;
                 align-items: center;
-                //margin-top: ${rhythm(1)};
                 font-variant-numeric: tabular-nums;
                 font-size: 32px;
                 span:not(:last-of-type) {
@@ -169,7 +165,7 @@ export const Counter = () => (
 )
 
 const Register = props => {
-  const {title, restProps, light, discountAvailable} = props
+  const {title, restProps, light, discount, event, dealEndDate} = props
   return (
     <div
       id="register"
@@ -207,6 +203,7 @@ const Register = props => {
             : `${theme.colors.white}`};
         }
         h1 {
+          color: ${theme.colors.body_color};
           font-size: 24px;
           max-width: ${rhythm(13)};
           margin-bottom: ${rhythm(1)};
@@ -221,10 +218,13 @@ const Register = props => {
         .button,
         .tito-submit,
         .btn-waitlist {
+          min-width: 230px;
           width: 100%;
           font-size: 18px;
           padding: 20px 25px;
-          background: ${light ? `${theme.brand.primary}` : 'white'};
+          ${light
+            ? `background-image: linear-gradient(-180deg, #8161ff 0%, #5b36d0 100%);`
+            : `background: white;`}
           text-align: center;
           border: 1px solid transparent;
           color: ${light ? 'white' : `${theme.colors.body_color}`};
@@ -266,23 +266,9 @@ const Register = props => {
         `}
       >
         <>
-          <TitoWidget discountAvailable={discountAvailable} />
-          {/* <h2>$299</h2>
-          <s>$499</s>
-          <p
-            css={css`
-              ${bpMaxSM} {
-                margin-bottom: 0;
-              }
-            `}
-          >
-             Spots left: {spotsLeft} 
-          </p>*/}
+          <TitoWidget discount={discount} event={event} />
           <p>{props.children}</p>
         </>
-        {/* <Link to={link} className="button">
-          {buttonText}
-        </Link> */}
       </div>
       <div
         css={css`
@@ -306,21 +292,23 @@ const Register = props => {
             align-items: center;
             text-align: center;
           }
-          //background: hsla(0, 0%, 0%, 0.05);
+          h1 {
+            line-height: 1.5;
+          }
           background: #fafafa;
           border: 1px solid #f1f1f1;
         `}
       >
         {title && <h1>{title}</h1>}
-        {/* {discountAvailable && (
+        {dealEndDate && (
           <>
             <p>
               Your chance to save <strong>$200</strong> in early bird discount
               ends in:
             </p>
-            <Counter />
+            <Counter dealEndDate={dealEndDate} />
           </>
-        )} */}
+        )}
       </div>
     </div>
   )

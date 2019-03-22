@@ -37,7 +37,9 @@ export const globalStyles = css`
   em {
     font-family: ${fonts.regularItalic};
   }
-  strong {
+  strong,
+  b {
+    font-family: ${fonts.semibold};
     em {
       font-family: ${fonts.semiboldItalic};
     }

@@ -52,7 +52,11 @@ export default function Post({data: {site, mdx}}) {
           }
         `}
       >
-        <Container>
+        <Container
+          css={css`
+            padding-top: 20px;
+          `}
+        >
           <h1
             css={css`
               text-align: center;

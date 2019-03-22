@@ -3,8 +3,8 @@ import {css} from '@emotion/core'
 import Layout from 'components/layout'
 import Container from 'components/container'
 import SEO from 'components/seo'
-import theme from '../../config/theme'
-import workshops from '../data/workshops'
+import theme from '../../../config/theme'
+import workshops from '../../data/workshops'
 import Presentations from 'components/presentations'
 
 export default function Workshops() {
