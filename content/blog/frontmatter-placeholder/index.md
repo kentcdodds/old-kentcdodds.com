@@ -20,7 +20,7 @@ redirects:
 spotsRemaining: 0
 soldOut: true
 dealEndDate: ''
-time: '',
+time: ''
 discount: false
 tech: react
 event: foo-bar
