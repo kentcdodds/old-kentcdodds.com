@@ -13,7 +13,9 @@ const TitoWidget = props => {
   )
 
   React.useEffect(() => {
-    if (!titoWidgetReady) {
+    if (titoWidgetReady) {
+      window.TitoWidget.buildWidgets()
+    } else {
       const original = window.titoWidgetCallback
       window.titoWidgetCallback = () => {
         if (original) {
@@ -24,12 +26,6 @@ const TitoWidget = props => {
       return () => {
         window.titoWidgetCallback = original
       }
-    }
-  }, [titoWidgetReady])
-
-  React.useEffect(() => {
-    if (titoWidgetReady) {
-      window.TitoWidget.buildWidgets()
     }
   }, [discount, event, titoWidgetReady])
 
