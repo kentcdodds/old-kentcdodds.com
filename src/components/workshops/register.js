@@ -1,5 +1,4 @@
 import React from 'react'
-import {noop} from 'lodash'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {lighten} from 'polished'
@@ -10,15 +9,20 @@ import Countdown from 'react-countdown-now'
 const TitoWidget = props => {
   const {event, discount} = props
   const [titoWidgetReady, setWidgetReady] = React.useState(
-    window.hasOwnProperty('TitoWidget'),
+    typeof window !== 'undefined' && window.hasOwnProperty('TitoWidget'),
   )
 
   React.useEffect(() => {
     if (!titoWidgetReady) {
-      const original = window.titoWidgetCallback || noop
+      const original = window.titoWidgetCallback
       window.titoWidgetCallback = () => {
-        original()
+        if (original) {
+          original()
+        }
         setWidgetReady(true)
+      }
+      return () => {
+        window.titoWidgetCallback = original
       }
     }
   }, [titoWidgetReady])
