@@ -53,7 +53,7 @@ function ScheduledWorkshop({
             width: 40px;
             height: 40px;
             h1 {
-              margin-top: ${discount ? '40px' : 'auto'};
+              margin: 0 auto;
             }
           }
         `
@@ -95,7 +95,7 @@ function ScheduledWorkshop({
         css={css`
           display: flex;
           justify-content: space-between;
-          align-items: flex-start;
+          align-items: center;
           ${bpMaxSM} {
             flex-direction: column;
           }
@@ -106,13 +106,12 @@ function ScheduledWorkshop({
             max-width: 450px;
           `}
         >
-          <Link to={url}>
-            <h1>{title}</h1>
-          </Link>
-          <div
+          <Link
+            to={url}
             css={css`
               display: flex;
               flex-wrap: wrap;
+              margin-top: ${discount ? '40px' : 'auto'};
             `}
           >
             <span
@@ -122,15 +121,22 @@ function ScheduledWorkshop({
             >
               <img src={techImage(tech)} alt={tech} />
             </span>
+            <h1>{title}</h1>
+          </Link>
+          <div
+            css={css`
+              display: flex;
+              flex-wrap: wrap;
+            `}
+          >
             <div
               css={css`
                 padding-right: 15px;
                 color: ${theme.colors.body_color};
               `}
             >
-              {soldOut ? (
-                <b>Sold out</b>
-              ) : (
+              {soldOut && <b>Sold out</b>}
+              {spotsRemaining && (
                 <span>
                   <b>{spotsRemaining}</b> spots remaining
                 </span>

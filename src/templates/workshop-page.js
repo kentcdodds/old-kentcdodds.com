@@ -68,13 +68,15 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          <Register
-            light
-            event={event}
-            discountAvailable={discount}
-            dealEndDate={dealEndDate}
-            title="Join the waiting list to get notified of future workshops."
-          />
+          {event && (
+            <Register
+              light
+              event={event}
+              discountAvailable={discount}
+              dealEndDate={dealEndDate}
+              title="Join the waiting list to get notified of future workshops."
+            />
+          )}
         </Container>
       </article>
     </Layout>

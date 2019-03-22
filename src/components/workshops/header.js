@@ -176,7 +176,7 @@ const Header = ({
           )}
         </div>
         {children}
-        {buttonText && (
+        {buttonText && date && (
           <a
             href="#register"
             className="button"
