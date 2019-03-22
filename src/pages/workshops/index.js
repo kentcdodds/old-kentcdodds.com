@@ -108,8 +108,8 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
             margin: ${rhythm(2)} 0 ${rhythm(1.5)} 0;
           `}
         >
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem ipsum dolor sit amet, lorem ipsum.</p>
+          <h1>Available Workshops</h1>
+          <p>Join the waitlist to get early access and special discounts</p>
           <div
             css={css`
               display: flex;
