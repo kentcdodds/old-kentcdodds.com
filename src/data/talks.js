@@ -57,13 +57,18 @@ export default [
   },
   {
     title: 'LIVE! Learn React Hooks with Kent C. Dodds',
-    resources: [],
+    resources: [
+      '[Partially Finished Codesandbox](https://codesandbox.io/s/r1m6pz58mq)',
+      '[Fully Finished Codesandbox](https://codesandbox.io/s/l3r6zxx0vl)',
+    ],
     tags: ['react'],
     deliveries: [
       {
         event:
           '[Webinar Registration](https://zoom.us/webinar/register/5015513098499/WN_jT_uHTTxQ5yI047qzGw4MA)',
         date: '2019-03-06',
+        recording:
+          'https://egghead.io/lessons/react-using-react-hooks-to-build-a-tic-tac-toe-game-with-kent-c-dodds',
       },
     ],
     description: `
@@ -72,6 +77,19 @@ export default [
       this webinar, I'll go over what React Hooks are, why they're useful, and
       demo what you can do with them.
     `,
+  },
+  {
+    title: 'LIVE! Understanding react-testing-library internals',
+    resources: [],
+    tags: ['react', 'testing'],
+    deliveries: [
+      {
+        event: 'Egghead.io Webinar',
+        date: '2019-02-27',
+        recording:
+          'https://egghead.io/lessons/react-understanding-how-react-testing-library-works-with-kent-c-dodds',
+      },
+    ],
   },
   {
     title: 'Contributing to Open Source on GitHub for beginners',
