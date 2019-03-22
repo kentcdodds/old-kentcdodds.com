@@ -15,9 +15,15 @@ heroMessage: 'the is a message'
 noFooter: false
 redirects:
   - '/invisible-post-423123'
+
+# this is stuff for the workshops
 spotsRemaining: 0
 soldOut: true
 dealEndDate: ''
+time: '',
+discount: false
+tech: react
+event: foo-bar
 ---
 
 This exists to populate GraphQL fields and avoid null errors. It should contain
