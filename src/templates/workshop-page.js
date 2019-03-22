@@ -49,7 +49,7 @@ export default function Workshop({data: {site, mdx}}) {
             date={date}
             discount={discount}
             image={banner ? banner.childImageSharp.fluid : false}
-            buttonText="Join the waiting list"
+            buttonText={soldOut ? 'Join the waiting list' : 'Secure your seat'}
             time={time}
           />
           <div

@@ -184,7 +184,7 @@ function ScheduledWorkshop({
         {description}
       </Markdown>
       <Link
-        to={`/workshops/${url}`}
+        to={url}
         css={css`
           color: ${theme.brand.primary};
         `}

@@ -261,6 +261,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       slug = `/workshops/${node.frontmatter.slug ||
         slugify(node.frontmatter.title)}`
     }
+
     if (node.fileAbsolutePath.includes('content/writing-blog/')) {
       isWriting = true
       slug = `/writing/blog/${node.frontmatter.slug || slugify(parent.name)}`
