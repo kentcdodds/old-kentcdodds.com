@@ -124,7 +124,9 @@ export default function Post({data: {site, mdx}}) {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={`https://twitter.com/search?q=${encodeURIComponent(
+            // using mobile.twitter.com because if people haven't upgraded
+            // to the new experience, the regular URL wont work for them
+            href={`https://mobile.twitter.com/search?q=${encodeURIComponent(
               blogPostUrl,
             )}`}
           >
