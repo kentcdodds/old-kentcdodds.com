@@ -43,7 +43,7 @@ particular tool, library, or pattern, it's very important to think critically
 about the costs and benefits (just like we should
 [think critically about how we manage state in our apps](https://blog.kentcdodds.com/application-state-management-66de608ccb24)).
 To understand the benefits in this
-[context](https://medium.com/dailyjs/reacts--new-context-api-70c9fe01596b) (😉),
+[context](https://kentcdodds.com/blog/reacts-new-context-api) (😉),
 you have to understand the problems it solves, how it goes about solving those
 problems (especially when compared to alternatives), and (most importantly)
 **whether you have those problems to begin with**. If you don't have the
@@ -113,7 +113,7 @@ This is possible because of the power of the render prop pattern.
 
 In combination with HOCs, the Provider pattern can also be really handy, and can
 also be implemented via render props (in fact, that's basically what
-[the new context API](https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b)
+[the new context API](https://kentcdodds.com/blog/reacts-new-context-api)
 is all about). Just for fun one day, I decided to implement a provider and HOC
 for downshift. It didn't take me very much time at all before I had
 [a working implementation](https://codesandbox.io/s/017n1jqo00)! This example

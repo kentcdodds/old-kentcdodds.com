@@ -18,7 +18,7 @@ bannerCredit:
 ---
 
 Earlier this year, the React team introduced the first official context API.
-[I blogged about that new API](https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b)
+[I blogged about that new API](https://kentcdodds.com/blog/reacts-new-context-api)
 and people got sufficiently and reasonably hyped.
 
 One common complaint that I knew people were going to have when applying it
