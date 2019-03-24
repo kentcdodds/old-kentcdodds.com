@@ -111,7 +111,7 @@ still not a bad option. That is,
 The new Context API in React is super duper awesome. If you haven't read my post
 about that yet, give it a look:
 
-[**React's ⚛️ new Context API**](https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b)
+[**React's ⚛️ new Context API**](https://kentcdodds.com/blog/reacts-new-context-api)
 
 React context allows you to overcome the prop-drilling problem _and_ the update
 issues with a singleton with a simple built-in API. With this API you can pretty

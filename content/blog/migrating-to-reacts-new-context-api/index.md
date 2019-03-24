@@ -16,7 +16,7 @@ With
 [the recent release of React 16.3.0](https://reactjs.org/blog/2018/03/29/react-v-16-3.html)
 came an official context API. You can learn more about the why and how behind
 this API from my previous blog post:
-["React's ⚛️ new Context API"](https://medium.com/dailyjs/reacts-%EF%B8%8F-new-context-api-70c9fe01596b).
+["React's ⚛️ new Context API"](https://kentcdodds.com/blog/reacts-new-context-api).
 Because of this significant change, I'm making an update to
 [my advanced component patterns course on Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)
 to use the new API rather than the old one. As I've been working on updating the
