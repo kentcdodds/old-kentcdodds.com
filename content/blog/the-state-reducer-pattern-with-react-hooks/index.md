@@ -159,10 +159,10 @@ function Toggle() {
     modifyStateChange(currentState, changes) {
       if (tooManyClicks) {
         // other changes are fine, but on needs to be unchanged
-        return {...action.changes, on: currentState.on}
+        return {...changes, on: currentState.on}
       } else {
         // the changes are fine
-        return action.changes
+        return changes
       }
     },
   })
