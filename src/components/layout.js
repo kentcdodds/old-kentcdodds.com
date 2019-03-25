@@ -113,6 +113,12 @@ export const globalStyles = css`
       border-radius: 5px;
     }
   }
+  .highlight-line {
+    background-color: rgba(201, 167, 255, 0.2);
+    margin: 0 -10px;
+    padding: 0 5px;
+    border-left: 5px solid #c9a7ff;
+  }
   ${reset};
 `
 

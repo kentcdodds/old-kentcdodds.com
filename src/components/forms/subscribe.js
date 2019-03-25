@@ -123,36 +123,61 @@ export function TinyLetterSubscribe() {
   )
 }
 
-function Subscribe({style}) {
-  const [submitted, setSubmitted] = React.useState(false)
-  const [loading, setLoading] = React.useState(false)
-  const [response, setResponse] = React.useState(null)
-  const [errorMessage, setErrorMessage] = React.useState(null)
-
-  async function handleSubmit(values) {
-    setSubmitted(false)
-    setLoading(true)
-    try {
-      const responseJson = await fetch(
-        `https://app.convertkit.com/forms/827139/subscriptions`,
-        {
-          method: 'post',
-          body: JSON.stringify(values, null, 2),
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-        },
-      ).then(r => r.json())
-      setSubmitted(true)
-      setResponse(responseJson)
-      setErrorMessage(null)
-    } catch (error) {
-      setSubmitted(false)
-      setErrorMessage('Something went wrong!')
+function fetchReducer(state, {type, response, error}) {
+  switch (type) {
+    case 'fetching': {
+      return {error: null, response: null, pending: true}
     }
-    setLoading(false)
+    case 'success': {
+      return {error: null, response, pending: false}
+    }
+    case 'error': {
+      return {error, response: null, pending: false}
+    }
+    default:
+      throw new Error(`Unsupported type: ${type}`)
   }
+}
+
+function useFetch({url, body}) {
+  const [state, dispatch] = React.useReducer(fetchReducer, {
+    error: null,
+    response: null,
+    pending: false,
+  })
+  const bodyString = JSON.stringify(body)
+
+  React.useEffect(() => {
+    if (url && bodyString) {
+      dispatch({type: 'fetching'})
+      fetch(url, {
+        method: 'post',
+        body: bodyString,
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+        .then(r => r.json())
+        .then(
+          response => dispatch({type: 'success', response}),
+          error => dispatch({type: 'error', error}),
+        )
+    }
+  }, [url, bodyString])
+
+  return state
+}
+
+function Subscribe({style, tags = [], header = 'Join the Newsletter'}) {
+  const [values, setValues] = React.useState()
+  const {pending, response, error} = useFetch({
+    url: `https://app.convertkit.com/forms/827139/subscriptions`,
+    body: values,
+  })
+
+  const errorMessage = error ? 'Something went wrong!' : null
+  const submitted = Boolean(response)
 
   const successful = response && response.status === 'success'
 
@@ -166,7 +191,7 @@ function Subscribe({style}) {
             color: white;
           `}
         >
-          Join the Newsletter
+          {header}
         </h3>
       )}
 
@@ -175,9 +200,10 @@ function Subscribe({style}) {
           initialValues={{
             email_address: '',
             first_name: '',
+            tags,
           }}
           validationSchema={SubscribeSchema}
-          onSubmit={values => handleSubmit(values)}
+          onSubmit={setValues}
           render={() => (
             <StyledForm>
               <label htmlFor="first_name">
@@ -227,14 +253,14 @@ function Subscribe({style}) {
                 type="email"
               />
               <button data-element="submit" type="submit">
-                {!loading && 'Subscribe'}
-                {loading && 'Submitting...'}
+                {!pending && 'Subscribe'}
+                {pending && 'Submitting...'}
               </button>
             </StyledForm>
           )}
         />
       )}
-      {submitted && !loading && <PostSubmissionMessage response={response} />}
+      {submitted && !pending && <PostSubmissionMessage response={response} />}
       {errorMessage && <div>{errorMessage}</div>}
     </SubscribeFormWrapper>
   )
