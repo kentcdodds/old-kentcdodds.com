@@ -5,6 +5,16 @@ import Highlight, {defaultProps} from 'prism-react-renderer'
 
 const RE = /{([\d,-]+)}/
 
+const wrapperStyles = css`
+  overflow: auto;
+`
+
+const preStyles = css`
+  float: left;
+  min-width: 100%;
+  overflow: initial;
+`
+
 function calculateLinesToHighlight(meta) {
   if (RE.test(meta)) {
     const lineNumbers = RE.exec(meta)[1]
@@ -32,32 +42,34 @@ function Code({codeString, language, metastring}) {
       theme={theme}
     >
       {({className, style, tokens, getLineProps, getTokenProps}) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div
-              key={i}
-              {...getLineProps({
-                line,
-                key: i,
-                className: shouldHighlightLine(i) ? 'highlight-line' : '',
-              })}
-            >
-              <span
-                css={css`
-                  display: inline-block;
-                  width: 2em;
-                  user-select: none;
-                  opacity: 0.3;
-                `}
+        <div css={wrapperStyles}>
+          <pre className={className} style={style} css={preStyles}>
+            {tokens.map((line, i) => (
+              <div
+                key={i}
+                {...getLineProps({
+                  line,
+                  key: i,
+                  className: shouldHighlightLine(i) ? 'highlight-line' : '',
+                })}
               >
-                {i + 1}
-              </span>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({token, key})} />
-              ))}
-            </div>
-          ))}
-        </pre>
+                <span
+                  css={css`
+                    display: inline-block;
+                    width: 2em;
+                    user-select: none;
+                    opacity: 0.3;
+                  `}
+                >
+                  {i + 1}
+                </span>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({token, key})} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        </div>
       )}
     </Highlight>
   )
