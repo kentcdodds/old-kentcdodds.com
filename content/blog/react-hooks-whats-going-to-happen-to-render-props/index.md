@@ -209,7 +209,7 @@ Good luck!
 
 **Learn more about Refactoring to React Hooks from me**:
 
-[My new egghead.io course](blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
+[My new egghead.io course](https://kentcdodds.com/blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
 will show you how to refactor a typical app's components to use react hooks (and
 React.lazy/suspense). It's a good time!
 
