@@ -21,7 +21,7 @@ Current Available Translations:
 - [Korean](https://edykim.com/ko/post/react-hooks-whats-going-to-happen-to-render-props/)
 
 About a year ago, I published
-["How to give rendering control to users with prop getters"](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf).
+["How to give rendering control to users with prop getters"](/blog/how-to-give-rendering-control-to-users-with-prop-getters).
 In that post, I show the entire implementation (at the time) of
 [`react-toggled`](https://github.com/kentcdodds/react-toggled) which I actually
 built for the sole purpose of teaching some of the patterns that I used in
@@ -31,7 +31,7 @@ served as a great way to teach the prop getters pattern.
 
 Both react-toggled and downshift use the render prop pattern as a mechanism for
 React component logic code sharing. As I explained in my blog post
-["When to NOT use Render Props"](https://blog.kentcdodds.com/when-to-not-use-render-props-5397bbeff746),
+["When to NOT use Render Props"](/blog/when-to-not-use-render-props),
 that's the primary use case for the render prop pattern. But that's also the
 primary use case for React Hooks as well. And React Hooks are WAY simpler than
 class components + render props.
@@ -209,7 +209,7 @@ Good luck!
 
 **Learn more about Refactoring to React Hooks from me**:
 
-[My new egghead.io course](blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
+[My new egghead.io course](/blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
 will show you how to refactor a typical app's components to use react hooks (and
 React.lazy/suspense). It's a good time!
 
