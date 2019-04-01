@@ -97,6 +97,11 @@ for your use case and so you just bend the code to fit your new use case. This
 goes on several times until the abstraction is basically your whole application
 in `if` statements and loops 😂😭
 
+**I think the big takeaway** about "Moist Programming" is that you shouldn't be
+dogmatic about when you start writing abstractions but instead write the
+abstraction when it _feels_ right and don't be afraid to duplicate code until
+you get there.
+
 ## Conclusion
 
 I hope that's helpful to you. If you find yourself mired in bad abstractions,
