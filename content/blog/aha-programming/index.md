@@ -1,11 +1,9 @@
 ---
-slug: 'moist-programming'
-title: 'Moist Programming'
+slug: 'aha-programming'
+title: 'AHA Programming'
 date: '2019-03-31'
 author: 'Kent C. Dodds'
-description:
-  '_The dangers of DRY, the web of WET, the dankness of DAMP, and the majesty of
-  MOIST._'
+description: '_The dangers of DRY, the web of WET, the awesomeness of AHA._'
 categories:
   - 'programming'
 keywords:
@@ -13,6 +11,8 @@ keywords:
   - 'coding'
 banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Chad Madden](https://unsplash.com/photos/ARI3Lw4QtDA)'
+redirects:
+  - '/blog/moist-programming'
 ---
 
 ## DRY
@@ -39,7 +39,8 @@ needed would've helped out a LOT.
 
 There's another concept that people have referred to as `WET` programming which
 stands for "Write Everything Twice." That's similarly dogmatic and over
-prescriptive. Some has defined this as:
+prescriptive. [Conlin Durbin](https://twitter.com/CallMeWuz)
+[has defined this as](https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33):
 
 > You can ask yourself "Haven't I written this before?" two times, but never
 > three.
@@ -55,33 +56,15 @@ changes to that area of the codebase.
 The code _was_ reused in lots more than three places, but the abstraction was
 bad and I wished that the code had been duplicated instead.
 
-## DAMP
+## AHA
 
-DAMP sounds like it should be a mix of DRY and WET principles, but it actually
-doesn't have anything to do with those principles directly. Instead, it stands
-for:
+`AHA` is an acronym I
+[got from](https://twitter.com/codehitchhiker/status/1112819136147742720)
+[Cher](https://twitter.com/codehitchhiker) which stands for
 
-> Descriptive And Meaningful Phrases
+> Avoid Hasty Abstractions
 
-[Sean Larkin wrote about this a while ago](https://medium.com/mutual-of-omaha-digital-experience-and-design-team/damp-programming-reviving-readability-d84647cc5b2e)
-and it's a good article. I think DAMP is great (though the idea that code
-comments are worthless is more dogmatic than my taste).
-
-The reason I'm bringing it up here is mostly to justify my use of the word
-"Moist" which makes some people's spines tremble. Sorry about that. Damp was
-already taken.
-
-## MOIST
-
-This is a concept that I've heard some people bring up in conversation, but I
-haven't been able to find or think of what it could be an acronym for 😅 How
-about:
-
-> Many Over-abstractions Inflict Sad Teams
-
-Nah...
-
-Anyway, the way I think of this principle is beautifully described by
+The way I think of this principle is beautifully described by
 [Sandi Metz](https://twitter.com/sandimetz) who
 [wrote](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction):
 
