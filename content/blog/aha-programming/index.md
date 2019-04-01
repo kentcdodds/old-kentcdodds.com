@@ -104,7 +104,7 @@ for your use case and so you just bend the code to fit your new use case. This
 goes on several times until the abstraction is basically your whole application
 in `if` statements and loops 😂😭
 
-**I think the big takeaway** about "Moist Programming" is that you shouldn't be
+**I think the big takeaway** about "AHA Programming" is that you shouldn't be
 dogmatic about when you start writing abstractions but instead write the
 abstraction when it _feels_ right and don't be afraid to duplicate code until
 you get there.
@@ -112,9 +112,9 @@ you get there.
 ## Conclusion
 
 I feel like a measured and pragmatic approach to software principles is
-important. That's why I prefer `MOIST` over `DRY` or `WET`. It's intended to
-help you be mindful of your abstractions without giving hard-fast rules to when
-it is or isn't ok to abstract some code into a function or module.
+important. That's why I prefer `AHA` over `DRY` or `WET`. It's intended to help
+you be mindful of your abstractions without giving hard-fast rules to when it is
+or isn't ok to abstract some code into a function or module.
 
 I hope that's helpful to you. If you find yourself mired in bad abstractions,
 take heart! Sandi gives you some good steps for how to get out of that!
