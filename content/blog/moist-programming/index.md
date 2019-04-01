@@ -51,16 +51,34 @@ changes to that area of the codebase.
 The code _was_ reused in lots more than three places, but the abstraction was
 bad and I wished that the code had been duplicated instead.
 
+## DAMP
+
+DAMP sounds like it should be a mix of DRY and WET principles, but it actually
+doesn't have anything to do with those principles directly. Instead, it stands
+for:
+
+> Descriptive And Meaningful Phrases
+
+[Sean Larkin wrote about this a long time ago](https://medium.com/mutual-of-omaha-digital-experience-and-design-team/damp-programming-reviving-readability-d84647cc5b2e)
+and it's a good article. I think DAMP is great (though the idea that code
+comments are worthless is more dogmatic than my taste).
+
+The reason I'm bringing it up here is mostly to justify my use of the word
+"Moist" which makes some people's spines tremble. Sorry about that. Damp was
+already taken.
+
 ## MOIST
 
 This is a concept that I've heard some people bring up in conversation, but I
-haven't been able to find or think of what it could be an acronym for 😅
+haven't been able to find or think of what it could be an acronym for 😅 How
+about:
 
-> How about: "Many Over-abstractions Inflict Sad Teams"
+> Many Over-abstractions Inflict Sad Teams
 
 Nah...
 
-Anyway, [Sandi Metz](https://twitter.com/sandimetz)
+Anyway, the way I think of this principle is beautifully described by
+[Sandi Metz](https://twitter.com/sandimetz) who
 [wrote](https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction):
 
 > prefer duplication over the wrong abstraction
@@ -103,6 +121,11 @@ abstraction when it _feels_ right and don't be afraid to duplicate code until
 you get there.
 
 ## Conclusion
+
+I feel like a measured and pragmatic approach to software principles is
+important. That's why I prefer `MOIST` over `DRY` or `WET`. It's intended to
+help you be mindful of your abstractions without giving hard-fast rules to when
+it is or isn't ok to abstract some code into a function or module.
 
 I hope that's helpful to you. If you find yourself mired in bad abstractions,
 take heart! Sandi gives you some good steps for how to get out of that!
