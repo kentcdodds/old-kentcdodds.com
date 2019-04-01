@@ -1,6 +1,6 @@
 ---
 slug: 'moist-programming'
-title: 'Moist Tests'
+title: 'Moist Programming'
 date: '2019-03-31'
 author: 'Kent C. Dodds'
 description: '_The dangers of DRY, the web of WET, and the majesty of MOIST._'
