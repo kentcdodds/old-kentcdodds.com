@@ -30,11 +30,6 @@ export default [
         event: '[React.Amsterdam](https://react.amsterdam/workshops)',
         date: '2019-04-10',
       },
-      {
-        event:
-          '[Salt Lake City, UT](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019)',
-        date: '2019-05-14',
-      },
     ],
     description: `
       Advanced React Patterns with Hooks is an ADVANCED workshop. Making React
@@ -49,25 +44,6 @@ export default [
       already experienced with React, you'll enjoy the fact that this is all
       using React's latest "Hooks" feature which makes these patterns even
       better and even introduces some new ones.
-    `,
-  },
-  {
-    title: 'Learn React Hooks',
-    resources: ['[repo](https://github.com/kentcdodds/learn-react)'],
-    tags: ['react'],
-    deliveries: [
-      {
-        event:
-          '[Salt Lake City, UT](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019)',
-        date: '2019-05-13',
-      },
-    ],
-    description: `
-      Learn React Hooks is a BEGINNER workshop. React's new "Hooks" feature will
-      blow your socks off. It makes writing applications even easier than
-      before. In this extremely hands-on workshop, you'll be able to play with
-      these new features and have the skills you need to take them to your
-      applications.
     `,
   },
   {
