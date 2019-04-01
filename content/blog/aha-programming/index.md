@@ -10,7 +10,8 @@ keywords:
   - 'programming'
   - 'coding'
 banner: './images/banner.jpg'
-bannerCredit: 'Photo by [Chad Madden](https://unsplash.com/photos/ARI3Lw4QtDA)'
+bannerCredit:
+  'Photo by [Joshua Sortino](https://unsplash.com/photos/Rnqa6jOpnHw)'
 redirects:
   - '/blog/moist-programming'
 ---
