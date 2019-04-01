@@ -61,7 +61,7 @@ for:
 
 > Descriptive And Meaningful Phrases
 
-[Sean Larkin wrote about this a long time ago](https://medium.com/mutual-of-omaha-digital-experience-and-design-team/damp-programming-reviving-readability-d84647cc5b2e)
+[Sean Larkin wrote about this a while ago](https://medium.com/mutual-of-omaha-digital-experience-and-design-team/damp-programming-reviving-readability-d84647cc5b2e)
 and it's a good article. I think DAMP is great (though the idea that code
 comments are worthless is more dogmatic than my taste).
 
