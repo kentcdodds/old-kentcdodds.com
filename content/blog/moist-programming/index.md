@@ -28,10 +28,12 @@ dogmatically than that definition seems to encourage). The biggest problem I've
 had with [code duplication](https://en.wikipedia.org/wiki/Duplicate_code) (aka
 copy/paste, it's basically the antithesis of `DRY`) is discovering a bug in one
 place, fixing it, then realizing that same bug was elsewhere and having to fix
-it there as well. Once, I inherited a codebase that made very heavy use of code
-duplication and one time I had to fix a bug in eight different places! 😱 Talk
-about irritating! Abstracting that code into a function that could be called
-anywhere it was needed would've helped out a LOT.
+it there as well.
+
+Once, I inherited a codebase that made very heavy use of code duplication and
+one time I had to fix a bug in eight different places! 😱 Talk about irritating!
+Abstracting that code into a function that could be called anywhere it was
+needed would've helped out a LOT.
 
 ## WET
 
