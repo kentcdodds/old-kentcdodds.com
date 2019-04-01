@@ -1,0 +1,4 @@
+# no idea why, but the gatsby redirect doesn't always work right
+
+/blog/moist-programming        /blog/aha-programming
+/blog/moist-programming/       /blog/aha-programming
