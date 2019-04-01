@@ -46,7 +46,7 @@ In that same codebase I mentioned above, there was some over-abstraction that
 was even more harmful than duplication. It was AngularJS code and for several
 AngularJS controllers, the code passed `this` to a function which would
 monkey-patch methods and properties onto `this` in a way enhancing the
-controller instance with certain abilities. I sort of pseudo-inheritance thing I
+controller instance with certain abilities. A sort of pseudo-inheritance thing I
 guess. It was SUPER confusing, hard to follow, and I was terrified to make any
 changes to that area of the codebase.
 
