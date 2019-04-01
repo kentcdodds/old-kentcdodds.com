@@ -1,6 +1,6 @@
 ---
 slug: 'aha-programming'
-title: 'AHA Programming'
+title: 'AHA Programming 💡'
 date: '2019-03-31'
 author: 'Kent C. Dodds'
 description: '_The dangers of DRY, the web of WET, the awesomeness of AHA._'
@@ -56,7 +56,7 @@ changes to that area of the codebase.
 The code _was_ reused in lots more than three places, but the abstraction was
 bad and I wished that the code had been duplicated instead.
 
-## AHA
+## AHA 💡
 
 `AHA` is an acronym I
 [got from](https://twitter.com/codehitchhiker/status/1112819136147742720)
