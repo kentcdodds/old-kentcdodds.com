@@ -14,6 +14,7 @@ bannerCredit:
   'Photo by [Joshua Sortino](https://unsplash.com/photos/Rnqa6jOpnHw)'
 redirects:
   - '/blog/moist-programming'
+  - '/blog/moist-programming/'
 ---
 
 ## DRY
