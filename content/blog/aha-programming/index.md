@@ -112,7 +112,7 @@ you get there.
 ## Conclusion
 
 I feel like a measured and pragmatic approach to software principles is
-important. That's why I prefer `AHA` over `DRY` or `WET`. It's intended to help
+important. That's why I prefer `AHA` over `DRY` or `AHA`. It's intended to help
 you be mindful of your abstractions without giving hard-fast rules to when it is
 or isn't ok to abstract some code into a function or module.
 
