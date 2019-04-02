@@ -60,7 +60,7 @@ bad and I wished that the code had been duplicated instead.
 
 ## AHA 💡
 
-`AHA` is an acronym I
+`AHA` (pronounced "Aha!" like you just made a discovery) is an acronym I
 [got from](https://twitter.com/codehitchhiker/status/1112819136147742720)
 [Cher](https://twitter.com/codehitchhiker) which stands for
 
