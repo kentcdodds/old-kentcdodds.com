@@ -8,7 +8,7 @@ import Link from 'components/link'
 import {bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 
-const Blog = ({data: {allMdx}, pageContext: {pagination}, subscribeForm}) => {
+function Blog({data: {allMdx}, pageContext: {pagination}, subscribeForm}) {
   const {page, nextPagePath, previousPagePath} = pagination
 
   const posts = page

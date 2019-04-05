@@ -5,14 +5,15 @@ import {MDXProvider} from '@mdx-js/tag'
 import {Global, css} from '@emotion/core'
 import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
+import NotificationMessage from 'components/notification-message'
+import Header from 'components/header'
+import Footer from 'components/footer'
+import mdxComponents from 'components/mdx'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
-import mdxComponents from './mdx'
-import Header from './header'
 import reset from '../lib/reset'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
-import Footer from '../components/footer'
 
 export const globalStyles = css`
   .button-secondary {
@@ -180,6 +181,8 @@ function Layout({
 
   return (
     <ThemeProvider theme={theme}>
+      <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
+      <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage>
       <Global styles={globalStyles} />
       <Helmet
         title={title}
