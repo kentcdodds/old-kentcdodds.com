@@ -1,6 +1,6 @@
 ---
 slug: 'aha-testing'
-title: 'AHA Testing'
+title: 'AHA Testing 💡'
 date: '2019-04-07'
 author: 'Kent C. Dodds'
 description:
