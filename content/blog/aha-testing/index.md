@@ -234,8 +234,6 @@ test. Now try to figure out what makes the difference in these tests:
 import * as blogPostController from '../blog-post'
 
 // load the application-wide mock for the database.
-// I guess that means this is AANA (Almost Absolutely No Abstraction)
-// but I didn't want to write out a whole db mock for this blog post 😅
 jest.mock('../../lib/db')
 
 function setup(overrides = {}) {
