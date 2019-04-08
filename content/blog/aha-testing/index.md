@@ -324,8 +324,8 @@ test('returns an empty list when there are no blog posts', async () => {
 Now can you tell? What's the difference between the first and the second test?
 In the first our user is in London and in the second our user is in Shanghai!
 Gee, sure would've been nice if our co-workers had told us we were working on a
-location-based blogging platform (hey... now that's an interesting product
-idea).
+location-based blogging platform (hey... now that's an interesting product idea
+🤔).
 
 By adding just a little mindful abstraction, we've been able to make it much
 more clear what actually matters in the difference of the inputs and outputs
