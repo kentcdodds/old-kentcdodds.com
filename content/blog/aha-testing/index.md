@@ -373,7 +373,7 @@ test('submit calls the submit handler', () => {
 ```
 
 > Note: I would consider this pre-mature abstraction if you've only got two or
-> three tests in the file that are using it and those tests are short. But if
+> three tests in the file that is using it and those tests are short. But if
 > you've got some nuance you're testing (like error states for example), then
 > this kind of abstraction is great.
 
