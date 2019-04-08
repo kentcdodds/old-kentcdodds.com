@@ -331,12 +331,7 @@ By adding just a little mindful abstraction, we've been able to make it much
 more clear what actually matters in the difference of the inputs and outputs
 leading to tests which make a LOT more sense and are WAY easier to maintain.
 
-## Conclusion
-
-Certainly your tests could've been improved by providing better names and/or
-comments as well, but our simple `setup` abstraction (by the way, that's called
-a "Test Object Factory") doesn't really need them. So my point is, it takes less
-work to write and maintain tests that have mindful abstractions applied to them.
+## AHA Testing with React
 
 In a react world, I will sometimes have a `renderFoo` function that acts like
 the `setup` function here. Here's a simple example:
@@ -381,5 +376,73 @@ test('submit calls the submit handler', () => {
 > three tests in the file that are using it and those tests are short. But if
 > you've got some nuance you're testing (like error states for example), then
 > this kind of abstraction is great.
+
+## jest-in-case and test.each
+
+If you're writing tests for a pure function, you're in luck because those are
+often the easiest to test for. You can seriously simplify your tests by using a
+simple abstraction that calls out VERY clearly the outputs and inputs.
+
+For (contrived) example:
+
+```javascript
+import add from '../add'
+
+test('adds one and two to equal three', () => {
+  expect(add(1, 2)).toBe(3)
+})
+
+test('adds three and four to equal seven', () => {
+  expect(add(3, 4)).toBe(7)
+})
+
+test('adds one hundred and two to equal one hundred two', () => {
+  expect(add(100, 2)).toBe(102)
+})
+```
+
+That's pretty simple to follow, but it can be improved with `jest-in-case`:
+
+```javascript
+import cases from 'jest-in-case'
+import add from '../add'
+
+cases(
+  'add',
+  ({first, second, result}) => {
+    expect(add(first, second)).toBe(result)
+  },
+  [
+    {first: 1, second: 2, result: 3},
+    {first: 3, second: 4, result: 7},
+    {first: 100, second: 2, result: 102},
+  ],
+)
+```
+
+I probably wouldn't bother doing this for this simple example, but what's cool
+about it is that you can add more test cases very easily by simply adding more
+elements to that array. A good example of this concept (that actually _doesn't_
+use jest-in-case) is
+[the `rtl-css-js` tests](https://github.com/kentcdodds/rtl-css-js/blob/b148865ce6a4c994eba292015b8f44b5dae7edaa/src/__tests__/index.js).
+Contributors to this codebase find it very easy to add new test cases with this
+structure.
+
+This can also be applied to impure functions and modules as well, though it
+takes a little bit more work.
+([Here's a test that does this which I'm not totally proud of, but it's not too bad](https://github.com/kentcdodds/kcd-scripts/blob/7bc29e41e46e73b4b57c0f975648a90a75c24c80/src/scripts/__tests__/lint.js))
+
+I personally prefer [jest-in-case](https://github.com/atlassian/jest-in-case)
+but Jest has a built-in
+[`test.each`](https://jestjs.io/docs/en/api#testeachtable-name-fn-timeout)
+functionality that you may find useful.
+
+## Conclusion
+
+Certainly our tests could've been improved by providing better names and/or
+comments as well, but our simple `setup` abstraction (by the way, that's called
+a "Test Object Factory") doesn't really need them. So my point is: **it takes
+less work to write and maintain tests that have mindful abstractions applied to
+them.**
 
 I hope that's helpful! Good luck!
