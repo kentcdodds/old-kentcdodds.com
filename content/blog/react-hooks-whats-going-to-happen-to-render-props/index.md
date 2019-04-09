@@ -189,7 +189,7 @@ Here's the relevant bit:
 ```
 
 Checkout that `rowRenderer` prop there. Do you know what that is? IT'S A RENDER
-PROP! What!? 🙀 That's inversion of control in all it's glory with render props
+PROP! What!? 🙀 That's inversion of control in all its glory with render props
 right there. That's a prop that `react-virtualized` uses to delegate control of
 rendering rows in a list to you the user of the component. If
 `react-virtualized` were to be rewritten to use hooks, _maybe_ it could accept
