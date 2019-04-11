@@ -21,6 +21,7 @@ function ScheduledWorkshop({
   buttonText = 'Book a seat',
   spotsRemaining = '20',
   tech,
+  imageUrl,
   location,
   discount,
   soldOut = false,
@@ -119,7 +120,13 @@ function ScheduledWorkshop({
                 padding-right: 10px;
               `}
             >
-              <img src={techImage(tech)} alt={tech} />
+              <img
+                css={css`
+                  max-width: 145px;
+                `}
+                src={imageUrl ? imageUrl : techImage(tech)}
+                alt={tech}
+              />
             </span>
             <h1>{title}</h1>
           </Link>
