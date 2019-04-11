@@ -11,6 +11,7 @@
     "@mdx-js/mdx": "^0.20.3",
     "@mdx-js/tag": "^0.20.3",
     "@sindresorhus/slugify": "^0.8.0",
+    "axios": "^0.18.0",
     "core-js": "^2.6.1",
     "dotenv": "^7.0.0",
     "dotenv-parse-variables": "^0.2.0",
