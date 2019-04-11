@@ -74,7 +74,6 @@ export default function Workshop({data: {site, mdx}}) {
               event={event}
               discountAvailable={discount}
               dealEndDate={dealEndDate}
-              title="Join the waiting list to get notified of future workshops."
             />
           )}
         </Container>

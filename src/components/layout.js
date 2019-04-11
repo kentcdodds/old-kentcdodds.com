@@ -52,7 +52,6 @@ export const globalStyles = css`
     padding: 5px 10px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     font-family: ${fonts.regular};
-    margin-top: 5px;
     ::placeholder {
       opacity: 0.4;
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
-import {lighten} from 'polished'
+import {lighten, darken} from 'polished'
 import {rhythm, fonts} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
@@ -194,7 +194,7 @@ const Register = props => {
         width: 100%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: ${title || dealEndDate ? '1fr 1fr' : '1fr'};
         border-radius: 5px;
         margin-top: ${rhythm(2.5)};
         margin-bottom: 50px;
@@ -247,13 +247,18 @@ const Register = props => {
             ? `background-image: linear-gradient(-180deg, #8161ff 0%, #5b36d0 100%);`
             : `background: white;`}
           text-align: center;
+          background-color: transparent;
+          :hover {
+            background-color: transparent;
+            background-image: linear-gradient(
+              -180deg,
+              ${darken(0.1, '#8161ff')} 0%,
+              ${darken(0.1, '#5b36d0')} 100%
+            );
+          }
           border: 1px solid transparent;
           color: ${light ? 'white' : `${theme.colors.body_color}`};
           border-radius: 5px;
-          :hover {
-            border: 1px solid transparent;
-            background: ${theme.colors.green_lighten};
-          }
         }
         s {
           font-size: 24px;
@@ -291,46 +296,49 @@ const Register = props => {
           <p>{props.children}</p>
         </>
       </div>
-      <div
-        css={css`
-          border-radius: 0 5px 5px 0;
-          width: 100%;
-          display: flex;
-          align-items: flex-start;
-          text-align: left;
-          flex-direction: column;
-          padding: ${rhythm(2)};
-          box-shadow: inset 10px 0 30px hsla(0, 0%, 0%, 0.05);
-          ${bpMaxSM} {
-            box-shadow: inset 0 10px 30px hsla(0, 0%, 0%, 0.05);
-            border-radius: 0 0 5px 5px;
-          }
-          p {
-            font-family: ${fonts.light};
-          }
-          ${bpMaxSM} {
-            padding: ${rhythm(1)};
-            align-items: center;
-            text-align: center;
-          }
-          h1 {
-            line-height: 1.5;
-          }
-          background: #fafafa;
-          border: 1px solid #f1f1f1;
-        `}
-      >
-        {title && <h1>{title}</h1>}
-        {dealEndDate && (
-          <>
-            <p>
-              Your chance to save <strong>$200</strong> in early bird discount
-              ends in:
-            </p>
-            <Counter dealEndDate={dealEndDate} />
-          </>
-        )}
-      </div>
+      {title ||
+        (dealEndDate && (
+          <div
+            css={css`
+              border-radius: 0 5px 5px 0;
+              width: 100%;
+              display: flex;
+              align-items: flex-start;
+              text-align: left;
+              flex-direction: column;
+              padding: ${rhythm(2)};
+              box-shadow: inset 10px 0 30px hsla(0, 0%, 0%, 0.05);
+              ${bpMaxSM} {
+                box-shadow: inset 0 10px 30px hsla(0, 0%, 0%, 0.05);
+                border-radius: 0 0 5px 5px;
+              }
+              p {
+                font-family: ${fonts.light};
+              }
+              ${bpMaxSM} {
+                padding: ${rhythm(1)};
+                align-items: center;
+                text-align: center;
+              }
+              h1 {
+                line-height: 1.5;
+              }
+              background: #fafafa;
+              border: 1px solid #f1f1f1;
+            `}
+          >
+            {title && <h1>{title}</h1>}
+            {dealEndDate && (
+              <>
+                <p>
+                  Your chance to save <strong>$200</strong> in early bird
+                  discount ends in:
+                </p>
+                <Counter dealEndDate={dealEndDate} />
+              </>
+            )}
+          </div>
+        ))}
     </div>
   )
 }
