@@ -24,38 +24,50 @@ function buildEvents(eventsData) {
         .then(({data}) => data.discount_codes)
     }
 
-    return axios.all([getReleases(slug), getDiscountCodes(slug)]).then(
-      axios.spread((releases, codes) => {
-        const discounts = _.map(_.filter(codes, {state: 'current'}), code => {
-          return code.share_url
-        })
-        const event = _.reduce(
-          releases,
-          (acc, release) => {
-            return {
-              quantity: acc.quantity + release.quantity,
-              sold: acc.sold + release.tickets_count,
-              remaining:
-                acc.remaining + (release.quantity - release.tickets_count),
-            }
-          },
-          {
-            quantity: 0,
-            sold: 0,
-            remaining: 0,
-          },
-        )
-        return {
-          ...event,
-          slug,
-          discounts,
-          title,
-          logo,
-          url,
-          date: start_date,
-        }
-      }),
-    )
+    function getActivities(eventSlug) {
+      return axios
+        .get(`https://api.tito.io/v3/${site}/${eventSlug}/activities`)
+        .then(({data}) => data.activities)
+    }
+
+    return axios
+      .all([getReleases(slug), getDiscountCodes(slug), getActivities(slug)])
+      .then(
+        axios.spread((releases, codes, activities) => {
+          const discounts = _.map(_.filter(codes, {state: 'current'}), code => {
+            return code.share_url
+          })
+          const activity = _.first(activities)
+
+          const event = _.reduce(
+            releases,
+            (acc, release) => {
+              return {
+                quantity: acc.quantity + release.quantity,
+                sold: acc.sold + release.tickets_count,
+                remaining:
+                  acc.remaining + (release.quantity - release.tickets_count),
+              }
+            },
+            {
+              quantity: 0,
+              sold: 0,
+              remaining: 0,
+            },
+          )
+          return {
+            ...event,
+            slug,
+            discounts,
+            title,
+            logo,
+            url,
+            date: start_date,
+            startTime: _.get(activity, 'start_at'),
+            endTime: _.get(activity, 'end_at'),
+          }
+        }),
+      )
   })
 
   return axios.all(events).then(axios.spread((...rest) => rest))

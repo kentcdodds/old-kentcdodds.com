@@ -10,10 +10,59 @@ import {fonts} from '../lib/typography'
 import {get} from 'lodash'
 import Header from '../components/workshops/header'
 import Register from '../components/workshops/register'
+import axios from 'axios'
+import find from 'lodash/find'
+
+function reducer(state, action) {
+  const {loading, error, events} = action
+  switch (action.type) {
+    case 'loading':
+      return {...state, loading}
+    case 'response':
+      return {...state, events}
+    case 'error':
+      return {...state, error}
+    default:
+      throw new Error()
+  }
+}
 
 export default function Workshop({data: {site, mdx}}) {
-  const {title, date, banner, noFooter} = mdx.fields
-  const {discount, event, soldOut, time, dealEndDate} = mdx.frontmatter
+  const {title, banner, noFooter} = mdx.fields
+  const {discount, dealEndDate} = mdx.frontmatter
+
+  const [state, dispatch] = React.useReducer(reducer, {
+    loading: true,
+    events: [],
+  })
+
+  const event = find(state.events, ws => {
+    return ws.title.toLowerCase() === title.toLowerCase()
+  })
+
+  React.useEffect(() => {
+    dispatch({type: 'loading', loading: true})
+
+    const fetchData = async () => {
+      try {
+        const result = await axios(
+          `${process.env.NETLIFY_FUNCTIONS_URL}/tickets`,
+        )
+        dispatch({type: 'loading', loading: false})
+        dispatch({
+          type: 'response',
+          events: get(result, 'data.events', []),
+        })
+      } catch (error) {
+        dispatch({type: 'loading', loading: false})
+        dispatch({type: 'error', error})
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  const soldOut = event ? event.quantity <= event.sold : false
 
   return (
     <Layout
@@ -46,11 +95,13 @@ export default function Workshop({data: {site, mdx}}) {
           <Header
             soldOut={soldOut}
             title={title}
-            date={date}
+            date={event && event.date}
             discount={discount}
             image={banner ? banner.childImageSharp.fluid : false}
             buttonText={soldOut ? 'Join the waiting list' : 'Secure your seat'}
-            time={time}
+            startTime={event && event.startTime}
+            endTime={event && event.endTime}
+            url={event && event.url}
           />
           <div
             css={css`

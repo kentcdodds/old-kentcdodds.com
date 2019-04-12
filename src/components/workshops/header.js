@@ -17,7 +17,9 @@ const Header = ({
   buttonText,
   image = {},
   discount = false,
-  time,
+  startTime,
+  endTime,
+  url,
 }) => {
   const Stripe = props => (
     <div
@@ -159,9 +161,10 @@ const Header = ({
           ) : (
             <div className="date">TBA</div>
           )}
-          {time ? (
+          {startTime ? (
             <time>
-              {time} <a href="https://www.thetimezoneconverter.com/">MT</a>
+              {new Date(startTime).toTimeString()}-
+              {new Date(endTime).toTimeString()}
             </time>
           ) : (
             <time>TBA</time>
@@ -170,18 +173,13 @@ const Header = ({
             <address>{location}</address>
           ) : (
             <address>
-              <a href="https://zoom.us/">Zoom</a>{' '}
-              <i>(you will receive a link via email)</i>
+              <span>Zoom</span> <i>(you will receive a link via email)</i>
             </address>
           )}
         </div>
         {children}
         {buttonText && date && (
-          <a
-            href="#register"
-            className="button"
-            aria-label="scroll to registration"
-          >
+          <a href={url} className="button" aria-label="scroll to registration">
             {soldOut && `Sold out -`} {buttonText}
           </a>
         )}

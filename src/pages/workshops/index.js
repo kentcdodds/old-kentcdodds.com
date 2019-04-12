@@ -177,31 +177,5 @@ export const remoteWorkshopsQuery = graphql`
       }
       totalCount
     }
-
-    scheduled: allMdx(
-      filter: {fields: {isScheduled: {eq: true}}}
-      sort: {order: ASC, fields: [frontmatter___date]}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            discount
-            description
-            tech
-            slug
-            spotsRemaining
-            soldOut
-            time
-          }
-          fields {
-            slug
-            isScheduled
-          }
-        }
-      }
-    }
   }
 `
