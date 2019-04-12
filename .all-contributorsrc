@@ -283,6 +283,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ChristopherBiscardi",
+      "name": "Christopher Biscardi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/551247?v=4",
+      "profile": "http://www.christopherbiscardi.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
