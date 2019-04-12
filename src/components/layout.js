@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import {graphql, StaticQuery} from 'gatsby'
-import {MDXProvider} from '@mdx-js/tag'
+import {MDXProvider} from '@mdx-js/react'
 import {Global, css} from '@emotion/core'
 import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
