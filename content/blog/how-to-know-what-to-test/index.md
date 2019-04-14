@@ -4,6 +4,7 @@ title: 'How to know what to test'
 date: '2019-04-13'
 author: 'Kent C. Dodds'
 description: '_Practical advice to help you determine what to test._'
+published: false
 categories:
   - 'testing'
 keywords:
@@ -12,6 +13,8 @@ keywords:
   - 'confidence'
 banner: './images/banner.jpg'
 ---
+
+<!-- TODO: make the example start with filter instead -->
 
 <!-- TODO: link to some of the content I refer to here -->
 
