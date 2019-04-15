@@ -176,9 +176,9 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
               <p>Learn more with Kent C. Dodds:</p>
               <ul>
                 <li>
-                  <a href="/workshops/hooks">Learn React Hooks</a>: Join me in this remote
-                  workshop. I'll teach you the ins and outs of React Hooks. Tickets are
-                  limited! 🎟
+                  <a href="https://kentcdodds.com/workshops/hooks">Learn React Hooks</a>:
+                  Join me in this remote workshop. I'll teach you the ins and outs of
+                  React Hooks. Tickets are limited! 🎟
                 </li>
                 <li>
                   <a href="https://testingjavascript.com">TestingJavaScript.com</a>: Jump on
