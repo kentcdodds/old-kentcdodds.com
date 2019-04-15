@@ -160,7 +160,7 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
             <div style="display: flex;">
               <div style="padding-right: 20px;">
                 <img
-                  src="/static/images/small-circular-kent.png"
+                  src="https://kentcdodds.com/images/small-circular-kent.png"
                   alt="Kent C. Dodds"
                   style="max-width: 80px; border-radius: 50%;"
                 />
