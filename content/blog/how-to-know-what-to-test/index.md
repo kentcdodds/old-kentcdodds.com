@@ -28,11 +28,11 @@ good to write a blog post about it. So here you go!
 
 ## Remembering why we test
 
-We write tests to be confident that our application will work when the user uses
-them. Some people write tests to enhance their workflow as well and that's
-great, but I'm ultimately interested in confidence. That being the case, what we
-test should map directly to enhancing our confidence. Here's the key point I
-want you to consider when writing tests:
+**We write tests to be confident that our application will work when the user
+uses them.** Some people write tests to enhance their workflow as well and
+that's great, but I'm ultimately interested in confidence. That being the case,
+what we test should map directly to enhancing our confidence. Here's the key
+point I want you to consider when writing tests:
 
 > **Think less about the code you are testing and more about the use cases that
 > code supports.**
