@@ -205,7 +205,14 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
           date: edge.node.fields.date,
           url,
           guid: url,
-          custom_elements: [{'content:encoded': html + postText}],
+          custom_elements: [
+            {
+              'content:encoded': `<div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
+                ${html}
+                ${postText}
+              </div>`,
+            },
+          ],
         }
       })
     },
