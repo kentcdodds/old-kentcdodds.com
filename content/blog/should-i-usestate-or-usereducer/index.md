@@ -176,8 +176,37 @@ So who cares? Do what's faster.
 **If your one element of your state relies on the value of another element of
 your state, then it's almost always best to use `useReducer`**
 
-Please ping me on twitter later to update this and explain my reasoning a bit
-more. At the time I'm writing this I need to go to bed. I'll update this later.
+For example, imagine you have a tic-tac-toe game you're writing. You have one
+element of state called `squares` which is just an array of all the squares and
+their value:
+
+```
+[
+  ' ', 'X', 'O',
+  'X', 'O', 'X',
+  ' ', ' ', 'X'
+]
+```
+
+and another called `xIsNext` which maintains the who's turn it is. When a user
+clicks on a square, how does your code know whether the `squares` array should
+update to `X` or `O`? It determines this based on the `xIsNext` state. Because
+of this, it's easier to use a reducer because the reducer function can accept
+all of the current state and use that current state (which includes `xIsNext`)
+to determine the new state.
+
+The benefits here are _mostly_ just code aesthetic, but if you start adding
+async behavior here, then the case for `useReducer` is even more strong. With
+our tic-tac-toe game, you can reference the current value of `xIsNext` in the
+closure, but if you are updating the `squares` state asynchronously, then you
+could be working with stale values of state which may or may not be what you
+want. Using a reducer completely removes this potential issue though, which is
+why I say it's basically always better to use a reducer if your state elements
+depend on one another when they're updated.
+
+Here's an example of tic-tac-toe with `useReducer`:
+
+https://codesandbox.io/s/r1m6pz58mq
 
 ## Conclusion
 
