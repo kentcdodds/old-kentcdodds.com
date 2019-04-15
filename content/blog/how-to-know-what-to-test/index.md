@@ -4,7 +4,6 @@ title: 'How to know what to test'
 date: '2019-04-13'
 author: 'Kent C. Dodds'
 description: '_Practical advice to help you determine what to test._'
-published: false
 categories:
   - 'testing'
 keywords:
@@ -12,11 +11,9 @@ keywords:
   - 'javascript'
   - 'confidence'
 banner: './images/banner.jpg'
+bannerCredit:
+  'Photo by [Craig  Whitehead](https://unsplash.com/photos/aJfy0WtHtkc)'
 ---
-
-<!-- TODO: make the example start with filter instead -->
-
-<!-- TODO: link to some of the content I refer to here -->
 
 Knowing how to test is great and important. I've created a LOT of content that
 teaches people the fundamentals of testing, how to configure tools, how to write
@@ -176,7 +173,8 @@ Sometimes, our code coverage report indicates 100% code coverage, but not 100%
 use case coverage. This is why sometimes I try to think of all the use cases
 before I even start writing the tests.
 
-For example, if we rewrite the `arrayify` method like this:
+For example, let's imagine that the `arrayify` function had been implemented
+like this instead:
 
 ```javascript
 function arrayify(maybeArray) {
@@ -188,13 +186,13 @@ function arrayify(maybeArray) {
 }
 ```
 
-Then we can get 100% coverage with the following two use cases:
+With that, we can get 100% coverage with the following two use cases:
 
 - it returns an array if given an array
 - it returns an array with the given argument if it's not an array
 
-But if we could look at a use case coverage report, it would indicate that we're
-missing this use case:
+But if we could look at a _use case_ coverage report, it would indicate that
+we're missing this use case:
 
 - it returns an empty array if given a falsy value
 
@@ -232,15 +230,18 @@ two users. Each of these could change the DOM, make HTTP requests, call a
 callback prop, or perform any other number of _observable_ side effects which
 would be useful to test:
 
-<!-- TODO: link `fireEvent` and the subscription stuff -->
-
-- User interactions (using `fireEvent` from react-testing-library): Is the end
-  user able to interact with the elements that the component renders?
-- Changing props (using `rerender` from react-testing-library): What happens
-  when the developer user re-renders your component with new props?
-- Context changes (using `rerender` from react-testing-library): What happens
-  when the developer user changes context resulting in your component
-  re-rendering?
+- User interactions (using
+  [`fireEvent`](https://testing-library.com/docs/dom-testing-library/api-events)
+  from react-testing-library): Is the end user able to interact with the
+  elements that the component renders?
+- Changing props (using
+  [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
+  from react-testing-library): What happens when the developer user re-renders
+  your component with new props?
+- Context changes (using
+  [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
+  from react-testing-library): What happens when the developer user changes
+  context resulting in your component re-rendering?
 - Subscription changes: What happens when an event emitter the component
   subscribes to changes? (Like firebase, a redux store, a router, a media query,
   or DOM-based subscriptions like online status)
@@ -284,10 +285,15 @@ are using. From here it just becomes a matter of adding tests over time. Just
 don't bother with targeting a 100% code coverage report, it's not worth the
 time.
 
-<!-- TODO: link to Aaron Abramov's talk -->
+> For more on establishing a culture of testing and reasonable code coverage
+> targets, I suggest watching [Aaron Abramov's](https://twitter.com/aarondjents)
+> talk at [AssertJS 2018](https://2018.assertjs.com/):
+> [Establishing testing patterns with software design principles](https://www.youtube.com/watch?v=_pnW-JjmyXE&list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
 
-Read more about the distinction between the different types of tests here:
-[Static vs Unit vs Integration vs E2E Testing for Frontend Apps](/blog/unit-vs-integration-vs-e2e-tests)
+<!-- force a break between these comments... -->
+
+> Read more about the distinction between the different types of tests here:
+> [Static vs Unit vs Integration vs E2E Testing for Frontend Apps](/blog/unit-vs-integration-vs-e2e-tests)
 
 ## Conclusion
 
