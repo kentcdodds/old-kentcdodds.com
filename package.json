@@ -29,7 +29,6 @@
     "gatsby-plugin-google-analytics": "^2.0.16",
     "gatsby-plugin-manifest": "^2.0.22",
     "gatsby-plugin-meta-redirect": "^1.1.1",
-    "gatsby-plugin-netlify-cache": "^1.1.0",
     "gatsby-plugin-offline": "^2.0.23",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-sharp": "^2.0.25",
