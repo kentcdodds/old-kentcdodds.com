@@ -7,9 +7,10 @@ import Layout from 'components/layout'
 import Link from 'components/link'
 import Container from 'components/container'
 import Hero from 'components/big-hero'
-import {rhythm, fonts} from '../lib/typography'
+import TestingCta from 'components/testing-cta'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
+import {rhythm, fonts} from '../lib/typography'
 
 import workshopsImg from '../images/workshops.svg'
 import talksImg from '../images/talks.svg'
@@ -174,6 +175,9 @@ export default function Index({data: {allMdx}}) {
           View all articles
         </Link>
       </Container>
+
+      <TestingCta />
+
       <Container>
         <Card
           big

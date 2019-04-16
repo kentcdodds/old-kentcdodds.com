@@ -9,6 +9,7 @@ import Layout from 'components/layout'
 import Share from 'components/share'
 import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
 import BlogPostFooter from 'components/blog-post-footer'
+import TestingCta from 'components/testing-cta'
 import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
@@ -26,6 +27,7 @@ export default function Post({data: {site, mdx}}) {
     banner,
     bannerCredit,
     noFooter,
+    keywords,
   } = mdx.fields
 
   const blogPostUrl = `${config.siteUrl}${slug}`
@@ -138,6 +140,7 @@ export default function Post({data: {site, mdx}}) {
           twitterHandle={config.twitterHandle}
         />
       </Container>
+      {keywords.includes('testing') && <TestingCta />}
       <Container>
         <BlogPostFooter />
       </Container>
