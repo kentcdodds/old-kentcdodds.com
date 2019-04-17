@@ -32,7 +32,6 @@ function BlogFooter() {
         {`
 Learn more with Kent C. Dodds:
 
-- [Learn React Hooks](/workshops/hooks): Join me in this remote workshop. I'll teach you the ins and outs of React Hooks. Tickets are limited! 🎟
 - [TestingJavaScript.com](https://testingjavascript.com): Jump on this self-paced workshop and learn the smart, efficient way to test any JavaScript application. 🏆
       `.trim()}
       </Markdown>
