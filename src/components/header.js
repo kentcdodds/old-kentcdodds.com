@@ -22,7 +22,6 @@ function HeaderLink({headerColor, ...props}) {
             headerColor === theme.colors.white
               ? 'rgba(40, 28, 77, 0.3)'
               : lighten(0.4, theme.brand.primary),
-          //background: lighten(0.4, theme.brand.primary),
           color:
             headerColor === theme.colors.white
               ? 'white'
