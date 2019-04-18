@@ -56,38 +56,10 @@ async function generateBlogPost() {
   ])
   const slug = slugify(title)
   const destination = fromRoot('content/blog', slug)
-  const imagesDestination = path.join(destination, 'images')
-
-  await opn(`https://unsplash.com/search/photos/${encodeURIComponent(title)}`, {
-    wait: false,
-  })
-
-  const {unsplashPhotoId} = await inquirer.prompt([
-    {
-      type: 'input',
-      name: 'unsplashPhotoId',
-      message: `What's the Unsplash Photo ID for the banner for this post?`,
-    },
-  ])
   mkdirp.sync(destination)
-  mkdirp.sync(imagesDestination)
 
-  const source = tinify
-    .fromUrl(
-      `https://unsplash.com/photos/${unsplashPhotoId}/download?force=true`,
-    )
-    .resize({
-      method: 'scale',
-      width: 2070,
-    })
+  const bannerCredit = await getBannerPhoto(title, destination)
 
-  const spinner = ora('compressing the image with tinypng.com').start()
-  await util
-    .promisify(source.toFile)
-    .call(source, path.join(imagesDestination, 'banner.jpg'))
-  spinner.succeed('compressed the image with tinypng.com')
-
-  const bannerCredit = await getPhotoCredit(unsplashPhotoId)
   const yaml = jsToYaml.stringify(
     removeEmpty({
       slug,
@@ -108,6 +80,41 @@ async function generateBlogPost() {
   fs.writeFileSync(path.join(destination, 'index.md'), markdown)
 
   console.log(`${destination.replace(process.cwd(), '')} is all ready for you`)
+}
+
+async function getBannerPhoto(title, destination) {
+  const imagesDestination = path.join(destination, 'images')
+
+  await opn(`https://unsplash.com/search/photos/${encodeURIComponent(title)}`, {
+    wait: false,
+  })
+
+  const {unsplashPhotoId} = await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'unsplashPhotoId',
+      message: `What's the Unsplash Photo ID for the banner for this post?`,
+    },
+  ])
+  mkdirp.sync(imagesDestination)
+
+  const source = tinify
+    .fromUrl(
+      `https://unsplash.com/photos/${unsplashPhotoId}/download?force=true`,
+    )
+    .resize({
+      method: 'scale',
+      width: 2070,
+    })
+
+  const spinner = ora('compressing the image with tinypng.com').start()
+  await util
+    .promisify(source.toFile)
+    .call(source, path.join(imagesDestination, 'banner.jpg'))
+  spinner.succeed('compressed the image with tinypng.com')
+
+  const bannerCredit = await getPhotoCredit(unsplashPhotoId)
+  return bannerCredit
 }
 
 async function getPhotoCredit(unsplashPhotoId) {

@@ -8,6 +8,7 @@ import kent from '../images/kent.png'
 import MobileNav from './mobile-nav'
 import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
+import {lighten} from 'polished'
 
 function HeaderLink({headerColor, ...props}) {
   return (
@@ -17,7 +18,10 @@ function HeaderLink({headerColor, ...props}) {
         textDecoration: 'none',
         color: headerColor ? headerColor : theme.colors.body_color,
         '&:hover,&:focus': {
-          background: 'rgba(40, 28, 77, 0.2)',
+          background:
+            headerColor === theme.colors.white
+              ? 'rgba(40, 28, 77, 0.3)'
+              : lighten(0.4, theme.brand.primary),
           color:
             headerColor === theme.colors.white
               ? 'white'
