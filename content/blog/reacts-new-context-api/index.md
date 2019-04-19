@@ -7,8 +7,8 @@ description: >-
   _It's way more ergonomic, it's no longer "experimental," and it's now a
   first-class API! OH, AND IT USES A RENDER PROP!_
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [JJ Ying](https://unsplash.com/photos/7JX0-bfiuxQ) on

@@ -5,8 +5,8 @@ date: '2019-03-04'
 author: Kent C. Dodds
 description: _What it is and how to add it to your app._
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   Photo by [Martin Sanchez](https://unsplash.com/photos/PgQgGuCGZNw) on

@@ -7,9 +7,8 @@ description: >-
   _There are so many reasons to open source your code. But knowing how to do it
   can be a real challenge._
 keywords:
-  - JavaScript
-  - Open Source
-  - Library
+  - javascript
+  - open source
 banner: ./images/banner.jpg
 ---
 
@@ -29,7 +28,7 @@ utility, we welcome your contributions.
 
 #### Getting started...
 
-I've created a free series on Egghead.io that's intended to help you open source
+I've created a free series on egghead.io that's intended to help you open source
 your stuff. I start at the very very basics and get you up to speed with the
 latest and greatest practices for developing open source libraries. The series
 is still being developed and there are a lot of lessons in the pipeline waiting
@@ -53,7 +52,7 @@ series:
 - And more!
 
 Not all libraries need all of this, but many would benefit from having this. If
-you're curious, check out the (free) lesson series on Egghead.io:
+you're curious, check out the (free) lesson series on egghead.io:
 [How to Write a JavaScript Library](https://egghead.io/series/how-to-write-an-open-source-javascript-library).
 Start writing more open source JavaScript today! 👍
 

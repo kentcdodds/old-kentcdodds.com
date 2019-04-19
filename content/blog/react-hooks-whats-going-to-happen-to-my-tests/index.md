@@ -5,9 +5,9 @@ date: '2018-12-24'
 author: Kent C. Dodds
 description: _How can we prepare our tests for React's new hooks feature?_
 keywords:
-  - JavaScript
-  - React
-  - Testing
+  - javascript
+  - react
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mat Reding](https://unsplash.com/photos/OFVMOjjjIic) on

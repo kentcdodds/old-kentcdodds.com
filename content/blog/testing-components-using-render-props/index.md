@@ -7,9 +7,9 @@ description: >-
   _Let's look at how we can write tests for React components that use render
   props!_
 keywords:
-  - JavaScript
-  - Testing
-  - React
+  - javascript
+  - testing
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Scott Walsh](https://unsplash.com/photos/CQl3Y5bV6FA) on
@@ -18,9 +18,9 @@ bannerCredit:
 
 With the release of my
 [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns)
-course on [Egghead.io](http://egghead.io/), a lot of people have been asking me
+course on [egghead.io](http://egghead.io/), a lot of people have been asking me
 about render props. Specifically with regards to testing. Maybe eventually I'll
-create a course on [Egghead.io](http://egghead.io/) about testing react
+create a course on [egghead.io](http://egghead.io/) about testing react
 components. Until then, I've decided to write this about some approaches that
 could help you when testing a component that renders a render prop component :)
 

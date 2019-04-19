@@ -7,11 +7,11 @@ description: >-
   _React’s upcoming useState hook relies on array destructuring, let’s dive in
   and see how that feature works._
 keywords:
-  - JavaScript
-  - React
-  - Babel
+  - javascript
+  - react
+  - babel
   - Destructuring
-  - React Hooks
+  - react hooks
 banner: ./images/banner.png
 bannerCredit:
   I made this all by myself... Well... Except for [the react

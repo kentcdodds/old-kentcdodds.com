@@ -7,7 +7,7 @@ description: >-
   _Let's make a component that supports Render Props, Component Injection,
   Compound Components, the Provider Pattern, and Higher Order..._
 keywords:
-  - React
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [rawpixel.com](https://unsplash.com/photos/AWX44zfMV-M) on

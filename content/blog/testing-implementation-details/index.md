@@ -7,9 +7,9 @@ description: >-
   _Testing implementation details is a recipe for disaster. Why is that? And
   what does it even mean?_
 keywords:
-  - JavaScript
-  - Testing
-  - React
+  - javascript
+  - testing
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [rawpixel](https://unsplash.com/photos/1Z15APktAiY) on
@@ -362,7 +362,7 @@ ever}
 
 **Things to not miss**:
 
-- [React Hooks and Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) — I
+- [React Hooks and Suspense Playlist on egghead.io](http://kcd.im/hooks-and-suspense) — I
   made a free playlist of ~35 minutes worth of videos to demo React Hooks and
   Suspense. Includes two videos about testing hooks!
 - [WPACK.IO](https://wpack.io/) — *wpack.io is a fine-tuned webpack/browser-sync

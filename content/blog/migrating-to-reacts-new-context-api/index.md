@@ -5,7 +5,7 @@ date: '2018-04-23'
 author: Kent C. Dodds
 description: _Let's compare the before/after of React's new context API._
 keywords:
-  - React
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Marion Michele](https://unsplash.com/photos/z_eFLP9aS6s) on
@@ -18,7 +18,7 @@ came an official context API. You can learn more about the why and how behind
 this API from my previous blog post:
 ["React's ⚛️ new Context API"](https://kentcdodds.com/blog/reacts-new-context-api).
 Because of this significant change, I'm making an update to
-[my advanced component patterns course on Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)
+[my advanced component patterns course on egghead.io](https://egghead.io/courses/advanced-react-component-patterns)
 to use the new API rather than the old one. As I've been working on updating the
 course, I've been migrating from the old context API to the new one and I
 thought I'd show you some of those changes!

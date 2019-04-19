@@ -6,11 +6,11 @@ author: Kent C. Dodds
 description:
   _Some approaches to solving one of the most complex problems in software._
 keywords:
-  - React
+  - react
   - Application Development
-  - JavaScript
+  - javascript
   - State
-  - Software Development
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Stefan Kunze](https://unsplash.com/photos/BiyVuXGiF7s) on

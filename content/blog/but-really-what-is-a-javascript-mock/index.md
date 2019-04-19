@@ -7,9 +7,9 @@ description: >-
   _Let's take a step back and understand what mocks are and how to use them to
   facilitate testing in JavaScript._
 keywords:
-  - JavaScript
-  - Testing
-  - Mocking
+  - javascript
+  - testing
+  - mocking
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Dmitri Popov](https://unsplash.com/photos/cnOlhGQY-SI) on

@@ -7,9 +7,9 @@ description:
   '_A styled-components 💅 and jsxstyle inspired solution for styling ⚛️ React
   Components from PayPal_'
 keywords:
-  - React
-  - JavaScript
-  - Css In Js
+  - react
+  - javascript
+  - css
 banner: ./images/banner.jpg
 bannerCredit: >-
   The glamorous logo, shamelessly inspired (with permission) by

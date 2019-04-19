@@ -5,8 +5,8 @@ date: '2018-09-03'
 author: Kent C. Dodds
 description: _Some specific things you can do as a conference attendee_
 keywords:
-  - Conference
-  - Software Development
+  - career
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [rawpixel](https://unsplash.com/photos/75AhQoP-DW0) on

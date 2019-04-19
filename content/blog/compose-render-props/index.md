@@ -5,9 +5,9 @@ date: '2018-04-09'
 author: Kent C. Dodds
 description: _One of the reasons I'm so excited about render props_
 keywords:
-  - JavaScript
-  - React
-  - Render Props
+  - javascript
+  - react
+  - render props
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [rawpixel.com](https://unsplash.com/photos/noorSVMhuPU) on
@@ -102,7 +102,7 @@ I hope this is helpful! Good luck!
   render prop API, read this.
 - [Answers to common questions about render props](https://blog.kentcdodds.com/answers-to-common-questions-about-render-props-a9f84bb12d5d) — My
   blog post that is what the title says it is...
-- [Egghead.io](https://egghead.io/courses/advanced-react-component-patterns) — My
+- [egghead.io](https://egghead.io/courses/advanced-react-component-patterns) — My
   Advanced React Component Patterns course.
 - [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/) — I'm
   giving my Advanced Component Patterns workshop in person in Minniapolis in

@@ -7,9 +7,9 @@ description: >-
   _Why your tests should be completely isolated from one another and how to do
   that._
 keywords:
-  - JavaScript
-  - React
-  - Testing
+  - javascript
+  - react
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mika Matin](https://unsplash.com/photos/MMylZHPsO2I) on

@@ -7,8 +7,8 @@ description: >-
   _Some common struggles people have with testing, and things you can do to
   improve._
 keywords:
-  - Testing
-  - JavaScript
+  - testing
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Jonny Caspari](https://unsplash.com/photos/DVzt7cvRKRo) on

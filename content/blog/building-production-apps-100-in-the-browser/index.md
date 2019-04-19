@@ -7,7 +7,7 @@ description: >-
   _How I built & deployed 2 production apps without downloading any source
   code._
 keywords:
-  - React
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [BRUNO CERVERA](https://unsplash.com/photos/azsk_6IMT3I) on

@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description:
   _How I tricked React into rendering a function (not call it... render it)_
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
   - Iterators
   - ES6
 banner: ./images/banner.jpg

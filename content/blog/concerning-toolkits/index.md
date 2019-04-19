@@ -7,8 +7,7 @@ description: >-
   _The merits and use cases of consolidating tools into one "zero config"
   toolkit._
 keywords:
-  - JavaScript
-  - Tools
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [elizabeth lies](https://unsplash.com/photos/LUP8Tnwy7Ro) on

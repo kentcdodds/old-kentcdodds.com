@@ -7,7 +7,7 @@ description: >-
   _An overview of what I've accomplished in 2018 and a bit about my goals for
   2019._
 keywords:
-  - JavaScript
+  - javascript
   - 2018 in Review
 banner: ./images/banner.jpg
 bannerCredit:

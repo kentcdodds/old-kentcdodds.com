@@ -4,7 +4,7 @@ title: The Beginner's Guide to ReactJS
 date: '2017-12-18'
 author: Kent C. Dodds
 description: >-
-  _The course is free forever on Egghead.io! Let's talk about how it teaches
+  _The course is free forever on egghead.io! Let's talk about how it teaches
   even developers experienced with React ⚛️_
 banner: ./images/banner.jpg
 bannerCredit:
@@ -13,7 +13,7 @@ bannerCredit:
 ---
 
 Yesterday my two new ReactJS courses were published on
-[Egghead.io](http://egghead.io/).
+[egghead.io](http://egghead.io/).
 [Read more about them here](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db).
 I had high hopes for this release, but the response has been way more positive
 than I had expected. The announcement post got in
@@ -75,7 +75,7 @@ will be helpful to you as well). Good luck!
   developers in 4 months").
 - [Learn React Fundamentals and Advanced Patterns](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db) — I'm
   just pretty excited about the course release!
-- [Egghead.io Sale](https://egghead.io/gifts) — Save 30% on a year subscription!
+- [egghead.io Sale](https://egghead.io/gifts) — Save 30% on a year subscription!
 - [`ReactPrimer`](https://github.com/ReactPrimer/ReactPrimer) - React component
   prototyping tool that generates fully connected class component code.
 - [Partial Application & Lambda Parameter Syntax for JavaScript](https://medium.com/@citycide/partial-application-lambda-parameters-for-js-aa16f4d94df4) — Awesome

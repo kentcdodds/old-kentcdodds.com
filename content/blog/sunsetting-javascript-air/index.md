@@ -5,10 +5,10 @@ date: '2016-10-28'
 author: Kent C. Dodds
 description: "_for now... \U0001F307_"
 keywords:
-  - JavaScript
-  - Open Source
+  - javascript
+  - open source
   - Podcast
-  - Web Development
+  - web development
 banner: ./images/banner.jpg
 bannerCredit: '[https://javascriptair.com](https://javascriptair.com)'
 ---
@@ -44,7 +44,7 @@ working on a project I am really excited about. Then, I realized that I had to
 do some planning for the upcoming JavaScript Air show. That was the moment I
 realized that there are some other things that I'm more interested in doing with
 my time. This isn't an isolated incident. I've actually been feeling this way
-for months. I've been neglecting my contributing to Open Source, Egghead.io,
+for months. I've been neglecting my contributing to Open Source, egghead.io,
 etc. because I had to do the leg work of preparing for and producing JavaScript
 Air shows.
 

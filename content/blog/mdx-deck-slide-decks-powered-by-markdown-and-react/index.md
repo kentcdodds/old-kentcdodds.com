@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description: >-
   _Why it's awesome, what it is, how it works, and how to use mdx-deck._
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Ash Edmonds](https://unsplash.com/photos/Koxa-GX_5zs) on

@@ -7,7 +7,8 @@ description: >-
   _Some tips of things that I've done that have helped me get where I want to be
   in the industry._
 keywords:
-  - JavaScript
+  - javascript
+  - career
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Geoff Greenwood](https://unsplash.com/photos/Dj5evF5JCjI) on

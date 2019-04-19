@@ -5,10 +5,10 @@ date: '2016-11-14'
 author: Kent C. Dodds
 description: _on the P2P team at PayPal_
 keywords:
-  - JavaScript
-  - React
-  - Jest
-  - Testing
+  - javascript
+  - react
+  - jest
+  - testing
   - Nodejs
 banner: ./images/banner.jpg
 bannerCredit: >-
@@ -118,7 +118,7 @@ I love it 💚 .
 
 As is the case for me, when I get excited about new tech, I really like to
 share! So I created [a bunch of videos](http://kcd.im/egghead-jest) for
-Egghead.io about it, had a
+egghead.io about it, had a
 [tech chat](https://github.com/kentcdodds/ama/issues/125) with
 [Christoph Pojer](https://medium.com/u/9ea60eb6fc7c)
 [on YouTube](https://www.youtube.com/watch?v=i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)

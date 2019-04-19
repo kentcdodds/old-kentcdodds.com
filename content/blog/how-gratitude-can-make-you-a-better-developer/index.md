@@ -5,7 +5,7 @@ date: '2018-12-03'
 author: Kent C. Dodds
 description: _What does gratitude have to do with software development?_
 keywords:
-  - Self Improvement
+  - career
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Sebastián León Prado](https://unsplash.com/photos/dBiIcdxMWfE) on

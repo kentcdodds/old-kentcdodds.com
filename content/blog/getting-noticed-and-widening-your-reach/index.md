@@ -6,9 +6,9 @@ author: Kent C. Dodds
 description:
   _Some things you can do to gain a wider audience and get your stuff noticed_
 keywords:
-  - Open Source
-  - Programming
-  - Career Advice
+  - open source
+  - programming
+  - career
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Tadeusz Lakota](https://unsplash.com/photos/i1Mf6EkLf9E) on
@@ -184,7 +184,7 @@ value creating experiences and make them public.**This is where my
 my reach.
 
 Just over a year after I started with [egghead.io](http://egghead.io/) (in
-September 2015), after I had established myself a bit with Egghead, I was
+September 2015), after I had established myself a bit with egghead, I was
 listening to episode 178 of [JavaScript Jabber](https://devchat.tv/js-jabber):
 [Tech Education and The Business of Running Front End Masters with Marc Grabanski](https://devchat.tv/js-jabber/178-jsj-tech-education-and-the-business-of-running-front-end-masters-with-marc-grabanski/).
 I had met Marc at my first MidwestJS where we were both speakers and thought he

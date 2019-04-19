@@ -8,8 +8,8 @@ description: >-
   important step_
 keywords:
   - Tdd
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Jelleke Vanooteghem](https://unsplash.com/photos/kabtmcdcAbk) on

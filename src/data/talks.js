@@ -122,7 +122,7 @@ export default [
     tags: ['react', 'testing'],
     deliveries: [
       {
-        event: 'Egghead.io Webinar',
+        event: 'egghead.io Webinar',
         date: '2019-02-27',
         recording:
           'https://egghead.io/lessons/react-understanding-how-react-testing-library-works-with-kent-c-dodds',
@@ -905,7 +905,7 @@ export default [
     description: `
         Angular 2 is built for huge web applications that stand the test of time. To accomplish this, Angular 2 utilizes
         the latest and greatest web technologies like ES6 modules/classes and Web Components. Come get a preview of what
-        this looks like with Egghead.io instructor Kent C. Dodds as he live codes an application using the pre-release
+        this looks like with egghead.io instructor Kent C. Dodds as he live codes an application using the pre-release
         alpha version of Angular 2.
       `,
   },

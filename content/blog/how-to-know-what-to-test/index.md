@@ -7,9 +7,8 @@ description: '_Practical advice to help you determine what to test._'
 categories:
   - 'testing'
 keywords:
-  - 'testing'
-  - 'javascript'
-  - 'confidence'
+  - testing
+  - javascript
 banner: './images/banner.jpg'
 bannerCredit:
   'Photo by [Craig  Whitehead](https://unsplash.com/photos/aJfy0WtHtkc)'

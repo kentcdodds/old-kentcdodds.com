@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description: _for libraries..._
 keywords:
   - Git
-  - Github
+  - github
 banner: ./images/banner.png
 bannerCredit: React.js 0.13.3 minified
 ---
@@ -138,7 +138,7 @@ itself).
 ### Conclusion
 
 There are a lot of tools to help you with the development of your open source
-libraries. If you’re interested, I have a series on Egghead.io that takes you
+libraries. If you’re interested, I have a series on egghead.io that takes you
 from the very beginning to building out a great library. I recommend you give it
 a look:
 [How to Write an Open Source JavaScript Library](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-automating-releases-with-semantic-release).

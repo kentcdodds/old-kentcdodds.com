@@ -7,16 +7,15 @@ description: >-
   _Render props are awesome, put it together with prop getters and you have an
   awesome combination to give users of your React components..._
 keywords:
-  - JavaScript
-  - React
-  - Components
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Annie Spratt](https://unsplash.com/photos/rx1iJ59jRyU) on
   [Unsplash](https://unsplash.com)'
 ---
 
-> If you're an Egghead.io subscriber, you can also learn about this pattern with
+> If you're an egghead.io subscriber, you can also learn about this pattern with
 > these two lessons:
 > [Use Prop Collections with Render Props](https://egghead.io/lessons/react-use-prop-collections-with-render-props)
 > and

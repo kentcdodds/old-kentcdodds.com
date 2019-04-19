@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description:
   _How to make your modules more generically useful and easier to test._
 keywords:
-  - JavaScript
-  - Open Source
+  - javascript
+  - open source
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [NASA](https://unsplash.com/photos/rTZW4f02zY8) on

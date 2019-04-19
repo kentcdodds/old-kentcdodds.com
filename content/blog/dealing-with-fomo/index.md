@@ -7,7 +7,7 @@ description: >-
   _What is "Fear Of Missing Out" and how to deal with this natural unhealthy
   tendency._
 keywords:
-  - Software Development
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [frank mckenna](https://unsplash.com/photos/iVVBVb2RqLc) on

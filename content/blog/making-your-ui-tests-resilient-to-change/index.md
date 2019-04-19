@@ -7,8 +7,8 @@ description: >-
   _User interface tests are famously finicky and prone to breakage. Let's talk
   about how to improve this._
 keywords:
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
   - Ui Testing
   - Unit Testing
   - Integration Testing

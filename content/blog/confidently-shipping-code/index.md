@@ -5,8 +5,8 @@ date: '2018-10-08'
 author: Kent C. Dodds
 description: _Why I care about testing_
 keywords:
-  - Testing
-  - JavaScript
+  - testing
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Vidar Nordli-Mathisen](https://unsplash.com/photos/xgP0GNl9Gzg) on

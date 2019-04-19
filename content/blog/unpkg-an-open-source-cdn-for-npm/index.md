@@ -7,7 +7,7 @@ description: >-
   _Let's learn how unpkg the service and the open source project can improve
   performance for your company's apps._
 keywords:
-  - JavaScript
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [David Marcu](https://unsplash.com/photos/TQVu4pnjTbc) on

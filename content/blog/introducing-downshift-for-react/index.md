@@ -7,11 +7,10 @@ description:
   '_downshift 🏎 is the primitive you need to build simple, flexible, WAI-ARIA
   compliant React..._'
 keywords:
-  - JavaScript
-  - React
-  - Autocomplete
-  - Dropdown
-  - Preact
+  - javascript
+  - react
+  - preact
+  - open source
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Isaac Jenks](https://unsplash.com/photos/j7lTi6MtYgk) on

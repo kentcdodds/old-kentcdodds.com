@@ -7,9 +7,9 @@ description: >-
   _Let's take a step back and understand automated testing of JavaScript from
   square one._
 keywords:
-  - JavaScript
-  - Testing
-  - Software Development
+  - javascript
+  - testing
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Joshua Earle](https://unsplash.com/photos/xEh4hvxRKXM) on

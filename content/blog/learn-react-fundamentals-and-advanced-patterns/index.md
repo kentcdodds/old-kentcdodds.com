@@ -5,18 +5,18 @@ date: '2017-12-04'
 author: Kent C. Dodds
 description: >-
   _Two and a half hours of new beginner (free) and advanced React material are
-  now available Egghead.io!_
+  now available egghead.io!_
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Artwork for Egghead.io is created by the amazing
+  'Artwork for egghead.io is created by the amazing
   [Maggie_Appleton](https://twitter.com/Mappletons)'
 ---
 
 I couldn't be more excited to introduce you to what I can call my best work to
-date: Two new video courses available now on [Egghead.io](http://egghead.io/)!
+date: Two new video courses available now on [egghead.io](http://egghead.io/)!
 The beginner material is **free forever** and the advanced stuff is worth a
 subscription so I encourage you to give them a look!
 
@@ -141,16 +141,16 @@ simpler, and more fun to build, use, and maintain.
 ### Free! 🤑
 
 [The Beginner's course](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
-is joining the ever growing [Egghead.io](http://egghead.io/)
+is joining the ever growing [egghead.io](http://egghead.io/)
 "[Community Resources](https://egghead.io/community/resources)" which means
-**_it will be free forever_**! I'm totally amazed by Egghead and all the free
-stuff they sponsor. Thank you Egghead!!
+**_it will be free forever_**! I'm totally amazed by egghead and all the free
+stuff they sponsor. Thank you egghead!!
 
 [The Advanced course](https://egghead.io/courses/advanced-react-component-patterns)
-was free for a week but is now used to fund Egghead's community resources by
+was free for a week but is now used to fund egghead's community resources by
 converting to subscriber-only content. Now's the best time to get a pro account.
-Egghead very rarely does sales, but it's running one right now! For a limited
-time, you can get an Egghead subscription for 30% off. **See**
+egghead very rarely does sales, but it's running one right now! For a limited
+time, you can get an egghead subscription for 30% off. **See**
 [**egghead.io/gifts**](https://egghead.io/gifts) **for more information.**
 
 ### Reactions
@@ -189,7 +189,7 @@ I'm really excited by all these positive responses! Thanks everyone!
 I can't tell you how excited I am for you to watch these things! If you learn
 anything or enjoy the courses, I would ask you to do any of the following:
 
-1.  [Become an Egghead.io subscriber](https://egghead.io/pricing) to help
+1.  [Become an egghead.io subscriber](https://egghead.io/pricing) to help
     support the community resources _and_ get access to the 2500+ videos already
     on there!
 2.  [Tweet this blog post](https://twitter.com/intent/tweet?text=%F0%9F%8E%81%E2%9A%9B%EF%B8%8F%20%E2%80%9CLearn%20React%20Fundamentals%20and%20Advanced%20Patterns%E2%80%9D%20by%20%40kentcdodds%20https%3A%2F%2Fblog.kentcdodds.com%2Flearn-react-fundamentals-and-advanced-patterns-eac90341c9db%20%F0%9F%8E%81%E2%9A%9B%EF%B8%8F)!

@@ -7,7 +7,7 @@ description: >-
   _Deep dive into Jest, React, and jsdom: A story about how I go about finding
   and fixing bugs in my dependencies._
 keywords:
-  - JavaScript
+  - javascript
   - Nodejs
 banner: ./images/banner.jpg
 bannerCredit:

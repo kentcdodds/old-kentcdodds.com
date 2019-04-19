@@ -7,8 +7,8 @@ description: >-
   _What it is, why it's good, why it's bad, and how to avoid common problems
   with it_
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Simon Caspersen](https://unsplash.com/photos/oJ7SV6vQfBA) on

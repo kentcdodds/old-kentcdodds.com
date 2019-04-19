@@ -7,7 +7,7 @@ description: >-
   _I got this question on my AMA and decided to turn the answer into a formal
   blogpost._
 keywords:
-  - JavaScript
+  - javascript
   - NPM
   - Cli
   - Command Line

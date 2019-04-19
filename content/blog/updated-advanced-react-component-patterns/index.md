@@ -7,8 +7,8 @@ description: >-
   _Now featuring the latest React APIs (like context) and entirely new patterns
   (like state reducer props)._
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit: >-
   [Advanced React Component Patterns](http://kcd.im/advanced-react) with [Kent

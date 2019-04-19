@@ -7,7 +7,7 @@ description: >-
   _How to maximize the performance of loading polyfills for your application
   users._
 keywords:
-  - JavaScript
+  - javascript
   - Polyfill
 banner: ./images/banner.jpg
 bannerCredit:

@@ -7,8 +7,8 @@ description: >-
   _Let's see how learning React ⚛️ in the right order can make it less
   overwhelming._
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Artem Sapegin](https://unsplash.com/photos/7UYzLZB9BM0) on

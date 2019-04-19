@@ -8,11 +8,8 @@ date: '2017-07-17'
 author: Kent C. Dodds
 description: _And it's way more approachable than you think..._
 keywords:
-  - JavaScript
-  - Babel
-  - Eslint
-  - Asts
-  - Codemod
+  - javascript
+  - babel
 banner: ./images/banner.jpg
 bannerCredit: >-
   Person exploring a forest of **trees** (source:
@@ -205,7 +202,7 @@ P.S. There are several other (free) resources to help you learn ASTs:
 - [asts-workshop](https://github.com/kentcdodds/asts-workshop) (the repo used
   for the Frontend Masters course)
 - [Writing custom Babel and ESLint plugins with ASTs](https://www.youtube.com/watch?v=VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
-- [A couple lessons on ASTs on Egghead.io](http://kcd.im/egghead-asts)
+- [A couple lessons on ASTs on egghead.io](http://kcd.im/egghead-asts)
 
 P.S.P.S. I thought I’d mention two babel plugins I’ve written recently that I’m
 pretty excited about

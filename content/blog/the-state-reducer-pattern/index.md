@@ -7,8 +7,8 @@ description: >-
   _A new pattern has been implemented in downshift and it's awesome. Use the
   state reducer pattern to make your components more useful._
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Daniel Wallace](https://unsplash.com/photos/IliTEyruu7U) on
