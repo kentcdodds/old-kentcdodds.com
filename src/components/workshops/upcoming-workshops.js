@@ -25,9 +25,7 @@ const UpcomingWorkshops = () => {
             const discount = get(event, 'discounts.early', false)
             return (
               <ScheduledWorkshop
-                buttonText={
-                  discount ? 'Secure Your Discount' : 'Secure Your Seat'
-                }
+                buttonText={discount ? 'Secure a Discount' : 'Secure Your Seat'}
                 tech={workshop.tech}
                 description={workshop.description}
                 title={event.title}
