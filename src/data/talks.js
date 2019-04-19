@@ -53,10 +53,10 @@ export default [
     tags: ['react'],
     deliveries: [
       // TODO: add the conference when it's announced.
-      // {
-      //   event: '',
-      //   date: '',
-      // }
+      {
+        event: 'TBA',
+        date: '2019-08-22',
+      },
     ],
     description: `
       The hooks honeymoon phase is over. We were able to overlook our confusion
