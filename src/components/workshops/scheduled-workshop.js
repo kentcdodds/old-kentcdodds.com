@@ -175,7 +175,7 @@ function ScheduledWorkshop({
       <div
         css={css`
           display: flex;
-          flex-wrap: wrap;
+          flex-flow: row wrap;
           margin-top: 10px;
         `}
       >
@@ -189,6 +189,18 @@ function ScheduledWorkshop({
         )}
         {location ? <address>{location}</address> : <address>Zoom</address>}
       </div>
+      {discount && (
+        <div
+          css={css`
+            padding-top: 15px;
+          `}
+        >
+          <em>
+            early bird ends:{' '}
+            {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a ')} (Pacific)
+          </em>
+        </div>
+      )}
       <br />
       <Markdown
         css={css`

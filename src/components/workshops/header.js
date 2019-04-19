@@ -10,6 +10,19 @@ import discountStripe from '../../images/icons/stripe.svg'
 import {format} from 'date-fns'
 import TimeRange from './time-range'
 
+const Discount = ({discount}) => (
+  <>
+    {discount && (
+      <div>
+        <em>
+          early bird ends:{' '}
+          {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a')} (Pacific)!
+        </em>
+      </div>
+    )}
+  </>
+)
+
 const Header = ({
   discount = false,
   children,
@@ -158,6 +171,7 @@ const Header = ({
             }
           `}
         >
+          <Discount discount={discount} />
           {date ? (
             <div className="date">
               {format(new Date(startTime), 'MMM Do, YYYY')}
@@ -165,6 +179,7 @@ const Header = ({
           ) : (
             <div className="date">TBA</div>
           )}
+
           {startTime ? (
             <TimeRange startTime={startTime} endTime={endTime} />
           ) : (
@@ -178,6 +193,7 @@ const Header = ({
             </address>
           )}
         </div>
+
         {children}
         {buttonText && date && (
           <a href={url} className="button" aria-label="purchase tickets">

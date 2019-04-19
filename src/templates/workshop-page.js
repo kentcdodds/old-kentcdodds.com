@@ -8,53 +8,12 @@ import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import get from 'lodash/get'
-import Header from '../components/workshops/header'
-import axios from 'axios'
-
-function reducer(state, action) {
-  const {loading, error, events} = action
-  switch (action.type) {
-    case 'loading':
-      return {...state, loading}
-    case 'response':
-      return {...state, events}
-    case 'error':
-      return {...state, error}
-    default:
-      throw new Error()
-  }
-}
+import Header from 'components/workshops/header'
+import useGetWorkshops from 'components/workshops/use-get-workshops'
 
 export default function Workshop({data: {site, mdx}}) {
   const {title, banner, noFooter} = mdx.fields
-
-  const [state, dispatch] = React.useReducer(reducer, {
-    loading: true,
-    events: [],
-  })
-
-  React.useEffect(() => {
-    dispatch({type: 'loading', loading: true})
-
-    const fetchData = async () => {
-      try {
-        const result = await axios(
-          `${process.env.NETLIFY_FUNCTIONS_URL}/tickets`,
-        )
-        dispatch({type: 'loading', loading: false})
-        dispatch({
-          type: 'response',
-          events: get(result, 'data.events', []),
-        })
-      } catch (error) {
-        dispatch({type: 'loading', loading: false})
-        dispatch({type: 'error', error})
-      }
-    }
-
-    fetchData()
-  }, [])
-
+  const state = useGetWorkshops()
   return (
     <Layout
       site={site}
@@ -83,9 +42,7 @@ export default function Workshop({data: {site, mdx}}) {
             padding-top: 0;
           `}
         >
-          {state.loading ? (
-            <div>loading upcoming events</div>
-          ) : (
+          {!state.loading &&
             state.events
               .filter(ws => {
                 return ws.title.toLowerCase() === title.toLowerCase()
@@ -109,8 +66,7 @@ export default function Workshop({data: {site, mdx}}) {
                     discount={discount}
                   />
                 )
-              })
-          )}
+              })}
 
           <div
             css={css`

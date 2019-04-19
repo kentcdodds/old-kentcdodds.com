@@ -50,14 +50,14 @@ function buildEvents(eventsData) {
           axios.spread((releases, codes, activities) => {
             const discounts = _.reduce(
               _.map(codes, code => {
-                return {url: code.share_url, code: code.code}
+                return {url: code.share_url, code: code.code, ends: code.end_at}
               }),
               (acc, discount) => {
                 return {
                   ...acc,
                   [discount.code]: {
                     url: discount.url,
-                    ends: discount.end_at,
+                    ends: discount.ends,
                   },
                 }
               },
