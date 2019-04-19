@@ -34,6 +34,44 @@ export default [
     `,
   },
   {
+    title: 'Connect.Tech Keynote',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[Connect.Tech](https://connect.tech/)',
+        date: '2019-10-16',
+      },
+    ],
+    description: `
+      More details forthcoming...
+    `,
+  },
+  {
+    title: 'React Hook Pitfalls',
+    resources: [],
+    tags: ['react'],
+    deliveries: [
+      // TODO: add the conference when it's announced.
+      // {
+      //   event: '',
+      //   date: '',
+      // }
+    ],
+    description: `
+      The hooks honeymoon phase is over. We were able to overlook our confusion
+      as a reasonable familiarity issue, but now it’s time to get real about the
+      pitfalls of React Hooks. Hooks lead to a better user experience and fewer
+      bugs for sure, but without the right foundational understanding of them
+      and certain JavaScript semantics, we’ll probably cause other problems in
+      the process of using hooks.
+
+      In this talk, we’ll explore some of the gotchas of using hooks, why those
+      things are problems, and how to think about hooks so we develop an
+      intuition for how to use hooks while avoiding the pitfalls.
+    `,
+  },
+  {
     title: 'Requisite React',
     resources: [],
     tags: ['react'],
