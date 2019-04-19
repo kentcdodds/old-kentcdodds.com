@@ -6,8 +6,8 @@ import find from 'lodash/find'
 import {css} from '@emotion/core'
 import useGetWorkshops from './use-get-workshops'
 
-const UpcomingWorkshops = () => {
-  const state = useGetWorkshops()
+const UpcomingWorkshops = ({byKeywords, headline}) => {
+  const state = useGetWorkshops(byKeywords)
   return (
     <div>
       {state.events && (
@@ -18,6 +18,15 @@ const UpcomingWorkshops = () => {
             z-index: 5;
           `}
         >
+          {headline && (
+            <h1
+              css={css`
+                margin-bottom: 45px;
+              `}
+            >
+              {headline}
+            </h1>
+          )}
           {state.events.map(event => {
             const workshop = find(state.workshops, ws => {
               return ws.title.toLowerCase() === event.title.toLowerCase()

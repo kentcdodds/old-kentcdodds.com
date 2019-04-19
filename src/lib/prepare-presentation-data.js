@@ -31,10 +31,10 @@ function sortByPresentationDate(a, b) {
   return moreRecent(mostRecentA, mostRecentB) ? -1 : 1
 }
 
-function mostRecent(dates) {
+function mostRecent(dates = []) {
   return dates.reduce((recent, compare) => {
     return moreRecent(compare, recent) ? compare : recent
-  })
+  }, [])
 }
 
 // returns true if a is more recent than b

@@ -11,6 +11,7 @@
     "@mdx-js/mdx": "^1.0.2",
     "@mdx-js/react": "^1.0.2",
     "@sindresorhus/slugify": "^0.8.0",
+    "ap-style-title-case": "^1.1.0",
     "axios": "^0.18.0",
     "core-js": "^2.6.1",
     "date-fns": "^1.30.1",

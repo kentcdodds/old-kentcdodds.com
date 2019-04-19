@@ -3,6 +3,11 @@ import reduce from 'lodash/reduce'
 import axios from 'axios'
 import {useStaticQuery, graphql} from 'gatsby'
 import get from 'lodash/get'
+import some from 'lodash/some'
+import filter from 'lodash/filter'
+import find from 'lodash/find'
+import isEmpty from 'lodash/isEmpty'
+import intersection from 'lodash/intersection'
 
 const workshopQuery = graphql`
   query {
@@ -13,6 +18,7 @@ const workshopQuery = graphql`
             tech
             title
             description
+            keywords
           }
           fields {
             slug
@@ -26,11 +32,37 @@ const workshopQuery = graphql`
 
 function reducer(state, action) {
   const {loading, error, events} = action
+  const {byKeywords, workshops} = state
+  const activeWorkshops = filter(workshops, workshop => {
+    return some(
+      events,
+      event => workshop.title.toLowerCase() === event.title.toLowerCase(),
+    )
+  })
   switch (action.type) {
     case 'loading':
       return {...state, loading}
     case 'response':
-      return {...state, events}
+      return {
+        ...state,
+        events: filter(
+          events.map(event => {
+            const {keywords, slug} = find(activeWorkshops, workshop => {
+              return workshop.title.toLowerCase() === event.title.toLowerCase()
+            })
+            return {
+              ...event,
+              keywords,
+              workshop_slug: slug,
+            }
+          }),
+          event =>
+            isEmpty(byKeywords)
+              ? true
+              : !isEmpty(intersection(event.keywords, byKeywords)),
+        ),
+        workshops: activeWorkshops,
+      }
     case 'error':
       return {...state, error}
     default:
@@ -38,7 +70,7 @@ function reducer(state, action) {
   }
 }
 
-const useGetWorkshops = () => {
+const useGetWorkshops = (byKeywords = []) => {
   const {data} = useStaticQuery(workshopQuery)
 
   const workshops = reduce(
@@ -51,6 +83,7 @@ const useGetWorkshops = () => {
           tech: node.frontmatter.tech,
           title: node.frontmatter.title,
           slug: node.fields.slug,
+          keywords: node.frontmatter.keywords,
         },
       ]
     },
@@ -61,6 +94,7 @@ const useGetWorkshops = () => {
     loading: true,
     events: [],
     workshops,
+    byKeywords,
   })
 
   React.useEffect(() => {

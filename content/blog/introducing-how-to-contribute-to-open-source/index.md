@@ -4,8 +4,8 @@ title: 'Introducing: How to Contribute to Open Source'
 date: '2016-02-08'
 author: Kent C. Dodds
 description: >-
-  _My new, free, first-timer friendly egghead.io series all about how to
-  contribute to open source projects on GitHub._
+  _My free, first-timer friendly egghead.io series all about how to contribute
+  to open source projects on GitHub._
 keywords:
   - open source
   - javascript
