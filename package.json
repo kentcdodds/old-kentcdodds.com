@@ -2,7 +2,7 @@
   "name": "kentcdodds.com",
   "private": true,
   "description": "Kent's personal website",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Kent C. Dodds <kent@doddsfamily.us> (https://kentcdodds.com)",
   "repository": "https://github.com/kentcdodds/kentcdodds.com",
   "dependencies": {
