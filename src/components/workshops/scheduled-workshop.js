@@ -10,6 +10,8 @@ import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 import discountStripe from '../../images/icons/stripe.svg'
+import {format} from 'date-fns'
+import TimeRange from './time-range'
 
 function ScheduledWorkshop({
   title,
@@ -18,13 +20,14 @@ function ScheduledWorkshop({
   waitlistUrl,
   description,
   date,
+  startTime,
+  endTime,
   buttonText = 'Book a seat',
   spotsRemaining = '20',
   tech,
   location,
   discount,
   soldOut = false,
-  time,
 }) {
   const techImage = workshopTech => {
     return (
@@ -119,7 +122,13 @@ function ScheduledWorkshop({
                 padding-right: 10px;
               `}
             >
-              <img src={techImage(tech)} alt={tech} />
+              <img
+                css={css`
+                  max-width: 145px;
+                `}
+                src={techImage(tech)}
+                alt={tech}
+              />
             </span>
             <h1>{title}</h1>
           </Link>
@@ -166,14 +175,32 @@ function ScheduledWorkshop({
       <div
         css={css`
           display: flex;
-          flex-wrap: wrap;
+          flex-flow: row wrap;
           margin-top: 10px;
         `}
       >
-        <div className="date">{date}</div>
-        {time ? <time>{time}</time> : <time>TBA</time>}
+        <div className="date">
+          {format(new Date(startTime), 'MMM Do, YYYY')}
+        </div>
+        {startTime ? (
+          <TimeRange startTime={startTime} endTime={endTime} />
+        ) : (
+          <time>TBA</time>
+        )}
         {location ? <address>{location}</address> : <address>Zoom</address>}
       </div>
+      {discount && (
+        <div
+          css={css`
+            padding-top: 15px;
+          `}
+        >
+          <em>
+            early bird ends:{' '}
+            {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a ')} (Pacific)
+          </em>
+        </div>
+      )}
       <br />
       <Markdown
         css={css`

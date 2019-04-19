@@ -1,5 +1,6 @@
 const path = require('path')
 const config = require('./config/website')
+const proxy = require('http-proxy-middleware')
 
 const here = (...p) => path.join(__dirname, ...p)
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
@@ -9,6 +10,17 @@ require('dotenv').config({
 })
 
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      '/.netlify/functions/',
+      proxy({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '/.netlify/functions/': '',
+        },
+      }),
+    )
+  },
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,

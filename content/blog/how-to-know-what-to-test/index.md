@@ -298,5 +298,5 @@ time.
 ## Conclusion
 
 Given enough time and experience, you develop an intuition for knowing what to
-test. You'll probably make mistakes and struggle a bit. Don't give up! Keep going.
-Good luck.
+test. You'll probably make mistakes and struggle a bit. Don't give up! Keep
+going. Good luck.

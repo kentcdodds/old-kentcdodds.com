@@ -11,14 +11,14 @@ import Hero from 'components/big-hero'
 import {uniq, includes, truncate} from 'lodash'
 import HeaderImage from '../../images/workshops-hero.svg'
 
-import ScheduledWorkshop from 'components/workshops/scheduled-workshop'
+import UpcomingWorkshops from 'components/workshops/upcoming-workshops'
 import Workshop from 'components/workshops/workshop'
 
 import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 
-export default function RemoteWorkshops({data: {workshops, scheduled}}) {
+export default function RemoteWorkshops({data: {workshops}}) {
   const workshopTech = uniq(
     workshops.edges.map(({node: workshop}) => workshop.frontmatter.tech),
   )
@@ -74,34 +74,8 @@ export default function RemoteWorkshops({data: {workshops, scheduled}}) {
     >
       <SEO />
       <Container noVerticalPadding>
-        <div
-          css={css`
-            margin-top: -30px;
-            position: relative;
-            z-index: 5;
-          `}
-        >
-          {scheduled.edges.map(({node: workshop}) => (
-            <ScheduledWorkshop
-              title={workshop.frontmatter.title}
-              description={workshop.frontmatter.description}
-              date={workshop.frontmatter.date}
-              spotsRemaining={workshop.frontmatter.spotsRemaining}
-              bookUrl={`${workshop.fields.slug}#register`}
-              waitlistUrl={`${workshop.fields.slug}#register`}
-              url={
-                workshop.fields.slug
-                  ? workshop.fields.slug
-                  : `/workshops/${workshop.frontmatter.slug}`
-              }
-              tech={workshop.frontmatter.tech}
-              discount={workshop.frontmatter.discount}
-              soldOut={workshop.frontmatter.soldOut}
-              key={workshop.id}
-              time={workshop.frontmatter.time}
-            />
-          ))}
-        </div>
+        <UpcomingWorkshops />
+
         <div
           css={css`
             text-align: center;
@@ -202,32 +176,6 @@ export const remoteWorkshopsQuery = graphql`
         }
       }
       totalCount
-    }
-
-    scheduled: allMdx(
-      filter: {fields: {isScheduled: {eq: true}}}
-      sort: {order: ASC, fields: [frontmatter___date]}
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            discount
-            description
-            tech
-            slug
-            spotsRemaining
-            soldOut
-            time
-          }
-          fields {
-            slug
-            isScheduled
-          }
-        }
-      }
     }
   }
 `

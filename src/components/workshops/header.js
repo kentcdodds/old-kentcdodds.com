@@ -7,8 +7,24 @@ import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import styles from './styles'
 import discountStripe from '../../images/icons/stripe.svg'
+import {format} from 'date-fns'
+import TimeRange from './time-range'
+
+const Discount = ({discount}) => (
+  <>
+    {discount && (
+      <div>
+        <em>
+          early bird ends:{' '}
+          {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a')} (Pacific)!
+        </em>
+      </div>
+    )}
+  </>
+)
 
 const Header = ({
+  discount = false,
   children,
   title,
   date,
@@ -16,8 +32,9 @@ const Header = ({
   soldOut = false,
   buttonText,
   image = {},
-  discount = false,
-  time,
+  startTime,
+  endTime,
+  url,
 }) => {
   const Stripe = props => (
     <div
@@ -154,15 +171,17 @@ const Header = ({
             }
           `}
         >
+          <Discount discount={discount} />
           {date ? (
-            <div className="date">{date}</div>
+            <div className="date">
+              {format(new Date(startTime), 'MMM Do, YYYY')}
+            </div>
           ) : (
             <div className="date">TBA</div>
           )}
-          {time ? (
-            <time>
-              {time} <a href="https://www.thetimezoneconverter.com/">MT</a>
-            </time>
+
+          {startTime ? (
+            <TimeRange startTime={startTime} endTime={endTime} />
           ) : (
             <time>TBA</time>
           )}
@@ -170,19 +189,15 @@ const Header = ({
             <address>{location}</address>
           ) : (
             <address>
-              <a href="https://zoom.us/">Zoom</a>{' '}
-              <i>(you will receive a link via email)</i>
+              <span>Zoom</span> <i>(you will receive a link via email)</i>
             </address>
           )}
         </div>
+
         {children}
         {buttonText && date && (
-          <a
-            href="#register"
-            className="button"
-            aria-label="scroll to registration"
-          >
-            {soldOut && `Sold out -`} {buttonText}
+          <a href={url} className="button" aria-label="purchase tickets">
+            {soldOut ? 'Join the waiting list' : buttonText}
           </a>
         )}
       </div>

@@ -7,14 +7,13 @@ import Layout from 'components/layout'
 import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
-import {get} from 'lodash'
-import Header from '../components/workshops/header'
-import Register from '../components/workshops/register'
+import get from 'lodash/get'
+import Header from 'components/workshops/header'
+import useGetWorkshops from 'components/workshops/use-get-workshops'
 
 export default function Workshop({data: {site, mdx}}) {
-  const {title, date, banner, noFooter} = mdx.fields
-  const {discount, event, soldOut, time, dealEndDate} = mdx.frontmatter
-
+  const {title, banner, noFooter} = mdx.fields
+  const state = useGetWorkshops()
   return (
     <Layout
       site={site}
@@ -43,15 +42,32 @@ export default function Workshop({data: {site, mdx}}) {
             padding-top: 0;
           `}
         >
-          <Header
-            soldOut={soldOut}
-            title={title}
-            date={date}
-            discount={discount}
-            image={banner ? banner.childImageSharp.fluid : false}
-            buttonText={soldOut ? 'Join the waiting list' : 'Secure your seat'}
-            time={time}
-          />
+          {!state.loading &&
+            state.events
+              .filter(ws => {
+                return ws.title.toLowerCase() === title.toLowerCase()
+              })
+              .map(scheduledEvent => {
+                const soldOut = scheduledEvent.remaining <= 0
+                const discount = get(scheduledEvent, 'discounts.early', false)
+                return (
+                  <Header
+                    key={scheduledEvent.slug}
+                    soldOut={soldOut}
+                    title={title}
+                    date={scheduledEvent && scheduledEvent.date}
+                    image={banner ? banner.childImageSharp.fluid : false}
+                    buttonText={
+                      discount ? 'Secure Your Discount' : 'Secure Your Seat'
+                    }
+                    startTime={scheduledEvent && scheduledEvent.startTime}
+                    endTime={scheduledEvent && scheduledEvent.endTime}
+                    url={scheduledEvent && scheduledEvent.url}
+                    discount={discount}
+                  />
+                )
+              })}
+
           <div
             css={css`
               display: flex;
@@ -68,14 +84,6 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          {event && (
-            <Register
-              light
-              event={event}
-              discountAvailable={discount}
-              dealEndDate={dealEndDate}
-            />
-          )}
         </Container>
       </article>
     </Layout>
