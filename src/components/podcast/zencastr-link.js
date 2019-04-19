@@ -6,7 +6,7 @@ function ZencastrLink() {
     (state, {zencastr}) => {
       if (zencastr) {
         return {
-          link: `https://zencastr.com/kentcdodds/${zencastr}`,
+          link: `https://zencastr.com/kentcdodds/${zencastr.toLowerCase()}`,
           retrievedLink: true,
         }
       } else {
