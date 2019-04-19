@@ -8,12 +8,17 @@ import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import get from 'lodash/get'
+import isEmpty from 'lodash/isEmpty'
 import Header from 'components/workshops/header'
 import useGetWorkshops from 'components/workshops/use-get-workshops'
+import {bpMaxSM} from '../lib/breakpoints'
 
 export default function Workshop({data: {site, mdx}}) {
   const {title, banner, noFooter} = mdx.fields
   const state = useGetWorkshops()
+  const events = state.events.filter(ws => {
+    return ws.title.toLowerCase() === title.toLowerCase()
+  })
   return (
     <Layout
       site={site}
@@ -42,31 +47,43 @@ export default function Workshop({data: {site, mdx}}) {
             padding-top: 0;
           `}
         >
+          {isEmpty(events) && (
+            <div
+              css={css`
+                padding: 40px 0 0 0;
+                ${bpMaxSM} {
+                  padding: 20px 0 0 0;
+                }
+                h1 {
+                  font-size: 1.75rem;
+                  font-family: ${fonts.semibold}, sans-serif;
+                }
+              `}
+            >
+              {title && <h1>{title} Workshop</h1>}
+            </div>
+          )}
           {!state.loading &&
-            state.events
-              .filter(ws => {
-                return ws.title.toLowerCase() === title.toLowerCase()
-              })
-              .map(scheduledEvent => {
-                const soldOut = scheduledEvent.remaining <= 0
-                const discount = get(scheduledEvent, 'discounts.early', false)
-                return (
-                  <Header
-                    key={scheduledEvent.slug}
-                    soldOut={soldOut}
-                    title={title}
-                    date={scheduledEvent && scheduledEvent.date}
-                    image={banner ? banner.childImageSharp.fluid : false}
-                    buttonText={
-                      discount ? 'Secure Your Discount' : 'Secure Your Seat'
-                    }
-                    startTime={scheduledEvent && scheduledEvent.startTime}
-                    endTime={scheduledEvent && scheduledEvent.endTime}
-                    url={scheduledEvent && scheduledEvent.url}
-                    discount={discount}
-                  />
-                )
-              })}
+            events.map(scheduledEvent => {
+              const soldOut = scheduledEvent.remaining <= 0
+              const discount = get(scheduledEvent, 'discounts.early', false)
+              return (
+                <Header
+                  key={scheduledEvent.slug}
+                  soldOut={soldOut}
+                  title={title}
+                  date={scheduledEvent && scheduledEvent.date}
+                  image={banner ? banner.childImageSharp.fluid : false}
+                  buttonText={
+                    discount ? 'Secure Your Discount' : 'Secure Your Seat'
+                  }
+                  startTime={scheduledEvent && scheduledEvent.startTime}
+                  endTime={scheduledEvent && scheduledEvent.endTime}
+                  url={scheduledEvent && scheduledEvent.url}
+                  discount={discount}
+                />
+              )
+            })}
 
           <div
             css={css`
