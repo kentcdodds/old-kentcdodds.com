@@ -7,8 +7,11 @@ import theme from '../../../config/theme'
 import {lighten} from 'polished'
 import styles from './styles'
 import discountStripe from '../../images/icons/stripe.svg'
+import {format} from 'date-fns'
+import TimeRange from './time-range'
 
 const Header = ({
+  discount = false,
   children,
   title,
   date,
@@ -16,7 +19,6 @@ const Header = ({
   soldOut = false,
   buttonText,
   image = {},
-  discount = false,
   startTime,
   endTime,
   url,
@@ -157,15 +159,14 @@ const Header = ({
           `}
         >
           {date ? (
-            <div className="date">{date}</div>
+            <div className="date">
+              {format(new Date(startTime), 'MMM Do, YYYY')}
+            </div>
           ) : (
             <div className="date">TBA</div>
           )}
           {startTime ? (
-            <time>
-              {new Date(startTime).toTimeString()}-
-              {new Date(endTime).toTimeString()}
-            </time>
+            <TimeRange startTime={startTime} endTime={endTime} />
           ) : (
             <time>TBA</time>
           )}
@@ -179,8 +180,8 @@ const Header = ({
         </div>
         {children}
         {buttonText && date && (
-          <a href={url} className="button" aria-label="scroll to registration">
-            {soldOut && `Sold out -`} {buttonText}
+          <a href={url} className="button" aria-label="purchase tickets">
+            {soldOut ? 'Join the waiting list' : buttonText}
           </a>
         )}
       </div>

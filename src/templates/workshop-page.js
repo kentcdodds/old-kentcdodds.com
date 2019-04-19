@@ -7,11 +7,9 @@ import Layout from 'components/layout'
 import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
-import {get} from 'lodash'
+import get from 'lodash/get'
 import Header from '../components/workshops/header'
-import Register from '../components/workshops/register'
 import axios from 'axios'
-import find from 'lodash/find'
 
 function reducer(state, action) {
   const {loading, error, events} = action
@@ -29,15 +27,10 @@ function reducer(state, action) {
 
 export default function Workshop({data: {site, mdx}}) {
   const {title, banner, noFooter} = mdx.fields
-  const {discount, dealEndDate} = mdx.frontmatter
 
   const [state, dispatch] = React.useReducer(reducer, {
     loading: true,
     events: [],
-  })
-
-  const event = find(state.events, ws => {
-    return ws.title.toLowerCase() === title.toLowerCase()
   })
 
   React.useEffect(() => {
@@ -61,8 +54,6 @@ export default function Workshop({data: {site, mdx}}) {
 
     fetchData()
   }, [])
-
-  const soldOut = event ? event.quantity <= event.sold : false
 
   return (
     <Layout
@@ -92,17 +83,35 @@ export default function Workshop({data: {site, mdx}}) {
             padding-top: 0;
           `}
         >
-          <Header
-            soldOut={soldOut}
-            title={title}
-            date={event && event.date}
-            discount={discount}
-            image={banner ? banner.childImageSharp.fluid : false}
-            buttonText={soldOut ? 'Join the waiting list' : 'Secure your seat'}
-            startTime={event && event.startTime}
-            endTime={event && event.endTime}
-            url={event && event.url}
-          />
+          {state.loading ? (
+            <div>loading upcoming events</div>
+          ) : (
+            state.events
+              .filter(ws => {
+                return ws.title.toLowerCase() === title.toLowerCase()
+              })
+              .map(scheduledEvent => {
+                const soldOut = scheduledEvent.remaining <= 0
+                const discount = get(scheduledEvent, 'discounts.early', false)
+                return (
+                  <Header
+                    key={scheduledEvent.slug}
+                    soldOut={soldOut}
+                    title={title}
+                    date={scheduledEvent && scheduledEvent.date}
+                    image={banner ? banner.childImageSharp.fluid : false}
+                    buttonText={
+                      discount ? 'Secure Discount' : 'Secure Your Seat'
+                    }
+                    startTime={scheduledEvent && scheduledEvent.startTime}
+                    endTime={scheduledEvent && scheduledEvent.endTime}
+                    url={scheduledEvent && scheduledEvent.url}
+                    discount={discount}
+                  />
+                )
+              })
+          )}
+
           <div
             css={css`
               display: flex;
@@ -119,14 +128,6 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          {event && (
-            <Register
-              light
-              event={event}
-              discountAvailable={discount}
-              dealEndDate={dealEndDate}
-            />
-          )}
         </Container>
       </article>
     </Layout>

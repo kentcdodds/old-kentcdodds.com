@@ -10,6 +10,8 @@ import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 import discountStripe from '../../images/icons/stripe.svg'
+import {format} from 'date-fns'
+import TimeRange from './time-range'
 
 function ScheduledWorkshop({
   title,
@@ -18,14 +20,14 @@ function ScheduledWorkshop({
   waitlistUrl,
   description,
   date,
+  startTime,
+  endTime,
   buttonText = 'Book a seat',
   spotsRemaining = '20',
   tech,
-  imageUrl,
   location,
   discount,
   soldOut = false,
-  time,
 }) {
   const techImage = workshopTech => {
     return (
@@ -124,7 +126,7 @@ function ScheduledWorkshop({
                 css={css`
                   max-width: 145px;
                 `}
-                src={imageUrl ? imageUrl : techImage(tech)}
+                src={techImage(tech)}
                 alt={tech}
               />
             </span>
@@ -177,8 +179,14 @@ function ScheduledWorkshop({
           margin-top: 10px;
         `}
       >
-        <div className="date">{date}</div>
-        {time ? <time>{time}</time> : <time>TBA</time>}
+        <div className="date">
+          {format(new Date(startTime), 'MMM Do, YYYY')}
+        </div>
+        {startTime ? (
+          <TimeRange startTime={startTime} endTime={endTime} />
+        ) : (
+          <time>TBA</time>
+        )}
         {location ? <address>{location}</address> : <address>Zoom</address>}
       </div>
       <br />
