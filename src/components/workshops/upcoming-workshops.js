@@ -10,19 +10,6 @@ const UpcomingWorkshops = () => {
   const state = useGetWorkshops()
   return (
     <div>
-      {state.loading ||
-        (state.error && (
-          <div
-            css={css`
-              padding: 10px;
-              text-align: center;
-            `}
-          >
-            {state.loading ? 'loading workshops' : ''}
-            {state.error ? 'ERROR' : ''}
-          </div>
-        ))}
-
       {state.events && (
         <div
           css={css`
@@ -38,7 +25,9 @@ const UpcomingWorkshops = () => {
             const discount = get(event, 'discounts.early', false)
             return (
               <ScheduledWorkshop
-                buttonText={discount ? 'Secure Discount' : 'Secure Your Seat'}
+                buttonText={
+                  discount ? 'Secure Your Discount' : 'Secure Your Seat'
+                }
                 tech={workshop.tech}
                 description={workshop.description}
                 title={event.title}

@@ -58,7 +58,7 @@ export default function Workshop({data: {site, mdx}}) {
                     date={scheduledEvent && scheduledEvent.date}
                     image={banner ? banner.childImageSharp.fluid : false}
                     buttonText={
-                      discount ? 'Secure Discount' : 'Secure Your Seat'
+                      discount ? 'Secure Your Discount' : 'Secure Your Seat'
                     }
                     startTime={scheduledEvent && scheduledEvent.startTime}
                     endTime={scheduledEvent && scheduledEvent.endTime}
