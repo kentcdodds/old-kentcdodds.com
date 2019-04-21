@@ -10,7 +10,7 @@ const UpcomingWorkshops = ({byKeywords, headline}) => {
   const state = useGetWorkshops(byKeywords)
   return (
     <div>
-      {state.events && (
+      {state.events.length ? (
         <div
           css={css`
             margin-top: -30px;
@@ -52,7 +52,7 @@ const UpcomingWorkshops = ({byKeywords, headline}) => {
             )
           })}
         </div>
-      )}
+      ) : null}
     </div>
   )
 }
