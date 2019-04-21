@@ -8,9 +8,9 @@ description: >-
   _Learn about the massive improvements coming to function components in React
   via a fresh new course showing you how to refactor an existing..._
 keywords:
-  - React
-  - React Hooks
-  - React Suspense
+  - react
+  - react hooks
+  - react suspense
 banner: ./images/banner.jpg
 ---
 

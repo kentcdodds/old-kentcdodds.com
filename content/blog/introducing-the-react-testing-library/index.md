@@ -6,9 +6,9 @@ author: Kent C. Dodds
 description:
   _A simpler replacement for enzyme that encourages good testing practices._
 keywords:
-  - React
-  - JavaScript
-  - Testing
+  - react
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Rob Potter](https://unsplash.com/photos/mrZVkCKyaPk) on

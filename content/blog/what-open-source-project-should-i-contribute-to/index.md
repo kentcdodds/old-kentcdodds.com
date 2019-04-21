@@ -7,9 +7,9 @@ description: >-
   _My silver bullet answer to this frequently posed question, and how to get
   started_
 keywords:
-  - Open Source
-  - Github
-  - JavaScript
+  - open source
+  - github
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit: '[https://octodex.github.com/repo/](https://octodex.github.com/repo/)'
 ---
@@ -163,7 +163,7 @@ Do you need an introduction to GitHub and Git? Check this out from GitHub:
 [**GitHub for Developers \* GitHub Training**](https://training.github.com/classes/developers/)
 
 And if you're interested in creating your own project, be sure to check out my
-series on Egghead.io:
+series on egghead.io:
 
 [**How to Write an Open Source JavaScript Library - Course by @kentcdodds**](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
 

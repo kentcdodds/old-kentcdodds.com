@@ -4,12 +4,12 @@ title: 'Introducing: How to Contribute to Open Source'
 date: '2016-02-08'
 author: Kent C. Dodds
 description: >-
-  _My new, free, first-timer friendly Egghead.io series all about how to
-  contribute to open source projects on GitHub._
+  _My free, first-timer friendly egghead.io series all about how to contribute
+  to open source projects on GitHub._
 keywords:
-  - Open Source
-  - JavaScript
-  - Github
+  - open source
+  - javascript
+  - github
 banner: ./images/banner.jpg
 ---
 
@@ -29,7 +29,7 @@ which make contributing really indimidating.
 
 > This is a problem with education, and can be fixed.
 
-It is for this reason that I'm super excited to release my new Egghead.io series
+It is for this reason that I'm super excited to release my new egghead.io series
 entitled: "How to Contribute to an Open Source Project on GitHub." It'll go
 through everything you need to submit a pull request starting with something as
 basic as

@@ -7,10 +7,10 @@ description: >-
   _Guillermo Rauch tweeted this a while back. Let's take a quick dive into what
   it means._
 keywords:
-  - Testing
+  - testing
   - Integration
   - Code
-  - Software Development
+  - web development
   - Unit Testing
 banner: ./images/banner.jpg
 bannerCredit:

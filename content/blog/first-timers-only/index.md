@@ -5,9 +5,7 @@ date: '2015-08-04'
 author: Kent C. Dodds
 description: _A suggestion to Open Source project maintainers..._
 keywords:
-  - Open Source
-  - Friendliness
-  - Inclusion
+  - open source
 banner: ./images/banner.jpg
 ---
 

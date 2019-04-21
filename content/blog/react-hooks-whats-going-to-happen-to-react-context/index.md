@@ -7,10 +7,10 @@ description: >-
   _With the cool new stuff coming to React (Hooks/Suspense), what's going to
   happen to the context api?_
 keywords:
-  - JavaScript
-  - React
-  - React Context
-  - React Hooks
+  - javascript
+  - react
+  - react Context
+  - react hooks
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Joel Fulgencio](https://unsplash.com/photos/VSrHD079L78) on

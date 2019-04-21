@@ -7,9 +7,9 @@ description: >-
   _...yep, you read that right. Most of the course actually has nothing to do
   with React specifically._
 keywords:
-  - JavaScript
-  - Testing
-  - React
+  - javascript
+  - testing
+  - react
   - Vue
   - Angular
 banner: ./images/banner.jpg

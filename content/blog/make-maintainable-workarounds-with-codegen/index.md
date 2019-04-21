@@ -7,8 +7,8 @@ description: >-
   _Sometimes you need to workaround issues in other libraries. These workarounds
   can often lead to messy code. codegen is a tool that helps..._
 keywords:
-  - JavaScript
-  - Babel
+  - javascript
+  - babel
   - Code
   - Macros
 banner: ./images/banner.jpg

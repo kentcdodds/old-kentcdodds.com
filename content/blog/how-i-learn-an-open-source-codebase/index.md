@@ -7,8 +7,8 @@ description: >-
   _What I do to learn and understand an open source project to which I want to
   contribute._
 keywords:
-  - Open Source
-  - Software Development
+  - open source
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Robert Collins](https://unsplash.com/photos/tvc5imO5pXk) on

@@ -7,9 +7,9 @@ description: >-
   _TL;DR/Spoiler alert: I'm working on a tool at PayPal called paypal-scripts
   and a personal one called kcd-scripts. You should try it too!_
 keywords:
-  - JavaScript
+  - javascript
   - Toolboxes
-  - Automation
+  - automation
   - Create React App
 banner: ./images/banner.jpg
 bannerCredit:

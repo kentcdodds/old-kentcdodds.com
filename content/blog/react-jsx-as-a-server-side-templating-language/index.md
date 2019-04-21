@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description:
   _Using React function components to render your website's skeleton index.html_
 keywords:
-  - React
+  - react
   - Jsx
 banner: ./images/banner.jpg
 bannerCredit:

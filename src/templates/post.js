@@ -14,7 +14,13 @@ import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
-import {get} from 'lodash'
+import get from 'lodash/get'
+import intersection from 'lodash/intersection'
+import flatMap from 'lodash/flatMap'
+import first from 'lodash/first'
+import useGetWorkshops from 'components/workshops/use-get-workshops'
+import UpcomingWorkshops from 'components/workshops/upcoming-workshops'
+import titleCase from 'ap-style-title-case'
 
 export default function Post({data: {site, mdx}}) {
   const {
@@ -29,6 +35,12 @@ export default function Post({data: {site, mdx}}) {
     noFooter,
     keywords,
   } = mdx.fields
+
+  const {events} = useGetWorkshops(keywords)
+
+  const commonKeyword = first(
+    intersection(flatMap(events, event => event.keywords), keywords),
+  )
 
   const blogPostUrl = `${config.siteUrl}${slug}`
 
@@ -140,7 +152,27 @@ export default function Post({data: {site, mdx}}) {
           twitterHandle={config.twitterHandle}
         />
       </Container>
-      {keywords.includes('testing') && <TestingCta />}
+      {events && (
+        <div
+          css={css`
+            margin-top: 55px;
+            display: flex;
+            justify-content: center;
+          `}
+        >
+          <UpcomingWorkshops
+            headline={
+              commonKeyword
+                ? titleCase(`Upcoming ${commonKeyword} Workshops`)
+                : 'Upcoming Workshops'
+            }
+            byKeywords={keywords}
+          />
+        </div>
+      )}
+      {keywords.map(keyword => keyword.toLowerCase()).includes('testing') && (
+        <TestingCta />
+      )}
       <Container>
         <BlogPostFooter />
       </Container>

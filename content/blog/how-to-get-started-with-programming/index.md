@@ -7,9 +7,9 @@ description: _So you want to get into programming? Here's how you get started._
 categories:
   - 'programming'
 keywords:
-  - 'programming'
-  - 'coding'
-  - 'beginner'
+  - programming
+  - coding
+  - beginner
 banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Lane Smith](https://unsplash.com/photos/wEsqjsjIDLs)'
 ---

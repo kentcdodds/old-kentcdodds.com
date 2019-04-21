@@ -7,9 +7,9 @@ description: >-
   _What am I going to do with all these render props components now that react
   hooks solve the code reuse problem better than render props ever did?_
 keywords:
-  - React
-  - React Hooks
-  - Render Props
+  - react
+  - react hooks
+  - render props
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Nadine Shaabana](https://unsplash.com/photos/anXB3AhQcJ0) on
@@ -31,10 +31,10 @@ served as a great way to teach the prop getters pattern.
 
 Both react-toggled and downshift use the render prop pattern as a mechanism for
 React component logic code sharing. As I explained in my blog post
-["When to NOT use Render Props"](/blog/when-to-not-use-render-props),
-that's the primary use case for the render prop pattern. But that's also the
-primary use case for React Hooks as well. And React Hooks are WAY simpler than
-class components + render props.
+["When to NOT use Render Props"](/blog/when-to-not-use-render-props), that's the
+primary use case for the render prop pattern. But that's also the primary use
+case for React Hooks as well. And React Hooks are WAY simpler than class
+components + render props.
 
 So does that mean that when React Hooks are stable you wont need render props at
 all anymore? **No!** I can think of two scenarios where the render prop pattern

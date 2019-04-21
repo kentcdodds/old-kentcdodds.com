@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description:
   _A quick demo of the browser extension you should definitely be using._
 keywords:
-  - JavaScript
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Aron Visuals](https://unsplash.com/photos/_l4yffWjgt4) on

@@ -8,6 +8,8 @@ banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Will Oey](https://unsplash.com/photos/GtYFwFrFbMA) on
   [Unsplash](https://unsplash.com)'
+keywords:
+  - open source
 ---
 
 I have a lot of open source projects that I maintain. I have personally

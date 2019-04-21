@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description:
   _An argument for why use of semicolons in JavaScript source is a preference_
 keywords:
-  - JavaScript
+  - javascript
   - ES6
 banner: ./images/banner.jpg
 bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy/)'

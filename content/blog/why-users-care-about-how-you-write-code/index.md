@@ -7,7 +7,7 @@ description:
   _Your coding practices and technology choices impact user experience..._
 keywords:
   - Code
-  - Software Development
+  - web development
   - User Experience
 banner: ./images/banner.jpg
 ---

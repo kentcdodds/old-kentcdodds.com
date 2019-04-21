@@ -7,8 +7,8 @@ description: >-
   _Today let's talk about some common mistakes that people make when testing
   JavaScript applications._
 keywords:
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Jeremy Bishop](https://unsplash.com/photos/KputBgWH-Ek) on

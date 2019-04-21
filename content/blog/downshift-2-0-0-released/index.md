@@ -7,11 +7,10 @@ description: >-
   _Even better accessibility, React Native and ReasonReact support, even simpler
   API, improved docs, new examples site, Flow and TypeScript..._
 keywords:
-  - React
-  - Preact
-  - React Native
-  - Reasonml
-  - JavaScript
+  - react
+  - preact
+  - react native
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Philip Veater](https://unsplash.com/photos/eQQfYv7bhwU) on

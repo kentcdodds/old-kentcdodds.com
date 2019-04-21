@@ -7,7 +7,7 @@ description:
   _Why this week's episode of JavaScript Air is canceled and where I'm going..._
 keywords:
   - Tech
-  - JavaScript
+  - javascript
   - Pioneers
 banner: ./images/banner.jpg
 bannerCredit:

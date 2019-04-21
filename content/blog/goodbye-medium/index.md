@@ -5,8 +5,7 @@ date: '2019-02-25'
 author: Kent C. Dodds
 description: _I've migrated from Medium to kentcdodds.com/blog... Here's why_
 keywords:
-  - Control
-  - Personal Branding
+  - career
 banner: ./images/banner.jpg
 bannerCredit:
   Photo by [Bobby Johnson](https://unsplash.com/photos/swCOXlxmr5U) on

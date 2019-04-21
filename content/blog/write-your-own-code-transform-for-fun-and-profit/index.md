@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description:
   "_How to write your own code macro with babel-plugin-macros \U0001F3A3_"
 keywords:
-  - JavaScript
-  - Babel
+  - javascript
+  - babel
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mervyn Chan](https://unsplash.com/photos/RFXxBTHze_M) on

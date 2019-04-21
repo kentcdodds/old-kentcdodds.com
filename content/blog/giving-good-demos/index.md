@@ -7,8 +7,7 @@ description: >-
   _I gave a pretty good demo and here are some things I did that might help you
   give good demos too._
 keywords:
-  - Soft Skills
-  - Demo
+  - career
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Martin Jernberg](https://unsplash.com/photos/UdURxHDhrgY) on
@@ -75,7 +74,7 @@ for the problem and the demo shows off the solution. **Nothing ruins your
 efforts to capture your audience more than a demo that goes wrong.** So if
 possible, make a recording of the demo. Edit out all the fluff. I highly suggest
 following the guidelines in
-[this free Egghead.io course](https://egghead.io/courses/record-badass-screencasts-for-egghead-io)
+[this free egghead.io course](https://egghead.io/courses/record-badass-screencasts-for-egghead-io)
 from [John Lindquist](https://twitter.com/johnlindquist) about creating great
 screencasts.
 

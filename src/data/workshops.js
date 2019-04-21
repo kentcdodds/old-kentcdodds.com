@@ -54,7 +54,7 @@ export default [
     tags: ['react', 'testing'],
     deliveries: [
       {
-        event: '[Egghead.io](https://kcd.im/egghead) Course',
+        event: '[egghead.io](https://kcd.im/egghead) Course',
         date: '2018-10-27',
         recording:
           'https://egghead.io/playlists/react-hooks-and-suspense-650307f2',
@@ -71,7 +71,7 @@ export default [
     tags: ['react', 'testing'],
     deliveries: [
       {
-        event: '[Egghead.io](https://kcd.im/egghead) Course',
+        event: '[egghead.io](https://kcd.im/egghead) Course',
         date: '2018-12-04',
         recording:
           'https://egghead.io/courses/simplify-react-apps-with-react-hooks',
@@ -202,7 +202,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/advanced-react-component-patterns)',
+          '[egghead.io](https://egghead.io/courses/advanced-react-component-patterns)',
         date: '2017-12-04',
         recording:
           'https://egghead.io/courses/advanced-react-component-patterns',
@@ -258,7 +258,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
+          '[egghead.io](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)',
         date: '2017-12-04',
         recording: 'https://egghead.io/courses/the-beginner-s-guide-to-reactjs',
       },
@@ -461,7 +461,7 @@ export default [
       },
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/using-webpack-for-production-javascript-applications)',
+          '[egghead.io](https://egghead.io/courses/using-webpack-for-production-javascript-applications)',
         date: '2016-06-17',
         recording:
           'https://egghead.io/courses/using-webpack-for-production-javascript-applications',
@@ -499,7 +499,7 @@ export default [
         recording: 'http://kcd.im/fem-oss',
       },
       {
-        event: '[Egghead.io](http://kcd.im/write-oss)',
+        event: '[egghead.io](http://kcd.im/write-oss)',
         date: '2015-08-24',
         recording: 'http://kcd.im/write-oss',
       },
@@ -546,7 +546,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
+          '[egghead.io](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)',
         date: '2016-02-18',
         recording:
           'https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github',
@@ -582,7 +582,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
+          '[egghead.io](https://egghead.io/courses/angular-and-webpack-for-modular-applications)',
         date: '2015-09-05',
         recording:
           'https://egghead.io/courses/angular-and-webpack-for-modular-applications',
@@ -616,7 +616,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
+          '[egghead.io](https://egghead.io/courses/angularjs-authentication-with-jwt)',
         date: '2014-09-22',
         recording:
           'https://egghead.io/courses/angularjs-authentication-with-jwt',

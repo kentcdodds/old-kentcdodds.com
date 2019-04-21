@@ -7,8 +7,8 @@ description: >-
   _At what point does it make sense to break a single component into multiple
   components?_
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Samuel Scrimshaw](https://unsplash.com/photos/kp_87tExCwI) on

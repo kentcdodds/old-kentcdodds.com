@@ -5,10 +5,10 @@ date: '2017-12-05'
 author: Kent C. Dodds
 description: >-
   _An overview of some of the patterns covered in my recently released
-  Egghead.io course (free until Friday)._
+  egghead.io course (free until Friday)._
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Geran de Klerk](https://unsplash.com/photos/bKhETeDV1WM) on
@@ -16,11 +16,11 @@ bannerCredit:
 ---
 
 I don't know that I've ever been more excited about an
-[Egghead.io](http://egghead.io/) course release before (having personally
+[egghead.io](http://egghead.io/) course release before (having personally
 published
-[over 100 videos on Egghead](https://egghead.io/instructors/kentcdodds), that's
+[over 100 videos on egghead](https://egghead.io/instructors/kentcdodds), that's
 saying something...). Two of my courses will be (have now been) released as part
-of Egghead's annual Christmas course release celebration 🎉 One is
+of egghead's annual Christmas course release celebration 🎉 One is
 [**The Beginner's Guide to ReactJS**](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
 and the other is
 [**Advanced React Component Patterns**](https://egghead.io/courses/advanced-react-component-patterns).
@@ -178,7 +178,7 @@ one 😀
 ![I can hardly wait](./images/4.gif)
 
 I really hope that this course will help you build more useful React components.
-The course will hit [Egghead.io](http://egghead.io/) 🔜 Enjoy!
+The course will hit [egghead.io](http://egghead.io/) 🔜 Enjoy!
 
 **Things to not miss**:
 

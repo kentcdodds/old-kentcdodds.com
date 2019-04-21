@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description:
   _The expressive power of expressions in default values for parameters_
 keywords:
-  - JavaScript
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Jude Beck](https://unsplash.com/photos/YErQe8LQkyA) on

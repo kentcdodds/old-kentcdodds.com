@@ -5,7 +5,7 @@ date: '2018-07-30'
 author: Kent C. Dodds
 description: _The difference between a polyfill and a code transform._
 keywords:
-  - JavaScript
+  - javascript
   - Polyfill
 banner: ./images/banner.jpg
 bannerCredit:

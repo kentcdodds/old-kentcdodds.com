@@ -6,7 +6,8 @@ author: 'Kent C. Dodds'
 description:
   'I have a challenge and ideas for you to do something to build your career.'
 categories: ['career']
-keywords: ['career', 'social media', 'branding']
+keywords:
+  - career
 banner: './banner.jpg'
 bannerCredit:
   Photo by [Radek Grzybowski](https://unsplash.com/photos/8tem2WpFPhM) on

@@ -6,10 +6,10 @@ author: Kent C. Dodds
 description:
   _People regularly ask me how I get so much done. Here's my secret..._
 keywords:
-  - JavaScript
-  - Productivity
-  - Career Advice
-  - Self Improvement
+  - javascript
+  - productivity
+  - career
+  - self
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [lalo Hernandez](https://unsplash.com/photos/2p7BD4T5GSE) on

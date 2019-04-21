@@ -7,8 +7,8 @@ description: >-
   _How to get from aimlessly testing or not testing at all to really
   understanding how and what to test._
 keywords:
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Paul Gilmore](https://unsplash.com/photos/36plOdZK_uY) on

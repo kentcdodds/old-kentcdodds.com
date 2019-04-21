@@ -5,8 +5,8 @@ date: '2015-12-01'
 author: Kent C. Dodds
 description: _An anecdotal argument for contributing and using open source_
 keywords:
-  - Open Source
-  - JavaScript
+  - open source
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit: >-
   [http://www.addletters.com/bart-simpson-generator.htm](http://www.addletters.com/bart-simpson-generator.htm)

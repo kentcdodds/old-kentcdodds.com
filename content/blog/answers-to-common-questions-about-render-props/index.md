@@ -5,8 +5,8 @@ date: '2018-02-12'
 author: Kent C. Dodds
 description: _Because there's a ton of hype, and a bunch of questions ⚛️_
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Sharon McCutcheon](https://unsplash.com/photos/gYxVSeZazXU) on
@@ -15,7 +15,7 @@ bannerCredit:
 
 As I was preparing this article, I was getting ready to give a training to
 engineers at a local company. They saw my
-[Advanced React Component Patterns course on Egghead.io](http://kcd.im/advanced-react)
+[Advanced React Component Patterns course on egghead.io](http://kcd.im/advanced-react)
 and want to dive deeper into the Render Props pattern. (If you're unfamiliar
 with the Render Props pattern, I suggest you stop reading now and read
 ["Use a Render Prop"](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)

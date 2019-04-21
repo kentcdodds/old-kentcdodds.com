@@ -5,9 +5,9 @@ date: '2015-12-07'
 author: Kent C. Dodds
 description: _Why it can be worth spending 1 hour automating a 10 second task_
 keywords:
-  - JavaScript
-  - Automation
-  - Web Development
+  - javascript
+  - automation
+  - web development
 banner: ./images/banner.jpg
 bannerCredit: 'Rube Goldberg Machine'
 redirects:
@@ -161,7 +161,7 @@ something will actually help you get your job done and ship stuff faster —�
 fewer bugs than by regularly repeating the same steps in your workflow.
 
 If you’ve automated something and want to open source it, you might check out my
-Egghead.io series of over 20 free 5 minute lessons called
+egghead.io series of over 20 free 5 minute lessons called
 “[How to Write an Open Source JavaScript Library](https://egghead.io/series/how-to-write-an-open-source-javascript-library)”
 
 Catch you on [Twitter](https://twitter.com/kentcdodds) and

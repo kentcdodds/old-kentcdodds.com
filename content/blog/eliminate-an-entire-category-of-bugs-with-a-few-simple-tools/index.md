@@ -7,8 +7,8 @@ description: >-
   _How you can use a few simple static code analysis tools to avoid common
   programming bugs._
 keywords:
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Matt Artz](https://unsplash.com/photos/4mAcustUNPs) on

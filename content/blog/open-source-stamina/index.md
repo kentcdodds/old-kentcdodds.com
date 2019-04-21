@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description: _You contribute best to something you use regularly._
 keywords:
   - Nodejs
-  - JavaScript
-  - Open Source
+  - javascript
+  - open source
 banner: ./images/banner.jpg
 ---
 

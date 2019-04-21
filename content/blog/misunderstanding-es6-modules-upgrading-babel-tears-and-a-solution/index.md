@@ -7,9 +7,9 @@ description: >-
   _On October 29th, 2015, Sebastian McKenzie, James Kyle, and the rest of the
   Babel team dropped a huge major release for frontend developers..._
 keywords:
-  - JavaScript
+  - javascript
   - ES6
-  - Babeljs
+  - babeljs
 banner: ./images/banner.jpg
 bannerCredit: 'Those are supposed to be_tears...'
 ---
@@ -205,7 +205,7 @@ The real lesson from all of this is that we should learn how things are supposed
 to work. I could have saved myself a great deal of time if I had just understood
 how the ES6 module spec actually is intended to work.
 
-You may benefit from this Egghead.io lesson I made demonstrating how to upgrade
+You may benefit from this egghead.io lesson I made demonstrating how to upgrade
 from Babel 5 to Babel 6:
 
 [https://egghead.io/lessons/angularjs-updating-babel-5-to-6](https://egghead.io/lessons/angularjs-updating-babel-5-to-6)

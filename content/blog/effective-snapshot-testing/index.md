@@ -7,10 +7,9 @@ description: >-
   _Snapshot testing can be useless, or super useful. Your choice. Let's talk
   about how to make them useful._
 keywords:
-  - JavaScript
-  - Testing
-  - Jest
-  - Snapshot Testing
+  - javascript
+  - testing
+  - jest
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Paul Skorupskas](https://unsplash.com/photos/7KLa-xLbSXA) on
@@ -77,7 +76,7 @@ wrote below. I'll then talk about some of my thoughts on what he says.
 
 If you know me, you'll know that I really appreciate the
 [Jest's snapshot testing feature](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
-(For those of you subscribed on Egghead.io
+(For those of you subscribed on egghead.io
 [watch this](https://egghead.io/lessons/javascript-use-jest-s-snapshot-testing-feature?pl=testing-javascript-with-jest-a36c4074)).
 That said, I share Justin's feelings about them on many levels. The quote above
 from Justin is just full of golden insights that we should not ignore. I've

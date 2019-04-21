@@ -5,11 +5,7 @@ date: '2017-06-06'
 author: Kent C. Dodds
 description: _When I use classes, when I don't, what I do instead, and why_
 keywords:
-  - JavaScript
-  - ES6
-  - Classes
-  - Functional Programming
-  - Complexity
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit: >-
   Obligatory semi-to-not-related header image via:

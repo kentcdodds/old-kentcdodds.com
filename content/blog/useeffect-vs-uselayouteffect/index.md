@@ -5,18 +5,18 @@ date: '2018-11-26'
 author: Kent C. Dodds
 description: _The simple rules for when to use each._
 keywords:
-  - React
-  - JavaScript
-  - React Hooks
+  - react
+  - javascript
+  - react hooks
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mohamed Nohassi](https://unsplash.com/photos/sNYSV3t2w58) on
   [Unsplash](https://unsplash.com/search/photos/special-effects)'
 ---
 
-Both of these can be used to do basically the same thing, but they have
-slightly different use cases. So here are some rules for you to consider
-when deciding which [React Hook](https://reactjs.org/hooks) to use.
+Both of these can be used to do basically the same thing, but they have slightly
+different use cases. So here are some rules for you to consider when deciding
+which [React Hook](https://reactjs.org/hooks) to use.
 
 ### [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
 
@@ -47,8 +47,8 @@ trigger a synchronous re-render by updating state.
 
 As far as scheduling, this works the same way as `componentDidMount` and
 `componentDidUpdate`. Your code runs immediately after the DOM has been updated,
-but before the browser has had a chance to "paint" those changes (the user doesn't
-actually see the updates until after the browser has repainted).
+but before the browser has had a chance to "paint" those changes (the user
+doesn't actually see the updates until after the browser has repainted).
 
 ### Summary
 
@@ -63,7 +63,7 @@ actually see the updates until after the browser has repainted).
 I think it's going to make React much easier to learn and use.
 
 **Learn more about React from me**:
-[Hooks & Suspense Playlist on Egghead.io](http://kcd.im/hooks-and-suspense) — A
+[Hooks & Suspense Playlist on egghead.io](http://kcd.im/hooks-and-suspense) — A
 free 35 minute list of videos demoing how to use the new React Hooks and
 Suspense features. (Note: these features are still pretty alpha and likely to
 change).

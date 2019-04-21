@@ -7,9 +7,9 @@ description: >-
   _Tests should help me be confident that my application is working and there
   are better ways to do that than shallow rendering._
 keywords:
-  - JavaScript
-  - React
-  - Testing
+  - javascript
+  - react
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Teddy Kelley](https://unsplash.com/photos/okavjRLgnjo) on

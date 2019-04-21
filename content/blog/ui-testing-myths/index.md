@@ -5,8 +5,8 @@ date: '2018-11-08'
 author: Kent C. Dodds
 description: _Some common myths around testing and what the reality is..._
 keywords:
-  - React
-  - Testing
+  - react
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Geran de Klerk](https://unsplash.com/photos/KsMD_tAdjg0) on

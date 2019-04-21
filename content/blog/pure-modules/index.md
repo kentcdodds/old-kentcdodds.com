@@ -7,7 +7,7 @@ description: >-
   _How you write your ES Modules impacts the performance and maintainability of
   your code._
 keywords:
-  - JavaScript
+  - javascript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Mohan Murugesan](https://unsplash.com/photos/aPUi7w4kKbI) on

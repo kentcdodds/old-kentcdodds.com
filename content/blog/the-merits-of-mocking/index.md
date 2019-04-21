@@ -6,8 +6,8 @@ author: Kent C. Dodds
 description:
   '_What are you doing when you mock something, and when is it worth the cost?_'
 keywords:
-  - JavaScript
-  - Testing
+  - javascript
+  - testing
 banner: ./images/banner.jpg
 bannerCredit:
   "Photo by [Charles Deluvio

@@ -5,8 +5,8 @@ date: '2016-07-05'
 author: Kent C. Dodds
 description: _A technique to help you reduce maintenance challenges_
 keywords:
-  - JavaScript
-  - React
+  - javascript
+  - react
   - Architecture
   - Code
   - Clean Code

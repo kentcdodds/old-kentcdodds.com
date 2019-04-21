@@ -5,8 +5,8 @@ date: '2018-09-10'
 author: Kent C. Dodds
 description: _A simple trick to simplify your application and component state_
 keywords:
-  - JavaScript
-  - Software Development
+  - javascript
+  - web development
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [tom coe](https://unsplash.com/photos/cWprUH8sZ9M) on
@@ -102,7 +102,7 @@ https://twitter.com/yminsky/status/1034947939364425731
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
   [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — **A
-  30 talk on Egghead** (30 minutes... weird right?!) about testing React
+  30 talk on egghead** (30 minutes... weird right?!) about testing React
   components.
 
 **Things to not miss**:

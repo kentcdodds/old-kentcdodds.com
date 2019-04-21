@@ -6,7 +6,7 @@ author: Kent C. Dodds
 description: _Some solid reasons you should delete code that is not used_
 keywords:
   - Git
-  - Github
+  - github
   - Code
 banner: ./images/banner.jpg
 bannerCredit: 'git diff contains the knowledge we_seek'

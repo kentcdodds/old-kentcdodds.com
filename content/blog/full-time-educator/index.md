@@ -7,7 +7,9 @@ description:
   After years of teaching on the side, I've decided to take the plunge and go
   full-time as an educator!
 categories: ['personal']
-keywords: ['personal', 'career', 'education']
+keywords:
+  - personal
+  - career
 banner: './banner.jpg'
 ---
 
@@ -34,7 +36,7 @@ So what am I working on? Here are a few things I'm planning:
    livestreams!
 4. Some time to write and publish my fantasy novels:
    [Shurlan](https://kcd.im/shurlan) ⚪
-5. More [Egghead.io](https://kcd.im/egghead) and
+5. More [egghead.io](https://kcd.im/egghead) and
    [Frontend Masters](https://kcd.im/fem) courses!
 6. Improved curation of the mountain of content I've put together over the
    years, making it easier for you to pull value out of the stuff I'm creating.
@@ -49,7 +51,7 @@ really proud of while there. If you're looking for a place to work, I highly
 recommend you [give PayPal a close look](http://paypal.jobs).
 
 I can't wait to show you what I have in store for you. Just to get things going,
-I made this Egghead.io lesson today! Give it a watch 💯
+I made this egghead.io lesson today! Give it a watch 💯
 
 [**Detect user activity with a custom useIdle React Hook**](https://egghead.io/lessons/react-detect-user-activity-with-a-custom-useidle-react-hook?pl=react-hooks-and-suspense-650307f2)
 

@@ -5,7 +5,9 @@ title: 'React Hooks: Compound Components'
 author: 'Kent C. Dodds'
 description: How do compound components change with React hooks?
 categories: ['react']
-keywords: ['react', 'javascript', 'hooks']
+keywords:
+  - react
+  - react hooks
 banner: './banner.jpg'
 bannerCredit:
   Photo by [karl S](https://unsplash.com/photos/remgiCyeqHI) on

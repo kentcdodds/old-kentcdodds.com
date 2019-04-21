@@ -7,8 +7,8 @@ description: >-
   _You may use it every day, but have you seen what happens after Babel compiles
   it?_
 keywords:
-  - React
-  - JavaScript
+  - react
+  - javascript
   - Jsx
 banner: ./images/banner.jpg
 bannerCredit:

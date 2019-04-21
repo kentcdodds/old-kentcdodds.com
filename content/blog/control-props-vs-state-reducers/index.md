@@ -6,7 +6,8 @@ author: 'Kent C. Dodds'
 description:
   'Comparing two similar patterns that enable many of the same use cases.'
 categories: ['test']
-keywords: ['test']
+keywords:
+  - react
 banner: './images/banner.jpg'
 bannerCredit: 'someone'
 ---
