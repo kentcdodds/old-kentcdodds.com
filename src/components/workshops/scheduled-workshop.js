@@ -197,7 +197,7 @@ function ScheduledWorkshop({
         >
           <em>
             early bird ends:{' '}
-            {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a ')} (Pacific)
+            {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a (ZZ)')}
           </em>
         </div>
       )}
