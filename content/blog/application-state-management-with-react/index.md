@@ -275,6 +275,57 @@ way:
 2. Not all of your context needs to be globally accessible! **Keep state as
    close to where it's needed as possible.**
 
+More on that second point. Your app could tree look something like this:
+
+```javascript
+function App() {
+  return (
+    <ThemeProvider>
+      <AuthenticationProvider>
+        <Router>
+          <Home path="/" />
+          <About path="/" />
+          <UserPage path="/:userId" />
+          <UserSettings path="/settings" />
+          <Notifications path="/notifications" />
+        </Router>
+      </AuthenticationProvider>
+    </ThemeProvider>
+  )
+}
+
+function Notifications() {
+  return (
+    <NotificationsProvider>
+      <NotificationsTab />
+      <NotificationsTypeList />
+      <NotificationsList />
+    </NotificationsProvider>
+  )
+}
+
+function UserPage({username}) {
+  return (
+    <UserProvider username={username}>
+      <UserInfo />
+      <UserNav />
+      <UserActivity />
+    </UserProvider>
+  )
+}
+
+function UserSettings() {
+  // this would be the associated hook for the AuthenticationProvider
+  const {user} = useAuthenticatedUser()
+}
+```
+
+Notice that each page can have its own provider that has data necessary for the
+components underneath it. Code splitting "just works" for this stuff as well.
+How you get data _into_ each provider is up to the hooks those providers use and
+how you retrieve data in your application, but you know just where to start
+looking to find out how that works (in the provider).
+
 ## Conclusion
 
 Again, this is something that you can do with class components (you don't have
