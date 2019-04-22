@@ -284,7 +284,7 @@ function App() {
       <AuthenticationProvider>
         <Router>
           <Home path="/" />
-          <About path="/" />
+          <About path="/about" />
           <UserPage path="/:userId" />
           <UserSettings path="/settings" />
           <Notifications path="/notifications" />
