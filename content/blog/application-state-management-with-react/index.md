@@ -223,6 +223,12 @@ function App() {
 
 [![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F03-context.js&moduleview=1)
 
+> NOTE: That particular code example is VERY contrived and I would NOT recommend
+> you reach for context to solve this specific scenario. Please read
+> [Prop Drilling](/blog/prop-drilling) to get a better sense for why prop
+> drilling isn't necessarily a problem and is often desirable. Don't reach for
+> context too soon!
+
 And what's cool about this approach is that we could put all the logic for
 common ways to update the state in our `useContext` hook (or directly in context
 if you want I guess):
