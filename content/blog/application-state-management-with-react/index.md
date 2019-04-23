@@ -142,9 +142,8 @@ the docs for as long as I can remember:
 React and it's a rock solid one. Here's how you apply it to this situation:
 
 ```javascript
-function Counter({count, setCount}) {
-  const increment = () => setCount(c => c + 1)
-  return <button onClick={increment}>{count}</button>
+function Counter({count, onIncrementClick}) {
+  return <button onClick={onIncrementClick}>{count}</button>
 }
 
 function CountDisplay({count}) {
@@ -153,10 +152,11 @@ function CountDisplay({count}) {
 
 function App() {
   const [count, setCount] = React.useState(0)
+  const increment = () => setCount(c => c + 1)
   return (
     <div>
       <CountDisplay count={count} />
-      <Counter count={count} setCount={setCount} />
+      <Counter count={count} onIncrementClick={increment} />
     </div>
   )
 }
