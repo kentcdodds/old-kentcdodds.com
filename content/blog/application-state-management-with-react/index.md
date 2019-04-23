@@ -182,7 +182,9 @@ function useCount() {
 }
 
 function CountProvider(props) {
-  return <CountContext.Provider value={React.useState(0)} {...props} />
+  const [count, setCount] = React.useState(0)
+  const value = React.useMemo(() => [count, setCount], [count])
+  return <CountContext.Provider value={value} {...props} />
 }
 
 // src/index.js
@@ -243,12 +245,9 @@ function countReducer(state, action) {
 }
 
 function CountProvider(props) {
-  return (
-    <CountContext.Provider
-      value={React.useReducer(countReducer, {count: 0})}
-      {...props}
-    />
-  )
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0})
+  const value = React.useMemo(() => [state, dispatch], [state])
+  return <CountContext.Provider value={value} {...props} />
 }
 
 function useCount() {
