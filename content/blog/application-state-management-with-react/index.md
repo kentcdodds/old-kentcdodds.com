@@ -56,15 +56,16 @@ gets, the harder this problem becomes. Sure you can hook up different reducers
 to manage different parts of your application, but the indirection of going
 through all these action creators and reducers is not optimal.
 
-Also having your entire application state in a single object is one reason why
-react-redux is having trouble integrating with react hooks right now (any change
-to the single store object results in all redux hook consumers getting
-rerendered even when they don't care about that particular part of the state
-change). Note, they have a different solution for this in
-react-redux@7.1.0-alpha.0 which uses context to manage subscriptions rather than
-the actual store value. But my point is that you don't have this problem if you
-have your state more logically separated and located in the react tree closer to
-where it matters.
+Having all your application state in a single object can also lead to other
+problems, even if you're not using Redux. When a React <Context.Provider> gets a
+new value, all the components that consume that value are updated and have to
+render, even if it's a function component that only cares about part of the
+data. That might lead to potential performance issues. (React-Redux v6 also
+tried to use this approach until they realized it wouldn't work right with
+hooks, which forced them to use a different approach with v7 to solve these
+issues.) But my point is that you don't have this problem if you have your state
+more logically separated and located in the react tree closer to where it
+matters.
 
 ---
 
