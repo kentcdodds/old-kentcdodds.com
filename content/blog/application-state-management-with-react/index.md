@@ -227,10 +227,12 @@ function useCount() {
   if (!context) {
     throw new Error(`useCount must be used within a CountProvider`)
   }
+  const [count, setCount] = context
 
-  const increment = () => context.setCount(c => c + 1)
+  const increment = () => setCount(c => c + 1)
   return {
-    ...context,
+    count,
+    setCount,
     increment,
   }
 }
@@ -261,11 +263,12 @@ function useCount() {
   if (!context) {
     throw new Error(`useCount must be used within a CountProvider`)
   }
+  const [state, dispatch] = context
 
-  const increment = () => context.dispatch({type: 'INCREMENT'})
+  const increment = () => dispatch({type: 'INCREMENT'})
   return {
-    ...context.state,
-    dispatch: context.dispatch,
+    state,
+    dispatch,
     increment,
   }
 }
