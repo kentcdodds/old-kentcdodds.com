@@ -60,9 +60,11 @@ Also having your entire application state in a single object is one reason why
 react-redux is having trouble integrating with react hooks right now (any change
 to the single store object results in all redux hook consumers getting
 rerendered even when they don't care about that particular part of the state
-change). Note, they have a workaround for this in react-redux@7.1.0-alpha.0, but
-my point is that you don't have this problem if you have your state more
-logically separated and located in the react tree closer to where it matters.
+change). Note, they have a different solution for this in
+react-redux@7.1.0-alpha.0 which uses context to manage subscriptions rather than
+the actual store value. But my point is that you don't have this problem if you
+have your state more logically separated and located in the react tree closer to
+where it matters.
 
 ---
 
