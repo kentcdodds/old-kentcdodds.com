@@ -181,8 +181,11 @@ React docs. But now that `context` is an officially supported part of the React
 API, we can use this directly without any problem:
 
 ```javascript
-// src/context/count.js
+// src/count/count-context.js
+import React from 'react'
+
 const CountContext = React.createContext()
+
 function useCount() {
   const context = React.useContext(CountContext)
   if (!context) {
@@ -197,7 +200,12 @@ function CountProvider(props) {
   return <CountContext.Provider value={value} {...props} />
 }
 
-// src/index.js
+export {CountProvider, useCount}
+
+// src/count/page.js
+import React from 'react'
+import {CountProvider, useCount} from './count-context'
+
 function Counter() {
   const [count, setCount] = useCount()
   const increment = () => setCount(c => c + 1)
@@ -209,7 +217,7 @@ function CountDisplay() {
   return <div>The current counter count is {count}</div>
 }
 
-function App() {
+function CountPage() {
   return (
     <div>
       <CountProvider>
