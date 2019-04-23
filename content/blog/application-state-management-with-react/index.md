@@ -200,8 +200,10 @@ function CountDisplay() {
 function App() {
   return (
     <div>
-      <CountDisplay />
-      <Counter />
+      <CountProvider>
+        <CountDisplay />
+        <Counter />
+      </CountProvider>
     </div>
   )
 }
