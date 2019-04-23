@@ -275,7 +275,7 @@ way:
 2. Not all of your context needs to be globally accessible! **Keep state as
    close to where it's needed as possible.**
 
-More on that second point. Your app could tree look something like this:
+More on that second point. Your app tree could look something like this:
 
 ```javascript
 function App() {
