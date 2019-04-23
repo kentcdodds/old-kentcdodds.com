@@ -54,11 +54,15 @@ To be clear, this is fine for state that is truly global, but for simple state
 To make matters worse, it doesn't scale very well. The larger your application
 gets, the harder this problem becomes. Sure you can hook up different reducers
 to manage different parts of your application, but the indirection of going
-through all these action creators and reducers is not optimal. And having your
-entire application state in a single object is one reason why react-redux is
-having trouble integrating with react hooks right now (any change to the single
-store object results in all redux hook consumers getting rerendered even when
-they don't care about that particular part of the state change).
+through all these action creators and reducers is not optimal.
+
+Also having your entire application state in a single object is one reason why
+react-redux is having trouble integrating with react hooks right now (any change
+to the single store object results in all redux hook consumers getting
+rerendered even when they don't care about that particular part of the state
+change). Note, they have a workaround for this in react-redux@7.1.0-alpha.0, but
+my point is that you don't have this problem if you have your state more
+logically separated and located in the react tree closer to where it matters.
 
 ---
 
