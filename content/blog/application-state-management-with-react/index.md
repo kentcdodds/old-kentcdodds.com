@@ -33,10 +33,10 @@ excludes the state aspect. The "secret" behind my personal solution to the state
 management problem is to think of how your application's state maps to the
 application's tree structure.
 
-One of the reasons redux was so successful was the fact that react-redux
-solved the [prop drilling](/blog/prop-drilling) problem. The fact that you could
-share data across different parts of your tree by simply passing your component
-into some magical `connect` function was wonderful. Its use of reducers/action
+One of the reasons redux was so successful was the fact that react-redux solved
+the [prop drilling](/blog/prop-drilling) problem. The fact that you could share
+data across different parts of your tree by simply passing your component into
+some magical `connect` function was wonderful. Its use of reducers/action
 creators/etc. is great too, but I'm convinced that the ubiquity of redux is
 because it solved the prop drilling pain point for developers.
 
@@ -45,9 +45,9 @@ project: I consistently see developers putting _all_ of their state into redux.
 Not just global application state, but local state as well. This leads to a lot
 of problems, not the least of which is that when you're maintaining any state
 interaction, it involves interacting with reducers, action creators/types, and
-dispatch calls, which ultimately results in having to open many files and
-trace through the code in your head to figure out what's happening and what
-impact it has on the rest of the codebase.
+dispatch calls, which ultimately results in having to open many files and trace
+through the code in your head to figure out what's happening and what impact it
+has on the rest of the codebase.
 
 To be clear, this is fine for state that is truly global, but for simple state
 (like whether a modal is open or form input value state) this is a big problem.
@@ -78,11 +78,11 @@ documented by the React team. It's React itself.
 
 When you build a React application, you're assembling a bunch of components to
 make a tree of components starting at your `<App />` and ending at your
-`<input />`s, `<div />`s and `<button />`s. You don't manage all of the low-level
-composite components that your application renders in one central location.
-Instead, you let each individual component manage that and it ends up being a
-really effective way to build your UI. You can do this with your state as well,
-and it's very likely that you do today:
+`<input />`s, `<div />`s and `<button />`s. You don't manage all of the
+low-level composite components that your application renders in one central
+location. Instead, you let each individual component manage that and it ends up
+being a really effective way to build your UI. You can do this with your state
+as well, and it's very likely that you do today:
 
 ```javascript {2}
 function Counter() {
@@ -95,6 +95,8 @@ function App() {
   return <Counter />
 }
 ```
+
+[![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F01-simple-count.js&moduleview=1)
 
 Note that everything I'm talking about here works with class components as well.
 Hooks just make things a bit easier (especially context which we'll get into in
@@ -162,6 +164,8 @@ function App() {
 }
 ```
 
+[![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F02-lift-state.js&moduleview=1)
+
 We've just changed who's responsible for our state and it's really
 straightforward. And we could keep lifting state all the way to the top of our
 app.
@@ -217,6 +221,8 @@ function App() {
 }
 ```
 
+[![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F03-context.js&moduleview=1)
+
 And what's cool about this approach is that we could put all the logic for
 common ways to update the state in our `useContext` hook (or directly in context
 if you want I guess):
@@ -237,6 +243,8 @@ function useCount() {
   }
 }
 ```
+
+[![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F04-context-with-logic.js&moduleview=1)
 
 And you could easily change this to `useReducer` rather than `useState` as well:
 
@@ -273,6 +281,8 @@ function useCount() {
   }
 }
 ```
+
+[![Edit React Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4qzj73lozx?fontsize=14&hidenavigation=1&module=%2Fsrc%2F05-context-with-reducer.js&moduleview=1)
 
 This gives you an immense amount of flexibility and reduces complexity by orders
 of magnitude. Here are a few important things to remember when doing things this
