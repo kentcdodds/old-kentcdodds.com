@@ -37,7 +37,7 @@ One of the reasons redux was so successful was the fact that it react-redux
 solved the [prop drilling](/blog/prop-drilling) problem. The fact that you could
 share data across different parts of your tree by simply passing your component
 into some magical `connect` function was wonderful. It's use of reducers/action
-creators/etc. is great to, but I'm convinced that the ubiquity of redux is
+creators/etc. is great too, but I'm convinced that the ubiquity of redux is
 because it solved the prop drilling pain point for developers.
 
 Unfortunately, this led to the reason that I only ever used redux on one
@@ -200,8 +200,8 @@ function CountDisplay() {
 function App() {
   return (
     <div>
-      <CountDisplay count={count} />
-      <Counter count={count} setCount={setCount} />
+      <CountDisplay />
+      <Counter />
     </div>
   )
 }
