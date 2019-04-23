@@ -33,10 +33,10 @@ excludes the state aspect. The "secret" behind my personal solution to the state
 management problem is to think of how your application's state maps to the
 application's tree structure.
 
-One of the reasons redux was so successful was the fact that it react-redux
+One of the reasons redux was so successful was the fact that react-redux
 solved the [prop drilling](/blog/prop-drilling) problem. The fact that you could
 share data across different parts of your tree by simply passing your component
-into some magical `connect` function was wonderful. It's use of reducers/action
+into some magical `connect` function was wonderful. Its use of reducers/action
 creators/etc. is great too, but I'm convinced that the ubiquity of redux is
 because it solved the prop drilling pain point for developers.
 
@@ -45,7 +45,7 @@ project: I consistently see developers putting _all_ of their state into redux.
 Not just global application state, but local state as well. This leads to a lot
 of problems, not the least of which is that when you're maintaining any state
 interaction, it involves interacting with reducers, action creators/types, and
-dispatch calls, which ultimately resulting in having to open many files and
+dispatch calls, which ultimately results in having to open many files and
 trace through the code in your head to figure out what's happening and what
 impact it has on the rest of the codebase.
 
@@ -78,7 +78,7 @@ documented by the React team. It's React itself.
 
 When you build a React application, you're assembling a bunch of components to
 make a tree of components starting at your `<App />` and ending at your
-`<input />`s `<div />`s and `<button />`s. You don't manage all of the low-level
+`<input />`s, `<div />`s and `<button />`s. You don't manage all of the low-level
 composite components that your application renders in one central location.
 Instead, you let each individual component manage that and it ends up being a
 really effective way to build your UI. You can do this with your state as well,
