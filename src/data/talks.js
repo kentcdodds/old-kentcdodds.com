@@ -52,9 +52,8 @@ export default [
     resources: [],
     tags: ['react'],
     deliveries: [
-      // TODO: add the conference when it's announced.
       {
-        event: 'TBA',
+        event: '[React Rally 2019](https://www.reactrally.com/)',
         date: '2019-08-22',
       },
     ],
@@ -249,7 +248,7 @@ export default [
           'https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event: '[React Rally 2018](https://www.reactrally.com/)',
+        event: '[React Rally 2018](https://2018.reactrally.com/)',
         date: '2018-08-16',
         recording:
           'https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
