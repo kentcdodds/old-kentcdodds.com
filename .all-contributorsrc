@@ -319,6 +319,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "markerikson",
+      "name": "Mark Erikson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1128784?v=4",
+      "profile": "http://blog.isquaredsoftware.com",
+      "contributions": [
+        "content"
+      ]
     }
   ]
 }
