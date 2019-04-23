@@ -189,8 +189,7 @@ function useCount() {
 
 function CountProvider(props) {
   const [count, setCount] = React.useState(0)
-  const value = React.useMemo(() => [count, setCount], [count])
-  return <CountContext.Provider value={value} {...props} />
+  return <CountContext.Provider value={[count, setCount]} {...props} />
 }
 
 // src/index.js
