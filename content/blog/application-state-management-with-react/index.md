@@ -57,8 +57,8 @@ to manage different parts of your application, but the indirection of going
 through all these action creators and reducers is not optimal.
 
 Having all your application state in a single object can also lead to other
-problems, even if you're not using Redux. When a React <Context.Provider> gets a
-new value, all the components that consume that value are updated and have to
+problems, even if you're not using Redux. When a React `<Context.Provider>` gets
+a new value, all the components that consume that value are updated and have to
 render, even if it's a function component that only cares about part of the
 data. That might lead to potential performance issues. (React-Redux v6 also
 tried to use this approach until they realized it wouldn't work right with
