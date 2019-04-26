@@ -32,7 +32,7 @@ This year I
 and
 [introduced react-testing-library](https://blog.kentcdodds.com/introducing-the-react-testing-library-e3a274307e65).
 It has [grown a lot](https://www.npmtrends.com/react-testing-library) since
-then. [The spectrum community](https://spectrum.chat/react-testing-library) has
+then. [The spectrum community](https://spectrum.chat/testing-library) has
 [over 300 members now](https://twitter.com/kentcdodds/status/1079523389553790976).
 We've [really](https://twitter.com/Saifadin/status/1079746658882195457)
 [had](https://twitter.com/blankmannow/status/1079358441380954112)
