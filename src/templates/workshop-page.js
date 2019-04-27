@@ -4,17 +4,18 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from 'components/seo'
 import Container from 'components/container'
 import Layout from 'components/layout'
-import SubscribeForm from 'components/forms/subscribe'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import get from 'lodash/get'
 import isEmpty from 'lodash/isEmpty'
 import Header from 'components/workshops/header'
 import useGetWorkshops from 'components/workshops/use-get-workshops'
+import WorkshopInterestForm from 'components/workshops/workshop-interest-form'
 import {bpMaxSM} from '../lib/breakpoints'
 
 export default function Workshop({data: {site, mdx}}) {
-  const {title, banner, noFooter} = mdx.fields
+  const {title, banner} = mdx.fields
+  const {ckTag} = mdx.frontmatter
   const state = useGetWorkshops()
   const events = state.events.filter(ws => {
     return ws.title.toLowerCase() === title.toLowerCase()
@@ -24,8 +25,7 @@ export default function Workshop({data: {site, mdx}}) {
       site={site}
       frontmatter={mdx.fields}
       headerLink="/workshops"
-      noFooter={noFooter}
-      subscribeForm={<SubscribeForm />}
+      noFooter={true}
     >
       <SEO
         frontmatter={mdx.fields}
@@ -101,6 +101,9 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          {isEmpty(events) && (
+            <WorkshopInterestForm subscribeToTag={ckTag} title={title} />
+          )}
         </Container>
       </article>
     </Layout>
@@ -116,11 +119,7 @@ export const pageQuery = graphql`
     }
     mdx(fields: {id: {eq: $id}}) {
       frontmatter {
-        soldOut
-        discount
-        event
-        time
-        dealEndDate
+        ckTag
       }
       fields {
         editLink
