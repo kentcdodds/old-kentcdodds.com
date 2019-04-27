@@ -15,7 +15,7 @@ import {bpMaxSM} from '../lib/breakpoints'
 
 export default function Workshop({data: {site, mdx}}) {
   const {title, banner} = mdx.fields
-  const {ckTag} = mdx.fields
+  const {ckTag} = mdx.frontmatter
   const state = useGetWorkshops()
   const events = state.events.filter(ws => {
     return ws.title.toLowerCase() === title.toLowerCase()

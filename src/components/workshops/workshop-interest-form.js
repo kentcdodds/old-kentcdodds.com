@@ -80,53 +80,6 @@ const StyledForm = styled(Form)`
   }
 `
 
-export function TinyLetterSubscribe() {
-  return (
-    <SubscribeFormWrapper>
-      <StyledForm
-        action="https://tinyletter.com/shurlan"
-        method="post"
-        target="popupwindow"
-        onSubmit={() => {
-          window.open(
-            'https://tinyletter.com/shurlan',
-            'popupwindow',
-            'scrollbars=yes,width=800,height=600',
-          )
-          return true
-        }}
-      >
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(1)};
-            margin-top: 0;
-            color: white;
-          `}
-        >
-          Join the Writing Newsletter
-        </h3>
-        <p
-          css={css`
-            margin-top: 15px;
-          `}
-        >
-          <label htmlFor="tlemail">Email address:</label>
-          <input
-            aria-label="your email address"
-            aria-required="true"
-            placeholder="jane@acme.com"
-            type="email"
-            name="email"
-            id="tlemail"
-          />
-        </p>
-        <input type="hidden" value="1" name="embed" />
-        <button type="submit">Subscribe</button>
-      </StyledForm>
-    </SubscribeFormWrapper>
-  )
-}
-
 function fetchReducer(state, {type, response, error}) {
   switch (type) {
     case 'fetching': {
