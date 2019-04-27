@@ -101,7 +101,9 @@ export default function Workshop({data: {site, mdx}}) {
             `}
           />
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
-          <WorkshopInterestForm subscribeToTag={ckTag} title={title} />
+          {isEmpty(events) && (
+            <WorkshopInterestForm subscribeToTag={ckTag} title={title} />
+          )}
         </Container>
       </article>
     </Layout>
