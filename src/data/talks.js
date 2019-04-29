@@ -72,11 +72,13 @@ export default [
   },
   {
     title: 'Requisite React',
-    resources: [],
+    resources: ['[slides](https://github.com/kentcdodds/requisite-react)'],
     tags: ['react'],
     deliveries: [
       {
         event: '[React.Amsterdam](https://react.amsterdam/)',
+        recording:
+          'https://www.youtube.com/watch?v=tO8qHlr6Wqg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2019-04-12',
       },
     ],
