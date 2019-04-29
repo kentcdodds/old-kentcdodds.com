@@ -1,16 +1,14 @@
 import React from 'react'
 import ScheduledWorkshop from './scheduled-workshop'
 import get from 'lodash/get'
-import find from 'lodash/find'
-
 import {css} from '@emotion/core'
-import useGetWorkshops from './use-get-workshops'
+import {useWorkshopEvents} from './context'
 
 const UpcomingWorkshops = ({byKeywords, headline}) => {
-  const state = useGetWorkshops(byKeywords)
+  const {events} = useWorkshopEvents(byKeywords)
   return (
     <div>
-      {state.events.length ? (
+      {events.length ? (
         <div
           css={css`
             margin-top: -30px;
@@ -27,22 +25,19 @@ const UpcomingWorkshops = ({byKeywords, headline}) => {
               {headline}
             </h1>
           )}
-          {state.events.map(event => {
-            const workshop = find(state.workshops, ws => {
-              return ws.title.toLowerCase() === event.title.toLowerCase()
-            })
+          {events.map(event => {
             const discount = get(event, 'discounts.early', false)
             return (
               <ScheduledWorkshop
                 buttonText={discount ? 'Secure a Discount' : 'Secure Your Seat'}
-                tech={workshop.tech}
-                description={workshop.description}
+                tech={event.tech}
+                description={event.description}
                 title={event.title}
                 imageUrl={event.logo.url}
                 date={event.date}
                 spotsRemaining={event.remaining}
                 bookUrl={discount ? discount.url : event.url}
-                url={workshop.slug}
+                url={event.workshopSlug}
                 soldOut={event.remaining === 0}
                 key={event.slug}
                 startTime={event.startTime}

@@ -10,6 +10,10 @@ import Share from 'components/share'
 import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
 import BlogPostFooter from 'components/blog-post-footer'
 import TestingCta from 'components/testing-cta'
+import {
+  WorkshopEventsProvider,
+  useWorkshopEvents,
+} from 'components/workshops/context'
 import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
@@ -18,11 +22,18 @@ import get from 'lodash/get'
 import intersection from 'lodash/intersection'
 import flatMap from 'lodash/flatMap'
 import first from 'lodash/first'
-import useGetWorkshops from 'components/workshops/use-get-workshops'
 import UpcomingWorkshops from 'components/workshops/upcoming-workshops'
 import titleCase from 'ap-style-title-case'
 
-export default function Post({data: {site, mdx}}) {
+export default function PostPage(props) {
+  return (
+    <WorkshopEventsProvider>
+      <Post {...props} />
+    </WorkshopEventsProvider>
+  )
+}
+
+function Post({data: {site, mdx}}) {
   const {
     isWriting,
     editLink,
@@ -36,10 +47,10 @@ export default function Post({data: {site, mdx}}) {
     keywords,
   } = mdx.fields
 
-  const {events} = useGetWorkshops(keywords)
+  const {eventsByKeywords} = useWorkshopEvents({keywords})
 
   const commonKeyword = first(
-    intersection(flatMap(events, event => event.keywords), keywords),
+    intersection(flatMap(eventsByKeywords, event => event.keywords), keywords),
   )
 
   const blogPostUrl = `${config.siteUrl}${slug}`
@@ -152,7 +163,7 @@ export default function Post({data: {site, mdx}}) {
           twitterHandle={config.twitterHandle}
         />
       </Container>
-      {events && (
+      {eventsByKeywords && (
         <div
           css={css`
             margin-top: 55px;
