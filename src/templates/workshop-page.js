@@ -75,8 +75,8 @@ function Workshop({data: {site, mdx}}) {
             </div>
           ) : null}
 
-          {isEmpty(events)
-            ? null
+          {isLoading
+            ? '... loading workshop details...'
             : events.map(scheduledEvent => {
                 const soldOut = scheduledEvent.remaining <= 0
                 const discount = get(scheduledEvent, 'discounts.early', false)

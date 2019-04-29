@@ -2,10 +2,8 @@ import React from 'react'
 import ScheduledWorkshop from './scheduled-workshop'
 import get from 'lodash/get'
 import {css} from '@emotion/core'
-import {useWorkshopEvents} from './context'
 
-const UpcomingWorkshops = ({byKeywords, headline}) => {
-  const {events} = useWorkshopEvents(byKeywords)
+function UpcomingWorkshops({events, headline}) {
   return (
     <div>
       {events.length ? (

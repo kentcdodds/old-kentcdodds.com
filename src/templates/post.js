@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import isEmpty from 'lodash/isEmpty'
 import SEO from 'components/seo'
 import {css} from '@emotion/core'
 import Container from 'components/container'
@@ -47,7 +48,9 @@ function Post({data: {site, mdx}}) {
     keywords,
   } = mdx.fields
 
-  const {eventsByKeywords} = useWorkshopEvents({keywords})
+  const {eventsByKeywords, isLoading: isLoadingEvents} = useWorkshopEvents({
+    keywords,
+  })
 
   const commonKeyword = first(
     intersection(flatMap(eventsByKeywords, event => event.keywords), keywords),
@@ -163,7 +166,11 @@ function Post({data: {site, mdx}}) {
           twitterHandle={config.twitterHandle}
         />
       </Container>
-      {eventsByKeywords && (
+      {isLoadingEvents ? (
+        <div css={{textAlign: 'center'}}>
+          loading relevant upcoming workshops...
+        </div>
+      ) : isEmpty(eventsByKeywords) ? null : (
         <div
           css={css`
             margin-top: 55px;
@@ -177,7 +184,7 @@ function Post({data: {site, mdx}}) {
                 ? titleCase(`Upcoming ${commonKeyword} Workshops`)
                 : 'Upcoming Workshops'
             }
-            byKeywords={keywords}
+            events={eventsByKeywords}
           />
         </div>
       )}
