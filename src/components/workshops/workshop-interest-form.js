@@ -162,7 +162,7 @@ function WorkshopInterestForm({style, subscribeToTag, title}) {
             `}
           >
             <em>
-              Get exlusive access to the best prices, discounts, and guarantee
+              Get exclusive access to the best prices, discounts, and guarantee
               your spot at this workshop.
             </em>
           </p>
