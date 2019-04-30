@@ -11,6 +11,10 @@ import Hero from 'components/big-hero'
 import {uniq, includes, truncate} from 'lodash'
 import HeaderImage from '../../images/workshops-hero.svg'
 
+import {
+  WorkshopEventsProvider,
+  useWorkshopEvents,
+} from 'components/workshops/context'
 import UpcomingWorkshops from 'components/workshops/upcoming-workshops'
 import Workshop from 'components/workshops/workshop'
 
@@ -18,12 +22,21 @@ import jsIcon from '../../images/icons/js.svg'
 import reactIcon from '../../images/icons/react.svg'
 import testingIcon from '../../images/icons/testing.svg'
 
-export default function RemoteWorkshops({data: {workshops}}) {
+export default function RemoteWorkshopsPage(props) {
+  return (
+    <WorkshopEventsProvider>
+      <RemoteWorkshops {...props} />
+    </WorkshopEventsProvider>
+  )
+}
+
+function RemoteWorkshops({data: {workshops}}) {
   const workshopTech = uniq(
     workshops.edges.map(({node: workshop}) => workshop.frontmatter.tech),
   )
 
   const [displayedTech, setDisplayedTech] = React.useState(workshopTech)
+  const {events} = useWorkshopEvents()
 
   const techToggleIsActive = (getDisplayedTech, tech) => {
     return includes(getDisplayedTech, tech) && getDisplayedTech.length === 1
@@ -74,7 +87,7 @@ export default function RemoteWorkshops({data: {workshops}}) {
     >
       <SEO />
       <Container noVerticalPadding>
-        <UpcomingWorkshops />
+        <UpcomingWorkshops events={events} />
 
         <div
           css={css`
