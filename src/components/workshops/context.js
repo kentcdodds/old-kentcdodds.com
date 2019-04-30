@@ -68,24 +68,22 @@ function useWorkshopEvents({keywords: keywordsFilter} = {}) {
     )
   }
   const {data} = context
-  const events = get(data, 'events', [])
-  const eventsByKeywords =
-    isEmpty(events) || isEmpty(keywordsFilter)
-      ? []
-      : events
-          .map(event => {
-            const workshop = workshops.find(w => {
-              return w.title.toLowerCase() === event.title.toLowerCase()
-            })
-            return {
-              ...workshop,
-              ...event,
-              workshopSlug: workshop.slug,
-            }
-          })
-          .filter(
-            event => !isEmpty(intersection(event.keywords, keywordsFilter)),
-          )
+  const events = get(data, 'events', []).map(event => {
+    const workshop =
+      workshops.find(w => {
+        return w.title.toLowerCase() === event.title.toLowerCase()
+      }) || {}
+    return {
+      ...workshop,
+      ...event,
+      workshopSlug: workshop.slug,
+    }
+  })
+  const eventsByKeywords = isEmpty(keywordsFilter)
+    ? []
+    : events.filter(
+        event => !isEmpty(intersection(event.keywords, keywordsFilter)),
+      )
   return {
     ...context,
     events,
