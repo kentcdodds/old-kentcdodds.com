@@ -284,7 +284,7 @@ better.
 ## TypeScript
 
 I promised I'd show you how to avoid issues with skipping the `defaultValue`
-when using TypeScript or Flow. Guess what, by doing what I'm suggesting, you
+when using TypeScript or Flow. Guess what! By doing what I'm suggesting, you
 avoid the problem by default! It's actually not a problem at all. Check it out:
 
 ```typescript {4-7,9-11,30-33}
