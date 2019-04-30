@@ -77,7 +77,7 @@ suggest that providing a default value "can be helpful in testing components in
 isolation without wrapping them." While it's true that it allows you to do this,
 I disagree that it's better than wrapping your components with the necessary
 context. Remember that every time you do something in your test that you don't
-do in your application, you reducing the amount of confidence that test can give
+do in your application, you reduce the amount of confidence that test can give
 you. [There are reasons to do this](/blog/the-merits-of-mocking), but that's not
 one of them.
 
