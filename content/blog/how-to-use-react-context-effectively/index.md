@@ -81,6 +81,10 @@ do in your application, you reducing the amount of confidence that test can give
 you. [There are reasons to do this](/blog/the-merits-of-mocking), but that's not
 one of them.
 
+> Note: If you're using Flow or TypeScript, not providing a default value can be
+> really annoying for people who are using `React.useContext`, but I'll show you
+> how to avoid that problem altogether below. Keep reading!
+
 ## The Custom Provider Component
 
 Ok, let's continue. For this context module to be useful _at all_ we need to use
@@ -109,7 +113,7 @@ import React from 'react'
 const CountContext = React.createContext()
 
 function CountProvider(props) {
-  const [count, setCount] = React.useState()
+  const [count, setCount] = React.useState(0)
   const value = React.useMemo(() => {
     return {
       count,
@@ -201,7 +205,7 @@ import React from 'react'
 const CountContext = React.createContext()
 
 function CountProvider(props) {
-  const [count, setCount] = React.useState()
+  const [count, setCount] = React.useState(0)
   const value = React.useMemo(() => {
     return {
       count,
@@ -277,6 +281,62 @@ This is what I used to do before we had hooks and it worked well. I would not
 recommend bothering with this if you can use hooks though. Hooks are much
 better.
 
+## TypeScript
+
+I promised I'd show you how to avoid issues with skipping the `defaultValue`
+when using TypeScript or Flow. Guess what, by doing what I'm suggesting, you
+avoid the problem by default! It's actually not a problem at all. Check it out:
+
+```typescript {4-7,9-11,30-33}
+// src/count-context.tsx
+import * as React from 'react'
+
+type CountContextValue = {
+  count: number
+  setCount: (updater: (count: number) => number) => void
+}
+
+const CountContext = React.createContext<CountContextValue | undefined>(
+  undefined,
+)
+
+type CountProviderProps = {
+  value?: CountContextValue
+  children: React.ReactNode
+}
+
+function CountProvider(props: CountProviderProps) {
+  const [count, setCount] = React.useState(0)
+  const value = React.useMemo(() => {
+    return {
+      count,
+      setCount,
+    }
+  }, [count])
+  return <CountContext.Provider value={value} {...props} />
+}
+
+function useCount() {
+  const context = React.useContext(CountContext)
+  if (!context) {
+    throw new Error('useCount must be used within a CountProvider')
+  }
+  const {count, setCount} = context
+  const increment = () => setCount(c => c + 1)
+  return {
+    count,
+    increment,
+  }
+}
+
+export {CountProvider, useCount}
+```
+
+With that, anyone can use `useCount` without having to do any undefined-checks
+because we're doing it for them!
+
+[Here's a working codesandbox](https://codesandbox.io/s/m4wk8wlpy8)
+
 ## Conclusion
 
 So here's the final version of the code:
@@ -288,7 +348,7 @@ import React from 'react'
 const CountContext = React.createContext()
 
 function CountProvider(props) {
-  const [count, setCount] = React.useState()
+  const [count, setCount] = React.useState(0)
   const value = React.useMemo(() => {
     return {
       count,
