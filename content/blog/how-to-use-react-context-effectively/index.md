@@ -375,6 +375,8 @@ function useCount() {
 export {CountProvider, useCount}
 ```
 
+[Here's a working codesandbox](https://codesandbox.io/s/3vryq4qrp).
+
 Note that I'm _NOT_ exporting `CountContext`. This is intentional. I expose only
 one way to provide the context value and only one way to consume it. This allows
 me to ensure that people are using the context value the way it should be and it
