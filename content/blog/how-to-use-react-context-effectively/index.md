@@ -254,7 +254,8 @@ customize each use (via arguments to the custom hook) is a nice benefit.
 ## The Custom Consumer Component
 
 If you're able to use hooks at all, then skip this section. However if you need
-to support React `<` 16.8.0 then here's how you could do something similar with
+to support React `<` 16.8.0, or you think the Context needs to be consumed by
+class components, then here's how you could do something similar with
 the render-prop based API for context consumers:
 
 ```javascript
