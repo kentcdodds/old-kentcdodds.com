@@ -29,6 +29,7 @@ function UpcomingWorkshops({events, headline}) {
               <ScheduledWorkshop
                 buttonText={discount ? 'Secure a Discount' : 'Secure Your Seat'}
                 tech={event.tech}
+                waitlistUrl={event.url}
                 description={event.description}
                 title={event.title}
                 imageUrl={event.logo.url}
