@@ -146,7 +146,7 @@ big performance problem if your context has many consumers). So we're using
 > [you could be making things WORSE](https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578).
 
 **`value`**: The `value` variable is being assigned to an object that has the
-state (`count`) and a mechanism for updating the state `increment`. There are
+state (`count`) and a mechanism for updating the state `setCount`. There are
 lots of ways to do this. I've seen people actually put these in two completely
 different contexts (I believe that react-redux actually does this with their
 hooks), and you just consume the thing you want. I personally think that's
