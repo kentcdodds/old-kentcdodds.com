@@ -144,12 +144,12 @@ function ScheduledWorkshop({
                 color: ${theme.colors.body_color};
               `}
             >
-              {soldOut && <b>Sold out</b>}
-              {spotsRemaining && (
+              {soldOut ? <b>Sold out</b> : null}
+              {Boolean(spotsRemaining) ? (
                 <span>
                   <b>{spotsRemaining}</b> spots remaining
                 </span>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
