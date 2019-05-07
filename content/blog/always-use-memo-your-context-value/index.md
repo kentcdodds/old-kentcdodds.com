@@ -152,3 +152,28 @@ Most of the time, this wont be a huge deal, especially if your context value
 doesn't change very often, but it's normally pretty easy to memoize the value
 with `React.useMemo` anyway so may as well do it all the time for your context
 value and avoid the problem.
+
+Good luck!
+
+## An alternative
+
+I should mention there's an alternative approach to this which does not require
+`useMemo`. It involves separating the state and the mechanism for updating that
+state into two separate contexts. Here's that:
+
+https://codesandbox.io/s/ynn88nx9x?view=editor
+
+Not only do you not need to `useMemo` in this case, but you actually can avoid
+re-rendering the components that just use the updater context:
+
+![clicking "force render" three times and "Increment count" twice](./images/split-contexts.gif)
+
+Notice that this is the same as with the `useMemo` solution, except because the
+`<Counter />` component's context isn't getting updated, we avoid the re-render
+of that component entirely which is cool.
+
+I personally feel like this is more complicated of an API than is necessary for
+most situations, so I'll stick with the `useMemo` solution for my own code. But
+if you really have a context with a lot of consumers and many only update the
+context value (not consume it as well), then consider splitting the state
+updater from the state value itself.
