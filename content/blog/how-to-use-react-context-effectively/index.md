@@ -221,7 +221,7 @@ function useCount() {
     throw new Error('useCount must be used within a CountProvider')
   }
   const {count, setCount} = context
-  const increment = () => setCount(c => c + 1)
+  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
   return {
     count,
     increment,
@@ -251,12 +251,17 @@ provider level are useful as well, but start with the hook level first. You'll
 be more likely to avoid mistaken unnecessary re-renders and the ability to
 customize each use (via arguments to the custom hook) is a nice benefit.
 
+In addition, we're putting `increment` in a `useCallback` which enables people
+to pass the `increment` function in a dependencies list. I wouldn't recommend
+putting every inline arrow function in a `useCallback` hook, but for reusable
+code like this it's worth eating into your code's complexity budget.
+
 ## The Custom Consumer Component
 
 If you're able to use hooks at all, then skip this section. However if you need
 to support React `<` 16.8.0, or you think the Context needs to be consumed by
-class components, then here's how you could do something similar with
-the render-prop based API for context consumers:
+class components, then here's how you could do something similar with the
+render-prop based API for context consumers:
 
 ```javascript
 function CountConsumer({children}) {
@@ -323,7 +328,7 @@ function useCount() {
     throw new Error('useCount must be used within a CountProvider')
   }
   const {count, setCount} = context
-  const increment = () => setCount(c => c + 1)
+  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
   return {
     count,
     increment,
@@ -365,7 +370,7 @@ function useCount() {
     throw new Error('useCount must be used within a CountProvider')
   }
   const {count, setCount} = context
-  const increment = () => setCount(c => c + 1)
+  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
   return {
     count,
     increment,
