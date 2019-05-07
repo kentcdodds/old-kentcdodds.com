@@ -133,8 +133,8 @@ provider could use dozens of hooks if it needed to. This is just a small
 contrived example.
 
 **`React.useMemo`**: 99% of the time, your context providers should probably be
-using `useMemo`. I'm not going to go too far into this one (I'll leave that to
-my friends [here](https://github.com/kentcdodds/ama/issues/673)), but just know
+using `useMemo`. If you want to dive deep into this one,
+[read about it here](/blog/always-use-memo-your-context-value), but just know
 that context providers do an equality check on the `value` you provide and if
 it's different between renders it will re-render every consumer (this can be a
 big performance problem if your context has many consumers). So we're using
