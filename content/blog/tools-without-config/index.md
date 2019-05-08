@@ -32,8 +32,7 @@ project. They leave you with all the config and the burden of keeping things up
 to date. And if the generator authors update the generator, what about updating
 all the users? 😑
 
-**_It's a_**
-[**_Sisyphean task_**](https://en.wikipedia.org/wiki/Sisyphus)**_..._**
+**_It's a [Sisyphean task](https://en.wikipedia.org/wiki/Sisyphus)..._**
 
 ![a dog trying to climb a slider but failing](./images/0.gif)
 
