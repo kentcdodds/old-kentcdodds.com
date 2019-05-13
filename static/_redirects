@@ -1,5 +1,7 @@
 # no idea why, but the gatsby redirect doesn't always work right
 
+/blog/always-use-memo-your-context-value        /blog/aha-programming
+/blog/always-use-memo-your-context-value        /blog/aha-programming
 /blog/moist-programming        /blog/aha-programming
 /blog/moist-programming/       /blog/aha-programming
 /aha                           /blog/aha-programming

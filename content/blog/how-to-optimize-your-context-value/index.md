@@ -1,11 +1,11 @@
 ---
-slug: 'always-use-memo-your-context-value'
-title: 'Always useMemo your context value'
+slug: 'how-to-optimize-your-context-value'
+title: 'How to optimize your context value'
 date: '2019-05-06'
 author: 'Kent C. Dodds'
 description:
-  "_Why and how you should always use React's useMemo hook for your context
-  provider value prop_"
+  "_Why and how you can optimize your context provider's value to avoid
+  performance issues_"
 categories:
   - 'react'
 keywords:
@@ -17,7 +17,22 @@ keywords:
 banner: './images/banner.jpg'
 bannerCredit:
   'Photo by [Paweł Czerwiński](https://unsplash.com/photos/_nqApgG-QrY)'
+redirects:
+  - '/blog/always-use-memo-your-context-value'
+  - '/blog/always-use-memo-your-context-value/'
 ---
+
+> NOTE: I want to add that the times it's important to optimize your context
+> value is when a certain combination of the following conditions are met:
+
+1. Your context value changes frequently
+2. Your context has many consumers
+3. You are bothering to use `React.memo` (because things are legit slow)
+4. You've actually measured things and you know it's slow and needs to be
+   optimized
+
+If that explains your situation, then read on (and don't miss the alternative
+solution which is honestly probably better anyway).
 
 When I
 [explained how I create and use context for my React applications](/blog/how-to-use-react-context-effectively),
