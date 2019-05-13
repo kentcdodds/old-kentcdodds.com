@@ -31,29 +31,25 @@ simple example of a stateful component (yes, it's my favorite component
 example):
 
 ```jsx
-class Toggle extends React.Component {
-  state = {on: false}
-  toggle = () => this.setState(({on}) => ({on: !on}))
-  render() {
-    return (
-      <div>
-        <div>The button is {this.state.on ? 'on' : 'off'}</div>
-        <button onClick={this.toggle}>Toggle</button>
-      </div>
-    )
-  }
+function Toggle() {
+  const [on, setOn] = React.useState(false)
+  const toggle = () => setOn(o => !o)
+  return (
+    <div>
+      <div>The button is {this.state.on ? 'on' : 'off'}</div>
+      <button onClick={this.toggle}>Toggle</button>
+    </div>
+  )
 }
 ```
 
 Let's refactor this into two components now:
 
 ```jsx
-class Toggle extends React.Component {
-  state = {on: false}
-  toggle = () => this.setState(({on}) => ({on: !on}))
-  render() {
-    return <Switch on={this.state.on} onToggle={this.toggle} />
-  }
+function Toggle() {
+  const [on, setOn] = React.useState(false)
+  const toggle = () => setOn(o => !o)
+  return <Switch on={on} onToggle={toggle} />
 }
 
 function Switch({on, onToggle}) {
@@ -71,12 +67,10 @@ we're sending some props there. Let's refactor it once more to add another layer
 in our component tree:
 
 ```jsx
-class Toggle extends React.Component {
-  state = {on: false}
-  toggle = () => this.setState(({on}) => ({on: !on}))
-  render() {
-    return <Switch on={this.state.on} onToggle={this.toggle} />
-  }
+function Toggle() {
+  const [on, setOn] = React.useState(false)
+  const toggle = () => setOn(o => !o)
+  return <Switch on={on} onToggle={toggle} />
 }
 
 function Switch({on, onToggle}) {
@@ -105,13 +99,14 @@ have to accept and forward those props because its children need them.
 ### Why is prop drilling good?
 
 Did you ever work in an application that used global variables? What about an
-AngularJS application that leveraged non-isolate `$scope` inheritance? The
-reason that the community has largely rejected these methodologies is because it
-inevitably leads to a very confusing data model for your application. It becomes
-difficult for anyone to find where data is initialized, where it's updated, and
-where it's used. **Answering the question of "can I modify/delete this code
-without breaking anything?" is difficult to answer in that kind of a world. And
-that's the question you should be optimizing for as you code.**
+AngularJS application that leveraged non-isolate `$scope` inheritance (or the
+dreaded `$rootScope` 😱? The reason that the community has largely rejected
+these methodologies is because it inevitably leads to a very confusing data
+model for your application. It becomes difficult for anyone to find where data
+is initialized, where it's updated, and where it's used. **Answering the
+question of "can I modify/delete this code without breaking anything?" is
+difficult to answer in that kind of a world. And that's the question you should
+be optimizing for as you code.**
 
 One reason we prefer ESModules over global variables is because it allows us to
 be more explicit about where our values are used, making it much easier to track
@@ -133,7 +128,7 @@ components. It's not normally a big deal when you write it out initially, but
 after that code has been worked in for a few weeks, things start to get unwieldy
 for a few use cases:
 
-- Refactor the shape of some data (ie: `{user: {name: 'Joe West'}}` -\>
+- Refactor the shape of some data (ie: `{user: {name: 'Joe West'}}` ->
   `{user: {firstName: 'Joe', lastName: 'West'}}`)
 - Over-forwarding props (passing more props than is necessary) due to (re)moving
   a component that required some props but they're no longer needed.
@@ -161,7 +156,7 @@ props anyway!
 > though... Just something to think about :)_
 
 _Note: I've written a blog post about this concept called
-"_[_When to break up a component into multiple components_](https://blog.kentcdodds.com/when-to-break-up-a-component-into-multiple-components-4ee75ab53bbc)_"
+"[When to break up a component into multiple components](/blog/when-to-break-up-a-component-into-multiple-components)"
 that you may enjoy._
 
 Another thing you can can do to mitigate the effects of prop-drilling is avoid
@@ -174,43 +169,19 @@ Keep state as close to where it's relevant as possible. If only one section of
 your app needs some state, then manage that in the least common parent of those
 components rather than putting it at the highest level of the app. Learn more
 about state management from my blog post:
-[Application State Management](https://blog.kentcdodds.com/application-state-management-66de608ccb24).
+[Application State Management](/blog/application-state-management-with-react).
 
-Use
-[React's new Context API](https://blog.kentcdodds.com/migrating-to-reacts-new-context-api-b15dc7a31ea0)
-for things that are truly necessary deep in the react tree. They don't have to
-be things you need _everywhere_ in the application (you can render a provider
-anywhere in the app). This can really help avoid some issues with prop drilling.
-It's been noted that context is kinda taking us back to the days of global
-variables. The difference is that because of the way the API was designed, you
-can still statically find the source of the context as well as any consumers
-with relative ease.
+Use [React's Context API](/blog/how-to-use-react-context-effectively) for things
+that are truly necessary deep in the react tree. They don't have to be things
+you need _everywhere_ in the application (you can render a provider anywhere in
+the app). This can really help avoid some issues with prop drilling. It's been
+noted that context is kinda taking us back to the days of global variables. The
+difference is that because of the way the API was designed, you can still
+statically find the source of the context as well as any consumers with relative
+ease.
 
 ### Conclusion
 
 Prop drilling can be a good thing, and it can be a bad thing. Following some
 good practices as mentioned above, you can use it as a feature to make your
 application more maintainable. Good luck!
-
-**Learn more about React from me**:
-
-- [egghead.io (beginners)](http://kcd.im/beginner-react) — My Beginner's Guide
-  to React absolutely _free_ on [egghead.io](http://egghead.io/).
-- [egghead.io (advanced)](http://kcd.im/advanced-react) — My Advanced React
-  Component Patterns course available on [egghead.io](http://egghead.io/) today!
-- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/) — My
-  Advanced React Patterns workshop
-- [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Portland in July!
-- [Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) — I'm giving my
-  Intro to React workshop in person in Salt Lake City in August!
-
-**Things to not miss**:
-
-- [Animated Timeline](https://github.com/nitin42/Animated-Timeline) — 🔥 Create
-  timeline and playback based animations in React, by
-  [Nitin Tulswani](https://medium.com/u/9a54dad11779)
-- [react-perf-devtool](https://github.com/nitin42/react-perf-devtool) — A
-  browser developer tool extension to inspect performance of React components,
-  also by [Nitin Tulswani](https://medium.com/u/9a54dad11779)
-- [MissionBelt](https://missionbelt.com/): They're just amazing belts.
