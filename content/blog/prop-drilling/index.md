@@ -100,7 +100,7 @@ have to accept and forward those props because its children need them.
 
 Did you ever work in an application that used global variables? What about an
 AngularJS application that leveraged non-isolate `$scope` inheritance (or the
-dreaded `$rootScope` 😱? The reason that the community has largely rejected
+dreaded `$rootScope` 😱) The reason that the community has largely rejected
 these methodologies is because it inevitably leads to a very confusing data
 model for your application. It becomes difficult for anyone to find where data
 is initialized, where it's updated, and where it's used. **Answering the
