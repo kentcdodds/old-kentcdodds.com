@@ -159,7 +159,7 @@ _Note: I've written a blog post about this concept called
 "[When to break up a component into multiple components](/blog/when-to-break-up-a-component-into-multiple-components)"
 that you may enjoy._
 
-Another thing you can can do to mitigate the effects of prop-drilling is avoid
+Another thing you can do to mitigate the effects of prop-drilling is avoid
 using `defaultProps` for anything that's a required prop. Using a `defaultProp`
 for something that's actually required for the component to function properly is
 just hiding important errors and making things fail silently. So only use
