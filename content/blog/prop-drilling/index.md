@@ -36,8 +36,8 @@ function Toggle() {
   const toggle = () => setOn(o => !o)
   return (
     <div>
-      <div>The button is {this.state.on ? 'on' : 'off'}</div>
-      <button onClick={this.toggle}>Toggle</button>
+      <div>The button is {on ? 'on' : 'off'}</div>
+      <button onClick={toggle}>Toggle</button>
     </div>
   )
 }
