@@ -134,7 +134,7 @@ for a few use cases:
   a component that required some props but they're no longer needed.
 - Under-forwarding props + abusing `defaultProps` so you're not made aware of
   missing props (also due to (re)moving a component).
-- Renaming props halfway through (ie `<Toggle on={this.state.on} />` renders
+- Renaming props halfway through (ie `<Toggle on={on} />` renders
   `<Switch toggleIsOn={on} />`) making keeping track of that in your brain
   difficult.
 
