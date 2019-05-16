@@ -6,7 +6,8 @@ const reset = css`
   form {
     margin: 0;
   }
-  ul, ol {
+  ul,
+  ol {
     list-style-position: inside;
     margin-left: 0;
     font-size: ${typography.baseFontSize};
@@ -80,11 +81,14 @@ const reset = css`
     overflow: auto;
     white-space: pre;
   }
-  pre, code {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  pre,
+  code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
   }
   figure {
     margin: 0 0 1rem 0;
+  }
   img {
     vertical-align: middle;
   }
