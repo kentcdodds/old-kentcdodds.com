@@ -34,6 +34,11 @@ redirects:
 If that explains your situation, then read on (and don't miss the alternative
 solution which is honestly probably better anyway).
 
+> No seriously, if you're going to do this stuff just because you _think_ your
+> code _might_ be slow, then don't bother. I'm not joking. React is really
+> fast and adding complexity in the name of performance when performance is
+> good enough is just wasteful of your "complexity budget"
+
 When I
 [explained how I create and use context for my React applications](/blog/how-to-use-react-context-effectively),
 I touched briefly on the importance of using React's `useMemo` hook. Here's that
