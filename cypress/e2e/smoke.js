@@ -1,7 +1,7 @@
 describe('app', () => {
   it('works', () => {
     cy.visit('/')
-      .getByText(/about/i)
+      .getAllByText(/about/i, {selector: 'a'})
       .click()
       .getByText(/About Kent C. Dodds/i)
   })
