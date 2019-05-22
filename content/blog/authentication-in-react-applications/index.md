@@ -35,11 +35,12 @@ function App() {
 export App
 ```
 
-That's it. 99% of apps which require authentication of any kind can be
-drastically simplified by that one little trick. Rather than trying to do
-something fancy to redirect the user when they happen to land on a page that
-they're not supposed to, instead you don't render that stuff at all. Things get
-even cooler when you do this:
+That's it.
+[Most apps](https://twitter.com/kentcdodds/status/1131184429169168387) which
+require authentication of any kind can be drastically simplified by that one
+little trick. Rather than trying to do something fancy to redirect the user when
+they happen to land on a page that they're not supposed to, instead you don't
+render that stuff at all. Things get even cooler when you do this:
 
 ```jsx
 import React from 'react'
@@ -186,3 +187,14 @@ I hope this is helpful to you. You can checkout
 ([or even edit it on codesandbox](https://codesandbox.io/s/github/kentcdodds/bookshelf))
 for a more complete picture of what all this is like in a more realistic
 scenario with all the pieces together.
+
+## P.S.
+
+Several people have asked me: What if my app has lots of shared screens between
+authenticated and unauthenticated users (like Twitter) rather than having very
+different screens between authenticated and unauthenticated users (like Gmail)?
+
+In that case then you'll probably need to litter a bunch of `useUser()` hooks
+all over the codebase. You might make it even easier with a
+`useIsAuthenticated()` hook that simply returns a boolean if the user is logged
+in. Either way, it's pretty simple thanks to context + hooks :)
