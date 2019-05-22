@@ -62,7 +62,7 @@ for authenticated users.
 
 What the `<AuthenticatedApp />` and `<UnauthenticatedApp />` do is totally up to
 you. Maybe they render unique routers. Maybe they even use some of the same
-components. But whatever they do, you don't have to both wondering whether the
+components. But whatever they do, you don't have to bother wondering whether the
 user is logged in because you make it literally impossible to render one side of
 the app or the other if there is no user.
 
