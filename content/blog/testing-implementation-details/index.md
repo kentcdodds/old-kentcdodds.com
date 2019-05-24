@@ -73,7 +73,7 @@ And here's a test that tests implementation details:
 // __tests__/accordion.enzyme.js
 import React from 'react'
 // if you're wondering why not shallow,
-// then please read blog.kentcdodds.com/c08851a68bb7
+// then please read https://kcd.im/shallow
 import Enzyme, {mount} from 'enzyme'
 import EnzymeAdapter from 'enzyme-adapter-react-16'
 import Accordion from '../accordion'

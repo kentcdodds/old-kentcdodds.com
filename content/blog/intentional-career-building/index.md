@@ -75,10 +75,11 @@ with enough people that they don't want to miss your next big value add.
 If you're publishing to a domain you don't control, then you should consider
 making a change. I was luckily grandfathered into Medium's custom domain thing
 before they stopped doing that which is why my medium blog is at
-blog.kentcdodds.com rather than medium.com/@kentcdodds. I am planning on moving
-off of medium soon and when I do I'll easily be able to redirect all my blog
-posts to my new custom platform because I own the domain name that all the links
-on twitter and elsewhere are pointing to.
+`blog.kentcdodds.com` rather than `medium.com/@kentcdodds`. I am planning on
+moving off of medium soon (UPDATE, I did:
+[Goodbye Medium](/blog/goodbye-medium)) and when I do I'll easily be able to
+redirect all my blog posts to my new custom platform because I own the domain
+name that all the links on twitter and elsewhere are pointing to.
 
 This is also why I care so much about having
 [a URL shortener](https://www.youtube.com/watch?v=HL6paXyx6hM&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).

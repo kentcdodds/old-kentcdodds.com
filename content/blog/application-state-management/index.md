@@ -192,8 +192,6 @@ tree this could be useful. Good luck! 👍
 
 **Things to not miss**:
 
-- [I MADE AN ANNOUNCEMENT!](https://blog.kentcdodds.com/announcing-something-new-4e68b08da35)
-  🚨
 - [Cypress.io](https://www.cypress.io/): If you haven't tried this testing tool
   out yet, you seriously have been missing out. It's amazing (I use it for E2E
   tests).

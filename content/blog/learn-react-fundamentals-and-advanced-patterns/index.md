@@ -192,7 +192,7 @@ anything or enjoy the courses, I would ask you to do any of the following:
 1.  [Become an egghead.io subscriber](https://egghead.io/pricing) to help
     support the community resources _and_ get access to the 2500+ videos already
     on there!
-2.  [Tweet this blog post](https://twitter.com/intent/tweet?text=%F0%9F%8E%81%E2%9A%9B%EF%B8%8F%20%E2%80%9CLearn%20React%20Fundamentals%20and%20Advanced%20Patterns%E2%80%9D%20by%20%40kentcdodds%20https%3A%2F%2Fblog.kentcdodds.com%2Flearn-react-fundamentals-and-advanced-patterns-eac90341c9db%20%F0%9F%8E%81%E2%9A%9B%EF%B8%8F)!
+2.  [Tweet this blog post](https://twitter.com/intent/tweet?text=🎁⚛️%20“Learn%20React%20Fundamentals%20and%20Advanced%20Patterns”%20by%20@kentcdodds%20https://kentcdodds.com/blog/learn-react-fundamentals-and-advanced-patterns%20🎁⚛️)!
     Or
     [retweet my tweet](https://twitter.com/kentcdodds/status/937686244045176832)
     about it :)
