@@ -116,7 +116,7 @@ post. Just know that working on building a community by
 [several free egghead.io lessons](http://docs.angular-formly.com/docs/learn-angular-formly)),
 [encouraging contribution](https://blog.kentcdodds.com/first-timers-only-78281ea47455),
 and
-[recognizing and trusting contributors](https://github.com/kentcdodds/all-contributors)
+[recognizing and trusting contributors](https://github.com/all-contributors/all-contributors)
 is an important part of getting adoption and recognition for your open source
 work.
 

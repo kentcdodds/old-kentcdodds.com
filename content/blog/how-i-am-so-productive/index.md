@@ -207,9 +207,10 @@ better).
 Many of those releases of my open source projects I do are releasing code that I
 did not write. I put forth an investment of time in helping
 [and teaching](http://kcd.im/pull-request) other people contribute to my
-projects and [do things](https://github.com/kentcdodds/all-contributors) to help
-motivate people to do so. This means that I'm able to do more because other
-people handle a lot of project maintenance for me so I can do other things.
+projects and [do things](https://github.com/all-contributors/all-contributors)
+to help motivate people to do so. This means that I'm able to do more because
+other people handle a lot of project maintenance for me so I can do other
+things.
 
 ### Don't answer the same question twice
 
