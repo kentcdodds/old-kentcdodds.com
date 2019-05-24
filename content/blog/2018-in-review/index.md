@@ -59,7 +59,7 @@ for making
 I'm super proud of what we've accomplished here. The
 [react-testing-library all contributors table](https://github.com/testing-library/react-testing-library/blob/master/README.md#contributors)
 lists 63 awesome people, and the
-[dom-testing-library all contributors table](https://github.com/kentcdodds/dom-testing-library/blob/master/README.md#contributors)
+[dom-testing-library all contributors table](https://github.com/testing-library/dom-testing-library/blob/master/README.md#contributors)
 lists 46 (many repeats, but not all). These people are amazing and I really
 appreciate what they've done. I don't want to leave anyone out, but I would like
 to give a special shout out to these folks: [Giorgio](https://twitter.com/Gpx),
