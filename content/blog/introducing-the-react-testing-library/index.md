@@ -16,7 +16,7 @@ bannerCredit:
 ---
 
 Two weeks ago, I wrote
-[a new library](https://github.com/kentcdodds/react-testing-library)! I've been
+[a new library](https://github.com/testing-library/react-testing-library)! I've been
 thinking about it for a while. But two weeks ago I started getting pretty
 serious about it:
 
@@ -24,7 +24,7 @@ https://twitter.com/kentcdodds/status/974278185540964352
 
 Read on to get an idea of what I mean by "damaging practices."
 
-### [react-testing-library](https://github.com/kentcdodds/react-testing-library)
+### [react-testing-library](https://github.com/testing-library/react-testing-library)
 
 ![The library emoji is the goat. No particular reason...](./images/0.png)
 
@@ -67,11 +67,11 @@ This library is a replacement for [enzyme](http://airbnb.io/enzyme/). While you
 _can_ follow these guidelines using enzyme itself, enforcing this is harder
 because of all the extra utilities that enzyme provides (utilities which
 facilitate testing implementation details). Read more about this in
-[the FAQ](https://github.com/kentcdodds/react-testing-library/blob/master/README.md#faq).
+[the FAQ](https://github.com/testing-library/react-testing-library/blob/master/README.md#faq).
 
 Also, while the react-testing-library is intended for react-dom, it can support
 React Native with
-[this short setup file](https://github.com/kentcdodds/react-testing-library/issues/22#issuecomment-376756260).
+[this short setup file](https://github.com/testing-library/react-testing-library/issues/22#issuecomment-376756260).
 
 **What this library is not**:
 
@@ -175,50 +175,50 @@ by [Jamie White](https://medium.com/u/76c97151e2a6), I added several more and
 now I'm even happier with this solution.
 
 You can read more about the library and its APIs in
-[the official docs](https://github.com/kentcdodds/react-testing-library). Here's
+[the official docs](https://github.com/testing-library/react-testing-library). Here's
 a high-level overview of what this library gives you:
 
-- [`Simulate`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#simulate):
+- [`Simulate`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#simulate):
   a re-export from the `Simulate` utility from
   [the](https://reactjs.org/docs/test-utils.html#simulate)
   [`react-dom/test-utils`](https://reactjs.org/docs/test-utils.html#simulate)
   [](https://reactjs.org/docs/test-utils.html#simulate)
   [`Simulate`](https://reactjs.org/docs/test-utils.html#simulate)
   [object](https://reactjs.org/docs/test-utils.html#simulate).
-- [`wait`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#wait):
+- [`wait`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#wait):
   allows you to wait for a non-deterministic period of time in your tests.
   Normally you should
-  [mock out API requests](https://github.com/kentcdodds/react-testing-library/blob/master/src/__tests__/fetch.js)
+  [mock out API requests](https://github.com/testing-library/react-testing-library/blob/master/src/__tests__/fetch.js)
   or
-  [animations](https://github.com/kentcdodds/react-testing-library/blob/master/src/__tests__/mock.react-transition-group.js),
+  [animations](https://github.com/testing-library/react-testing-library/blob/master/src/__tests__/mock.react-transition-group.js),
   but even if you're dealing with immediately resolved promises, you'll need
   your tests to wait for the next tick of the event loop and `wait` is really
   good for that. (Big shout out to
   [Łukasz Gozda Gandecki](https://medium.com/u/66ce121c68eb) who
-  [introduced this](https://github.com/kentcdodds/react-testing-library/issues/21)
+  [introduced this](https://github.com/testing-library/react-testing-library/issues/21)
   as a replacement for the (now deprecated)`flushPromises` API).
-- [`render`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#render):
+- [`render`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#render):
   This is the meat of the library. It's fairly simple. It creates a `div`with
   `document.createElement`, then uses `ReactDOM.render` to render to that `div`.
 
 The `render` function returns the following objects and utilities:
 
-- [`container`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#container):
+- [`container`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#container):
   The `div` your component was rendered to
-- [`unmount`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#unmount):
+- [`unmount`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#unmount):
   A simple wrapper over `ReactDOM.unmountComponentAtNode`to unmount your
   component (to facilitate easier testing of `componentWillUnmount` for
   example).
-- [`getByLabelText`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbylabeltexttext-textmatch-options-selector-string---htmlelement):
+- [`getByLabelText`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbylabeltexttext-textmatch-options-selector-string---htmlelement):
   Get a form control associated to a label
-- [`getByPlaceholderText`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbyplaceholdertexttext-textmatch-htmlelement):
+- [`getByPlaceholderText`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbyplaceholdertexttext-textmatch-htmlelement):
   Placeholders aren't proper alternatives to labels, but if this makes more
   sense for your use case it's available.
-- [`getByText`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbytexttext-textmatch-htmlelement):
+- [`getByText`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbytexttext-textmatch-htmlelement):
   Get any element by its text content.
-- [`getByAltText`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbyalttexttext-textmatch-htmlelement):
+- [`getByAltText`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbyalttexttext-textmatch-htmlelement):
   Get an element (like an `<img`) by it's `alt` attribute value.
-- [`getByTestId`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbytestidtext-textmatch-htmlelement):
+- [`getByTestId`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#getbytestidtext-textmatch-htmlelement):
   Get an element by its `data-testid` attribute.
 
 Each of those `get*` utilities will throw a useful error message if no element
@@ -239,13 +239,13 @@ Also, for these `get*` utilities, to find a matching element, you can pass:
 Thanks to [Anto Aravinth Belgin Rayen](https://github.com/antoaravinth), we have
 some handy custom Jest matchers as well:
 
-- [`toBeInTheDOM`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#tobeinthedom):
+- [`toBeInTheDOM`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#tobeinthedom):
   Assert whether an element present in the DOM or not.
-- [`toHaveTextContent`](https://github.com/kentcdodds/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#tohavetextcontent):
+- [`toHaveTextContent`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#tohavetextcontent):
   Check whether the given element has a text content or not.
 
 > Note: now these have been extracted to
-> [jest-dom](https://github.com/gnapse/jest-dom) which is maintained by
+> [jest-dom](https://github.com/testing-library/jest-dom) which is maintained by
 > [Ernesto García](https://github.com/gnapse)
 
 ### Conclusion
@@ -253,8 +253,8 @@ some handy custom Jest matchers as well:
 A big feature of this library is that it doesn't have utilities that enable
 testing implementation details. It focuses on providing utilities that encourage
 good testing and software practices. I hope that by using
-[the](https://github.com/kentcdodds/react-testing-library)
-[`react-testing-library`](https://github.com/kentcdodds/react-testing-library)your
+[the](https://github.com/testing-library/react-testing-library)
+[`react-testing-library`](https://github.com/testing-library/react-testing-library)your
 React testbases are easier to understand and maintain.
 
 **Learn more about Testing from me**:

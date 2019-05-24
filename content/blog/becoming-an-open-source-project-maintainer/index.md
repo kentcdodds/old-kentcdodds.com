@@ -17,7 +17,7 @@ published over 100 packages to npm. Not all of them are widely used (or used at
 all), but many of them are. I have some ideas about how to maintain open source
 projects. I've given a talk on this in the past (unfortunately each time the
 recording sadly failed, but there's a practice run, so
-[check it out here](https://kentcdodds.com/talks/#managing-an-open-source-project)).
+[check it out here](/talks/#managing-an-open-source-project)).
 
 In this newsletter though, I want to talk about how you become a project
 maintainer. The easiest way to do this is to create your own project from
@@ -27,7 +27,7 @@ existing project. So how do you get involved?
 ![good question](./images/0.gif)
 
 Well,
-["You contribute best to something you use regularly."](https://blog.kentcdodds.com/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
+["You contribute best to something you use regularly."](/blog/what-open-source-project-should-i-contribute-to)
 So before you decide you want to be a maintainer of a project, make sure it's
 one that you use yourself, otherwise you'll lose motivation pretty quickly.
 
@@ -67,7 +67,7 @@ you're willing and able and magic things happen.
 
 Now, I can't promise that you'll become a core maintainer of React if you start
 helping in issues and pull requests. But I can tell you that a lot of
-[the benefits of open source](https://blog.kentcdodds.com/how-getting-into-open-source-has-been-awesome-for-me-8480cd756a80)
+[the benefits of open source](/blog/how-getting-into-open-source-has-been-awesome-for-me)
 will come even if you aren't the project maintainer. And many projects really do
 need new maintainers (`angular-formly` included). You don't need permission to
 start acting like a maintainer. If you start doing the work, then it's pretty

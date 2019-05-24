@@ -93,8 +93,7 @@ of ourselves and find more happiness in life :) Good luck!
 - [**UPDATED**: Advanced React Component Patterns](http://kcd.im/advanced-react) — This
   is the [egghead.io](http://egghead.io/) version of my course material
   completely updated for the latest in React with **NEW PATTERNS** (like
-  [the state reducer prop pattern](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57)).
-  Enjoy!
+  [the state reducer prop pattern](/blog/the-state-reducer-pattern)). Enjoy!
 - [Drive with Kent — Tech phone call recording](https://www.youtube.com/watch?v=vVlcq3e1ooI) — In
   case you missed it,
   [I took a 6 hour drive](https://github.com/kentcdodds/ama/issues/405) and had

@@ -25,7 +25,7 @@ About a year ago, I published
 In that post, I show the entire implementation (at the time) of
 [`react-toggled`](https://github.com/kentcdodds/react-toggled) which I actually
 built for the sole purpose of teaching some of the patterns that I used in
-[`downshift`](https://github.com/paypal/downshift). It's a much smaller and
+[`downshift`](https://github.com/downshift-js/downshift). It's a much smaller and
 simpler component that implements many of the same patterns as downshift so it
 served as a great way to teach the prop getters pattern.
 
@@ -174,7 +174,7 @@ using hooks. Is there any reason to continue writing or using components that
 expose a render props API?
 
 YES! Observe! Here's
-[an example of using downshift with react-virtualized](https://github.com/paypal/downshift/blob/9b3467dce2be59832765277570857de5679d8392/stories/examples/windowing-with-react-virtualized.js).
+[an example of using downshift with react-virtualized](https://github.com/downshift-js/downshift/blob/9b3467dce2be59832765277570857de5679d8392/stories/examples/windowing-with-react-virtualized.js).
 Here's the relevant bit:
 
 ```jsx

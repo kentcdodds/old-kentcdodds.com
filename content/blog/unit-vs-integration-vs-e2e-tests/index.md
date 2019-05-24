@@ -383,23 +383,23 @@ Good luck!
 
 Here are a few relevant blog posts for you as well:
 
-- [Testing Implementation Details](https://blog.kentcdodds.com/testing-implementation-details-ccb8d269586)
-- [React Hooks: What’s going to happen to my tests?](https://blog.kentcdodds.com/react-hooks-whats-going-to-happen-to-my-tests-df4c2b4d67b7)
-- [Common Testing Mistakes](https://blog.kentcdodds.com/common-testing-mistakes-1a3d2d209f0)
-- [UI Testing Myths](https://blog.kentcdodds.com/ui-testing-myths-dfb5f629f20a)
-- [The Merits of Mocking](https://blog.kentcdodds.com/the-merits-of-mocking-a107fd39b721)
-- [React is an implementation detail](https://blog.kentcdodds.com/react-is-an-implementation-detail-and-course-faq-ee73b028745e)
-- [Eliminate an entire category of bugs with a few simple tools](https://blog.kentcdodds.com/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools-f0dd2aaf4bc9)
-- [Why you’ve been bad about testing](https://blog.kentcdodds.com/why-youve-been-bad-about-testing-e96aed98e4b6)
-- [Demystifying Testing](https://blog.kentcdodds.com/demystifying-testing-21039c883f9e)
-- [Confidently Shipping Code](https://blog.kentcdodds.com/confidently-shipping-code-6139403dfffe)
-- [Why I Never Use Shallow Rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7)
-- [Test Isolation with React](https://blog.kentcdodds.com/test-isolation-with-react-6962d3f13d1f)
-- [But really, what is a JavaScript mock?](https://blog.kentcdodds.com/but-really-what-is-a-javascript-mock-10d060966f7d)
-- [But really, what is a JavaScript test?](https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77)
-- [Effective Snapshot Testing](https://blog.kentcdodds.com/effective-snapshot-testing-e0d1a2c28eca)
-- [Making your UI tests resilient to change](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)
-- [Write tests. Not too many. Mostly integration.](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c)
+- [Testing Implementation Details](/blog/testing-implementation-details)
+- [React Hooks: What’s going to happen to my tests?](/blog/react-hooks-whats-going-to-happen-to-my-tests)
+- [Common Testing Mistakes](/blog/common-testing-mistakes)
+- [UI Testing Myths](/blog/ui-testing-myths)
+- [The Merits of Mocking](/blog/the-merits-of-mocking)
+- [React is an implementation detail](/blog/react-is-an-implementation-detail)
+- [Eliminate an entire category of bugs with a few simple tools](/blog/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools)
+- [Why you’ve been bad about testing](/blog/why-youve-been-bad-about-testing)
+- [Demystifying Testing](/blog/demystifying-testing)
+- [Confidently Shipping Code](/blog/confidently-shipping-code)
+- [Why I Never Use Shallow Rendering](/blog/why-i-never-use-shallow-rendering
+- [Test Isolation with React](/blog/test-isolation-with-react)
+- [But really, what is a JavaScript mock?](/blog/but-really-what-is-a-javascript-mock)
+- [But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
+- [Effective Snapshot Testing](/blog/effective-snapshot-testing)
+- [Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)
+- [Write tests. Not too many. Mostly integration.](/blog/write-tests)
 
 **Things to not miss**:
 

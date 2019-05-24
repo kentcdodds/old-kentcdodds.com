@@ -18,9 +18,8 @@ bannerCredit:
 [I hit two big milestones for projects I've been working on for a long time](https://twitter.com/kentcdodds/status/931247165342707712).
 I finished the second of two React courses for [egghead.io](http://egghead.io/)
 and [Jamund Ferguson](https://twitter.com/xjamundx) and I gave a demo and the
-announcement of
-[paypal-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
-at work. And it went super well! Hooray!
+announcement of [paypal-scripts](/blog/tools-without-config) at work. And it
+went super well! Hooray!
 
 ![Hooray!](./images/0.gif)
 

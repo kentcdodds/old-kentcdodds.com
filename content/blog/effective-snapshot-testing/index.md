@@ -105,8 +105,7 @@ console for the developers using your tool. Before snapshot testing I would
 always write a silly regex that got the basic gist of what the message should
 say, but with snapshot testing it's so much easier.
 
-Here's an example of this from
-[kcd-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229):
+Here's an example of this from [kcd-scripts](/blog/tools-without-config):
 
 - [Tests](https://github.com/kentcdodds/kcd-scripts/blob/11f6218772ee2075cebddadd30a50a6d4bdec637/src/__tests__/index.js)
 - [Snapshot output](https://github.com/kentcdodds/kcd-scripts/blob/11f6218772ee2075cebddadd30a50a6d4bdec637/src/__tests__/__snapshots__/index.js.snap)

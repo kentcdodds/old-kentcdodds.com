@@ -64,7 +64,7 @@ With these, if you
 the `includes` function is not transpiled because it's not a syntax issue, but a
 built-in API one and babel's env preset only includes transforms for syntax
 transformations. You _could_
-[write your own babel plugin](https://kentcdodds.com/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
+[write your own babel plugin](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 ([like this](https://astexplorer.net/#/gist/538b72e2af148a14d7c0f5824b431cd6/47a57f42697199d6cfa1d4b1027951ef170a980e))
 to transform the code, but for _some_ APIs it just wouldn't be practical because
 the transformed version would be significantly complex.
@@ -144,9 +144,9 @@ that your browsers don't support.
   used [capybara](https://github.com/teamcapybara/capybara) before you'll
   probably love this util from [Justin Searls](https://twitter.com/searls). If
   you like this, then you'll probably love
-  [cypress-testing-library](https://github.com/kentcdodds/cypress-testing-library).
+  [cypress-testing-library](https://github.com/testing-library/cypress-testing-library).
   In any case,
-  [don't reuse your CSS selectors as test selectors](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)!
+  [don't reuse your CSS selectors as test selectors](/blog/making-your-ui-tests-resilient-to-change)!
 - [guppy](https://github.com/joshwcomeau/guppy) — 🐠A friendly application
   manager and task runner for React.js by
   [Josh Comeau](https://twitter.com/joshwcomeau).

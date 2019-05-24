@@ -35,7 +35,7 @@ also `react`, and that's when the trouble started. `downshift`has several tests
 for error cases (errors thrown when validating how you interact with the prop
 getters for example). It has some assertions that an error is thrown when doing
 something wrong when trying to mount downshift.
-[This test](https://github.com/paypal/downshift/blob/702e7b037c27519dae97fa21f5a2aecc649027dd/src/__tests__/downshift.get-label-props.js#L35-L41)
+[This test](https://github.com/downshift-js/downshift/blob/702e7b037c27519dae97fa21f5a2aecc649027dd/src/__tests__/downshift.get-label-props.js#L35-L41)
 in particular resulted in this output:
 
 ```
@@ -59,7 +59,7 @@ Error: Uncaught [Error: downshift: You provided the id of "foo" for your input, 
 
 The funny thing about this though is that the tests all still passed! In
 addition, those logs are coming from a `console.error` call, and
-[the top of that file](https://github.com/paypal/downshift/blob/702e7b037c27519dae97fa21f5a2aecc649027dd/src/__tests__/downshift.get-label-props.js#L5-L12)
+[the top of that file](https://github.com/downshift-js/downshift/blob/702e7b037c27519dae97fa21f5a2aecc649027dd/src/__tests__/downshift.get-label-props.js#L5-L12)
 is mocking `console.error` to make it not log anything at all!
 
 ```js
@@ -101,7 +101,7 @@ files? Check this out. Run the following commands and you'll get a report of the
 code on the `node_modules` directory in the `downshift` project:
 
 ```
-git clone https://github.com/paypal/downshift.git
+git clone https://github.com/downshift-js/downshift.git
 cd downshift
 npm install
 npx cloc ./node_modules

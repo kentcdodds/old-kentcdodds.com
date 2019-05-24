@@ -14,7 +14,7 @@ bannerCredit:
 
 Yesterday my two new ReactJS courses were published on
 [egghead.io](http://egghead.io/).
-[Read more about them here](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db).
+[Read more about them here](/blog/learn-react-fundamentals-and-advanced-patterns).
 I had high hopes for this release, but the response has been way more positive
 than I had expected. The announcement post got in
 [Medium's top 20 posts yesterday](https://medium.com/browse/top/december-04-2017)
@@ -25,7 +25,7 @@ yet, give them a look! If you have, I hope you loved them!
 
 Two weeks ago, my newsletter was an overview of the
 [Advanced React Component Patterns course](https://egghead.io/courses/advanced-react-component-patterns)
-([that's been published today](https://blog.kentcdodds.com/56af2b74bc5f)!) This
+([that's been published today](/blog/advanced-react-component-patterns)!) This
 week I'd like to talk a little bit about the other course that was published:
 [The Beginner's Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs).
 
@@ -73,7 +73,7 @@ will be helpful to you as well). Good luck!
 - [Why Funding Open Source is Hard](https://medium.com/@codesponsor/why-funding-open-source-is-hard-652b7055569d) — Alternate
   title: "Why Code Sponsor is shutting down after raising \$10k for OSS
   developers in 4 months").
-- [Learn React Fundamentals and Advanced Patterns](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db) — I'm
+- [Learn React Fundamentals and Advanced Patterns](/blog/learn-react-fundamentals-and-advanced-patterns) — I'm
   just pretty excited about the course release!
 - [egghead.io Sale](https://egghead.io/gifts) — Save 30% on a year subscription!
 - [`ReactPrimer`](https://github.com/ReactPrimer/ReactPrimer) - React component

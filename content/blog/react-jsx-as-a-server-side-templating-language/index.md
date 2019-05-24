@@ -64,17 +64,16 @@ of the gotchas and solutions that I ran into while making this transition.
 
 This was actually as easy as `npm install --save react react-dom` in the
 `server`. Because [paypal.me](http://paypal.me/) uses
-[paypal-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229),
-the server's already compiled with the built-in babel configuration which will
-automatically add the necessary react plugins if the project lists react as a
-dep. Nice! I LOVE Toolkits!
+[paypal-scripts](/blog/tools-without-config), the server's already compiled with
+the built-in babel configuration which will automatically add the necessary
+react plugins if the project lists react as a dep. Nice! I LOVE Toolkits!
 
 ### HTML Structure
 
 The biggest challenge I faced with this involves integration with other PayPal
 modules that generate HTML that need to be inserted into the HTML that we're
 rendering. One such example of this is our polyfill service that
-[I wrote about a while back](https://blog.kentcdodds.com/polyfill-as-needed-with-polyfill-service-35f0ff306a26)which
+[I wrote about a while back](/blog/polyfill-as-needed-with-polyfill-service)which
 inserts a script tag that has some special query params and
 [a server nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). We have
 this as middleware and it adds a `res.locals.polyfill.headHTML` which is a

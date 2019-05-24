@@ -76,8 +76,8 @@ patterns because those are still very awesome.
 
 We have a few lessons that feature a completely **new pattern that wasn't in the
 original course** that I implemented a while ago in
-[downshift](https://github.com/paypal/downshift) called
-[**the state reducer pattern**](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57):
+[downshift](https://github.com/downshift-js/downshift) called
+[**the state reducer pattern**](/blog/the-state-reducer-pattern):
 
 [**Implement Component State Reducers**](https://egghead.io/lessons/react-implement-component-state-reducers)
 
@@ -103,10 +103,9 @@ how to effectively use the pattern:
 Last time, we had quite a few lessons about the provider pattern. With the new
 Context API, I was able to show everything in a single lesson because the
 Context API is a built-in implementation of the provider pattern! In this lesson
-I give a demonstration of what
-[Prop Drilling](https://blog.kentcdodds.com/prop-drilling-bb62e02cb691) is and
-how the Provider Pattern can simplify things considerably making your React
-codebase much more manageable.
+I give a demonstration of what [Prop Drilling](/blog/prop-drilling) is and how
+the Provider Pattern can simplify things considerably making your React codebase
+much more manageable.
 
 [**Implement the Provider Pattern with React Context**](https://egghead.io/lessons/react-implement-the-provider-pattern-with-react-context)
 

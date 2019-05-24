@@ -116,10 +116,9 @@ necessary to allow the user of the component to render what they need for their
 use case.
 
 My personal favorite implementation of this pattern (and some of the following
-patterns) is [`downshift`](https://github.com/paypal/downshift)
-[🏎](https://github.com/paypal/downshift), but
-[I'm a little bit biased](https://blog.kentcdodds.com/introducing-downshift-for-react-b1de3fca0817)
-😅
+patterns) is [`downshift`](https://github.com/downshift-js/downshift)
+[🏎](https://github.com/downshift-js/downshift), but
+[I'm a little bit biased](/blog/introducing-downshift-for-react) 😅
 
 ### Prop Collections and Getters
 

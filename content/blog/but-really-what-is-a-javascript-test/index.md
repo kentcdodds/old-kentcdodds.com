@@ -308,9 +308,9 @@ which one to go about fixing.
 ### Step 5
 
 So all we need to do now is
-[write a CLI tool](https://blog.kentcdodds.com/tips-for-making-a-cli-based-tool-with-node-9903255c2a3b)
-that will search for all our test files and run them! That bit is pretty simple
-at first, but there are a LOT of things we can add on top of it. 😅
+[write a CLI tool](/blog/tips-for-making-a-cli-based-tool-with-node) that will
+search for all our test files and run them! That bit is pretty simple at first,
+but there are a LOT of things we can add on top of it. 😅
 
 At this point, we're building a testing framework and test runner. Luckily for
 us, there are a bunch of these built already! I've tried a ton of them and

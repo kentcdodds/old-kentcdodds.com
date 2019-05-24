@@ -41,7 +41,7 @@ examples:
 [react-scripts](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts)
 (what [create-react-app](https://github.com/facebookincubator/create-react-app)
 leaves you with), my own
-[paypal-scripts/kcd-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229),
+[paypal-scripts/kcd-scripts](/blog/tools-without-config),
 [parcel](https://github.com/parcel-bundler/parcel),
 [preact-cli](https://github.com/developit/preact-cli),
 [ember-cli](https://ember-cli.com/) (the first widely used toolkit for JS), and
@@ -78,9 +78,8 @@ but maybe it'll help a bit with understanding the role that toolkits can play.
 
 People who are used to building/learning/configuring widely used tools have
 asked me why I would ever want to build and help popularize toolkits. Here are a
-few of the reasons
-[I'm working on toolkits](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
-for paypal and
+few of the reasons [I'm working on toolkits](/blog/tools-without-config) for
+paypal and
 [my own open source projects](https://github.com/kentcdodds/kcd-scripts).
 
 ### Keeping config updated
