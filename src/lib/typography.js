@@ -30,6 +30,9 @@ const typography = new Typography({
       color: 'hsla(0,0%,0%,0.75)',
       fontFamily: fonts.light,
     },
+    'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
+      fontSize: 'inherit',
+    },
     h2: {
       color: 'hsla(0,0%,0%,0.775)',
       fontFamily: fonts.semibold,

@@ -35,29 +35,30 @@ application and/or libraries.
 First, let's create a file at `src/count-context.js` and we'll create our
 context there:
 
-```javascript
+```jsx
 // src/count-context.js
 import React from 'react'
 
-const CountContext = React.createContext()
+const CountStateContext = React.createContext()
+const CountDispatchContext = React.createContext()
 ```
 
-First off, I don't have an initial value for the `CountContext`. If I wanted an
-initial value, I would call `React.createContext({count: 0})`. But I don't
-include a default value and that's intentional. The `defaultValue` is only
+First off, I don't have an initial value for the `CountStateContext`. If I
+wanted an initial value, I would call `React.createContext({count: 0})`. But I
+don't include a default value and that's intentional. The `defaultValue` is only
 useful in a situation like this:
 
-```javascript {2}
+```jsx {2}
 function CountDisplay() {
-  const {count} = React.useContext(CountContext)
+  const {count} = React.useContext(CountStateContext)
   return <div>{count}</div>
 }
 
 ReactDOM.render(<CountDisplay />, document.getElementById('⚛️'))
 ```
 
-Because we don't have a default value for our `CountContext`, we'll get an error
-on the highlighted line where we're destructing the return value of
+Because we don't have a default value for our `CountStateContext`, we'll get an
+error on the highlighted line where we're destructing the return value of
 `useContext`. This is because our default value is `undefined` and you cannot
 destructure `undefined`.
 
@@ -85,13 +86,19 @@ one of them.
 > really annoying for people who are using `React.useContext`, but I'll show you
 > how to avoid that problem altogether below. Keep reading!
 
+**What's this `CountDispatchContext` thing all about?** I've been playing around
+with context for a while, and talking with friends at Facebook who have been
+playing around with it for longer and I can tell you that the simplest way to
+avoid problems with context (especially when you start calling `dispatch` in
+effects) is to split up the state and dispatch in context. Stay with me here!
+
 ## The Custom Provider Component
 
 Ok, let's continue. For this context module to be useful _at all_ we need to use
 the Provider and expose a component that provides a value. Our component will be
 used like this:
 
-```javascript {3,6}
+```jsx {3,6}
 function App() {
   return (
     <CountProvider>
@@ -106,75 +113,54 @@ ReactDOM.render(<App />, document.getElementById('⚛️'))
 
 So let's make a component that can be used like that:
 
-```javascript
+```jsx
 // src/count-context.js
 import React from 'react'
 
-const CountContext = React.createContext()
+const CountStateContext = React.createContext()
+const CountDispatchContext = React.createContext()
 
-function CountProvider(props) {
-  const [count, setCount] = React.useState(0)
-  const value = React.useMemo(() => {
-    return {
-      count,
-      setCount,
+function countReducer(state, action) {
+  switch (action.type) {
+    case 'increment': {
+      return {count: state.count + 1}
     }
-  }, [count])
-  return <CountContext.Provider value={value} {...props} />
+    case 'decrement': {
+      return {count: state.count - 1}
+    }
+    default: {
+      throw new Error(`Unhandled action type: ${action.type}`)
+    }
+  }
+}
+
+function CountProvider({children}) {
+  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  return (
+    <CountStateContext.Provider value={state}>
+      <CountDispatchContext.Provider value={setCount}>
+        {children}
+      </CountDispatchContext.Provider>
+    </CountStateContext.Provider>
+  )
 }
 
 export {CountProvider}
 ```
 
-Ok, so there are a few things to talk about here. Let's go over them one by one:
-
-**`React.useState`**: Your context provider can provide anything you want. This
-provider could use dozens of hooks if it needed to. This is just a small
-contrived example.
-
-**`React.useMemo`**: 99% of the time, your context providers should probably be
-using `useMemo`. If you want to dive deep into this one,
-[read about it here](/blog/always-use-memo-your-context-value), but just know
-that context providers do an equality check on the `value` you provide and if
-it's different between renders it will re-render every consumer (this can be a
-big performance problem if your context has many consumers). So we're using
-`useMemo` here to avoid our context value being re-created on every re-render.
-
-> NOTE: Please don't just throw `useMemo` and `useCallback` around for no real
-> reason other than "I guess I should" or "I think this is maybe slow." It's
-> not, and
-> [you could be making things WORSE](https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578).
-
-**`value`**: The `value` variable is being assigned to an object that has the
-state (`count`) and a mechanism for updating the state `setCount`. There are
-lots of ways to do this. I've seen people actually put these in two completely
-different contexts (I believe that react-redux actually does this with their
-hooks), and you just consume the thing you want. I personally think that's
-over-abstraction, but I can understand why people may want to split it up (if
-you have a component that only needs to update the state and doesn't care about
-the value, then you can avoid unnecessary re-renders by splitting them up). I
-just don't see those situations being common enough for it to be something you
-should do in your day-to-day context consumer.
-
-**`<CountContext.Provider value={value} {...props} />`**: First I'll say that
-props for your providers could have some legit props that you want to configure
-how the provider operates, so you'd want to remove those from the spread on the
-context provider component. But other than that, spreading like this has a
-specific effect that I'd like to callout. **Here's a strong tip for you.** By
-spreading the given props _after_ the `value`, I not only accept and forward the
-`children` prop that we need to do, but I _also_ allow the user to override the
-`value` prop. This has the powerful effect of being able to fully customize this
-for testability purposes. Yes, this results in a similar trade-off to using a
-`defaultValue` for your context, but this allows you to customize the value of
-the context from within your test which gives you more flexibility and is more
-obvious than indirectly relying on a static default value.
+> NOTE: this is a contrived example that I'm intentionally over-engineering to
+> show you what a more real-world scenario would be like. **This does not mean
+> it has to be this complicated every time!** Feel free to use `useState` if
+> that suites your scenario. In addition, some providers are going to be short
+> and simple like this, and others are going to be MUCH more involved with
+> dozens of hooks.
 
 ## The Custom Consumer Hook
 
 Most of the APIs for context usages I've seen in the wild look something like
 this:
 
-```javascript
+```jsx
 import React from 'react'
 import {SomethingContext} from 'some-context-package'
 
@@ -186,7 +172,7 @@ function YourComponent() {
 But I think that's a missed opportunity at providing a better user experience.
 Instead, I think it should be like this:
 
-```javascript
+```jsx
 import React from 'react'
 import {useSomething} from 'some-context-package'
 
@@ -198,63 +184,63 @@ function YourComponent() {
 This has the benefit of you being able to do a few things which I'll show you in
 the implementation now:
 
-```javascript {17-28,30}
+```jsx {32-38,40-46,48}
 // src/count-context.js
 import React from 'react'
 
-const CountContext = React.createContext()
+const CountStateContext = React.createContext()
+const CountDispatchContext = React.createContext()
 
-function CountProvider(props) {
-  const [count, setCount] = React.useState(0)
-  const value = React.useMemo(() => {
-    return {
-      count,
-      setCount,
+function countReducer(state, action) {
+  switch (action.type) {
+    case 'increment': {
+      return {count: state.count + 1}
     }
-  }, [count])
-  return <CountContext.Provider value={value} {...props} />
-}
-
-function useCount() {
-  const context = React.useContext(CountContext)
-  if (!context) {
-    throw new Error('useCount must be used within a CountProvider')
-  }
-  const {count, setCount} = context
-  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
-  return {
-    count,
-    increment,
+    case 'decrement': {
+      return {count: state.count - 1}
+    }
+    default: {
+      throw new Error(`Unhandled action type: ${action.type}`)
+    }
   }
 }
 
-export {CountProvider, useCount}
+function CountProvider({children}) {
+  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  return (
+    <CountStateContext.Provider value={state}>
+      <CountDispatchContext.Provider value={setCount}>
+        {children}
+      </CountDispatchContext.Provider>
+    </CountStateContext.Provider>
+  )
+}
+
+function useCountState() {
+  const context = React.useContext(CountStateContext)
+  if (context === undefined) {
+    throw new Error('useCountState must be used within a CountProvider')
+  }
+  return context
+}
+
+function useCountDispatch() {
+  const context = React.useContext(CountDispatchContext)
+  if (context === undefined) {
+    throw new Error('useCountDispatch must be used within a CountProvider')
+  }
+  return context
+}
+
+export {CountProvider, useCountState, useCountDispatch}
 ```
 
-First, the `useCount` custom hook uses `React.useContext(CountContext)` to get
-the provided context value from the nearest `CountProvider`. However, if there
-is no value, then we throw a helpful error message indicating that `useCount` is
-not being called within a function component that is rendered within a
-`CountProvider`. This is most certainly a mistake, so providing the error
-message is valuable. _**#FailFast**_
-
-Also note that I'm only exposing the things that people _NEED_ today (you don't
-have access to `setCount` directly, only `count` and `increment`). It's WAY
-easier to expose too little and add more later than to expose too much and
-change/remove it later. So start with exposing only what's necessary today.
-
-I should mention that we could have put `increment` in the context value within
-the provider, but I've found that it's often easier to keep the context value
-provider smaller and then the custom hook can have some helpful (and
-configurable) utilities. There are definitely situations where utilities at the
-provider level are useful as well, but start with the hook level first. You'll
-be more likely to avoid mistaken unnecessary re-renders and the ability to
-customize each use (via arguments to the custom hook) is a nice benefit.
-
-In addition, we're putting `increment` in a `useCallback` which enables people
-to pass the `increment` function in a dependencies list. I wouldn't recommend
-putting every inline arrow function in a `useCallback` hook, but for reusable
-code like this it's worth eating into your code's complexity budget.
+First, the `useCountState` and `useCountDispatch` custom hooks use
+`React.useContext` to get the provided context value from the nearest
+`CountProvider`. However, if there is no value, then we throw a helpful error
+message indicating that the hook is not being called within a function component
+that is rendered within a `CountProvider`. This is most certainly a mistake, so
+providing the error message is valuable. _**#FailFast**_
 
 ## The Custom Consumer Component
 
@@ -263,20 +249,15 @@ to support React `<` 16.8.0, or you think the Context needs to be consumed by
 class components, then here's how you could do something similar with the
 render-prop based API for context consumers:
 
-```javascript
+```jsx
 function CountConsumer({children}) {
   return (
     <CountContext.Consumer>
       {context => {
-        if (!context) {
+        if (context === undefined) {
           throw new Error('CountConsumer must be used within a CountProvider')
         }
-        const {count, setCount} = context
-        const increment = () => setCount(c => c + 1)
-        return children({
-          count,
-          increment,
-        })
+        return context
       }}
     </CountContext.Consumer>
   )
@@ -293,94 +274,224 @@ I promised I'd show you how to avoid issues with skipping the `defaultValue`
 when using TypeScript or Flow. Guess what! By doing what I'm suggesting, you
 avoid the problem by default! It's actually not a problem at all. Check it out:
 
-```typescript {4-7,9-11,30-33}
+```typescript {11-14,41-45,49-53}
 // src/count-context.tsx
 import * as React from 'react'
 
-type CountContextValue = {
-  count: number
-  setCount: (updater: (count: number) => number) => void
-}
+type ACTION_INCREMENT = {type: 'increment'}
+type ACTION_DECREMENT = {type: 'decrement'}
+type Action = ACTION_INCREMENT | ACTION_DECREMENT
+type Dispatch = (action: Action) => void
+type State = {count: number}
+type CountProviderProps = {children: React.ReactNode}
 
-const CountContext = React.createContext<CountContextValue | undefined>(
+const CountStateContext = React.createContext<State | undefined>(undefined)
+const CountDispatchContext = React.createContext<Dispatch | undefined>(
   undefined,
 )
 
-type CountProviderProps = {
-  value?: CountContextValue
-  children: React.ReactNode
-}
-
-function CountProvider(props: CountProviderProps) {
-  const [count, setCount] = React.useState(0)
-  const value = React.useMemo(() => {
-    return {
-      count,
-      setCount,
+function countReducer(state: State, action: Action) {
+  switch (action.type) {
+    case 'increment': {
+      return {count: state.count + 1}
     }
-  }, [count])
-  return <CountContext.Provider value={value} {...props} />
-}
-
-function useCount() {
-  const context = React.useContext(CountContext)
-  if (!context) {
-    throw new Error('useCount must be used within a CountProvider')
-  }
-  const {count, setCount} = context
-  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
-  return {
-    count,
-    increment,
+    case 'decrement': {
+      return {count: state.count - 1}
+    }
+    default: {
+      throw new Error(`Unhandled action type: ${action.type}`)
+    }
   }
 }
 
-export {CountProvider, useCount}
+function CountProvider({children}: CountProviderProps) {
+  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  return (
+    <CountStateContext.Provider value={state}>
+      <CountDispatchContext.Provider value={setCount}>
+        {children}
+      </CountDispatchContext.Provider>
+    </CountStateContext.Provider>
+  )
+}
+
+function useCountState() {
+  const context = React.useContext(CountStateContext)
+  if (context === undefined) {
+    throw new Error('useCountState must be used within a CountProvider')
+  }
+  return context
+}
+
+function useCountDispatch() {
+  const context = React.useContext(CountDispatchContext)
+  if (context === undefined) {
+    throw new Error('useCountDispatch must be used within a CountProvider')
+  }
+  return context
+}
+
+export {CountProvider, useCountState, useCountDispatch}
 ```
 
-With that, anyone can use `useCount` without having to do any undefined-checks
-because we're doing it for them!
+With that, anyone can use `useCountState` or `useCountDispatch` without having
+to do any undefined-checks because we're doing it for them!
 
-[Here's a working codesandbox](https://codesandbox.io/s/m4wk8wlpy8)
+[Here's a working codesandbox](https://codesandbox.io/s/bitter-night-i5mhj)
+
+## What about dispatch `type` typos?
+
+At this point, you reduxers are yelling: "Hey, where are the action creators?!"
+If you wanna do action creators that's fine by me, but I never liked action
+creators. I always felt like they were an unnecessary abstraction. Also, if
+you're using TypeScript or flow and have your actions well typed, then you
+shouldn't need them. You'll get autocomplete and type errors!
+
+![dispatch type getting autocompleted](./images/auto-complete.png)
+
+![type error on a misspelled dispatch type](./images/type-error.png)
+
+I really like passing `dispatch` this way and as a side benefit, `dispatch` is
+stable for the lifetime of the component that created it, so you don't need to
+worry about passing it to `useEffect` dependencies lists (it makes no difference
+whether it's included or not).
+
+If you're not typing your JavaScript (you probably should consider it if you
+haven't), then the error we throw for missed action types is a failsafe. Also,
+read on to the next section because this can help you too.
+
+## What about async actions?
+
+This is a great question. What happens if you have a situation where you need to
+make some asynchronous request and you need to dispatch multiple things over the
+course of that request? Sure you could do it at the calling component, but
+manually wiring all of that together for every component that needs to do
+something like that would be pretty annoying.
+
+What I suggest is you make a helper function within your context module which
+accepts `dispatch` along with any other data you need, and make that helper be
+responsible for dealing with all of that. Here's an example from
+[my Advanced React Patterns workshop](/workshops/advanced-react-patterns):
+
+```javascript
+// user-context.js
+async function updateUser(dispatch, user, updates) {
+  dispatch({type: 'start update', updates})
+  try {
+    const updatedUser = await userClient.updateUser(user, updates)
+    dispatch({type: 'finish update', updatedUser})
+  } catch (error) {
+    dispatch({type: 'fail update', error})
+  }
+}
+
+export {UserProvider, useUserDispatch, useUserState, updateUser}
+```
+
+Then you can use that like this:
+
+```javascript
+// user-profile.js
+
+import {useUserState, useUserDispatch, updateUser} from './user-context'
+
+function UserSettings() {
+  const {user, status, error} = useUserState()
+  const userDispatch = useUserDispatch()
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    updateUser(userDispatch, user, formState)
+  }
+
+  // more code...
+}
+```
+
+I'm really happy with this pattern and if you'd like me to teach this at your
+company [let me know](/contact) (or
+[add yourself to the waitlist](/workshops/advanced-react-patterns) for the next
+time I host the workshop)!
+
+## The state and dispatch separation is annoying
+
+Some people find this annoying/overly verbose:
+
+```javascript
+const state = useCountState()
+const dispatch = useCountDispatch()
+```
+
+They say "can't we just do this?":
+
+```javascript
+const [state, dispatch] = useCount()
+```
+
+Sure you can:
+
+```javascript
+function useCount() {
+  return [useCountState(), useCountDispatch()]
+}
+```
 
 ## Conclusion
 
 So here's the final version of the code:
 
-```javascript
+```jsx
 // src/count-context.js
 import React from 'react'
 
-const CountContext = React.createContext()
+const CountStateContext = React.createContext()
+const CountDispatchContext = React.createContext()
 
-function CountProvider(props) {
-  const [count, setCount] = React.useState(0)
-  const value = React.useMemo(() => {
-    return {
-      count,
-      setCount,
+function countReducer(state, action) {
+  switch (action.type) {
+    case 'increment': {
+      return {count: state.count + 1}
     }
-  }, [count])
-  return <CountContext.Provider value={value} {...props} />
-}
-
-function useCount() {
-  const context = React.useContext(CountContext)
-  if (!context) {
-    throw new Error('useCount must be used within a CountProvider')
-  }
-  const {count, setCount} = context
-  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
-  return {
-    count,
-    increment,
+    case 'decrement': {
+      return {count: state.count - 1}
+    }
+    default: {
+      throw new Error(`Unhandled action type: ${action.type}`)
+    }
   }
 }
 
-export {CountProvider, useCount}
+function CountProvider({children}) {
+  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  return (
+    <CountStateContext.Provider value={state}>
+      <CountDispatchContext.Provider value={setCount}>
+        {children}
+      </CountDispatchContext.Provider>
+    </CountStateContext.Provider>
+  )
+}
+
+function useCountState() {
+  const context = React.useContext(CountStateContext)
+  if (context === undefined) {
+    throw new Error('useCountState must be used within a CountProvider')
+  }
+  return context
+}
+
+function useCountDispatch() {
+  const context = React.useContext(CountDispatchContext)
+  if (context === undefined) {
+    throw new Error('useCountDispatch must be used within a CountProvider')
+  }
+  return context
+}
+
+export {CountProvider, useCountState, useCountDispatch}
 ```
 
-[Here's a working codesandbox](https://codesandbox.io/s/3vryq4qrp).
+[Here's a working codesandbox](https://codesandbox.io/s/react-codesandbox-je6cc).
 
 Note that I'm _NOT_ exporting `CountContext`. This is intentional. I expose only
 one way to provide the context value and only one way to consume it. This allows
