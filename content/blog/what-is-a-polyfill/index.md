@@ -144,7 +144,7 @@ that your browsers don't support.
   used [capybara](https://github.com/teamcapybara/capybara) before you'll
   probably love this util from [Justin Searls](https://twitter.com/searls). If
   you like this, then you'll probably love
-  [cypress-testing-library](https://github.com/kentcdodds/cypress-testing-library).
+  [cypress-testing-library](https://github.com/testing-library/cypress-testing-library).
   In any case,
   [don't reuse your CSS selectors as test selectors](https://blog.kentcdodds.com/making-your-ui-tests-resilient-to-change-d37a6ee37269)!
 - [guppy](https://github.com/joshwcomeau/guppy) — 🐠A friendly application
