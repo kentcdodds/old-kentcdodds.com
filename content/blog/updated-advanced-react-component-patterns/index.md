@@ -76,7 +76,7 @@ patterns because those are still very awesome.
 
 We have a few lessons that feature a completely **new pattern that wasn't in the
 original course** that I implemented a while ago in
-[downshift](https://github.com/paypal/downshift) called
+[downshift](https://github.com/downshift-js/downshift) called
 [**the state reducer pattern**](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57):
 
 [**Implement Component State Reducers**](https://egghead.io/lessons/react-implement-component-state-reducers)

@@ -226,7 +226,7 @@ realm of Open Source that I'd like to mention. Here are a few numbers:
   WOW. 🤯
 - I [deprecated glamorous](https://github.com/paypal/glamorous/issues/419) in
   favor of [emotion.sh](https://emotion.sh)
-- Published v2 and v3 of [downshift](https://github.com/paypal/downshift).
+- Published v2 and v3 of [downshift](https://github.com/downshift-js/downshift).
 - There are now
   [over 2k `.all-contributorsrc` files on GitHub](https://github.com/search?q=.all-contributorsrc+in%3Apath&type=Code&utf8=✓)
   😱

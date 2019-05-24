@@ -25,7 +25,7 @@ Since I
 [released downshift 🏎](https://kentcdodds.com/blog/introducing-downshift-for-react)
 a few weeks ago. Of all things, I think the most common question I've gotten has
 been about the "prop getters." As far as I know,
-[downshift](https://github.com/paypal/downshift) is the first library to
+[downshift](https://github.com/downshift-js/downshift) is the first library to
 implement this pattern, so I thought I'd explain why it's useful and how to
 implement it. If you're unfamiliar with downshift, please read
 [the intro post](https://kentcdodds.com/blog/introducing-downshift-for-react)
@@ -225,8 +225,8 @@ use the `children` prop, but you could use a `render` prop if you prefer).
 
 Here are a few projects that implement the prop getters pattern:
 
-- `[downshift](https://github.com/paypal/downshift)`
-  [🏎](https://github.com/paypal/downshift) - Primitive for building simple,
+- `[downshift](https://github.com/downshift-js/downshift)`
+  [🏎](https://github.com/downshift-js/downshift) - Primitive for building simple,
   flexible, WAI-ARIA compliant enhanced input React components
 - `[react-toggled](https://github.com/kentcdodds/react-toggled)` - Component to
   build simple, flexible, and accessible toggle components

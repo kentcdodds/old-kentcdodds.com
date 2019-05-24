@@ -26,7 +26,7 @@ You may not have had much experience with the idea of a
 [state reducer](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57).
 In contrast to control props, built-in react elements don’t support state
 reducers (though I hear that reason-react does). My library
-[downshift](https://github.com/paypal/downshift) supports a state reducer.
+[downshift](https://github.com/downshift-js/downshift) supports a state reducer.
 Here’s an example of using it to prevent the menu from closing after an item is
 selected:
 

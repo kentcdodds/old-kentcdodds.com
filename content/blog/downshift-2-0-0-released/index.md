@@ -34,13 +34,13 @@ heard of downshift, consider reading
 
 Lead primarily by [Michael Ball](https://github.com/cycomachead) (with helpful
 reviews from several others), we
-[received](https://github.com/paypal/downshift/pull/285) a number of
+[received](https://github.com/downshift-js/downshift/pull/285) a number of
 improvements to the accessibility features baked-into downshift. He also added a
 new
-[`getMenuProps`](https://github.com/paypal/downshift/blob/master/README.md#getmenuprops)
+[`getMenuProps`](https://github.com/downshift-js/downshift/blob/master/README.md#getmenuprops)
 [prop getter](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf)
 (which was also instrumental in fixing
-[a bug with React Portals](https://github.com/paypal/downshift/issues/287)).
+[a bug with React Portals](https://github.com/downshift-js/downshift/issues/287)).
 This allows us to add some `aria-` attributes to the menu you render that will
 help assistive technologies use your enhanced input components! Woo! I've also
 updated many of the examples to use more semantically correct elements.
@@ -53,13 +53,13 @@ that this is great! This is largely thanks to work by
 [Eli Perkins](https://github.com/eliperkins)! They've already shipped downshift
 to production in their iOS app:
 
-[![Screenshot of downshift code in React Native from Eli](./images/0.png)](https://github.com/paypal/downshift/issues/185#issuecomment-365965566)
+[![Screenshot of downshift code in React Native from Eli](./images/0.png)](https://github.com/downshift-js/downshift/issues/185#issuecomment-365965566)
 
 ### ReasonReact Support
 
 We've actually had this for a while too, but I want to call it out especially.
 Thanks to [Nicola Molinari](https://github.com/emmenko) there are
-[official Reason bindings for downshift](https://github.com/paypal/downshift/blob/master/README.md#bindings-for-reasonml).
+[official Reason bindings for downshift](https://github.com/downshift-js/downshift/blob/master/README.md#bindings-for-reasonml).
 So you can build UIs for any platform you can imagine with downshift and
 [ReasonML](https://reasonml.github.io/). Soooo cool!
 
@@ -80,7 +80,7 @@ support `children`.
 
 After downshift was out for a while, I started to realize that folks missed out
 on some of the more useful and necessary props (like
-[`itemToString`](https://github.com/paypal/downshift/blob/master/README.md#itemtostring)).
+[`itemToString`](https://github.com/downshift-js/downshift/blob/master/README.md#itemtostring)).
 I blame myself for this and recently reorganized the docs to make more relevant
 information more apparent.
 
@@ -142,4 +142,4 @@ people:
 
 Thank you!
 
-[_See the release notes for more info on this release_](https://github.com/paypal/downshift/releases/tag/v2.0.0)
+[_See the release notes for more info on this release_](https://github.com/downshift-js/downshift/releases/tag/v2.0.0)

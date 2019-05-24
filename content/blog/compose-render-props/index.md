@@ -26,7 +26,7 @@ The example itself is a little unimpressive from a user experience standpoint
 update it to look pretty). But the underlying code there is what I want to talk
 about.
 
-When I created [downshift](https://github.com/paypal/downshift), I gave it the
+When I created [downshift](https://github.com/downshift-js/downshift), I gave it the
 following tagline:
 
 > _🏎 Primitives to build simple, flexible, WAI-ARIA compliant enhanced input
