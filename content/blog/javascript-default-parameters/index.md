@@ -117,8 +117,8 @@ Good luck!
 - [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://www.youtube.com/watch?v=t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://www.youtube.com/watch?v=eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting](https://kentcdodds.com/workshops/#code-transformation-and-linting)
-- [Writing custom Babel and ESLint plugins with ASTs](https://kentcdodds.com/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
+- [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
+- [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
 for my daily devtips, like

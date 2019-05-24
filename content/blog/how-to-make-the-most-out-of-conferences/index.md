@@ -103,7 +103,7 @@ I think :)
 
 This is a subject unto itself (I actually talked about it in last week's
 newsletter
-["Why and How I started public speaking"](https://blog.kentcdodds.com/why-and-how-i-started-public-speaking-d5ae78303707)),
+["Why and How I started public speaking"](/blog/why-and-how-i-started-public-speaking)),
 but I would encourage you to get involved in speaking at conferences. This does
 add a whole new layer of stress to your experience, but there are a great deal
 of benefits as well. I definitely encourage speaking as a way to get to attend

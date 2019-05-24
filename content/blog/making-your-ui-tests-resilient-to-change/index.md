@@ -203,7 +203,7 @@ I hope this is helpful to you. Good luck! Enjoy :)
   about something I think is really important to remember.
 - [Testing JavaScript Applications](https://frontendmasters.com/courses/testing-javascript/) — my
   testing workshop on Frontend Masters.
-  ([Resources and practice run here](https://kentcdodds.com/workshops/#testing-javascript-applications)).
+  ([Resources and practice run here](/workshops/#testing-javascript-applications)).
 - [How Node.js require() works](https://twitter.com/NTulswani/status/916961093280456705) — a
   tweet from my friend [Nitin Tulswani](https://twitter.com/NTulswani) that
   explains briefly what happens when you use the require function.

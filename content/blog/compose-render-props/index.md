@@ -26,8 +26,8 @@ The example itself is a little unimpressive from a user experience standpoint
 update it to look pretty). But the underlying code there is what I want to talk
 about.
 
-When I created [downshift](https://github.com/downshift-js/downshift), I gave it the
-following tagline:
+When I created [downshift](https://github.com/downshift-js/downshift), I gave it
+the following tagline:
 
 > _🏎 Primitives to build simple, flexible, WAI-ARIA compliant enhanced input
 > React components_
@@ -94,13 +94,13 @@ I hope this is helpful! Good luck!
 
 **Learn more about Render Props from me**:
 
-- [How to give rendering control to users with prop getters](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf) — My
+- [How to give rendering control to users with prop getters](/blog/how-to-give-rendering-control-to-users-with-prop-getters) — My
   blog post from a few months back about a pattern that's complementary to
   render props
-- [Testing components using render props](https://blog.kentcdodds.com/testing--components-using-render-props-5623ab1814c) — If
+- [Testing components using render props](/blog/testing-components-using-render-props) — If
   you want to test component A which uses component B, and component B has a
   render prop API, read this.
-- [Answers to common questions about render props](https://blog.kentcdodds.com/answers-to-common-questions-about-render-props-a9f84bb12d5d) — My
+- [Answers to common questions about render props](/blog/answers-to-common-questions-about-render-props) — My
   blog post that is what the title says it is...
 - [egghead.io](https://egghead.io/courses/advanced-react-component-patterns) — My
   Advanced React Component Patterns course.

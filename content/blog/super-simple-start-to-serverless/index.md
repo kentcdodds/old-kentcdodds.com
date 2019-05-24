@@ -21,7 +21,7 @@ bannerCredit:
 
 This last little while I've been doing a fair amount of work on
 [kentcdodds.com](https://kentcdodds.com). One page that I've been working on is
-the [contact page](https://kentcdodds.com/contact) where you can
+the [contact page](/contact) where you can
 [request enterprise training](https://kcd.im/request-a-workshop),
 [schedule an hour of my time for consulting](https://kcd.im/consulting), or even
 [leave your own testimonial of my work](https://kcd.im/testimonial) (I'd love it

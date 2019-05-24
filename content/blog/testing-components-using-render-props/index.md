@@ -106,16 +106,15 @@ implementation details a little more.
 ![UI, Service, Unit](./images/0.png)
 
 > _Sorry, no example of E2E tests today. Maybe when I publish this to_ >
-> [_my blog_](https://blog.kentcdodds.com/) _I'll have some..._
+> [_my blog_](/blog) _I'll have some..._
 
 ### Integration Tests
 
-That said,
-[I suggest focusing on integration tests](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c).
-With an integration test, you likewise don't have to change too much about how
-you test the component. Here are the integration tests from the repo. You'll
-notice that there's no indication that the `FruitAutocomplete` component is
-implemented with a render prop component (an implementation detail):
+That said, [I suggest focusing on integration tests](/blog/write-tests). With an
+integration test, you likewise don't have to change too much about how you test
+the component. Here are the integration tests from the repo. You'll notice that
+there's no indication that the `FruitAutocomplete` component is implemented with
+a render prop component (an implementation detail):
 
 ```jsx
 import React from 'react'
@@ -298,10 +297,10 @@ I hope this is helpful to you! Good luck!
 - [Learn, Build, and Teach with Kent C. Dodds](http://itcareerenergizer.com/e35/)
   on [I.T. Career Energizer](http://itcareerenergizer.com/) — You can find my
   other appearances on podcasts and things on
-  [my website appearances page](https://kentcdodds.com/appearances/) 🎙
+  [my website appearances page](/appearances) 🎙
 - [ReactJS RFCs repo](https://github.com/reactjs/rfcs) — RFCs for changes to
   React. Check it out. It already has a few very interesting pull requests.
-- [Learn React Fundamentals 🆓 and Advanced Patterns ⚛️ 🎁](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db) — If
+- [Learn React Fundamentals 🆓 and Advanced Patterns ⚛️ 🎁](/blog/learn-react-fundamentals-and-advanced-patterns) — If
   you've missed this, then you've either just started following me or you
   haven't been paying attention 😅
 - [React 🎄](https://react.holiday/) — "This is a React advent thingy; the whole

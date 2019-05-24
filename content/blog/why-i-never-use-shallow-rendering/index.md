@@ -150,13 +150,12 @@ bit like this:
 
 Look familiar? So all shallow rendering is doing is taking the result of the
 given component's `render` method (which will be a React element (read
-[What is JSX?](https://blog.kentcdodds.com/what-is-jsx-310ab98c463e))) and
-giving us a `wrapper` object with some utilities for traversing this JavaScript
-object. This means it doesn't run lifecycle methods (because we just have the
-React elements to deal with), it doesn't allow you to actually interact with DOM
-elements (because nothing's actually rendered), and it doesn't actually attempt
-to get the react elements that are returned by your custom components (like our
-`Fade` component).
+[What is JSX?](/blog/what-is-jsx))) and giving us a `wrapper` object with some
+utilities for traversing this JavaScript object. This means it doesn't run
+lifecycle methods (because we just have the React elements to deal with), it
+doesn't allow you to actually interact with DOM elements (because nothing's
+actually rendered), and it doesn't actually attempt to get the react elements
+that are returned by your custom components (like our `Fade` component).
 
 ### Why people use shallow rendering
 

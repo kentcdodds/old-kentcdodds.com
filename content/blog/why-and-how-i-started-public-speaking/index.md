@@ -126,8 +126,7 @@ So why do I speak at meetups and conferences now?
   family's financial stability
 - Promote the practices and technologies that I enjoy in an effort to increase
   the community around them
-- To
-  [solidify what I'm learning](https://blog.kentcdodds.com/solidifying-what-you-learn-6650258c84be)
+- To [solidify what I'm learning](/blog/solidifying-what-you-learn)
 
 How did I get into public speaking?
 

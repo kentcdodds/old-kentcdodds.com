@@ -15,9 +15,8 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/service-bridge)'
 ---
 
-In last week's newsletter
-["What is a polyfill"](https://blog.kentcdodds.com/what-is-a-polyfill-acab87e8481e),
-I talked about a situation I came across with a white screen on IE10 (the app
+In last week's newsletter ["What is a polyfill"](/blog/what-is-a-polyfill), I
+talked about a situation I came across with a white screen on IE10 (the app
 crashed because we were missing polyfills). I explained a bit of the difference
 between a polyfill and a code transform. I explained a few options you have at
 your disposal to use new JavaScript features and still support older browsers.
@@ -188,8 +187,8 @@ Pretty cool!
 - [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://www.youtube.com/watch?v=t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://www.youtube.com/watch?v=eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting](https://kentcdodds.com/workshops/#code-transformation-and-linting)
-- [Writing custom Babel and ESLint plugins with ASTs](https://kentcdodds.com/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
+- [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
+- [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
 for my daily devtips, like

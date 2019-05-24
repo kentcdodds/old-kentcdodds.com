@@ -17,14 +17,14 @@ bannerCredit:
 ---
 
 Last year when I was using enzyme (like everyone else at the time), I stepped
-carefully around certain APIs in enzyme. I
-[completely avoided shallow rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7),
-_never_ used APIs like `instance()`, `state()`, or `find('ComponentName')`. And
-in code reviews of other people's pull requests I explained again and again why
-it's important to avoid these APIs. The reason is they each allow your test to
-test implementation details of your components. People often ask me what I mean
-by "implementation details." I mean, it's hard enough to test as it is! Why do
-we have to make all these rules to make it harder?
+carefully around certain APIs in enzyme. I [completely avoided shallow
+rendering](/blog/why-i-never-use-shallow-rendering, _never_ used APIs like
+`instance()`, `state()`, or `find('ComponentName')`. And in code reviews of
+other people's pull requests I explained again and again why it's important to
+avoid these APIs. The reason is they each allow your test to test implementation
+details of your components. People often ask me what I mean by "implementation
+details." I mean, it's hard enough to test as it is! Why do we have to make all
+these rules to make it harder?
 
 ### Why is testing implementation details bad?
 
@@ -370,9 +370,9 @@ ever}
   gives a fine Developer Experience (DX) and a single dev dependency for all
   your javascript and css/sass/scss bundling.*
 - [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) — Really
-  interesting take on my
-  [shallow rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7)
-  blog post that has a number of great gems.
+  interesting take on my [shallow
+  rendering](/blog/why-i-never-use-shallow-rendering blog post that has a number
+  of great gems.
 - ["A brief analysis and comparison of the CSS for Twitter's PWA vs Twitter's legacy desktop website. The difference is dramatic and I'll touch on some reasons why."](https://twitter.com/necolas/status/1058949372837122048)
   (A very interesting thread by [@necolas](https://twitter.com/necolas) I
   recommend you give a read).

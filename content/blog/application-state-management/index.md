@@ -67,7 +67,7 @@ continuing further.** It's super powerful on its own.
 Where things start to break down with component state is when you bump into
 problems with "prop drilling." Learn more about this here:
 
-[**Prop Drilling**](https://blog.kentcdodds.com/prop-drilling-bb62e02cb691)
+[**Prop Drilling**](/blog/prop-drilling)
 
 ### JavaScript Module (Singleton)
 
@@ -111,7 +111,7 @@ still not a bad option. That is,
 The new Context API in React is super duper awesome. If you haven't read my post
 about that yet, give it a look:
 
-[**React's ⚛️ new Context API**](https://kentcdodds.com/blog/reacts-new-context-api)
+[**React's ⚛️ new Context API**](/blog/reacts-new-context-api)
 
 React context allows you to overcome the prop-drilling problem _and_ the update
 issues with a singleton with a simple built-in API. With this API you can pretty

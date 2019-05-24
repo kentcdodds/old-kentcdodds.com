@@ -360,8 +360,8 @@ and you'll have a much better time testing! Good luck!
 
 - [Byteconf React Speakers: Round One](https://medium.com/byteconf/byteconf-react-speakers-round-one-ab25af8edf23) — Look!
   It's a free online conference and I'm speaking at it!
-- [🏎 downshift 2.0.0 released 🎉](https://blog.kentcdodds.com/downshift-2-released-26b49589e8d2) — Even
-  better accessibility, React Native and ReasonReact support, even simpler API,
+- [🏎 downshift 2.0.0 released 🎉](/blog/downshift-2-0-0-released) — Even better
+  accessibility, React Native and ReasonReact support, even simpler API,
   improved docs, new examples site, Flow and TypeScript support, and a new
   online community ⚛️
 - [keycode.info](http://keycode.info/) by

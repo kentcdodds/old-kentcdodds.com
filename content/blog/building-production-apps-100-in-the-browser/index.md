@@ -14,11 +14,10 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-Earlier, [I mentioned](https://blog.kentcdodds.com/merry-christmas-77b4380b8cf9)
-that I made two apps for my family. The first is
-[Typing for Kids](https://typing-for-kids.netlify.com/) which I made for my two
-oldest children, the second is [Repeat Todo](https://repeat-todo.com/) which I
-made for my wife.
+Earlier, [I mentioned](/blog/merry-christmas) that I made two apps for my
+family. The first is [Typing for Kids](https://typing-for-kids.netlify.com/)
+which I made for my two oldest children, the second is
+[Repeat Todo](https://repeat-todo.com/) which I made for my wife.
 
 Today I want to briefly talk about how I went about creating these apps as a way
 to reiterate how awesome it is to build for the web these days.

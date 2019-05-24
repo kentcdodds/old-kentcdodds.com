@@ -219,8 +219,7 @@ Good luck! And stay awesome 😎
   awesome so I'm glad it's pushing forward!
 - [Did you know...](https://blog.kentcdodds.com/did-you-know-3079d5aec43b) by
   me. Something you might not have known about Medium before and now that you do
-  I'd appreciate you applying that knowledge to
-  [the things I publish](https://blog.kentcdodds.com/) 😉
+  I'd appreciate you applying that knowledge to [the things I publish](/blog) 😉
 - [Flexbox Zombies](http://geddski.teachable.com/p/flexbox-zombies). The best
   way to learn flexbox by the amazing
   [Dave Geddes](https://twitter.com/geddski). Also check out

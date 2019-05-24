@@ -23,9 +23,9 @@ Read more about the concept of control props in
 [the react docs](https://reactjs.org/docs/forms.html).
 
 You may not have had much experience with the idea of a
-[state reducer](https://blog.kentcdodds.com/the-state-reducer-pattern--b40316cfac57).
-In contrast to control props, built-in react elements don’t support state
-reducers (though I hear that reason-react does). My library
+[state reducer](/blog/the-state-reducer-pattern). In contrast to control props,
+built-in react elements don’t support state reducers (though I hear that
+reason-react does). My library
 [downshift](https://github.com/downshift-js/downshift) supports a state reducer.
 Here’s an example of using it to prevent the menu from closing after an item is
 selected:
@@ -47,7 +47,7 @@ const ui = (
 ```
 
 You can learn how to implement these patterns from
-[my Advanced React Component Patterns material](https://kentcdodds.com/workshops/#advanced-react-component-patterns).
+[my Advanced React Component Patterns material](/workshops/#advanced-react-component-patterns).
 
 Both of these patterns help you expose state management to component consumers
 and while they have significantly different APIs, they allow much of the same

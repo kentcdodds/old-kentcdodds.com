@@ -17,7 +17,7 @@ bannerCredit:
 
 > Curious about what's going to happen to the context API when
 > [React hooks](https://reactjs.org/hooks) are stable? Read all about it here:
-> [https://blog.kentcdodds.com/react-hooks-whats-going-to-happen-to-react-context-1881f8a058be](https://blog.kentcdodds.com/react-hooks-whats-going-to-happen-to-react-context-1881f8a058be)
+> [https://kentcdodds.com/blog/react-hooks-whats-going-to-happen-to-react-context](/blog/react-hooks-whats-going-to-happen-to-react-context)
 
 Have you heard of the context API in React? If you've heard of it, are you like
 many others afraid to use it directly because you saw this in the official docs:

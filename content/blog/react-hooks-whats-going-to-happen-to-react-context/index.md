@@ -18,8 +18,8 @@ bannerCredit:
 ---
 
 Earlier this year, the React team introduced the first official context API.
-[I blogged about that new API](https://kentcdodds.com/blog/reacts-new-context-api)
-and people got sufficiently and reasonably hyped.
+[I blogged about that new API](/blog/reacts-new-context-api) and people got
+sufficiently and reasonably hyped.
 
 One common complaint that I knew people were going to have when applying it
 practically was the fact that the context consumer is a render-prop based API.

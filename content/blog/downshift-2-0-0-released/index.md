@@ -28,7 +28,7 @@ going to do it now:
 
 Woo! So what do you have to look forward to? Let's dive in! (If you haven't
 heard of downshift, consider reading
-[the original release post](https://blog.kentcdodds.com/introducing-downshift-for-react-b1de3fca0817)).
+[the original release post](/blog/introducing-downshift-for-react)).
 
 ### Improved Accessibility ([**#a11y**](https://twitter.com/hashtag/a11y))
 
@@ -38,7 +38,7 @@ reviews from several others), we
 improvements to the accessibility features baked-into downshift. He also added a
 new
 [`getMenuProps`](https://github.com/downshift-js/downshift/blob/master/README.md#getmenuprops)
-[prop getter](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf)
+[prop getter](/blog/how-to-give-rendering-control-to-users-with-prop-getters)
 (which was also instrumental in fixing
 [a bug with React Portals](https://github.com/downshift-js/downshift/issues/287)).
 This allows us to add some `aria-` attributes to the menu you render that will

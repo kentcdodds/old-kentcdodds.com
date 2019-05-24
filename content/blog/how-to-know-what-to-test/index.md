@@ -20,7 +20,7 @@ tests for specific scenarios, and so on. But knowing _how_ to write tests is
 only half the battle to achieve confidence in your application. Knowing _what_
 to test is the other–very important–battle.
 
-In my [workshop material](https://kentcdodds.com/workshops) and on
+In my [workshop material](/workshops) and on
 [TestingJavaScript.com](https://testingjavascript.com), I do talk about how to
 know what to test, but I get asked about this enough that I thought it would be
 good to write a blog post about it. So here you go!

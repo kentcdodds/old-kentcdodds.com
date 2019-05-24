@@ -14,7 +14,7 @@ banner: './banner.jpg'
 ---
 
 I've been teaching for as long as I can remember. I talk about this a lot in
-["Why and How I started public speaking"](https://blog.kentcdodds.com/d5ae78303707),
+["Why and How I started public speaking"](/blog/why-and-how-i-started-public-speaking),
 but just know that I have a love of teaching, I've done it a lot, and I want to
 do more. **This is why I'm excited to announce that I've gone full-time
 educator!**

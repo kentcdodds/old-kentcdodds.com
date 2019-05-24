@@ -32,15 +32,14 @@ basis these days:
   with
   [new friends playing Dominion](https://twitter.com/craigwalker1123/status/1039138835714560000))
 - On Mondays, I publish the blogpost newsletter from two weeks ago to
-  [blog.kentcdodds.com](http://blog.kentcdodds.com/), a new one for subscribers.
+  [kentcdodds.com/blog](http://kentcdodds.com/blog), a new one for subscribers.
   (~1.5 hours of work, depending...)
 - Product tasks (currently helping work on [paypal.me](https://paypal.me/))
   (this is normally where most of my weekday is spent)
 - Attend work meetings
 - Help people on slack/video chat
-- Work on
-  [paypal-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
-  (among other internal libraries and tools)
+- Work on [paypal-scripts](/blog/tools-without-config) (among other internal
+  libraries and tools)
 - traveling/training (about once a quarter. I'm on an airplane right now for
   such an engagement)
 - Research, prepare, and do a
@@ -189,9 +188,9 @@ years I've been using an awesome tool called
 to automatically release my packages.
 
 The concept of automation is something
-[I've written about in the past](https://blog.kentcdodds.com/an-argument-for-automation-fce8394c14e2).
-It's how I got into software development and I feel strongly that automation is
-the way we can make ourselves more productive
+[I've written about in the past](/blog/automation). It's how I got into software
+development and I feel strongly that automation is the way we can make ourselves
+more productive
 ([even if it takes longer to develop the automation than the time it would save us](https://xkcd.com/1205/)).
 If you find yourself repeatedly doing a task, see if there's a simple way to
 automate it. (Like
@@ -218,8 +217,7 @@ I learned early on that people ask me repeat questions early on. I like to give
 them answers, but I also found out quickly that
 [I don't have time to answer everyone](http://kcd.im/no-time) and it's a bit
 frustrating to answer the same question multiple times. This is why having
-[an active blog](https://blog.kentcdodds.com/) and [an AMA](http://kcd.im/ama)
-are super helpful.
+[an active blog](/blog) and [an AMA](http://kcd.im/ama) are super helpful.
 
 If someone asks me a question, 99% of the time I'll ask them to ask it on my
 AMA. If I get the same question many times, then I'll make it the subject of a
@@ -371,7 +369,7 @@ inbox two weeks before it's published to my blog:
 
 **Learn more about career development from me**:
 
-- [Why and How I started public speaking](https://blog.kentcdodds.com/why-and-how-i-started-public-speaking-d5ae78303707)
+- [Why and How I started public speaking](/blog/why-and-how-i-started-public-speaking)
 - [Getting Noticed and Widening Your Reach](https://buttondown.email/kentcdodds/archive/03761505-8609-404c-a5b7-5367013292bf)
 - [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 

@@ -21,7 +21,7 @@ bannerCredit:
 **UPDATE: If you can use react@16.8.0 then the answer is to rarely use render
 props and almost always use a custom hook. HOOKS ARE ALMOST ALWAYS THE SUPERIOR
 PATTERN.**
-[Read about when you might still use render props](https://kentcdodds.com/blog/react-hooks-whats-going-to-happen-to-render-props)
+[Read about when you might still use render props](/blog/react-hooks-whats-going-to-happen-to-render-props)
 
 ---
 
@@ -29,8 +29,7 @@ PATTERN.**
 > things I do!_ [_patreon.com/kentcdodds_](https://www.patreon.com/kentcdodds)
 
 With all the [tweets](https://twitter.com/kentcdodds/status/957388589171539968),
-[posts](https://blog.kentcdodds.com/answers-to-common-questions-about-render-props-a9f84bb12d5d),
-and
+[posts](/blog/answers-to-common-questions-about-render-props), and
 [training videos](https://egghead.io/lessons/react-use-render-props-with-react)
 I have about the render prop pattern, I get this question a lot: "When should I
 not use the render props pattern?"
@@ -41,13 +40,13 @@ outweighs the cost (or because the thought lords told us to and we didn't stop
 to think about it... but I digress). So when you're considering implementing a
 particular tool, library, or pattern, it's very important to think critically
 about the costs and benefits (just like we should
-[think critically about how we manage state in our apps](https://blog.kentcdodds.com/application-state-management-66de608ccb24)).
-To understand the benefits in this
-[context](https://kentcdodds.com/blog/reacts-new-context-api) (😉), you have to
-understand the problems it solves, how it goes about solving those problems
-(especially when compared to alternatives), and (most importantly) **whether you
-have those problems to begin with**. If you don't have the problem, then you're
-incurring the cost of abstraction without reaping the benefits!
+[think critically about how we manage state in our apps](/blog/application-state-management)).
+To understand the benefits in this [context](/blog/reacts-new-context-api) (😉),
+you have to understand the problems it solves, how it goes about solving those
+problems (especially when compared to alternatives), and (most importantly)
+**whether you have those problems to begin with**. If you don't have the
+problem, then you're incurring the cost of abstraction without reaping the
+benefits!
 
 ### The problem
 
@@ -112,9 +111,9 @@ This is possible because of the power of the render prop pattern.
 
 In combination with HOCs, the Provider pattern can also be really handy, and can
 also be implemented via render props (in fact, that's basically what
-[the new context API](https://kentcdodds.com/blog/reacts-new-context-api) is all
-about). Just for fun one day, I decided to implement a provider and HOC for
-downshift. It didn't take me very much time at all before I had
+[the new context API](/blog/reacts-new-context-api) is all about). Just for fun
+one day, I decided to implement a provider and HOC for downshift. It didn't take
+me very much time at all before I had
 [a working implementation](https://codesandbox.io/s/017n1jqo00)! This example
 highlights one of the reasons I prefer render props over other patterns. With
 render props you don't need to make and name so many useless components! But
@@ -139,13 +138,13 @@ I hope that's helpful to you! Good luck!
 
 **Learn more about Render Props from me**:
 
-- [How to give rendering control to users with prop getters](https://blog.kentcdodds.com/how-to-give-rendering-control-to-users-with-prop-getters-549eaef76acf) — My
+- [How to give rendering control to users with prop getters](/blog/how-to-give-rendering-control-to-users-with-prop-getters) — My
   blog post from a few months back about a pattern that's complementary to
   render props
-- [Testing components using render props](https://blog.kentcdodds.com/testing--components-using-render-props-5623ab1814c) — If
+- [Testing components using render props](/blog/testing-components-using-render-props) — If
   you want to test component A which uses component B, and component B has a
   render prop API, read this.
-- [Answers to common questions about render props](https://blog.kentcdodds.com/answers-to-common-questions-about-render-props-a9f84bb12d5d) — My
+- [Answers to common questions about render props](/blog/answers-to-common-questions-about-render-props) — My
   blog post that is what the title says it is...
 
 **Learn about Advanced React Component Patterns from me**:

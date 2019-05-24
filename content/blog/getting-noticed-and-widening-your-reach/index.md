@@ -114,8 +114,7 @@ sacrificing your well-being and relationships. That's a subject for another blog
 post. Just know that working on building a community by
 [creating fantastic documentation](https://twitter.com/kentcdodds/status/582620905433489408)(including
 [several free egghead.io lessons](http://docs.angular-formly.com/docs/learn-angular-formly)),
-[encouraging contribution](https://blog.kentcdodds.com/first-timers-only-78281ea47455),
-and
+[encouraging contribution](/blog/first-timers-only), and
 [recognizing and trusting contributors](https://github.com/all-contributors/all-contributors)
 is an important part of getting adoption and recognition for your open source
 work.
@@ -147,12 +146,12 @@ I also did _not_ attempt to throw shade at alternatives or downplay the value of
 their abstractions. Being unkind to the hard work of other people is a very poor
 way to promote your project and has no good place in the world.
 
-### [Speaking](https://kentcdodds.com/talks) & [Teaching](https://kentcdodds.com/workshops)
+### [Speaking](/talks) & [Teaching](/workshops)
 
 ![me teaching people at a workshop](./images/0.jpeg)
 
 I recently published a blog post called
-[Why and How I started public speaking](https://blog.kentcdodds.com/why-and-how-i-started-public-speaking-d5ae78303707).
+[Why and How I started public speaking](/blog/why-and-how-i-started-public-speaking).
 I'm just going to link you to that story rather than re-iterate the whole thing
 here. But I do want to tell how I got started with creating content for
 [egghead.io](http://egghead.io/) as that made a big influence on widening my
@@ -265,15 +264,15 @@ you as well and many become your followers. **I think that of all things, my
 podcasts had the biggest impact on my reach while I was running them.**
 
 The show did prove to take more time than I had, so I did eventually
-[Sunset JavaScript Air](https://blog.kentcdodds.com/sunsetting-javascript-air-2e9d3700dbd4).
-But maybe one day I'll start it back up again. It was awesome.
+[Sunset JavaScript Air](/blog/sunsetting-javascript-air). But maybe one day I'll
+start it back up again. It was awesome.
 
 > _I'll just add here really quick that I'm also way more likely to be able to
 > give you an hour of my time if I know that the value we create will be spread
 > to impact more people. I'm always happy to join you on a podcast._ >
-> [_Here's a list of podcasts I've been a guest on in the past_](https://kentcdodds.com/appearances/)_._
+> [_Here's a list of podcasts I've been a guest on in the past_](/appearances)_._
 
-### [Newslettering](http://kcd.im/news) & [Blogging](https://blog.kentcdodds.com/)
+### [Newslettering](http://kcd.im/news) & [Blogging](/blog)
 
 ![A notebook and a pen](./images/3.jpg)
 

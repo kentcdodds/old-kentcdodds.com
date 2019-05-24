@@ -129,10 +129,10 @@ than you've likely experienced in the past. Repeat testing is a common mistake
 that people make when writing E2E tests that contribute to the poor performance
 and reliability.
 
-[Tests should always work in isolation](https://blog.kentcdodds.com/test-isolation-with-react-6962d3f13d1f).
-So that means every test should be executed as a different user. So every test
-will need to register and login as a brand new user right? Right. So you need to
-have a few page objects for the registration and login pages because you'll be
+[Tests should always work in isolation](/blog/test-isolation-with-react). So
+that means every test should be executed as a different user. So every test will
+need to register and login as a brand new user right? Right. So you need to have
+a few page objects for the registration and login pages because you'll be
 running through those pages in every test right? WRONG! That's the mistake!
 
 Let's take a step back. Why are you writing tests? So you can ship your

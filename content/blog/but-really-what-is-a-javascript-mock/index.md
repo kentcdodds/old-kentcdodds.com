@@ -25,8 +25,8 @@ the content I'd prepared for time management purposes. So I've revamped
 (rewritten) the project to make it more conducive to learning and I split it
 into two parts:
 
-- [Testing Practices and Principles workshop](https://kentcdodds.com/workshops/#testing-practices-and-principles)
-- [Testing React and Web Applications](https://kentcdodds.com/workshops/#testing-react-and-web-applications)
+- [Testing Practices and Principles workshop](/workshops/#testing-practices-and-principles)
+- [Testing React and Web Applications](/workshops/#testing-react-and-web-applications)
 
 Last month I gave the Practices and Principles workshop at
 [Assert(JS)](https://www.assertjs.com/training). It was a lot of fun and went
@@ -35,7 +35,7 @@ the workshop was that I had more time to cover a subject I'd missed in the
 original workshop: **mocking**. I'd like to share that section with you in blog
 post form now because I think it's a good introduction. It follows the same
 pattern as my
-[But really, what is a JavaScript test?](https://blog.kentcdodds.com/but-really-what-is-a-javascript-test-46fe5f3fad77)
+[But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
 So here we go!
 
 > _If you'd like to follow along, go ahead and_ >

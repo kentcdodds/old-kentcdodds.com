@@ -16,9 +16,8 @@ bannerCredit:
 ---
 
 This last week I gave
-[a talk at React Dev Summit called "How to React."](https://kentcdodds.com/talks/#how-to-react).
-It's basically an updated version of
-[Pete Hunt's](https://twitter.com/floydophone)
+[a talk at React Dev Summit called "How to React."](/talks/#how-to-react). It's
+basically an updated version of [Pete Hunt's](https://twitter.com/floydophone)
 [react-howto](https://github.com/petehunt/react-howto) GitHub repo. I thought
 I'd just jot down a few things from this talk for you to enjoy in your inbox
 today :)
@@ -120,8 +119,8 @@ all to use React.
 
 [The last lesson](https://egghead.io/lessons/egghead-build-and-deploy-a-react-application)
 shows you how to use [CodeSandbox.io](http://codesandbox.io/) to create your app
-[entirely in the browser](https://blog.kentcdodds.com/building-production-apps-100-in-the-browser-a8b5da7faf3)
-and download that to your computer to a
+[entirely in the browser](/blog/building-production-apps-100-in-the-browser) and
+download that to your computer to a
 [create-react-app](https://github.com/facebook/create-react-app) application.
 
 You don't need anything installed to get a really long way! And once you do, you
@@ -169,8 +168,8 @@ actually get you a long way with React and I encourage you to keep doing this as
 long as you're able. Eventually you'll start running into some trouble with "the
 prop-drilling problem." You'll know it when you feel it. When this happens, then
 I suggest you give my blog post
-["Application State Management"](https://blog.kentcdodds.com/application-state-management-66de608ccb24)
-a read through.
+["Application State Management"](/blog/application-state-management) a read
+through.
 
 > _TL;DR: Singleton Module -> React.createContext ->_ >
 > [_Unstated.io_](http://unstated.io/)_-\> redux._

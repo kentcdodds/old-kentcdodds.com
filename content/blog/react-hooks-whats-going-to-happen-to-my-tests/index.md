@@ -333,7 +333,7 @@ function Counter(props) {
 
 Cool, and because we wrote our test the way we did, it's actually still passing.
 Woo! BUT! As we learned from
-"[React Hooks: What's going to happen to render props?](https://blog.kentcdodds.com/8ade1f00f159)"
+"[React Hooks: What's going to happen to render props?](/blog/react-hooks-whats-going-to-happen-to-render-props)"
 custom hooks are a better primitive for code sharing in React. So let's rewrite
 this to a custom hook:
 

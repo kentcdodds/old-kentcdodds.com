@@ -30,7 +30,7 @@ mostly a secret and surprise 😃).
 This year I
 [created](https://github.com/testing-library/react-testing-library/commit/4f16c6e6b356fae1ad92f59eebeb1a8000f60714)
 and
-[introduced react-testing-library](https://blog.kentcdodds.com/introducing-the-react-testing-library-e3a274307e65).
+[introduced react-testing-library](/blog/introducing-the-react-testing-library).
 It has [grown a lot](https://www.npmtrends.com/react-testing-library) since
 then. [The spectrum community](https://spectrum.chat/testing-library) has
 [over 300 members now](https://twitter.com/kentcdodds/status/1079523389553790976).
@@ -135,7 +135,7 @@ This was a HUGE effort by me and the good folks at
 courses + 9 podcast episodes. It was a TON of work and people LOVE it. So I'm
 really happy with this.
 
-## [paypal-scripts](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
+## [paypal-scripts](/blog/tools-without-config)
 
 I started this project in August of 2017, but most of the work was done in 2018.
 It's basically a single tool that consolidates a bunch of other tools common to
@@ -289,8 +289,8 @@ Here are some other interesting facts/accomplishments from 2018:
   DAYS worth of time of Brandon Sanderson fantasy novels in 2018. I listen at
   2.9x speed, so it amounts to ~10 days of time, but still. I've filled my ears
   with his words this year!
-- I posted 62 new blog posts on [my blog](https://blog.kentcdodds.com) on
-  subjects around JavaScript, Testing, React, as well as career advice.
+- I posted 62 new blog posts on [my blog](/blog) on subjects around JavaScript,
+  Testing, React, as well as career advice.
 - In 2018, I spent most of my course time on testingjavascript.com, but I did
   manage to make a complete update to
   [Advanced React Component Patterns](https://kcd.im/advanced-react) and make
