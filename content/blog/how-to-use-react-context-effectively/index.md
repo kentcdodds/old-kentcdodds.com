@@ -268,19 +268,17 @@ This is what I used to do before we had hooks and it worked well. I would not
 recommend bothering with this if you can use hooks though. Hooks are much
 better.
 
-## TypeScript
+## TypeScript / Flow
 
 I promised I'd show you how to avoid issues with skipping the `defaultValue`
 when using TypeScript or Flow. Guess what! By doing what I'm suggesting, you
 avoid the problem by default! It's actually not a problem at all. Check it out:
 
-```typescript {11-14,41-45,49-53}
+```typescript {9-12,40-44,48-52}
 // src/count-context.tsx
 import * as React from 'react'
 
-type ACTION_INCREMENT = {type: 'increment'}
-type ACTION_DECREMENT = {type: 'decrement'}
-type Action = ACTION_INCREMENT | ACTION_DECREMENT
+type Action = {type: 'increment'} | {type: 'decrement'}
 type Dispatch = (action: Action) => void
 type State = {count: number}
 type CountProviderProps = {children: React.ReactNode}
@@ -306,6 +304,7 @@ function countReducer(state: State, action: Action) {
 
 function CountProvider({children}: CountProviderProps) {
   const [state, setCount] = React.useReducer(countReducer, {count: 0})
+
   return (
     <CountStateContext.Provider value={state}>
       <CountDispatchContext.Provider value={setCount}>
@@ -335,17 +334,17 @@ export {CountProvider, useCountState, useCountDispatch}
 ```
 
 With that, anyone can use `useCountState` or `useCountDispatch` without having
-to do any undefined-checks because we're doing it for them!
+to do any undefined-checks, because we're doing it for them!
 
 [Here's a working codesandbox](https://codesandbox.io/s/bitter-night-i5mhj)
 
 ## What about dispatch `type` typos?
 
 At this point, you reduxers are yelling: "Hey, where are the action creators?!"
-If you wanna do action creators that's fine by me, but I never liked action
-creators. I always felt like they were an unnecessary abstraction. Also, if
-you're using TypeScript or flow and have your actions well typed, then you
-shouldn't need them. You'll get autocomplete and type errors!
+If you want to implement action creators that is fine by me, but I never liked action
+creators. I have always felt like they were an unnecessary abstraction. Also, if
+you are using TypeScript or Flow and have your actions well typed, then you
+should not need them. You can get autocomplete and inline type errors!
 
 ![dispatch type getting autocompleted](./images/auto-complete.png)
 
@@ -354,10 +353,10 @@ shouldn't need them. You'll get autocomplete and type errors!
 I really like passing `dispatch` this way and as a side benefit, `dispatch` is
 stable for the lifetime of the component that created it, so you don't need to
 worry about passing it to `useEffect` dependencies lists (it makes no difference
-whether it's included or not).
+whether it is included or not).
 
-If you're not typing your JavaScript (you probably should consider it if you
-haven't), then the error we throw for missed action types is a failsafe. Also,
+If you are not typing your JavaScript (you probably should consider it if you
+have not), then the error we throw for missed action types is a failsafe. Also,
 read on to the next section because this can help you too.
 
 ## What about async actions?
