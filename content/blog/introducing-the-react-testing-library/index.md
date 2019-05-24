@@ -245,7 +245,7 @@ some handy custom Jest matchers as well:
   Check whether the given element has a text content or not.
 
 > Note: now these have been extracted to
-> [jest-dom](https://github.com/gnapse/jest-dom) which is maintained by
+> [jest-dom](https://github.com/testing-library/jest-dom) which is maintained by
 > [Ernesto García](https://github.com/gnapse)
 
 ### Conclusion
