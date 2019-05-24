@@ -25,10 +25,10 @@ mostly a secret and surprise 😃).
 > Note: I don't want to bother with trying to sort these in any particular
 > order, so... they're not in any particular order...
 
-## [react-testing-library](https://github.com/kentcdodds/react-testing-library)
+## [react-testing-library](https://github.com/testing-library/react-testing-library)
 
 This year I
-[created](https://github.com/kentcdodds/react-testing-library/commit/4f16c6e6b356fae1ad92f59eebeb1a8000f60714)
+[created](https://github.com/testing-library/react-testing-library/commit/4f16c6e6b356fae1ad92f59eebeb1a8000f60714)
 and
 [introduced react-testing-library](https://blog.kentcdodds.com/introducing-the-react-testing-library-e3a274307e65).
 It has [grown a lot](https://www.npmtrends.com/react-testing-library) since
@@ -57,7 +57,7 @@ for making
 [react-native-testing-library](https://github.com/callstack/react-native-testing-library).
 
 I'm super proud of what we've accomplished here. The
-[react-testing-library all contributors table](https://github.com/kentcdodds/react-testing-library/blob/master/README.md#contributors)
+[react-testing-library all contributors table](https://github.com/testing-library/react-testing-library/blob/master/README.md#contributors)
 lists 63 awesome people, and the
 [dom-testing-library all contributors table](https://github.com/kentcdodds/dom-testing-library/blob/master/README.md#contributors)
 lists 46 (many repeats, but not all). These people are amazing and I really

@@ -22,7 +22,7 @@ figure out how to test React components. I tried
 immediately decided that I would never use it to test my React components. I've
 expressed this feeling on many occasions and get asked on a regular basis why I
 feel the way I do about `shallow` rendering and why
-[`react-testing-library`](https://github.com/kentcdodds/react-testing-library)
+[`react-testing-library`](https://github.com/testing-library/react-testing-library)
 will never support `shallow` rendering.
 
 So finally I'm coming out with it and explaining why I never use shallow
@@ -272,7 +272,7 @@ mocks.
 ### Without shallow rendering
 
 I'm a huge believer of the guiding principle of
-[`react-testing-library`](https://github.com/kentcdodds/react-testing-library):
+[`react-testing-library`](https://github.com/testing-library/react-testing-library):
 
 > [_The more your tests resemble the way your software is used, the more confidence they can give you._](https://twitter.com/kentcdodds/status/977018512689455106)_ — Kent
 > C. Dodds 👋_
