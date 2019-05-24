@@ -7,7 +7,3 @@
 /aha                                                                    /blog/aha-programming
 /blog/aha                                                               /blog/aha-programming
 /workshops/advanced-react-component-patterns                            /advanced-react-patterns
-
-/blog/the-state-reducer-pattern--b40316cfac57                           /blog/the-state-reducer-pattern
-/blog/testing--components-using-render-props-5623ab1814c                /blog/testing-components-using-render-props
-/blog/react-is-an-implementation-detail-and-course-faq-ee73b028745e     /blog/react-is-an-implementation-detail
