@@ -427,6 +427,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "matldupont",
+      "name": "Mat Dupont",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3803431?v=4",
+      "profile": "https://github.com/matldupont",
+      "contributions": [
+        "doc",
+        "content"
+      ]
     }
   ]
 }
