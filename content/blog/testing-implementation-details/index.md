@@ -18,7 +18,7 @@ bannerCredit:
 
 Last year when I was using enzyme (like everyone else at the time), I stepped
 carefully around certain APIs in enzyme. I [completely avoided shallow
-rendering](/blog/why-i-never-use-shallow-rendering, _never_ used APIs like
+rendering](/blog/why-i-never-use-shallow-rendering), _never_ used APIs like
 `instance()`, `state()`, or `find('ComponentName')`. And in code reviews of
 other people's pull requests I explained again and again why it's important to
 avoid these APIs. The reason is they each allow your test to test implementation
