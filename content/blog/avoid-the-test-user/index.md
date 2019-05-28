@@ -81,12 +81,12 @@ something to handle that change.
 But as soon as you start testing things which your developer user and end user
 don't know or care about (implementation details), you add a third testing user,
 you're now having to keep that third user in your head and make sure you account
-for changes that effect the testing user as well.
+for changes that affect the testing user as well.
 
 And for what? To get "confidence?" But what are you getting confidence in when
 you test things this way? You're getting confidence that things work for the
 testing user. But nobody cares about the testing user. The testing user doesn't
-pay the bills like the end user. It doesn't effect the rest of the system like
+pay the bills like the end user. It doesn't affect the rest of the system like
 the developer user.
 
 ## Conclusion
