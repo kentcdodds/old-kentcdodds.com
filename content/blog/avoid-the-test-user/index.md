@@ -59,7 +59,7 @@ is needed.
 
 ---
 
-## The Testing User
+## The Test User
 
 So what does this have to do with testing? One thing that I talk about a lot is
 "[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106) "
