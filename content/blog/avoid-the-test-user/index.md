@@ -51,7 +51,7 @@ alter its usage to account for that. If it changes the user experience, then
 maybe there will need to be release notes explaining the updates, or some
 training material updated for example.
 
-However, it can change in other ways to. Internal refactorings which change how
+However, it can change in other ways too. Internal refactorings which change how
 things are implemented (for example, to make the code easier to follow), but
 don't change the experience of the developer using the component or the end user
 using it. With these kinds of changes, no additional work outside the component
