@@ -16,8 +16,8 @@ bannerCredit:
 ---
 
 Two weeks ago, I wrote
-[a new library](https://github.com/testing-library/react-testing-library)! I've been
-thinking about it for a while. But two weeks ago I started getting pretty
+[a new library](https://github.com/testing-library/react-testing-library)! I've
+been thinking about it for a while. But two weeks ago I started getting pretty
 serious about it:
 
 https://twitter.com/kentcdodds/status/974278185540964352
@@ -175,8 +175,8 @@ by [Jamie White](https://medium.com/u/76c97151e2a6), I added several more and
 now I'm even happier with this solution.
 
 You can read more about the library and its APIs in
-[the official docs](https://github.com/testing-library/react-testing-library). Here's
-a high-level overview of what this library gives you:
+[the official docs](https://github.com/testing-library/react-testing-library).
+Here's a high-level overview of what this library gives you:
 
 - [`Simulate`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#simulate):
   a re-export from the `Simulate` utility from

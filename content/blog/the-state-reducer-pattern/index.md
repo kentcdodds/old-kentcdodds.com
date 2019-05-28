@@ -60,15 +60,15 @@ user selects an item and in the issue @notruth posted, they are saying that
 decision doesn't fit their use case. 🤷‍♂️
 
 This is one reason why downshift supports
-[control props](https://github.com/downshift-js/downshift#control-props). It allows
-you to have complete control over the internal state of downshift. In this case,
-@notruth could have controlled the `isOpen` state and use the `onStateChange` to
-know when to update their version of that state. However, that's a fair amount
-of work, so it's understandable why @notruth would prefer an easier method. But
-the suggestion of adding a new prop for that didn't seem to provide the benefit
-to offset the cost of increasing the API surface area of downshift. So giving it
-a little more thought gave me an idea of how we could simplify this and reduce
-boilerplate further. 😈
+[control props](https://github.com/downshift-js/downshift#control-props). It
+allows you to have complete control over the internal state of downshift. In
+this case, @notruth could have controlled the `isOpen` state and use the
+`onStateChange` to know when to update their version of that state. However,
+that's a fair amount of work, so it's understandable why @notruth would prefer
+an easier method. But the suggestion of adding a new prop for that didn't seem
+to provide the benefit to offset the cost of increasing the API surface area of
+downshift. So giving it a little more thought gave me an idea of how we could
+simplify this and reduce boilerplate further. 😈
 
 ### A simpler API
 
@@ -95,9 +95,9 @@ already had this mechanism in place! It's called
 🤖
 
 So, @notruth opened
-[the pull request](https://github.com/downshift-js/downshift/pull/320) to add the
-`modifyStateChange`. After considering it a little further, I decided that this
-could be generalized into a pattern that could be really useful for other
+[the pull request](https://github.com/downshift-js/downshift/pull/320) to add
+the `modifyStateChange`. After considering it a little further, I decided that
+this could be generalized into a pattern that could be really useful for other
 libraries. Patterns are much easier to evangelize when they have a name, so
 [I looked for one](https://twitter.com/kentcdodds/status/958707800292470784). 🕵️
 

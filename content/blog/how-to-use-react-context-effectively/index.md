@@ -92,6 +92,9 @@ playing around with it for longer and I can tell you that the simplest way to
 avoid problems with context (especially when you start calling `dispatch` in
 effects) is to split up the state and dispatch in context. Stay with me here!
 
+> If you want to dive into this a bit more, then read
+> [How to optimize your context value](/blog/how-to-optimize-your-context-value)
+
 ## The Custom Provider Component
 
 Ok, let's continue. For this context module to be useful _at all_ we need to use
@@ -341,10 +344,10 @@ to do any undefined-checks, because we're doing it for them!
 ## What about dispatch `type` typos?
 
 At this point, you reduxers are yelling: "Hey, where are the action creators?!"
-If you want to implement action creators that is fine by me, but I never liked action
-creators. I have always felt like they were an unnecessary abstraction. Also, if
-you are using TypeScript or Flow and have your actions well typed, then you
-should not need them. You can get autocomplete and inline type errors!
+If you want to implement action creators that is fine by me, but I never liked
+action creators. I have always felt like they were an unnecessary abstraction.
+Also, if you are using TypeScript or Flow and have your actions well typed, then
+you should not need them. You can get autocomplete and inline type errors!
 
 ![dispatch type getting autocompleted](./images/auto-complete.png)
 

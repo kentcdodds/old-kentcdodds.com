@@ -17,8 +17,8 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-[_downshift 🏎_](https://github.com/downshift-js/downshift) _is the primitive you need
-to build simple, flexible, WAI-ARIA compliant React
+[_downshift 🏎_](https://github.com/downshift-js/downshift) _is the primitive you
+need to build simple, flexible, WAI-ARIA compliant React
 autocomplete/typeahead/dropdown/select/combobox/etc (AKA "item selection")
 (p)react ⚛️ components. From PayPal 💙_
 
@@ -38,8 +38,8 @@ autocomplete. Specifically for React, there's
 [react-autocomplete](https://github.com/reactjs/react-autocomplete), and
 [more](https://www.npmjs.com/search?q=react%20autocomplete). And now there's
 another one on the scene. It's called
-[downshift](https://github.com/downshift-js/downshift), its emoji is the race car 🏎,
-and it's taking a different approach.
+[downshift](https://github.com/downshift-js/downshift), its emoji is the race
+car 🏎, and it's taking a different approach.
 
 ## The state of item selection
 
@@ -75,7 +75,8 @@ value and flexibility.
 
 _There's actually not one instance of React.createElement (or JSX) anywhere in
 the_ [`downshift`](https://github.com/downshift-js/downshift/tree/master/src)
-[_source code_](https://github.com/downshift-js/downshift/tree/master/src)_._ Instead,
+[_source code_](https://github.com/downshift-js/downshift/tree/master/src)_._
+Instead,
 [`downshift`](https://github.com/downshift-js/downshift/blob/a449a3b115e4253c7547b404e1059422ae9bf165/src/downshift.js#L710)
 [uses a render callback](https://github.com/downshift-js/downshift/blob/a449a3b115e4253c7547b404e1059422ae9bf165/src/downshift.js#L710)
 (following
@@ -241,10 +242,10 @@ easy to get right for an item selection component like autocomplete. While
 developing it, I referenced several autocomplete components and
 [Marcy Sutton](https://medium.com/u/18a4cb7bfaf) was kind enough to give one of
 our examples
-[an accessibility audit](https://github.com/downshift-js/downshift/issues/79) (Thank
-you Marcy!). Pull up [an example](https://3kxm9wk791.codesandbox.io/) with
-[VoiceOver](https://www.apple.com/accessibility/mac/vision/) and I think you'll
-be impressed! We've worked hard to make sure that it's accessible
+[an accessibility audit](https://github.com/downshift-js/downshift/issues/79)
+(Thank you Marcy!). Pull up [an example](https://3kxm9wk791.codesandbox.io/)
+with [VoiceOver](https://www.apple.com/accessibility/mac/vision/) and I think
+you'll be impressed! We've worked hard to make sure that it's accessible
 ([watch me work on it here](https://www.youtube.com/watch?v=p9QqTGQ5TZ0&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&index=12)),
 and based on my survey of the existing solutions, `downshift` is the most
 accessible component of its kind.
@@ -293,8 +294,8 @@ applications right now as well.
 I
 [started working on downshift](https://www.youtube.com/watch?v=2kzD1IjDy5s&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&index=11)
 about a month ago, the first beta was published (as
-[react-autocompletely](https://github.com/downshift-js/downshift/issues/10)) the next
-day. It's slowly been gaining popularity (it already has 900 🌟 and 7k
+[react-autocompletely](https://github.com/downshift-js/downshift/issues/10)) the
+next day. It's slowly been gaining popularity (it already has 900 🌟 and 7k
 downloads/month) even before the official 1.0.0 release! So it's definitely
 being used in several places, but the first production deployment that I'm aware
 of is in [codesandbox](https://codesandbox.io/) from
