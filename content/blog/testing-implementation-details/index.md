@@ -317,7 +317,10 @@ application code to consider the tests. What a complete waste of time. I don't
 want tests that are written for their own sake. _Automated tests should verify
 that the application code works for the production users._
 
-> _[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106) — me_
+> _[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
+>  — me_
+
+> Read more about this in [Avoid the Test User](/blog/avoid-the-test-user).
 
 Oh, and [React Hooks](https://reactjs.org/hooks) got you all excited? If you
 rewrite that accordion component to use React hooks, the enzyme test fails
@@ -359,20 +362,3 @@ P.S. If you'd like to play around with all this,
 P.S.P.S. As an exercise for you... What happens to that second enzyme test if I
 change the name of the `AccordionContents` component? {insert biggest eye roll
 ever}
-
-**Things to not miss**:
-
-- [React Hooks and Suspense Playlist on egghead.io](http://kcd.im/hooks-and-suspense) — I
-  made a free playlist of ~35 minutes worth of videos to demo React Hooks and
-  Suspense. Includes two videos about testing hooks!
-- [WPACK.IO](https://wpack.io/) — *wpack.io is a fine-tuned webpack/browser-sync
-  configuration made specifically for WordPress Theme and Plugin Development. It
-  gives a fine Developer Experience (DX) and a single dev dependency for all
-  your javascript and css/sass/scss bundling.*
-- [Lessons from Java for testing in React](https://www.vidyasource.com/blog/2018/10/21/lessons-from-java-for-testing-in-react/) — Really
-  interesting take on my [shallow
-  rendering](/blog/why-i-never-use-shallow-rendering blog post that has a number
-  of great gems.
-- ["A brief analysis and comparison of the CSS for Twitter's PWA vs Twitter's legacy desktop website. The difference is dramatic and I'll touch on some reasons why."](https://twitter.com/necolas/status/1058949372837122048)
-  (A very interesting thread by [@necolas](https://twitter.com/necolas) I
-  recommend you give a read).
