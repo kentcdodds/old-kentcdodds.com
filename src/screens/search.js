@@ -50,7 +50,7 @@ function SearchScreen() {
                 keywords
                 description: plainTextDescription
                 banner {
-                  ...bannerImage120
+                  ...bannerImage260
                 }
               }
               excerpt(pruneLength: 190)
@@ -88,20 +88,22 @@ function SearchScreen() {
         <h1>Search Kent C. Dodds Blogposts</h1>
       </div>
       <small>
-        If you can't find what you're looking for with this, try{' '}
+        {`If you can't find what you're looking for with this, try `}
         <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
           using Google
         </a>
+        {'.'}
       </small>
-      <div
-        css={{margin: '50px 0 0 20px', display: 'flex', alignItems: 'center'}}
-      >
-        <label htmlFor="search-input" css={{margin: '0 10px 0 0'}}>
+      <div css={{marginTop: 50}}>
+        <label
+          htmlFor="search-input"
+          css={{margin: '0 10px 0 0', display: 'block'}}
+        >
           Search Blogposts
         </label>
         <input
           id="search-input"
-          css={{flex: 1}}
+          css={{width: '100%'}}
           ref={searchInputRef}
           onChange={useDebFn(() => setSearch(searchInputRef.current.value), {
             wait: 200,
@@ -113,7 +115,7 @@ function SearchScreen() {
           marginTop: 20,
           display: 'flex',
           flexWrap: 'wrap',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
         }}
       >
         {filteredBlogPosts.map(blogpost => (

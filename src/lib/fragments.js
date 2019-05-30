@@ -1,9 +1,9 @@
 import {graphql} from 'gatsby'
 
 export const bannerImage = graphql`
-  fragment bannerImage120 on File {
+  fragment bannerImage260 on File {
     childImageSharp {
-      fluid(maxWidth: 120, traceSVG: {color: "#573ede"}, quality: 50) {
+      fluid(maxWidth: 260, traceSVG: {color: "#573ede"}, quality: 50) {
         ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }

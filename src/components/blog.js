@@ -41,6 +41,15 @@ function Blog({data: {allMdx}, pageContext: {pagination}, subscribeForm}) {
           }
         `}
       >
+        <div
+          css={{
+            marginTop: 20,
+            fontStyle: 'italic',
+          }}
+        >
+          {`Looking for something specific? `}
+          <Link to="/search">Search for a blogpost here.</Link>
+        </div>
         {posts.map(({node: post}) => (
           <div
             key={post.id}
