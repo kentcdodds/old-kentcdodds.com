@@ -260,7 +260,7 @@ function CountConsumer({children}) {
         if (context === undefined) {
           throw new Error('CountConsumer must be used within a CountProvider')
         }
-        return context
+        return children(context)
       }}
     </CountContext.Consumer>
   )
