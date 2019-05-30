@@ -393,7 +393,7 @@ Here are a few relevant blog posts for you as well:
 - [Why you’ve been bad about testing](/blog/why-youve-been-bad-about-testing)
 - [Demystifying Testing](/blog/demystifying-testing)
 - [Confidently Shipping Code](/blog/confidently-shipping-code)
-- [Why I Never Use Shallow Rendering](/blog/why-i-never-use-shallow-rendering
+- [Why I Never Use Shallow Rendering](/blog/why-i-never-use-shallow-rendering)
 - [Test Isolation with React](/blog/test-isolation-with-react)
 - [But really, what is a JavaScript mock?](/blog/but-really-what-is-a-javascript-mock)
 - [But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
