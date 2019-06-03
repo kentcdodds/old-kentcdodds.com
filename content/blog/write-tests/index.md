@@ -3,7 +3,7 @@ slug: write-tests
 title: Write tests. Not too many. Mostly integration.
 date: '2017-10-16'
 author: Kent C. Dodds
-description: >-
+description:
   _Guillermo Rauch tweeted this a while back. Let's take a quick dive into what
   it means._
 keywords:
@@ -50,12 +50,12 @@ maintaining it.
 
 The thing you should be thinking about when writing tests is how much confidence
 they bring you that your project is free of bugs. Static typing and linting
-tools like [Flow](https://flow.org/) and [ESLint](https://eslint.org/) can get
-you a remarkable amount of confidence, and if you're not using these tools I
-highly suggest you give them a look. That said, **even a strongly typed language
-should have tests.** Typing and linting can't ensure your business logic is free
-of bugs. So you can still seriously increase your confidence with a good test
-suite.
+tools like [TypeScript](https://www.typescriptlang.org/) and
+[ESLint](https://eslint.org/) can get you a remarkable amount of confidence, and
+if you're not using these tools I highly suggest you give them a look. That
+said, **even a strongly typed language should have tests.** Typing and linting
+can't ensure your business logic is free of bugs. So you can still seriously
+increase your confidence with a good test suite.
 
 > **_Not too many._**
 
