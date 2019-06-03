@@ -19,8 +19,8 @@ banner: ./images/banner.jpg
 Open source is something that I care deeply for. I've been doing it for a while
 now and I have found it to be among the most rewarding things I have experienced
 as a developer. Because I enjoy it so much,
-[I've worked hard](https://medium.com/@kentcdodds/first-timers-only-78281ea47455)
-to lower the barrier to entry so others could jump on the boat as well.
+[I've worked hard](/blog/first-timers-only) to lower the barrier to entry so
+others could jump on the boat as well.
 
 The big challenge we face when inviting new people to jump on the open source
 bandwagon is knowing how to get started. There are various tools, protocols, and

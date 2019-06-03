@@ -22,9 +22,8 @@ A [common](https://github.com/kentcdodds/ama/issues/57)
 [question](https://github.com/kentcdodds/ama/issues/264) that I get from folks
 is how to go about learning an open source codebase and understand other's code.
 
-In my blog post
-["Open Source Stamina"](https://medium.com/@kentcdodds/open-source-stamina-dafd063f9932),
-I make an important observation:
+In my blog post ["Open Source Stamina"](/blog/open-source-stamina), I make an
+important observation:
 
 > You contribute best to something you use regularly.
 
@@ -68,10 +67,8 @@ interested in (like a function call, or a CLI with a certain argument). This can
 be intimidating for bigger projects, but it's not as bad as you might think.
 
 In my blogpost
-["What open source project should I contribute to?"](https://medium.com/@kentcdodds/what-open-source-project-should-i-contribute-to-7d50ecfe1cb4)
+["What open source project should I contribute to?"](/blog/what-open-source-project-should-i-contribute-to)
 I talk a little bit about how to find where the code is for a specific API.
-
-[**What open source project should I contribute to?**](/blog/what-open-source-project-should-i-contribute-to)
 
 ### Break things
 

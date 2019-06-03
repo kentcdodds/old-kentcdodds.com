@@ -188,9 +188,7 @@ improve your life as a software developer and make your applications better 👍
 This is a topic that people often are scared or confused by. If this blog post
 has helped you understand things a little better, please share it so more people
 see that learning how to write custom Babel and ESLint plugins can be an
-invaluable skill. You can
-[tweet it yourself](https://twitter.com/intent/tweet?text=%22How%20writing%20custom%20Babel%20%26%20ESLint%20plugins%20can%20increase%20productivity%20%26%20improve%20user%20experience%22%20https://medium.com/@kentcdodds/fd6dd8076e26%20by%20@kentcdodds%20%F0%9F%91%8D),
-and/or simply retweet this:
+invaluable skill. You can simply retweet this:
 
 https://twitter.com/kentcdodds/status/886945519909711872
 

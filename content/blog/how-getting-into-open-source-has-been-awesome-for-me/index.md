@@ -46,8 +46,7 @@ my own it's been an amazing learning experience. I've learned how
 [many](http://webpack.github.io/) [different](http://gruntjs.com/)
 [build](http://gulpjs.com/) [systems](https://www.gnu.org/software/make/)
 [work](https://docs.npmjs.com/misc/scripts), different methods/styles of
-structuring
-[code](https://medium.com/@kentcdodds/newspaper-code-structure-8b4616af9539) and
+structuring [code](/blog/newspaper-code-structure) and
 [files](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346) to enhance
 readability/maintainability, JavaScript APIs I didn't know existed, etc. etc.
 etc.
@@ -121,8 +120,7 @@ looking for a good project to contribute to, remember that:
 
 > You contribute best to something you use regularly.
 
-—
-[Open Source Stamina](https://medium.com/@kentcdodds/open-source-stamina-dafd063f9932)
+— [Open Source Stamina](/blog/open-source-stamina)
 
 For my first contribution, I made a single (tiny) contribution to the Play
 framework and never submitted another PR there again. It was a great first PR

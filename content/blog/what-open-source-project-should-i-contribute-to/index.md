@@ -1,7 +1,7 @@
 ---
 slug: what-open-source-project-should-i-contribute-to
 title: What open source project should I contribute to?
-date: '2015-12-04'
+date: '2019-06-03'
 author: Kent C. Dodds
 description: >-
   _My silver bullet answer to this frequently posed question, and how to get
@@ -11,30 +11,28 @@ keywords:
   - github
   - javascript
 banner: ./images/banner.jpg
-bannerCredit: '[https://octodex.github.com/repo/](https://octodex.github.com/repo/)'
+bannerCredit: '[octodex.github.com](https://octodex.github.com/repo)'
 ---
 
 This is a question I've had countless times:
 
 https://twitter.com/sarna_pranu/status/672438850724175872
 
-_Pranu just made his first pull request:
-[https://github.com/Automattic/mongoose/pull/3644](https://github.com/Automattic/mongoose/pull/3644)_
+_[Pranu first pull request soon after tweeting this](https://github.com/Automattic/mongoose/pull/3644)_
 
 https://twitter.com/geraldchecka/status/670445392706736128
 
 And in direct messages, emails, etc. The general gist of it is: "What open
 source project can you recommend I start contributing to?" Many of these people
-read my
-[First Timers Only](https://medium.com/@kentcdodds/first-timers-only-78281ea47455)
-post and are hoping to find a project that is friendly to newcomers
+read my [First Timers Only](/blog/first-timers-only) post and are hoping to find
+a project that is friendly to newcomers
 [making](https://help.github.com/articles/creating-a-pull-request/)
 [pull requests](https://help.github.com/articles/using-pull-requests/).
 
 ## The Answer
 
 My silver bullet answer comes from my blog post
-[Open Source Stamina](https://medium.com/@kentcdodds/open-source-stamina-dafd063f9932):
+[Open Source Stamina](/blog/open-source-stamina):
 
 > You contribute best to something you use regularly
 
@@ -45,11 +43,15 @@ and pains associated with a particular tool or library. This is why I say _it's
 best to contribute to something you use regularly_.
 
 What open source libraries/frameworks/tools do you use regularly? Perhaps you're
-working with Grunt, Gulp, Webpack, or Browserify and feel like an API could be
-improved or documented better. Or maybe you're working with a React library or
-Angular module that could use a little polish. One thing's certain, whatever
-you're building, you're probably using an open source project or tool that you
-could personally benefit from contributing to.
+working with Webpack and feel like a configuration option could be improved or
+documented better. Or maybe you're working with a React or Vue library that
+could use a little polish. One thing's certain, whatever you're building, you're
+probably using an open source project or tool that you could personally benefit
+from contributing to.
+
+Step 1: Open your `package.json` and read through the dependencies you have.
+Think back on your experience learning and using that module. Remember
+struggling with one of them? Pick that one.
 
 ## Contributing
 
@@ -57,26 +59,23 @@ Once you've found the project you want to contribute to, how do you know what to
 contribute? Many projects have
 [a CONTRIBUTING file](https://github.com/blog/1184-contributing-guidelines).
 Look for that first to find instructions for contributing to the project. If
-there isn't one, there may be instructions in the README (normally shown on the
-homepage of the project). If there aren't any such instructions, you might
-submit a pull request to add just a skeleton CONTRIBUTING.md file to start a
+there isn't one, there may be instructions in the `README` (normally shown on
+the homepage of the project). If there aren't any such instructions, you might
+submit a pull request to add just a skeleton `CONTRIBUTING.md` file to start a
 conversation about adding one.
 
 Familiarize yourself with the project. Reading documentation is good, but my
 favorite way to learn how a project works is by reading the code. My favorite
-way to do this is by stepping into function calls with a debugger. For example,
-what happens when you call angular.module? (gif below may take time to load,
-sorry).
+way to do this is by sticking a `debugger` before I call a library function or
+when a library calls my function and jumping around the call stack, like this:
 
-![a gif showing angular.module call in Chrome console](./images/0.gif)
-
-_So nobody feels left out, see_ [_React's_](https://infinit.io/_/QzJrScq.gif)
-_and_ [_Ember's_](https://infinit.io/_/XkZD3JH.gif)_ :-)_
+https://twitter.com/kentcdodds/status/1135687475110670341
 
 Step through the code and you'll learn a lot about how the framework/library
 works. Don't worry if you don't understand what's going on right away. That will
 come with time. Keep at it. You can do it! You can do this same thing with
-non-browser based tools with your favorite node debugger (or just add
+non-browser based tools with your favorite
+[node debugger](https://code.visualstudio.com/docs/editor/debugging) (or add
 console.logs).
 
 Once you've figured out the standards and processes for contributing to the
@@ -109,10 +108,10 @@ is the hardest, you may want some help and coaching. The actual code
 contribution matters less than learning the process. So find a project or
 someone who has time and patience to mentor you.
 
-You might also be interested in watching my recently released series about how
-to contribute to open source projects on GitHub:
+You might also be interested in watching my **free** egghead.io course
+[How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github):
 
-[**Introducing: How to Contribute to Open Source**](/blog/introducing-how-to-contribute-to-open-source)
+[![Course Artwork](./images/pull-request-art.png)](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Resources
 
@@ -150,24 +149,13 @@ the first time which is the hardest part.
 ## Conclusion
 
 Contributing to open source
-[has been awesome for me](https://medium.com/@kentcdodds/how-getting-into-open-source-has-been-awesome-for-me-8480cd756a80)
+[has been awesome for me](/blog/how-getting-into-open-source-has-been-awesome-for-me)
 and I highly recommend others to get into it. It's really hard getting started,
 but once you get over the first contribution, making future contributions is
 much easier. It's not all roses. The open source community has its warts here
 and there. Keep working at it. You'll do great! Good luck!
 
-![thumbs up](./images/1.png)
+By the way, if you're interested in creating your own project, be sure to check
+out my series on egghead.io:
 
-Do you need an introduction to GitHub and Git? Check this out from GitHub:
-
-[**GitHub for Developers \* GitHub Training**](https://training.github.com/classes/developers/)
-
-And if you're interested in creating your own project, be sure to check out my
-series on egghead.io:
-
-[**How to Write an Open Source JavaScript Library - Course by @kentcdodds**](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
-
-And as always, I'll see you around on [Twitter](https://twitter.com/kentcdodds)
-and [GitHub](https://github.com/kentcdodds) :-)
-
-![See you on Twitter!](./images/2.png)
+[**How to Write an Open Source JavaScript Library**](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
