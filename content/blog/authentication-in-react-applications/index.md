@@ -72,7 +72,7 @@ the app or the other if there is no user.
 > If you want to just look at how it's all done, then you can checkout
 > [the bookshelf repo](https://github.com/kentcdodds/bookshelf) which I made for
 > my
-> [Build ReactJS Applications Workshop](/workshops/build-react-js-applications).
+> [Build ReactJS Applications Workshop](/workshops/build-react-apps).
 
 Ok, so what do you do to get to this point? Let's start by looking at where
 we're actually rendering the app:
