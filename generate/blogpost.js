@@ -111,7 +111,8 @@ async function getBannerPhoto(title, destination) {
   await util
     .promisify(source.toFile)
     .call(source, path.join(imagesDestination, 'banner.jpg'))
-  spinner.succeed('compressed the image with tinypng.com')
+  spinner.text = 'compressed the image with tinypng.com'
+  spinner.stop()
 
   const bannerCredit = await getPhotoCredit(unsplashPhotoId)
   return bannerCredit
