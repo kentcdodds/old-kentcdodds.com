@@ -179,5 +179,5 @@ This is a talk I gave at
 ago. If you're curious what
 [`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros) is
 all about and why it's so cool it's
-[built-into create-react-app](https://github.com/facebookincubator/create-react-app/pull/3675),
+[built-into create-react-app](https://github.com/facebook/create-react-app/pull/3675),
 then give this a watch!

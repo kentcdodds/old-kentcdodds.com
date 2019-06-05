@@ -58,7 +58,7 @@ for that part either.
 
 On top of that, because codesandbox's react template uses create-react-app, I
 could leverage the
-[service worker](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
+[service worker](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
 that the react-scripts build creates for me so this thing works totally offline.
 I also added
 [a manifest.json](https://github.com/kentcdodds/typing-for-kids/blob/7a8ff3fd0580258493b0963739dffbe596141277/public/manifest.json)

@@ -38,10 +38,9 @@ Toolkits are "a set of tools in any form that allows you to create applications
 with no build configuration." (via [Ronald Rey](https://twitter.com/reyronald)
 in [awesome-toolkits](https://github.com/reyronald/awesome-toolkits)). For a few
 examples:
-[react-scripts](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts)
-(what [create-react-app](https://github.com/facebookincubator/create-react-app)
-leaves you with), my own
-[paypal-scripts/kcd-scripts](/blog/tools-without-config),
+[react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts)
+(what [create-react-app](https://github.com/facebook/create-react-app) leaves
+you with), my own [paypal-scripts/kcd-scripts](/blog/tools-without-config),
 [parcel](https://github.com/parcel-bundler/parcel),
 [preact-cli](https://github.com/developit/preact-cli),
 [ember-cli](https://ember-cli.com) (the first widely used toolkit for JS), and
@@ -170,9 +169,9 @@ toolkits are at least one of two things:
 
 #### Common use cases
 
-[`create-react-app`](https://github.com/facebookincubator/create-react-app)
-generates a very simple react app that leaves you with toolkit called
-[`react-scripts`](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts).
+[`create-react-app`](https://github.com/facebook/create-react-app) generates a
+very simple react app that leaves you with toolkit called
+[`react-scripts`](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts).
 This covers the building, testing, and linting of your react application
 projects. It's fantastic and used in a
 [TON of projects on GitHub (180k search results)](https://github.com/search?l=JSON&q=react-scripts&type=Code&utf8=%E2%9C%93)
@@ -185,14 +184,14 @@ While it's impressive that real-world production applications are built using
 `react-scripts`, that's actually not the core goal of the project. "The purpose
 of this tool is to provide the best experience for people getting started with
 React"
-([CONTRIBUTING.md#core-ideas](https://github.com/facebookincubator/create-react-app/blob/master/CONTRIBUTING.md#core-ideas)).
+([CONTRIBUTING.md#core-ideas](https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md#core-ideas)).
 
 **Toolkits don't try to handle the 10000 of use cases in the world. Instead,
 they use underlying tools and some glue to put together a single tool that can
 handle as many use cases as possible without complicating the tool too much or
 requiring config.** If your use case is a special snowflake, then you do have a
 recourse available. With `react-scripts` you can
-[eject](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject).
+[eject](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject).
 With most other tools however, you have another option...
 
 #### Still configurable
@@ -295,9 +294,9 @@ adopters of `paypal-scripts` at PayPal 😀 Good luck! 👍
 
 **Things to not miss**:
 
-- [`babel-plugin-macros`](https://github.com/facebookincubator/create-react-app/pull/3675)
-  [merged into](https://github.com/facebookincubator/create-react-app/pull/3675)
-  [`create-react-app`](https://github.com/facebookincubator/create-react-app/pull/3675)!!!
+- [`babel-plugin-macros`](https://github.com/facebook/create-react-app/pull/3675)
+  [merged into](https://github.com/facebook/create-react-app/pull/3675)
+  [`create-react-app`](https://github.com/facebook/create-react-app/pull/3675)!!!
   CRA v2 will be released soon I think 😀
 - Read
   [Zero Config with babel-plugin-macros](https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros)

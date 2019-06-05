@@ -79,14 +79,14 @@ was to move all our stuff to Mocha. But then I got involved in this thread:
 https://twitter.com/dan_abramov/status/760255553272705025
 
 Which led to
-[this comment](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-236980910)
+[this comment](https://github.com/facebook/create-react-app/pull/250#issuecomment-236980910)
 from [Trevor D. Miller](https://twitter.com/trevordmiller) which I
-[responded to](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-236985503)
+[responded to](https://github.com/facebook/create-react-app/pull/250#issuecomment-236985503)
 (in which I mention that I'd write this very blog post about me migrating from
 AVA to Mocha... I'd already started migrating my React Testing workshop to Mocha
 [here](https://github.com/kentcdodds/react-mocha-workshop). Hah). Then
 [Christoph Pojer](https://twitter.com/cpojer) responded with
-[this great comment](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-237098619).
+[this great comment](https://github.com/facebook/create-react-app/pull/250#issuecomment-237098619).
 That pretty much won my curiosity back and I decided to give it another go on a
 project.
 
