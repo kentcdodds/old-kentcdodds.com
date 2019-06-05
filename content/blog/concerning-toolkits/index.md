@@ -44,7 +44,7 @@ leaves you with), my own
 [paypal-scripts/kcd-scripts](/blog/tools-without-config),
 [parcel](https://github.com/parcel-bundler/parcel),
 [preact-cli](https://github.com/developit/preact-cli),
-[ember-cli](https://ember-cli.com/) (the first widely used toolkit for JS), and
+[ember-cli](https://ember-cli.com) (the first widely used toolkit for JS), and
 [many more](https://github.com/reyronald/awesome-toolkits).
 
 The idea behind these tools is it allows you to install a single dependency in
@@ -207,9 +207,9 @@ This allows toolkits to cover even more use cases. For example, folks who don't
 want to eject from `react-scripts` (because they like all the aforementioned
 benefits), can use
 [react-app-rewired](https://github.com/timarney/react-app-rewired). People using
-[Next.js](https://github.com/zeit/next.js/) have a `next.config.js` file they
-can use to tweak the default behavior. In fact, even
-[`webpack`](https://webpack.js.org/) (inspired in part by
+[Next.js](https://github.com/zeit/next.js) have a `next.config.js` file they can
+use to tweak the default behavior. In fact, even
+[`webpack`](https://webpack.js.org) (inspired in part by
 [parcel](https://github.com/parcel-bundler/parcel) I assume) will soon enter the
 world of toolkits but still configurable tools:
 

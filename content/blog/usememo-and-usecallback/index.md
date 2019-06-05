@@ -490,4 +490,4 @@ Related reading:
 - React FAQ:
   ["Are Hooks slow because of creating functions in render?"](https://reactjs.org/docs/hooks-faq.html#are-hooks-slow-because-of-creating-functions-in-render)
 - [Ryan Florence](https://twitter.com/ryanflorence):
-  [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance/)
+  [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance)

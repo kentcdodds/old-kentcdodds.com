@@ -13,7 +13,7 @@ bannerCredit:
 ---
 
 Yesterday my two new ReactJS courses were published on
-[egghead.io](http://egghead.io/).
+[egghead.io](http://egghead.io).
 [Read more about them here](/blog/learn-react-fundamentals-and-advanced-patterns).
 I had high hopes for this release, but the response has been way more positive
 than I had expected. The announcement post got in

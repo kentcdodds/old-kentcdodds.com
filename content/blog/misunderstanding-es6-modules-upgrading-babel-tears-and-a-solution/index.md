@@ -14,7 +14,7 @@ banner: ./images/banner.jpg
 bannerCredit: 'Those are supposed to be_tears...'
 ---
 
-On [October 29th, 2015](http://babeljs.io/blog/2015/10/29/6.0.0/),
+On [October 29th, 2015](http://babeljs.io/blog/2015/10/29/6.0.0),
 [Sebastian McKenzie](https://twitter.com/sebmck),
 [James Kyle](https://medium.com/@thejameskyle), and the rest of the Babel team
 dropped a huge major release for frontend developers everywhere: Babel 6.0.0.
@@ -211,7 +211,7 @@ from Babel 5 to Babel 6:
 [https://egghead.io/lessons/angularjs-updating-babel-5-to-6](https://egghead.io/lessons/angularjs-updating-babel-5-to-6)
 
 Also, remember that nobody’s perfect and we’re all learning here :-) See you on
-[Twitter](https://twitter.com/)!
+[Twitter](https://twitter.com)!
 
 ---
 

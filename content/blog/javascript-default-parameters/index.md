@@ -127,12 +127,12 @@ I demo some advanced features of destructuring!
 
 **Things to not miss**:
 
-- [Semver Calc](https://semver-calc.now.sh/) — A sweet new app by
+- [Semver Calc](https://semver-calc.now.sh) — A sweet new app by
   [Tarang Hirani](https://twitter.com/tarang9211) and
   [Shriram Balaji](https://twitter.com/__shriram). It allows you to try out
   semver ranges on packages versions to fine-tune the version range. Especially
   useful for `peerDependencies`.
-- [AnxietyTech](https://www.anxietytech.com/) — A conference on July 18th, 2018
+- [AnxietyTech](https://www.anxietytech.com) — A conference on July 18th, 2018
   to bring awareness of mental health issues in tech. Use code `TECH` for \$25
   off.
 - [Refined Twitter](https://github.com/sindresorhus/refined-twitter) — Browser

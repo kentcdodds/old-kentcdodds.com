@@ -16,8 +16,8 @@ bannerCredit:
 ---
 
 — [Ashley Williams](https://twitter.com/ag_dubs) on
-[JavaScript Air](https://javascriptair.com/)
-[Episode 001: Learning and Developing JavaScript](https://javascriptair.com/episodes/2015-12-16/)
+[JavaScript Air](https://javascriptair.com)
+[Episode 001: Learning and Developing JavaScript](https://javascriptair.com/episodes/2015-12-16)
 
 This quote by Ashley is one of my favorites, I reference it in my talk
 ["Zero to 60 in Software Development: How to Jumpstart Your Career"](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
@@ -44,10 +44,10 @@ and
 Over the last two months or so, I've been revamping my
 [testing workshop](https://github.com/kentcdodds/testing-workshop). I gave it
 once before for
-[Frontend Masters](https://frontendmasters.com/courses/testing-javascript/)and
+[Frontend Masters](https://frontendmasters.com/courses/testing-javascript)and
 I'm simplifying the content to make it easier to set up and less distracting to
 learn from. The content will now be used to give two distinct workshops (both of
-which I'll be giving for [Frontend Masters](https://frontendmasters.com/) and
+which I'll be giving for [Frontend Masters](https://frontendmasters.com) and
 [Workshop.me](https://workshop.me/?a=kent)):
 
 - [Testing Practices and Principles](/workshops/#testing-practices-and-principles)
@@ -90,7 +90,7 @@ different ways. The same can be said of teaching. You can reach people
 simply can't.
 
 Another thing, have you ever seen two Starbucks in the same town (or even
-[three on the same corner](https://blog.seattlepi.com/thebigblog/2009/09/18/three-starbucks-on-one-houston-corner/)
+[three on the same corner](https://blog.seattlepi.com/thebigblog/2009/09/18/three-starbucks-on-one-houston-corner)
 ☕️☕️☕️)? It's all about accessibility. You can bring content to people that's
 more accessible to them. The people who follow you, your friends and co-workers,
 and the people who go to your local meetups and conferences. You can reach those
@@ -105,7 +105,7 @@ Good luck!
 
 - I updated my [workshops](/workshops) and [talks](/talks) pages on my website
   to list the talks and workshops I'm scheduled to give this year so far.
-- [Top React Blogs, Newsletters, and Online Communities](https://blog.instabug.com/2018/02/react-blogs/) — some
+- [Top React Blogs, Newsletters, and Online Communities](https://blog.instabug.com/2018/02/react-blogs) — some
   handy resources here!
 - Thinking hard about what to put here and came up dry this week! Also, I'm
   short on time. Sorry 😅

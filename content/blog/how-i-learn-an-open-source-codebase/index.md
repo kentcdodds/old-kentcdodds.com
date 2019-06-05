@@ -107,10 +107,10 @@ I hope this is helpful! Good luck!
 **Learn more about Open Source from me**:
 
 - [How to Contribute to an Open Source Project on GitHub](http://kcd.im/pull-request)
-  (on [egghead.io](http://egghead.io/), absolutely free!)
+  (on [egghead.io](http://egghead.io), absolutely free!)
 - [How to Write an Open Source JavaScript Library](http://kcd.im/write-oss) (on
-  [egghead.io](http://egghead.io/), absolutely free!)
-- [Creating an Open Source JavaScript Library on Github](https://frontendmasters.com/courses/open-source/)
+  [egghead.io](http://egghead.io), absolutely free!)
+- [Creating an Open Source JavaScript Library on Github](https://frontendmasters.com/courses/open-source)
   (on Frontend Masters, subscribers only).
 - [My Talks](/talks) — I've got several about open source
 

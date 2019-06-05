@@ -26,7 +26,7 @@ bannerCredit:
 If you're not familiar with the acronym FOMO that's totally fine (and also a
 tiny bit ironic). FOMO stands for "Fear Of Missing Out." You might feel this for
 example if you're deciding whether to learn
-[ReasonML](https://reasonml.github.io/) or keep going deep into JavaScript (this
+[ReasonML](https://reasonml.github.io) or keep going deep into JavaScript (this
 happens to be something that I'm currently struggling with).
 
 ### What's wrong with FOMO
@@ -91,7 +91,7 @@ of ourselves and find more happiness in life :) Good luck!
 **Things to not miss**:
 
 - [**UPDATED**: Advanced React Component Patterns](http://kcd.im/advanced-react) — This
-  is the [egghead.io](http://egghead.io/) version of my course material
+  is the [egghead.io](http://egghead.io) version of my course material
   completely updated for the latest in React with **NEW PATTERNS** (like
   [the state reducer prop pattern](/blog/the-state-reducer-pattern)). Enjoy!
 - [Drive with Kent — Tech phone call recording](https://youtu.be/vVlcq3e1ooI) — In

@@ -222,7 +222,7 @@ still use this API via a polyfill:_
 
 **Learn more about React from me**:
 
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/) — My
+- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns) — My
   Advanced Component Patterns workshop I gave in person in Minneapolis in April!
   It should be made a course soon, but it's available for review by subscribers
   today!

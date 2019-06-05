@@ -16,7 +16,7 @@ bannerCredit:
 ---
 
 I couldn't be more excited to introduce you to what I can call my best work to
-date: Two new video courses available now on [egghead.io](http://egghead.io/)!
+date: Two new video courses available now on [egghead.io](http://egghead.io)!
 The beginner material is **free forever** and the advanced stuff is worth a
 subscription so I encourage you to give them a look!
 
@@ -62,8 +62,8 @@ https://youtube.com/watch?v=6JMIEhX-r1c
 19. [Build and deploy a React Application](https://egghead.io/lessons/egghead-build-and-deploy-a-react-application)
     (3:02)
 
-This course is for [React](https://reactjs.org/) newbies and those looking to
-get a better understanding of React fundamentals. With a focus on React
+This course is for [React](https://reactjs.org) newbies and those looking to get
+a better understanding of React fundamentals. With a focus on React
 fundamentals, you'll come out of this course knowing what problems React can
 solve for you and how it goes about solving those problems. You will have a good
 grasp on what JSX is and how it translates to regular JavaScript function calls
@@ -74,7 +74,7 @@ you **keep your focus on learning React and not distracted by all the tools that
 make production applications work.** The course wraps up with a lesson on how to
 move from these `index.html` files to a more production ready development
 environment and even how to deploy your app to a great service like
-[Netlify](https://www.netlify.com/).
+[Netlify](https://www.netlify.com).
 
 [Enjoy!](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
 
@@ -141,7 +141,7 @@ simpler, and more fun to build, use, and maintain.
 ### Free! 🤑
 
 [The Beginner's course](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
-is joining the ever growing [egghead.io](http://egghead.io/)
+is joining the ever growing [egghead.io](http://egghead.io)
 "[Community Resources](https://egghead.io/community/resources)" which means
 **_it will be free forever_**! I'm totally amazed by egghead and all the free
 stuff they sponsor. Thank you egghead!!
@@ -197,7 +197,7 @@ anything or enjoy the courses, I would ask you to do any of the following:
     [retweet my tweet](https://twitter.com/kentcdodds/status/937686244045176832)
     about it :)
 3.  Upvote and discuss this blog post and the courses
-    [on Reddit](https://www.reddit.com/r/reactjs/comments/7hq91g/learn_react_fundamentals_and_advanced_patterns/)
+    [on Reddit](https://www.reddit.com/r/reactjs/comments/7hq91g/learn_react_fundamentals_and_advanced_patterns)
 4.  [Follow me on twitter](https://twitter.com/kentcdodds) to keep up with what
     I work on next
 5.  [Subscribe to my weekly newsletter 💌](http://kcd.im/news)

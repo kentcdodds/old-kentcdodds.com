@@ -18,7 +18,7 @@ bannerCredit:
 ### Mistake Number 0
 
 One of the biggest mistakes you could make would be missing out on my full
-[Testing JS course](https://testingjavascript.com/). (see what I did there?)
+[Testing JS course](https://testingjavascript.com). (see what I did there?)
 
 ### Mistake Number 1: Testing Implementation Details
 
@@ -69,7 +69,7 @@ These kinds of tests are the worst to maintain because you're constantly
 updating them (due to point #2), and they don't even give you solid confidence
 (due to point #1).
 
-In [my course](https://testingjavascript.com/) I'll show you the right way to
+In [my course](https://testingjavascript.com) I'll show you the right way to
 write tests and avoid this common mistake.
 
 ### Mistake Number 2: 100% code coverage

@@ -47,7 +47,7 @@ emitter to notify subscribers when there are updates), and server side rendering
 can be [problematic](https://stackoverflow.com/a/40974748/971592) with
 singletons as well.
 
-So this is where state management libraries like [redux](https://redux.js.org/)
+So this is where state management libraries like [redux](https://redux.js.org)
 come into play (specifically
 [react-redux](https://github.com/reduxjs/react-redux)). They allow you to get
 data from the store easily anywhere in the tree. All you have to do is use this

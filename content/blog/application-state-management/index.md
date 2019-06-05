@@ -19,7 +19,7 @@ bannerCredit:
 
 Current Available Translations:
 
-- [Korean](https://edykim.com/ko/post/application-state-management/)
+- [Korean](https://edykim.com/ko/post/application-state-management)
 
 One of the hardest parts of software development is managing state. Life could
 be so simple if the user couldn't interact with the application at all, but that
@@ -134,7 +134,7 @@ I like it because it's not a whole lot more on top of context, it's a small
 library, and it very cleanly separates state containers and presentational
 components in a way that makes everything easier to test and think about.
 
-### [redux](https://redux.js.org/)
+### [redux](https://redux.js.org)
 
 The problem redux is intended to solve was to make
 [flux](https://facebook.github.io/flux) more palatable. The problem flux is
@@ -192,9 +192,9 @@ tree this could be useful. Good luck! 👍
 
 **Things to not miss**:
 
-- [Cypress.io](https://www.cypress.io/): If you haven't tried this testing tool
+- [Cypress.io](https://www.cypress.io): If you haven't tried this testing tool
   out yet, you seriously have been missing out. It's amazing (I use it for E2E
   tests).
 - [BUY TICKETS 🎟 FOR MY WORKSHOPS. SEE ME IN PERSON](https://workshop.me/?a=kent) :)
-- [Testing React with Enzyme and Jest.](https://javascriptplayground.com/testing-react-enzyme-jest/)
+- [Testing React with Enzyme and Jest.](https://javascriptplayground.com/testing-react-enzyme-jest)
   A new course by [@Jack_Franklin](https://twitter.com/Jack_Franklin)!

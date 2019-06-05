@@ -32,7 +32,7 @@ internally.
 
 Downshift is currently implemented as a render prop component, because at the
 time, render props was the best way to make a
-["Headless UI Component"](https://www.merrickchristensen.com/articles/headless-user-interface-components/)
+["Headless UI Component"](https://www.merrickchristensen.com/articles/headless-user-interface-components)
 (typically implemented via a "render prop" API) which made it possible for you
 to share logic without being opinionated about the UI. This is the major reason
 that downshift is so successful.

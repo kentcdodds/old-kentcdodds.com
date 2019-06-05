@@ -70,7 +70,7 @@ change).
 
 **Things to not miss**:
 
-- [useHooks.com](https://usehooks.com/) — One new React Hook recipe every day.
+- [useHooks.com](https://usehooks.com) — One new React Hook recipe every day.
   Really cool resource by [Gabe Ragland](https://twitter.com/gabe_ragland).
 - [fresh-concurrent-react](https://github.com/sw-yx/fresh-concurrent-react) by
   [Shawn Wang](https://twitter.com/swyx) — an as up-to-date-as-possible resource

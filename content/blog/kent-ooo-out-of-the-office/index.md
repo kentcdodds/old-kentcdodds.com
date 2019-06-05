@@ -53,7 +53,7 @@ modern technology as the early pioneers had: _none_.
 #### So, why cancel the JS Air episode?
 
 I have yet to miss a broadcast of JavaScript Air. There were a handful of times
-that I couldn't make it to an [Angular Air](http://angularair.com/) broadcast.
+that I couldn't make it to an [Angular Air](http://angularair.com) broadcast.
 With those times I generally had one of the panelists fill in. This took a bit
 of planning and a little training (you'd be surprised how much work it takes to
 put on one of these shows).
@@ -70,11 +70,11 @@ time. So I've decided to cancel this week's show.
 
 My apologies! Maybe you can take the time you would have watched/listened to the
 show to learn more about your own heritage (or
-[mine](https://history.lds.org/overlandtravels/) if you're interested) :-)
+[mine](https://history.lds.org/overlandtravels) if you're interested) :-)
 
 **Edit: I decided to rerun a previous episode this week. If you heard it before
 you'll still learn something, I promise. It's one of my personal favorites and
-the most popular show:** [**jsair.io/2016-06-01**](http://jsair.io/2016-06-01/)
+the most popular show:** [**jsair.io/2016-06-01**](http://jsair.io/2016-06-01)
 
 See you next week!
 

@@ -32,11 +32,11 @@ And I tell npm to use the transpiled version of that file as the `bin` in the
 where the `key` in that object is the name of the binary (so what you'd type in
 the terminal to use the CLI) and the `value` is the path in the package where
 the binary is located (in my case it's in the `dist` directory which I transpile
-to with [babel](http://babeljs.io/)
+to with [babel](http://babeljs.io)
 [here](https://github.com/kentcdodds/split-guide/blob/fb4b2a2ebc1fb8c3c010c2af1318861b8bb1bb13/package-scripts.js#L13)
 (I'm using [`p-s`](https://github.com/kentcdodds/p-s) for my scripts).
 
-With that configuration, when `npm` (or [`yarn`](https://yarnpkg.com/)) installs
+With that configuration, when `npm` (or [`yarn`](https://yarnpkg.com)) installs
 my package, it will create a
 [symlink](https://en.wikipedia.org/wiki/Symbolic_link) to that file in the
 `node_modules/.bin` directory (or, if it's globally installed, it'll put it

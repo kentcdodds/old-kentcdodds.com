@@ -78,7 +78,7 @@ I should note also that not all maintainers are the same. Some really don't want
 to reliquish control over the project. If you have an issue with the way the
 project is maintained and they're not willing to let you help in the way you
 want, you can definitely fork the project (famous example of this is
-[`lodash`](https://lodash.com/)).
+[`lodash`](https://lodash.com)).
 
 What I love about open source is that you don't need anyone's permission to do
 good work. So long as you're following the project code of conduct and respect
@@ -96,5 +96,5 @@ You never know. Good luck!
 
 - [Simplicity Matters](https://youtu.be/rI8tNMsozo0) — Always a good talk to
   review every few months.
-- [Carbon](https://carbon.now.sh/) — Create and share beautiful images of your
+- [Carbon](https://carbon.now.sh) — Create and share beautiful images of your
   source code.

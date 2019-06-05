@@ -26,8 +26,8 @@ And in direct messages, emails, etc. The general gist of it is: "What open
 source project can you recommend I start contributing to?" Many of these people
 read my [First Timers Only](/blog/first-timers-only) post and are hoping to find
 a project that is friendly to newcomers
-[making](https://help.github.com/articles/creating-a-pull-request/)
-[pull requests](https://help.github.com/articles/using-pull-requests/).
+[making](https://help.github.com/articles/creating-a-pull-request)
+[pull requests](https://help.github.com/articles/using-pull-requests).
 
 ## The Answer
 
@@ -83,15 +83,15 @@ project and familiarized yourself with its inner-workings a bit, you'll need to
 identify the changes that the project needs. I recommend you look at existing
 issues and comment on ones you think are interesting. Work with the
 maintainer(s) to identify a good implementation and
-[make your pull request](https://help.github.com/articles/creating-a-pull-request/)!
+[make your pull request](https://help.github.com/articles/creating-a-pull-request)!
 
 If you have your own idea of a bug fix or a feature you want to implement, I
 strongly recommend you run it by the project maintainer(s) in a
-[GitHub issue](https://guides.github.com/features/issues/) first. Perhaps
-they'll say it's out of scope for the project or they're working on it, or they
-could give you some direction. You'll waste less time by making sure your pull
-request will be accepted before you make it (just like how I was certain my wife
-would answer "yes" when I asked her to marry me _before_ I asked 😃).
+[GitHub issue](https://guides.github.com/features/issues) first. Perhaps they'll
+say it's out of scope for the project or they're working on it, or they could
+give you some direction. You'll waste less time by making sure your pull request
+will be accepted before you make it (just like how I was certain my wife would
+answer "yes" when I asked her to marry me _before_ I asked 😃).
 
 _Also, see [this page](http://24pullrequests.com/contributing) for more tips on
 contributing._
@@ -99,7 +99,7 @@ contributing._
 ## Your First Pull Request
 
 For your first
-[pull request](https://help.github.com/articles/using-pull-requests/), feel free
+[pull request](https://help.github.com/articles/using-pull-requests), feel free
 to just find a random project out there with a good first timer bug/feature and
 try your hand at contributing. Let the project maintainer know that you're new
 and are wanting some guidance to learn how to get into it. Maybe they're too
@@ -132,14 +132,14 @@ Also, here are good resources for finding simple ways to contribute:
 
 [**first-timers-only (@first_tmrs_only)**](https://twitter.com/first_tmrs_only)
 
-[**24 Pull Requests**](http://24pullrequests.com/)
+[**24 Pull Requests**](http://24pullrequests.com)
 
-[**Up For Grabs**](http://up-for-grabs.net/#/)
+[**Up For Grabs**](http://up-for-grabs.net/#)
 
 [**MunGell/awesome-for-beginners**](https://github.com/MunGell/awesome-for-beginners)
 
 [My first PR](http://firstpr.me/#kentcdodds) was to fix a typo in a comment
-([find yours](http://firstpr.me/)). It was super small and it was to a project
+([find yours](http://firstpr.me)). It was super small and it was to a project
 that I didn't really use all that much (discovered the typo when stepping
 through their code in a debugger). It was a great first contribution, even
 though I didn't really make a lasting impact on the project and I wasn't

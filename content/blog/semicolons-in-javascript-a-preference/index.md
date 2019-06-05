@@ -9,7 +9,7 @@ keywords:
   - javascript
   - ES6
 banner: ./images/banner.jpg
-bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy/)'
+bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy)'
 ---
 
 ## Update:
@@ -37,12 +37,12 @@ The first thing that you need to know is something called Automatic Semicolon
 Insertion (ASI). It's the "feature" that allows us to even have this
 conversation. Read up on that if you're not familiar. Like
 [Kyle's](https://twitter.com/getify)
-([post](http://blog.getify.com/not-all-semicolons/)), I agree that you **should
+([post](http://blog.getify.com/not-all-semicolons)), I agree that you **should
 not** rely on ASI. It's a really bad idea for many reasons.
 
 The problems with relying on ASI go away when you transpile or minify your code
 (depending on your technology). For example, transpiling with
-[Babel](http://babeljs.io/) will add the semicolons back and uglifying with
+[Babel](http://babeljs.io) will add the semicolons back and uglifying with
 [UglifyJS2](https://github.com/mishoo/UglifyJS2) will too.
 
 So for me to say you're good to go on omitting semicolons in your source code,

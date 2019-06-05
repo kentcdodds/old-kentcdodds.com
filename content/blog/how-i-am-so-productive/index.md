@@ -34,8 +34,8 @@ basis these days:
 - On Mondays, I publish the blogpost newsletter from two weeks ago to
   [kentcdodds.com/blog](http://kentcdodds.com/blog), a new one for subscribers.
   (~1.5 hours of work, depending...)
-- Product tasks (currently helping work on [paypal.me](https://paypal.me/))
-  (this is normally where most of my weekday is spent)
+- Product tasks (currently helping work on [paypal.me](https://paypal.me)) (this
+  is normally where most of my weekday is spent)
 - Attend work meetings
 - Help people on slack/video chat
 - Work on [paypal-scripts](/blog/tools-without-config) (among other internal
@@ -51,13 +51,13 @@ basis these days:
 - Travel to (sometimes) and speak at a conference (about once or twice a month)
 - Travel to (sometimes) and deliver a 1–2 day workshop on one of five topics I
   regularly train about.
-- Record [egghead.io](http://egghead.io/) lessons and courses (working on some
-  of this very hard core right now)
+- Record [egghead.io](http://egghead.io) lessons and courses (working on some of
+  this very hard core right now)
 - Research and prepare educational material (for
   talks/workshops/courses/devtips/etc.)
 - Go out to lunch with a (new) friend in the community about once a week
 - Outline and prepare for writing my novel for
-  [NaNoWriMo](https://nanowrimo.org/) (which is going to be epic by the way).
+  [NaNoWriMo](https://nanowrimo.org) (which is going to be epic by the way).
 - [AMA](http://kcd.im/ama): Ask Me Anything (currently has 475 questions I've
   answered).
 - [TechChats](http://kcd.im/tech-chats): livestream video chats with people
@@ -88,7 +88,7 @@ work I had to do first). It's likely that I've already released one or two new
 versions of my npm modules, answered a half dozen questions, and
 responded/reviewed several GitHub issues/PRs. Now I start on whatever PayPal
 product work I'm working on (as I mentioned, I'm helping with
-[paypal.me](https://paypal.me/) right now). I meet with my co-workers and decide
+[paypal.me](https://paypal.me) right now). I meet with my co-workers and decide
 the highest priority tasks and get to work on them.
 
 At ~12:00 PM (often later if I'm really involved in something), I go up and have
@@ -102,7 +102,7 @@ have work to do), and releasing more versions of various OSS libraries/tools.
 
 I wrap up the day between 5:00 PM and 6:00 PM and head upstairs. It's family
 time. Often I'll hang out with my wife after the kids are in bed. Sometimes
-though, if I'm working on a big course for [egghead.io](http://egghead.io/) or
+though, if I'm working on a big course for [egghead.io](http://egghead.io) or
 something, I'll go back to my office and start working on that. Normally I'll go
 to bed before 11:00 PM.
 
@@ -191,7 +191,7 @@ The concept of automation is something
 [I've written about in the past](/blog/automation). It's how I got into software
 development and I feel strongly that automation is the way we can make ourselves
 more productive
-([even if it takes longer to develop the automation than the time it would save us](https://xkcd.com/1205/)).
+([even if it takes longer to develop the automation than the time it would save us](https://xkcd.com/1205)).
 If you find yourself repeatedly doing a task, see if there's a simple way to
 automate it. (Like
 [what I do for creating my kcd.im/ short urls](https://github.com/kentcdodds/hive-api)
@@ -272,13 +272,13 @@ much all boils down to: Family, Religion, and Coding.
 
 Even though this is working out so far, I don't believe this is sustainable.
 This is one reason why I'm so excited about writing this novel for
-[NaNoWriMo](https://nanowrimo.org/). It'll be a new creative outlet. And
+[NaNoWriMo](https://nanowrimo.org). It'll be a new creative outlet. And
 hopefully by November I'll be done with most of
 [the HUGE things I'm working](https://twitter.com/kentcdodds/status/1038584983990849536)
 on so I can dedicate myself to writing 50,000 words in 30 days :)
 
 That said, I think short bursts of hyper-focus do help me get a lot done.
-Whether I'm hyper-focused on an [egghead.io](http://egghead.io/) course, or
+Whether I'm hyper-focused on an [egghead.io](http://egghead.io) course, or
 getting something specific done at work, it helps me get things done. I'm not
 sure how to explain it, but for me hyper-focus means that I kinda don't think
 about anything else for a while. When I'm not with my family or fulfilling
@@ -320,10 +320,10 @@ think may have something to do with my productivity.
 
 I do not spend a lot of time watching other people's courses or reading other
 people's blogs/newsletters. I definitely will skim blog posts as needed, or I'll
-sit down and watch a few [egghead.io](http://egghead.io/) lessons or part of a
+sit down and watch a few [egghead.io](http://egghead.io) lessons or part of a
 Frontend Master's course when there's something specific I need to learn. I love
-[Dave Geddes's](https://gedd.ski/) mastery games on
-[CSS grid](https://www.gridcritters.com/) and
+[Dave Geddes's](https://gedd.ski) mastery games on
+[CSS grid](https://www.gridcritters.com) and
 [Flexbox](https://flexboxzombies.com/p/flexbox-zombies), but generally I spend a
 bunch more time working on producing my own material/projects. I think that
 makes me more productive as well.
@@ -379,7 +379,7 @@ inbox two weeks before it's published to my blog:
   make sure to add react-testing-library in the "other" field for "testing
   tools." If they can add enzyme, then they should have react-testing-library as
   well!
-- [A Geek Leader 059: Kent C. Dodds](https://www.ageekleader.com/agl-059-kent-c-dodds/) — On
+- [A Geek Leader 059: Kent C. Dodds](https://www.ageekleader.com/agl-059-kent-c-dodds) — On
   this podcast I talk about my career story and stuff! Should be interesting if
   you thought this blog post was interesting :)
 - [jest-expect-message](https://github.com/mattphillips/jest-expect-message) by

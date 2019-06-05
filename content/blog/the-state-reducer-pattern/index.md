@@ -175,8 +175,8 @@ a look. I think we should probably reach for this _way_ before we reach for
 Redux!
 
 This is a talk I gave at
-[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/) a few
-weeks ago. If you're curious what
+[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120) a few weeks
+ago. If you're curious what
 [`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros) is
 all about and why it's so cool it's
 [built-into create-react-app](https://github.com/facebookincubator/create-react-app/pull/3675),

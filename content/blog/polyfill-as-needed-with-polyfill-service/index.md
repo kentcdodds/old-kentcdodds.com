@@ -25,7 +25,7 @@ In the conclusion I said this:
 > _So what did I do to fix my IE10 bug? Well, one thing that really bugs me is
 > that I have to ship all this code for polyfills to all browsers even if they_
 > do _support these features. But a few years ago I heard of_ >
-> [_a service_](https://polyfill.io/) _that was able to ship polyfills that are
+> [_a service_](https://polyfill.io) _that was able to ship polyfills that are
 > relevant only to the browser requesting them. I created my own endpoint that
 > uses_ [_the module_](https://github.com/Financial-Times/polyfill-service) >
 > _that powers that service and I'll write about that next week!_
@@ -76,16 +76,16 @@ expend resources re-downloading a file that will never change.
 
 ### Using polyfill-service
 
-The [polyfill.io](https://polyfill.io/) service from Financial Times is awesome,
+The [polyfill.io](https://polyfill.io) service from Financial Times is awesome,
 but with no SLA (service level agreement), many companies can't rely on it for
 mission-critical applications. Luckily, the module that powers it is completely
 open source so you can set up your own service in-house in a pretty
 straightforward way and that's exactly what I did.
 
-With the app I'm working on right now ([paypal.me](https://paypal.me/)), we have
+With the app I'm working on right now ([paypal.me](https://paypal.me)), we have
 a server that's responsible for some light server-rendering for SEO purposes.
-Basically, our server is a NodeJS server using [KrakenJS](http://krakenjs.com/)
-(a wrapper on top of [express](https://expressjs.com/)), so I added a
+Basically, our server is a NodeJS server using [KrakenJS](http://krakenjs.com)
+(a wrapper on top of [express](https://expressjs.com)), so I added a
 `get`handler to the express app:
 
 ```js
@@ -202,9 +202,9 @@ I demo some advanced features of destructuring!
   handlers/middleware without worrying about rejected promises being ignored and
   making my server hang :)
 - [ReactJS Denver: Confidently Testing React Apps](https://youtu.be/2HnNo4t8534?t=541) — A
-  great talk at [React Denver](https://www.meetup.com/ReactDenver/) by
+  great talk at [React Denver](https://www.meetup.com/ReactDenver) by
   [Matt Parrish](https://twitter.com/mattparrish).
-- [React is no abstraction, React is JavaScript](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) — A
+- [React is no abstraction, React is JavaScript](https://www.robinwieruch.de/javascript-fundamentals-react-requirements) — A
   very interesting and important blog post from
   [Robin Wieruch](https://twitter.com/rwieruch) that teaches some common
   JavaScript fundamentals that you'll need when working with React.

@@ -139,10 +139,10 @@ are just telling when showing would be better.
 
 Another thing that was called out during the Q&A by Kelly was that "Draft 1 is a
 worry-free zone." I really appreciated that. Since my first novel was written
-during [NaNoWriMo](https://nanowrimo.org/) 2018, I knew that I'd need to not
-care about the words flying off my fingers because I just needed to get stuff
-down on the page, then I can clean it up later. I've never published, so take my
-advice with a grain of salt, but I think that this is super important:
+during [NaNoWriMo](https://nanowrimo.org) 2018, I knew that I'd need to not care
+about the words flying off my fingers because I just needed to get stuff down on
+the page, then I can clean it up later. I've never published, so take my advice
+with a grain of salt, but I think that this is super important:
 
 https://twitter.com/kent_writes/status/1091940555020369920
 

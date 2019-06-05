@@ -243,9 +243,9 @@ developing it, I referenced several autocomplete components and
 [Marcy Sutton](https://twitter.com/marcysutton) was kind enough to give one of
 our examples
 [an accessibility audit](https://github.com/downshift-js/downshift/issues/79)
-(Thank you Marcy!). Pull up [an example](https://3kxm9wk791.codesandbox.io/)
-with [VoiceOver](https://www.apple.com/accessibility/mac/vision/) and I think
-you'll be impressed! We've worked hard to make sure that it's accessible
+(Thank you Marcy!). Pull up [an example](https://3kxm9wk791.codesandbox.io) with
+[VoiceOver](https://www.apple.com/accessibility/mac/vision) and I think you'll
+be impressed! We've worked hard to make sure that it's accessible
 ([watch me work on it here](https://youtu.be/p9QqTGQ5TZ0&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&index=12)),
 and based on my survey of the existing solutions, `downshift` is the most
 accessible component of its kind.
@@ -253,18 +253,18 @@ accessible component of its kind.
 ## Size
 
 `downshift` is quite a bit smaller than other similar solutions.
-[The UMD build rolls in at 14.34kb](https://unpkg.com/downshift@1.0.0-rc.11/dist/)
+[The UMD build rolls in at 14.34kb](https://unpkg.com/downshift@1.0.0-rc.11/dist)
 (uncompressed). Because `downshift` gives you full control over rendering,
 there's much less code required. In addition, it was easy to make work out of
-the box with [preact](https://preactjs.com/) ⚛️ (a teeny tiny version of react.
+the box with [preact](https://preactjs.com) ⚛️ (a teeny tiny version of react.
 No need to add preact-compat). I was able to create
 [an experiment using preact-habitat](https://github.com/kentcdodds/autocomplete-widget)
 that gives
-[**a completely frameworkless implementation of autocomplete**](https://dist-woxxqrsspd.now.sh/)
+[**a completely frameworkless implementation of autocomplete**](https://dist-woxxqrsspd.now.sh)
 **in less than 26kb (uncompressed)**. That size _includes_ `downshift` +
 `preact` + `preact-habitat`. You have my permission to jump for joy 😉. Shout
 out to [Jason Miller](https://twitter.com/_developit) and
-[Zouhir](https://twitter.com/_zouhir) for [`preact`](https://preactjs.com/) and
+[Zouhir](https://twitter.com/_zouhir) for [`preact`](https://preactjs.com) and
 [`preact-habitat`](https://github.com/zouhir/preact-habitat)!
 
 ## Where is it?
@@ -297,7 +297,7 @@ about a month ago, the first beta was published (as
 next day. It's slowly been gaining popularity (it already has 900 🌟 and 7k
 downloads/month) even before the official 1.0.0 release! So it's definitely
 being used in several places, but the first production deployment that I'm aware
-of is in [codesandbox](https://codesandbox.io/) from
+of is in [codesandbox](https://codesandbox.io) from
 [Ives van Hoorne](https://twitter.com/CompuIves)
 ([gif from his tweet](https://twitter.com/CompuIves/status/897970526832013315)):
 

@@ -21,7 +21,7 @@ redirects:
 ---
 
 I'm **so excited** about the response to my new
-[Testing JavaScript](http://testingjavascript.com/) course! I knew the developer
+[Testing JavaScript](http://testingjavascript.com) course! I knew the developer
 community needed help with testing the right way, but... wow. I'm floored. 🙏
 
 But if you _haven't_ signed up yet (or even if you have), let's talk about React
@@ -35,7 +35,7 @@ But I'm also a big fan of avoiding testing implementation details, and **React
 is an implementation detail!!**
 
 Guess what that means? All the stuff we talk about in
-[TestingJavaScript.com](https://testingjavascript.com/) is relatively easy to
+[TestingJavaScript.com](https://testingjavascript.com) is relatively easy to
 apply with other frameworks — like whichever framework you're using right now,
 or will use in the future.
 

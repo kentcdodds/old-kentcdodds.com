@@ -19,7 +19,7 @@ You've probably heard of ESLint, Prettier, and Flow/TypeScript. These are static
 code analysis tools that are wildly popular in the JavaScript ecosystem. I
 consider them all testing tools. Let's take a look at each:
 
-### [ESLint](https://eslint.org/)
+### [ESLint](https://eslint.org)
 
 ESLint is the pluggable linting utility for JavaScript. Linting is the process
 of analyzing code for potential errors without actually running the code.
@@ -36,7 +36,7 @@ cool to not have to use your brain power to find and correct subtle bugs like
 this one? I do! Make a computer do as much of my work for me as possible, please
 and thank you. That's what ESLint does for you.
 
-### [Prettier](https://prettier.io/)
+### [Prettier](https://prettier.io)
 
 Prettier is the JavaScript code formatter. It'll take your code however you
 write it, and reformat it in a way that's consistent and legible every time.
@@ -71,7 +71,7 @@ yourself and Prettier will leave it that way (`const d = a && (b || c)`).
 This is one example of things Prettier does to make the intent of your code more
 obvious — freeing your brain to focus on harder problems.
 
-### [Flow](https://flow.org/)/[TypeScript](https://www.typescriptlang.org/)
+### [Flow](https://flow.org)/[TypeScript](https://www.typescriptlang.org)
 
 These are static type checkers for JavaScript. A static type checker adds syntax
 to JavaScript to allow you to specify what data type a variable is. It can
@@ -175,7 +175,7 @@ Subscribe [here](http://kcd.im/news):
 
 - [React... Suspense... (@ SLC frontend meetup)](https://youtu.be/7LmrS2sdMlo&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — Livestream
   of my talk at
-  [https://www.meetup.com/SLC-FE-DEV/eve...](https://www.meetup.com/SLC-FE-DEV/events/254256621/).
+  [https://www.meetup.com/SLC-FE-DEV/eve...](https://www.meetup.com/SLC-FE-DEV/events/254256621).
   In this talk I build my own simple-cache-provider to teach you how React
   Suspense works with the cache and resources (promise throwers).
 - [Last call for Create React App v2](https://github.com/facebook/create-react-app/issues/5103) +

@@ -71,14 +71,14 @@ which has been an incredible resource. I strongly recommend writers look into
 that methodology and listen to the podcast. After learning several
 outlining/plotting/analysis methodologies, this is still by far my favorite.
 [Isaac Lyman](https://twitter.com/isaacandsuch) introduced me to the
-[Writing Excuses](https://writingexcuses.com/) podcast which has been
+[Writing Excuses](https://writingexcuses.com) podcast which has been
 phenomenally good as well.
 
 So in about two months leading up to starting writing Shurlan, I had consumed a
 crazy number of hours of podcasts, spent an outrageous amount of time thinking
 about my book and talking it over with my wife, and outlined exactly what was
 going to happen in the story using the
-[StoryGrid 15 scenes](https://storygrid.com/15-most-important-scenes/)
+[StoryGrid 15 scenes](https://storygrid.com/15-most-important-scenes)
 methodology.
 
 November came and went and I did it!
@@ -109,7 +109,7 @@ manuscript to work with. So I decided to take the entire ending and rewrite it.
 I've been working on that for the last few months and at the end of February I
 finished! AND I LOVE THE NEW ENDING!
 
-... Just in time for [NaNoEdMo](https://www.nanoedmo.com/): National Novel
+... Just in time for [NaNoEdMo](https://www.nanoedmo.com): National Novel
 Editing Month!
 
 > Oh yeah, and I also went to

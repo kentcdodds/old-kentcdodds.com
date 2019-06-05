@@ -25,7 +25,7 @@ Or
 
 I think `useState` and `useReducer` are no exception to this at all. In fact,
 [Matt Hamlin](https://twitter.com/immatthamlin) already posted
-[useReducer, don't useState](https://matthamlin.me/blog/2019/february/why-you-should-useReducer/)
+[useReducer, don't useState](https://matthamlin.me/blog/2019/february/why-you-should-useReducer)
 and he makes some great points there. I'd like to throw my hat in this
 discussion though because
 [I was asked about it on my AMA](https://github.com/kentcdodds/ama/issues/587).
@@ -54,7 +54,7 @@ async function handleSubmit(values) {
   setSubmitted(false)
   setLoading(true)
   try {
-    const responseJson = await fetch(/* stuff */).then(r => r.json())
+    const responseJson = await fetch(/* stuff *).then(r => r.json())
     setSubmitted(true)
     setResponse(responseJson)
     setErrorMessage(null)
@@ -118,7 +118,7 @@ And the `handleSubmit` function would look like this:
 async function handleSubmit(values) {
   dispatch({type: types.SUBMIT_STARTED})
   try {
-    const responseJson = await fetch(/* stuff */).then(r => r.json())
+    const responseJson = await fetch(/* stuff *).then(r => r.json())
     dispatch({type: types.SUBMIT_COMPLETE, response: responseJson})
   } catch (error) {
     dispatch({type: types.SUBMIT_ERROR, errorMessage: 'Something went wrong!'})

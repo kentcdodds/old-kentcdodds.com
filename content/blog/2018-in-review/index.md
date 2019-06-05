@@ -72,7 +72,7 @@ Creating this open source software and the community of awesome people that has
 been built around it is probably one of my finest accomplishments of 2019. If
 you'd like to hear more about how this software came to be, you can watch
 [S05E12 Modern Web Podcast - Testing](https://youtu.be/nw-GFMW8LSQ) or listen to
-[RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds/).
+[RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds).
 
 ## [National Novel Writing Month](https://nanowrimo.org)
 
@@ -301,10 +301,10 @@ Here are some other interesting facts/accomplishments from 2018:
 - Back in April, I made a trip to Minneapolis to record workshops for
   [Frontend Masters](https://kcd.im/fem). We made three (almost four) courses
   out of that trip:
-  [Advanced React Patterns](https://frontendmasters.com/courses/advanced-react-patterns/),
-  [Testing React Applications, v2](https://frontendmasters.com/courses/testing-react/),
+  [Advanced React Patterns](https://frontendmasters.com/courses/advanced-react-patterns),
+  [Testing React Applications, v2](https://frontendmasters.com/courses/testing-react),
   and
-  [JavaScript Testing Practices and Principles](https://frontendmasters.com/courses/testing-practices-principles/).
+  [JavaScript Testing Practices and Principles](https://frontendmasters.com/courses/testing-practices-principles).
   I'm really happy about how those turned out!
 - For the first part of the year,
   [Ryan Florence](https://twitter.com/ryanflorence) made
@@ -359,7 +359,7 @@ I wish you the very best and happiest New Year!
 
 **Things to not miss**:
 
-- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds/) -
+- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds) -
   The ReactRoundUp podcast had me on to talk about testing!
 - [Testing Software](https://mhme-blog.now.sh/2018/december/testing-software.html) -
   Great insights here by [Matt Hamlin](https://mobile.twitter.com/immatthamlin)

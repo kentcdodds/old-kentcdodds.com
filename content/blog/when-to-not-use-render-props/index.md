@@ -60,14 +60,14 @@ and leaves you to be responsible what to do with that information. Normally this
 means rendering some specific UI based on some state, but it doesn't have to.
 React components don't have to render UI or anything at all. React components
 are about much more than just visual UI (consider
-[`react-router`](https://reacttraining.com/react-router/) as a prime example).
+[`react-router`](https://reacttraining.com/react-router) as a prime example).
 For more on this, watch [Never Write Another HoC](https://youtu.be/BcVAq3YFiuc)
 by [Michael Jackson](https://twitter.com/mjackson).
 
 Another problem that render props have solved for me in my codebases is
 abstracting away imperative code. I love the example
 [Ryan Florence](https://twitter.com/mjackson) gave in his talk almost 2 years
-ago at [React Rally](http://www.reactrally.com/)called
+ago at [React Rally](http://www.reactrally.com)called
 [`‹Rethinker stop={false}/›`](https://youtu.be/kp-NOggyz54) where he refactored
 a bunch of imperative code in a React Component's lifecycle methods to a
 separate `<Tone />` component that abstracted away that imperative code and
@@ -149,21 +149,20 @@ I hope that's helpful to you! Good luck!
 **Learn about Advanced React Component Patterns from me**:
 
 - [egghead.io online](https://egghead.io/courses/advanced-react-component-patterns)
-- [Frontend Masters in Minneapolis (and online) in April](https://frontendmasters.com/workshops/advanced-react-patterns/)
+- [Frontend Masters in Minneapolis (and online) in April](https://frontendmasters.com/workshops/advanced-react-patterns)
 - [Workshop.me in Portland in July](https://workshop.me/2018-07-advanced-react?a=kent)
 - [Workshop.me in Salt Lake City in August](https://workshop.me/2018-08-advanced-react?a=kent)
 
 **Things to not miss**:
 
-- [KnowJS](http://knowjs.org/) — An online training event that I'm taking part
-  in
-- [React Dev Summit](https://reactdevsummit.com/) — An online (FREE TO WATCH
+- [KnowJS](http://knowjs.org) — An online training event that I'm taking part in
+- [React Dev Summit](https://reactdevsummit.com) — An online (FREE TO WATCH
   LIVE) conference that I'm speaking for.
 - [React Round Up](https://devchat.tv/react-round-up) — A new React Podcast I'm
   a panelist on!
 - [Carbon](https://stackedit.io/carbon.now.sh) by
-  [Dawn Labs](https://dawnlabs.io/) — This is how I created the fancy code
+  [Dawn Labs](https://dawnlabs.io) — This is how I created the fancy code
   screenshot in the tweet below.
-- [regexly](https://regexly.chipto.io/) by
-  [Chipto Labs](https://chipto.io/) — This is an awesome tool for checking
+- [regexly](https://regexly.chipto.io) by
+  [Chipto Labs](https://chipto.io) — This is an awesome tool for checking
   regexes that shows JavaScript-specific APIs. Definitely my new favorite!

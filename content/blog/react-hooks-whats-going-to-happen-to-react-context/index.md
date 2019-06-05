@@ -157,7 +157,7 @@ Until next time! Good luck! 👋
 
 - [Simplify React Apps with React Hooks and Suspense](http://kcd.im/refactor-react) — My
   new egghead course... of course!
-- [Shurlan](http://kcd.im/shurlan) — I WON [NANOWRIMO](https://nanowrimo.org/)
+- [Shurlan](http://kcd.im/shurlan) — I WON [NANOWRIMO](https://nanowrimo.org)
   THIS YEAR! That means that I successfully wrote 50,000 words of a novel in the
   month of November (for perspective, Harry Potter book 1 is 76k words). It was
   a wild month, and it was tons of fun. And you can read what I ended up with.

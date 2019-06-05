@@ -78,7 +78,7 @@ confidence that it won't break as changes are made to the codebase. 🏆
 Once you understand how the abstractions work at a fundamental level, you'll
 probably want to use them because hey, you just learned to fish and now you can
 go fishing. And we have some pretty phenomenal fish, uh, tools available to us.
-My favorite is the [Jest](https://jestjs.io/) testing platform. It's amazingly
+My favorite is the [Jest](https://jestjs.io) testing platform. It's amazingly
 capable and fully featured and allows me to write tests that give me the
 confidence I need to not break things as I change code.
 

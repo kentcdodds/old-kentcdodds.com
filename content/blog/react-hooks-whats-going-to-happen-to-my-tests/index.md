@@ -16,7 +16,7 @@ bannerCredit:
 
 Current Available Translations:
 
-- [Korean](https://edykim.com/ko/post/react-hooks-whats-going-to-happen-to-my-tests/)
+- [Korean](https://edykim.com/ko/post/react-hooks-whats-going-to-happen-to-my-tests)
 
 One of the most common questions I hear about the upcoming React Hooks feature
 is regarding testing. And I can understand the concern when your tests look like

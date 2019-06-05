@@ -55,7 +55,7 @@ For me, **this is the biggest reason** and reason enough to avoid doing it
 altogether. I don't know about you, but when I come to commented out code, I'll
 often stop what I'm doing to read it. I think "maybe it's important" or I may
 simply be curious. **Either way,**
-[**my workflow has been derailed**](http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/)**.**
+[**my workflow has been derailed**](http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer)**.**
 
 ## Hides what's important
 

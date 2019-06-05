@@ -46,7 +46,7 @@ if (addOne(2) > 2) {
 
 Often, we can use this syntax in our source code so long as we convert it to
 syntax that can run in the browser (for example, by using a transpiler such as
-[babel](https://babeljs.io/):
+[babel](https://babeljs.io):
 [example transpiled in the browser with babel-preset-env](http://babeljs.io/repl/#?babili=false&browsers=ie%2010&build=&builtIns=false&spec=false&loose=false&code_lz=MYewdgzgLgBAhgEwQeTAUxgXhmArgWywD4cCYBqGARgCgBLAMxgApEV1mAmAShhJ5gBvGjBihIIADZoAdJJABzZgHIAsnCgALGTADqIAO4BCZdxoBfGkA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&sourceType=module&lineWrap=true&presets=env&prettier=false&targets=&version=6.26.0&envVersion=1.6.2)).
 
 Some other of these new features rely on new APIs, like
@@ -117,7 +117,7 @@ are more spec-complient than `core-js`).
 So what did I do to fix my IE10 bug? Well, one thing that really bugs me is that
 I have to ship all this code for polyfills to all browsers even if they _do_
 support these features. But a few years ago I heard of
-[a service](https://polyfill.io/) that was able to ship polyfills that are
+[a service](https://polyfill.io) that was able to ship polyfills that are
 relevant only to the browser requesting them. I created my own endpoint that
 uses [the module](https://github.com/Financial-Times/polyfill-service) that
 powers that service and I'll write about that next week!
@@ -136,7 +136,7 @@ that your browsers don't support.
 
 - [The Beginner's Guide to React](http://kcd.im/beginner-react)
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 
 **Things to not miss**:
 

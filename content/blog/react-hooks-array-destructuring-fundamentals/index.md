@@ -15,7 +15,7 @@ keywords:
 banner: ./images/banner.png
 bannerCredit:
   I made this all by myself... Well... Except for [the react
-  logo](https://arcweb.co/is-react-native-a-viable-framework-for-financial-applications/react-logo-1000-transparent/)...
+  logo](https://arcweb.co/is-react-native-a-viable-framework-for-financial-applications/react-logo-1000-transparent)...
   [And the font... and the theme.](https://kcd.im/mft)
 ---
 
@@ -89,7 +89,7 @@ didn't have that feature.
 Luckily for us, we have Babel and TypeScript which can compile this newer syntax
 into something older browsers can support (and presumably to something we may be
 more familiar with). So my next step is to go to
-[the online babel REPL](https://babeljs.io/repl/) and paste in the code. Here's
+[the online babel REPL](https://babeljs.io/repl) and paste in the code. Here's
 what the result looks like:
 
 ```javascript
@@ -236,7 +236,7 @@ One thing that's interesting is that the implementation of `useState` exists
 within `react-dom` rather than `react`. I know, that may be confusing because we
 import `useState` from the `react` package, but it actually just delegates to
 the current renderer (which is `react-dom` in our situation here). In fact,
-[`setState` is the same way](https://overreacted.io/how-does-setstate-know-what-to-do/)!
+[`setState` is the same way](https://overreacted.io/how-does-setstate-know-what-to-do)!
 
 Another interesting thing about `useState` is that the implementation in
 `react-dom` is just a few lines:
@@ -315,7 +315,7 @@ that's available completely free on
 - [Advanced React Component Patterns](https://kcd.im/advanced-react) - Amazing
   patterns to make your components more reusable, flexible, and simple all at
   once. (Also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 - [My YouTube channel](https://kcd.im/youtube) is also full of content about
   [React](https://youtube.com/user/kentdoddsfamily/search?query=react) that
   you'd probably enjoy (including

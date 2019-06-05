@@ -288,7 +288,7 @@ diff).
 **Things to not miss:**
 
 - ["I haven't experienced imposter syndrome, and maybe you haven't either"](https://rachsmith.com/2017/i-dont-have-imposter-syndrome) — a
-  great blog post by a great person [Rach Smith](https://rachsmith.com/) (who
+  great blog post by a great person [Rach Smith](https://rachsmith.com) (who
   happens to also tweet interesting things, I suggest you
   [give her a follow](https://twitter.com/rachsmithtweets))
 - [`seapig`](https://github.com/enkidevs/seapig) - 🌊🐷 Utility for generalized

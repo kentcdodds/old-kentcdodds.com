@@ -168,10 +168,10 @@ Good luck!
 **Learn more about React from me**:
 
 - [egghead.io (beginners)](http://kcd.im/beginner-react) — My Beginner’s Guide
-  to React absolutely _free_ on [egghead.io](http://egghead.io/).
+  to React absolutely _free_ on [egghead.io](http://egghead.io).
 - [egghead.io (advanced)](http://kcd.im/advanced-react) — My Advanced React
-  Component Patterns course available on [egghead.io](http://egghead.io/) today!
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/) — My
+  Component Patterns course available on [egghead.io](http://egghead.io) today!
+- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns) — My
   Advanced React Patterns workshop
 
 **Things to not miss**:

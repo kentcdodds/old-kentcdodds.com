@@ -104,7 +104,7 @@ I hope this is helpful! Good luck!
   blog post that is what the title says it is...
 - [egghead.io](https://egghead.io/courses/advanced-react-component-patterns) — My
   Advanced React Component Patterns course.
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns/) — I'm
+- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns) — I'm
   giving my Advanced Component Patterns workshop in person in Minniapolis in
   April!
 - [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
@@ -115,5 +115,5 @@ I hope this is helpful! Good luck!
 - [CodeSandbox Live!!!](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9)
 - [React Round Up Episode 3](https://devchat.tv/react-round-up/rru-003-advanced-component-patterns-and-downshift-with-kent-c-dodds) — "Advanced
   Component Patterns and Downshift with Kent C. Dodds"
-- [Test Talks Episode 195](https://joecolantonio.com/testtalks/195-javascript-testing-using-jest-with-kent-c-dodds/) — "JavaScript
+- [Test Talks Episode 195](https://joecolantonio.com/testtalks/195-javascript-testing-using-jest-with-kent-c-dodds) — "JavaScript
   Testing Using Jest with Kent C. Dodds"

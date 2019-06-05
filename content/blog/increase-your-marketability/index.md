@@ -46,9 +46,9 @@ your skills and experience.
 ### When in Doubt, Make it Public
 
 This phrase comes from
-[a blog post by Jeff Atwood](https://blog.codinghorror.com/when-in-doubt-make-it-public/).
+[a blog post by Jeff Atwood](https://blog.codinghorror.com/when-in-doubt-make-it-public).
 In that blog post he
-[quotes Brad Abrams](https://blogs.msdn.microsoft.com/brada/2006/04/10/pm-tip-11-information-is-the-currency-of-program-management/)
+[quotes Brad Abrams](https://blogs.msdn.microsoft.com/brada/2006/04/10/pm-tip-11-information-is-the-currency-of-program-management)
 who says:
 
 > _If no one knows you did X, did you really get all the benefits for doing X?_
@@ -60,7 +60,7 @@ public, but the consuming and building parts of learning are also possible.
 - Teaching co-workers something over lunch? Record your screen as you do it and
   put that up on YouTube.
 - Answering a co-worker's question via slack? Publish it as a blog post, or make
-  a fancy [carbon](https://carbon.now.sh/),
+  a fancy [carbon](https://carbon.now.sh),
   [Polacode](https://github.com/octref/polacode) or just a normal screenshot and
   tweet it ([like this](https://twitter.com/wesbos/status/962067758816018432)).
 - Want to chat with the creator of an open source project, but know they're

@@ -13,7 +13,7 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-I spent the last week at [React Rally](https://www.reactrally.com/) in Salt Lake
+I spent the last week at [React Rally](https://www.reactrally.com) in Salt Lake
 City. It was an awesome experience. It's easily my favorite conference. I've
 been to at least two dozen unique conferences. Here are some of the reasons
 React Rally is my favorite:
@@ -128,10 +128,10 @@ to go.
 - [tinker.macro](https://github.com/bradlc/tinker.macro) by
   [Brad Cornes](https://twitter.com/bradlc) is an amazing PHP in JS macros for
   babel-plugin-macros. How cool!?
-- [Deploying ES2015 code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) — A
+- [Deploying ES2015 code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today) — A
   remarkably simple method for deploying ES5 and ES2015 code to browsers based
   on whether they support `<script type="module">`. See also:
-  [bundle.sh](https://bundle.sh/).
+  [bundle.sh](https://bundle.sh).
 - [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) - an example
   by [John Lindquist](https://twitter.com/johnlindquist). Uses
   [`preval`](https://github.com/kentcdodds/babel-plugin-preval) to run mdx.

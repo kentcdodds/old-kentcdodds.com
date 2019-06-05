@@ -16,7 +16,7 @@ bannerCredit:
 
 [This week was exhausting](https://twitter.com/kentcdodds/status/931716752047665153)!
 [I hit two big milestones for projects I've been working on for a long time](https://twitter.com/kentcdodds/status/931247165342707712).
-I finished the second of two React courses for [egghead.io](http://egghead.io/)
+I finished the second of two React courses for [egghead.io](http://egghead.io)
 and [Jamund Ferguson](https://twitter.com/xjamundx) and I gave a demo and the
 announcement of [paypal-scripts](/blog/tools-without-config) at work. And it
 went super well! Hooray!
@@ -109,16 +109,16 @@ like this. Good luck!
 
 **Things to not miss**:
 
-- [GridCritters](https://gridcritters.com/) by
+- [GridCritters](https://gridcritters.com) by
   [Dave Geddes](https://twitter.com/geddski) (creator of
-  [FlexboxZombies](https://flexboxzombies.com/)) will be released on Cyber
+  [FlexboxZombies](https://flexboxzombies.com)) will be released on Cyber
   Monday! This is the final chance you have to get the pre-order price. Give it
   a look!
 - [Announcing CodeSandbox 2.0](https://medium.com/@CompuIves/announcing-codesandbox-2-0-938cff3a0fcb)
   by [Ives van Hoorne](https://twitter.com/CompuIves) who is an incredibly
   skilled engineer.
-- [Assert.js tickets are available](https://www.assertjs.com/)! I'll be giving a
-  talk and a workshop ([tickets available](https://www.assertjs.com/training/))
+- [Assert.js tickets are available](https://www.assertjs.com)! I'll be giving a
+  talk and a workshop ([tickets available](https://www.assertjs.com/training))
   🎉
 - [`xstate`](https://www.npmjs.com/package/xstate) by
   [David K. Piano](https://twitter.com/DavidKPiano) (See

@@ -85,7 +85,7 @@ autopilot mode for a few minutes while I repeat a task I’ve done a million
 times. Unfortunately, I need to stay conscious enough to account for the minor
 differences (like my directive name for example). This is called context
 switching and can come at a
-[huge cost](http://www.petrikainulainen.net/software-development/processes/the-cost-of-context-switching/).
+[huge cost](http://www.petrikainulainen.net/software-development/processes/the-cost-of-context-switching).
 
 By the time I finish setting up the skeleton stuff (something that could have
 been generated), I’ve forgotten exactly what I originally set out to do and need

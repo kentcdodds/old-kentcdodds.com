@@ -19,7 +19,7 @@ This is a phrase I first heard from
 "Make impossible states impossible" (super great talk by the way, and
 [xstate](https://github.com/davidkpiano/xstate) is awesome, and David is too).
 Googling around it looks like it's a pretty popular phrase in the
-[Elm](http://elm-lang.org/) community, though I'm not sure who said it first.
+[Elm](http://elm-lang.org) community, though I'm not sure who said it first.
 
 To illustrate what this means, let's checkout at
 [a very simple example](https://codesandbox.io/s/j71ljpvvww):
@@ -99,7 +99,7 @@ https://twitter.com/yminsky/status/1034947939364425731
 
 - [The Beginner's Guide to React](http://kcd.im/beginner-react)
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — **A
   30 talk on egghead** (30 minutes... weird right?!) about testing React
   components.
@@ -116,7 +116,7 @@ https://twitter.com/yminsky/status/1034947939364425731
 - [`fastpack`](https://github.com/fastpack/fastpack) - a JavaScript bundler
   (like webpack, but with fewer features at the moment) that is BLAZING FAST
   🔥🔥🔥🔥 (bundles 1000 modules in < 1 second!)
-- [Byteconf React](https://byteconf.com/) — Byteconf React is a 100% free
+- [Byteconf React](https://byteconf.com) — Byteconf React is a 100% free
   conference with the best JavaScript and React speakers in the world.
   Conferences are great, but flights, hotels, and tickets are expensive, so not
   everyone can go. Byteconf is streamed on Twitch, for free, so anyone and

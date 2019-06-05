@@ -16,7 +16,7 @@ This is likely the reason that
 other maintainers (read
 [Farewell Node.js](https://medium.com/@tjholowaychuk/farewell-node-js-4ba9e7f3e52b#.pj5yx57zb)).
 This is also probably why [Vojta Jína](https://twitter.com/vojtajina) handed
-[Karma](http://karma-runner.github.io/) off to
+[Karma](http://karma-runner.github.io) off to
 [Mark Trostler](https://twitter.com/zzoass) and
 [Friedel Ziegelmayer](https://twitter.com/dignifiedquire).
 
@@ -34,7 +34,7 @@ over and over.
 > using on a regular basis.
 
 The exception to this is when you're paid to do it. I work for
-[Alianza](http://www.alianza.com/), but I get my phone service from Verizon. I
+[Alianza](http://www.alianza.com), but I get my phone service from Verizon. I
 never use the product personally, but I work on the project because I have a
 wife and three kids to support and I care about the mission.
 

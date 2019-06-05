@@ -13,7 +13,7 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-Have you read the book ["Start With Why"](https://startwithwhy.com/books/)? If
+Have you read the book ["Start With Why"](https://startwithwhy.com/books)? If
 you haven't, I recommend it. At least watch
 [the TED talk](https://youtu.be/u4ZoJKF_VuA). The premise of the idea is that
 "People won't truly buy into a product, service, movement, or idea until they
@@ -57,7 +57,7 @@ Pretty much every one of those packages has 100% code coverage, meaning every
 line is run in the tests. I don't think I could possibly maintain them any other
 way. **My libraries have received contributions from thousands of people.** When
 someone opens a pull request with changes to one of my libraries, I have a
-continuous integration service ([TravisCI](https://travis-ci.org/)) that kicks
+continuous integration service ([TravisCI](https://travis-ci.org)) that kicks
 off to run all the tests. Sometimes it's been months or even years since I've
 touched the code. Past Kent, who had just barely written the code, probably knew
 instantly whether something broke. Present Kent? He usually has no idea, and it

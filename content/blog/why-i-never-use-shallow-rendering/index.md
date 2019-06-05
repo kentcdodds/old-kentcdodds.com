@@ -383,14 +383,14 @@ I hope that helps!
 
 **Learn more about testing from me**:
 
-- [Frontend Masters](https://frontendmasters.com/):
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/)
+- [Frontend Masters](https://frontendmasters.com):
+  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
   &
-  [Testing React Applications](https://frontendmasters.com/courses/testing-react/)
+  [Testing React Applications](https://frontendmasters.com/courses/testing-react)
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — Something
-  new on [egghead.io](http://egghead.io/). It's a recording of one of my talks
-  especially for [egghead.io](http://egghead.io/). I think you'll really enjoy
-  it (and it's 🆓)
+  new on [egghead.io](http://egghead.io). It's a recording of one of my talks
+  especially for [egghead.io](http://egghead.io). I think you'll really enjoy it
+  (and it's 🆓)
 - [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk at Assert.js conference
   ([and here's the blog post](http://kcd.im/write-tests))

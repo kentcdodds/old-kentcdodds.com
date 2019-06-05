@@ -23,7 +23,7 @@ https://youtube.com/watch?v=415EfGPuhSo&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u
 If you're unfamiliar with compound components, then you probably haven't watched
 my Advanced React Component Patterns course
 [on egghead.io](http://kcd.im/advanced-react) or
-[on Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/).
+[on Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns).
 
 The idea is that you have two or more components that work together to
 accomplish a useful task. Typically one component is the parent, and the other

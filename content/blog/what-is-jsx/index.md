@@ -152,7 +152,7 @@ you can use it more effectively. Good luck!
 
 - [The Beginner's Guide to React](http://kcd.im/beginner-react)
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 
 **Things to not miss**:
 
@@ -165,9 +165,9 @@ you can use it more effectively. Good luck!
 - [vscode-go-to-file](https://github.com/jackfranklin/vscode-go-to-file) — A
   plugin that aims to replicate some of Vim's "go to file" (`gf`) functionality
   by the great [Jack Franklin](https://twitter.com/Jack_Franklin)
-- [tabb](http://tabb-extension.com/) — A Chrome extension to search, save, and
+- [tabb](http://tabb-extension.com) — A Chrome extension to search, save, and
   manage your tabs, history, and bookmarks written in
-  [Reason](https://reasonml.github.io/) by my friend
+  [Reason](https://reasonml.github.io) by my friend
   [Ethan Godt](https://twitter.com/ethangodt)
 - [deps-report](https://github.com/pichillilorenzo/deps-report) — Generate
   reports about dependencies and dependents of your JavaScript/TypeScript files

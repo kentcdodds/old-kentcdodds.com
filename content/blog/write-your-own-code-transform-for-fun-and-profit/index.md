@@ -27,7 +27,7 @@ Since then, there have been a few exciting developments:
     [`babel-preset-react-app`](https://www.npmjs.com/package/babel-preset-react-app)
     (which is what create-react-app v2 beta is using!)
 2.  It [was added](https://github.com/fkling/astexplorer/pull/303) as an
-    optional transform to [astexplorer.net](https://astexplorer.net/) by
+    optional transform to [astexplorer.net](https://astexplorer.net) by
     [@FWeinb](https://twitter.com/FWeinb)
 
 Up until now, only early adopters have tried to
@@ -44,7 +44,7 @@ Let's start off with a contrived macro that can split a string of text and
 replace every space with `🐶`. We'll call it `gemmafy` because my dog's name is
 "Gemma." Woof!
 
-1.  Go to [astexplorer.net](https://astexplorer.net/)
+1.  Go to [astexplorer.net](https://astexplorer.net)
 2.  Make sure the language is set to `JavaScript`
 3.  Make sure the parser is set to `babylon7`
 4.  Enable the transform and set it to `babel-macros` (or `babel-plugin-macros`
@@ -196,7 +196,7 @@ Enjoy!
 **Learn more about ASTs from me**:
 
 - [All about macros with babel-plugin-macros 🎣 (talk at ReactJS Utah)](https://youtu.be/nlAHtAQlFGk&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting Course on Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)
+- [Code Transformation and Linting Course on Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts)
 - [Code Transformation and Linting Workshop (very rough practice run)](https://youtu.be/-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Writing custom Babel and ESLint plugins with ASTs (talk at Open West 2017)](https://youtu.be/VBscbcm2Mok&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 

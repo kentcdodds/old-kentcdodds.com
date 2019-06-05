@@ -249,7 +249,7 @@ Here are a few extras for your viewing pleasure :)
 Another way to avoid the complexities of `this` and leverages simple objects and
 functions is the Module pattern. You can learn more about this pattern from
 [Addy Osmani](https://twitter.com/addyosmani)’s
-“[Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)”
+“[Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book)”
 book which is available to read for free
 [here](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript).
 Here’s an implementation of our `person` class based on Addy’s
@@ -382,12 +382,12 @@ in the [es6–workshop](https://github.com/kentcdodds/es6-workshop).
 #### Additional Reading
 
 This article by [Tyler McGinnis](https://twitter.com/tylermcginnis) called
-[“Object Creation in JavaScript”](https://tylermcginnis.com/object-creation-in-javascript-functional-instantiation-vs-prototypal-instantiation-vs-pseudo-e9287b6bbb32/)
+[“Object Creation in JavaScript”](https://tylermcginnis.com/object-creation-in-javascript-functional-instantiation-vs-prototypal-instantiation-vs-pseudo-e9287b6bbb32)
 is a terrific read.
 
 If you want to learn about functional programming, I highly suggest
-“[The Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/)”
+“[The Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide)”
 by [Brian Lonsdorf](https://twitter.com/drboolean), and (for those of you with a
 Frontend Masters subscription)
-“[Functional-Lite JavaScript](https://frontendmasters.com/courses/functional-js-lite/)”
+“[Functional-Lite JavaScript](https://frontendmasters.com/courses/functional-js-lite)”
 by [Kyle Simpson](https://medium.com/@kylesimpson).

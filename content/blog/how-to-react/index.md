@@ -25,7 +25,7 @@ today :)
 ### Abstraction
 
 Let's start out talking about abstraction. Here's an example of an abstraction
-from [youmightnotneedjquery.com](http://youmightnotneedjquery.com/):
+from [youmightnotneedjquery.com](http://youmightnotneedjquery.com):
 
 ```js
 // $(el).toggleClass(className);
@@ -94,7 +94,7 @@ build a simple app with regular JavaScript and DOM APIs then you'll understand
 the benefits of React much better. You'll also be much more effective using
 React because honestly, 90% of being effective with React is understanding
 JavaScript well. For this, I suggest
-[JavaScript30.com](https://javascript30.com/) (totally free) by
+[JavaScript30.com](https://javascript30.com) (totally free) by
 [Wes Bos](https://twitter.com/wesbos).
 
 In addition, knowing modern JavaScript features will go a long way. Because JSX
@@ -108,17 +108,17 @@ suggest my [ES6 and Beyond Workshop](http://kcd.im/es6-workshop-at-paypal)
 
 Too many "beginner React" material starts with JSX and a bunch of tools. React
 itself is remarkably simple (and
-[the docs are amazingly good](https://reactjs.org/)). Sadly, everything around
-it can get complicated quickly and it can be hard to know where the lines are
+[the docs are amazingly good](https://reactjs.org)). Sadly, everything around it
+can get complicated quickly and it can be hard to know where the lines are
 between React and the tools and libraries you use it with. Because of this, I've
 created
 [The Beginner's Guide to React](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
-absolutely free on [egghead.io](http://egghead.io/). It starts with everything
-in `index.html` files which I think is important. You don't need any tooling at
-all to use React.
+absolutely free on [egghead.io](http://egghead.io). It starts with everything in
+`index.html` files which I think is important. You don't need any tooling at all
+to use React.
 
 [The last lesson](https://egghead.io/lessons/egghead-build-and-deploy-a-react-application)
-shows you how to use [CodeSandbox.io](http://codesandbox.io/) to create your app
+shows you how to use [CodeSandbox.io](http://codesandbox.io) to create your app
 [entirely in the browser](/blog/building-production-apps-100-in-the-browser) and
 download that to your computer to a
 [create-react-app](https://github.com/facebook/create-react-app) application.
@@ -136,7 +136,7 @@ the questions of "what's the cost" and "what's the benefit." Try really hard to
 not add a dependency until _after_ you've felt the pain it's supposed to solve.
 It will make you more effective at using the dependency.
 
-I suggest reading through [the npm documentation](https://docs.npmjs.com/) in an
+I suggest reading through [the npm documentation](https://docs.npmjs.com) in an
 afternoon. Seriously, do it. There's some really valuable information in there.
 
 In addition, when you start using dependencies, you're going to want to learn
@@ -151,11 +151,11 @@ If your application is server rendered and you're adding react in to support
 some interactivity, then don't bother with routing. However, if your application
 is a "Single Page App" or the client (your browser code) will be responsible for
 routing (updating the URL as the user is using the app), then you should learn
-and use [`react-router`](https://reacttraining.com/react-router/).
+and use [`react-router`](https://reacttraining.com/react-router).
 
 It has fantastic documentation. But if you really want to get a firm grip on
 what it's doing, then I highly suggest
-["Build your own react-router"](https://tylermcginnis.com/build-your-own-react-router-v4/)
+["Build your own react-router"](https://tylermcginnis.com/build-your-own-react-router-v4)
 by [Tyler McGinnis](https://twitter.com/tylermcginnis).
 
 ### State management
@@ -172,7 +172,7 @@ I suggest you give my blog post
 through.
 
 > _TL;DR: Singleton Module -> React.createContext ->_ >
-> [_Unstated.io_](http://unstated.io/)_-\> redux._
+> [_Unstated.io_](http://unstated.io)_-\> redux._
 
 ### Component Styling
 
@@ -200,7 +200,7 @@ memory efficient solution.
 
 From here I suggest you dive in deeper into React. I have my
 [Advanced React Component Patterns course](https://egghead.io/courses/advanced-react-component-patterns)
-on [egghead.io](http://egghead.io/) which can give you a lot of really good
+on [egghead.io](http://egghead.io) which can give you a lot of really good
 information.
 
 Beyond here, you can learn:

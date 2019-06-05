@@ -90,7 +90,7 @@ many free resources available to learn the basics of programming.
 
 ### Foundational programming concepts
 
-One resource I suggest is [Scratch](https://scratch.mit.edu/) which is a
+One resource I suggest is [Scratch](https://scratch.mit.edu) which is a
 surprisingly powerful programming-like platform that doesn't require writing any
 code at all. It's a great place to start learning about foundational programming
 concepts like variables, loops, conditional statements, and events. You will
@@ -178,7 +178,7 @@ and your program will run every time you do it. This is a great place to start
 playing around with coding in JavaScript.
 
 > I recommend that you install a real programming text editor like
-> [VSCode](https://code.visualstudio.com/). It will really improve your
+> [VSCode](https://code.visualstudio.com). It will really improve your
 > experience writing JavaScript programs.
 
 ### Learning the JavaScript language

@@ -12,7 +12,7 @@ bannerCredit: >-
   [http://www.addletters.com/bart-simpson-generator.htm](http://www.addletters.com/bart-simpson-generator.htm)
 ---
 
-_This blogpost is by request from_ [_HackingEDU_](http://hackingedu.co/)_, the
+_This blogpost is by request from_ [_HackingEDU_](http://hackingedu.co)_, the
 World's Largest Education Hackathon_ 👍
 
 My first contribution to open source was extremely small:
@@ -43,8 +43,8 @@ been so great for me.
 I have learned so many valuable skills from my time using and contributing to
 open source projects. Whether it's a pull request to another project or creating
 my own it's been an amazing learning experience. I've learned how
-[many](http://webpack.github.io/) [different](http://gruntjs.com/)
-[build](http://gulpjs.com/) [systems](https://www.gnu.org/software/make/)
+[many](http://webpack.github.io) [different](http://gruntjs.com)
+[build](http://gulpjs.com) [systems](https://www.gnu.org/software/make)
 [work](https://docs.npmjs.com/misc/scripts), different methods/styles of
 structuring [code](/blog/newspaper-code-structure) and
 [files](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346) to enhance
@@ -136,4 +136,4 @@ See you on [Twitter](https://twitter.com/kentcdodds) and
 - [24 Pull Requests](http://24pullrequests.com/contributing)
 - [How to Write an Open Source JavaScript Library - Course by @kentcdodds](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
 - [First Timers Only](https://medium.com/p/78281ea47455)
-- [GitHub for Developers](https://training.github.com/classes/developers/)
+- [GitHub for Developers](https://training.github.com/classes/developers)

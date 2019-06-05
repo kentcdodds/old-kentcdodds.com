@@ -12,7 +12,7 @@ keywords:
 banner: ./images/banner.jpg
 ---
 
-Back in October of 2011 [Ryan Dahl](http://tinyclouds.org/) wrote a blogpost
+Back in October of 2011 [Ryan Dahl](http://tinyclouds.org) wrote a blogpost
 entitled "[I hate almost all software](http://tinyclouds.org/rant.html)" in
 which he asserts:
 

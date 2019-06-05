@@ -59,7 +59,7 @@ attention.**
 There is a [plethora](https://youtu.be/zWld721Wk-Q) of tools you can use to do
 this kind of story analysis (by "analysis" I'm suggesting even if you're a
 "pantser" you can use these kinds of tools). My personal favorite is
-[Story Grid](https://storygrid.com/). I feel like it allows me to tell the story
+[Story Grid](https://storygrid.com). I feel like it allows me to tell the story
 that I personally think is interesting and check to ensure that it wont fall
 flat for my audience.
 

@@ -27,7 +27,7 @@ While this may be true, the attitude bothers me. I'd be classified in the
 because it feels like
 ["pride from the bottom looking up"](https://www.lds.org/general-conference/1989/04/beware-of-pride)
 or could also come from
-[a fixed mindset](https://mindsetonline.com/whatisit/about/). I wasn't born with
+[a fixed mindset](https://mindsetonline.com/whatisit/about). I wasn't born with
 a twitter following (though I was born into privilege which makes a non-trivial
 impact, and I'll address that later). I worked for this by creating things and
 doing things to get noticed even before I had the following. This is true of
@@ -53,7 +53,7 @@ My first personal open source project that I wanted to get noticed was
 was back in 2013. I can't remember exactly how many followers I had, but at the
 time
 [I was tweeting](https://twitter.com/search?l=&q=from%3Akentcdodds%20since%3A2013-08-01%20until%3A2013-08-31&src=typd)
-using [Friends+ me](https://friendsplus.me/) (because I thought Google+ was the
+using [Friends+ me](https://friendsplus.me) (because I thought Google+ was the
 bomb) and of all my tweets that month, only one got a single favorite. Needless
 to say, I wasn't well known or popular.
 
@@ -62,9 +62,9 @@ that didn't stop me from working on getting it noticed. I presented it at my
 work's hack night around that time (it's actually
 [how I got my first fulltime job at Domo](https://github.com/kentcdodds/ama/issues/1)),
 I built
-[a sweet in-browser workshop](http://kentcdodds.github.io/genie/workshop/) and
+[a sweet in-browser workshop](http://kentcdodds.github.io/genie/workshop) and
 used it in
-[my first meetup talk](https://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/),
+[my first meetup talk](https://www.meetup.com/UtahJS-Orem-Meetup/events/156148202),
 I then lucked out and got a conference (MidwestJS 2014) to accept me to give
 that talk there (I only was able to speak because another speaker canceled).
 
@@ -154,27 +154,27 @@ I recently published a blog post called
 [Why and How I started public speaking](/blog/why-and-how-i-started-public-speaking).
 I'm just going to link you to that story rather than re-iterate the whole thing
 here. But I do want to tell how I got started with creating content for
-[egghead.io](http://egghead.io/) as that made a big influence on widening my
+[egghead.io](http://egghead.io) as that made a big influence on widening my
 reach.
 
 Back in June 2014, I spoke at
-[AngularJS Utah meetup](https://www.meetup.com/AngularJS-Utah/events/173788512/)
+[AngularJS Utah meetup](https://www.meetup.com/AngularJS-Utah/events/173788512)
 about something I had been learning about in a school project
 ([you can watch the talk here!](https://youtu.be/vIGZxeQUUFU?t=1m51s)). Not long
 later, [John Lindquist](https://twitter.com/johnlindquist) (co-founder and
-original instructor on [egghead.io](http://egghead.io/)) watched the recording
+original instructor on [egghead.io](http://egghead.io)) watched the recording
 and emailed me inviting me to turn the workshop into a course.
 
 This lead into an incredible positive relationship. Being an instructor on a
-platform like [egghead.io](http://egghead.io/) gives you automatic authority in
+platform like [egghead.io](http://egghead.io) gives you automatic authority in
 the minds of many people. It did take some time and consistency with creating
-content on [egghead.io](http://egghead.io/), but after some time, the following
+content on [egghead.io](http://egghead.io), but after some time, the following
 started to grow (as did my royalties which have been sufficient enough to pay my
 monthly home mortgage here in Utah for a couple years now).
 
 **Here's the takeaway:** If my talk had not been recorded, John would not have
 seen the value I created that night at the meetup and I could have missed or
-delayed my [egghead.io](http://egghead.io/) opportunity. You are constantly
+delayed my [egghead.io](http://egghead.io) opportunity. You are constantly
 creating value. A conversation with a co-worker, a meetup talk, a realization
 after hours of working on a hard to solve bug. **The trick is to take those
 value creating experiences and make them public.**This is where my
@@ -182,10 +182,10 @@ value creating experiences and make them public.**This is where my
 [Tech Chats](http://kcd.im/tech-chats) come from. Both of those activities widen
 my reach.
 
-Just over a year after I started with [egghead.io](http://egghead.io/) (in
+Just over a year after I started with [egghead.io](http://egghead.io) (in
 September 2015), after I had established myself a bit with egghead, I was
 listening to episode 178 of [JavaScript Jabber](https://devchat.tv/js-jabber):
-[Tech Education and The Business of Running Front End Masters with Marc Grabanski](https://devchat.tv/js-jabber/178-jsj-tech-education-and-the-business-of-running-front-end-masters-with-marc-grabanski/).
+[Tech Education and The Business of Running Front End Masters with Marc Grabanski](https://devchat.tv/js-jabber/178-jsj-tech-education-and-the-business-of-running-front-end-masters-with-marc-grabanski).
 I had met Marc at my first MidwestJS where we were both speakers and thought he
 was a pretty cool dude. I knew of Frontend Masters and had a great deal of
 respect for Marc and his company. So I reached out to him:
@@ -219,7 +219,7 @@ To which Marc responded:
 > _Sounds awesome! When were you thinking?_
 
 And so began my relationship with Frontend Masters. I now have
-[six courses (almost 7) on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds/).
+[six courses (almost 7) on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds).
 **The takeaway here** is courage. I'm mostly sharing my success stories in this
 blog post, but you gotta know that there were plenty of rejections as well. But
 it's ok! Have the courage to ask.
@@ -232,17 +232,16 @@ it's ok! Have the courage to ask.
 
 I have to mention my podcasts as a form of widening my reach and getting
 noticed. Back in November 2014, Todd Motto and I kicked off our bi-weekly Google
-Hangouts on Air called ["Angular Air"](https://angularair.com/) with
+Hangouts on Air called ["Angular Air"](https://angularair.com) with
 ["Angular Air Episode 0: The Angular Team on 1.3 & 2.0"](https://youtu.be/LG9VkCDbte0).
 We didn't plan on making it a podcast. We just wanted to chat every other week
 between ourselves and maybe a guest or two about AngularJS. We figured it'd be a
 good way to talk to cool people and help the community.
 
 This first episode was so well received that I quickly took the audio from the
-YouTube video and created [a podcast](http://audio.angularair.com/) which
-quickly started getting thousands of downloads per week. Todd was pretty busy,
-and I wanted to go weekly, so I took it over and started getting more and more
-guests.
+YouTube video and created [a podcast](http://audio.angularair.com) which quickly
+started getting thousands of downloads per week. Todd was pretty busy, and I
+wanted to go weekly, so I took it over and started getting more and more guests.
 
 What I quickly discovered is that you can get really cool people to freely give
 you an hour of their time when you can promise that the value they're creating
@@ -251,9 +250,9 @@ over the world.
 
 When I made the transition from AngularJS to React at PayPal, I handed off
 Angular Air to [Jeff Whelpley](https://twitter.com/jeffwhelpley) and started
-[JavaScript Air](https://javascriptair.com/) with a panel of developers that'd
+[JavaScript Air](https://javascriptair.com) with a panel of developers that'd
 knock your socks off and
-[a first episode](https://javascriptair.com/episodes/2015-12-09/) with the
+[a first episode](https://javascriptair.com/episodes/2015-12-09) with the
 creator of JavaScript himself, [Brendan Eich](https://twitter.com/brendaneich).
 I was able to get these folks because they're just awesome people and I had
 proven myself to them with my experience as a podcaster with Angular Air and I
@@ -385,10 +384,10 @@ and the direction you're going. You can do it! Good luck!
   React. We cover a lot of subjects that you may find interesting!
 - [React Fire 🔥🔥🔥](https://github.com/facebook/react/issues/13525) — An
   initiative to modernize react-dom
-- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues/)-
+- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues)-
   A great blog post by [Shawn Wang](https://twitter.com/swyx) about an awesome
   new feature in the React DevTools!
-- [ui.reach.tech](https://ui.reach.tech/) — An awesome collection of highly
+- [ui.reach.tech](https://ui.reach.tech) — An awesome collection of highly
   accessible React components by my friend
   [Ryan Florence](https://twitter.com/ryanflorence) (he's also giving
   [Advanced React trainings](https://reach.tech/workshops) all over the US

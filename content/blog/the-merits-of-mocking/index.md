@@ -63,7 +63,7 @@ a bad trade. 😵
 
 **There's a time and a place for mocking.** And when you need to mock, Jest
 makes it easy with some really sweet mocking utilities. In
-[testingjavascript.com](https://testingjavascript.com/) I'll show you how to
+[testingjavascript.com](https://testingjavascript.com) I'll show you how to
 implement some of Jest's mocking capabilities in raw node so you can get an idea
 of what's going on. It's brilliant. Here's an example of simulating Jest's
 inline mock functionality in pure node:
@@ -102,5 +102,5 @@ See you [there](https://testingjavascript.com).
 
 **Things to not miss**:
 
-- [Episode 061 — React with Kent C. Dodds](https://6figuredev.com/podcast/episode-061-react-with-kent-c-dodds/)
-  on [The 6 Figure Developer podcast](https://6figuredev.com/).
+- [Episode 061 — React with Kent C. Dodds](https://6figuredev.com/podcast/episode-061-react-with-kent-c-dodds)
+  on [The 6 Figure Developer podcast](https://6figuredev.com).

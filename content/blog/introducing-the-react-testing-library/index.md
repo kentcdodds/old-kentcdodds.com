@@ -63,7 +63,7 @@ to get your tests closer to using your components the way a user will, which
 allows your tests to give you more confidence that your application will work
 when a real user uses it.
 
-This library is a replacement for [enzyme](http://airbnb.io/enzyme/). While you
+This library is a replacement for [enzyme](http://airbnb.io/enzyme). While you
 _can_ follow these guidelines using enzyme itself, enforcing this is harder
 because of all the extra utilities that enzyme provides (utilities which
 facilitate testing implementation details). Read more about this in
@@ -259,19 +259,19 @@ React testbases are easier to understand and maintain.
 
 **Learn more about Testing from me**:
 
-[Frontend Masters](https://frontendmasters.com/) in Minneapolis (and online)
-this month!:
+[Frontend Masters](https://frontendmasters.com) in Minneapolis (and online) this
+month!:
 
-- [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/)
-- [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps/)
+- [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
+- [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps)
 
 **Things to not miss**:
 
 - I am now on Patreon! Support these newsletters and other things I do!
   [patreon.com/kentcdodds](https://www.patreon.com/kentcdodds)
-- [React Dev Summit](https://reactdevsummit.com/): Coupon code "KENT" gets 10%
+- [React Dev Summit](https://reactdevsummit.com): Coupon code "KENT" gets 10%
   off the ticket price
-- [polyfill.io](https://polyfill.io/): It's more than just an amazing service,
+- [polyfill.io](https://polyfill.io): It's more than just an amazing service,
   it's a node module that you can use yourself. This last week I did exactly
   that and it's amazing. I'll probably write about it eventually.
 - Oh, by the way, I was originally going to call this library:
