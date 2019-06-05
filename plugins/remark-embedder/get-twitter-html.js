@@ -25,8 +25,9 @@ function getUrl(string) {
 }
 
 function getTwitterHtml(string) {
+  const twitterUrl = getUrl(string).toString()
   return fetch(
-    `https://publish.twitter.com/oembed?url=${string}&omit_script=true`,
+    `https://publish.twitter.com/oembed?url=${twitterUrl}&omit_script=true`,
   )
     .then(r => r.json())
     .then(r => {
