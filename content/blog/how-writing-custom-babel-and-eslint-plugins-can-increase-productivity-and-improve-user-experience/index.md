@@ -149,9 +149,9 @@ with major releases that somehow magically ✨ update your code to the new APIs
 [this one from webpack](https://github.com/webpack/webpack-cli/blob/master/lib/migrate.js))?
 You can write things like that as a babel plugin and run those using
 [babel-codemod](https://github.com/square/babel-codemod) (checkout
-[this short demo of babel-codemod](https://www.youtube.com/watch?v=Vj9MOXbC43A&index=1&list=PLV5CVI1eNcJipUVm6RDsOQti_MzHImUMD)).
-([Learn more about codemods from this talk](https://www.youtube.com/watch?v=d0pOgY8__JM)
-by [Christoph](https://twitter.com/cpojer)).
+[this short demo of babel-codemod](https://youtu.be/Vj9MOXbC43A&index=1&list=PLV5CVI1eNcJipUVm6RDsOQti_MzHImUMD)).
+([Learn more about codemods from this talk](https://youtu.be/d0pOgY8__JM) by
+[Christoph](https://twitter.com/cpojer)).
 
 > I don't care how good you are at regex, you can do way better with a custom
 > babel plugin.
@@ -199,7 +199,7 @@ P.S. There are several other (free) resources to help you learn ASTs:
 - [babel-plugin-handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md)
 - [asts-workshop](https://github.com/kentcdodds/asts-workshop) (the repo used
   for the Frontend Masters course)
-- [Writing custom Babel and ESLint plugins with ASTs](https://www.youtube.com/watch?v=VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
+- [Writing custom Babel and ESLint plugins with ASTs](https://youtu.be/VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
 - [A couple lessons on ASTs on egghead.io](http://kcd.im/egghead-asts)
 
 P.S.P.S. I thought I’d mention two babel plugins I’ve written recently that I’m

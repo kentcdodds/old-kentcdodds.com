@@ -40,7 +40,7 @@ function Example() {
 That `const [count, setCount] = useState(0);` is the line we're going to be
 talking about today. The syntax here is called "array destructuring" and it was
 introduced into JavaScript in the infamous
-([more than famous](https://www.youtube.com/watch?v=0b6_i_eSgR8))
+([more than famous](https://youtu.be/0b6_i_eSgR8))
 [ES6 release](https://github.com/lukehoban/es6features).
 
 I'm a firm believer that:
@@ -297,7 +297,7 @@ that I'll never get tired of in this industry! And learning the fundamentals
 behind these bits of syntax will make you more effective at using them. I should
 mention also that there are more things you can do with destructuring and if
 you're interested there's
-[a section about destructuring in my ES6 workshop](https://www.youtube.com/watch?v=t3R3R7UyN2Y&t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
+[a section about destructuring in my ES6 workshop](https://youtu.be/t3R3R7UyN2Y&t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
 that's available completely free on
 [my YouTube channel](https://kcd.im/youtube). Good luck!
 
@@ -317,9 +317,9 @@ that's available completely free on
   once. (Also on
   [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
 - [My YouTube channel](https://kcd.im/youtube) is also full of content about
-  [React](https://www.youtube.com/user/kentdoddsfamily/search?query=react) that
+  [React](https://youtube.com/user/kentdoddsfamily/search?query=react) that
   you'd probably enjoy (including
-  [workshops, talks](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf),
+  [workshops, talks](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf),
   and [livestreams](https://kcd.im/devtips)).
 
 **Things to not miss**:

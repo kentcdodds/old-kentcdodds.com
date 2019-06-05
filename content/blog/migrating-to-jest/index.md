@@ -18,9 +18,9 @@ bannerCredit: >-
 I get really excited about new tech I find interesting. When I first "got" the
 testing framework [AVA](https://github.com/avajs/ava), I was soooo excited. I
 was on the rooftops of twitter telling people to give AVA a shot. I created
-[two](https://www.youtube.com/watch?v=FgjxXntElEY)
-[screencasts](https://www.youtube.com/watch?v=jfWK8LMD8mw) about how to set up
-and use AVA, and a full blown workshop on how to test React with AVA:
+[two](https://youtu.be/FgjxXntElEY) [screencasts](https://youtu.be/jfWK8LMD8mw)
+about how to set up and use AVA, and a full blown workshop on how to test React
+with AVA:
 
 https://twitter.com/kentcdodds/status/699636857928179712
 
@@ -121,7 +121,7 @@ share! So I created [a bunch of videos](http://kcd.im/egghead-jest) for
 egghead.io about it, had a
 [tech chat](https://github.com/kentcdodds/ama/issues/125) with
 [Christoph Pojer](https://twitter.com/cpojer)
-[on YouTube](https://www.youtube.com/watch?v=i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
+[on YouTube](https://youtu.be/i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
 about Jest, and rewrote my React Testing Workshop **again** in
 [Jest](https://github.com/kentcdodds/react-jest-workshop).
 

@@ -15,11 +15,11 @@ bannerCredit:
 
 Have you read the book ["Start With Why"](https://startwithwhy.com/books/)? If
 you haven't, I recommend it. At least watch
-[the TED talk](https://www.youtube.com/watch?v=u4ZoJKF_VuA). The premise of the
-idea is that "People won't truly buy into a product, service, movement, or idea
-until they understand the WHY behind it." This concept hit home with me when I
-watched that talk and then read the book a few years ago, and it's shaped the
-way I communicate with you in my blog posts, talks, workshops, and courses.
+[the TED talk](https://youtu.be/u4ZoJKF_VuA). The premise of the idea is that
+"People won't truly buy into a product, service, movement, or idea until they
+understand the WHY behind it." This concept hit home with me when I watched that
+talk and then read the book a few years ago, and it's shaped the way I
+communicate with you in my blog posts, talks, workshops, and courses.
 
 I'd like to share my "why" about testing with you and invite you to consider
 what your own "why" might be.

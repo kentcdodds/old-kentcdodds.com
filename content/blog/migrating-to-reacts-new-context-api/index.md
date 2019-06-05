@@ -25,7 +25,7 @@ thought I'd show you some of those changes!
 
 In my course, I have a section that shows how to write
 [compound components](https://egghead.io/lessons/react-make-compound-react-components-flexible)
-([a trick I learned](https://www.youtube.com/watch?v=hEGg-3pIHlE) from
+([a trick I learned](https://youtu.be/hEGg-3pIHlE) from
 [Ryan Florence](https://twitter.com/ryanflorence)) that use the context API.
 
 ### Example Usage

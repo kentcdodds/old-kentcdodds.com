@@ -192,7 +192,7 @@ So, in my case, the thing I want to render _has_ to be a function due to the
 constraints mentioned earlier. So I can't make it work as an object, string,
 number, or array. But I realized that there's nothing stopping me from making my
 function iterable (if you're unfamiliar,
-[here's the iterators part of my ES6 workshop recording](https://www.youtube.com/watch?v=eOKQDh50ECU&t=2h43m44s)).
+[here's the iterators part of my ES6 workshop recording](https://youtu.be/eOKQDh50ECU&t=2h43m44s)).
 
 So... I made my function iterable 😉
 
@@ -240,8 +240,8 @@ I hope that's helpful and interesting! Good luck!
 
 **Things to not miss**:
 
-- [React Call Return](https://www.youtube.com/watch?v=GK_rI4V4tZE) — A new
-  **experimental** that should be available in React@16.0.1 explained by Ryan
-  Florence. Pretty interesting.
+- [React Call Return](https://youtu.be/GK_rI4V4tZE) — A new **experimental**
+  that should be available in React@16.0.1 explained by Ryan Florence. Pretty
+  interesting.
 - [Between Microsoft, Google, and Apple, Microsoft's the only one that knows how to make a burger](https://twitter.com/shanselman/status/924782140272795648)
 - [A relevant bug in React v16 I found while writing this newsletter](https://github.com/facebook/react/issues/11396).

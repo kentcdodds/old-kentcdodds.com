@@ -350,10 +350,10 @@ and you'll have a much better time testing! Good luck!
   new on [egghead.io](http://egghead.io/). It's a recording of one of my talks
   especially for [egghead.io](http://egghead.io/). I think you'll really enjoy
   it (and it's 🆓)
-- [Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
+- [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk at Assert.js conference
   ([and here's the blog post](http://kcd.im/write-tests))
-- [Testing Practices and Principles](https://www.youtube.com/watch?v=VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Testing Practices and Principles](https://youtu.be/VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   recording of my workshop at Assert.js
 
 **Things to not miss**:

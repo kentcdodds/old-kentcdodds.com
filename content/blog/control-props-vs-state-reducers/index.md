@@ -176,13 +176,13 @@ Good luck!
 
 **Things to not miss**:
 
-- [**DevTips with Kent**](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+- [**DevTips with Kent**](https://youtube.com/playlist?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
   ❗️❗️❗️ I’ve started a new series of daily short videos about software
   development. I livestream them every weekday. Check out the playlist of videos
   I have up there already including
-  [npm tips](https://www.youtube.com/watch?v=Dli_FisDdVU&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
-  [TDD with react-testing-library](https://www.youtube.com/watch?v=kCR3JAR7CHE&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
-  [webpack HMR](https://www.youtube.com/watch?v=JGXAvgVHC5A&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
+  [npm tips](https://youtu.be/Dli_FisDdVU&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
+  [TDD with react-testing-library](https://youtu.be/kCR3JAR7CHE&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
+  [webpack HMR](https://youtu.be/JGXAvgVHC5A&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u),
   and more!
 - [A bitter guide to open source](https://medium.com/@ken_wheeler/a-bitter-guide-to-open-source-a8e3b6a3c1c4)
   by [Ken Wheeler](https://twitter.com/ken_wheeler). It’s **incredibly**

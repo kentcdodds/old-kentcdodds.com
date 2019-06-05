@@ -68,12 +68,12 @@ During that time I also gave ~15 minute lessons to my family in
 and led lessons in my church classes as well.
 
 In Junior High and High School, I was also a stage performer. I
-[played the piano](https://www.youtube.com/watch?v=agdbnzQlMFE) (yes, I'm
-hitting my head and forearm on the piano at ~2 minutes),
-[sang in choirs](https://www.youtube.com/watch?v=F5_QmWwIF3c), and I was in
-[my High School's Show Choir "Jive!"](https://www.youtube.com/watch?v=5_sRK8UUc3k)
-(yep, that's me in the green doing a backflip at ~6:40). After leaving home and
-spending a semester at BYU, I left on
+[played the piano](https://youtu.be/agdbnzQlMFE) (yes, I'm hitting my head and
+forearm on the piano at ~2 minutes),
+[sang in choirs](https://youtu.be/F5_QmWwIF3c), and I was in
+[my High School's Show Choir "Jive!"](https://youtu.be/5_sRK8UUc3k) (yep, that's
+me in the green doing a backflip at ~6:40). After leaving home and spending a
+semester at BYU, I left on
 [a mission for my church](https://www.mormonnewsroom.org/topic/missionary-program)
 and had even more opportunities to speak in front of people (both church
 congregations as well as teach lessons to people in their homes).
@@ -146,7 +146,7 @@ Keep practicing! Good luck :D
 
 **Learn more about "self improvement" from me**:
 
-- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   talk I gave a few years ago that's related and has some similar stories to
   this post.
 

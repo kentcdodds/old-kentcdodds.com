@@ -42,11 +42,11 @@ that we support), the response is 60.2kb! If you're unfamiliar with the impact
 this can make, I suggest you read
 [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
 by [Addy Osmani](https://twitter.com/addyosmani) (or
-[watch a talk version here](https://www.youtube.com/watch?v=63I-mEuSvGA)). To
-put this in terms you may appreciate, this will take users in emerging markets
-about a full second just to download, then you have to take the content they've
-downloaded and parse/compile/run it which can take even longer especially for
-individuals using lower-end phones.
+[watch a talk version here](https://youtu.be/63I-mEuSvGA)). To put this in terms
+you may appreciate, this will take users in emerging markets about a full second
+just to download, then you have to take the content they've downloaded and
+parse/compile/run it which can take even longer especially for individuals using
+lower-end phones.
 
 The state of the art with polyfills is to include those polyfills in your
 `bundle.js`file (in fact, lots of apps are just using all of `core-js` which is
@@ -184,15 +184,15 @@ Pretty cool!
 
 **Learn more about JavaScript from me**:
 
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://www.youtube.com/watch?v=t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://www.youtube.com/watch?v=eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
 - [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
 for my daily devtips, like
-[the one a while back where](https://www.youtube.com/watch?v=FsgGx1SMXn0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+[the one a while back where](https://youtu.be/FsgGx1SMXn0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
 I demo some advanced features of destructuring!
 
 **Things to not miss**:

@@ -61,9 +61,8 @@ means rendering some specific UI based on some state, but it doesn't have to.
 React components don't have to render UI or anything at all. React components
 are about much more than just visual UI (consider
 [`react-router`](https://reacttraining.com/react-router/) as a prime example).
-For more on this, watch
-[Never Write Another HoC](https://www.youtube.com/watch?v=BcVAq3YFiuc) by
-[Michael Jackson](https://twitter.com/mjackson).
+For more on this, watch [Never Write Another HoC](https://youtu.be/BcVAq3YFiuc)
+by [Michael Jackson](https://twitter.com/mjackson).
 
 Another problem that render props have solved for me in my codebases is
 abstracting away imperative code. I love the example

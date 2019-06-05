@@ -97,6 +97,6 @@ abstraction. Good luck!
   asking me about. The videos are live, brief, unscripted, and full of valuable
   info and tips. [Subscribe to my YouTube channel](http://kcd.im/youtube) and
   click the notification bell to be notified when I'm streaming :)
-- [Learn React with Kent C. Dodds](https://www.youtube.com/watch?v=zthIUs2w_c8) — My
-  livestream on
-  [freeCodeCamp's YouTube channel](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).
+- [Learn React with Kent C. Dodds](https://youtu.be/zthIUs2w_c8) — My livestream
+  on
+  [freeCodeCamp's YouTube channel](https://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).

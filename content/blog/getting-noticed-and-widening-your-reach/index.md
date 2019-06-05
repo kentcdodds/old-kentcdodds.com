@@ -233,7 +233,7 @@ it's ok! Have the courage to ask.
 I have to mention my podcasts as a form of widening my reach and getting
 noticed. Back in November 2014, Todd Motto and I kicked off our bi-weekly Google
 Hangouts on Air called ["Angular Air"](https://angularair.com/) with
-["Angular Air Episode 0: The Angular Team on 1.3 & 2.0"](https://www.youtube.com/watch?v=LG9VkCDbte0).
+["Angular Air Episode 0: The Angular Team on 1.3 & 2.0"](https://youtu.be/LG9VkCDbte0).
 We didn't plan on making it a podcast. We just wanted to chat every other week
 between ourselves and maybe a guest or two about AngularJS. We figured it'd be a
 good way to talk to cool people and help the community.
@@ -344,11 +344,10 @@ do get to everything eventually in one form or another.
 We all need to acknowledge something very important: Privilege. If you've not
 heard Kyle Simpson talk about
 [#PrivilegeAwareness](https://twitter.com/search?q=%23privilegeawareness&src=typd),
-give the first part of
-[this talk](https://www.youtube.com/watch?v=wJEX2FgNYLg&t=46s) a quick watch. I
-have similar privileges that Kyle mentions. Incidentally, a few hours after Kyle
-gave his talk,
-[I gave a talk](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
+give the first part of [this talk](https://youtu.be/wJEX2FgNYLg&t=46s) a quick
+watch. I have similar privileges that Kyle mentions. Incidentally, a few hours
+after Kyle gave his talk,
+[I gave a talk](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
 at the same conference where I talk about my privilege as an important thing to
 acknowledge.
 
@@ -361,8 +360,7 @@ gave me opportunities to excel and succeed.
 I think it's also important for each of us to be aware of our privilege so we
 can work on solving societal problems and actively battle (un)conscious bias as
 well as have empathy for those who are in less privileged positions than
-ourselves. To
-["lend our privilege"](https://www.youtube.com/watch?v=8Nvg-MMtN_A) (that's a
+ourselves. To ["lend our privilege"](https://youtu.be/8Nvg-MMtN_A) (that's a
 link to a fantastic talk by [Anjuan Simmons](https://twitter.com/anjuan) which
 you should watch right now) in an effort to make the world a better place.
 
@@ -377,11 +375,11 @@ and the direction you're going. You can do it! Good luck!
 
 **Learn more about career development from me**:
 
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 **Things to not miss**:
 
-- [Testing React with Kent C. Dodds and Jack Franklin](https://www.youtube.com/watch?v=z4DNlVlOfjU&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
+- [Testing React with Kent C. Dodds and Jack Franklin](https://youtu.be/z4DNlVlOfjU&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
   [tech chat](https://github.com/kentcdodds/ama/issues/125) with myself and
   [Jack Franklin](https://twitter.com/jack_franklin) talking about testing
   React. We cover a lot of subjects that you may find interesting!

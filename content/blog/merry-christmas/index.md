@@ -63,8 +63,7 @@ There are some people who look forward to it every year now.
 This month, my Church commemorated the Savior's birth with an initiative they
 call [#LightTheWorld](https://www.mormon.org/christmas/25-ways-25-days) ✨ in 25
 ways, in 25 days. Following along with it has brought my family more cheer this
-holiday season. Check out 👉
-[the intro video](https://www.youtube.com/watch?v=P_VRN7hcL_8) and
+holiday season. Check out 👉 [the intro video](https://youtu.be/P_VRN7hcL_8) and
 [the videos for each of the 25 days](https://www.mormon.org/christmas/25-ways-25-days)
 👈 It'll warm your heart and hopefully inspire you too.
 

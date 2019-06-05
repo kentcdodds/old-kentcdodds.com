@@ -26,7 +26,7 @@ Current Available Translations:
 
 I've given this blog post as a talk which you can watch here:
 
-https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 [Socket.io](https://socket.io/) and founder of [Zeit.co](https://zeit.co/) (the
@@ -85,7 +85,7 @@ to get 100% code coverage on anyway.
 
 There are all sorts of different types of testing (check out my 5 minute talk
 about it at Fluent Conf:
-["What we can learn about testing from the wheel"](https://www.youtube.com/watch?v=Da9wfQ0frGA&feature=youtu.be&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
+["What we can learn about testing from the wheel"](https://youtu.be/Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
 They each have trade-offs. The three most common forms of testing we're talking
 about when we talk of automated testing are: Unit, Integration, and End to End.
 

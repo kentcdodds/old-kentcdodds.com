@@ -19,10 +19,9 @@ engineers at a local company. They saw my
 and want to dive deeper into the Render Props pattern. (If you're unfamiliar
 with the Render Props pattern, I suggest you stop reading now and read
 ["Use a Render Prop"](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)
-or watch
-["Never Write Another HoC"](https://www.youtube.com/watch?v=BcVAq3YFiuc) (both
-by the illustrious [Michael Jackson](https://twitter.com/mjackson)), then come
-back and continue).
+or watch ["Never Write Another HoC"](https://youtu.be/BcVAq3YFiuc) (both by the
+illustrious [Michael Jackson](https://twitter.com/mjackson)), then come back and
+continue).
 
 In preparing for this training (in addition to
 [creating this](https://codesandbox.io/s/k2krnxml7r)),

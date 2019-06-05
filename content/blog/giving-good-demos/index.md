@@ -122,7 +122,7 @@ like this. Good luck!
   🎉
 - [`xstate`](https://www.npmjs.com/package/xstate) by
   [David K. Piano](https://twitter.com/DavidKPiano) (See
-  [the React Rally talk](https://www.youtube.com/watch?v=VU1NKX6Qkxc)). Also see
+  [the React Rally talk](https://youtu.be/VU1NKX6Qkxc)). Also see
   [this video](https://youtu.be/MkdV2-U16tc) from
   [Ryan Florence](https://twitter.com/ryanflorence) which helped solidify the
   awesomeness of xstate for me.

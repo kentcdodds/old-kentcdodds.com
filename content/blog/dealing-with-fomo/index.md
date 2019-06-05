@@ -94,7 +94,7 @@ of ourselves and find more happiness in life :) Good luck!
   is the [egghead.io](http://egghead.io/) version of my course material
   completely updated for the latest in React with **NEW PATTERNS** (like
   [the state reducer prop pattern](/blog/the-state-reducer-pattern)). Enjoy!
-- [Drive with Kent — Tech phone call recording](https://www.youtube.com/watch?v=vVlcq3e1ooI) — In
+- [Drive with Kent — Tech phone call recording](https://youtu.be/vVlcq3e1ooI) — In
   case you missed it,
   [I took a 6 hour drive](https://github.com/kentcdodds/ama/issues/405) and had
   a phone conversation with people about React, Testing, CSS-in-JS, and more.
@@ -102,6 +102,6 @@ of ourselves and find more happiness in life :) Good luck!
 - [reach-router](https://reach.tech/router) — Not a typo, this is a new router
   from [Ryan Florence](https://twitter.com/ryanflorence) (creator of
   react-router and many others). It's pretty neat and has great docs. I did
-  [a devtip](https://www.youtube.com/watch?v=J1vsBrSUptA&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+  [a devtip](https://youtu.be/J1vsBrSUptA&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
   with it the other day.
 - [react-testing-library & Jest](http://www.richardkotze.com/coding/react-testing-library-jest)

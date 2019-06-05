@@ -27,9 +27,9 @@ Semicolons in JavaScript has got to be one of the worst
 topics of all time (right after spaces vs. tabs... 2 spaces please).
 [Here](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
 [are](http://inimino.org/~inimino/blog/javascript_semicolons)
-[three](https://www.youtube.com/watch?v=gsfbh17Ax9I) resources on the subject of
-why semicolons are not necessary. Here's some criteria that need to be in place
-before I will sanction omitting semicolons in a project.
+[three](https://youtu.be/gsfbh17Ax9I) resources on the subject of why semicolons
+are not necessary. Here's some criteria that need to be in place before I will
+sanction omitting semicolons in a project.
 
 ## Transpilation and/or Uglification
 
