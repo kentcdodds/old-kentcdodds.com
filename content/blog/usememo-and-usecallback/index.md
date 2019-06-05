@@ -368,7 +368,7 @@ React is VERY fast and there are so many things I can think of for you to do
 with your time that would be better than optimizing things like this. In fact,
 the need to optimize stuff with what I'm about to show you is so rare that I've
 literally _never_ needed to do it in the 3 years I worked on PayPal products and
-the even longer I've been working with React.
+the even longer time that I've been working with React.
 
 However, there are situations when rendering can take a substantial amount of
 time (think highly interactive Graphs/Charts/Animations/etc.). Thanks to the
