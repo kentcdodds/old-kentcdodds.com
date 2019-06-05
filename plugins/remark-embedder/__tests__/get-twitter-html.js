@@ -23,11 +23,6 @@ cases(
     expect(shouldTransform(url)).toBe(valid)
   },
   {
-    nothing: {url: 'nothing', valid: false},
-    'not a url but with twitter in it': {
-      url: 'not a twitter url',
-      valid: false,
-    },
     'url with twitter': {url: 'https://not-a-twitter-url.com', valid: false},
     'not a status': {
       url: 'https://twitter.com/mentions',

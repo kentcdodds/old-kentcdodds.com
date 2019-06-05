@@ -1,26 +1,8 @@
 const {URL} = require('url')
 
 function shouldTransform(string) {
-  return getUrl(string) !== null
-}
-
-function getUrl(string) {
-  if (!string.includes('youtu')) {
-    return null
-  }
-  if (!string.startsWith('http')) {
-    string = `https://${string}`
-  }
-  let url
-  try {
-    url = new URL(string)
-  } catch (error) {
-    return null
-  }
-  if (!url.host.endsWith('youtube.com') && !url.host.endsWith('youtu.be')) {
-    return null
-  }
-  return url
+  const {host} = new URL(string)
+  return host.endsWith('youtube.com') || host.endsWith('youtu.be')
 }
 
 function getYouTubeHTML(string) {
@@ -29,7 +11,7 @@ function getYouTubeHTML(string) {
 }
 
 function getYouTubeIFrameSrc(string) {
-  const url = getUrl(string)
+  const url = new URL(string)
   let id = url.searchParams.get('v')
   if (url.host === 'youtu.be') {
     id = url.pathname.slice(1)

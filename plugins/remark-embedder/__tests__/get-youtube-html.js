@@ -11,11 +11,6 @@ cases(
     expect(shouldTransform(url)).toBe(valid)
   },
   {
-    nothing: {url: 'nothing', valid: false},
-    'not a url but with youtube in it': {
-      url: 'not a youtube url',
-      valid: false,
-    },
     'url with youtube': {url: 'https://not-a-youtube-url.com', valid: false},
     'short url': {
       url: 'https://youtu.be/dQw4w9WgXcQ',
@@ -38,12 +33,8 @@ cases(
       url: 'http://youtu.be/dQw4w9WgXcQ',
       iframe: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0',
     },
-    'no protocol': {
-      url: 'youtu.be/dQw4w9WgXcQ',
-      iframe: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0',
-    },
     'with list and time params': {
-      url: 'youtu.be/dQw4w9WgXcQ?list=123&t=23',
+      url: 'https://youtu.be/dQw4w9WgXcQ?list=123&t=23',
       iframe:
         'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&list=123&start=23',
     },
@@ -62,7 +53,7 @@ cases(
         'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&start=123',
     },
     'time with seconds': {
-      url: 'youtu.be/dQw4w9WgXcQ?t=23s',
+      url: 'https://youtu.be/dQw4w9WgXcQ?t=23s',
       iframe:
         'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&start=23',
     },
