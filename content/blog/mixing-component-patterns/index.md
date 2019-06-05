@@ -149,29 +149,3 @@ other patterns can be implemented on top of this one and it's the simplest from
 a consumer's point of view.
 
 Enjoy [the codesandbox](https://codesandbox.io/s/534rnk5yyx). And good luck!
-
-<figcaption>
-  Subscribe now for more content like this directly in your inbox 2 weeks before it's published.
-</figcaption>
-
-**Learn more about React from me**:
-
-- [egghead.io (beginners)](http://kcd.im/beginner-react) — My Beginner's Guide
-  to React absolutely _free_ on [egghead.io](http://egghead.io).
-- [egghead.io (advanced)](http://kcd.im/advanced-react) — My Advanced React
-  Component Patterns course!
-- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns) — My
-  Advanced React Component Patterns course.
-- [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Portland in July!
-- [Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) — I'm giving my
-  Intro to React workshop in person in Salt Lake City in August!
-- [Workshop.me](https://workshop.me/2018-08-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Salt Lake City in August!
-
-**Things to not miss**:
-
-- [Tomorrow's ES Modules Today!](https://medium.com/web-on-the-edge/tomorrows-es-modules-today-c53d29ac448c)
-  by [John-David Dalton](https://twitter.com/jdalton/status/979052310843174913).
-  Very awesome work on the [`esm`](https://www.npmjs.com/package/esm) project to
-  make ESModules "just work" in Node!
