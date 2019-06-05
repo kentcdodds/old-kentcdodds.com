@@ -18,9 +18,9 @@ bannerCredit: >-
 I get really excited about new tech I find interesting. When I first "got" the
 testing framework [AVA](https://github.com/avajs/ava), I was soooo excited. I
 was on the rooftops of twitter telling people to give AVA a shot. I created
-[two](https://www.youtube.com/watch?v=FgjxXntElEY)
-[screencasts](https://www.youtube.com/watch?v=jfWK8LMD8mw) about how to set up
-and use AVA, and a full blown workshop on how to test React with AVA:
+[two](https://youtu.be/FgjxXntElEY) [screencasts](https://youtu.be/jfWK8LMD8mw)
+about how to set up and use AVA, and a full blown workshop on how to test React
+with AVA:
 
 https://twitter.com/kentcdodds/status/699636857928179712
 
@@ -79,14 +79,14 @@ was to move all our stuff to Mocha. But then I got involved in this thread:
 https://twitter.com/dan_abramov/status/760255553272705025
 
 Which led to
-[this comment](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-236980910)
-from [Trevor D. Miller](https://medium.com/u/54fb48eb2fbc) which I
-[responded to](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-236985503)
+[this comment](https://github.com/facebook/create-react-app/pull/250#issuecomment-236980910)
+from [Trevor D. Miller](https://twitter.com/trevordmiller) which I
+[responded to](https://github.com/facebook/create-react-app/pull/250#issuecomment-236985503)
 (in which I mention that I'd write this very blog post about me migrating from
 AVA to Mocha... I'd already started migrating my React Testing workshop to Mocha
 [here](https://github.com/kentcdodds/react-mocha-workshop). Hah). Then
-[Christoph Pojer](https://medium.com/u/9ea60eb6fc7c) responded with
-[this great comment](https://github.com/facebookincubator/create-react-app/pull/250#issuecomment-237098619).
+[Christoph Pojer](https://twitter.com/cpojer) responded with
+[this great comment](https://github.com/facebook/create-react-app/pull/250#issuecomment-237098619).
 That pretty much won my curiosity back and I decided to give it another go on a
 project.
 
@@ -103,7 +103,7 @@ https://twitter.com/kentcdodds/status/771455054947549184
 
 I was impressed at how fast it was and even more how easy it was to set up.
 Especially since I'd tried Jest before and it was soooo slow. And I was really
-encouraged by this tweet from [Mike Nikles](https://medium.com/u/3fc97a933ab0):
+encouraged by this tweet from [Mike Nikles](https://twitter.com/mikenikles):
 
 https://twitter.com/mikenikles/status/772234132436885504
 
@@ -120,8 +120,8 @@ As is the case for me, when I get excited about new tech, I really like to
 share! So I created [a bunch of videos](http://kcd.im/egghead-jest) for
 egghead.io about it, had a
 [tech chat](https://github.com/kentcdodds/ama/issues/125) with
-[Christoph Pojer](https://medium.com/u/9ea60eb6fc7c)
-[on YouTube](https://www.youtube.com/watch?v=i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
+[Christoph Pojer](https://twitter.com/cpojer)
+[on YouTube](https://youtu.be/i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
 about Jest, and rewrote my React Testing Workshop **again** in
 [Jest](https://github.com/kentcdodds/react-jest-workshop).
 
@@ -129,10 +129,10 @@ about Jest, and rewrote my React Testing Workshop **again** in
 
 #### Client Side
 
-My coworker [Jamund Ferguson](https://medium.com/u/c33d3263a7b4) did most of the
-work for migrating our React tests from AVA. We were really helped by
+My coworker [Jamund Ferguson](https://twitter.com/xjamundx) did most of the work
+for migrating our React tests from AVA. We were really helped by
 [this codemod](https://github.com/skovhus/jest-codemods) by
-[Kenneth Skovhus](https://medium.com/u/d6d792aa496a). This saved us a ton of
+[Kenneth Skovhus](https://twitter.com/kenneth_skovhus). This saved us a ton of
 time manually updating our tests to work with Jest.
 
 There were still some places we had to work through and we definitely had to

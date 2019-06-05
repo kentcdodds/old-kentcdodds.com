@@ -24,7 +24,7 @@ jQuery. So for the most part, your tests shouldn't care about that either. 💯
 Unfortunately, many tools out there encourage testing implementation details. Do
 that and you'll often wind up rewriting tests. "Why am I even testing this!?"
 you'll ask yourself, and I don't blame you. That's why on
-[TestingJavaScript.com](https://testingjavascript.com/) I show you how test the
+[TestingJavaScript.com](https://testingjavascript.com) I show you how test the
 _right_ way.
 
 ### Myth 2: "I can't test a 'connected' redux component"
@@ -41,9 +41,9 @@ store. Do this, and you'll get the confidence that your component is rendering
 properly, _and_ that the Redux action creators and reducers are all working
 together in tandem. Just like they will in production. ✅
 
-On [TestingJavaScript.com](https://testingjavascript.com/), I show you how to
+On [TestingJavaScript.com](https://testingjavascript.com), I show you how to
 test in this way. The same concepts apply for React Router 🔀 and other
-providers (like the Theme Provider from [emotion](https://emotion.sh/) 👩‍🎤), and
+providers (like the Theme Provider from [emotion](https://emotion.sh) 👩‍🎤), and
 the course will show how to apply this method to those, too!
 
 ### Myth 3: "End-to-End tests are slow and brittle"
@@ -55,7 +55,7 @@ is needed for the test. When you do stuff like this, you start seeing a lot of
 duplication, and that's when you start creating things like "page objects"
 (which is a poor practice). 😐
 
-On [TestingJavaScript.com](https://testingjavascript.com/), I show you how you
+On [TestingJavaScript.com](https://testingjavascript.com), I show you how you
 can get confidence that the registration and login flows are working, and then
 skip those for the rest of your tests so you can significantly speed up the
 tests and reduce the points of failure. When you write tests this way and use

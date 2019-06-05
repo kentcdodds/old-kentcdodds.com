@@ -9,7 +9,7 @@ keywords:
   - javascript
   - ES6
 banner: ./images/banner.jpg
-bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy/)'
+bannerCredit: '[ImageGenerator.net](http://www.imagegenerator.net/create/clippy)'
 ---
 
 ## Update:
@@ -27,22 +27,22 @@ Semicolons in JavaScript has got to be one of the worst
 topics of all time (right after spaces vs. tabs... 2 spaces please).
 [Here](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
 [are](http://inimino.org/~inimino/blog/javascript_semicolons)
-[three](https://www.youtube.com/watch?v=gsfbh17Ax9I) resources on the subject of
-why semicolons are not necessary. Here's some criteria that need to be in place
-before I will sanction omitting semicolons in a project.
+[three](https://youtu.be/gsfbh17Ax9I) resources on the subject of why semicolons
+are not necessary. Here's some criteria that need to be in place before I will
+sanction omitting semicolons in a project.
 
 ## Transpilation and/or Uglification
 
 The first thing that you need to know is something called Automatic Semicolon
 Insertion (ASI). It's the "feature" that allows us to even have this
 conversation. Read up on that if you're not familiar. Like
-[Kyle's](https://medium.com/u/5dccb9bb4625)
-([post](http://blog.getify.com/not-all-semicolons/)), I agree that you **should
+[Kyle's](https://twitter.com/getify)
+([post](http://blog.getify.com/not-all-semicolons)), I agree that you **should
 not** rely on ASI. It's a really bad idea for many reasons.
 
 The problems with relying on ASI go away when you transpile or minify your code
 (depending on your technology). For example, transpiling with
-[Babel](http://babeljs.io/) will add the semicolons back and uglifying with
+[Babel](http://babeljs.io) will add the semicolons back and uglifying with
 [UglifyJS2](https://github.com/mishoo/UglifyJS2) will too.
 
 So for me to say you're good to go on omitting semicolons in your source code,
@@ -80,7 +80,7 @@ think that you need semicolons).
 
 ## Why should you use semicolons?
 
-I should note that [Kyle](https://medium.com/@getify)’s post (linked earlier) is
+I should note that [Kyle](https://twitter.com/getify)’s post (linked earlier) is
 not arguing only about ASI but he’s also arguing his reasoning for his own
 preference (using semicolons). I recommend you give that a read as well.
 

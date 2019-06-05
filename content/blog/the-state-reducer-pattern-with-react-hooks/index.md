@@ -32,7 +32,7 @@ internally.
 
 Downshift is currently implemented as a render prop component, because at the
 time, render props was the best way to make a
-["Headless UI Component"](https://www.merrickchristensen.com/articles/headless-user-interface-components/)
+["Headless UI Component"](https://www.merrickchristensen.com/articles/headless-user-interface-components)
 (typically implemented via a "render prop" API) which made it possible for you
 to share logic without being opinionated about the UI. This is the major reason
 that downshift is so successful.
@@ -50,7 +50,7 @@ which is basically a mechanism for the author of the API to allow the user of
 the API to control how things work internally. For an example-based talk about
 this, I strongly recommend you give my React Rally 2018 talk a watch:
 
-https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 So in the downshift example, I had made the decision that when an end user
 selects an item, the `isOpen` should be set to `false` (and the menu should be

@@ -22,14 +22,14 @@ them interesting:
 - Adam (2):
   [Hand woven beanie](https://twitter.com/kentcdodds/status/944812510821023744),
   [GitHub Activity Book](https://github.myshopify.com/products/github-activity-book)
-- Nathan (4): [Typing For Kids](https://typing-for-kids.netlify.com/)
+- Nathan (4): [Typing For Kids](https://typing-for-kids.netlify.com)
   ([repo](https://github.com/kentcdodds/typing-for-kids)),
   [GitHub Activity Book](https://github.myshopify.com/products/github-activity-book)
-- Becca (5): [Typing For Kids](https://typing-for-kids.netlify.com/)
+- Becca (5): [Typing For Kids](https://typing-for-kids.netlify.com)
   ([repo](https://github.com/kentcdodds/typing-for-kids)),
   [GitHub Activity Book](https://github.myshopify.com/products/github-activity-book)
 
-And for my wife, I made [Repeat Todo](https://repeat-todo.com/)
+And for my wife, I made [Repeat Todo](https://repeat-todo.com)
 ([repo](https://github.com/kentcdodds/repeat-todo-v2)). A while back I made her
 [this version](https://stackedit.io/repeat-todo.surge.sh), but the fact that it
 used only local storage for persistence presented a few problems when wanting to
@@ -42,8 +42,8 @@ reality:
 ![Invitation to neighborhood nativity night](./images/0.png)
 
 I'm a member of
-[The Church of Jesus Christ of Latter-Day Saints](https://lds.org/) (aka
-[Mormons](https://mormon.org/)). We celebrate Christmas to commemorate the birth
+[The Church of Jesus Christ of Latter-Day Saints](https://lds.org) (aka
+[Mormons](https://mormon.org)). We celebrate Christmas to commemorate the birth
 of our Savior Jesus Christ.
 
 A few weeks ago, my wife had the idea to have a Nativity display in our backyard
@@ -63,8 +63,7 @@ There are some people who look forward to it every year now.
 This month, my Church commemorated the Savior's birth with an initiative they
 call [#LightTheWorld](https://www.mormon.org/christmas/25-ways-25-days) ✨ in 25
 ways, in 25 days. Following along with it has brought my family more cheer this
-holiday season. Check out 👉
-[the intro video](https://www.youtube.com/watch?v=P_VRN7hcL_8) and
+holiday season. Check out 👉 [the intro video](https://youtu.be/P_VRN7hcL_8) and
 [the videos for each of the 25 days](https://www.mormon.org/christmas/25-ways-25-days)
 👈 It'll warm your heart and hopefully inspire you too.
 
@@ -78,4 +77,4 @@ bring you and those around you more joy.
 Merry Christmas 🎅🎄🎁
 
 I'll see you all next week with another newsletter/blog post about JavaScript
-(keep an eye on [JavaScript January](https://www.javascriptjanuary.com/)).
+(keep an eye on [JavaScript January](https://www.javascriptjanuary.com)).

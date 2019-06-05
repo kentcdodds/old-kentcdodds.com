@@ -32,11 +32,11 @@ files.”
 You might be tempted to commit built files to source for a few reasons:
 
 1.  Bower needs them there
-    ([stop using bower](http://gofore.com/ohjelmistokehitys/stop-using-bower/))
+    ([stop using bower](http://gofore.com/ohjelmistokehitys/stop-using-bower))
 2.  Makes it easier for people just downloading the files (not using npm or
     bower)
-3.  Enables use of [rawgit](http://rawgit.com/) for examples in tools like
-    [jsbin](http://jsbin.com/) or [plunker](http://plnkr.co/)
+3.  Enables use of [rawgit](http://rawgit.com) for examples in tools like
+    [jsbin](http://jsbin.com) or [plunker](http://plnkr.co)
 
 For a long time, these are the reasons that I committed my generated files for
 my libraries to my git repository. Everything worked out great! But I did have a
@@ -108,7 +108,7 @@ Basically, you run your build, then run publish-latest which runs
 will commit your built files and push them to your latest branch automatically.
 You can totally do this locally, but it actually works best when done with
 [semantic-release](https://github.com/semantic-release/semantic-release) and
-[TravisCI](https://travis-ci.org/) (or some other CI service).
+[TravisCI](https://travis-ci.org) (or some other CI service).
 
 #### How do we still get the benefits?
 

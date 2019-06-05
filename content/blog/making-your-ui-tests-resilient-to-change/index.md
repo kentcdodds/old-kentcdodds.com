@@ -201,7 +201,7 @@ I hope this is helpful to you. Good luck! Enjoy :)
 - [React, Inline Functions, and Performance](https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578) — a
   blog post from my friend [Ryan Florence](https://twitter.com/ryanflorence)
   about something I think is really important to remember.
-- [Testing JavaScript Applications](https://frontendmasters.com/courses/testing-javascript/) — my
+- [Testing JavaScript Applications](https://frontendmasters.com/courses/testing-javascript) — my
   testing workshop on Frontend Masters.
   ([Resources and practice run here](/workshops/#testing-javascript-applications)).
 - [How Node.js require() works](https://twitter.com/NTulswani/status/916961093280456705) — a

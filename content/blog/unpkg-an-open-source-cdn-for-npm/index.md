@@ -16,15 +16,15 @@ bannerCredit:
 
 A few years ago, [Michael Jackson](https://twitter.com/mjackson) had an idea. He
 needed an easy way to make demos for his open source projects (specifically
-[react-router](https://reacttraining.com/react-router/)) and realized that he
+[react-router](https://reacttraining.com/react-router)) and realized that he
 already hosts all his projects somewhere: npm! So he could just setup a little
 node server that would act as a proxy to the files that are on npm. And here we
 are, almost 9 BILLION downloads per month later.
 
-[unpkg](https://unpkg.com/) is an
+[unpkg](https://unpkg.com) is an
 [open source](https://github.com/unpkg/unpkg.com) fast, global
 [content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network)
-for everything on [npm](https://www.npmjs.com/). Use it to quickly and easily
+for everything on [npm](https://www.npmjs.com). Use it to quickly and easily
 load any file from any package using a URL like:
 
 ```
@@ -58,11 +58,11 @@ That's right, a version range works in there as well. Cool right?
 So why is this so cool? Whelp, we use CDNs (content delivery networks) because
 they allow static assets like images, JavaScript, and videos to be hosted
 physically close to end users as well as served with as fast as possible
-technology. unpkg is sponsored by [Heroku](https://www.heroku.com/) where it is
+technology. unpkg is sponsored by [Heroku](https://www.heroku.com) where it is
 hosted, but that server is only actually used 5% of the time. The real power of
 a tool like unpkg is the fact that the files hosted at those URLs can be very
 heavily cached (npm doesn't allow published packages to be changed). So unpkg is
-also sponsored by [Cloudflare](https://www.cloudflare.com/) which is an awesome
+also sponsored by [Cloudflare](https://www.cloudflare.com) which is an awesome
 CDN and serves 95% of unpkg's traffic from the cache, making unpkg extremely
 fast.
 
@@ -107,22 +107,22 @@ Can't wait to see those bundle sizes getting smaller! Good luck friends!
 P.S. One other thing that I really love about unpkg is the index page for a
 package. Simply add a `/` at the end of the URL and you'll see an index of the
 files as well as a version chooser which is pretty awesome:
-[`https://unpkg.com/d3/`](https://unpkg.com/d3/)
+[`https://unpkg.com/d3/`](https://unpkg.com/d3)
 
 **Learn more about JavaScript from me**:
 
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://www.youtube.com/watch?v=t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://www.youtube.com/watch?v=eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
 - [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 **Things to not miss**:
 
-- [gh-polls.com](https://gh-polls.com/) — "GH polls is a quick and effective way
+- [gh-polls.com](https://gh-polls.com) — "GH polls is a quick and effective way
   to request feedback from community members in GitHub issues." by
   [TJ Holowaychuk](https://twitter.com/tjholowaychuk).
-- [There](https://there.pm/) — A really neat app by
+- [There](https://there.pm) — A really neat app by
   [Mo Rajabifard](https://twitter.com/morajabi) that'll tell you what time it is
   for your friends and co-workers in a nice UI.
 - [wretch](https://github.com/elbywan/wretch) — "A tiny wrapper built around

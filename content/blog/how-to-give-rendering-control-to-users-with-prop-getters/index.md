@@ -224,15 +224,15 @@ use the `children` prop, but you could use a `render` prop if you prefer).
 
 Here are a few projects that implement the prop getters pattern:
 
-- `[downshift](https://github.com/downshift-js/downshift)`
+- [`downshift`](https://github.com/downshift-js/downshift)
   [🏎](https://github.com/downshift-js/downshift) - Primitive for building
   simple, flexible, WAI-ARIA compliant enhanced input React components
-- `[react-toggled](https://github.com/kentcdodds/react-toggled)` - Component to
+- [`react-toggled`](https://github.com/kentcdodds/react-toggled) - Component to
   build simple, flexible, and accessible toggle components
-- `[dub-step](https://github.com/infiniteluke/dub-step)`
+- [`dub-step`](https://github.com/infiniteluke/dub-step)
   [🕺](https://github.com/infiniteluke/dub-step) - Step through an index with
   style
-- `[react-stepper-primitive](https://github.com/ajoslin/react-stepper-primitive)` -
+- [`react-stepper-primitive`](https://github.com/ajoslin/react-stepper-primitive) -
   React primitives for a "stepper" component.
 
 I hope to see more folks doing stuff like this in the future! Good luck to you
@@ -240,15 +240,15 @@ all! 👍
 
 **Things to not miss:**
 
-- `[import-all.macro](https://github.com/kentcdodds/import-all.macro)` - A work
+- [`import-all.macro`](https://github.com/kentcdodds/import-all.macro) - A work
   in progress babel-macro that allows you to import all files that match a glob
-- `[react-powerplug](https://github.com/renatorib/react-powerplug)` - Pretty
+- [`react-powerplug`](https://github.com/renatorib/react-powerplug) - Pretty
   neat/interesting idea with the render prop pattern.
-- `[graphql-tag.macro](https://github.com/leoasis/graphql-tag.macro)` -
+- [`graphql-tag.macro`](https://github.com/leoasis/graphql-tag.macro) -
   Impressive babel-macro that precompiles graphql queries.
-- `[size-limit](https://github.com/ai/size-limit)` - Prevent JS libraries bloat.
+- [`size-limit`](https://github.com/ai/size-limit) - Prevent JS libraries bloat.
   If you accidentally add a massive dependency, Size Limit will throw an error.
 - [left-pad not found sticker](https://www.stickermule.com/marketplace/11354-left-pad) — See
   below. This was created by my friend
-  [Tyler McGinnis](https://medium.com/u/c52389e3ee63) (of Tyler McGinnis fame)
+  [Tyler McGinnis](https://twitter.com/tylermcginnis) (of Tyler McGinnis fame)
   and I think it’s pretty funny.

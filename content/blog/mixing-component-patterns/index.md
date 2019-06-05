@@ -18,14 +18,14 @@ _Let's make a component that supports Render Props, Component Injection,
 Compound Components, the Provider Pattern, and Higher Order Components!_
 
 This last week I gave three workshops at
-[Frontend Masters](https://frontendmasters.com/):
+[Frontend Masters](https://frontendmasters.com):
 
 - ⚛️ 💯
-  [Advanced React Patterns](https://frontendmasters.com/workshops/advanced-react-patterns/)
+  [Advanced React Patterns](https://frontendmasters.com/workshops/advanced-react-patterns)
 - 📚 ⚠️
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/)
+  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
 - ⚛️ ⚠️
-  [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps/)
+  [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps)
 
 If you're a Frontend Masters subscriber you can watch the unedited version of
 these courses now. Edited courses should be available for these soon.
@@ -157,10 +157,10 @@ Enjoy [the codesandbox](https://codesandbox.io/s/534rnk5yyx). And good luck!
 **Learn more about React from me**:
 
 - [egghead.io (beginners)](http://kcd.im/beginner-react) — My Beginner's Guide
-  to React absolutely _free_ on [egghead.io](http://egghead.io/).
+  to React absolutely _free_ on [egghead.io](http://egghead.io).
 - [egghead.io (advanced)](http://kcd.im/advanced-react) — My Advanced React
   Component Patterns course!
-- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/) — My
+- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns) — My
   Advanced React Component Patterns course.
 - [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
   my Advanced Component Patterns workshop in person in Portland in July!

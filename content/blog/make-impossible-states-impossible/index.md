@@ -15,12 +15,11 @@ bannerCredit:
 
 This is a phrase I first heard from
 [David Khourshid](https://twitter.com/DavidKPiano) in his talk at React Rally
-2017
-[Infinitely Better UIs with Finite Automata](https://www.youtube.com/watch?v=VU1NKX6Qkxc):
+2017 [Infinitely Better UIs with Finite Automata](https://youtu.be/VU1NKX6Qkxc):
 "Make impossible states impossible" (super great talk by the way, and
 [xstate](https://github.com/davidkpiano/xstate) is awesome, and David is too).
 Googling around it looks like it's a pretty popular phrase in the
-[Elm](http://elm-lang.org/) community, though I'm not sure who said it first.
+[Elm](http://elm-lang.org) community, though I'm not sure who said it first.
 
 To illustrate what this means, let's checkout at
 [a very simple example](https://codesandbox.io/s/j71ljpvvww):
@@ -79,14 +78,14 @@ There are various ways to do this effectively and converting a boolean value to
 mechanism. It can and does get more complicated, but the concept can seriously
 simplify your component's and application's state. This is why I recommend you
 give [David's](https://twitter.com/DavidKPiano) talk a watch
-([here it is again](https://www.youtube.com/watch?v=VU1NKX6Qkxc)). And give
+([here it is again](https://youtu.be/VU1NKX6Qkxc)). And give
 [xstate](https://github.com/davidkpiano/xstate) a solid look as well. There's
 some good ideas in that! Good luck!
 
 P.S. After publishing this, several people noted that this phrase was the title
-of [a talk](https://www.youtube.com/watch?v=IcgmSRJHu_8) from
+of [a talk](https://youtu.be/IcgmSRJHu_8) from
 [Richard Feldman](https://twitter.com/rtfeldman) at Elm Conf. There's also
-[a talk](https://www.youtube.com/watch?v=P7dTPoxCg4w) by
+[a talk](https://youtu.be/P7dTPoxCg4w) by
 [Patrick Stapfer](https://twitter.com/ryyppy) from ReasonML Munich Meetup. You
 may also be interested to check out
 [a similar blog post](https://github.com/stereobooster/pragmatic-types/blob/master/posts/making-impossible-states-impossible.md)
@@ -100,7 +99,7 @@ https://twitter.com/yminsky/status/1034947939364425731
 
 - [The Beginner's Guide to React](http://kcd.im/beginner-react)
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — **A
   30 talk on egghead** (30 minutes... weird right?!) about testing React
   components.
@@ -110,14 +109,14 @@ https://twitter.com/yminsky/status/1034947939364425731
 - [Babel 7 Released](http://babeljs.io/blog/2018/08/27/7.0.0) — Congratulations
   to the Babel team for releasing Babel 7! I wrote the portion on
   `babel-plugin-macros`!
-- [Simply React](https://www.youtube.com/watch?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&v=AiJ8tRRH0f8):
+- [Simply React](https://youtube.com/watch?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&v=AiJ8tRRH0f8):
   In my ReactRally talk ⚛️I tell a familiar story about an component that you
   can probably relate to. Then I explain how it could have gone better. I think
   you'll enjoy this!
 - [`fastpack`](https://github.com/fastpack/fastpack) - a JavaScript bundler
   (like webpack, but with fewer features at the moment) that is BLAZING FAST
   🔥🔥🔥🔥 (bundles 1000 modules in < 1 second!)
-- [Byteconf React](https://byteconf.com/) — Byteconf React is a 100% free
+- [Byteconf React](https://byteconf.com) — Byteconf React is a 100% free
   conference with the best JavaScript and React speakers in the world.
   Conferences are great, but flights, hotels, and tickets are expensive, so not
   everyone can go. Byteconf is streamed on Twitch, for free, so anyone and

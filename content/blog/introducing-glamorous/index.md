@@ -170,7 +170,7 @@ const MyBouncyDiv = glamorous.div({
 **theming**
 
 With the new `ThemeProvider` (recently added by
-[Alessandro Arnodo](https://medium.com/u/4f41b6fff014)), glamorous also supports
+[Alessandro Arnodo](https://twitter.com/vesparny)), glamorous also supports
 theming:
 
 ```jsx
@@ -231,7 +231,7 @@ function App() {
   return (
     <Div textAlign="center" color="red">
       <A
-        href="[https://brave.com/](https://brave.com/)"
+        href="[https://brave.com/](https://brave.com)"
         textDecoration="none"
         color="darkorange"
         textShadow="1px 1px 2px orange"
@@ -253,7 +253,7 @@ It’s trivially supported by glamorous:
 
 ```jsx
 // Example inspired by
-// [http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12/)
+// [http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12)
 const MyGrid = glamorous.div({
   margin: 'auto',
   backgroundColor: '#fff',
@@ -304,7 +304,7 @@ And [you get](https://codesandbox.io/s/2k8yll8qj):
 ![](./images/0.png)
 
 Example inspired by
-[http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12/)
+[http://gridbyexample.com/examples/example12/](http://gridbyexample.com/examples/example12)
 
 I hope you enjoy [glamorous](https://github.com/paypal/glamorous) 💄
 [🌟](https://github.com/paypal/glamorous/stargazers)

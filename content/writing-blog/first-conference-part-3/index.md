@@ -27,8 +27,8 @@ https://twitter.com/kent_writes/status/1096440304041775104
 So far I've been introduced to the following outlining strategies in some amount
 of depth:
 
-- [StoryGrid](https://storygrid.com/) - (My personal favorite. There's also
-  [a great podcast I highly recommend](https://storygrid.simplecast.fm/)).
+- [StoryGrid](https://storygrid.com) - (My personal favorite. There's also
+  [a great podcast I highly recommend](https://storygrid.simplecast.fm)).
 - Snowflake (Cloud) Method
 - Hollywood
 - Scene and Sequal
@@ -103,8 +103,8 @@ _Bree Moore, Marlena Money_
 
 https://twitter.com/kent_writes/status/1096486497971101696
 
-The [writingthroughbrambles.com](http://www.writingthroughbrambles.com/) group
-of authors spoke about their experience in a writing group. I appreciated their
+The [writingthroughbrambles.com](http://www.writingthroughbrambles.com) group of
+authors spoke about their experience in a writing group. I appreciated their
 insights mostly as reminders of how to be an effective team member of teams in
 general. That said, there were some insights that were useful specifically for
 writing groups:

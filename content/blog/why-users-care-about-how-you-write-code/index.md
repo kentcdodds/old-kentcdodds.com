@@ -12,7 +12,7 @@ keywords:
 banner: ./images/banner.jpg
 ---
 
-Back in October of 2011 [Ryan Dahl](http://tinyclouds.org/) wrote a blogpost
+Back in October of 2011 [Ryan Dahl](http://tinyclouds.org) wrote a blogpost
 entitled "[I hate almost all software](http://tinyclouds.org/rant.html)" in
 which he asserts:
 
@@ -85,5 +85,5 @@ application is written, built, and deployed can make a big difference.
 ---
 
 Big thanks to the people who helped review and edit this post, especially
-[Kyle Robinson](https://medium.com/@ksr583) for basically being the article’s
+[Kyle Robinson](https://twitter.com/ksr583) for basically being the article’s
 editor.

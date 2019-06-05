@@ -63,7 +63,7 @@ to get your tests closer to using your components the way a user will, which
 allows your tests to give you more confidence that your application will work
 when a real user uses it.
 
-This library is a replacement for [enzyme](http://airbnb.io/enzyme/). While you
+This library is a replacement for [enzyme](http://airbnb.io/enzyme). While you
 _can_ follow these guidelines using enzyme itself, enforcing this is harder
 because of all the extra utilities that enzyme provides (utilities which
 facilitate testing implementation details). Read more about this in
@@ -169,10 +169,10 @@ Originally, the library only provided `queryByTestId` as a utility as suggested
 in my blog post
 "[Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)".
 But thanks to feedback on that blog post from
-[Bergé Greg](https://medium.com/u/2210cd491fe0) as well as inspiration from
-[a fantastic (and short!) talk](https://www.youtube.com/watch?v=qfnkDyHVJzs&feature=youtu.be&t=5h39m19s)
-by [Jamie White](https://medium.com/u/76c97151e2a6), I added several more and
-now I'm even happier with this solution.
+[Bergé Greg](https://twitter.com/neoziro) as well as inspiration from
+[a fantastic (and short!) talk](https://youtu.be/qfnkDyHVJzs&t=5h39m19s) by
+[Jamie White](https://twitter.com/jgwhite), I added several more and now I'm
+even happier with this solution.
 
 You can read more about the library and its APIs in
 [the official docs](https://github.com/testing-library/react-testing-library).
@@ -194,7 +194,7 @@ Here's a high-level overview of what this library gives you:
   but even if you're dealing with immediately resolved promises, you'll need
   your tests to wait for the next tick of the event loop and `wait` is really
   good for that. (Big shout out to
-  [Łukasz Gozda Gandecki](https://medium.com/u/66ce121c68eb) who
+  [Łukasz Gozda Gandecki](https://twitter.com/lgandecki) who
   [introduced this](https://github.com/testing-library/react-testing-library/issues/21)
   as a replacement for the (now deprecated)`flushPromises` API).
 - [`render`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#render):
@@ -259,19 +259,19 @@ React testbases are easier to understand and maintain.
 
 **Learn more about Testing from me**:
 
-[Frontend Masters](https://frontendmasters.com/) in Minneapolis (and online)
-this month!:
+[Frontend Masters](https://frontendmasters.com) in Minneapolis (and online) this
+month!:
 
-- [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/)
-- [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps/)
+- [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
+- [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps)
 
 **Things to not miss**:
 
 - I am now on Patreon! Support these newsletters and other things I do!
   [patreon.com/kentcdodds](https://www.patreon.com/kentcdodds)
-- [React Dev Summit](https://reactdevsummit.com/): Coupon code "KENT" gets 10%
+- [React Dev Summit](https://reactdevsummit.com): Coupon code "KENT" gets 10%
   off the ticket price
-- [polyfill.io](https://polyfill.io/): It's more than just an amazing service,
+- [polyfill.io](https://polyfill.io): It's more than just an amazing service,
   it's a node module that you can use yourself. This last week I did exactly
   that and it's amazing. I'll probably write about it eventually.
 - Oh, by the way, I was originally going to call this library:

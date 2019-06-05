@@ -85,7 +85,7 @@ autopilot mode for a few minutes while I repeat a task I’ve done a million
 times. Unfortunately, I need to stay conscious enough to account for the minor
 differences (like my directive name for example). This is called context
 switching and can come at a
-[huge cost](http://www.petrikainulainen.net/software-development/processes/the-cost-of-context-switching/).
+[huge cost](http://www.petrikainulainen.net/software-development/processes/the-cost-of-context-switching).
 
 By the time I finish setting up the skeleton stuff (something that could have
 been generated), I’ve forgotten exactly what I originally set out to do and need
@@ -121,11 +121,11 @@ blog post).
 
 However, if you automate something that’s general enough to be used by more
 developers, you could open source your solution and tons of developers can use
-it. This is something that [Stephan Bönnemann](https://medium.com/@boennemann)
+it. This is something that [Stephan Bönnemann](https://twitter.com/boennemann)
 did with [semantic-release](http://npm.im/semantic-release), and I can’t tell
 you how much time that’s saved me; it’s amazing. _(As a side, another developer
 that’s shared a ton of his automation is
-[Gleb Bahmutov](https://medium.com/@bahmutov), who is one of my personal heros;
+[Gleb Bahmutov](https://twitter.com/bahmutov), who is one of my personal heros;
 check his tools out [on npm](https://www.npmjs.com/~bahmutov).)_
 
 ## Learning

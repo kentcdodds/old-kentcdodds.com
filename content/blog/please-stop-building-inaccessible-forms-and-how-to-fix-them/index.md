@@ -16,7 +16,7 @@ bannerCredit:
 ---
 
 > Note, today's blog post is very heavily inspired by the
-> [Labeling Controls tutorial](https://www.w3.org/WAI/tutorials/forms/labels/)
+> [Labeling Controls tutorial](https://www.w3.org/WAI/tutorials/forms/labels)
 > from [w3.org](https://www.w3.org).
 
 **HTML is accessible by default.** This is true, with the important caveat that

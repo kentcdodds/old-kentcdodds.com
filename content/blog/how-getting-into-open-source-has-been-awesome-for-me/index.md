@@ -12,7 +12,7 @@ bannerCredit: >-
   [http://www.addletters.com/bart-simpson-generator.htm](http://www.addletters.com/bart-simpson-generator.htm)
 ---
 
-_This blogpost is by request from_ [_HackingEDU_](http://hackingedu.co/)_, the
+_This blogpost is by request from_ [_HackingEDU_](http://hackingedu.co)_, the
 World's Largest Education Hackathon_ 👍
 
 My first contribution to open source was extremely small:
@@ -43,8 +43,8 @@ been so great for me.
 I have learned so many valuable skills from my time using and contributing to
 open source projects. Whether it's a pull request to another project or creating
 my own it's been an amazing learning experience. I've learned how
-[many](http://webpack.github.io/) [different](http://gruntjs.com/)
-[build](http://gulpjs.com/) [systems](https://www.gnu.org/software/make/)
+[many](http://webpack.github.io) [different](http://gruntjs.com)
+[build](http://gulpjs.com) [systems](https://www.gnu.org/software/make)
 [work](https://docs.npmjs.com/misc/scripts), different methods/styles of
 structuring [code](/blog/newspaper-code-structure) and
 [files](https://gist.github.com/ryanflorence/daafb1e3cb8ad740b346) to enhance
@@ -70,13 +70,13 @@ start paying attention and are interested in what you're working on and if you'd
 like to work on their problems full time.
 
 Some people you may have heard of who got their jobs this way:
-[Brian Ford](https://medium.com/u/ff7e13a174d1),
-[Dan Abramov](https://medium.com/u/a3a8af6addc1), and
-[Sebastian McKenzie](https://medium.com/u/d9e46e1c7539). But you don't have to
-make it big in open source to get noticed.
-[Matt Apperson](https://medium.com/u/30730227d26d),
-[Rahat Khanna](https://medium.com/u/198299c425c2), and
-[Bram Borggreve](https://medium.com/u/82bb7f157b7f) and
+[Brian Ford](https://twitter.com/briantford),
+[Dan Abramov](https://twitter.com/dan_abramov), and
+[Sebastian McKenzie](https://twitter.com/sebmck). But you don't have to make it
+big in open source to get noticed.
+[Matt Apperson](https://twitter.com/mattapperson),
+[Rahat Khanna](https://twitter.com/mappmechanic), and
+[Bram Borggreve](https://twitter.com/beeman_nl) and
 [others](https://twitter.com/kentcdodds/status/671565082858418180) each spent
 time making contributions to open source and have their jobs to thanks for it.
 Certainly getting a job was not _the_ reason these developers got into open
@@ -86,11 +86,11 @@ It's notable that when
 [I asked](https://twitter.com/kentcdodds/status/671565082858418180) people if
 they had gotten their job for open source contributions, several mentioned they
 got their job from other community contributions like blog posts
-([Vjeux](https://medium.com/u/46fa99d9bca4) and
-[johnlindquist](https://medium.com/u/42987ac344a8)) or speaking at conferences
-([Olivier Combe](https://medium.com/u/5ae4b2205cba)). While not code
-contributions, these are also valuable contributions to the open source
-community and I recommend you do this as well.
+([Vjeux](https://twitter.com/Vjeux) and
+[johnlindquist](https://twitter.com/johnlindquist)) or speaking at conferences
+([Olivier Combe](https://twitter.com/OCombe)). While not code contributions,
+these are also valuable contributions to the open source community and I
+recommend you do this as well.
 
 ## Friends
 
@@ -136,4 +136,4 @@ See you on [Twitter](https://twitter.com/kentcdodds) and
 - [24 Pull Requests](http://24pullrequests.com/contributing)
 - [How to Write an Open Source JavaScript Library - Course by @kentcdodds](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
 - [First Timers Only](https://medium.com/p/78281ea47455)
-- [GitHub for Developers](https://training.github.com/classes/developers/)
+- [GitHub for Developers](https://training.github.com/classes/developers)

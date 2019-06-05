@@ -71,9 +71,8 @@ to give a special shout out to these folks: [Giorgio](https://twitter.com/Gpx),
 Creating this open source software and the community of awesome people that has
 been built around it is probably one of my finest accomplishments of 2019. If
 you'd like to hear more about how this software came to be, you can watch
-[S05E12 Modern Web Podcast - Testing](https://www.youtube.com/watch?v=nw-GFMW8LSQ)
-or listen to
-[RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds/).
+[S05E12 Modern Web Podcast - Testing](https://youtu.be/nw-GFMW8LSQ) or listen to
+[RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds).
 
 ## [National Novel Writing Month](https://nanowrimo.org)
 
@@ -243,26 +242,26 @@ coherent than others, but altogether they represent a great resource for people
 to learn things from JavaScript to testing to React to Babel to more and more :)
 
 I also have a playlist called
-[Talks and workshops from Kent C. Dodds](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[Talks and workshops from Kent C. Dodds](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 with over 60 videos. More on this later.
 
 Altogether, this year I've really been pushing content onto YouTube and
 [hit over 10k subscribers](https://twitter.com/kentcdodds/status/1073589861054070784).
 My videos got over 260k views this year (I am of course excluding
-[my smiley face video](https://www.youtube.com/watch?v=t6q5_7fVjEg)
+[my smiley face video](https://youtu.be/t6q5_7fVjEg)
 [which was stolen](https://github.com/kentcdodds/ama/issues/290) and has 3.7
 million views now).
 
 ## Conferences
 
 I gave a lot of talks this year, you can find all the available recordings on
-[my YouTube playlist](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+[my YouTube playlist](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 I spoke at 7 conferences and several meetups. I was especially proud to deliver
-[my first keynote](https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[my first keynote](https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [Chain React](https://infinite.red/ChainReactConf) which was awesome.
 
 I gave
-[a similar talk](https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[a similar talk](https://youtu.be/AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [React Rally](https://www.reactrally.com) which is my favorite conference and
 has been a dream of mine since year one.
 
@@ -302,10 +301,10 @@ Here are some other interesting facts/accomplishments from 2018:
 - Back in April, I made a trip to Minneapolis to record workshops for
   [Frontend Masters](https://kcd.im/fem). We made three (almost four) courses
   out of that trip:
-  [Advanced React Patterns](https://frontendmasters.com/courses/advanced-react-patterns/),
-  [Testing React Applications, v2](https://frontendmasters.com/courses/testing-react/),
+  [Advanced React Patterns](https://frontendmasters.com/courses/advanced-react-patterns),
+  [Testing React Applications, v2](https://frontendmasters.com/courses/testing-react),
   and
-  [JavaScript Testing Practices and Principles](https://frontendmasters.com/courses/testing-practices-principles/).
+  [JavaScript Testing Practices and Principles](https://frontendmasters.com/courses/testing-practices-principles).
   I'm really happy about how those turned out!
 - For the first part of the year,
   [Ryan Florence](https://twitter.com/ryanflorence) made
@@ -313,7 +312,7 @@ Here are some other interesting facts/accomplishments from 2018:
   testing, two on advanced react, and one on beginning react) through
   workshop.me and it was awesome (though short-lived).
 - I gave 4 other workshops this year all of which you can find on
-  [my YouTube playlist](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+  [my YouTube playlist](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 
 ## What's next in 2019
 
@@ -360,7 +359,7 @@ I wish you the very best and happiest New Year!
 
 **Things to not miss**:
 
-- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds/) -
+- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds) -
   The ReactRoundUp podcast had me on to talk about testing!
 - [Testing Software](https://mhme-blog.now.sh/2018/december/testing-software.html) -
   Great insights here by [Matt Hamlin](https://mobile.twitter.com/immatthamlin)

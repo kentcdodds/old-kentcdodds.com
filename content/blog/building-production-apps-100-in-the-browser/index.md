@@ -15,9 +15,9 @@ bannerCredit:
 ---
 
 Earlier, [I mentioned](/blog/merry-christmas) that I made two apps for my
-family. The first is [Typing for Kids](https://typing-for-kids.netlify.com/)
+family. The first is [Typing for Kids](https://typing-for-kids.netlify.com)
 which I made for my two oldest children, the second is
-[Repeat Todo](https://repeat-todo.com/) which I made for my wife.
+[Repeat Todo](https://repeat-todo.com) which I made for my wife.
 
 Today I want to briefly talk about how I went about creating these apps as a way
 to reiterate how awesome it is to build for the web these days.
@@ -44,7 +44,7 @@ depends on `react`, `react-dom` and `animate.css`. I have a component to make
 integrating with `animate.css` a little easier.
 
 Another thing you'll find interesting is that I built the ENTIRE thing solely in
-[CodeSandbox.io](http://codesandbox.io/)! I never downloaded the source code
+[CodeSandbox.io](http://codesandbox.io)! I never downloaded the source code
 once. I used CodeSandbox's new
 [GitHub integration](https://hackernoon.com/announcing-codesandbox-2-0-938cff3a0fcb)
 feature to create
@@ -52,13 +52,13 @@ feature to create
 [GitHub import](https://codesandbox.io/s/github) feature any time I wanted to
 start working on it again. This is pretty amazing I think!
 
-To get it deployed, I used the amazing [Netlify](https://netlify.com/). They
-have super GitHub integration as well which meant I didn't need to download
-anything for that part either.
+To get it deployed, I used the amazing [Netlify](https://netlify.com). They have
+super GitHub integration as well which meant I didn't need to download anything
+for that part either.
 
 On top of that, because codesandbox's react template uses create-react-app, I
 could leverage the
-[service worker](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
+[service worker](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
 that the react-scripts build creates for me so this thing works totally offline.
 I also added
 [a manifest.json](https://github.com/kentcdodds/typing-for-kids/blob/7a8ff3fd0580258493b0963739dffbe596141277/public/manifest.json)
@@ -67,7 +67,7 @@ desktop like an installed app! So cool!
 
 ### Repeat Todo ✅
 
-A while back I created [repeat todo](https://repeat-todo.surge.sh/) for my wife
+A while back I created [repeat todo](https://repeat-todo.surge.sh) for my wife
 because she wanted an app where she could rotate chores/meals etc. Here's a
 quick demo of the new version of the app to get an idea of what it's useful for:
 
@@ -78,8 +78,8 @@ can only enter in the items on the device you'll use it on and if you get a new
 device all the data is totally lost.
 
 For a while I've been meaning to make an authenticated version with
-[Firebase](https://firebase.google.com/) as an authentication/storage provider
-to solve these problems, so I decided to do that for her Christmas present.
+[Firebase](https://firebase.google.com) as an authentication/storage provider to
+solve these problems, so I decided to do that for her Christmas present.
 
 Amazingly, I was able to build this just like the Typing for Kids app. 100% in
 the browser without having to download anything.
@@ -87,7 +87,7 @@ the browser without having to download anything.
 This app is a little more complicated. Despite that it _still_ doesn't use
 react-router or redux. It's a pretty simple app, and that's the beauty of it I
 think. I did make a few more components via
-[`glamorous`](https://glamorous.rocks/) to make things visually consistent and
+[`glamorous`](https://glamorous.rocks) to make things visually consistent and
 separate the styling components from the rest of the components. I also created
 a few render prop components for the firebase authentication and data stuff.
 
@@ -129,10 +129,10 @@ I hope this is helpful! Good luck!👍
 
 **Things to not miss**:
 
-- [Brandon Sanderson](https://brandonsanderson.com/). Literally just read
+- [Brandon Sanderson](https://brandonsanderson.com). Literally just read
   everything written by that man.
   [I recently read a bunch of stuff](https://twitter.com/kentcdodds/status/947657545056841728)
   and plan to read more.
-- [JavaScript January](https://www.javascriptjanuary.com/) is a cool thing that
+- [JavaScript January](https://www.javascriptjanuary.com) is a cool thing that
   [Emily Freeman](https://twitter.com/editingemily) is doing. My article is the
   first one published!!

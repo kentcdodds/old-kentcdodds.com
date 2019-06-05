@@ -286,8 +286,8 @@ time.
 
 > For more on establishing a culture of testing and reasonable code coverage
 > targets, I suggest watching [Aaron Abramov's](https://twitter.com/aarondjents)
-> talk at [AssertJS 2018](https://2018.assertjs.com/):
-> [Establishing testing patterns with software design principles](https://www.youtube.com/watch?v=_pnW-JjmyXE&list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
+> talk at [AssertJS 2018](https://2018.assertjs.com):
+> [Establishing testing patterns with software design principles](https://youtu.be/_pnW-JjmyXE&list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
 
 <!-- force a break between these comments... -->
 

@@ -16,15 +16,15 @@ bannerCredit:
 ![Kent C. Dodds in front of an audience at a meetup](./images/0.jpg)
 
 When I was still in school in the Information Systems program at
-[BYU](https://www.byu.edu/), I discovered and started listening to
-[JavaScript Jabber](https://devchat.tv/js-jabber/). At the time,
+[BYU](https://www.byu.edu), I discovered and started listening to
+[JavaScript Jabber](https://devchat.tv/js-jabber). At the time,
 [Jamison Dance](https://twitter.com/jergason) was on the show and also the
 organizer of the local JavaScript meetup. I remember him mentioning the meetup
 on the show and thought it'd be really cool to attend and learn from others
 (which it is!).
 
 So I looked up the
-[meetup page](https://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/) he
+[meetup page](https://www.meetup.com/UtahJS-Orem-Meetup/events/156148202) he
 mentioned and noticed that there was an opening for a speaker. I had just gotten
 back from the first ng-conf (2014) and thought that whole public speaking thing
 looked like a lot of fun. I also had been working on a personal open source
@@ -54,7 +54,7 @@ earth could I think it's fun?_ Well, if you don't mind, let me give you a little
 context into my childhood...
 
 Ever since I was a little child, I've been speaking in front of groups of
-people. As a child, I spoke in [my Church's](https://www.mormon.org/) primary
+people. As a child, I spoke in [my Church's](https://www.mormon.org) primary
 program (in front of a handful of adult instructors and a few dozen of my peers)
 a dozen times or so. When I was a teenager, I had a speech class in school,
 started giving short talks in
@@ -68,12 +68,12 @@ During that time I also gave ~15 minute lessons to my family in
 and led lessons in my church classes as well.
 
 In Junior High and High School, I was also a stage performer. I
-[played the piano](https://www.youtube.com/watch?v=agdbnzQlMFE) (yes, I'm
-hitting my head and forearm on the piano at ~2 minutes),
-[sang in choirs](https://www.youtube.com/watch?v=F5_QmWwIF3c), and I was in
-[my High School's Show Choir "Jive!"](https://www.youtube.com/watch?v=5_sRK8UUc3k)
-(yep, that's me in the green doing a backflip at ~6:40). After leaving home and
-spending a semester at BYU, I left on
+[played the piano](https://youtu.be/agdbnzQlMFE) (yes, I'm hitting my head and
+forearm on the piano at ~2 minutes),
+[sang in choirs](https://youtu.be/F5_QmWwIF3c), and I was in
+[my High School's Show Choir "Jive!"](https://youtu.be/5_sRK8UUc3k) (yep, that's
+me in the green doing a backflip at ~6:40). After leaving home and spending a
+semester at BYU, I left on
 [a mission for my church](https://www.mormonnewsroom.org/topic/missionary-program)
 and had even more opportunities to speak in front of people (both church
 congregations as well as teach lessons to people in their homes).
@@ -101,14 +101,14 @@ primarily to be able to attend.
 Conference speakers normally have all expenses paid (as they should), so I
 started searching around for open conference CFPs (Call For Proposals) (I used
 [Lanyrd](https://twitter.com/lanyrd), but I think
-[confs.tech](https://confs.tech/) is probably better these days. I'm sure there
+[confs.tech](https://confs.tech) is probably better these days. I'm sure there
 are more... Google around 😉). I wrote a dozen or so proposals about subjects
 that I knew I could write and deliver a fun and informative talk from. I
 submitted them to every relevant conference I could. One conference I was
 accepted to was Jfokus which is in Stockholm, Sweden (a fact that I realized
 only _after_ I'd been accepted 😅). They invited me to give a workshop as well
 and that's how I got my first paid workshop gig. (Another story is the fact that
-speaking at a meetup was how I got my gig at [egghead.io](http://egghead.io/) as
+speaking at a meetup was how I got my gig at [egghead.io](http://egghead.io) as
 well).
 
 I was able to attend a ton of conferences. Too many actually. As awesome as it
@@ -146,7 +146,7 @@ Keep practicing! Good luck :D
 
 **Learn more about "self improvement" from me**:
 
-- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://www.youtube.com/watch?v=-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   talk I gave a few years ago that's related and has some similar stories to
   this post.
 

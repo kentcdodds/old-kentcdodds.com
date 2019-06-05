@@ -17,7 +17,7 @@ bannerCredit:
 
 Current Available Translations:
 
-- [Korean](https://edykim.com/ko/post/when-to-break-up-a-component-into-multiple-components/)
+- [Korean](https://edykim.com/ko/post/when-to-break-up-a-component-into-multiple-components)
 
 Did you know that you could write any React Application as a single React
 Component? There's absolutely nothing technically stopping React from putting
@@ -45,7 +45,7 @@ If you tried this though you'd face a few problems:
 6.  Using third party component libraries would be... ummm... impossible? If
     we're writing everything as a single component third party libraries is at
     odds with that goal! And even if we allowed using third party components,
-    what about HOCs like [react-emotion](https://emotion.sh/)? Not allowed!
+    what about HOCs like [react-emotion](https://emotion.sh)? Not allowed!
 7.  Encapsulating imperative abstractions/APIs in a more declarative component
     API wouldn't be allowed either meaning that the imperative API would be
     littered throughout the lifecycle hooks of our one giant component, leading
@@ -82,10 +82,10 @@ abstraction. Good luck!
 **Learn more about React from me**:
 
 - [egghead.io (beginners)](http://kcd.im/beginner-react) — My Beginner's Guide
-  to React absolutely _free_ on [egghead.io](http://egghead.io/).
+  to React absolutely _free_ on [egghead.io](http://egghead.io).
 - [egghead.io (advanced)](http://kcd.im/advanced-react) — My Advanced React
-  Component Patterns course available on [egghead.io](http://egghead.io/)!
-- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/) — My
+  Component Patterns course available on [egghead.io](http://egghead.io)!
+- [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns) — My
   Advanced React Patterns course in the form of a Workshop.
 - [Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) — I'm giving my
   Intro to React workshop in person in Salt Lake City in August!
@@ -97,6 +97,6 @@ abstraction. Good luck!
   asking me about. The videos are live, brief, unscripted, and full of valuable
   info and tips. [Subscribe to my YouTube channel](http://kcd.im/youtube) and
   click the notification bell to be notified when I'm streaming :)
-- [Learn React with Kent C. Dodds](https://www.youtube.com/watch?v=zthIUs2w_c8) — My
-  livestream on
-  [freeCodeCamp's YouTube channel](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).
+- [Learn React with Kent C. Dodds](https://youtu.be/zthIUs2w_c8) — My livestream
+  on
+  [freeCodeCamp's YouTube channel](https://youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ).

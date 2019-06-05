@@ -107,7 +107,7 @@ your HTML. You may have heard of the
 (⬅ look at that if you haven't seen it yet). The implementation of this with the
 fewest trade-offs and the best benefits that I've found is
 [**glamor**](https://github.com/threepointone/glamor) (\+
-[glamorous](https://glamorous.rocks/) if you use React). I recommend you give it
+[glamorous](https://glamorous.rocks) if you use React). I recommend you give it
 a look.
 
 This technique can be boiled down to this fundamental principle:
@@ -253,10 +253,9 @@ See you on [twitter](https://twitter.com/kentcdodds)!
 
 P.S. If you're concerned about violating "separation of concerns" I recommend
 you check out [this talk](https://youtu.be/x7cQ3mrcKaY) by
-[Pete Hunt](https://medium.com/u/3b799f227b58) and re-evaluate what that means
-😀.
+[Pete Hunt](https://twitter.com/floydophone) and re-evaluate what that means 😀.
 
 P.P.S. I should also note that this applies great to images and really any other
 resource as well. And when you use a tool like
-[webpack](http://webpack.github.io/), co-locating those resources is crazy easy
+[webpack](http://webpack.github.io), co-locating those resources is crazy easy
 too.

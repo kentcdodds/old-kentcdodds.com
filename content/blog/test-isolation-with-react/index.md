@@ -97,12 +97,12 @@ const counterButton = getByText(/^count/i)
 afterAll(cleanup) // when all tests are finished, unmount the component
 
 test('the counter is initialized to the initialCount', () => {
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 
 test('when clicked, the counter increments the click', () => {
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
@@ -111,12 +111,12 @@ test(`the counter button is disabled when it's hit the maxClicks`, () => {
 })
 
 test(`the counter button does not increment the count when clicked when it's hit the maxClicks`, () => {
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
   fireEvent.click(getByText(/reset/i))
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 ```
 
@@ -156,12 +156,12 @@ beforeEach(() => {
 afterEach(cleanup)
 
 test('the counter is initialized to the initialCount', () => {
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 
 test('when clicked, the counter increments the click', () => {
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
@@ -172,13 +172,13 @@ test(`the counter button is disabled when it's hit the maxClicks`, () => {
 test(`the counter button does not increment the count when clicked when it's hit the maxClicks`, () => {
   fireEvent.click(counterButton)
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
   fireEvent.click(counterButton)
   fireEvent.click(getByText(/reset/i))
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 ```
 
@@ -222,13 +222,13 @@ function renderCounter(props) {
 
 test('the counter is initialized to the initialCount', () => {
   const {counterButton} = renderCounter()
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 
 test('when clicked, the counter increments the click', () => {
   const {counterButton} = renderCounter()
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
@@ -245,14 +245,14 @@ test(`the counter button does not increment the count when clicked when it's hit
     initialCount: 4,
   })
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
   const {getByText, counterButton} = renderCounter()
   fireEvent.click(counterButton)
   fireEvent.click(getByText(/reset/i))
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 })
 ```
 
@@ -288,27 +288,27 @@ test('allows clicks until the maxClicks is reached, then requires a reset', () =
   const counterButton = getByText(/^count/i)
 
   // the counter is initialized to the initialCount
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 
   // when clicked, the counter increments the click
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 
   // the counter button is disabled when it's hit the maxClicks
   expect(counterButton).toHaveAttribute('disabled')
   // the counter button no longer increments the count when clicked.
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 
   // the reset button has been rendered and is clickable
   fireEvent.click(getByText(/reset/i))
 
   // the counter is reset to the initialCount
-  expect(counterButton).toHaveTextContent(/3/)
+  expect(counterButton).toHaveTextContent(/3)
 
   // the counter can be clicked and increment the count again
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4/)
+  expect(counterButton).toHaveTextContent(/4)
 })
 ```
 
@@ -343,17 +343,17 @@ and you'll have a much better time testing! Good luck!
 
 **Learn more about testing from me**:
 
-- [Frontend Masters](https://frontendmasters.com/):
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/),
-  [Testing React Applications](https://frontendmasters.com/courses/testing-react/)
+- [Frontend Masters](https://frontendmasters.com):
+  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles),
+  [Testing React Applications](https://frontendmasters.com/courses/testing-react)
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — Something
-  new on [egghead.io](http://egghead.io/). It's a recording of one of my talks
-  especially for [egghead.io](http://egghead.io/). I think you'll really enjoy
-  it (and it's 🆓)
-- [Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
+  new on [egghead.io](http://egghead.io). It's a recording of one of my talks
+  especially for [egghead.io](http://egghead.io). I think you'll really enjoy it
+  (and it's 🆓)
+- [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk at Assert.js conference
   ([and here's the blog post](http://kcd.im/write-tests))
-- [Testing Practices and Principles](https://www.youtube.com/watch?v=VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Testing Practices and Principles](https://youtu.be/VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   recording of my workshop at Assert.js
 
 **Things to not miss**:
@@ -364,7 +364,7 @@ and you'll have a much better time testing! Good luck!
   accessibility, React Native and ReasonReact support, even simpler API,
   improved docs, new examples site, Flow and TypeScript support, and a new
   online community ⚛️
-- [keycode.info](http://keycode.info/) by
+- [keycode.info](http://keycode.info) by
   [Wes Bos](https://twitter.com/wesbos) — shows you the javascript character
   code for the key you type. Handy!
 - [Chrome Pixelbook](https://store.google.com/us/product/google_pixelbook) — It's

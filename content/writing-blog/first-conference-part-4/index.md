@@ -130,7 +130,7 @@ books with covers illustrated by Michael. He even got his parents to buy him a
 such creation was this work titled "Passage: Verge" which served as inspiration
 for the seons in Elantris:
 
-[![Passage: Verge](./passageverge.jpg)](https://www.michaelwhelan.com/galleries/passage-verge/)
+[![Passage: Verge](./passageverge.jpg)](https://www.michaelwhelan.com/galleries/passage-verge)
 
 ## Writing Excuses
 

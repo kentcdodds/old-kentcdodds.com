@@ -47,7 +47,7 @@ David Farland." Here's the description of the workshop:
 > Marriott Hotel and Conference Center.
 
 I've adopted the
-[Story Grid 15 Most Important Scenes](https://storygrid.com/15-most-important-scenes/)
+[Story Grid 15 Most Important Scenes](https://storygrid.com/15-most-important-scenes)
 as my primary method for outlining my novel and I've been really happy with it.
 I'm excited to see what I can learn from David in this workshop.
 

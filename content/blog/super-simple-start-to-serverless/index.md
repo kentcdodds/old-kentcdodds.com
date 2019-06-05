@@ -27,14 +27,14 @@ the [contact page](/contact) where you can
 [leave your own testimonial of my work](https://kcd.im/testimonial) (I'd love it
 if you did!).
 
-My app is built with [GatsbyJS](https://www.gatsbyjs.org/) which has quickly
+My app is built with [GatsbyJS](https://www.gatsbyjs.org) which has quickly
 become one of my favorite pieces of technology. Gatsby is a static site
 generator, so it generates a bunch of HTML, CSS, and JavaScript files in a
 directory called `public` in my project and it leaves it to me to get those
 files on the World Wide Web for you and your loved ones to enjoy.
 
 So how do I get those files up there on the internet? I use
-[Netlify](https://www.netlify.com/)! I've LOVED Netlify for years. It's bonkers
+[Netlify](https://www.netlify.com)! I've LOVED Netlify for years. It's bonkers
 how quickly I can get a site up and running (with HTTPS) with Netlify and it's
 integration with GitHub is unmatched. I love it.
 
@@ -118,7 +118,7 @@ Now you can just do: `git add -A`, then `git commit -m 'init'`, and
 
 ### Step 4: Setup Netlify
 
-Go to [your netlify sites](https://app.netlify.com/) and click "New site from
+Go to [your netlify sites](https://app.netlify.com) and click "New site from
 Git." From there you'll connect your Netlify account to your GitHub account and
 it'll show you a list of repositories. Search for the one you want and click on
 it.

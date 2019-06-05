@@ -25,7 +25,7 @@ In the conclusion I said this:
 > _So what did I do to fix my IE10 bug? Well, one thing that really bugs me is
 > that I have to ship all this code for polyfills to all browsers even if they_
 > do _support these features. But a few years ago I heard of_ >
-> [_a service_](https://polyfill.io/) _that was able to ship polyfills that are
+> [_a service_](https://polyfill.io) _that was able to ship polyfills that are
 > relevant only to the browser requesting them. I created my own endpoint that
 > uses_ [_the module_](https://github.com/Financial-Times/polyfill-service) >
 > _that powers that service and I'll write about that next week!_
@@ -42,11 +42,11 @@ that we support), the response is 60.2kb! If you're unfamiliar with the impact
 this can make, I suggest you read
 [The Cost Of JavaScript](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e)
 by [Addy Osmani](https://twitter.com/addyosmani) (or
-[watch a talk version here](https://www.youtube.com/watch?v=63I-mEuSvGA)). To
-put this in terms you may appreciate, this will take users in emerging markets
-about a full second just to download, then you have to take the content they've
-downloaded and parse/compile/run it which can take even longer especially for
-individuals using lower-end phones.
+[watch a talk version here](https://youtu.be/63I-mEuSvGA)). To put this in terms
+you may appreciate, this will take users in emerging markets about a full second
+just to download, then you have to take the content they've downloaded and
+parse/compile/run it which can take even longer especially for individuals using
+lower-end phones.
 
 The state of the art with polyfills is to include those polyfills in your
 `bundle.js`file (in fact, lots of apps are just using all of `core-js` which is
@@ -76,16 +76,16 @@ expend resources re-downloading a file that will never change.
 
 ### Using polyfill-service
 
-The [polyfill.io](https://polyfill.io/) service from Financial Times is awesome,
+The [polyfill.io](https://polyfill.io) service from Financial Times is awesome,
 but with no SLA (service level agreement), many companies can't rely on it for
 mission-critical applications. Luckily, the module that powers it is completely
 open source so you can set up your own service in-house in a pretty
 straightforward way and that's exactly what I did.
 
-With the app I'm working on right now ([paypal.me](https://paypal.me/)), we have
+With the app I'm working on right now ([paypal.me](https://paypal.me)), we have
 a server that's responsible for some light server-rendering for SEO purposes.
-Basically, our server is a NodeJS server using [KrakenJS](http://krakenjs.com/)
-(a wrapper on top of [express](https://expressjs.com/)), so I added a
+Basically, our server is a NodeJS server using [KrakenJS](http://krakenjs.com)
+(a wrapper on top of [express](https://expressjs.com)), so I added a
 `get`handler to the express app:
 
 ```js
@@ -184,15 +184,15 @@ Pretty cool!
 
 **Learn more about JavaScript from me**:
 
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://www.youtube.com/watch?v=kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://www.youtube.com/watch?v=t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://www.youtube.com/watch?v=eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
 - [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
 for my daily devtips, like
-[the one a while back where](https://www.youtube.com/watch?v=FsgGx1SMXn0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+[the one a while back where](https://youtu.be/FsgGx1SMXn0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
 I demo some advanced features of destructuring!
 
 **Things to not miss**:
@@ -202,9 +202,9 @@ I demo some advanced features of destructuring!
   handlers/middleware without worrying about rejected promises being ignored and
   making my server hang :)
 - [ReactJS Denver: Confidently Testing React Apps](https://youtu.be/2HnNo4t8534?t=541) — A
-  great talk at [React Denver](https://www.meetup.com/ReactDenver/) by
+  great talk at [React Denver](https://www.meetup.com/ReactDenver) by
   [Matt Parrish](https://twitter.com/mattparrish).
-- [React is no abstraction, React is JavaScript](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) — A
+- [React is no abstraction, React is JavaScript](https://www.robinwieruch.de/javascript-fundamentals-react-requirements) — A
   very interesting and important blog post from
   [Robin Wieruch](https://twitter.com/rwieruch) that teaches some common
   JavaScript fundamentals that you'll need when working with React.

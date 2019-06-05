@@ -63,7 +63,7 @@ const enUS = getLocalizedContent('en-US')
 initMessages(enUS)
 ```
 
-If you're using something like [LinguiJS](https://lingui.js.org/) which provides
+If you're using something like [LinguiJS](https://lingui.js.org) which provides
 an awesome babel plugin ([and a](https://lingui.js.org/ref/macro.html)
 [macro!](https://github.com/kentcdodds/babel-plugin-macros)) that allows you to
 write your content directly in your source code (super cool!), but requires that

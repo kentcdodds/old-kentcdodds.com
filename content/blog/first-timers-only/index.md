@@ -11,7 +11,7 @@ banner: ./images/banner.jpg
 
 I've started doing something recently that's been really rewarding. I'm the
 maintainer of [angular-formly](https://github.com/formly-js/angular-formly) a
-fairly popular library for forms with [AngularJS](https://angularjs.org/). I've
+fairly popular library for forms with [AngularJS](https://angularjs.org). I've
 committed a lot of code and the library has
 [33 contributors](https://github.com/formly-js/angular-formly/graphs/contributors)
 right now. For at least five of these contributors, it was their first time
@@ -27,15 +27,15 @@ less common things...
 - Add an
   [up-for-grabs](https://github.com/formly-js/angular-formly/issues?utf8=%E2%9C%93&q=label%3Aup-for-grabs+)
   label (and angular-formly is now on
-  [up-for-grabs.net](http://up-for-grabs.net/#/))
+  [up-for-grabs.net](http://up-for-grabs.net/#))
 - Add a githook (using [ghooks](http://npm.im/ghooks)) that runs the tests and
-  checks coding standards with [eslint](http://eslint.org/) so people don't have
+  checks coding standards with [eslint](http://eslint.org) so people don't have
   the frustration of going back and forth on the PR.
 - Use [npm scripts](https://docs.npmjs.com/misc/scripts) so people don't have to
   understand or globally install any build tools
 
 I've even recorded
-[screencasts](https://www.youtube.com/watch?v=QOchwBm9W-g&index=5&list=PLV5CVI1eNcJi7lVVIuNyRhEuck1Z007BH)
+[screencasts](https://youtu.be/QOchwBm9W-g&index=5&list=PLV5CVI1eNcJi7lVVIuNyRhEuck1Z007BH)
 to demonstrate how to get things setup. But what I didn't realize was that there
 was still something missing...
 
@@ -45,7 +45,7 @@ A few months back, angular-formly got a
 [pull request](https://github.com/formly-js/angular-formly/pull/211) from
 [Koen Weyn](https://github.com/koenweyn) who wanted to fix some IE8
 compatibility issues with the project. He submitted a good PR
-([pull request](https://help.github.com/articles/using-pull-requests/)), we
+([pull request](https://help.github.com/articles/using-pull-requests)), we
 iterated on it a little bit, and it got merged. He mentioned to me that it was
 his first ever GitHub pull request. That was a neat experience. It was cool to
 be a part of someone’s first ever open source code contribution.
@@ -68,7 +68,7 @@ learning/feeling the satisfaction of answering. I think that sometimes we adults
 can behave the same way.
 
 So I decided to commit the tests, but skipped (so the build wouldn’t fail)
-(using `describe.skip` from [Mocha](http://mochajs.org/)), then I pushed them up
+(using `describe.skip` from [Mocha](http://mochajs.org)), then I pushed them up
 and added
 [this comment](https://github.com/formly-js/angular-formly/issues/343#issuecomment-111495740)
 to the issue:
@@ -84,7 +84,7 @@ implementation of a feature, but figuring out how to actually contribute code._
 So I explain exactly what to do in the issue, and then I blasted it out on
 [Twitter](https://twitter.com/kentcdodds/status/609354862074052608),
 [Gitter](https://gitter.im/formly-js/angular-formly), and
-[Slack](http://angularbuddies.com/):
+[Slack](http://angularbuddies.com):
 
 https://twitter.com/kentcdodds/status/609354862074052608
 
@@ -153,7 +153,7 @@ See you on the [githubs](https://github.com/kentcdodds) and
 Watch my Fluent Conf 2016 talk
 “[The First Pull Request](http://slides.com/kentcdodds/1st-pr)”
 
-https://www.youtube.com/watch?v=HjgZQeMrw6c&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtube.com/watch?v=HjgZQeMrw6c&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 ---
 

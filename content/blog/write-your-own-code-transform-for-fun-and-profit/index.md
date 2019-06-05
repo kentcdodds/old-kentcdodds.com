@@ -27,7 +27,7 @@ Since then, there have been a few exciting developments:
     [`babel-preset-react-app`](https://www.npmjs.com/package/babel-preset-react-app)
     (which is what create-react-app v2 beta is using!)
 2.  It [was added](https://github.com/fkling/astexplorer/pull/303) as an
-    optional transform to [astexplorer.net](https://astexplorer.net/) by
+    optional transform to [astexplorer.net](https://astexplorer.net) by
     [@FWeinb](https://twitter.com/FWeinb)
 
 Up until now, only early adopters have tried to
@@ -44,7 +44,7 @@ Let's start off with a contrived macro that can split a string of text and
 replace every space with `🐶`. We'll call it `gemmafy` because my dog's name is
 "Gemma." Woof!
 
-1.  Go to [astexplorer.net](https://astexplorer.net/)
+1.  Go to [astexplorer.net](https://astexplorer.net)
 2.  Make sure the language is set to `JavaScript`
 3.  Make sure the parser is set to `babylon7`
 4.  Enable the transform and set it to `babel-macros` (or `babel-plugin-macros`
@@ -195,21 +195,21 @@ Enjoy!
 
 **Learn more about ASTs from me**:
 
-- [All about macros with babel-plugin-macros 🎣 (talk at ReactJS Utah)](https://www.youtube.com/watch?v=nlAHtAQlFGk&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting Course on Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts/)
-- [Code Transformation and Linting Workshop (very rough practice run)](https://www.youtube.com/watch?v=-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Writing custom Babel and ESLint plugins with ASTs (talk at Open West 2017)](https://www.youtube.com/watch?v=VBscbcm2Mok&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [All about macros with babel-plugin-macros 🎣 (talk at ReactJS Utah)](https://youtu.be/nlAHtAQlFGk&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Code Transformation and Linting Course on Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts)
+- [Code Transformation and Linting Workshop (very rough practice run)](https://youtu.be/-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Writing custom Babel and ESLint plugins with ASTs (talk at Open West 2017)](https://youtu.be/VBscbcm2Mok&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 **Things to not miss**:
 
-- [React Europe Talks Day 1](https://www.youtube.com/watch?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&v=aOWIJ4Mgb2k)
-- [React Europe Talks Day 2](https://www.youtube.com/watch?v=WYWVGQKnz5M&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
-- [Stop writing code — Sunil Pai aka @threepointone at @ReactEurope 2018](https://www.youtube.com/watch?v=WYWVGQKnz5M) — See
+- [React Europe Talks Day 1](https://youtube.com/watch?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&v=aOWIJ4Mgb2k)
+- [React Europe Talks Day 2](https://youtu.be/WYWVGQKnz5M&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
+- [Stop writing code — Sunil Pai aka @threepointone at @ReactEurope 2018](https://youtu.be/WYWVGQKnz5M) — See
   the part where [Sunil](https://twitter.com/threepointone) talks about the
   origin story of `babel-plugin-macros`
   [starting at 8m57s](https://youtu.be/WYWVGQKnz5M?t=8m57s). (Also, I love you
   too Sunil 😍)
-- [Pre-evaluate code at build time](https://www.youtube.com/watch?v=NhmrbpVKgdQ&list=LLz-BYvuntVRt_VpfR6FKXJw)
+- [Pre-evaluate code at build time](https://youtu.be/NhmrbpVKgdQ&list=LLz-BYvuntVRt_VpfR6FKXJw)
   from [Siddharth Kshetrapal](https://twitter.com/siddharthkp).
 - [DevTips with Kent](http://kcd.im/devtips) — Daily live streams showing what
   I'm learning, working on, or answering common questions I get.

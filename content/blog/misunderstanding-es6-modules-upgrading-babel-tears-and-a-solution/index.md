@@ -14,9 +14,9 @@ banner: ./images/banner.jpg
 bannerCredit: 'Those are supposed to be_tears...'
 ---
 
-On [October 29th, 2015](http://babeljs.io/blog/2015/10/29/6.0.0/),
-[Sebastian McKenzie](https://medium.com/u/d9e46e1c7539),
-[James Kyle](https://medium.com/u/cc2eaf4f2cd2), and the rest of the Babel team
+On [October 29th, 2015](http://babeljs.io/blog/2015/10/29/6.0.0),
+[Sebastian McKenzie](https://twitter.com/sebmck),
+[James Kyle](https://medium.com/@thejameskyle), and the rest of the Babel team
 dropped a huge major release for frontend developers everywhere: Babel 6.0.0.
 It's totally awesome. No longer just a transpiler, it's now a super pluggable
 JavaScript tooling platform. As a community, we've only scratched the surface of
@@ -40,7 +40,7 @@ Upgrading for me would not have been that difficult if I had understood the ES6
 Modules specification correctly. Babel 5 allowed misuse of _export_ and _import_
 statements and Babel 6 fixed this problem. At first I thought this may be a bug.
 I asked about it on [Stack Overflow](http://stackoverflow.com/q/33505992/971592)
-and [Logan Smyth](https://medium.com/u/d632d7a778d5) informed me that I
+and [Logan Smyth](https://twitter.com/loganfsmyth) informed me that I
 fundamentally misunderstood ES6 modules and that Babel 5 had facilitated that
 misunderstanding (writing a transpiler is hard).
 
@@ -50,11 +50,11 @@ At first, I didn't quite understand what Logan meant, but when I had the time to
 dedicate to upgrading my app,
 [this happened](https://twitter.com/kentcdodds/status/671817302430515200)
 
-[Tyler McGinnis](https://medium.com/u/c52389e3ee63),
-[Josh Manders](https://medium.com/u/36876e652a4d), and I went back and forth
-quite a bit on this thread. It's probably hard to follow, but this is when I
-realized that the problem wasn't exporting the object as a default, but how I
-expected that I could import the object.
+[Tyler McGinnis](https://twitter.com/tylermcginnis),
+[Josh Manders](https://twitter.com/joshmanders), and I went back and forth quite
+a bit on this thread. It's probably hard to follow, but this is when I realized
+that the problem wasn't exporting the object as a default, but how I expected
+that I could import the object.
 
 I always assumed that I could export an object as the default and then
 destructure the pieces out of that object I needed, like so:
@@ -80,7 +80,7 @@ I finally figured out how things really work when I reviewed
 https://twitter.com/kentcdodds/status/671831027787038721
 
 And I discovered why what I had been doing wouldn't work when I read
-[Axel Rauschmayer](https://medium.com/u/7fab51e62203)'s
+[Axel Rauschmayer](https://twitter.com/rauschma)'s
 [blogpost](http://www.2ality.com/2014/09/es6-modules-final.html)
 
 https://twitter.com/kentcdodds/status/671830544129265664
@@ -211,7 +211,7 @@ from Babel 5 to Babel 6:
 [https://egghead.io/lessons/angularjs-updating-babel-5-to-6](https://egghead.io/lessons/angularjs-updating-babel-5-to-6)
 
 Also, remember that nobody’s perfect and we’re all learning here :-) See you on
-[Twitter](https://twitter.com/)!
+[Twitter](https://twitter.com)!
 
 ---
 

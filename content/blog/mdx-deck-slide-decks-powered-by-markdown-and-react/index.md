@@ -16,11 +16,11 @@ bannerCredit:
 
 I've been giving presentations for years. I like many others started with
 PowerPoint because "that's how you make presentations." I moved on from that to
-[Prezi](https://prezi.com/) when I was in college and I wowed all the crowds. I
+[Prezi](https://prezi.com) when I was in college and I wowed all the crowds. I
 moved on from that because it felt too gimmicky for the kinds of presentations I
 was making. I tried Google Slides and that was cool because it's web-tech, but
 was a little limited and didn't look all that nice. Eventually I landed at
-[slides.com](https://slides.com/). I've been with slides for pretty much my
+[slides.com](https://slides.com). I've been with slides for pretty much my
 entire software development presentation career. You'll find pretty much 100% of
 the public presentations I've made on
 [my slides page](https://slides.com/kentcdodds) (including
@@ -44,7 +44,7 @@ factor" in addition to being generally more engaging. For a specific example,
 [my slides](https://slides.com/kentcdodds/simply-react) for my "Simply React"
 keynote at ChainReact had several demos that were recorded video which is not
 awesome, but I also had an issue where I couldn't replay the videos
-([watch here](https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=4m04s)).
+([watch here](https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=4m04s)).
 So the demos kinda fell flat a bit.
 
 When master [Ken Wheeler](https://twitter.com/ken_wheeler) announced
@@ -82,7 +82,7 @@ import InteractiveGraph from './my-d3-graph'
 There's a bunch that's awesome from this. I've been wanting something like this
 for quite some time! Back when I was working on the website for
 [glamorous](https://github.com/paypal/glamorous)
-([glamorous.rocks](https://glamorous.rocks/)), I wanted to make all the docs in
+([glamorous.rocks](https://glamorous.rocks)), I wanted to make all the docs in
 markdown to make it easier to internationalize, but I also wanted interactivity
 to be possible, so I came up with
 [a super weird syntax](https://github.com/kentcdodds/glamorous-website/blob/master/other/CONTRIBUTING_DOCUMENTATION.md#important-markdown-notes)
@@ -120,7 +120,7 @@ mdx-deck has some pretty sweet features too:
 - 📜 [PDF Export](https://github.com/jxnblk/mdx-deck#pdf-export)
 
 You combine this with
-[Netlify's amazing GitHub Integration](https://www.netlify.com/docs/continuous-deployment/)
+[Netlify's amazing GitHub Integration](https://www.netlify.com/docs/continuous-deployment)
 and put your slides in a GitHub project and you're off to the races with an
 automatically deployed slide deck!
 
@@ -129,7 +129,7 @@ automatically deployed slide deck!
 I'm currently working on porting my slides for
 ["Simply React"](https://github.com/kentcdodds/simply-react). You can see the
 current state of
-[the slides deployed on netlify here](https://simply-react.netlify.com/) (and
+[the slides deployed on netlify here](https://simply-react.netlify.com) (and
 [the pdf](https://simply-react.netlify.com/presentation.pdf)). I'm pretty jazzed
 about the ability to have such an easy way to create presentations in the
 browser that are easy to run locally, deployed to the web, create a PDF version,

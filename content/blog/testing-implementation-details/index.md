@@ -228,8 +228,8 @@ testing implementation details!
 positives and negatives, I'd almost rather not write tests at all. DELETE ALL
 THE TESTS! Wouldn't it be nice if we had a tool that had a wider
 [pit](https://twitter.com/kentcdodds/status/859994199738900480) of
-[success](https://blog.codinghorror.com/falling-into-the-pit-of-success/)? Yes
-it would! And guess what, we DO have such a tool!
+[success](https://blog.codinghorror.com/falling-into-the-pit-of-success)? Yes it
+would! And guess what, we DO have such a tool!
 
 ### Implementation detail free testing
 
@@ -352,7 +352,7 @@ will naturally avoid implementation details:
 
 I hope that's helpful to you! If you really want to take your testing to the
 next level, then I definitely recommend you get a Pro license for
-[TestingJavaScript.com](https://testingjavascript.com/)🏆
+[TestingJavaScript.com](https://testingjavascript.com)🏆
 
 Good luck!
 

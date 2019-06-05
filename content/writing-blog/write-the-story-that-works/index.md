@@ -56,10 +56,10 @@ I would suggest that writers consider the fact that **stories which do _not_
 conform to some storytelling conventions are unlikely to capture a reader's
 attention.**
 
-There is a [plethora](https://www.youtube.com/watch?v=zWld721Wk-Q) of tools you
-can use to do this kind of story analysis (by "analysis" I'm suggesting even if
-you're a "pantser" you can use these kinds of tools). My personal favorite is
-[Story Grid](https://storygrid.com/). I feel like it allows me to tell the story
+There is a [plethora](https://youtu.be/zWld721Wk-Q) of tools you can use to do
+this kind of story analysis (by "analysis" I'm suggesting even if you're a
+"pantser" you can use these kinds of tools). My personal favorite is
+[Story Grid](https://storygrid.com). I feel like it allows me to tell the story
 that I personally think is interesting and check to ensure that it wont fall
 flat for my audience.
 

@@ -12,13 +12,13 @@ banner: ./images/banner.jpg
 ---
 
 This is likely the reason that
-[TJ Holowaychuk](https://medium.com/u/bbb3c7ccb0a0) gave his Node.js projects to
+[TJ Holowaychuk](https://twitter.com/tjholowaychuk) gave his Node.js projects to
 other maintainers (read
 [Farewell Node.js](https://medium.com/@tjholowaychuk/farewell-node-js-4ba9e7f3e52b#.pj5yx57zb)).
-This is also probably why [Vojta Jína](https://medium.com/u/d265189b4f01) handed
-[Karma](http://karma-runner.github.io/) off to
-[Mark Trostler](https://medium.com/u/85bf364db998) and
-[Friedel Ziegelmayer](https://medium.com/u/732a70d99f08).
+This is also probably why [Vojta Jína](https://twitter.com/vojtajina) handed
+[Karma](http://karma-runner.github.io) off to
+[Mark Trostler](https://twitter.com/zzoass) and
+[Friedel Ziegelmayer](https://twitter.com/dignifiedquire).
 
 ## Motivation
 
@@ -34,7 +34,7 @@ over and over.
 > using on a regular basis.
 
 The exception to this is when you're paid to do it. I work for
-[Alianza](http://www.alianza.com/), but I get my phone service from Verizon. I
+[Alianza](http://www.alianza.com), but I get my phone service from Verizon. I
 never use the product personally, but I work on the project because I have a
 wife and three kids to support and I care about the mission.
 
@@ -60,7 +60,7 @@ over the project for me. Hopefully this does not shock anyone.
 
 People who hand off projects to others aren't doing it because they don't care
 about it anymore or anything. For example
-[TJ Holowaychuk](https://medium.com/u/bbb3c7ccb0a0) still guides people on some
+[TJ Holowaychuk](https://twitter.com/tjholowaychuk) still guides people on some
 of his old Node.js projects. It's just difficult to be actively involved because
 of the reasons I've mentioned above.
 
@@ -75,6 +75,6 @@ factors have been removed, don't hate them for handing off their projects to
 someone else, love them for the work they've done already. Most of the time, it
 cost them more than you know.
 
-> _Thanks to [TJ Holowaychuk](https://medium.com/@tjholowaychuk),
-> [Friedel Ziegelmayer](https://medium.com/@dignifiedquire), and
-> [Mark Trostler](https://medium.com/@zzoass) for reviewing this post_
+> _Thanks to [TJ Holowaychuk](https://twitter.com/tjholowaychuk),
+> [Friedel Ziegelmayer](https://twitter.com/dignifiedquire), and
+> [Mark Trostler](https://twitter.com/zzoass) for reviewing this post_

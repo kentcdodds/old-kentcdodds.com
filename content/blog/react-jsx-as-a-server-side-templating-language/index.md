@@ -26,8 +26,8 @@ components and JSX. The motivation was to reduce the maintenance overhead of
 knowing and maintaining a custom template system in addition to the JSX we are
 doing on the frontend.
 
-The app is [paypal.me](https://paypal.me/). The way it works is we have the
-[home](https://www.paypal.me/),
+The app is [paypal.me](https://paypal.me). The way it works is we have the
+[home](https://www.paypal.me),
 [terms](https://www.paypal.com/paypalme/pages/terms), and
 [supported countries](https://www.paypal.me/pages/countries) pages that are 100%
 rendered HTML/CSS (and just a tiny bit of vanilla JS), and then the
@@ -39,9 +39,9 @@ data/interactivity needed on the page.
 
 > _I should note that generally I'd suggest that if you're doing any server
 > rendering at all, you'd probably find better performance doing server
-> rendering for everything (using something like [Next.js](https://nextjs.org/)
-> or [gatsby](https://www.gatsbyjs.org/) if you can), not just the skeleton
-> `index.html` as we're doing on [paypal.me](http://paypal.me/). We have our
+> rendering for everything (using something like [Next.js](https://nextjs.org)
+> or [gatsby](https://www.gatsbyjs.org) if you can), not just the skeleton
+> `index.html` as we're doing on [paypal.me](http://paypal.me). We have our
 > reasons (there's nuance in everything and I'm not going to get into this)._
 
 Before my PR, we actually had two systems in place. We used
@@ -63,7 +63,7 @@ of the gotchas and solutions that I ran into while making this transition.
 ### JSX compilation
 
 This was actually as easy as `npm install --save react react-dom` in the
-`server`. Because [paypal.me](http://paypal.me/) uses
+`server`. Because [paypal.me](http://paypal.me) uses
 [paypal-scripts](/blog/tools-without-config), the server's already compiled with
 the built-in babel configuration which will automatically add the necessary
 react plugins if the project lists react as a dep. Nice! I LOVE Toolkits!
@@ -239,16 +239,16 @@ long-term. I hope this is helpful to you! Good luck!
 
 - [The Beginner's Guide to React](http://kcd.im/beginner-react)
 - [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 
 **Things to not miss**:
 
-- [The introduction to React you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
+- [The introduction to React you've been missing](https://youtu.be/SAIdyBFHfVU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk from UtahJS Conf 2018. Lots of livecoding here. In this talk I teach
   React from scratch in a single index.html file with no magic up my sleeves. We
   start with a basic Hello World in vanilla JavaScript and incrementally iterate
   through React APIs and JSX. We continue with introducing more of React's APIs.
-  [Watch all the talks from UtahJS Conf 2018](https://www.youtube.com/playlist?list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva)
-- [Testing React Components @ PayPal 2018–09](https://www.youtube.com/playlist?list=PLV5CVI1eNcJhU1eyqkTjR0B5P7PzMVubB) — I
+  [Watch all the talks from UtahJS Conf 2018](https://youtube.com/playlist?list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva)
+- [Testing React Components @ PayPal 2018–09](https://youtube.com/playlist?list=PLV5CVI1eNcJhU1eyqkTjR0B5P7PzMVubB) — I
   gave a ~4 hour workshop at PayPal last week and livestreamed it.
   [Here's the material](https://github.com/kentcdodds/react-testing-library-course/tree/workshop-2018-09).

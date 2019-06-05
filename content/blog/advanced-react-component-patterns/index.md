@@ -16,7 +16,7 @@ bannerCredit:
 ---
 
 I don't know that I've ever been more excited about an
-[egghead.io](http://egghead.io/) course release before (having personally
+[egghead.io](http://egghead.io) course release before (having personally
 published
 [over 100 videos on egghead](https://egghead.io/instructors/kentcdodds), that's
 saying something...). Two of my courses will be (have now been) released as part
@@ -177,7 +177,7 @@ one 😀
 ![I can hardly wait](./images/4.gif)
 
 I really hope that this course will help you build more useful React components.
-The course will hit [egghead.io](http://egghead.io/) 🔜 Enjoy!
+The course will hit [egghead.io](http://egghead.io) 🔜 Enjoy!
 
 **Things to not miss**:
 

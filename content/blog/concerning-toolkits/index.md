@@ -17,7 +17,7 @@ bannerCredit:
 Current Translations:
 
 - [Español](https://medium.com/@enbonnet/juegos-de-herramientas-toolkits-8f3df94404e9)
-  by [Ender Bonnet](https://medium.com/u/9b3cdbf388a9)
+  by [Ender Bonnet](https://twitter.com/enBonnet)
 
 About a month ago, I roped myself into a conversation about the merits of "zero
 config" tools when jumped into a twitter thread with
@@ -29,8 +29,8 @@ There were some dissenting opinions about this. Because twitter is a pretty poor
 medium to build a case for your opinion, I've decided to write out my thoughts
 and justifications for "zero config" tools. Instead of "zero config" though,
 we're going to refer to these as "toolkits" 🛠 📦 as coined in
-[Dan Abramov](https://medium.com/u/a3a8af6addc1)'s
-[talk](https://www.youtube.com/watch?v=G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL).
+[Dan Abramov](https://twitter.com/dan_abramov)'s
+[talk](https://youtu.be/G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL).
 
 ### So what's a toolkit? 🛠 📦
 
@@ -38,13 +38,12 @@ Toolkits are "a set of tools in any form that allows you to create applications
 with no build configuration." (via [Ronald Rey](https://twitter.com/reyronald)
 in [awesome-toolkits](https://github.com/reyronald/awesome-toolkits)). For a few
 examples:
-[react-scripts](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts)
-(what [create-react-app](https://github.com/facebookincubator/create-react-app)
-leaves you with), my own
-[paypal-scripts/kcd-scripts](/blog/tools-without-config),
+[react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts)
+(what [create-react-app](https://github.com/facebook/create-react-app) leaves
+you with), my own [paypal-scripts/kcd-scripts](/blog/tools-without-config),
 [parcel](https://github.com/parcel-bundler/parcel),
 [preact-cli](https://github.com/developit/preact-cli),
-[ember-cli](https://ember-cli.com/) (the first widely used toolkit for JS), and
+[ember-cli](https://ember-cli.com) (the first widely used toolkit for JS), and
 [many more](https://github.com/reyronald/awesome-toolkits).
 
 The idea behind these tools is it allows you to install a single dependency in
@@ -157,7 +156,7 @@ things that are important to PayPal.
 
 #### But... use cases!?
 
-In response to my tweet, [Sean T. Larkin](https://medium.com/u/393110b0b9e4)
+In response to my tweet, [Sean T. Larkin](https://twitter.com/TheLarkInn)
 [said](https://twitter.com/TheLarkInn/status/941375505730715648):
 
 https://twitter.com/TheLarkInn/status/941375505730715648
@@ -170,9 +169,9 @@ toolkits are at least one of two things:
 
 #### Common use cases
 
-[`create-react-app`](https://github.com/facebookincubator/create-react-app)
-generates a very simple react app that leaves you with toolkit called
-[`react-scripts`](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts).
+[`create-react-app`](https://github.com/facebook/create-react-app) generates a
+very simple react app that leaves you with toolkit called
+[`react-scripts`](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts).
 This covers the building, testing, and linting of your react application
 projects. It's fantastic and used in a
 [TON of projects on GitHub (180k search results)](https://github.com/search?l=JSON&q=react-scripts&type=Code&utf8=%E2%9C%93)
@@ -185,14 +184,14 @@ While it's impressive that real-world production applications are built using
 `react-scripts`, that's actually not the core goal of the project. "The purpose
 of this tool is to provide the best experience for people getting started with
 React"
-([CONTRIBUTING.md#core-ideas](https://github.com/facebookincubator/create-react-app/blob/master/CONTRIBUTING.md#core-ideas)).
+([CONTRIBUTING.md#core-ideas](https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md#core-ideas)).
 
 **Toolkits don't try to handle the 10000 of use cases in the world. Instead,
 they use underlying tools and some glue to put together a single tool that can
 handle as many use cases as possible without complicating the tool too much or
 requiring config.** If your use case is a special snowflake, then you do have a
 recourse available. With `react-scripts` you can
-[eject](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject).
+[eject](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject).
 With most other tools however, you have another option...
 
 #### Still configurable
@@ -207,9 +206,9 @@ This allows toolkits to cover even more use cases. For example, folks who don't
 want to eject from `react-scripts` (because they like all the aforementioned
 benefits), can use
 [react-app-rewired](https://github.com/timarney/react-app-rewired). People using
-[Next.js](https://github.com/zeit/next.js/) have a `next.config.js` file they
-can use to tweak the default behavior. In fact, even
-[`webpack`](https://webpack.js.org/) (inspired in part by
+[Next.js](https://github.com/zeit/next.js) have a `next.config.js` file they can
+use to tweak the default behavior. In fact, even
+[`webpack`](https://webpack.js.org) (inspired in part by
 [parcel](https://github.com/parcel-bundler/parcel) I assume) will soon enter the
 world of toolkits but still configurable tools:
 
@@ -247,7 +246,7 @@ Oh, and if you'd rather use another testing framework, then you can do that too.
 Just don't use the `paypal-scripts test` script. Use whatever parts of the tool
 you want.
 
-One argument that [Rich Harris](https://medium.com/u/a11f7c00cbbe) made against
+One argument that [Rich Harris](https://twitter.com/Rich_Harris) made against
 the `paypal-scripts`approach is
 [this](https://twitter.com/Rich_Harris/status/941355856674934784):
 
@@ -282,8 +281,8 @@ rules).
 
 I realize this newsletter is a little bit more ranty than normal. I hope that
 it's helpful though. I'd like to finish with a quote from
-[Dan Abramov](https://medium.com/u/a3a8af6addc1)'s talk
-["The Melting Pot of JavaScript" at Zeit Day](https://www.youtube.com/watch?v=G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL):
+[Dan Abramov](https://twitter.com/dan_abramov)'s talk
+["The Melting Pot of JavaScript" at Zeit Day](https://youtu.be/G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL):
 
 > _I've heard from several people that they've consolidated their companies tool
 > dependencies into a single package and this worked really well for them. I
@@ -295,9 +294,9 @@ adopters of `paypal-scripts` at PayPal 😀 Good luck! 👍
 
 **Things to not miss**:
 
-- [`babel-plugin-macros`](https://github.com/facebookincubator/create-react-app/pull/3675)
-  [merged into](https://github.com/facebookincubator/create-react-app/pull/3675)
-  [`create-react-app`](https://github.com/facebookincubator/create-react-app/pull/3675)!!!
+- [`babel-plugin-macros`](https://github.com/facebook/create-react-app/pull/3675)
+  [merged into](https://github.com/facebook/create-react-app/pull/3675)
+  [`create-react-app`](https://github.com/facebook/create-react-app/pull/3675)!!!
   CRA v2 will be released soon I think 😀
 - Read
   [Zero Config with babel-plugin-macros](https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros)

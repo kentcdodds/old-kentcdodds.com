@@ -348,7 +348,7 @@ test('you can mock things with jest.mock', () => {
 
 A few weeks ago, my [DevTipsWithKent](http://kcd.im/devtips) (my weekdaily
 livestream on [YouTube](http://kcd.im/youtube)) I livestreamed
-"[Migrating from shallow rendering react components to explicit component mocks](https://www.youtube.com/watch?v=LHUdxkThTM0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)".
+"[Migrating from shallow rendering react components to explicit component mocks](https://youtu.be/LHUdxkThTM0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)".
 In that I demonstrate some of the pitfalls of shallow rendering I describe above
 as well as how to use jest mocking instead.
 
@@ -383,21 +383,21 @@ I hope that helps!
 
 **Learn more about testing from me**:
 
-- [Frontend Masters](https://frontendmasters.com/):
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles/)
+- [Frontend Masters](https://frontendmasters.com):
+  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
   &
-  [Testing React Applications](https://frontendmasters.com/courses/testing-react/)
+  [Testing React Applications](https://frontendmasters.com/courses/testing-react)
 - [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — Something
-  new on [egghead.io](http://egghead.io/). It's a recording of one of my talks
-  especially for [egghead.io](http://egghead.io/). I think you'll really enjoy
-  it (and it's 🆓)
-- [Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
+  new on [egghead.io](http://egghead.io). It's a recording of one of my talks
+  especially for [egghead.io](http://egghead.io). I think you'll really enjoy it
+  (and it's 🆓)
+- [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk at Assert.js conference
   ([and here's the blog post](http://kcd.im/write-tests))
-- [Testing Practices and Principles](https://www.youtube.com/watch?v=VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Testing Practices and Principles](https://youtu.be/VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   recording of my workshop at Assert.js
 
 **Things to not miss**:
 
-- [Avoid setState warnings on unmounted React components](https://www.youtube.com/watch?v=8BNdxFzMeVg&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
-- [Magic Move effect with JavaScript](https://www.youtube.com/watch?v=3AaghqS3W4Y&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+- [Avoid setState warnings on unmounted React components](https://youtu.be/8BNdxFzMeVg&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+- [Magic Move effect with JavaScript](https://youtu.be/3AaghqS3W4Y&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)

@@ -38,19 +38,19 @@ all the users? 😑
 
 One thing that has been awesome for the productivity of the entire React
 community has been
-[create-react-app](https://github.com/facebookincubator/create-react-app). If
-you're unfamiliar, create-react-app bootstraps react applications that have a
-great webpack build and jest for testing that supports babel and eslint. And it
-does this by leaving you with a single tool dependency and no configuration.
-That tool is called "react-scripts." This tool is a CLI
-[with scripts](https://github.com/facebookincubator/create-react-app/tree/master/packages/react-scripts/scripts)
+[create-react-app](https://github.com/facebook/create-react-app). If you're
+unfamiliar, create-react-app bootstraps react applications that have a great
+webpack build and jest for testing that supports babel and eslint. And it does
+this by leaving you with a single tool dependency and no configuration. That
+tool is called "react-scripts." This tool is a CLI
+[with scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts/scripts)
 for (among others) build and test. It couldn't be simpler (and if you think it
 could, then feel free to
-[file an issue](https://github.com/facebookincubator/create-react-app/issues)).
+[file an issue](https://github.com/facebook/create-react-app/issues)).
 
 Inspired by this, **I decided to start working on paypal-scripts**. It's the
 same basic idea, with one major exception. According to
-[create-react-app's core ideas](https://github.com/facebookincubator/create-react-app/blob/44cfbccfda665d6bfb626ce5528697de6033ee8e/CONTRIBUTING.md#core-ideas):
+[create-react-app's core ideas](https://github.com/facebook/create-react-app/blob/44cfbccfda665d6bfb626ce5528697de6033ee8e/CONTRIBUTING.md#core-ideas):
 
 > _The purpose of this tool is to provide the best experience for people getting
 > started with React, and this will always be our first priority._

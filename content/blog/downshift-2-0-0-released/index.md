@@ -61,7 +61,7 @@ We've actually had this for a while too, but I want to call it out especially.
 Thanks to [Nicola Molinari](https://github.com/emmenko) there are
 [official Reason bindings for downshift](https://github.com/downshift-js/downshift/blob/master/README.md#bindings-for-reasonml).
 So you can build UIs for any platform you can imagine with downshift and
-[ReasonML](https://reasonml.github.io/). Soooo cool!
+[ReasonML](https://reasonml.github.io). Soooo cool!
 
 ### Simpler API
 

@@ -15,7 +15,7 @@ keywords:
 banner: ./images/banner.png
 bannerCredit:
   I made this all by myself... Well... Except for [the react
-  logo](https://arcweb.co/is-react-native-a-viable-framework-for-financial-applications/react-logo-1000-transparent/)...
+  logo](https://arcweb.co/is-react-native-a-viable-framework-for-financial-applications/react-logo-1000-transparent)...
   [And the font... and the theme.](https://kcd.im/mft)
 ---
 
@@ -40,7 +40,7 @@ function Example() {
 That `const [count, setCount] = useState(0);` is the line we're going to be
 talking about today. The syntax here is called "array destructuring" and it was
 introduced into JavaScript in the infamous
-([more than famous](https://www.youtube.com/watch?v=0b6_i_eSgR8))
+([more than famous](https://youtu.be/0b6_i_eSgR8))
 [ES6 release](https://github.com/lukehoban/es6features).
 
 I'm a firm believer that:
@@ -89,7 +89,7 @@ didn't have that feature.
 Luckily for us, we have Babel and TypeScript which can compile this newer syntax
 into something older browsers can support (and presumably to something we may be
 more familiar with). So my next step is to go to
-[the online babel REPL](https://babeljs.io/repl/) and paste in the code. Here's
+[the online babel REPL](https://babeljs.io/repl) and paste in the code. Here's
 what the result looks like:
 
 ```javascript
@@ -236,7 +236,7 @@ One thing that's interesting is that the implementation of `useState` exists
 within `react-dom` rather than `react`. I know, that may be confusing because we
 import `useState` from the `react` package, but it actually just delegates to
 the current renderer (which is `react-dom` in our situation here). In fact,
-[`setState` is the same way](https://overreacted.io/how-does-setstate-know-what-to-do/)!
+[`setState` is the same way](https://overreacted.io/how-does-setstate-know-what-to-do)!
 
 Another interesting thing about `useState` is that the implementation in
 `react-dom` is just a few lines:
@@ -297,7 +297,7 @@ that I'll never get tired of in this industry! And learning the fundamentals
 behind these bits of syntax will make you more effective at using them. I should
 mention also that there are more things you can do with destructuring and if
 you're interested there's
-[a section about destructuring in my ES6 workshop](https://www.youtube.com/watch?v=t3R3R7UyN2Y&t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
+[a section about destructuring in my ES6 workshop](https://youtu.be/t3R3R7UyN2Y&t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
 that's available completely free on
 [my YouTube channel](https://kcd.im/youtube). Good luck!
 
@@ -315,11 +315,11 @@ that's available completely free on
 - [Advanced React Component Patterns](https://kcd.im/advanced-react) - Amazing
   patterns to make your components more reusable, flexible, and simple all at
   once. (Also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)).
+  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
 - [My YouTube channel](https://kcd.im/youtube) is also full of content about
-  [React](https://www.youtube.com/user/kentdoddsfamily/search?query=react) that
+  [React](https://youtube.com/user/kentdoddsfamily/search?query=react) that
   you'd probably enjoy (including
-  [workshops, talks](https://www.youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf),
+  [workshops, talks](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf),
   and [livestreams](https://kcd.im/devtips)).
 
 **Things to not miss**:

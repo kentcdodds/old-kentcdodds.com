@@ -17,7 +17,7 @@ bannerCredit:
 
 Current Available Translations:
 
-- [Korean](https://edykim.com/ko/post/prop-drilling/)
+- [Korean](https://edykim.com/ko/post/prop-drilling)
 
 The goal of this post is to not only help you understand what prop drilling is
 (some also refer to it as "threading"), but also when it can be a problem and

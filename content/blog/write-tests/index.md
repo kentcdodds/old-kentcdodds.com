@@ -26,10 +26,10 @@ Current Available Translations:
 
 I've given this blog post as a talk which you can watch here:
 
-https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
-[Socket.io](https://socket.io/) and founder of [Zeit.co](https://zeit.co/) (the
+[Socket.io](https://socket.io) and founder of [Zeit.co](https://zeit.co) (the
 company behind a ton of the awesome stuff coming out lately))
 [tweeted something profound](https://twitter.com/rauchg/status/807626710350839808):
 
@@ -50,8 +50,8 @@ maintaining it.
 
 The thing you should be thinking about when writing tests is how much confidence
 they bring you that your project is free of bugs. Static typing and linting
-tools like [TypeScript](https://www.typescriptlang.org/) and
-[ESLint](https://eslint.org/) can get you a remarkable amount of confidence, and
+tools like [TypeScript](https://www.typescriptlang.org) and
+[ESLint](https://eslint.org) can get you a remarkable amount of confidence, and
 if you're not using these tools I highly suggest you give them a look. That
 said, **even a strongly typed language should have tests.** Typing and linting
 can't ensure your business logic is free of bugs. So you can still seriously
@@ -85,13 +85,13 @@ to get 100% code coverage on anyway.
 
 There are all sorts of different types of testing (check out my 5 minute talk
 about it at Fluent Conf:
-["What we can learn about testing from the wheel"](https://www.youtube.com/watch?v=Da9wfQ0frGA&feature=youtu.be&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
+["What we can learn about testing from the wheel"](https://youtu.be/Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
 They each have trade-offs. The three most common forms of testing we're talking
 about when we talk of automated testing are: Unit, Integration, and End to End.
 
 Here's [a slide](http://slides.com/kentcdodds/testing-workshop#/4/8) from my
 Frontend Masters workshop:
-["Testing JavaScript Applications"](https://frontendmasters.com/courses/testing-javascript/).
+["Testing JavaScript Applications"](https://frontendmasters.com/courses/testing-javascript).
 
 ![testing pyramid](./images/2.png)
 

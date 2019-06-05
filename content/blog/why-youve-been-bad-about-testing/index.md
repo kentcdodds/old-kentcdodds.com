@@ -85,7 +85,7 @@ tactics for getting your testing skills up to date.
 
 **Things to not miss**:
 
-- [TestingJavaScript.com](https://testingjavascript.com/) — This is the huge
+- [TestingJavaScript.com](https://testingjavascript.com) — This is the huge
   thing that I wont stop talking about 😉
 - [`react-suspense-starter`](https://github.com/palmerhq/react-suspense-starter):
   If you haven't had a chance to checkout suspense yet and play around with it,

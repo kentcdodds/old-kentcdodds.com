@@ -19,14 +19,14 @@ I made the decision to write a book in August of last year. For me, the theme
 came first. I wanted to write a book about the importance and power of a growth
 mindset:
 
-https://www.youtube.com/watch?v=_X0mgOOSpLU
+https://youtube.com/watch?v=_X0mgOOSpLU
 
 This is a concept that I want my children to learn and that's why I wanted to
 write a book about it.
 
 Armed with my theme, I started thinking about what story could carry that theme
 into the brains of readers without them even being aware what was happening
-([Inception](https://www.youtube.com/watch?v=d3A3-zSOBT4)).
+([Inception](https://youtu.be/d3A3-zSOBT4)).
 
 Once I decided to write a story, my brain was constantly working on this. My
 kids often ask me to tell them stories (it's the reason I decided I needed to
@@ -71,14 +71,14 @@ which has been an incredible resource. I strongly recommend writers look into
 that methodology and listen to the podcast. After learning several
 outlining/plotting/analysis methodologies, this is still by far my favorite.
 [Isaac Lyman](https://twitter.com/isaacandsuch) introduced me to the
-[Writing Excuses](https://writingexcuses.com/) podcast which has been
+[Writing Excuses](https://writingexcuses.com) podcast which has been
 phenomenally good as well.
 
 So in about two months leading up to starting writing Shurlan, I had consumed a
 crazy number of hours of podcasts, spent an outrageous amount of time thinking
 about my book and talking it over with my wife, and outlined exactly what was
 going to happen in the story using the
-[StoryGrid 15 scenes](https://storygrid.com/15-most-important-scenes/)
+[StoryGrid 15 scenes](https://storygrid.com/15-most-important-scenes)
 methodology.
 
 November came and went and I did it!
@@ -86,7 +86,7 @@ November came and went and I did it!
 https://twitter.com/kentcdodds/status/1068025862555979776
 
 I finished in my hotel while I was in San Jose
-[giving a workshop at PayPal](https://www.youtube.com/watch?v=xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+[giving a workshop at PayPal](https://youtu.be/xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 The next day, I got on a plane to fly home and happened to sit next to author
 [Dan Allen](https://www.facebook.com/authordanallen) who was working on editing
 his previous year's NaNoWriMo to get it ready for publishing. I saw what he was
@@ -109,7 +109,7 @@ manuscript to work with. So I decided to take the entire ending and rewrite it.
 I've been working on that for the last few months and at the end of February I
 finished! AND I LOVE THE NEW ENDING!
 
-... Just in time for [NaNoEdMo](https://www.nanoedmo.com/): National Novel
+... Just in time for [NaNoEdMo](https://www.nanoedmo.com): National Novel
 Editing Month!
 
 > Oh yeah, and I also went to

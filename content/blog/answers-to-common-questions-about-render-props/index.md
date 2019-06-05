@@ -19,10 +19,9 @@ engineers at a local company. They saw my
 and want to dive deeper into the Render Props pattern. (If you're unfamiliar
 with the Render Props pattern, I suggest you stop reading now and read
 ["Use a Render Prop"](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)
-or watch
-["Never Write Another HoC"](https://www.youtube.com/watch?v=BcVAq3YFiuc) (both
-by the illustrious [Michael Jackson](https://twitter.com/mjackson)), then come
-back and continue).
+or watch ["Never Write Another HoC"](https://youtu.be/BcVAq3YFiuc) (both by the
+illustrious [Michael Jackson](https://twitter.com/mjackson)), then come back and
+continue).
 
 In preparing for this training (in addition to
 [creating this](https://codesandbox.io/s/k2krnxml7r)),
@@ -153,7 +152,7 @@ function App() {
 
 My friend [Donavon](https://twitter.com/donavon) would be sad if I didn't bring
 up his preferred pattern of
-[Component Injection](http://americanexpress.io/faccs-are-an-antipattern/). With
+[Component Injection](http://americanexpress.io/faccs-are-an-antipattern). With
 component injection you could do this even more cleanly:
 
 ```jsx
@@ -197,8 +196,8 @@ More awesome to come I think... Good luck! 👍
 - [`awesome-toolkits`](https://github.com/reyronald/awesome-toolkits) by
   [Ronald Rey](https://twitter.com/reyronald). Some awesome projects on there!
   👍
-- [tellmewhenitcloses.com](https://tellmewhenitcloses.com/): "Get 1 email when
-  an issue or PR closes (instead of getting a million emails by subscribing)".
+- [tellmewhenitcloses.com](https://tellmewhenitcloses.com): "Get 1 email when an
+  issue or PR closes (instead of getting a million emails by subscribing)".
   Created by [@thoughtbot](https://twitter.com/thoughtbot).
-- [bundlephobia.com](https://bundlephobia.com/): "Find the cost of adding a npm
+- [bundlephobia.com](https://bundlephobia.com): "Find the cost of adding a npm
   package to your bundle"

@@ -14,7 +14,7 @@ bannerCredit: '[https://javascriptair.com](https://javascriptair.com)'
 ---
 
 With heavy heart 💔, I must officially announce that I'm sunsetting
-[JavaScript Air](https://javascriptair.com/). If you haven't heard of JavaScript
+[JavaScript Air](https://javascriptair.com). If you haven't heard of JavaScript
 Air (I'm surprised you're even reading this), it's the **live** broadcast
 podcast all about JavaScript and the web platform. Learn more about the
 background
@@ -26,7 +26,7 @@ poetic because he was on [our very first show](http://jsair.io/first) as well.
 If you haven't watched that one, I definitely recommend it!
 
 A lot of people are asking me why I'm sunsetting the show. Why don't I just hand
-it off (like I did with [AngularAir](http://angularair.com/))? Why don't I just
+it off (like I did with [AngularAir](http://angularair.com))? Why don't I just
 reduce the frequency to every other week or once a month? Why change anything at
 all? Things are going so well!
 
@@ -64,7 +64,7 @@ some tweets coming from the account eventually.
 
 If you're interested in what I'm doing next, I plan on doing more stuff for
 [egghead.io](http://kcd.im/egghead),
-[Frontend Masters](https://frontendmasters.com/), and I have
+[Frontend Masters](https://frontendmasters.com), and I have
 [a project](https://gist.github.com/kentcdodds/e85254d4dbc1540df6b95eb9ad2098d9)
 that I'm working on and I'm really excited about.
 [Follow me on twitter](https://twitter.com/kentcdodds) to keep up with that :)

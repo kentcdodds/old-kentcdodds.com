@@ -412,6 +412,6 @@ I hope this is helpful to you! Good luck! 👍
 - [Introducing React Performance Devtool !!](https://twitter.com/NTulswani/status/942079674527518720) — by
   [Nitin Tulswani](https://twitter.com/NTulswani). He just keeps coming out with
   the coolest stuff!
-- [JavaScript January](https://www.javascriptjanuary.com/) — This is from my
+- [JavaScript January](https://www.javascriptjanuary.com) — This is from my
   friend [Emily Freeman](https://twitter.com/editingemily). I think it's an
   excellent idea. I'm really looking forward to it!

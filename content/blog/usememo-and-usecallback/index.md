@@ -491,7 +491,7 @@ Related reading:
 - React FAQ:
   ["Are Hooks slow because of creating functions in render?"](https://reactjs.org/docs/hooks-faq.html#are-hooks-slow-because-of-creating-functions-in-render)
 - [Ryan Florence](https://twitter.com/ryanflorence):
-  [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance/)
+  [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance)
 
 P.S. If you're among the few who worry about the move to hooks and that it
 forces us to define functions within our function components where we used to
@@ -499,7 +499,7 @@ define functions as methods on our classes, I would invite you to consider the
 fact that we've been defining methods in the render phase of our components
 since day one... For example:
 
-```javascript
+```jsx
 class FavoriteNumbers extends React.Component {
   render() {
     return (

@@ -59,7 +59,7 @@ doesn't actually see the updates until after the browser has repainted).
 
 ### Conclusion
 
-[I am extremely excited about React's upcoming hooks feature](https://www.youtube.com/watch?v=0jlTw2XI7I8&t=39s&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
+[I am extremely excited about React's upcoming hooks feature](https://youtu.be/0jlTw2XI7I8&t=39s&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
 I think it's going to make React much easier to learn and use.
 
 **Learn more about React from me**:
@@ -70,7 +70,7 @@ change).
 
 **Things to not miss**:
 
-- [useHooks.com](https://usehooks.com/) — One new React Hook recipe every day.
+- [useHooks.com](https://usehooks.com) — One new React Hook recipe every day.
   Really cool resource by [Gabe Ragland](https://twitter.com/gabe_ragland).
 - [fresh-concurrent-react](https://github.com/sw-yx/fresh-concurrent-react) by
   [Shawn Wang](https://twitter.com/swyx) — an as up-to-date-as-possible resource

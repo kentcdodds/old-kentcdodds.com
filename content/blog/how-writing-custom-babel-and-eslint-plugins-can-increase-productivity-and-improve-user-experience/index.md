@@ -17,16 +17,16 @@ bannerCredit: >-
 ---
 
 **_My_**
-[**_Frontend Masters course "Code Transformation and Linting with ASTs"_**](https://frontendmasters.com/courses/linting-asts/)
+[**_Frontend Masters course "Code Transformation and Linting with ASTs"_**](https://frontendmasters.com/courses/linting-asts)
 **_has been released 🎉 🎊 (go there to see a quick intro to the course)! I
 thought you all might be interested to know why you should take the 3 hours and
 42 minutes to learn how to write custom Babel and ESLint plugins._**
 
 Building applications is hard, and it just gets harder as a team and codebase
-grows. Luckily, we have tools like [ESLint](http://eslint.org/) and
-[Babel](https://babeljs.io/) to help us manage these growing codebases to
-prevent bugs and migrate code so we can focus on the domain-specific problems of
-our applications.
+grows. Luckily, we have tools like [ESLint](http://eslint.org) and
+[Babel](https://babeljs.io) to help us manage these growing codebases to prevent
+bugs and migrate code so we can focus on the domain-specific problems of our
+applications.
 
 Both ESLint and Babel have a strong community of plugins (today, there are 857
 packages matching
@@ -52,7 +52,7 @@ The next time you're fixing a bug, you're going to want to make sure it doesn't
 come back. Instead of starting out with
 [test driven development](https://egghead.io/lessons/javascript-use-test-driven-development)
 to do that, first ask yourself: "Could this bug have been prevented using a type
-system (like [Flow](https://flow.org/))?" If not, then ask "Could this bug have
+system (like [Flow](https://flow.org))?" If not, then ask "Could this bug have
 been prevented using a
 [custom ESLint plugin](http://eslint.org/docs/developer-guide/working-with-rules)?"
 The nice thing about these two tools is that you can run them on your code
@@ -94,7 +94,7 @@ The next time you think: "That API is way too tedious" or "We can't do that,
 because performance would suffer big time." then you should consider writing a
 custom babel plugin.
 
-[Babel plugins](https://babeljs.io/docs/plugins/) allow you to manipulate code.
+[Babel plugins](https://babeljs.io/docs/plugins) allow you to manipulate code.
 This can be done as part of your build (to accomplish some built-time
 optimization) or as a one-time operation (called a "codemod" which you can think
 of as a way-more-powerful-than-regex find and replace).
@@ -108,7 +108,7 @@ Here are some examples of how babel plugins have done that:
 
 1.  Shipping your entire application when just pulling up the login screen is
     wasteful, so the community has adopted
-    "[code-splitting](https://webpack.js.org/guides/code-splitting/)" as a means
+    "[code-splitting](https://webpack.js.org/guides/code-splitting)" as a means
     to avoid this.
     [react-loadable](https://github.com/thejameskyle/react-loadable) allows you
     to lazy-load React components. If you want more complicated features (like
@@ -116,7 +116,7 @@ Here are some examples of how babel plugins have done that:
     verbose API, however, the associated
     [babel-plugin-import-inspector](https://github.com/thejameskyle/react-loadable/blob/3a9d9cf34abff075f3ec7919732f95dc6d9453a4/README.md#babel-plugin-import-inspector)
     takes care of that for you automatically.
-2.  [Lodash](https://lodash.com/) is a fairly ubiquitous utility library for
+2.  [Lodash](https://lodash.com) is a fairly ubiquitous utility library for
     JavaScript, but it's also quite large. One neat trick is that if you
     "cherry-pick" the methods you actually use (like:
     `import get from 'lodash/get'`), the code for those will be the only ones
@@ -125,7 +125,7 @@ Here are some examples of how babel plugins have done that:
     you to use the entire library as you normally would
     (`import _ from 'lodash'`) and it will automatically cherry-pick methods for
     you.
-3.  While building the [glamorous.rocks](https://rc.glamorous.rocks/) website
+3.  While building the [glamorous.rocks](https://rc.glamorous.rocks) website
     (soon to be released), I realized that we were loading all localization
     strings regardless of what language you were requesting! So I wrote
     [a custom babel plugin](https://github.com/kentcdodds/glamorous-website/blob/7ab245a4f99af9f217fd9b7d63f59dae1814f08e/other/babel-plugin-l10n-loader.js)
@@ -149,9 +149,9 @@ with major releases that somehow magically ✨ update your code to the new APIs
 [this one from webpack](https://github.com/webpack/webpack-cli/blob/master/lib/migrate.js))?
 You can write things like that as a babel plugin and run those using
 [babel-codemod](https://github.com/square/babel-codemod) (checkout
-[this short demo of babel-codemod](https://www.youtube.com/watch?v=Vj9MOXbC43A&index=1&list=PLV5CVI1eNcJipUVm6RDsOQti_MzHImUMD)).
-([Learn more about codemods from this talk](https://www.youtube.com/watch?v=d0pOgY8__JM)
-by [Christoph](https://medium.com/u/9ea60eb6fc7c)).
+[this short demo of babel-codemod](https://youtu.be/Vj9MOXbC43A&index=1&list=PLV5CVI1eNcJipUVm6RDsOQti_MzHImUMD)).
+([Learn more about codemods from this talk](https://youtu.be/d0pOgY8__JM) by
+[Christoph](https://twitter.com/cpojer)).
 
 > I don't care how good you are at regex, you can do way better with a custom
 > babel plugin.
@@ -199,7 +199,7 @@ P.S. There are several other (free) resources to help you learn ASTs:
 - [babel-plugin-handbook](https://github.com/thejameskyle/babel-handbook/blob/master/translations/en/plugin-handbook.md)
 - [asts-workshop](https://github.com/kentcdodds/asts-workshop) (the repo used
   for the Frontend Masters course)
-- [Writing custom Babel and ESLint plugins with ASTs](https://www.youtube.com/watch?v=VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
+- [Writing custom Babel and ESLint plugins with ASTs](https://youtu.be/VBscbcm2Mok&index=1&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=192s)
 - [A couple lessons on ASTs on egghead.io](http://kcd.im/egghead-asts)
 
 P.S.P.S. I thought I’d mention two babel plugins I’ve written recently that I’m
