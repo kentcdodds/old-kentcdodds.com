@@ -304,7 +304,6 @@ I hope this is helpful to you! Good luck!
   you've missed this, then you've either just started following me or you
   haven't been paying attention 😅
 - [React 🎄](https://react.holiday/) — "This is a React advent thingy; the whole
-  25 days, 25 lessons deal." By
-  [michael chan](https://medium.com/u/49e1066348ce). It's awesome and it's a
-  great companion to my free
+  25 days, 25 lessons deal." By [Michael Chan](https://twitter.com/chantastic).
+  It's awesome and it's a great companion to my free
   [Beginner's Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs).

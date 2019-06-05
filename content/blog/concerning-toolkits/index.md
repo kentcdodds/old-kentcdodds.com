@@ -17,7 +17,7 @@ bannerCredit:
 Current Translations:
 
 - [Español](https://medium.com/@enbonnet/juegos-de-herramientas-toolkits-8f3df94404e9)
-  by [Ender Bonnet](https://medium.com/u/9b3cdbf388a9)
+  by [Ender Bonnet](https://twitter.com/enBonnet)
 
 About a month ago, I roped myself into a conversation about the merits of "zero
 config" tools when jumped into a twitter thread with
@@ -29,7 +29,7 @@ There were some dissenting opinions about this. Because twitter is a pretty poor
 medium to build a case for your opinion, I've decided to write out my thoughts
 and justifications for "zero config" tools. Instead of "zero config" though,
 we're going to refer to these as "toolkits" 🛠 📦 as coined in
-[Dan Abramov](https://medium.com/u/a3a8af6addc1)'s
+[Dan Abramov](https://twitter.com/dan_abramov)'s
 [talk](https://www.youtube.com/watch?v=G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL).
 
 ### So what's a toolkit? 🛠 📦
@@ -157,7 +157,7 @@ things that are important to PayPal.
 
 #### But... use cases!?
 
-In response to my tweet, [Sean T. Larkin](https://medium.com/u/393110b0b9e4)
+In response to my tweet, [Sean T. Larkin](https://twitter.com/TheLarkInn)
 [said](https://twitter.com/TheLarkInn/status/941375505730715648):
 
 https://twitter.com/TheLarkInn/status/941375505730715648
@@ -247,7 +247,7 @@ Oh, and if you'd rather use another testing framework, then you can do that too.
 Just don't use the `paypal-scripts test` script. Use whatever parts of the tool
 you want.
 
-One argument that [Rich Harris](https://medium.com/u/a11f7c00cbbe) made against
+One argument that [Rich Harris](https://twitter.com/Rich_Harris) made against
 the `paypal-scripts`approach is
 [this](https://twitter.com/Rich_Harris/status/941355856674934784):
 
@@ -282,7 +282,7 @@ rules).
 
 I realize this newsletter is a little bit more ranty than normal. I hope that
 it's helpful though. I'd like to finish with a quote from
-[Dan Abramov](https://medium.com/u/a3a8af6addc1)'s talk
+[Dan Abramov](https://twitter.com/dan_abramov)'s talk
 ["The Melting Pot of JavaScript" at Zeit Day](https://www.youtube.com/watch?v=G39lKaONAlA&list=PLBnKlKpPeagkaVtpmZNK6XiWw8yNZmCxL):
 
 > _I've heard from several people that they've consolidated their companies tool

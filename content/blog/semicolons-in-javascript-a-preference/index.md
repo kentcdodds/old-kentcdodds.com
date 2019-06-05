@@ -36,7 +36,7 @@ before I will sanction omitting semicolons in a project.
 The first thing that you need to know is something called Automatic Semicolon
 Insertion (ASI). It's the "feature" that allows us to even have this
 conversation. Read up on that if you're not familiar. Like
-[Kyle's](https://medium.com/u/5dccb9bb4625)
+[Kyle's](https://twitter.com/getify)
 ([post](http://blog.getify.com/not-all-semicolons/)), I agree that you **should
 not** rely on ASI. It's a really bad idea for many reasons.
 
@@ -80,7 +80,7 @@ think that you need semicolons).
 
 ## Why should you use semicolons?
 
-I should note that [Kyle](https://medium.com/@getify)’s post (linked earlier) is
+I should note that [Kyle](https://twitter.com/getify)’s post (linked earlier) is
 not arguing only about ASI but he’s also arguing his reasoning for his own
 preference (using semicolons). I recommend you give that a read as well.
 

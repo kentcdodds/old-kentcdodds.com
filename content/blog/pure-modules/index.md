@@ -16,7 +16,7 @@ bannerCredit:
 
 A few weeks ago, I saw
 [this tweet](https://twitter.com/RReverser/status/984854567706877952) from
-[Ingvar Stepanyan](https://medium.com/u/b9f26c3c865c):
+[Ingvar Stepanyan](https://twitter.com/RReverser):
 
 https://twitter.com/RReverser/status/984854567706877952
 

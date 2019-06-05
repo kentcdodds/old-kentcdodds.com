@@ -26,7 +26,7 @@ thought I'd show you some of those changes!
 In my course, I have a section that shows how to write
 [compound components](https://egghead.io/lessons/react-make-compound-react-components-flexible)
 ([a trick I learned](https://www.youtube.com/watch?v=hEGg-3pIHlE) from
-[Ryan Florence](https://medium.com/u/162352c45b6e)) that use the context API.
+[Ryan Florence](https://twitter.com/ryanflorence)) that use the context API.
 
 ### Example Usage
 
@@ -121,8 +121,8 @@ Another problem with this API is that it didn't allow values to be updated
 through a `shouldComponentUpdate` that returned `false`. So I had an entire
 other lesson to demonstrate how to work around that issue:
 ["Rerender Descendants Through shouldComponentUpdate"](https://egghead.io/lessons/react-rerender-descendants-through-shouldcomponentupdate)
-(hat-tip to [Michael Jackson](https://medium.com/u/7f9567e0d71c) and
-[Ryan Florence](https://medium.com/u/162352c45b6e) for
+(hat-tip to [Michael Jackson](https://twitter.com/mjackson) and
+[Ryan Florence](https://twitter.com/ryanflorence) for
 [react-broadcast](https://github.com/ReactTraining/react-broadcast)).
 
 ### The New Context API
@@ -203,7 +203,7 @@ provide a value that only changes when state changes (and consumers need to be
 re-rendered). This is why I say `value={this.state}`. If you'd prefer not to
 expose the entire state object to consumers, then you could use
 [this trick](https://twitter.com/ryanflorence/status/981179212147998721) I got
-from [Ryan Florence](https://medium.com/u/162352c45b6e).
+from [Ryan Florence](https://twitter.com/ryanflorence).
 
 One slight issue I have with this is that I have to put the `toggle` method into
 `state` and that feels odd to me, but it's an implementation detail that's not a

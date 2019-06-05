@@ -114,7 +114,7 @@ like this. Good luck!
   [FlexboxZombies](https://flexboxzombies.com/)) will be released on Cyber
   Monday! This is the final chance you have to get the pre-order price. Give it
   a look!
-- [Announcing CodeSandbox 2.0](https://medium.com/@compuives/announcing-codesandbox-2-0-938cff3a0fcb)
+- [Announcing CodeSandbox 2.0](https://medium.com/@CompuIves/announcing-codesandbox-2-0-938cff3a0fcb)
   by [Ives van Hoorne](https://twitter.com/CompuIves) who is an incredibly
   skilled engineer.
 - [Assert.js tickets are available](https://www.assertjs.com/)! I'll be giving a

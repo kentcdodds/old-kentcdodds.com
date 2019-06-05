@@ -95,7 +95,7 @@ the benefits of React much better. You'll also be much more effective using
 React because honestly, 90% of being effective with React is understanding
 JavaScript well. For this, I suggest
 [JavaScript30.com](https://javascript30.com/) (totally free) by
-[Wes Bos](https://medium.com/u/86a55cd7983b).
+[Wes Bos](https://twitter.com/wesbos).
 
 In addition, knowing modern JavaScript features will go a long way. Because JSX
 (more on this later) requires a transpiler, most React developers take modern
@@ -156,7 +156,7 @@ and use [`react-router`](https://reacttraining.com/react-router/).
 It has fantastic documentation. But if you really want to get a firm grip on
 what it's doing, then I highly suggest
 ["Build your own react-router"](https://tylermcginnis.com/build-your-own-react-router-v4/)
-by [Tyler McGinnis](https://medium.com/u/c52389e3ee63).
+by [Tyler McGinnis](https://twitter.com/tylermcginnis).
 
 ### State management
 
@@ -180,7 +180,7 @@ I honestly cannot recommend CSS-in-JS enough. Once your app has more than a few
 hundred lines of CSS, you'll find that CSS-in-JS can really simplify things
 conceptually for you. Here's some resources on why:
 
-[A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) — [Mark Dalgleish](https://medium.com/u/d7225e72eea):
+[A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660) — [Mark Dalgleish](https://twitter.com/markdalgleish):
 
 - Scoped styles
 - Critical CSS
@@ -222,8 +222,8 @@ this pattern when building apps as well. Good luck!
 
 **Things to not miss**:
 
-- [Introducing CodeSandbox Live — real time code collaboration in the browser](https://medium.com/@compuives/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9) — This
-  is SO COOL! and [Ives van Hoorne](https://medium.com/u/ee6691f0bd65) is very
-  cool too.
+- [Introducing CodeSandbox Live — real time code collaboration in the browser](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9) — This
+  is SO COOL! and [Ives van Hoorne](https://twitter.com/CompuIves) is very cool
+  too.
 - [React v16.3.0: New lifecycles and context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html) — HOORAY!
   Awesome release!

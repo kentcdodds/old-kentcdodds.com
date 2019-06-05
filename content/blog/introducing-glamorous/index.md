@@ -170,7 +170,7 @@ const MyBouncyDiv = glamorous.div({
 **theming**
 
 With the new `ThemeProvider` (recently added by
-[Alessandro Arnodo](https://medium.com/u/4f41b6fff014)), glamorous also supports
+[Alessandro Arnodo](https://twitter.com/vesparny)), glamorous also supports
 theming:
 
 ```jsx

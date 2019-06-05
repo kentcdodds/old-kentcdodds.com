@@ -151,7 +151,7 @@ You can write things like that as a babel plugin and run those using
 [babel-codemod](https://github.com/square/babel-codemod) (checkout
 [this short demo of babel-codemod](https://www.youtube.com/watch?v=Vj9MOXbC43A&index=1&list=PLV5CVI1eNcJipUVm6RDsOQti_MzHImUMD)).
 ([Learn more about codemods from this talk](https://www.youtube.com/watch?v=d0pOgY8__JM)
-by [Christoph](https://medium.com/u/9ea60eb6fc7c)).
+by [Christoph](https://twitter.com/cpojer)).
 
 > I don't care how good you are at regex, you can do way better with a custom
 > babel plugin.

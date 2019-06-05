@@ -250,5 +250,5 @@ all! 👍
   If you accidentally add a massive dependency, Size Limit will throw an error.
 - [left-pad not found sticker](https://www.stickermule.com/marketplace/11354-left-pad) — See
   below. This was created by my friend
-  [Tyler McGinnis](https://medium.com/u/c52389e3ee63) (of Tyler McGinnis fame)
+  [Tyler McGinnis](https://twitter.com/tylermcginnis) (of Tyler McGinnis fame)
   and I think it’s pretty funny.

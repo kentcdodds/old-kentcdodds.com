@@ -139,7 +139,7 @@ using it to help solve the prop-drilling problem in their apps which hopefully
 will help people not feel like they _have_ to reach for redux so early to solve
 that pain and they can instead stick with vanilla React for longer (or perhaps,
 [Unstated](https://github.com/thejameskyle/unstated) by
-[James Kyle](https://medium.com/u/cc2eaf4f2cd2) is the solution we've all been
+[James Kyle](https://medium.com/@thejameskyle) is the solution we've all been
 waiting for).
 
 I recently [tweeted](https://twitter.com/kentcdodds/status/911276059051438082):
@@ -216,7 +216,7 @@ Makes sense right? I hope it does anyway 😅
 
 I have another example here that really shows how bad the nesting can get and
 how to use a utility called `react-composer` by
-[jmeas](https://medium.com/u/6c546af62f4a) to make it great:
+[jmeas](https://twitter.com/jmeaspls) to make it great:
 
 https://codesandbox.io/s/92pj14134y
 
@@ -236,7 +236,7 @@ everyone's code (as there often is).
 
 I'm excited about what this new API has to offer. As
 [I noted on twitter recently](https://twitter.com/kentcdodds/status/956675313966239745)
-(in response to [Dan Abramov](https://medium.com/u/a3a8af6addc1)'s
+(in response to [Dan Abramov](https://twitter.com/dan_abramov)'s
 [tweet](https://twitter.com/dan_abramov/status/956674265104953344)):
 
 https://twitter.com/kentcdodds/status/956675313966239745
@@ -246,24 +246,23 @@ So much to look forward to! Good luck! 👍
 **Things to not miss**:
 
 - [`react-broadcast`](https://github.com/ReactTraining/react-broadcast) is a
-  library from [Michael Jackson](https://medium.com/u/7f9567e0d71c) that
-  provides the same capabilities as context.
+  library from [Michael Jackson](https://twitter.com/mjackson) that provides the
+  same capabilities as context.
   [The next version](https://github.com/ReactTraining/react-broadcast/tree/next)
   will be a sort of polyfill for `React.createContext` (shoutout to
-  [James Kyle](https://medium.com/u/cc2eaf4f2cd2) as well for creating
+  [James Kyle](https://medium.com/@thejameskyle) as well for creating
   [`create-react-context`](https://github.com/thejameskyle/create-react-context)).
   I actually use `react-broadcast` in
   [my advanced react course](https://egghead.io/courses/advanced-react-component-patterns)
   which I'll have to update when the new context API is official 😅.
 - [`react-fns`](https://github.com/jaredpalmer/react-fns): Browser API's turned
   into declarative React components and HoC's by
-  [Jared Palmer](https://medium.com/u/fb7a3c353cc1) 👏
+  [Jared Palmer](https://twitter.com/jaredpalmer) 👏
 - [`react-composer`](https://github.com/jmeas/react-composer): Compose render
   prop components (what I use in the codesandbox above) by
-  [jmeas](https://medium.com/u/6c546af62f4a)
+  [jmeas](https://twitter.com/jmeaspls)
 - [`react-contextual`](https://github.com/drcmda/react-contextual): Tiny helper
-  around Reacts new context API by
-  [Paul Henschel](https://medium.com/u/ace940cf89ce)
+  around Reacts new context API by [Paul Henschel](https://twitter.com/0xca0a)
 
 https://twitter.com/acdlite/status/960288610229473280
 

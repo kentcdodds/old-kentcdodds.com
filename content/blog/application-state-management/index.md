@@ -127,7 +127,7 @@ great way with `createContext`.
 
 ### [Unstated](https://github.com/jamiebuilds/unstated)
 
-[James Kyle](https://medium.com/u/cc2eaf4f2cd2) created a new library for state
+[James Kyle](https://medium.com/@thejameskyle) created a new library for state
 management that utilizes the new context API. I'm pretty sure this is my new
 go-to for any non-trivial app that needs to share state across the application.
 I like it because it's not a whole lot more on top of context, it's a small
@@ -171,7 +171,7 @@ Try other solutions first. And **limit the amount of state in you store in redux
 to only the state that _needs_ to be at that level of the tree** (probably the
 root if you're a typical redux user).
 [Here](https://twitter.com/housecor/status/962754389533429760) are some wise
-words from [Cory House](https://medium.com/u/e986f7cdb458) about using redux
+words from [Cory House](https://twitter.com/housecor) about using redux
 prematurely/for everything:
 
 https://twitter.com/housecor/status/962754389533429760

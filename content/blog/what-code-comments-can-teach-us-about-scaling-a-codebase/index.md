@@ -253,8 +253,7 @@ See you on [twitter](https://twitter.com/kentcdodds)!
 
 P.S. If you're concerned about violating "separation of concerns" I recommend
 you check out [this talk](https://youtu.be/x7cQ3mrcKaY) by
-[Pete Hunt](https://medium.com/u/3b799f227b58) and re-evaluate what that means
-😀.
+[Pete Hunt](https://twitter.com/floydophone) and re-evaluate what that means 😀.
 
 P.P.S. I should also note that this applies great to images and really any other
 resource as well. And when you use a tool like

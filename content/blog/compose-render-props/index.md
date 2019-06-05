@@ -112,7 +112,7 @@ I hope this is helpful! Good luck!
 
 **Things to not miss**:
 
-- [CodeSandbox Live!!!](https://medium.com/@compuives/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9)
+- [CodeSandbox Live!!!](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9)
 - [React Round Up Episode 3](https://devchat.tv/react-round-up/rru-003-advanced-component-patterns-and-downshift-with-kent-c-dodds) — "Advanced
   Component Patterns and Downshift with Kent C. Dodds"
 - [Test Talks Episode 195](https://joecolantonio.com/testtalks/195-javascript-testing-using-jest-with-kent-c-dodds/) — "JavaScript

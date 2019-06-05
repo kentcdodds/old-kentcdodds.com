@@ -113,7 +113,7 @@ Just rely on your version control system to
 [keep track](https://youtu.be/dQw4w9WgXcQ) of the code that once was. Let it go.
 
 If you’re an eslint person, you might be interested in
-[Gleb Bahmutov](https://medium.com/@bahmutov)’s
+[Gleb Bahmutov](https://twitter.com/bahmutov)’s
 [eslint-rules](https://github.com/bahmutov/eslint-rules) (specifically his
 [no-commented-out-code](https://github.com/bahmutov/eslint-rules#no-commented-out-code)
 rule). If you’re not an eslint person, listen to
@@ -175,7 +175,7 @@ Do you have more questions? Add a comment here or ping me on
 
 ---
 
-**Thank you** [Matt Zabriskie](https://medium.com/@mzabriskie),
-[Lin Clark](https://medium.com/@linclark), [Kyle](https://medium.com/@getify),
+**Thank you** [Matt Zabriskie](https://twitter.com/mzabriskie),
+[Lin Clark](https://twitter.com/linclark), [Kyle](https://twitter.com/getify),
 [Jamund Ferguson](https://twitter.com/xjamundx), and
-[Gleb Bahmutov](https://medium.com/@bahmutov) for reviewing this blog post.
+[Gleb Bahmutov](https://twitter.com/bahmutov) for reviewing this blog post.

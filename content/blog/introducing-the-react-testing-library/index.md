@@ -169,10 +169,10 @@ Originally, the library only provided `queryByTestId` as a utility as suggested
 in my blog post
 "[Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)".
 But thanks to feedback on that blog post from
-[Bergé Greg](https://medium.com/u/2210cd491fe0) as well as inspiration from
+[Bergé Greg](https://twitter.com/neoziro) as well as inspiration from
 [a fantastic (and short!) talk](https://www.youtube.com/watch?v=qfnkDyHVJzs&feature=youtu.be&t=5h39m19s)
-by [Jamie White](https://medium.com/u/76c97151e2a6), I added several more and
-now I'm even happier with this solution.
+by [Jamie White](https://twitter.com/jgwhite), I added several more and now I'm
+even happier with this solution.
 
 You can read more about the library and its APIs in
 [the official docs](https://github.com/testing-library/react-testing-library).
@@ -194,7 +194,7 @@ Here's a high-level overview of what this library gives you:
   but even if you're dealing with immediately resolved promises, you'll need
   your tests to wait for the next tick of the event loop and `wait` is really
   good for that. (Big shout out to
-  [Łukasz Gozda Gandecki](https://medium.com/u/66ce121c68eb) who
+  [Łukasz Gozda Gandecki](https://twitter.com/lgandecki) who
   [introduced this](https://github.com/testing-library/react-testing-library/issues/21)
   as a replacement for the (now deprecated)`flushPromises` API).
 - [`render`](https://github.com/testing-library/react-testing-library/blob/fd2df8d18652786a95bce34741180137f9d2cef2/README.md#render):

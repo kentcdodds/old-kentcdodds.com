@@ -15,7 +15,7 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
-— [ashley williams](https://medium.com/u/1978eb600702) on
+— [Ashley Williams](https://twitter.com/ag_dubs) on
 [JavaScript Air](https://javascriptair.com/)
 [Episode 001: Learning and Developing JavaScript](https://javascriptair.com/episodes/2015-12-16/)
 

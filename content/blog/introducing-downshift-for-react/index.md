@@ -176,7 +176,7 @@ on that state.**
 Another thing you'll notice about the example above is the `render` function is
 passed more than just state. You're also given `getInputProps` and
 `getItemProps`. These are "prop getters" (inspired by
-[Jared Forsyth](https://medium.com/u/ecb657c8b22d)) and _they are the key to
+[Jared Forsyth](https://twitter.com/jaredforsyth)) and _they are the key to
 allowing you to render whatever you like._ So long as you forward all the props
 to the appropriate element you're rendering (if you're rendering it at all),
 then `downshift` will do all the work of wiring things together.
@@ -229,7 +229,7 @@ rather than track it internally with state.
 https://codesandbox.io/s/0mrl1819qw
 
 This allows you to have complete control over the state of your component.
-[Ryan Florence](https://medium.com/u/162352c45b6e) teaches about
+[Ryan Florence](https://twitter.com/ryanflorence) teaches about
 [controllable components (like](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)
 [`downshift`](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)[) in this fantastic lesson](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)
 (I highly recommend it). And you can
@@ -240,7 +240,7 @@ This allows you to have complete control over the state of your component.
 Accessibility (#a11y) is a really important feature, and quite frankly, it's not
 easy to get right for an item selection component like autocomplete. While
 developing it, I referenced several autocomplete components and
-[Marcy Sutton](https://medium.com/u/18a4cb7bfaf) was kind enough to give one of
+[Marcy Sutton](https://twitter.com/marcysutton) was kind enough to give one of
 our examples
 [an accessibility audit](https://github.com/downshift-js/downshift/issues/79)
 (Thank you Marcy!). Pull up [an example](https://3kxm9wk791.codesandbox.io/)
@@ -263,9 +263,8 @@ that gives
 [**a completely frameworkless implementation of autocomplete**](https://dist-woxxqrsspd.now.sh/)
 **in less than 26kb (uncompressed)**. That size _includes_ `downshift` +
 `preact` + `preact-habitat`. You have my permission to jump for joy 😉. Shout
-out to [Jason Miller](https://medium.com/u/30b8f5921914) and
-[Zouhir](https://medium.com/u/1ea4ac63ade6) for
-[`preact`](https://preactjs.com/) and
+out to [Jason Miller](https://twitter.com/_developit) and
+[Zouhir](https://twitter.com/_zouhir) for [`preact`](https://preactjs.com/) and
 [`preact-habitat`](https://github.com/zouhir/preact-habitat)!
 
 ## Where is it?
@@ -299,7 +298,7 @@ next day. It's slowly been gaining popularity (it already has 900 🌟 and 7k
 downloads/month) even before the official 1.0.0 release! So it's definitely
 being used in several places, but the first production deployment that I'm aware
 of is in [codesandbox](https://codesandbox.io/) from
-[Ives van Hoorne](https://medium.com/u/ee6691f0bd65)
+[Ives van Hoorne](https://twitter.com/CompuIves)
 ([gif from his tweet](https://twitter.com/CompuIves/status/897970526832013315)):
 
 ![The codesandbox.io file chooser (press ⌘+P to open it)](./images/4.gif)
@@ -320,7 +319,7 @@ some of these features and get those published to npm.
 ## Conclusion
 
 I need to give a big shoutout to
-[Ryan Florence](https://medium.com/u/162352c45b6e). His lesson on
+[Ryan Florence](https://twitter.com/ryanflorence). His lesson on
 ["Compound Components"](https://courses.reacttraining.com/courses/advanced-react/lectures/3060560)
 got me started on this. `downshift` doesn't actually use compound components
 anymore, but the first incarnation did! So thanks to Ryan! And _you can watch me
@@ -330,13 +329,13 @@ develop most of `downshift` on
 [this first video](https://www.youtube.com/watch?v=2kzD1IjDy5s&t=2468s&index=16&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE))
 📺._
 
-And again, a big shoutout to [Jared Forsyth](https://medium.com/u/ecb657c8b22d)
+And again, a big shoutout to [Jared Forsyth](https://twitter.com/jaredforsyth)
 for inspiring the prop getters one day when we just bumped into each other at
 the airport ✈️ That made a big difference in the direction of the API as well.
 
-Special shoutout to [Travis Arnold](https://medium.com/u/4052582a8a85),
-[Julien Goux](https://medium.com/u/83db96e5266d),
-[the_Simian](https://medium.com/u/f7fbdc8cd7ea), and
+Special shoutout to [Travis Arnold](https://twitter.com/souporserious),
+[Julien Goux](https://twitter.com/_jgx_),
+[the_Simian](https://twitter.com/5imian), and
 [all the contributors](https://github.com/downshift-js/downshift/blob/master/README.md#contributors)
 ([so far](https://github.com/downshift-js/downshift/issues)) for their help with
 forming the `downshift` API into what it is now.
