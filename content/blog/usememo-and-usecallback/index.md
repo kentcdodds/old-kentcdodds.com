@@ -452,7 +452,8 @@ function RenderPrimes({iterations, multiplier}) {
 That could be pretty slow given the right `iterations` or `multiplier` and
 there's not too much you can do about that specifically. You can't automagically
 make your user's hardware faster. But you _can_ make it so you never have to
-calculate the same value twice, which is what `useMemo` will do for you:
+calculate the same value twice in a row, which is what `useMemo` will do for
+you:
 
 ```jsx
 function RenderPrimes({iterations, multiplier}) {
@@ -467,8 +468,8 @@ function RenderPrimes({iterations, multiplier}) {
 The reason this works is because even though you're defining the function to
 calculate the primes on every render (which is VERY fast), React is only calling
 that function when the value is needed. On top of that React also stores
-previous values given the inputs and will return a previous value given the same
-previous inputs. That's memoization at work.
+previous values given the inputs and will return the previous value given the
+same previous inputs. That's memoization at work.
 
 ## Conclusion
 
@@ -491,3 +492,26 @@ Related reading:
   ["Are Hooks slow because of creating functions in render?"](https://reactjs.org/docs/hooks-faq.html#are-hooks-slow-because-of-creating-functions-in-render)
 - [Ryan Florence](https://twitter.com/ryanflorence):
   [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance/)
+
+P.S. If you're among the few who worry about the move to hooks and that it
+forces us to define functions within our function components where we used to
+define functions as methods on our classes, I would invite you to consider the
+fact that we've been defining methods in the render phase of our components
+since day one... For example:
+
+```javascript
+class FavoriteNumbers extends React.Component {
+  render() {
+    return (
+      <ul>
+        {this.props.favoriteNumbers.map(number => (
+          // TADA! This is a function defined in the render method!
+          // Hooks did not introduce this concept.
+          // We've been doing this all along.
+          <li key={number}>{number}</li>
+        ))}
+      </ul>
+    )
+  }
+}
+```
