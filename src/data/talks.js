@@ -71,6 +71,26 @@ export default [
     `,
   },
   {
+    title: 'Testing Implementation Details',
+    resources: [
+      '[codesandbox](https://codesandbox.io/s/react-codesandbox-6cd4i)',
+    ],
+    tags: ['testing', 'react'],
+    deliveries: [
+      {
+        event:
+          '[React Ottawa Meetup](https://www.meetup.com/Ottawa-ReactJS-Meetup/events/260941602/?_xtd=gqFyqTIxNzkwMTQzM6FwpmlwaG9uZQ&from=ref)',
+        date: '2019-05-30',
+        recording:
+          'https://www.youtube.com/watch?v=-FxVK5mOewQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+    ],
+    description: `
+      This is basically the talk version of my blog post
+      [Testing Implementation Details](https://kcd.im/imp-deets).
+    `,
+  },
+  {
     title: 'Requisite React',
     resources: ['[slides](https://github.com/kentcdodds/requisite-react)'],
     tags: ['react'],
