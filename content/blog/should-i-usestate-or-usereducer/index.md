@@ -54,7 +54,7 @@ async function handleSubmit(values) {
   setSubmitted(false)
   setLoading(true)
   try {
-    const responseJson = await fetch(/* stuff *).then(r => r.json())
+    const responseJson = await fetch(/* stuff */).then(r => r.json())
     setSubmitted(true)
     setResponse(responseJson)
     setErrorMessage(null)
