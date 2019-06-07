@@ -90,7 +90,7 @@ exports.handler = async event => {
 
   const message = {
     from: sender,
-    to: `"Kent C. Dodds" <kent@doddsfamily.us>`,
+    to: `"KCD Team" <team@kentcdodds.com>`,
     cc: sender,
     subject,
     text,
