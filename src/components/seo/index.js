@@ -36,7 +36,7 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
     render={({site: {siteMetadata: seo}}) => {
       const postMeta =
         frontmatter || postData.childMarkdownRemark.frontmatter || {}
-      const title = isBlogPost ? postMeta.title : config.siteTitle
+      const title = postMeta.title || config.siteTitle
       const description =
         postMeta.plainTextDescription || postMeta.description || seo.description
       const image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`
