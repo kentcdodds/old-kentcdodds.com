@@ -54,7 +54,7 @@ async function handleSubmit(values) {
   setSubmitted(false)
   setLoading(true)
   try {
-    const responseJson = await fetch(/* stuff *).then(r => r.json())
+    const responseJson = await fetch(/* stuff */).then(r => r.json())
     setSubmitted(true)
     setResponse(responseJson)
     setErrorMessage(null)
@@ -118,7 +118,7 @@ And the `handleSubmit` function would look like this:
 async function handleSubmit(values) {
   dispatch({type: types.SUBMIT_STARTED})
   try {
-    const responseJson = await fetch(/* stuff *).then(r => r.json())
+    const responseJson = await fetch(/* stuff */).then(r => r.json())
     dispatch({type: types.SUBMIT_COMPLETE, response: responseJson})
   } catch (error) {
     dispatch({type: types.SUBMIT_ERROR, errorMessage: 'Something went wrong!'})
