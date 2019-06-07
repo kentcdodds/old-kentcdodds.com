@@ -39,9 +39,7 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
       const title = isBlogPost ? postMeta.title : config.siteTitle
       const description =
         postMeta.plainTextDescription || postMeta.description || seo.description
-      const image = metaImage
-        ? `${seo.canonicalUrl}${metaImage}`
-        : `${defaultMetaImage}`
+      const image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
