@@ -107,10 +107,10 @@ function Blog({data: {allMdx}, pageContext: {pagination}, subscribeForm}) {
                 {post.frontmatter.title}
               </Link>
             </h2>
-            {/* <small>{post.frontmatter.date}</small> */}
             <p
               css={css`
                 margin-top: 10px;
+                overflow-x: scroll;
               `}
             >
               {post.excerpt}
