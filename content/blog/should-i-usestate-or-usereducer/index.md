@@ -2,7 +2,6 @@
 slug: should-i-usestate-or-usereducer
 date: 2019-02-11
 title: 'Should I useState or useReducer?'
-author: 'Kent C. Dodds'
 description:
   Two built-in React hooks that handle state, which one should you use?
 categories: ['react']

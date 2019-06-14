@@ -176,6 +176,7 @@ function Layout({
     keywords = siteKeywords,
     description = siteDescription,
     title = config.siteTitle,
+    lang = siteMetadata.lang,
   } = frontmatter
 
   return (
@@ -190,7 +191,7 @@ function Layout({
           {name: 'keywords', content: keywords.join()},
         ]}
       >
-        <html lang="en" />
+        <html lang={lang} />
         <script src="https://js.tito.io/v1" async />
         <noscript>This site runs best with JavaScript enabled.</noscript>
       </Helmet>
@@ -245,6 +246,7 @@ export default function LayoutWithSiteData(props) {
                 name
               }
               keywords
+              lang
             }
           }
         }

@@ -30,6 +30,7 @@ module.exports = {
     keywords: ['Video Blogger'],
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
+    lang: 'en',
     author: {
       name: config.author,
       minibio: config.minibio,

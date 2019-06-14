@@ -2,7 +2,6 @@
 slug: 'super-simple-start-to-serverless'
 title: 'Super simple start to serverless'
 date: '2019-03-18'
-author: 'Kent C. Dodds'
 description:
   '_Easily create server code without worrying about managing servers yourself_'
 categories:

@@ -2,7 +2,6 @@
 slug: control-props-vs-state-reducers
 date: 2018-06-11
 title: 'When to use Control Props or State Reducers'
-author: 'Kent C. Dodds'
 description:
   'Comparing two similar patterns that enable many of the same use cases.'
 categories: ['test']

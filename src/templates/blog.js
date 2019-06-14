@@ -16,6 +16,7 @@ export default function CodingBlogWithData(props) {
             filter: {
               frontmatter: {published: {ne: false}, unlisted: {ne: true}}
               fileAbsolutePath: {regex: "//content/blog//"}
+              fields: {lang: {eq: "en"}}
             }
           ) {
             edges {

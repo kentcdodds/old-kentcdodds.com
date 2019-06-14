@@ -2,7 +2,6 @@
 slug: 'aha-programming'
 title: 'AHA Programming 💡'
 date: '2019-03-31'
-author: 'Kent C. Dodds'
 description: '_The dangers of DRY, the web of WET, the awesomeness of AHA._'
 categories:
   - 'programming'

@@ -2,7 +2,6 @@
 slug: 'how-to-know-what-to-test'
 title: 'How to know what to test'
 date: '2019-04-13'
-author: 'Kent C. Dodds'
 description: '_Practical advice to help you determine what to test._'
 categories:
   - 'testing'

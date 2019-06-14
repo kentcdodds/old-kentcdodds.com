@@ -2,7 +2,6 @@
 slug: 'how-to-optimize-your-context-value'
 title: 'How to optimize your context value'
 date: '2019-05-06'
-author: 'Kent C. Dodds'
 description:
   "_Why and how you can optimize your context provider's value to avoid
   performance issues_"

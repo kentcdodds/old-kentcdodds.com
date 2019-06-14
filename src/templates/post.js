@@ -46,7 +46,11 @@ function Post({data: {site, mdx}}) {
     bannerCredit,
     noFooter,
     keywords,
+    translations,
+    originalPost,
   } = mdx.fields
+
+  console.log(translations, originalPost)
 
   const {eventsByKeywords, isLoading: isLoadingEvents} = useWorkshopEvents({
     keywords,
@@ -136,9 +140,21 @@ function Post({data: {site, mdx}}) {
           )}
           <br />
           {description ? <Markdown>{description}</Markdown> : null}
+          <span>
+            <span>Translated by readers into: </span>
+            {readerTranslations.map((l, i) => (
+              <React.Fragment key={l}>
+                {l === lang ? (
+                  <b>{codeToLanguage(l)}</b>
+                ) : (
+                  <Link to={languageLink(l)}>{codeToLanguage(l)}</Link>
+                )}
+                {i === readerTranslations.length - 1 ? '' : ' • '}
+              </React.Fragment>
+            ))}
+          </span>
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
         </Container>
-        {/* <SubscribeForm /> */}
       </article>
       <Container noVerticalPadding>
         <p css={{textAlign: 'right'}}>
@@ -198,6 +214,73 @@ function Post({data: {site, mdx}}) {
   )
 }
 
+function Translations({translations, lang, languageLink, editUrl}) {
+  return (
+    <div>
+      <p>
+        {translations.length > 0 ? (
+          <span>
+            Originally written in:{' '}
+            {lang === 'en' ? (
+              <b>English</b>
+            ) : (
+              <Link to={languageLink('en')}>English</Link>
+            )}
+            {hasRussianTranslation && (
+              <span>
+                Originally written in:{' '}
+                {'en' === lang ? (
+                  <b>{codeToLanguage('en')}</b>
+                ) : (
+                  <Link to={languageLink('en')}>English</Link>
+                )}
+                {' • '}
+                {'ru' === lang ? (
+                  <b>Русский (авторский перевод)</b>
+                ) : (
+                  <Link to={languageLink('ru')}>
+                    Русский (авторский перевод)
+                  </Link>
+                )}
+                <br />
+                <br />
+              </span>
+            )}
+            <span>Translated by readers into: </span>
+            {translations.map((l, i) => (
+              <React.Fragment key={l}>
+                {l === lang ? (
+                  <b>{codeToLanguage(l)}</b>
+                ) : (
+                  <Link to={languageLink(l)}>{codeToLanguage(l)}</Link>
+                )}
+                {i === translations.length - 1 ? '' : ' • '}
+              </React.Fragment>
+            ))}
+          </span>
+        ) : null}
+        {lang !== 'en' && (
+          <>
+            <br />
+            <br />
+            {lang !== 'ru' && (
+              <>
+                <Link to={languageLink('en')}>Read the original</Link>
+                {' • '}
+                <a href={editUrl} target="_blank" rel="noopener noreferrer">
+                  Improve this translation
+                </a>
+                {' • '}
+              </>
+            )}
+            <Link to={`/${lang}`}>View all translated posts</Link>{' '}
+          </>
+        )}
+      </p>
+    </div>
+  )
+}
+
 export const pageQuery = graphql`
   query($id: String!) {
     site {
@@ -207,6 +290,8 @@ export const pageQuery = graphql`
     }
     mdx(fields: {id: {eq: $id}}) {
       fields {
+        translations
+        originalPost
         editLink
         isWriting
         title

@@ -2,7 +2,6 @@
 slug: intentional-career-building
 date: 2019-02-11
 title: 'Intentional Career Building'
-author: 'Kent C. Dodds'
 description:
   'I have a challenge and ideas for you to do something to build your career.'
 categories: ['career']

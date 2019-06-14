@@ -2,7 +2,6 @@
 slug: 'aha-testing'
 title: 'AHA Testing 💡'
 date: '2019-04-07'
-author: 'Kent C. Dodds'
 description:
   '_How to apply the "Avoid Hasty Abstraction" principle to your test code._'
 categories:

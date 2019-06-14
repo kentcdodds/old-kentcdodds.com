@@ -2,7 +2,6 @@
 slug: unit-vs-integration-vs-e2e-tests
 date: 2019-01-28
 title: 'Static vs Unit vs Integration vs E2E Testing for Frontend Apps'
-author: 'Kent C. Dodds'
 description: _What these mean, why they matter, and why they don't_
 categories: ['react']
 keywords: ['react', 'javascript', 'hooks']

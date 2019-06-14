@@ -2,7 +2,6 @@
 slug: 'avoid-the-test-user'
 title: 'Avoid the Test User'
 date: '2019-05-24'
-author: 'Kent C. Dodds'
 description:
   '_How your UI code has only two users, but the wrong tests can add a third_'
 categories:

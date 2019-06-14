@@ -2,7 +2,6 @@
 slug: 'authentication-in-react-applications'
 title: 'Authentication in React Applications'
 date: '2019-05-20'
-author: 'Kent C. Dodds'
 description:
   '_How to handle user authentication in modern React Applications with context
   and hooks_'

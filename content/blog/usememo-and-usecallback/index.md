@@ -2,11 +2,12 @@
 slug: 'usememo-and-usecallback'
 title: 'When to useMemo and useCallback'
 date: '2019-06-04'
-author: 'Kent C. Dodds'
 description:
   "_Performance optimizations ALWAYS come with a cost but do NOT always come
   with a benefit. Let's talk about the costs and benefits of useMemo and
   useCallback._"
+translations:
+  - ko
 categories:
   - 'react'
 keywords:

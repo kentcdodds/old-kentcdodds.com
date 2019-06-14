@@ -2,7 +2,6 @@
 slug: first-conference-part-1
 date: 2019-02-13
 title: 'First Conference: Part 1'
-author: 'Kent C. Dodds'
 description:
   _Feelings going to day one of my first writer's conference tomorrow._
 categories: ['writing']

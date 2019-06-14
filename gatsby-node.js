@@ -294,6 +294,24 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     })
 
     createNodeField({
+      name: 'lang',
+      node,
+      value: node.frontmatter.lang || 'en',
+    })
+
+    createNodeField({
+      name: 'translations',
+      node,
+      value: node.frontmatter.translations || [],
+    })
+
+    createNodeField({
+      name: 'originalPost',
+      node,
+      value: node.frontmatter.originalPost,
+    })
+
+    createNodeField({
       name: 'plainTextDescription',
       node,
       value: stripMarkdown(node.frontmatter.description),

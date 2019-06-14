@@ -2,7 +2,6 @@
 slug: first-conference-part-0
 date: 2019-02-12
 title: 'First Conference: Part 0'
-author: 'Kent C. Dodds'
 description: _Feelings going to my first writer's workshop tomorrow._
 categories: ['writing']
 keywords: ['writing', 'fantasy', 'novel']

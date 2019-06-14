@@ -2,7 +2,6 @@
 slug: 'content-based-testing'
 title: 'Content-based Testing'
 date: '2019-06-03'
-author: 'Kent C. Dodds'
 description:
   "_Why it's better to write UI tests that rely on text content than anything
   else._"

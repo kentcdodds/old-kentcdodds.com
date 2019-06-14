@@ -2,7 +2,6 @@
 slug: 'how-to-get-started-with-programming'
 title: 'How to get started with programming'
 date: '2019-03-06'
-author: 'Kent C. Dodds'
 description: _So you want to get into programming? Here's how you get started._
 categories:
   - 'programming'
