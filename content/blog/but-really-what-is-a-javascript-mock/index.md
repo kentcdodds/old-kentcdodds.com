@@ -16,31 +16,11 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/swiss-cheese)'
 ---
 
-Last year, I gave
-[a testing workshop](https://github.com/kentcdodds/testing-workshop/tree/fem)
-for [Frontend Masters](https://frontendmasters.com/courses/testing-javascript)).
-It was great, but I felt that it went a little too fast and I had to skip some
-of the content I'd prepared for time management purposes. So I've revamped
-(rewritten) the project to make it more conducive to learning and I split it
-into two parts:
+> This is a great follow-up to
+> [But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
+> So here we go!
 
-- [Testing Practices and Principles workshop](/workshops/#testing-practices-and-principles)
-- [Testing React and Web Applications](/workshops/#testing-react-and-web-applications)
-
-Last month I gave the Practices and Principles workshop at
-[Assert(JS)](https://www.assertjs.com/training). It was a lot of fun and went
-really well based on the feedback I received. One nice thing about splitting up
-the workshop was that I had more time to cover a subject I'd missed in the
-original workshop: **mocking**. I'd like to share that section with you in blog
-post form now because I think it's a good introduction. It follows the same
-pattern as my
-[But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
-So here we go!
-
-> _If you'd like to follow along, go ahead and_ >
-> [_setup the project_](https://github.com/kentcdodds/testing-workshop/blob/master/README.md#setup) >
-> _and run_ `_npm run test:mock_` _which will start jest in watch mode. Then
-> open_ `_other/whats-a-mock/__tests__/thumb-war.0.js_`
+<!-- gap -->
 
 ### Step 0
 
@@ -391,22 +371,3 @@ own. You can also equip your mock with some utilities as well if you like. The
 world is your oyster.
 
 Good luck!
-
-**Things to not miss**:
-
-- [Understanding Jest Mocks](https://medium.com/@rickhanlonii/understanding-jest-mocks-f0046c68e53c)
-  by [Rick Hanlon](https://twitter.com/rickhanlonii)
-- [Sneak Peek: Beyond React 16](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html) — This
-  was an amazing talk from [Dan Abramov](https://twitter.com/dan_abramov) about
-  the future of Reat which is awesome!
-- The first ever [KnowJS.org](http://knowjs.org) online workshop is happening
-  and I'm speaking/training! Give it a look!
-- [React Dev Summit](https://reactdevsummit.com) — I'm speaking! It's **FREE**
-  to watch live!
-- [Embracing functional style within object-oriented paradigm](https://medium.com/@NTulswani/embracing-functional-style-within-object-oriented-paradigm-3e5e0fe5ccf) — An
-  interesting article by [Nitin Tulswani](https://twitter.com/NTulswani)
-- [react-morph](https://twitter.com/brunnolou/status/967767138625867778) by
-  [Bruno Lourenço‏](https://twitter.com/brunnolou) — An impressive render prop
-  component that gives a really slick morphing animation experience.
-- [Kap](https://getkap.co) is an awesome free and open source screen recording
-  software that's great for making gifs!
