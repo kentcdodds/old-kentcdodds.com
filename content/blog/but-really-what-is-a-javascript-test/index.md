@@ -402,16 +402,3 @@ But hopefully this gives you an idea of the fundamental concepts of testing with
 JavaScript.
 
 I hope this is helpful to you! Good luck! 👍
-
-**Things to not miss**:
-
-- ["But really, what is a JavaScript"](https://twitter.com/horse_js/status/942658114209316864) — from
-  [@horse_js](https://twitter.com/horse_js). A hilarious account that tweets
-  snippets of things out of context. It horsed
-  [my tweet about this newsletter](https://twitter.com/kentcdodds/status/942650918557728768).
-- [Introducing React Performance Devtool !!](https://twitter.com/NTulswani/status/942079674527518720) — by
-  [Nitin Tulswani](https://twitter.com/NTulswani). He just keeps coming out with
-  the coolest stuff!
-- [JavaScript January](https://www.javascriptjanuary.com) — This is from my
-  friend [Emily Freeman](https://twitter.com/editingemily). I think it's an
-  excellent idea. I'm really looking forward to it!
