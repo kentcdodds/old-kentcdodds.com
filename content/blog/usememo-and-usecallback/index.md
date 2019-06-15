@@ -440,7 +440,7 @@ And get it lazily:
 const a = React.useMemo(() => ({b: props.b}), [props.b])
 ```
 
-This isn't really useful for that case above, but image that you've got a
+This isn't really useful for that case above, but imagine that you've got a
 function that synchronously calculates a value which is computationally
 expensive to calculate (I mean how many apps actually need to
 [calculate prime numbers like this](https://developer.mozilla.org/en-US/docs/Tools/Performance/Scenarios/Intensive_JavaScript)
