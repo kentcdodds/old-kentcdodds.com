@@ -108,6 +108,8 @@ function SearchScreen() {
           onChange={useDebFn(() => setSearch(searchInputRef.current.value), {
             wait: 200,
           })}
+          type="search"
+          autoFocus
         />
       </div>
       <div
