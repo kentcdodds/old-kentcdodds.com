@@ -528,6 +528,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ankri",
+      "name": "Andy Krings-Stern",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2842920?v=4",
+      "profile": "https://github.com/ankri",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
