@@ -111,6 +111,30 @@ also improves the performance of your application. A state change in one corner
 of your application component tree will re-render a lot fewer components than a
 state change at the top of the tree. Localize your state.
 
+### "Reusable" utility files
+
+This applies to "utility" files and functions as well. Imagine you're writing a
+component and see a nice bit of code that could be extracted into its own
+function. You extract it and think: "Huh... I'll bet a lot of people could use
+this." So you pull it out and put it into your app's `utils/` directory and move
+on with your life.
+
+Later, your component is deleted, but the utility you wrote is out of sight, out
+of mind and it remains (along with its tests) because the person who deleted it
+assumed it was more widely used. Over the years, engineers work hard to make
+sure that the function and its tests continue to run and function properly
+without even realizing that it's no longer needed at all. Wasted effort and
+cognitive load.
+
+If instead you had just left that function directly in the file that used it,
+the story would be completely different. I'm not saying don't bother unit
+testing complex utility functions (please do), but keeping them closer to where
+they're needed helps you avoid problems.
+
+> And for heaven's sake,
+> [please DELETE THIS ESLINT RULE](https://github.com/yannickcr/eslint-plugin-react/blob/e6b4c33a1db4cc94c3e9223b09fb92b1dbddc00d/docs/rules/no-multi-comp.md)
+> and all rules like it.
+
 ## The principle
 
 **The concept of co-location can be boiled down to this fundamental principle:**
