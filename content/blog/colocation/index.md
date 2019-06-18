@@ -139,7 +139,7 @@ they're needed helps you avoid problems.
 
 **The concept of co-location can be boiled down to this fundamental principle:**
 
-> Place files as close to where they're relevant as possible
+> Place code as close to where it's relevant as possible
 
 You might also say: "Things that change together should be located as close as
 reasonable." ([Dan Abramov](https://twitter.com/dan_abramov) said something like
