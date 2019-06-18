@@ -47,7 +47,7 @@ But check this out:
 const a = false
 const b = false
 const c = true
-const d = (a && b) || c
+const d = a && b || c
 ```
 
 What's the value of `d` here? Do you know the order of operations of those
