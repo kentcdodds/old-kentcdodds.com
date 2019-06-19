@@ -5,7 +5,7 @@ title: 'Static vs Unit vs Integration vs E2E Testing for Frontend Apps'
 author: 'Kent C. Dodds'
 description: _What these mean, why they matter, and why they don't_
 categories: ['testing']
-keywords: ['react', 'javascript', 'hooks']
+keywords: ['testing', 'react', 'javascript', 'hooks']
 published: true
 banner: './banner.png'
 bannerCredit:
