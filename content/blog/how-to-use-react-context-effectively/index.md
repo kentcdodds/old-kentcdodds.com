@@ -156,7 +156,7 @@ export {CountProvider}
 > it has to be this complicated every time!** Feel free to use `useState` if
 > that suites your scenario. In addition, some providers are going to be short
 > and simple like this, and others are going to be MUCH more involved with
-> dozens of hooks.
+> many hooks.
 
 ## The Custom Consumer Hook
 
