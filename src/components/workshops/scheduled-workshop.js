@@ -12,6 +12,7 @@ import testingIcon from '../../images/icons/testing.svg'
 import discountStripe from '../../images/icons/stripe.svg'
 import {format} from 'date-fns'
 import TimeRange from './time-range'
+import moment from 'moment'
 
 function ScheduledWorkshop({
   title,
@@ -20,6 +21,7 @@ function ScheduledWorkshop({
   waitlistUrl,
   description,
   date,
+  endDate,
   startTime,
   endTime,
   buttonText = 'Book a seat',
@@ -180,7 +182,10 @@ function ScheduledWorkshop({
         `}
       >
         <div className="date">
-          {format(new Date(startTime), 'MMM Do, YYYY')}
+          {moment(date).format('MMM Do, YYYY')}{' '}
+          {endDate &&
+            endDate != date &&
+            ` - ${moment(endDate).format('MMM Do, YYYY')}`}
         </div>
         {startTime ? (
           <TimeRange startTime={startTime} endTime={endTime} />
@@ -212,14 +217,16 @@ function ScheduledWorkshop({
       >
         {description}
       </Markdown>
-      <Link
-        to={url}
-        css={css`
-          color: ${theme.brand.primary};
-        `}
-      >
-        Learn more
-      </Link>
+      {url && (
+        <Link
+          to={url}
+          css={css`
+            color: ${theme.brand.primary};
+          `}
+        >
+          Learn more
+        </Link>
+      )}
     </div>
   )
 }

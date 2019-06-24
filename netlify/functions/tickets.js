@@ -17,7 +17,7 @@ function buildEvents(eventsData) {
       return isFuture(new Date(event.start_date)) && event.live
     }),
     eventData => {
-      const {slug, url, start_date, logo, title} = eventData
+      const {slug, url, start_date, end_date, logo, title} = eventData
       function getReleases(eventSlug) {
         return axios
           .get(`https://api.tito.io/v3/${site}/${eventSlug}/releases`)
@@ -90,6 +90,7 @@ function buildEvents(eventsData) {
               logo,
               url,
               date: start_date,
+              ...(end_date ? {endDate: end_date} : {}),
               startTime: _.get(activity, 'start_at'),
               endTime: _.get(activity, 'end_at'),
             }
