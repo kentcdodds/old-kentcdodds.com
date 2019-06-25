@@ -182,7 +182,7 @@ function ScheduledWorkshop({
         `}
       >
         <div className="date">
-          {moment(date).format('MMM Do, YYYY')}{' '}
+          {moment(date).format('MMM Do, YYYY')}
           {endDate &&
             endDate != date &&
             ` - ${moment(endDate).format('MMM Do, YYYY')}`}
