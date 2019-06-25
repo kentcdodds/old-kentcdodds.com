@@ -34,7 +34,6 @@ function UpcomingWorkshops({events, headline}) {
                 title={event.title}
                 imageUrl={event.logo.url}
                 date={event.date}
-                endDate={event.endDate}
                 spotsRemaining={event.remaining}
                 bookUrl={discount ? discount.url : event.url}
                 url={event.workshopSlug}
@@ -42,6 +41,7 @@ function UpcomingWorkshops({events, headline}) {
                 key={event.slug}
                 startTime={event.startTime}
                 endTime={event.endTime}
+                location={event.location}
                 discount={discount}
               />
             )

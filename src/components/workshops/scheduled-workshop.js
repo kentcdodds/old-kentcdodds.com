@@ -12,7 +12,6 @@ import testingIcon from '../../images/icons/testing.svg'
 import discountStripe from '../../images/icons/stripe.svg'
 import {format} from 'date-fns'
 import TimeRange from './time-range'
-import moment from 'moment'
 
 function ScheduledWorkshop({
   title,
@@ -21,7 +20,6 @@ function ScheduledWorkshop({
   waitlistUrl,
   description,
   date,
-  endDate,
   startTime,
   endTime,
   buttonText = 'Book a seat',
@@ -124,13 +122,15 @@ function ScheduledWorkshop({
                 padding-right: 10px;
               `}
             >
-              <img
-                css={css`
-                  max-width: 145px;
-                `}
-                src={techImage(tech)}
-                alt={tech}
-              />
+              {techImage(tech) ? (
+                <img
+                  css={css`
+                    max-width: 145px;
+                  `}
+                  src={techImage(tech)}
+                  alt={tech}
+                />
+              ) : null}
             </span>
             <h1>{title}</h1>
           </Link>
@@ -181,12 +181,7 @@ function ScheduledWorkshop({
           margin-top: 10px;
         `}
       >
-        <div className="date">
-          {moment(date).format('MMM Do, YYYY')}
-          {endDate &&
-            endDate != date &&
-            ` - ${moment(endDate).format('MMM Do, YYYY')}`}
-        </div>
+        <div className="date">{date}</div>
         {startTime ? (
           <TimeRange startTime={startTime} endTime={endTime} />
         ) : (

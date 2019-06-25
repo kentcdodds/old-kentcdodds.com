@@ -17,7 +17,7 @@ function buildEvents(eventsData) {
       return isFuture(new Date(event.start_date)) && event.live
     }),
     eventData => {
-      const {slug, url, start_date, end_date, logo, title} = eventData
+      const {slug, url, logo, title} = eventData
       function getReleases(eventSlug) {
         return axios
           .get(`https://api.tito.io/v3/${site}/${eventSlug}/releases`)
@@ -44,10 +44,24 @@ function buildEvents(eventsData) {
           .then(({data}) => data.activities)
       }
 
+      function getEvent(eventSlug) {
+        // this one gives back a bunch of data and was added so we could get the location
+        // when we have more time, we may be able to see if we can get rid of some of the other
+        // requests because this one seems to have a lot of the same data as the others.
+        return axios
+          .get(`https://api.tito.io/v3/${site}/${eventSlug}`)
+          .then(({data}) => data.event)
+      }
+
       return axios
-        .all([getReleases(slug), getDiscountCodes(slug), getActivities(slug)])
+        .all([
+          getReleases(slug),
+          getDiscountCodes(slug),
+          getActivities(slug),
+          getEvent(slug),
+        ])
         .then(
-          axios.spread((releases, codes, activities) => {
+          axios.spread((releases, codes, activities, event) => {
             const discounts = _.reduce(
               _.map(codes, code => {
                 return {url: code.share_url, code: code.code, ends: code.end_at}
@@ -66,7 +80,7 @@ function buildEvents(eventsData) {
 
             const activity = _.first(activities)
 
-            const event = _.reduce(
+            const tickets = _.reduce(
               releases,
               (acc, release) => {
                 return {
@@ -83,14 +97,14 @@ function buildEvents(eventsData) {
               },
             )
             return {
-              ...event,
+              ...tickets,
+              location: event.location,
               slug,
               discounts,
               title,
               logo,
               url,
-              date: start_date,
-              ...(end_date ? {endDate: end_date} : {}),
+              date: event.date_or_range,
               startTime: _.get(activity, 'start_at'),
               endTime: _.get(activity, 'end_at'),
             }
