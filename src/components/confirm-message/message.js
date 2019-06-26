@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import Markdown from 'react-markdown'
 import Link from '../link'
 import {bpMaxSM} from '../../lib/breakpoints'
+import {fontWeights} from '../../lib/typography'
 
 export default function Message({
   illustration,
@@ -72,16 +73,13 @@ export const Center = styled.div`
   p {
     margin-top: 10px;
     max-width: 400px;
+    font-weight: ${fontWeights.regular};
     line-height: 1.5;
-    font-weight: 400;
-    strong {
-      font-weight: 600;
-    }
     animation: ${FadeIn} 600ms ease-in-out 1;
   }
   h2 {
     font-size: 26px;
-    font-weight: 400;
+    font-weight: ${fontWeights.regular};
     margin-bottom: 0;
     margin-top: 25px;
     animation: ${FadeIn} 400ms ease-in-out 1;

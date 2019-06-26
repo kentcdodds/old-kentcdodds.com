@@ -2,7 +2,7 @@ import React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {lighten, darken} from 'polished'
-import {rhythm, fonts} from '../../lib/typography'
+import {rhythm, fontWeights} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
 import Countdown from 'react-countdown-now'
 
@@ -71,7 +71,7 @@ const TitoWidget = props => {
           display: flex;
           flex-direction: row-reverse;
           justify-content: flex-end;
-          font-family: ${fonts.semibold}, sans-serif;
+          font-weight: ${fontWeights.semibold};
           margin-bottom: 7px;
         }
         .price-was {
@@ -264,7 +264,7 @@ const Register = props => {
           font-size: 24px;
           text-transform: line-through;
           opacity: 0.8;
-          font-family: ${fonts.regular};
+          font-weight: ${fontWeights.regular};
         }
       `}
       {...restProps}
@@ -313,7 +313,7 @@ const Register = props => {
                 border-radius: 0 0 5px 5px;
               }
               p {
-                font-family: ${fonts.light};
+                font-weight: ${fontWeights.light};
               }
               ${bpMaxSM} {
                 padding: ${rhythm(1)};

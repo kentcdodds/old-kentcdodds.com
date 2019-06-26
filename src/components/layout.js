@@ -12,7 +12,7 @@ import mdxComponents from 'components/mdx'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 import reset from '../lib/reset'
-import {fonts} from '../lib/typography'
+import {fontWeights} from '../lib/typography'
 import config from '../../config/website'
 
 export const globalStyles = css`
@@ -35,15 +35,18 @@ export const globalStyles = css`
     border-top: 1px solid ${theme.colors.gray};
     background: none;
   }
-  em {
-    font-family: ${fonts.regularItalic};
-  }
   strong,
   b {
-    font-family: ${fonts.semibold};
-    em {
-      font-family: ${fonts.semiboldItalic};
-    }
+    /* https://github.com/necolas/normalize.css/blob/fc091cce1534909334c1911709a39c22d406977b/normalize.css#L91-L98
+     * this makes <strong> and <b> relative to its enclosing element
+     * it will find its closest heavier weight declared in font-face
+     * in our case:
+     * 300 (thin) becomes 400 (regular)
+     * 400 (regular) becomes 600 (semibold)
+     * 600 (semibold) becomes 700 (bold)
+     * 700 (bold) becomes 900 (black)
+     */
+    font-weight: bolder;
   }
   input,
   textarea {
@@ -51,7 +54,7 @@ export const globalStyles = css`
     border: 1px solid ${theme.colors.gray};
     padding: 5px 10px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    font-family: ${fonts.regular};
+    font-weight: ${fontWeights.regular};
     ::placeholder {
       opacity: 0.4;
     }

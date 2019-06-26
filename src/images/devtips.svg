@@ -26,7 +26,7 @@
             </mask>
             <use fill="url(#devtips-d)" xlink:href="#devtips-c"/>
             <path fill="#BE3F36" fill-rule="nonzero" d="M108.302275,62.8267022 C106.966181,61.9004081 105.188112,62.8939752 105.188112,64.5499908 L105.188112,78.3927355 C105.188112,80.0487247 106.968724,81.0423182 108.302275,80.1160241 L118.28293,73.1608696 C119.48984,72.2992253 119.48984,70.5112869 118.28293,69.6496426 L108.302275,62.8267022 Z" mask="url(#devtips-e)"/>
-            <text fill="#BE3F36" font-family="Inter-Black, Inter" font-size="10" font-weight="700" letter-spacing=".87" mask="url(#devtips-e)">
+            <text fill="#BE3F36" font-family="Inter" font-size="10" font-weight="900" letter-spacing=".87" mask="url(#devtips-e)">
               <tspan x="175" y="20">LIV</tspan> <tspan x="194.187" y="20">E</tspan>
             </text>
             <circle cx="207" cy="16" r="2" fill="#BE3F36" mask="url(#devtips-e)"/>

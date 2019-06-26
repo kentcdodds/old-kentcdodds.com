@@ -1,6 +1,7 @@
 import React from 'react'
 import {navigate} from 'gatsby-link'
 import parseQueryString from '../../lib/parse-query-string'
+import {fontWeights} from '../../lib/typography'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
   return (
@@ -56,7 +57,7 @@ function CountupTextarea({
           opacity: level,
           fontSize: 12,
           color: level > 0.3 ? 'red' : null,
-          fontWeight: level > 0.5 ? 'bold' : null,
+          fontWeight: level > 0.5 ? fontWeights.bold : null,
         }}
       >
         <span>

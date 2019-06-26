@@ -1,6 +1,6 @@
 import React from 'react'
 import {css, keyframes} from '@emotion/core'
-import {fonts} from '../../lib/typography'
+import {fontWeights} from '../../lib/typography'
 import theme from '../../../config/theme'
 
 // PleaseConfirmIllustration
@@ -10,7 +10,7 @@ from, 0% {
 }
 to, 100% {
     transform: translate(10px, 0);
-    
+
 }
 `
 const ButtonRollOut = keyframes`
@@ -70,7 +70,7 @@ const NotificationFadeIn = keyframes`
 100% {
     opacity: 1;
     r: 9.5;
-    
+
 }
 `
 // SVG
@@ -146,9 +146,9 @@ export const PleaseConfirmIllustration = (
         />
         <text
           fill="#FFF"
-          fontFamily={fonts.bold}
+          fontWeight={fontWeights.bold}
           fontSize="10"
-          fontWeight="600"
+          // fontWeight="600" // need clarification
           letterSpacing="1"
         >
           <tspan x="77.63" y="12.308">
@@ -371,9 +371,9 @@ export const ThankYouIllustration = (
           />
           <text
             fill="#FFF"
-            fontFamily={fonts.regular}
+            fontWeight={fontWeights.regular}
             fontSize="14.3"
-            fontWeight="500"
+            // fontWeight="500" // need clarification
           >
             <tspan x="13.713" y="39">
               WELCOME
@@ -394,7 +394,7 @@ from, 0% {
 }
 20% {
     opacity: 1;
-    
+
 }
 to, 100% {
     opacity: 1;
@@ -412,7 +412,7 @@ from, 0% {
 }
 85% {
     opacity: 1;
-    transform: scale(1, 1);    
+    transform: scale(1, 1);
 }
 to, 100% {
     transform: scale(1,1) translate(0, 50px);

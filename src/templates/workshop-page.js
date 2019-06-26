@@ -5,7 +5,7 @@ import SEO from 'components/seo'
 import Container from 'components/container'
 import Layout from 'components/layout'
 import {css} from '@emotion/core'
-import {fonts} from '../lib/typography'
+import {fontWeights} from '../lib/typography'
 import get from 'lodash/get'
 import isEmpty from 'lodash/isEmpty'
 import Header from 'components/workshops/header'
@@ -67,7 +67,7 @@ function Workshop({data: {site, mdx}}) {
                 }
                 h1 {
                   font-size: 1.75rem;
-                  font-family: ${fonts.semibold}, sans-serif;
+                  font-weight: ${fontWeights.semibold};
                 }
               `}
             >
@@ -107,8 +107,7 @@ function Workshop({data: {site, mdx}}) {
                 text-align: center;
                 font-size: 15px;
                 opacity: 0.6;
-                font-family: ${fonts.regular}, sans-serif;
-                font-weight: normal;
+                font-weight: ${fontWeights.regular};
                 margin: 0 5px;
               }
             `}

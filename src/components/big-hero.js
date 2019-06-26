@@ -2,7 +2,7 @@ import React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
-import {rhythm, fonts} from '../lib/typography'
+import {rhythm, fontWeights} from '../lib/typography'
 import Markdown from 'react-markdown'
 import Container from 'components/container'
 
@@ -113,7 +113,7 @@ function Hero({
                 padding-bottom: 30px;
                 p {
                   color: hsla(255, 100%, 100%, 0.9);
-                  font-family: ${fonts.light};
+                  font-weight: ${fontWeights.light};
                 }
                 max-width: 400px;
                 margin-top: ${rhythm(0.5)};

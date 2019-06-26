@@ -10,7 +10,7 @@ import Hero from 'components/big-hero'
 import TestingCta from 'components/testing-cta'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
-import {rhythm, fonts} from '../lib/typography'
+import {rhythm, fontWeights} from '../lib/typography'
 
 import workshopsImg from '../images/workshops.svg'
 import talksImg from '../images/talks.svg'
@@ -68,7 +68,7 @@ const Card = ({
       ${!big &&
         `
         align-items: flex-start;
-        flex-direction: column; 
+        flex-direction: column;
         img {
           margin-top: 20px;
         }
@@ -109,7 +109,7 @@ const PostTitle = styled.h3`
   margin-bottom: ${rhythm(0.3)};
   transition: ${theme.transition.ease};
   font-size: 22px;
-  font-family: ${fonts.regular};
+  font-weight: ${fontWeights.regular};
   :hover {
     color: ${theme.brand.primary};
     transition: ${theme.transition.ease};

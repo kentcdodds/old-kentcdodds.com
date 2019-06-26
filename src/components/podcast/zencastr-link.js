@@ -1,5 +1,6 @@
 import React from 'react'
 import parseQueryString from '../../lib/parse-query-string'
+import {fontWeights} from '../../lib/typography'
 
 function ZencastrLink() {
   const [{link, retrievedLink}, dispatch] = React.useReducer(
@@ -25,7 +26,7 @@ function ZencastrLink() {
       {retrievedLink ? (
         link ? (
           <a
-            css={{fontSize: '1.1em', fontWeight: 'bold'}}
+            css={{fontSize: '1.1em', fontWeight: fontWeights.bold}}
             target="_blank"
             rel="noopener noreferrer"
             href={link}

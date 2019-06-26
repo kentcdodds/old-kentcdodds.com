@@ -1,4 +1,5 @@
 import React from 'react'
+import {fontWeights} from '../lib/typography'
 
 function CountupTextarea({
   maxLength,
@@ -27,7 +28,7 @@ function CountupTextarea({
           opacity: level,
           fontSize: 12,
           color: level > 0.3 ? 'red' : null,
-          fontWeight: level > 0.5 ? 'bold' : null,
+          fontWeight: level > 0.5 ? fontWeights.bold : null,
         }}
       >
         <span>

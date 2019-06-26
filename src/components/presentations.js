@@ -3,6 +3,7 @@ import {css} from '@emotion/core'
 import {isEmpty} from 'lodash'
 import Markdown from 'react-markdown'
 import {bpMaxSM} from '../lib/breakpoints'
+import {fontWeights} from '../lib/typography'
 
 function Presentations({presentations}) {
   return presentations.map(
@@ -28,6 +29,7 @@ function Presentations({presentations}) {
             letter-spacing: 1px;
             line-height: 34px;
             margin: 10px 0;
+            font-weight: ${fontWeights.semibold};
           }
           h2 {
             margin: 0;
