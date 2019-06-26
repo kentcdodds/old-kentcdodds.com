@@ -138,10 +138,10 @@ function countReducer(state, action) {
 }
 
 function CountProvider({children}) {
-  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0})
   return (
     <CountStateContext.Provider value={state}>
-      <CountDispatchContext.Provider value={setCount}>
+      <CountDispatchContext.Provider value={dispatch}>
         {children}
       </CountDispatchContext.Provider>
     </CountStateContext.Provider>
@@ -155,8 +155,8 @@ export {CountProvider}
 > show you what a more real-world scenario would be like. **This does not mean
 > it has to be this complicated every time!** Feel free to use `useState` if
 > that suites your scenario. In addition, some providers are going to be short
-> and simple like this, and others are going to be MUCH more involved with
-> many hooks.
+> and simple like this, and others are going to be MUCH more involved with many
+> hooks.
 
 ## The Custom Consumer Hook
 
@@ -209,10 +209,10 @@ function countReducer(state, action) {
 }
 
 function CountProvider({children}) {
-  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0})
   return (
     <CountStateContext.Provider value={state}>
-      <CountDispatchContext.Provider value={setCount}>
+      <CountDispatchContext.Provider value={dispatch}>
         {children}
       </CountDispatchContext.Provider>
     </CountStateContext.Provider>
@@ -306,11 +306,11 @@ function countReducer(state: State, action: Action) {
 }
 
 function CountProvider({children}: CountProviderProps) {
-  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0})
 
   return (
     <CountStateContext.Provider value={state}>
-      <CountDispatchContext.Provider value={setCount}>
+      <CountDispatchContext.Provider value={dispatch}>
         {children}
       </CountDispatchContext.Provider>
     </CountStateContext.Provider>
@@ -464,10 +464,10 @@ function countReducer(state, action) {
 }
 
 function CountProvider({children}) {
-  const [state, setCount] = React.useReducer(countReducer, {count: 0})
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0})
   return (
     <CountStateContext.Provider value={state}>
-      <CountDispatchContext.Provider value={setCount}>
+      <CountDispatchContext.Provider value={dispatch}>
         {children}
       </CountDispatchContext.Provider>
     </CountStateContext.Provider>
