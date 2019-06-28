@@ -286,6 +286,16 @@ holistically.
 
 ## So what does this mean for me?
 
+In summary, if you're experiencing performance issues, try this:
+
+1. "Lift" the expensive component to a parent where it will be rendered less often.
+2. Then pass the expensive component down as a prop.
+
+You may find doing so solves your performance problem without the needing to spread
+`React.memo` all over you codebase like a giant intrusive band-aid 🤕😉
+
+## Demo
+
 Creating a practical demo of a slow app in React is tricky because it kinda
 requires building a full app, but I do have a contrived example app that has a
 before/after that you can check out and play with:
