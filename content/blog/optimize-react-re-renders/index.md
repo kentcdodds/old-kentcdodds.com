@@ -288,10 +288,10 @@ holistically.
 
 In summary, if you're experiencing performance issues, try this:
 1. "Lift" the expensive component to a parent where it will be rendered less often.
-2. Then pass the expensive component down as a child prop.
+2. Then pass the expensive component down as a prop.
 
-You may find doing so solves your performance problem without the need for tools
-like React.memo. 
+You may find doing so solves your performance problem without the needing to spread
+`React.memo` all over you codebase like a giant intrusive band-aid 🤕😉
 
 ## Demo
 
