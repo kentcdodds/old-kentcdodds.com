@@ -287,6 +287,7 @@ holistically.
 ## So what does this mean for me?
 
 In summary, if you're experiencing performance issues, try this:
+
 1. "Lift" the expensive component to a parent where it will be rendered less often.
 2. Then pass the expensive component down as a prop.
 
