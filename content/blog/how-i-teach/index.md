@@ -56,8 +56,10 @@ Here are a few of the things that I started doing after reading this book:
 > Make and challenge assumptions about brand new concepts
 
 I have people _do_ the exercises before I teach the concepts they'll be
-learning. I use "emoji guides" so they can actually do the exercise. Sometimes
-the emoji guides do a ton of hand holding. But making them go through the
+learning. I use "emoji guides"
+([like this](https://github.com/kentcdodds/react-fundamentals/blob/b230ea412aaaca50ecf2537c0cf72516cd0e68e1/src/exercises/06.js#L6-L18))
+so they can actually get something accomplished during the exercise. Sometimes
+the emoji guides do a ton of hand holding. But making attendees go through the
 exercise first opens their brain to prepare it for learning.
 
 This is often pretty uncomfortable for people. Especially for traditional
