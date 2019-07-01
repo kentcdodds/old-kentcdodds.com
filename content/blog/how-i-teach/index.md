@@ -135,4 +135,8 @@ them via email).
 
 Teaching and learning are not easy. It takes a lot of work. But if you take some
 time to learn how to learn, it might just make you a more effective learner and
-teacher. I hope this was helpful to you. Good luck!
+teacher. Unfortunately, due to the limited time that I have when I'm teaching
+(normally only a day or two), some of the principles can't be applied as well as
+others, but adapting and applying the principles I learned from Make It Stick
+has been the most effective way to teach and ensure the retention of what I
+teach. I hope this was helpful to you. Good luck!
