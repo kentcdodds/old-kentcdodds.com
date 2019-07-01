@@ -37,7 +37,7 @@ import ReactDOM from 'react-dom'
 
 function Logger(props) {
   console.log(`${props.label} rendered`)
-  return null // we don't really need to actually render anything...
+  return null // what is returned here is irrelevant...
 }
 
 function Counter() {
@@ -73,7 +73,7 @@ import ReactDOM from 'react-dom'
 
 function Logger(props) {
   console.log(`${props.label} rendered`)
-  return null // we don't really need to actually render anything...
+  return null // what is returned here is irrelevant...
 }
 
 function Counter(props) {
@@ -228,7 +228,7 @@ import ReactDOM from 'react-dom'
 
 function Logger(props) {
   console.log(`${props.label} rendered`)
-  return null // we don't really need to actually render anything...
+  return null // what is returned here is irrelevant...
 }
 
 function Counter(props) {
