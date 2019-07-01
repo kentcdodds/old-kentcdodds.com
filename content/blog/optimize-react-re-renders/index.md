@@ -35,8 +35,8 @@ practical application this has for you in your day-to-day apps.
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function Logger({label}) {
-  console.log(`${label} rendered`)
+function Logger(props) {
+  console.log(`${props.label} rendered`)
   return null // we don't really need to actually render anything...
 }
 
@@ -71,18 +71,18 @@ you do this, wait for later in the blog post for practical recommendations).
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function Logger({label}) {
-  console.log(`${label} rendered`)
+function Logger(props) {
+  console.log(`${props.label} rendered`)
   return null // we don't really need to actually render anything...
 }
 
-function Counter({logger}) {
+function Counter(props) {
   const [count, setCount] = React.useState(0)
   const increment = () => setCount(c => c + 1)
   return (
     <div>
       <button onClick={increment}>The count is {count}</button>
-      {logger}
+      {props.logger}
     </div>
   )
 }
@@ -226,18 +226,18 @@ Here's the second example again (so you don't have to scroll back up):
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function Logger({label}) {
-  console.log(`${label} rendered`)
+function Logger(props) {
+  console.log(`${props.label} rendered`)
   return null // we don't really need to actually render anything...
 }
 
-function Counter({logger}) {
+function Counter(props) {
   const [count, setCount] = React.useState(0)
   const increment = () => setCount(c => c + 1)
   return (
     <div>
       <button onClick={increment}>The count is {count}</button>
-      {logger}
+      {props.logger}
     </div>
   )
 }
