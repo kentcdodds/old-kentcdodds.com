@@ -88,6 +88,15 @@ one of the ways I teach people and help them retain what they're learning.
 
 ### Interleave Practice
 
+> Mix up what you're learning/practicing as you're learning new things
+
+In the book (and as described in the summary video), they reference a study
+where baseball players practiced using different approaches. One group practiced
+hitting the same pitch over and over again, then moved on to a different pitch
+and practiced that over and over again. The other group had the pitches mixed
+up. The one which mixed up the kinds of pitches they received performed better.
+We can do that in the things that we're learning and the way we teach as well.
+
 This one is a bit harder to do in a single day workshop with specific things
 that we want to learn, but in my material I try to get this by having the
 exercises build upon one another so people see the new things they've been
@@ -111,6 +120,9 @@ feedback and elaboration form, but I have been able to see which exercises and
 working and which aren't based on the responses I get here.
 
 ### Active Retrieval
+
+> Intentionally go back and make your brain try to remember what it's naturally
+> forgetting.
 
 All of my workshop material is available as an open source project on GitHub
 ("available for private, non-commercial use under the GPL version 3"). I
