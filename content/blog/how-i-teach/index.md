@@ -127,7 +127,9 @@ By practicing it again and actively retrieving the things your brain is in the
 process of forgetting, you tell your brain "nope, this is important, keep it
 around please." The more you do that, the better you'll remember it, which is
 one reason why I make the material freely available and encourage people to go
-through it again a week after the workshop.
+through it again a week after the workshop. (This is actually specific advice
+that I received from one of the authors of "Make It Stick" when I reached out to
+them via email).
 
 ## Conclusion
 
