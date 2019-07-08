@@ -288,7 +288,8 @@ holistically.
 
 In summary, if you're experiencing performance issues, try this:
 
-1. "Lift" the expensive component to a parent where it will be rendered less often.
+1. "Lift" the expensive component to a parent where it will be rendered less
+   often.
 2. Then pass the expensive component down as a prop.
 
 You may find doing so solves your performance problem without needing to spread

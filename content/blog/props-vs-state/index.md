@@ -15,7 +15,7 @@ banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Jason Leung](https://unsplash.com/photos/Xaanw0s0pMk)'
 ---
 
-import \* as Comps from './components'
+import {Rendered, Add, AddWithInput} from './components'
 
 Let's compare props and state. Here's a definition of each:
 
@@ -60,7 +60,9 @@ If I were to use this like so:
 
 Here's how that would be rendered:
 
-<Comps.Rendered> <Comps.Add n1={2} n2={3} /> </Comps.Rendered>
+<Rendered>
+  <Add n1={2} n2={3} />
+</Rendered>
 
 > NOTE: Props can be anything. In our example they're numbers, but they can also
 > be (and often are) strings, arrays, objects, functions, etc.
@@ -120,7 +122,9 @@ function Add({n1, n2 = 0}) {
 This is awesome, but what if I want to dynamically change the props value? Let's
 say I wanted to build something like this:
 
-<Comps.Rendered> <Comps.AddWithInput n1={2} /> </Comps.Rendered>
+<Rendered>
+  <AddWithInput n1={2} />
+</Rendered>
 
 Without state, here's how I might try to accomplish that:
 
@@ -194,7 +198,9 @@ function AddWithInput(props) {
 Now if someone were to do this: `<AddWithInput n1={2} n2={3} />` then the result
 would look like this (notice that the initial input value is `3`):
 
-<Comps.Rendered> <Comps.AddWithInput n1={2} initialN2={3} /> </Comps.Rendered>
+<Rendered>
+  <AddWithInput n1={2} initialN2={3} />
+</Rendered>
 
 So our props are "arguments" or "inputs" that we can pass to a component, and
 state is something that is managed within the component and can change over

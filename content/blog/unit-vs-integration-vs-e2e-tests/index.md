@@ -5,7 +5,8 @@ title: 'Static vs Unit vs Integration vs E2E Testing for Frontend Apps'
 author: 'Kent C. Dodds'
 description: _What these mean, why they matter, and why they don't_
 categories: ['testing']
-keywords: ['testing', 'testing trophy', 'testing pyramid', 'react', 'javascript']
+keywords:
+  ['testing', 'testing trophy', 'testing pyramid', 'react', 'javascript']
 published: true
 banner: './banner.png'
 bannerCredit:

@@ -16,11 +16,11 @@ bannerCredit: >-
   [https://unsplash.com/photos/ZDhLVO5m5iE](https://unsplash.com/photos/ZDhLVO5m5iE))
 ---
 
-**_My_**
-[**_Frontend Masters course "Code Transformation and Linting with ASTs"_**](https://frontendmasters.com/courses/linting-asts)
-**_has been released 🎉 🎊 (go there to see a quick intro to the course)! I
-thought you all might be interested to know why you should take the 3 hours and
-42 minutes to learn how to write custom Babel and ESLint plugins._**
+**_My
+[Frontend Masters course "Code Transformation and Linting with ASTs"](https://frontendmasters.com/courses/linting-asts)
+has been released 🎉 🎊 (go there to see a quick intro to the course)! I thought
+you all might be interested to know why you should take the 3 hours and 42
+minutes to learn how to write custom Babel and ESLint plugins._**
 
 Building applications is hard, and it just gets harder as a team and codebase
 grows. Luckily, we have tools like [ESLint](http://eslint.org) and
