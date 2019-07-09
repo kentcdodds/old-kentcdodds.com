@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-63-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors)
 
 This was bootstrapped via
 [egghead-gatsby-starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
@@ -135,6 +135,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://www.bitnative.com"><img src="https://avatars2.githubusercontent.com/u/1688997?v=4" width="100px;" alt="Cory House"/><br /><sub><b>Cory House</b></sub></a><br /><a href="#content-coryhouse" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.stephenreilly.dev"><img src="https://avatars1.githubusercontent.com/u/8973405?v=4" width="100px;" alt="Stephen Reilly"/><br /><sub><b>Stephen Reilly</b></sub></a><br /><a href="#content-itsknob" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/mutalis"><img src="https://avatars3.githubusercontent.com/u/11839?v=4" width="100px;" alt="Mutalis"/><br /><sub><b>Mutalis</b></sub></a><br /><a href="#content-mutalis" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://jaimemendoza.com/"><img src="https://avatars3.githubusercontent.com/u/5395811?v=4" width="100px;" alt="Jaime Mendoza"/><br /><sub><b>Jaime Mendoza</b></sub></a><br /><a href="#content-jaimemendozadev" title="Content">🖋</a></td>
   </tr>
 </table>
 
