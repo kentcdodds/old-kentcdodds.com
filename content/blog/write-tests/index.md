@@ -88,7 +88,7 @@ to get 100% code coverage on anyway.
 
 There are all sorts of different types of testing (check out my 5 minute talk
 about it at Fluent Conf:
-["What we can learn about testing from the wheel"](https://youtu.be/Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
+["What we can learn about testing from the wheel"](https://youtu.be/Da9wfQ0frGA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)).
 They each have trade-offs. The three most common forms of testing we're talking
 about when we talk of automated testing are: Unit, Integration, and End to End.
 
