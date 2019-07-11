@@ -6,6 +6,8 @@ author: Kent C. Dodds
 description:
   _Guillermo Rauch tweeted this a while back. Let's take a quick dive into what
   it means._
+categories:
+  - testing
 keywords:
   - testing
   - Integration
@@ -39,7 +41,7 @@ https://twitter.com/rauchg/status/807626710350839808
 
 This is deep, albeit short, so let's dive in:
 
-> **_Write tests._**
+## Write tests.
 
 Yes, for most projects you should write automated tests. You should if you value
 your time anyway. Much better to catch a bug locally from the tests than getting
@@ -57,7 +59,7 @@ said, **even a strongly typed language should have tests.** Typing and linting
 can't ensure your business logic is free of bugs. So you can still seriously
 increase your confidence with a good test suite.
 
-> **_Not too many._**
+## Not too many.
 
 I've heard managers and teams mandating 100% code coverage for applications.
 That's a really bad idea. The problem is that **you get diminishing returns on
@@ -81,7 +83,7 @@ and tools that are reusable in many different situations (a breakage could lead
 to a serious problem in a lot of consuming projects) and they're relatively easy
 to get 100% code coverage on anyway.
 
-> **_Mostly integration._**
+## Mostly integration.
 
 There are all sorts of different types of testing (check out my 5 minute talk
 about it at Fluent Conf:
@@ -111,26 +113,58 @@ your buck. So while E2E tests may be slower and more expensive than unit tests,
 they bring you much more confidence that your application is working as
 intended.
 
-This is why I created "The Testing Trophy" 🏆
+https://twitter.com/kentcdodds/status/1141365123296051201
+
+As noted, our tools have moved beyond the assumption in Martin's original
+Testing Pyramid concept. This is why I created "The Testing Trophy" 🏆
 
 https://twitter.com/kentcdodds/status/960723172591992832
 
 ---
 
-Here's another illustration of the importance of integration tests:
+Here's a humorous other illustration of the importance of integration tests:
 
-https://twitter.com/kentcdodds/status/628658648001048577
+https://twitter.com/erinfranmc/status/1148986961207730176
 
-We've written unit tests that verify the man can run in place, do pushups, and
-read, but the man isn't integrating with his various body parts very
-effectively. It doesn't matter if your button component calls the `onClick`
-handler if that handler doesn't make the right request with the right data! So
+It doesn't matter if your component `<A />` renders component `<B />` with props
+`c` and `d` if component `<B />` actually breaks if prop `e` is not supplied. So
 while having some unit tests to verify these pieces work in isolation isn't a
 bad thing, _it doesn't do you any good if you don't **also** verify that they
-work together._
+work together properly._ And you'll find that by testing that they work together
+properly, you often don't need to bother testing them in isolation.
 
 **Integration tests strike a great balance on the trade-offs between confidence
 and speed/expense.** This is why it's advisable to spend _most_ (not all, mind
 you) of your effort there.
 
-[![TestingJavaScript.com Learn the smart, efficient way to test any JavaScript application.](/images/testingjavascript-promos/tjs-5.jpg)](https://testingjavascript.com)
+> For more on this read
+> [Testing Implementation Details](/blog/testing-implementation-details). For
+> more about the different distinctions of tests, read
+> [Static vs Unit vs Integration vs E2E Testing for Frontend Apps](/blog/unit-vs-integration-vs-e2e-tests)
+
+## How to write more integration tests
+
+The line between integration and unit tests is a little bit fuzzy. Regardless, I
+think the biggest thing you can do to write more integration tests is to **stop
+mocking so much stuff**. _When you mock something you’re removing all confidence
+in the integration between what you’re testing and what’s being mocked._ I
+understand that [sometimes it can’t be helped](/blog/the-merits-of-mocking)
+(though [some would disagree](https://youtu.be/EaxDl5NPuCA)). You don’t
+_actually_ want to send emails or charge credit cards every test, but most of
+the time you can avoid mocking and you’ll be better for it.
+
+**If you’re doing React, then this includes shallow rendering.** For more on
+this, read
+[Why I Never Use Shallow Rendering](/blog/why-i-never-use-shallow-rendering).
+
+## Conclusion
+
+I don't think that anyone can argue that testing software is a waste of time.
+The biggest challenge is [knowing what to test](/blog/how-to-know-what-to-test)
+and how to test it in a way that gives
+[true confidence](/blog/confidently-shipping-code) rather than the false
+confidence of
+[testing implementation details](/blog/testing-implementation-details).
+
+I hope this is helpful to you and I wish you the best luck in your goals to find
+confidence in shipping your applications!
