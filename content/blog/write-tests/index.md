@@ -4,8 +4,9 @@ title: Write tests. Not too many. Mostly integration.
 date: '2017-10-16'
 author: Kent C. Dodds
 description:
-  _Guillermo Rauch tweeted this a while back. Let's take a quick dive into what
-  it means._
+  _[Guillermo Rauch](https://twitter.com/rauchg)
+  [tweeted](https://twitter.com/rauchg/status/807626710350839808) this a while
+  back. Let's take a dive into what it means._
 categories:
   - testing
 keywords:
