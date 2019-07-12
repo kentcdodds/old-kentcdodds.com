@@ -22,7 +22,7 @@ subscription so I encourage you to give them a look!
 
 ### [The Beginner's Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
 
-https://youtube.com/watch?v=6JMIEhX-r1c
+https://youtu.be/6JMIEhX-r1c
 
 1.  [Introduction to The Beginner's Guide to ReactJS](https://egghead.io/lessons/react-introduction-to-the-beginner-s-guide-to-reactjs)
     (2:07)
@@ -80,7 +80,7 @@ environment and even how to deploy your app to a great service like
 
 ### [Advanced React Component Patterns](https://egghead.io/courses/advanced-react-component-patterns)
 
-https://youtube.com/watch?v=0aDl0ercM5I
+https://youtu.be/0aDl0ercM5I
 
 1.  [Introducing Advanced React Component Patterns](https://egghead.io/lessons/react-introducing-advanced-react-component-patterns)
     (1:44)

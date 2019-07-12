@@ -42,7 +42,7 @@ and it was a game changer for me. I recommend you pick it up and give it a
 read/[listen](https://www.audible.com/pd/Make-It-Stick-Audiobook/B00M0EO7EY),
 but here's a great summary video about it:
 
-https://www.youtube.com/watch?v=tQsIlnuAB9E
+https://youtu.be/tQsIlnuAB9E
 
 In that book, I learned that everything I knew about studying and learning was
 totally wrong. And because of this I couldn't teach as effectively. Learning how

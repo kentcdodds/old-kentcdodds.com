@@ -153,7 +153,7 @@ See you on the [githubs](https://github.com/kentcdodds) and
 Watch my Fluent Conf 2016 talk
 “[The First Pull Request](http://slides.com/kentcdodds/1st-pr)”
 
-https://youtube.com/watch?v=HjgZQeMrw6c&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtu.be/HjgZQeMrw6c&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 ---
 

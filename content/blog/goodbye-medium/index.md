@@ -61,7 +61,7 @@ I spent 1 hour building
 [`kcd-blog-redirector`](https://github.com/kentcdodds/kcd-blog-redirector). I
 even livestreamed it on my new "Coding with Kent" series:
 
-https://youtube.com/watch?v=1EOj__JPN08&list=PLV5CVI1eNcJgJCEkMlsqXea6OIF_uV_ub
+https://youtu.be/1EOj__JPN08&list=PLV5CVI1eNcJgJCEkMlsqXea6OIF_uV_ub
 
 (You might think this would be a simple task, but it's more complicated than you
 think. Watch the first few minutes of the video and you'll know what I mean.)
