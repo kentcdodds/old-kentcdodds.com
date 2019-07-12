@@ -346,7 +346,7 @@ heard Kyle Simpson talk about
 give the first part of [this talk](https://youtu.be/wJEX2FgNYLg&t=46s) a quick
 watch. I have similar privileges that Kyle mentions. Incidentally, a few hours
 after Kyle gave his talk,
-[I gave a talk](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
+[I gave a talk](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)
 at the same conference where I talk about my privilege as an important thing to
 acknowledge.
 
@@ -374,11 +374,11 @@ and the direction you're going. You can do it! Good luck!
 
 **Learn more about career development from me**:
 
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 **Things to not miss**:
 
-- [Testing React with Kent C. Dodds and Jack Franklin](https://youtu.be/z4DNlVlOfjU&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
+- [Testing React with Kent C. Dodds and Jack Franklin](https://youtu.be/z4DNlVlOfjU?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
   [tech chat](https://github.com/kentcdodds/ama/issues/125) with myself and
   [Jack Franklin](https://twitter.com/jack_franklin) talking about testing
   React. We cover a lot of subjects that you may find interesting!

@@ -157,7 +157,7 @@ Good luck!
 - [useKonami](https://github.com/alexanderson1993/react-konami-hook): A custom
   hook by [R. Alex Anderson](https://twitter.com/ralex1993) for supporting
   Konami code to your app 😍
-- [Render Prop by Any Other Name](https://youtu.be/pjDOJdMM2eg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — This
+- [Render Prop by Any Other Name](https://youtu.be/pjDOJdMM2eg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — This
   is a talk I gave at [FrameworkSummit](https://twitter.com/FrameworkSummit) in
   October with [Divya Sasidharan](https://twitter.com/ShortDiv) (Vue) and
   [Isaac Mann](https://twitter.com/MannIsaac) (Angular) that compares similar
@@ -167,6 +167,6 @@ Good luck!
 - [React's New Defaults — Concurrent React and React Hooks](https://youtu.be/vhWaMPQhMLQ) — An
   interesting talk about the future of React by
   [Shawn Wang](https://twitter.com/swyx).
-- [GDG Salt Lake DevFest 2018: Why React Hooks](https://youtu.be/zWsZcBiwgVE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [GDG Salt Lake DevFest 2018: Why React Hooks](https://youtu.be/zWsZcBiwgVE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   talk by me about why React Hooks are a thing and why I'm super excited to get
   them. [Demo repo](https://github.com/kentcdodds/gdg-devfest-2018-react).

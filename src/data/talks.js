@@ -82,7 +82,7 @@ export default [
           '[React Ottawa Meetup](https://www.meetup.com/Ottawa-ReactJS-Meetup/events/260941602/?_xtd=gqFyqTIxNzkwMTQzM6FwpmlwaG9uZQ&from=ref)',
         date: '2019-05-30',
         recording:
-          'https://youtu.be/-FxVK5mOewQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/-FxVK5mOewQ?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -98,7 +98,7 @@ export default [
       {
         event: '[React.Amsterdam](https://react.amsterdam/)',
         recording:
-          'https://youtu.be/tO8qHlr6Wqg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/tO8qHlr6Wqg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2019-04-12',
       },
     ],
@@ -162,7 +162,7 @@ export default [
         event: 'BYU Presentation',
         date: '2018-12-06',
         recording:
-          'https://youtu.be/k6KcaMffxac&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjsh',
+          'https://youtu.be/k6KcaMffxac?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjsh',
       },
     ],
     description: `
@@ -182,7 +182,7 @@ export default [
           '[GDG Salt Lake DevFest 2018](https://sites.google.com/view/gdgsaltlakedevfest2018)',
         date: '2018-11-17',
         recording:
-          'https://youtu.be/zWsZcBiwgVE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/zWsZcBiwgVE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event:
@@ -234,7 +234,7 @@ export default [
           '[SLC Frontend Meetup](https://www.meetup.com/SLC-FE-DEV/events/254256621/)',
         date: '2018-09-25',
         recording:
-          'https://youtu.be/7LmrS2sdMlo&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/7LmrS2sdMlo?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -251,7 +251,7 @@ export default [
         event: 'Practice Run',
         date: '2018-06-01',
         recording:
-          'https://youtu.be/PJe8KXPw4cA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/PJe8KXPw4cA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'JS@PayPal (internal conference)',
@@ -261,19 +261,19 @@ export default [
         event: '[Open West 2018](https://www.openwest.org)',
         date: '2018-06-08',
         recording:
-          'https://youtu.be/Q25lkYUZTMU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/Q25lkYUZTMU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[Chain React](https://infinite.red/ChainReactConf)',
         date: '2018-07-12',
         recording:
-          'https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/M9X2qGddHkU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[React Rally 2018](https://2018.reactrally.com/)',
         date: '2018-08-16',
         recording:
-          'https://youtu.be/AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -301,7 +301,7 @@ export default [
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
         recording:
-          'https://youtu.be/qXRPHRgcXJ0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/qXRPHRgcXJ0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[egghead.io](http://kcd.im/egghead)',
@@ -398,7 +398,7 @@ export default [
           '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/)',
         date: '2018-01-31',
         recording:
-          'https://youtu.be/nlAHtAQlFGk&t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
+          'https://youtu.be/nlAHtAQlFGk&t=2s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
       },
     ],
     description: `
@@ -415,7 +415,7 @@ export default [
           '[UtahJS Orem Meetup](https://www.meetup.com/UtahJS/events/246047733/)',
         date: '2018-01-04',
         recording:
-          'https://youtu.be/10jYq_d8fks&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/10jYq_d8fks?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event:
@@ -426,7 +426,7 @@ export default [
         event: '[Assert(JS)](https://www.assertjs.com/)',
         date: '2018-02-22',
         recording:
-          'https://youtu.be/Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/Fha2bVoC8SE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -452,7 +452,7 @@ export default [
           '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227/)',
         date: '2017-12-19',
         recording:
-          'https://youtu.be/pugPxYH96TU&t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/pugPxYH96TU&t=2276s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -476,7 +476,7 @@ export default [
         event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
         date: '2017-06-22',
         recording:
-          'https://youtu.be/R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
+          'https://youtu.be/R1_nGU0x3Wk&t=21s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
     ],
     description: `

@@ -247,7 +247,7 @@ expect.addSnapshotSerializer({
 
 There are a bunch of things you can do with custom serializers. I highly suggest
 the talk
-["Jest Snapshots and Beyond"](https://youtu.be/HAuXJVI_bUs&list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
+["Jest Snapshots and Beyond"](https://youtu.be/HAuXJVI_bUs?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
 from [Rogelio Guzman](https://twitter.com/rogeliog) at React Conf 2017 where he
 talks about this more.
 

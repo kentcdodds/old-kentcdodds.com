@@ -96,13 +96,13 @@ export default [
         event: 'Self-organized PayPal workshop day (Part 2)',
         date: '2018-11-28',
         recording:
-          'https://youtu.be/NKAfuguroRY&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/NKAfuguroRY?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Self-organized PayPal workshop day (Part 1)',
         date: '2018-11-28',
         recording:
-          'https://youtu.be/xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/xcZXS_VEJS0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -162,7 +162,7 @@ export default [
         event: '[Assert(JS)](https://www.assertjs.com/training)',
         date: '2018-02-21',
         recording:
-          'https://youtu.be/VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/VQZx1Z3sW0E?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Workshop.me in San Francisco',
@@ -307,7 +307,7 @@ export default [
         event: 'Self-organized PayPal practice-run',
         date: '2017-04-19',
         recording:
-          'https://youtu.be/-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/-iA7TAUGn2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `

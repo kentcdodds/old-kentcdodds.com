@@ -195,21 +195,21 @@ Enjoy!
 
 **Learn more about ASTs from me**:
 
-- [All about macros with babel-plugin-macros 🎣 (talk at ReactJS Utah)](https://youtu.be/nlAHtAQlFGk&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [All about macros with babel-plugin-macros 🎣 (talk at ReactJS Utah)](https://youtu.be/nlAHtAQlFGk?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Code Transformation and Linting Course on Frontend Masters](https://frontendmasters.com/workshops/code-transformation-linting-asts)
-- [Code Transformation and Linting Workshop (very rough practice run)](https://youtu.be/-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Writing custom Babel and ESLint plugins with ASTs (talk at Open West 2017)](https://youtu.be/VBscbcm2Mok&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Code Transformation and Linting Workshop (very rough practice run)](https://youtu.be/-iA7TAUGn2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Writing custom Babel and ESLint plugins with ASTs (talk at Open West 2017)](https://youtu.be/VBscbcm2Mok?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 **Things to not miss**:
 
 - [React Europe Talks Day 1](https://youtube.com/watch?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73&v=aOWIJ4Mgb2k)
-- [React Europe Talks Day 2](https://youtu.be/WYWVGQKnz5M&list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
+- [React Europe Talks Day 2](https://youtu.be/WYWVGQKnz5M?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
 - [Stop writing code — Sunil Pai aka @threepointone at @ReactEurope 2018](https://youtu.be/WYWVGQKnz5M) — See
   the part where [Sunil](https://twitter.com/threepointone) talks about the
   origin story of `babel-plugin-macros`
   [starting at 8m57s](https://youtu.be/WYWVGQKnz5M?t=8m57s). (Also, I love you
   too Sunil 😍)
-- [Pre-evaluate code at build time](https://youtu.be/NhmrbpVKgdQ&list=LLz-BYvuntVRt_VpfR6FKXJw)
+- [Pre-evaluate code at build time](https://youtu.be/NhmrbpVKgdQ?list=LLz-BYvuntVRt_VpfR6FKXJw)
   from [Siddharth Kshetrapal](https://twitter.com/siddharthkp).
 - [DevTips with Kent](http://kcd.im/devtips) — Daily live streams showing what
   I'm learning, working on, or answering common questions I get.

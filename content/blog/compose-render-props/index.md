@@ -59,7 +59,7 @@ https://twitter.com/kentcdodds/status/977317793992503297
 
 This week I livestreamed myself in the process of doing this for a component I'm
 working on. You can
-[find the recording here](https://youtu.be/a7OhAQIx3xc&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE).
+[find the recording here](https://youtu.be/a7OhAQIx3xc?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE).
 This component is a special amount input component that has a currency selection
 and the input has some special behaviors (like changing the font size the wider
 it gets etc.). The logic behind the component is what I'm trying to share. It

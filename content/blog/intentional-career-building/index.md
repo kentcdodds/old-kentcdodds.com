@@ -82,7 +82,7 @@ redirect all my blog posts to my new custom platform because I own the domain
 name that all the links on twitter and elsewhere are pointing to.
 
 This is also why I care so much about having
-[a URL shortener](https://youtu.be/HL6paXyx6hM&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
+[a URL shortener](https://youtu.be/HL6paXyx6hM?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
 When I switched from tinyletter.com to buttondown.email and then to
 convertkit.com, I was able to simply update `kcd.im/news` to point to the new
 sign-up page and all existing links started taking people to the right place.

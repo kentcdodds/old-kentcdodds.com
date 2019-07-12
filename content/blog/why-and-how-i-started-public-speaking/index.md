@@ -146,7 +146,7 @@ Keep practicing! Good luck :D
 
 **Learn more about "self improvement" from me**:
 
-- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
+- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
   talk I gave a few years ago that's related and has some similar stories to
   this post.
 

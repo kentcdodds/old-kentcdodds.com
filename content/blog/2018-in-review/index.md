@@ -257,11 +257,11 @@ million views now).
 I gave a lot of talks this year, you can find all the available recordings on
 [my YouTube playlist](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 I spoke at 7 conferences and several meetups. I was especially proud to deliver
-[my first keynote](https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[my first keynote](https://youtu.be/M9X2qGddHkU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [Chain React](https://infinite.red/ChainReactConf) which was awesome.
 
 I gave
-[a similar talk](https://youtu.be/AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+[a similar talk](https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 at [React Rally](https://www.reactrally.com) which is my favorite conference and
 has been a dream of mine since year one.
 
