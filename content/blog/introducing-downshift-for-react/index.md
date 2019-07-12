@@ -188,7 +188,7 @@ them asynchronously
 [this example using Algolia Instantsearch](https://codesandbox.io/s/kvn0lpp83))
 and you can control how you filter things (see this
 [example that integrates geniejs](https://codesandbox.io/s/jRLKrxwgl)
-[watch me build geniejs integration here](https://youtu.be/gjqB-YAxjWg&index=4?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=4s)).
+[watch me build geniejs integration here](https://youtu.be/gjqB-YAxjWg?index=4&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=4s)).
 This means that you don't need to learn or work around an API and can do it
 however works best for your use case.
 
@@ -233,7 +233,7 @@ This allows you to have complete control over the state of your component.
 [controllable components (like](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)
 [`downshift`](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)[) in this fantastic lesson](https://courses.reacttraining.com/courses/advanced-react/lectures/3172720)
 (I highly recommend it). And you can
-[watch me build the first iteration of the implementation here](https://youtu.be/iy0znrRA2h8&index=13?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=1s).
+[watch me build the first iteration of the implementation here](https://youtu.be/iy0znrRA2h8?index=13&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=1s).
 
 ## Accessibility
 
@@ -279,7 +279,7 @@ We also use the same component in the recipient selector:
 ![gif of a recipient selector experience on PayPal](./images/3.gif)
 
 _You can
-[watch me build part of these PayPal experiences here](https://youtu.be/rB62gSER9fg&index=14?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=456s)._
+[watch me build part of these PayPal experiences here](https://youtu.be/rB62gSER9fg?index=14&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE&t=456s)._
 
 We actually have several other item selection experiences in our app that have
 slightly different use cases and necessitated us having multiple implementations

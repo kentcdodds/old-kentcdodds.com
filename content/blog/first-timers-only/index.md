@@ -35,7 +35,7 @@ less common things...
   understand or globally install any build tools
 
 I've even recorded
-[screencasts](https://youtu.be/QOchwBm9W-g&index=5?list=PLV5CVI1eNcJi7lVVIuNyRhEuck1Z007BH)
+[screencasts](https://youtu.be/QOchwBm9W-g?index=5&list=PLV5CVI1eNcJi7lVVIuNyRhEuck1Z007BH)
 to demonstrate how to get things setup. But what I didn't realize was that there
 was still something missing...
 
