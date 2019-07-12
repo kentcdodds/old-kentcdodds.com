@@ -398,7 +398,7 @@ export default [
           '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/)',
         date: '2018-01-31',
         recording:
-          'https://youtu.be/nlAHtAQlFGk&t=2s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
+          'https://youtu.be/nlAHtAQlFGk?t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
       },
     ],
     description: `
@@ -452,7 +452,7 @@ export default [
           '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227/)',
         date: '2017-12-19',
         recording:
-          'https://youtu.be/pugPxYH96TU&t=2276s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/pugPxYH96TU?t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -476,7 +476,7 @@ export default [
         event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
         date: '2017-06-22',
         recording:
-          'https://youtu.be/R1_nGU0x3Wk&t=21s?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
+          'https://youtu.be/R1_nGU0x3Wk?t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
     ],
     description: `

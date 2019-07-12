@@ -343,7 +343,7 @@ do get to everything eventually in one form or another.
 We all need to acknowledge something very important: Privilege. If you've not
 heard Kyle Simpson talk about
 [#PrivilegeAwareness](https://twitter.com/search?q=%23privilegeawareness&src=typd),
-give the first part of [this talk](https://youtu.be/wJEX2FgNYLg&t=46s) a quick
+give the first part of [this talk](https://youtu.be/wJEX2FgNYLg?t=46s) a quick
 watch. I have similar privileges that Kyle mentions. Incidentally, a few hours
 after Kyle gave his talk,
 [I gave a talk](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=2m33s)

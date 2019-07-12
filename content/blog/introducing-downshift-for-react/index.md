@@ -326,7 +326,7 @@ anymore, but the first incarnation did! So thanks to Ryan! And _you can watch me
 develop most of `downshift` on
 [this YouTube playlist](https://youtube.com/playlist?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE)
 (starting with
-[this first video](https://youtu.be/2kzD1IjDy5s&t=2468s&index=16?list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE))
+[this first video](https://youtu.be/2kzD1IjDy5s?t=2468s&index=16&list=PLV5CVI1eNcJh5CTgArGVwANebCrAh2OUE))
 📺._
 
 And again, a big shoutout to [Jared Forsyth](https://twitter.com/jaredforsyth)
