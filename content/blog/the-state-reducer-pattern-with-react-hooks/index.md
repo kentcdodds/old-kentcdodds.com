@@ -50,7 +50,7 @@ which is basically a mechanism for the author of the API to allow the user of
 the API to control how things work internally. For an example-based talk about
 this, I strongly recommend you give my React Rally 2018 talk a watch:
 
-https://youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 So in the downshift example, I had made the decision that when an end user
 selects an item, the `isOpen` should be set to `false` (and the menu should be

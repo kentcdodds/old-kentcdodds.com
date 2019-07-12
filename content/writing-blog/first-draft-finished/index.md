@@ -19,7 +19,7 @@ I made the decision to write a book in August of last year. For me, the theme
 came first. I wanted to write a book about the importance and power of a growth
 mindset:
 
-https://youtube.com/watch?v=_X0mgOOSpLU
+https://youtu.be/_X0mgOOSpLU
 
 This is a concept that I want my children to learn and that's why I wanted to
 write a book about it.
@@ -86,7 +86,7 @@ November came and went and I did it!
 https://twitter.com/kentcdodds/status/1068025862555979776
 
 I finished in my hotel while I was in San Jose
-[giving a workshop at PayPal](https://youtu.be/xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+[giving a workshop at PayPal](https://youtu.be/xcZXS_VEJS0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 The next day, I got on a plane to fly home and happened to sit next to author
 [Dan Allen](https://www.facebook.com/authordanallen) who was working on editing
 his previous year's NaNoWriMo to get it ready for publishing. I saw what he was

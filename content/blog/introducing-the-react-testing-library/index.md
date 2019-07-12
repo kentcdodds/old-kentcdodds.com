@@ -170,7 +170,7 @@ in my blog post
 "[Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)".
 But thanks to feedback on that blog post from
 [Bergé Greg](https://twitter.com/neoziro) as well as inspiration from
-[a fantastic (and short!) talk](https://youtu.be/qfnkDyHVJzs&t=5h39m19s) by
+[a fantastic (and short!) talk](https://youtu.be/qfnkDyHVJzs?t=5h39m19s) by
 [Jamie White](https://twitter.com/jgwhite), I added several more and now I'm
 even happier with this solution.
 

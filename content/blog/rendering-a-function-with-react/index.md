@@ -192,7 +192,7 @@ So, in my case, the thing I want to render _has_ to be a function due to the
 constraints mentioned earlier. So I can't make it work as an object, string,
 number, or array. But I realized that there's nothing stopping me from making my
 function iterable (if you're unfamiliar,
-[here's the iterators part of my ES6 workshop recording](https://youtu.be/eOKQDh50ECU&t=2h43m44s)).
+[here's the iterators part of my ES6 workshop recording](https://youtu.be/eOKQDh50ECU?t=2h43m44s)).
 
 So... I made my function iterable 😉
 

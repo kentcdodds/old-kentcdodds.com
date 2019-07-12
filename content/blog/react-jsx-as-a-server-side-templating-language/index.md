@@ -243,7 +243,7 @@ long-term. I hope this is helpful to you! Good luck!
 
 **Things to not miss**:
 
-- [The introduction to React you've been missing](https://youtu.be/SAIdyBFHfVU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
+- [The introduction to React you've been missing](https://youtu.be/SAIdyBFHfVU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
   talk from UtahJS Conf 2018. Lots of livecoding here. In this talk I teach
   React from scratch in a single index.html file with no magic up my sleeves. We
   start with a basic Hello World in vanilla JavaScript and incrementally iterate

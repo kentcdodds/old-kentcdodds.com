@@ -44,7 +44,7 @@ factor" in addition to being generally more engaging. For a specific example,
 [my slides](https://slides.com/kentcdodds/simply-react) for my "Simply React"
 keynote at ChainReact had several demos that were recorded video which is not
 awesome, but I also had an issue where I couldn't replay the videos
-([watch here](https://youtu.be/M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=4m04s)).
+([watch here](https://youtu.be/M9X2qGddHkU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&t=4m04s)).
 So the demos kinda fell flat a bit.
 
 When master [Ken Wheeler](https://twitter.com/ken_wheeler) announced

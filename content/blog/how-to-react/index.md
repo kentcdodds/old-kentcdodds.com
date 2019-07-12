@@ -141,7 +141,7 @@ afternoon. Seriously, do it. There's some really valuable information in there.
 
 In addition, when you start using dependencies, you're going to want to learn
 how to `import` those dependencies. I have a talk called
-["More than you want to know about ES6 Modules"](https://youtu.be/kTlcu16rSLc&index=23&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+["More than you want to know about ES6 Modules"](https://youtu.be/kTlcu16rSLc?index=23&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 which you'll probably find packed with useful information about the ES Modules
 syntax.
 
@@ -188,7 +188,7 @@ conceptually for you. Here's some resources on why:
 - Package management
 - Non-browser styling
 
-[Maintainable CSS in React](https://youtu.be/3-4KsXPO2Q4&index=2&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — [me 👋](https://twitter.com/kentcdodds):
+[Maintainable CSS in React](https://youtu.be/3-4KsXPO2Q4?index=2&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — [me 👋](https://twitter.com/kentcdodds):
 
 - Colocation of concerns
 

@@ -29,7 +29,7 @@ Current Available Translations:
 
 I've given this blog post as a talk which you can watch here:
 
-https://youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtu.be/Fha2bVoC8SE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 [Socket.io](https://socket.io) and founder of [Zeit.co](https://zeit.co) (the

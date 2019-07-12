@@ -102,6 +102,6 @@ of ourselves and find more happiness in life :) Good luck!
 - [reach-router](https://reach.tech/router) — Not a typo, this is a new router
   from [Ryan Florence](https://twitter.com/ryanflorence) (creator of
   react-router and many others). It's pretty neat and has great docs. I did
-  [a devtip](https://youtu.be/J1vsBrSUptA&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+  [a devtip](https://youtu.be/J1vsBrSUptA?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
   with it the other day.
 - [react-testing-library & Jest](http://www.richardkotze.com/coding/react-testing-library-jest)

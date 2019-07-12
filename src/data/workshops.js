@@ -96,13 +96,13 @@ export default [
         event: 'Self-organized PayPal workshop day (Part 2)',
         date: '2018-11-28',
         recording:
-          'https://www.youtube.com/watch?v=NKAfuguroRY&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/NKAfuguroRY?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Self-organized PayPal workshop day (Part 1)',
         date: '2018-11-28',
         recording:
-          'https://www.youtube.com/watch?v=xcZXS_VEJS0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/xcZXS_VEJS0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -122,7 +122,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/courses/testing-react/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-react)',
         date: '2018-04-19',
       },
       {
@@ -162,7 +162,7 @@ export default [
         event: '[Assert(JS)](https://www.assertjs.com/training)',
         date: '2018-02-21',
         recording:
-          'https://www.youtube.com/watch?v=VQZx1Z3sW0E&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/VQZx1Z3sW0E?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Workshop.me in San Francisco',
@@ -170,7 +170,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/courses/testing-practices-principles/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-practices-principles)',
         date: '2018-04-18',
       },
     ],
@@ -209,7 +209,7 @@ export default [
       },
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)',
         date: '2018-04-17',
       },
       {
@@ -300,14 +300,14 @@ export default [
     deliveries: [
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/courses/linting-asts/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/linting-asts)',
         date: '2017-04-26',
       },
       {
         event: 'Self-organized PayPal practice-run',
         date: '2017-04-19',
         recording:
-          'https://www.youtube.com/watch?v=-iA7TAUGn2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/-iA7TAUGn2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -331,7 +331,7 @@ export default [
     deliveries: [
       {
         event:
-          '[Frontend Masters](https://frontendmasters.com/courses/testing-javascript/)',
+          '[Frontend Masters](https://frontendmasters.com/courses/testing-javascript)',
         date: '2017-04-25',
       },
       {
@@ -354,7 +354,7 @@ export default [
   {
     title: 'ES6 and Beyond',
     resources: [
-      '[slides](http://slides.com/kentcdodds/es6-workshop#/)',
+      '[slides](http://slides.com/kentcdodds/es6-workshop#)',
       '[workshop repo](https://github.com/kentcdodds/es6-workshop)',
       '[app repo](https://github.com/kentcdodds/es6-todomvc)',
     ],
@@ -379,23 +379,23 @@ export default [
         recording: 'https://youtu.be/dnF-wrw0Q_w',
       },
       {
-        event: '[Connect.Tech](http://connect.tech/)',
+        event: '[Connect.Tech](http://connect.tech)',
         date: '2016-10-20',
         recording: 'https://youtu.be/nCP6jsN9XPI',
       },
       {
-        event: '[The Kansas City Developer Conference](http://www.kcdc.info/)',
+        event: '[The Kansas City Developer Conference](http://www.kcdc.info)',
         date: '2016-06-22',
       },
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         date: '2015-08-12',
         recording:
           'https://youtu.be/aeY6ctvsurs?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
       },
       {
         event:
-          '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
+          '[SLC JS Learners](http://www.meetup.com/SLC-JS-Learners/events/220770922)',
         date: '2015-04-21',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
       },
@@ -440,7 +440,7 @@ export default [
         date: '2016-10-06',
       },
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         date: '2016-08-10',
       },
     ],
@@ -467,7 +467,7 @@ export default [
           'https://egghead.io/courses/using-webpack-for-production-javascript-applications',
       },
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         date: '2015-08-12',
         recording:
           'https://youtu.be/a96r7Tjf0Ps?list=PLV5CVI1eNcJi1ZdXFSxR23QUeNVbauL3A',
@@ -605,7 +605,7 @@ export default [
     tags: ['angular'],
     deliveries: [
       {
-        event: '[ng-conf](https://www.ng-conf.org/)',
+        event: '[ng-conf](https://www.ng-conf.org)',
         date: '2015-03-04',
       },
     ],
@@ -640,16 +640,16 @@ export default [
     title: 'Intro to AngularJS',
     resources: [
       '[slides](http://slides.com/kentcdodds/intro-to-angularjs)',
-      '[workshop](http://kentcdodds.com/ng-workshop/)',
+      '[workshop](http://kentcdodds.com/ng-workshop)',
     ],
     tags: ['angular'],
     deliveries: [
       {
-        event: '[JFokus 2015](http://www.jfokus.se/jfokus/)',
+        event: '[JFokus 2015](http://www.jfokus.se/jfokus)',
         date: '2015-02-06',
       },
       {
-        event: '[BYU](https://byu.edu/)',
+        event: '[BYU](https://byu.edu)',
         date: '2014-01-20',
         recording: 'https://youtu.be/GmVUw_Efi_M',
       },

@@ -297,7 +297,7 @@ that I'll never get tired of in this industry! And learning the fundamentals
 behind these bits of syntax will make you more effective at using them. I should
 mention also that there are more things you can do with destructuring and if
 you're interested there's
-[a section about destructuring in my ES6 workshop](https://youtu.be/t3R3R7UyN2Y&t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
+[a section about destructuring in my ES6 workshop](https://youtu.be/t3R3R7UyN2Y?t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
 that's available completely free on
 [my YouTube channel](https://kcd.im/youtube). Good luck!
 
