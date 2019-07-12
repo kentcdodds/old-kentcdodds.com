@@ -22,7 +22,7 @@ bannerCredit: 'Photo by [Jp Valery](https://unsplash.com/photos/mQTTDA_kY_8)'
 
 Current Available Translations:
 
-- [Korean](https://ideveloper2.dev/blog/2019-06-14--when-to-use-memo-and-use-callback/)
+- [Korean](https://ideveloper2.dev/blog/2019-06-14--when-to-use-memo-and-use-callback)
 
 import {CandyDispenser, Poll} from './components'
 

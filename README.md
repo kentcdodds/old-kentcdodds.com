@@ -11,7 +11,7 @@ https://github.com/rwieruch/gatsby-mdx-blog-starter-project
 Lot's of nice pieces are also borrowed from Jason Lengstorf
 https://github.com/jlengstorf/lengstorf.com
 
-A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with
+A starter project in [Gatsby.js](https://www.gatsbyjs.org) with
 [MDX](https://github.com/mdx-js/mdx).
 
 ## Features
@@ -21,15 +21,15 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with
 - Pagination
 - Emotion
 - Typography.js
-- Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
+- Self-hosted fonts ([Inter UI](https://rsms.me/inter))
 - Social media share buttons
 - Site & Theme config files
 - ConvertKit subscribe form (Formik and Yup)
 - Placeholder illustrations by
   [Katerina Limpitsouni](https://twitter.com/ninalimpi) from
-  [undraw.co](https://undraw.co/)
+  [undraw.co](https://undraw.co)
 
-## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
+## [➞ Demo](https://egghead-gatsby-starter.netlify.com)
 
 ## Setup
 
