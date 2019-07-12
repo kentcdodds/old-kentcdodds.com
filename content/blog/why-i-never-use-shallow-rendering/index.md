@@ -320,7 +320,7 @@ jest.mock('react-transition-group', () => {
 
 test('you can mock things with jest.mock', () => {
   const {getByText, queryByText} = render(<HiddenMessage initialShow={true} />)
-  const toggleButton = getByText('Toggle')
+  const toggleButton = getByText(/toggle/i)
 
   const context = expect.any(Object)
   const children = expect.any(Object)
@@ -330,13 +330,13 @@ test('you can mock things with jest.mock', () => {
     {in: true, ...defaultProps},
     context,
   )
-  expect(getByText('Hello world')).not.toBeNull()
+  expect(getByText(/hello world/i)).not.toBeNull()
 
   CSSTransition.mockClear()
 
   fireEvent.click(toggleButton)
 
-  expect(queryByText('Hello world')).toBeNull()
+  expect(queryByText(/hello world/i)).toBeNull()
   expect(CSSTransition).toHaveBeenCalledWith(
     {in: false, ...defaultProps},
     context,
