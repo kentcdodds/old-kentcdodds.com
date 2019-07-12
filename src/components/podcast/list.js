@@ -18,29 +18,6 @@ function List({data}) {
         },
       })}
     >
-      {/* <h3
-        css={css({
-          textTransform: 'uppercase',
-          fontSize: 12,
-          opacity: 0.7,
-          letterSpacing: 0.5,
-          marginTop: 0,
-          marginLeft: 20,
-          [bpMaxMD]: {
-            marginLeft: 20,
-          },
-          '.episode-label-mobile': {
-            display: 'none',
-            [bpMaxMD]: {
-              display: 'inline-block',
-            },
-          },
-        })}
-      >
-        <span className="episode-label-mobile">episodes |</span> season{' '}
-        {data.allEpisode.nodes[0].season.number <= 9 && '0'}
-        {data.allEpisode.nodes[0].season.number}
-      </h3> */}
       {data.allEpisode.nodes.map(episode => (
         <li
           key={episode.id}
@@ -52,6 +29,9 @@ function List({data}) {
             to={`/podcast/${episode.fields.slug}`}
             activeClassName="active"
             css={css({
+              // bump font size accordingly to title length
+              // consider adding episode image
+              fontSize: '15px',
               display: 'block',
               height: '100%',
               padding: '10px 17px',

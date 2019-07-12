@@ -57,8 +57,6 @@ const Sidebar = styled.aside(
   css({
     width: '100%',
     maxWidth: '280px',
-    flexGrow: '1',
-    fontSize: '15px',
     display: 'block',
     position: 'relative',
     '.fade-out': {
@@ -68,7 +66,7 @@ const Sidebar = styled.aside(
       bottom: '0',
       zIndex: '10',
       width: '100%',
-      height: 50,
+      height: 40,
       backgroundImage:
         'linear-gradient(180deg, rgba(250,250,250,0) 0%, #fafafa 100%)',
     },
@@ -126,7 +124,7 @@ const Article = styled.article(
   }),
 )
 
-function PodcastEpisodePage({data: {episode, mdx}, children}) {
+function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
   return (
     <>
       <SEO frontmatter={episode} podcastImage={episode.image_url} />
@@ -174,9 +172,11 @@ function PodcastEpisodePage({data: {episode, mdx}, children}) {
         >
           <Sidebar>
             <SidebarHeading>
-              <span className="episode-label-mobile">episodes |</span> season{' '}
-              {episode.season.number <= 9 && '0'}
-              {episode.season.number}
+              season {episode.season.number <= 9 && '0'}
+              {episode.season.number}{' '}
+              <span className="episode-label-mobile">
+                ∙ {allEpisode.totalCount} episodes
+              </span>
             </SidebarHeading>
             <div className="fade-out" />
             <PodcastList />
@@ -239,6 +239,9 @@ export const episodeQuery = graphql`
       frontmatter {
         id
       }
+    }
+    allEpisode(filter: {season: {number: {eq: 1}}}) {
+      totalCount
     }
   }
 `
