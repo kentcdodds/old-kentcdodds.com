@@ -9,7 +9,7 @@ import Container from './container'
 
 import Signature from '../images/signature.png'
 
-const Footer = ({subscribeForm = <SubscribeForm />}) => (
+const Footer = ({subscribeForm = <SubscribeForm />, maxWidth}) => (
   <footer
     css={css`
       background: ${theme.colors.purple_dark};
@@ -18,6 +18,7 @@ const Footer = ({subscribeForm = <SubscribeForm />}) => (
     `}
   >
     <Container
+      maxWidth={maxWidth}
       css={css`
         padding-top: 0;
         padding-bottom: 0;

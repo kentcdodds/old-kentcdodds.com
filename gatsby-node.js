@@ -3,7 +3,45 @@ const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
+const axios = require('axios')
+const crypto = require('crypto')
 const _ = require('lodash')
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+axios.defaults.headers.common.Authorization = `Bearer ${
+  process.env.SIMPLECAST_API_SECRET
+}`
+axios.defaults.headers.common.Accept = 'application/json'
+
+exports.sourceNodes = async ({actions: {createNode}}) => {
+  const {data} = await axios(
+    `https://api.simplecast.com/podcasts/${
+      process.env.PODCAST_ID
+    }/episodes?limit=14`,
+  )
+
+  const packagePodcast = p => {
+    const nodeContent = JSON.stringify(p)
+    const nodeContentDigest = crypto
+      .createHash('md5')
+      .update(nodeContent)
+      .digest('hex')
+    const node = {
+      ...p,
+      content: nodeContent,
+      internal: {
+        type: 'Episode',
+        contentDigest: nodeContentDigest,
+      },
+    }
+
+    createNode(node)
+  }
+
+  data.collection.map(packagePodcast)
+}
 
 const PAGINATION_OFFSET = 7
 
@@ -117,6 +155,26 @@ exports.createPages = async ({actions, graphql}) => {
       }
     }
     query {
+      podcast: allEpisode {
+        edges {
+          node {
+            id
+            title
+            number
+          }
+        }
+      }
+      podcastMarkdown: allMdx(
+        filter: {fileAbsolutePath: {regex: "//content/podcast//"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              id
+            }
+          }
+        }
+      }
       blog: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
@@ -165,6 +223,18 @@ exports.createPages = async ({actions, graphql}) => {
 
   const {blog, writing, workshops} = data
 
+  data.podcast.edges.forEach(({node}) => {
+    actions.createPage({
+      path: `podcast/${slugify(node.title)}`,
+      component: path.resolve(`./src/templates/podcast-episode.js`),
+      context: {
+        slug: slugify(node.title),
+        id: node.id,
+        title: node.title,
+      },
+    })
+  })
+
   createBlogPages({
     blogPath: '/blog',
     data: blog,
@@ -181,6 +251,11 @@ exports.createPages = async ({actions, graphql}) => {
     data: workshops,
     actions,
   })
+  // podcast
+  // createPodcastEpisodes({
+  //   data: podcast,
+  //   actions,
+  // })
 }
 
 exports.onCreateWebpackConfig = ({actions}) => {
@@ -235,6 +310,14 @@ function createPaginatedPages(
 // eslint-disable-next-line complexity
 exports.onCreateNode = ({node, getNode, actions}) => {
   const {createNodeField} = actions
+
+  if (node.internal.type === `Episode`) {
+    createNodeField({
+      name: 'slug',
+      node,
+      value: slugify(`${node.title}`),
+    })
+  }
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
