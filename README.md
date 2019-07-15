@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors)
 
 This was bootstrapped via
 [egghead-gatsby-starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
@@ -138,6 +138,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://jaimemendoza.com/"><img src="https://avatars3.githubusercontent.com/u/5395811?v=4" width="100px;" alt="Jaime Mendoza"/><br /><sub><b>Jaime Mendoza</b></sub></a><br /><a href="#content-jaimemendozadev" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.jescowuester.com"><img src="https://avatars3.githubusercontent.com/u/43379421?v=4" width="100px;" alt="Jesco Wüster"/><br /><sub><b>Jesco Wüster</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jescowuester" title="Code">💻</a></td>
   </tr>
 </table>
 
