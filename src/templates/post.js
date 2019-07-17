@@ -40,7 +40,6 @@ function Post({data: {site, mdx}}) {
     editLink,
     title,
     slug,
-    date,
     description,
     banner,
     bannerCredit,
@@ -96,24 +95,6 @@ function Post({data: {site, mdx}}) {
           >
             {title}
           </h1>
-          <div
-            css={css`
-              display: flex;
-              justify-content: center;
-              margin-bottom: 20px;
-              h3,
-              span {
-                text-align: center;
-                font-size: 15px;
-                opacity: 0.6;
-                font-family: ${fonts.regular}, sans-serif;
-                font-weight: normal;
-                margin: 0 5px;
-              }
-            `}
-          >
-            {date && <h3>{date}</h3>}
-          </div>
           {banner && (
             <div
               css={css`
@@ -213,7 +194,6 @@ export const pageQuery = graphql`
         noFooter
         description
         plainTextDescription
-        date(formatString: "MMMM DD, YYYY")
         author
         banner {
           ...bannerImage720
