@@ -1,7 +1,7 @@
 ---
 slug: write-tests
 title: Write tests. Not too many. Mostly integration.
-date: '2017-10-16'
+date: '2019-07-13'
 author: Kent C. Dodds
 description:
   _[Guillermo Rauch](https://twitter.com/rauchg)
