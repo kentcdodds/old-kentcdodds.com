@@ -112,9 +112,6 @@ exports.createPages = async ({actions, graphql}) => {
         date
         redirects
       }
-      code {
-        scope
-      }
     }
     query {
       blog: allMdx(

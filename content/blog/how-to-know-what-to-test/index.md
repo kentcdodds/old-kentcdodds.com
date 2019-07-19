@@ -43,10 +43,7 @@ implementation details
 Thinking about use cases though gets us closer to writing tests the way the user
 uses the application:
 
-> The more your tests resemble the way your software is used, the more
-> confidence they can give you. <span style={{paddingTop: 10, float: 'right'}}>–
-> <a href="https://twitter.com/kentcdodds/status/977018512689455106" target="_blank" rel="noopener noreferrer">me,
-> on twitter</a></span>
+https://twitter.com/kentcdodds/status/977018512689455106
 
 ## Code Coverage < Use Case Coverage
 

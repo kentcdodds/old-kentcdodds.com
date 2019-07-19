@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import isEmpty from 'lodash/isEmpty'
 import SEO from 'components/seo'
 import {css} from '@emotion/core'
@@ -117,7 +117,7 @@ function Post({data: {site, mdx}}) {
           )}
           <br />
           {description ? <Markdown>{description}</Markdown> : null}
-          <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
         {/* <SubscribeForm /> */}
       </article>
@@ -202,9 +202,7 @@ export const pageQuery = graphql`
         slug
         keywords
       }
-      code {
-        body
-      }
+      body
     }
   }
 `
