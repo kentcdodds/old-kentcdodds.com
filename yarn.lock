@@ -730,7 +730,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.4", "@babel/runtime@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -6742,6 +6742,15 @@ gatsby-remark-copy-linked-files@^2.1.3:
     path-is-inside "^1.0.2"
     probe-image-size "^4.0.0"
     unist-util-visit "^1.3.0"
+
+gatsby-remark-embedder@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-1.0.2.tgz#297411f8ae9b3e2f5f9b39642cba6f1767d2cc14"
+  integrity sha512-G3CFyhTyramjeCuKUVoPPF4Dg3E7zvIPORasfj5KjvcoqU7WIXZDBupNQZXZeH52S+eczx54Q2uWNdb/0MZKfA==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    node-fetch "^2.6.0"
+    unist-util-visit "^1.4.0"
 
 gatsby-remark-images@^3.1.6:
   version "3.1.6"

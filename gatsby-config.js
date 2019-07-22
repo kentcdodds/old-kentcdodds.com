@@ -89,7 +89,7 @@ module.exports = {
               maxWidth: 1035,
             },
           },
-          {resolve: require.resolve('./plugins/remark-embedder')},
+          {resolve: 'gatsby-remark-embedder'},
         ],
       },
     },
