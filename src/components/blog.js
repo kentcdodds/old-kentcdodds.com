@@ -111,6 +111,7 @@ function Blog({data: {allMdx}, pageContext: {pagination}, subscribeForm}) {
               css={css`
                 margin-top: 10px;
                 overflow-x: auto;
+                width: 100%;
               `}
             >
               {post.excerpt}
