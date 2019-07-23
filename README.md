@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-66-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -94,6 +94,7 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://jaimemendoza.com/"><img src="https://avatars3.githubusercontent.com/u/5395811?v=4" width="100px;" alt="Jaime Mendoza"/><br /><sub><b>Jaime Mendoza</b></sub></a><br /><a href="#content-jaimemendozadev" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.jescowuester.com"><img src="https://avatars3.githubusercontent.com/u/43379421?v=4" width="100px;" alt="Jesco Wüster"/><br /><sub><b>Jesco Wüster</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jescowuester" title="Code">💻</a></td>
+    <td align="center"><a href="http:// raikusy.github.io"><img src="https://avatars0.githubusercontent.com/u/4938039?v=4" width="100px;" alt="Rakibul Hasan"/><br /><sub><b>Rakibul Hasan</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=raikusy" title="Code">💻</a></td>
   </tr>
 </table>
 
