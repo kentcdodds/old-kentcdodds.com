@@ -591,20 +591,31 @@ export default [
           '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
         date: '2016-10-27',
       },
+      {
+        event:
+          '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
+        date: '2019-10-15',
+      },
     ],
     description: `
-        Awesome! You've made it big! You've published an open source project and people are actually using it to make the
-        world a better place. Achievement unlocked! Great job! But wait... what's this? An issue? Oh, it's just a bug.
-        Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What's this? A PR? How cool! Wait... That's not quite
-        right... Oh, a question! Cool! And another! And another... eh... and another... Uh oh... I think I've just sold my soul to
-        this project.
-        You start an open source project to scratch your own itch and suddenly other people start using it and they need
-        your help. This can easily start eating up your time big time and before you know it, your kids start feeling
-        neglected.
-        I've had to deal with this in a few projects and I've learned a thing or two about work/life/oss balance. I have a
-        few tricks that help you make the project manage itself a bit more while still being friendly and helpful to users
-        of the project.
-      `,
+      Awesome! You've made it big! You've published an open source project and
+      people are actually using it to make the world a better place. Achievement
+      unlocked! Great job! But wait... what's this? An issue? Oh, it's just a
+      bug. Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What's
+      this? A PR? How cool! Wait... That's not quite right... Oh, a question!
+      Cool! And another! And another... eh... and another... Uh oh...
+      You think you've just sold your soul to this project.
+      
+      You start an open source project to scratch your own itch and suddenly
+      other people start using it and they need your help. This can easily start
+      eating up your time big time and before you know it, your kids/dogs start
+      feeling neglected.
+      
+      I've had to deal with this in a few projects and I've learned a thing or
+      two about work/life/oss balance. I have a few tricks that help you make
+      the project manage itself a bit more while still being friendly and
+      helpful to users of the project. Let's chat.
+    `,
   },
   {
     title: 'Testing React',
