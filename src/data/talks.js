@@ -592,6 +592,10 @@ export default [
         date: '2016-10-27',
       },
       {
+        event: '[UthaJS Conf](https://conf.utahjs.com/)',
+        date: '2019-09-20',
+      },
+      {
         event:
           '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
         date: '2019-10-15',
