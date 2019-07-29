@@ -558,3 +558,6 @@ https://twitter.com/kentcdodds/status/1154468901121482753
 I've written tens of thousands of tests with different frameworks and styles and
 in my experience, reducing the amount of variable mutation has resulted in
 vastly simpler test maintenance. Good luck!
+
+P.S. If you'd like to play with the examples,
+[here's a codesandbox](https://codesandbox.io/s/react-codesandbox-ni9fk)
