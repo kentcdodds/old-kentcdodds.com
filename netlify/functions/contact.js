@@ -67,12 +67,22 @@ exports.handler = async event => {
     ow(
       subject,
       'Please keep the subject to a reasonable length',
-      ow.any(ow.string.minLength(5), ow.string.maxLength(120)),
+      ow.string.minLength(5),
+    )
+    ow(
+      subject,
+      'Please keep the subject to a reasonable length',
+      ow.string.maxLength(120),
     )
     ow(
       body,
       'Please keep the body to a reasonable length',
-      ow.any(ow.string.minLength(40), ow.string.maxLength(1001)),
+      ow.string.minLength(40),
+    )
+    ow(
+      body,
+      'Please keep the body to a reasonable length',
+      ow.string.maxLength(1001),
     )
   } catch (e) {
     log('> Validation failed', e.message)
