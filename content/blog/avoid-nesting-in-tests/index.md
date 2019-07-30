@@ -16,9 +16,7 @@ keywords:
   - 'jasmine'
   - 'ava'
 banner: './images/banner.jpg'
-bannerCredit:
-  'Photo by [the GORGEOUS, natu... | HD photo by Kate
-  Remmer](https://unsplash.com/photos/05_sUnshoaE)'
+bannerCredit: 'Photo by [Kate Remmer](https://unsplash.com/photos/05_sUnshoaE)'
 ---
 
 I want to show you something.
