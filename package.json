@@ -34,6 +34,7 @@
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-plugin-twitter": "^2.1.2",
     "gatsby-plugin-typography": "^2.3.2",
