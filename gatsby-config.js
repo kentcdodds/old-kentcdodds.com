@@ -165,12 +165,6 @@ module.exports = {
         pathToConfigModule: `src/lib/typography`,
       },
     },
-    // {
-    //   resolve: `netlify-cache`,
-    //   options: {
-    //     extraDirsToCache: ['./public/static'],
-    //   },
-    // },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-robots-txt',
