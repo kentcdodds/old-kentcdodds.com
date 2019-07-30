@@ -301,7 +301,8 @@ test('shows an error message when submit is clicked and no password is provided'
 })
 ```
 
-> Note: `test` is an alias for `it`.
+> Note: `test` is an alias for `it` and I just prefer using `test` when I'm not
+> nested in a `describe`.
 
 You'll notice that there is a bit of duplication there (we'll get to that), but
 look at how clear these tests are. With the exception of some test utilities and
