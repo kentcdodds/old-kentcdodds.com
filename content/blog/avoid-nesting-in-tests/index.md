@@ -19,10 +19,9 @@ banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Kate Remmer](https://unsplash.com/photos/05_sUnshoaE)'
 ---
 
-I want to show you something.
-
-> What I'm going to show is a general testing principle, applied to a React
-> Component test.
+I want to show you something. What I'm going to show is a general testing
+principle, applied to a React Component test. So even though the example is a
+react one, hopefully it helps communicate the concept properly.
 
 Here's a React component that I want to test:
 
@@ -70,6 +69,25 @@ function Login({onSubmit}) {
 
 export default Login
 ```
+
+And here's what that renders (it actually works, try it):
+
+import {Login} from './components'
+
+<div
+  style={{
+    padding: 14,
+    backgroundColor: 'rgba(0,0,0,0.05)',
+    borderRadius: 4,
+    marginBottom: 20,
+  }}
+>
+  <Login
+    onSubmit={({username, password}) =>
+      alert(`Username is "${username}" and Password is "${password}"`)
+    }
+  />
+</div>
 
 Here's a test suite that resembles the kind of testing I've seen over the years.
 
@@ -548,7 +566,7 @@ afterAll(() => server.close())
 ```
 
 There's not really any other reliable way to do this. Another use case I can
-think of that I've used for testing `console.error` calls:
+think of that I've used these hooks is for testing `console.error` calls:
 
 ```javascript
 beforeAll(() => {
