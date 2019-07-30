@@ -104,11 +104,10 @@ exports.onPreInit = async function onPreInit(
           console.log(`netlify-cache: clearing stale cache for ${humanName}`)
           rimraf.sync(cachePath)
         } else {
-          console.log(`netlify-cache: no need to update cache for ${dirPath}`)
           const dirFiles = await readdir(dirPath)
 
           console.log(
-            `netlify-cache: Restoring ${cacheFiles.length} cached files for ${humanName} directory with ${dirFiles.length} already existing files.`,
+            `netlify-cache: Restoring ${cacheFiles.length} cached files for from ${cachePath} to ${dirPath} which has ${dirFiles.length} already existing files.`,
           )
 
           ncp(cachePath, dirPath, function onFinish() {
