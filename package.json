@@ -112,7 +112,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "prebuild": "node other/load-cache.js",
     "build": "gatsby build",
+    "postbuild": "node other/make-cache.js",
     "dev": "npm-run-all --parallel dev:*",
     "dev:gatsby": "gatsby develop",
     "dev:functions": "dotenv -e ./netlify/.env netlify-lambda serve netlify/functions",
