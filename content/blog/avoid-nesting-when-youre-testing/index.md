@@ -23,6 +23,10 @@ I want to show you something. What I'm going to show is a general testing
 principle, applied to a React component test. So even though the example is a
 React one, hopefully it helps communicate the concept properly.
 
+> Note: my point isn't that nesting is bad by itself, but rather that it
+> naturally encourages using test hooks (such as `beforeEach`) as a mechanism
+> for code reuse which does lead to unmaintainable tests. Please read on...
+
 Here's a React component that I want to test:
 
 ```jsx
