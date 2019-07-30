@@ -1,11 +1,11 @@
 ---
-slug: 'avoid-nesting-in-tests'
-title: 'Avoid Nesting in Tests'
+slug: 'avoid-nesting-when-youre-testing'
+title: `Avoid Nesting when you're Testing`
 date: '2019-07-29'
 author: 'Kent C. Dodds'
 description:
-  '_Why nested describe blocks in tests lead to confusing tests and how to avoid
-  it._'
+  '_Why using hooks like beforeEach as a mechanism for code reuse leads to
+  unmaintainable tests and how to avoid it._'
 categories:
   - 'testing'
 keywords:
@@ -20,8 +20,8 @@ bannerCredit: 'Photo by [Kate Remmer](https://unsplash.com/photos/05_sUnshoaE)'
 ---
 
 I want to show you something. What I'm going to show is a general testing
-principle, applied to a React Component test. So even though the example is a
-react one, hopefully it helps communicate the concept properly.
+principle, applied to a React component test. So even though the example is a
+React one, hopefully it helps communicate the concept properly.
 
 Here's a React component that I want to test:
 

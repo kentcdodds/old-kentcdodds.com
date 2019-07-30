@@ -10,6 +10,7 @@
 /workshops/hooks                                                        /workshops/react-hooks
 /blog/make-test-utils-for-your-app                                      /blog/test-utils
 /blog/what-code-comments-can-teach-us-about-scaling-a-codebase          /blog/colocation
+/blog/avoid-nesting-in-tests                                            /blog/avoid-nesting-when-youre-testing
 
 # netlify analytics said that this page was requested a lot so we'll redirect it to blog which is probably where they want to go...
 /post                                                                   /blog
