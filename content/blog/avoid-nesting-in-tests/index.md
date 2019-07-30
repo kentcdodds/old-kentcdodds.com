@@ -540,12 +540,32 @@ they're normally matched with a cleanup that's necessary in an `after*`. Like
 starting and stopping a server:
 
 ```javascript
+let server
 beforeAll(async () => {
-  server = await startServer({port: 8000})
+  server = await startServer()
 })
-
 afterAll(() => server.close())
 ```
+
+There's not really any other reliable way to do this. Another use case I can
+think of that I've used for testing `console.error` calls:
+
+```javascript
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {})
+})
+
+afterEach(() => {
+  console.error.mockClear()
+})
+
+afterAll(() => {
+  console.error.mockRestore()
+})
+```
+
+**So there are definitely use cases for those kinds of hooks. I just don't
+recommend them as a mechanism for code reuse. We have functions for that.**
 
 ## Conclusion
 
