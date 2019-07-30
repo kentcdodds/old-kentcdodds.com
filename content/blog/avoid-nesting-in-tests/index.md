@@ -207,7 +207,7 @@ it('should call onSubmit with the username and password', () => {
 ```
 
 Where is `handleSubmit` coming from and what's its value? Where is `user` coming
-from? What's _it's_ value? Oh sure, you can go find where it's defined:
+from? What's _its_ value? Oh sure, you can go find where it's defined:
 
 ```javascript {3-4}
 describe('Login', () => {
