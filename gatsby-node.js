@@ -19,7 +19,7 @@ exports.sourceNodes = async ({actions: {createNode}}) => {
   const {data} = await axios(
     `https://api.simplecast.com/podcasts/${
       process.env.PODCAST_ID
-    }/episodes?limit=14`,
+    }/episodes?limit=500`,
   )
 
   const packagePodcast = p => {
@@ -161,6 +161,9 @@ exports.createPages = async ({actions, graphql}) => {
             id
             title
             number
+            season {
+              number
+            }
           }
         }
       }
@@ -224,13 +227,21 @@ exports.createPages = async ({actions, graphql}) => {
   const {blog, writing, workshops} = data
 
   data.podcast.edges.forEach(({node}) => {
+    const episodeNumber = node.number
+    const seasonNumber = node.season.number
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      seasonNumber,
+    )}/episodes/${twoDigits(episodeNumber)}`
+
     actions.createPage({
-      path: `podcast/${slugify(node.title)}`,
+      path: episodePath,
       component: path.resolve(`./src/templates/podcast-episode.js`),
       context: {
-        slug: slugify(node.title),
+        slug: episodePath,
         id: node.id,
         title: node.title,
+        season: node.season.number,
       },
     })
   })
@@ -251,11 +262,6 @@ exports.createPages = async ({actions, graphql}) => {
     data: workshops,
     actions,
   })
-  // podcast
-  // createPodcastEpisodes({
-  //   data: podcast,
-  //   actions,
-  // })
 }
 
 exports.onCreateWebpackConfig = ({actions}) => {
@@ -312,10 +318,15 @@ exports.onCreateNode = ({node, getNode, actions}) => {
   const {createNodeField} = actions
 
   if (node.internal.type === `Episode`) {
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      node.season.number,
+    )}/episodes/${twoDigits(node.number)}`
+
     createNodeField({
       name: 'slug',
       node,
-      value: slugify(`${node.title}`),
+      value: episodePath,
     })
   }
 

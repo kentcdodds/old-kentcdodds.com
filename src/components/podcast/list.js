@@ -1,12 +1,11 @@
 import React from 'react'
-import {graphql, StaticQuery} from 'gatsby'
 import Link from 'components/link'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {fonts} from '../../lib/typography'
 import {bpMaxMD} from '../../lib/breakpoints'
 
-function List({data}) {
+export default function PodcastList({data}) {
   return (
     <ul
       css={css({
@@ -18,24 +17,30 @@ function List({data}) {
         },
       })}
     >
-      {data.allEpisode.nodes.map(episode => (
+      {data.nodes.map(episode => (
         <li
           key={episode.id}
           css={css({
-            marginBottom: 5,
+            marginBottom: 10,
           })}
         >
           <Link
-            to={`/podcast/${episode.fields.slug}`}
+            to={`/${episode.fields.slug}`}
             activeClassName="active"
             css={css({
-              // bump font size accordingly to title length
-              // consider adding episode image
-              fontSize: '15px',
-              display: 'block',
+              h4: {
+                fontSize: '18px',
+                fontFamily: fonts.semibold,
+                lineHeight: 1.3,
+                display: 'inline-block',
+                margin: 0,
+                marginBottom: 6,
+              },
+              lineHeight: 1.25,
+              display: 'flex',
+              alignItems: 'flex-start',
               height: '100%',
-              padding: '10px 17px',
-              fontFamily: fonts.semibold,
+              padding: '13px 17px',
               color: theme.colors.body_color,
               borderRadius: 3,
               overflow: 'none',
@@ -44,7 +49,7 @@ function List({data}) {
               '&.active': {
                 borderLeft: '3px solid',
                 borderColor: theme.brand.primary,
-                color: theme.brand.primary,
+                h4: {color: theme.brand.primary},
                 background: 'white',
                 boxShadow: '0 10px 25px -10px rgba(0,0,0,0.15)',
                 ':hover': {
@@ -52,48 +57,39 @@ function List({data}) {
                 },
               },
               ':hover': {
-                color: theme.brand.primary,
+                color: theme.colors.body_color,
                 borderColor: 'white',
                 background: 'white',
                 boxShadow: '0 10px 25px -10px rgba(0,0,0,0.15)',
               },
+
               small: {
-                marginLeft: 5,
                 opacity: 0.6,
+              },
+              img: {
+                minWidth: 48,
+                height: 48,
+                borderRadius: '50%',
+                margin: 0,
               },
             })}
           >
-            {episode.title}
-            <small>E{episode.number}</small>
+            <img
+              width="40"
+              height="40"
+              src={episode.image_url}
+              alt={episode.title}
+            />
+            <div css={css({marginLeft: 15})}>
+              <h4>
+                {episode.title}
+                <small css={css({marginLeft: 5})}>E{episode.number}</small>
+              </h4>
+              <small>{episode.description}</small>
+            </div>
           </Link>
         </li>
       ))}
     </ul>
-  )
-}
-
-export default function PodcastList(props) {
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          allEpisode(filter: {season: {number: {eq: 1}}}) {
-            nodes {
-              id
-              title
-              number
-              enclosure_url
-              season {
-                number
-              }
-              fields {
-                slug
-              }
-            }
-          }
-        }
-      `}
-      render={data => <List data={data} {...props} />}
-    />
   )
 }

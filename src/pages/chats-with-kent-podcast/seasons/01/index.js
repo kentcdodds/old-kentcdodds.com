@@ -1,27 +1,27 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import PodcastEpisodePage from '../../templates/podcast-episode'
+import PodcastEpisodePage from '../../../../templates/podcast-episode'
 
-function PodcastPage({data: {allEpisode, allMdx}}) {
+function Season1({data: {allEpisode, allMdx}}) {
   const MarkdownForLatestEpisode = allMdx.edges.filter(
     Markdown => Markdown.node.frontmatter.id === allEpisode.nodes[0].id,
   )
   return (
     <PodcastEpisodePage
       data={{
-        // always display latest episode under /podcast
         episode: allEpisode.nodes[0],
-        mdx: MarkdownForLatestEpisode[0].node,
+        mdx: MarkdownForLatestEpisode[0] && MarkdownForLatestEpisode[0].node,
+        allEpisode,
       }}
     />
   )
 }
 
-export default PodcastPage
+export default Season1
 
-export const episodeQuery = graphql`
+export const season1Query = graphql`
   {
-    allEpisode {
+    allEpisode(filter: {season: {number: {eq: 1}}}) {
       totalCount
       nodes {
         id
@@ -29,8 +29,12 @@ export const episodeQuery = graphql`
         description
         number
         enclosure_url
+        image_url
         season {
           number
+        }
+        fields {
+          slug
         }
       }
     }

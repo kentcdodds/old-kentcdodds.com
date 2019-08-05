@@ -4,14 +4,14 @@ import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
 import {fonts} from '../lib/typography'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
+import theme from '../../config/theme'
 import styled from '@emotion/styled'
 import Link from 'components/link'
 import SEO from 'components/seo'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import Layout from 'components/layout'
-import PodcastList from 'components/podcast/list'
+import EpisodeList from 'components/podcast/list'
 
-// podcast provider icons
 import ApplePodcasts from '../images/podcast/apple.svg'
 import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
@@ -56,7 +56,7 @@ const ProviderLink = styled(Link)(
 const Sidebar = styled.aside(
   css({
     width: '100%',
-    maxWidth: '280px',
+    maxWidth: '330px',
     display: 'block',
     position: 'relative',
     '.fade-out': {
@@ -111,7 +111,8 @@ const Article = styled.article(
   css({
     background: 'white',
     boxShadow:
-      '0 25px 50px -10px rgba(0,0,0,0.025), 0 15px 50px -20px rgba(0,0,0,0.1)',
+      '0 25px 30px -10px rgba(0,0,0,0.025), 0 15px 30px -20px rgba(0,0,0,0.1)',
+    border: '1px solid #f6f6f6',
     width: '100%',
     height: 'auto',
     borderRadius: 5,
@@ -127,10 +128,17 @@ const Article = styled.article(
 function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
   return (
     <>
-      <SEO frontmatter={episode} podcastImage={episode.image_url} />
-      <Layout maxWidth={1080} siteTitle="Chats with Kent" pageTitle="episode">
+      <SEO
+        frontmatter={episode}
+        // podcastImage={
+        //   mdx.frontmatter.childImageSharp
+        //     ? mdx.frontmatter.metaImage.childImageSharp.original.src
+        //     : null
+        // }
+      />
+      <Layout maxWidth={1180} siteTitle="Chats with Kent" pageTitle="episode">
         <Container
-          maxWidth={1080}
+          maxWidth={1180}
           noVerticalPadding
           css={css({
             display: 'flex',
@@ -159,7 +167,7 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
         </Container>
         <Container
           noVerticalPadding
-          maxWidth={1080}
+          maxWidth={1180}
           css={css({
             display: 'flex',
             flexDirection: 'row',
@@ -175,11 +183,11 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
               season {episode.season.number <= 9 && '0'}
               {episode.season.number}{' '}
               <span className="episode-label-mobile">
-                ∙ {allEpisode.totalCount} episodes
+                ∙ {allEpisode && allEpisode.totalCount} episodes
               </span>
             </SidebarHeading>
             <div className="fade-out" />
-            <PodcastList />
+            <EpisodeList data={allEpisode} />
           </Sidebar>
           <Article>
             <iframe
@@ -193,16 +201,19 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
             />
             <h1
               css={css({
-                fontSize: 28,
+                color: theme.colors.body_color,
+                fontSize: 32,
                 maxWidth: 700,
                 lineHeight: 1.35,
-                marginTop: 0,
+                margin: 0,
                 fontFamily: fonts.semibold,
               })}
             >
               {episode.title}
             </h1>
-            <p>{episode.description}</p>
+            <h3 css={css({marginBottom: '2rem', marginTop: '1rem'})}>
+              {episode.description}
+            </h3>
             {mdx && <MDXRenderer>{mdx.code.body}</MDXRenderer>}
             {children}
           </Article>
@@ -215,7 +226,7 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
 export default PodcastEpisodePage
 
 export const episodeQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $season: Int!) {
     episode(id: {eq: $id}) {
       id
       title
@@ -238,10 +249,31 @@ export const episodeQuery = graphql`
       }
       frontmatter {
         id
+        metaImage {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
       }
     }
-    allEpisode(filter: {season: {number: {eq: 1}}}) {
+    allEpisode(filter: {season: {number: {eq: $season}}}) {
       totalCount
+      nodes {
+        id
+        title
+        description
+        number
+        enclosure_url
+        image_url
+        season {
+          number
+        }
+        fields {
+          slug
+        }
+      }
     }
   }
 `
