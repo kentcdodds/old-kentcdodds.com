@@ -21,7 +21,10 @@ export default Season1
 
 export const season1Query = graphql`
   {
-    allEpisode(filter: {season: {number: {eq: 1}}}) {
+    allEpisode(
+      filter: {season: {number: {eq: 1}}}
+      sort: {order: ASC, fields: number}
+    ) {
       totalCount
       nodes {
         id

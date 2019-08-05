@@ -13,9 +13,9 @@ import Layout from 'components/layout'
 import EpisodeList from 'components/podcast/list'
 
 import podcastMetaImage from '../images/podcast/metaImage.jpg'
-import ApplePodcasts from '../images/podcast/apple.svg'
-import GooglePodcasts from '../images/podcast/google.svg'
-import Spotify from '../images/podcast/spotify.svg'
+// import ApplePodcasts from '../images/podcast/apple.svg'
+// import GooglePodcasts from '../images/podcast/google.svg'
+// import Spotify from '../images/podcast/spotify.svg'
 import Rss from '../images/podcast/rss.svg'
 
 const ProviderLink = styled(Link)({
@@ -151,7 +151,8 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
             marginBottom: 10,
           })}
         >
-          <ProviderLink to="/">
+          {/* ✅ TODO: Restore as provider URLs are available */}
+          {/* <ProviderLink to="/">
             <img src={ApplePodcasts} alt="Listen on Apple Podcasts" /> Apple
           </ProviderLink>
           <ProviderLink to="/">
@@ -159,8 +160,8 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
           </ProviderLink>
           <ProviderLink to="/">
             <img src={Spotify} alt="Listen on Spotify" /> Spotify
-          </ProviderLink>
-          <ProviderLink to="/">
+          </ProviderLink> */}
+          <ProviderLink to="https://feeds.simplecast.com/X_wS_WYh">
             <img src={Rss} alt="Subscribe via RSS" /> RSS
           </ProviderLink>
         </Container>
