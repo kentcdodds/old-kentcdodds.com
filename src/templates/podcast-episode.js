@@ -18,41 +18,39 @@ import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
 import Rss from '../images/podcast/rss.svg'
 
-const ProviderLink = styled(Link)(
-  css({
-    display: 'flex',
-    alignItems: 'center',
-    padding: '10px 15px',
-    fontSize: 15,
+const ProviderLink = styled(Link)({
+  display: 'flex',
+  alignItems: 'center',
+  padding: '10px 15px',
+  fontSize: 15,
 
-    borderRadius: 5,
-    backgroundColor: 'white',
-    color: 'rgba(0,0,0,0.8) !important',
-    border: '1px solid rgba(0,0,0,0.05)',
-    img: {
-      margin: '0 10px 0 0',
-    },
-    ':not(:last-of-type)': {
-      marginRight: 10,
-      [bpMaxSM]: {
-        margin: '0 3px 5px',
-      },
-    },
-
-    ':hover': {
-      boxShadow: '0 5px 30px -5px rgba(0,0,0,0.075)',
-    },
+  borderRadius: 5,
+  backgroundColor: 'white',
+  color: 'rgba(0,0,0,0.8) !important',
+  border: '1px solid rgba(0,0,0,0.05)',
+  img: {
+    margin: '0 10px 0 0',
+  },
+  ':not(:last-of-type)': {
+    marginRight: 10,
     [bpMaxSM]: {
       margin: '0 3px 5px',
-      fontSize: 12,
-      padding: '5px 7px',
-
-      img: {
-        maxWidth: 20,
-      },
     },
-  }),
-)
+  },
+
+  ':hover': {
+    boxShadow: '0 5px 30px -5px rgba(0,0,0,0.075)',
+  },
+  [bpMaxSM]: {
+    margin: '0 3px 5px',
+    fontSize: 12,
+    padding: '5px 7px',
+
+    img: {
+      maxWidth: 20,
+    },
+  },
+})
 
 const Sidebar = styled.aside(
   css({
