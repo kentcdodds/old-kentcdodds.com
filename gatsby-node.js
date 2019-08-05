@@ -127,6 +127,39 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   return null
 }
 
+const createEpisodes = (createPage, edges) => {
+  edges.forEach(({node}) => {
+    const episodeNumber = node.number
+    const seasonNumber = node.season.number
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      seasonNumber,
+    )}/episodes/${twoDigits(episodeNumber)}`
+
+    createPage({
+      path: episodePath,
+      component: path.resolve(`./src/templates/podcast-episode.js`),
+      context: {
+        slug: episodePath,
+        id: node.id,
+        title: node.title,
+        season: node.season.number,
+      },
+    })
+  })
+}
+
+function createPodcastPages({data, actions}) {
+  if (_.isEmpty(data.edges)) {
+    throw new Error('There are no podcast episodes!')
+  }
+  const {edges} = data
+  const {createPage} = actions
+
+  createEpisodes(createPage, edges)
+  return null
+}
+
 exports.createPages = async ({actions, graphql}) => {
   const {data, errors} = await graphql(`
     fragment PostDetails on Mdx {
@@ -217,26 +250,12 @@ exports.createPages = async ({actions, graphql}) => {
     return Promise.reject(errors)
   }
 
-  const {blog, writing, workshops} = data
+  const {blog, writing, workshops, podcast} = data
 
-  data.podcast.edges.forEach(({node}) => {
-    const episodeNumber = node.number
-    const seasonNumber = node.season.number
-    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
-    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
-      seasonNumber,
-    )}/episodes/${twoDigits(episodeNumber)}`
-
-    actions.createPage({
-      path: episodePath,
-      component: path.resolve(`./src/templates/podcast-episode.js`),
-      context: {
-        slug: episodePath,
-        id: node.id,
-        title: node.title,
-        season: node.season.number,
-      },
-    })
+  createPodcastPages({
+    podcastPath: '',
+    data: podcast,
+    actions,
   })
 
   createBlogPages({
