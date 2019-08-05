@@ -13,6 +13,9 @@ metaImage: './david-khourshid-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import davidPhoto from './david-khourshid.png'
 
 In this episode, David Khourshid gives the rundown on how finite state machines
 can make your app more testable, more resilient to bugs, and easier to refactor.
@@ -37,16 +40,24 @@ solution to avoid those bugs.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Wikipedia: Finite State Machine](https://en.wikipedia.org/wiki/Finite-state_machine)
 - [xstate](https://xstate.js.org/)
 
-### David Khourshid
+</Resources>
+
+<Guest name="David Khourshid" image={davidPhoto}>
 
 - [Twitter](https://twitter.com/davidkpiano)
 - [Github](https://github.com/davidkpiano)
 - [Medium](https://medium.com/@DavidKPiano)
+
+</Guest>
+
+</div>
 
 ---
 

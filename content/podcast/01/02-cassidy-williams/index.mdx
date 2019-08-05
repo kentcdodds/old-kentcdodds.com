@@ -12,6 +12,9 @@ metaImage: './cassidy-williams-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import cassidyPhoto from './cassidy-williams.png'
 
 Cassidy Williams is an engineer at Codepen. In the last five years, Cassidy has
 worked for five companies. She had left each on her terms as she learned through
@@ -29,15 +32,23 @@ necessary changes for your life to align more with your likes and dislikes.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Boundaries](https://www.amazon.com/Boundaries-Updated-Expanded-When-Control/dp/0310351804/ref=dp_ob_title_bk)
 
-### Cassidy Williams
+</Resources>
+
+<Guest name="Cassidy Williams" image={cassidyPhoto}>
 
 - [Twitter](https://twitter.com/cassidoo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [Website](https://cassidoo.co/)
 - [Github](https://github.com/cassidoo)
+
+</Guest>
+
+</div>
 
 ---
 

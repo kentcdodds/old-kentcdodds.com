@@ -13,6 +13,9 @@ metaImage: './eric-berry-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import ericPhoto from './eric-berry.png'
 
 It's challenging to sustain open source projects, a lot of time and energy is
 poured in without any compensation in return. Eric Berry created CodeFund to
@@ -33,14 +36,22 @@ doesn't have to be evil, it can serve a good purpose if it's used correctly.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [CodeFund](https://codefund.io/)
 
-### Eric Berry
+</Resources>
+
+<Guest name="Eric Berry" image={ericPhoto}>
 
 - [Twitter](https://twitter.com/coderberry?lang=en)
 - [Github](https://github.com/coderberry)
+
+</Guest>
+
+</div>
 
 ---
 

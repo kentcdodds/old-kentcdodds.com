@@ -10,6 +10,9 @@ metaImage: './sara-vieira-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import saraPhoto from './sara-vieira.png'
 
 When something is easy for us, it more than likely is just familiar to us. It's
 easy to forget how challenging it was to learn what we know. When we tell
@@ -25,17 +28,25 @@ projects, and what you can do to make them fun and sustainable.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Is There Uber In?](https://isthereuber.in)
 - [Public APIs](https://github.com/public-apis/public-apis)
 
-### Sara Vieira
+</Resources>
+
+<Guest name="Sara Vieira" image={saraPhoto}>
 
 - [Twitter](https://twitter.com/NikkitaFTW)
 - [Website](https://iamsaravieira.com/)
 - [Meme Website](https://meme.iamsaravieira.com/)
 - [Github](https://github.com/SaraVieira)
+
+</Guest>
+
+</div>
 
 ---
 

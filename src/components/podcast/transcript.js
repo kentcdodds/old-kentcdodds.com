@@ -34,7 +34,7 @@ function Transcript({children}) {
         aria-expanded={isOpen ? 'true' : 'false'}
         css={css({marginTop: '1rem'})}
       >
-        {isOpen ? 'Collapse' : 'Expand'} transcript
+        {isOpen ? 'Collapse' : 'Expand'} Transcript
       </button>
     </>
   )

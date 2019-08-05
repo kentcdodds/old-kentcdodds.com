@@ -12,6 +12,9 @@ metaImage: './shawn-wang-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import shawnPhoto from './shawn-wang.png'
 
 You can learn in private, or you can learn in public. 99% of developers work and
 learn privately in the shadows, so why shouldn't you? Something magical happened
@@ -39,16 +42,24 @@ Youtube. Having an audience opens up the doors for opportunities!
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Zero to 60 in Software Development: How to Jumpstart Your Career](https://www.youtube.com/watch?v=-qPh6I2hfjw)
 - [React events in depth w/ Kent C. Dodds, Ben Alpert, & Dan Abramov](https://www.youtube.com/watch?v=dRo_egw7tBc)
 
-### Shawn Wang
+</Resources>
+
+<Guest name="Shawn Wang" image={shawnPhoto}>
 
 - [Twitter](https://twitter.com/swyx?lang=en)
 - [Website](https://www.swyx.io/)
 - [egghead.io](https://egghead.io/instructors/shawn-wang)
+
+</Guest>
+
+</div>
 
 ---
 

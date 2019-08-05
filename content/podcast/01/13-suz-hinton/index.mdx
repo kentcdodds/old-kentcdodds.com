@@ -11,6 +11,9 @@ metaImage: './suz-hinton-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import suzPhoto from './suz-hinton.png'
 
 Suz started streaming because she wanted to show pepole that hardware coding is
 just like regular everyday coding, it's just for smaller, dumber computers. It's
@@ -33,7 +36,9 @@ don't let the fear of criticism keep you from streaming!
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Suz's Streaming Setup](https://medium.com/@suzhinton/my-twitch-live-coding-setup-b2516672fb21)
 - [Free Music Archive](http://freemusicarchive.org/)
@@ -42,13 +47,19 @@ don't let the fear of criticism keep you from streaming!
 - [Chrome Blocksite](https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh?hl=en)
 - [Azure Mask](https://github.com/clarkio/azure-mask)
 
-### Suz Hinton
+</Resources>
+
+<Guest name="Suz Hinton" image={suzPhoto}>
 
 - [Twitter](https://twitter.com/noopkat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [Website](https://noopkat.com/)
 - [Twitch](https://www.twitch.tv/noopkat)
 - [Blog](http://meow.noopkat.com/)
 - [Github](https://github.com/noopkat)
+
+</Guest>
+
+</div>
 
 ---
 

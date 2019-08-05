@@ -10,6 +10,9 @@ metaImage: './scott-hanselman-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import scottPhoto from './scott-hanselman.png'
 
 Getting involved in the world of open-source isn't trivial, especially when we
 are new to this industry and don't a lot of technical experience. Those of us
@@ -44,15 +47,23 @@ something good, even if it is small, so permit yourself to praise yourself!
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Get Involved In Tech](https://getinvolved.hanselman.com/)
 
-### Scott Hanselman
+</Resources>
+
+<Guest name="Scott Hanselman" image={scottPhoto}>
 
 - [Website](https://www.hanselman.com/)
 - [Twitter](https://twitter.com/shanselman?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [Github](https://github.com/shanselman)
+
+</Guest>
+
+</div>
 
 ---
 

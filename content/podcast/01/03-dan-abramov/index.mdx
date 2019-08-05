@@ -11,6 +11,9 @@ metaImage: './dan-abramov-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import danPhoto from './dan-abramov.png'
 
 In this episode Kent and Dan talk about the ways in which you'll have to
 reconstruct your mental model of how React works in order to get the hang of
@@ -29,15 +32,23 @@ Hooks are a closer aproximation of this mental model.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [How Are Function Components Different From Classes?](https://overreacted.io/how-are-function-components-different-from-classes/)
 
-### Dan Abramov
+</Resources>
+
+<Guest name="Dan Abramov" image={danPhoto}>
 
 - [Twitter](https://twitter.com/dan_abramov?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [Github](https://github.com/gaearon)
 - [Website](https://overreacted.io/)
+
+</Guest>
+
+</div>
 
 ---
 

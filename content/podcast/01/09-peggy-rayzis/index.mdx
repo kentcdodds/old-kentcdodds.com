@@ -11,6 +11,9 @@ metaImage: './peggy-rayzis-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import peggyPhoto from './peggy-rayzis.png'
 
 Peggy Rayzis is the engineering manager at Apollo, where she leads the developer
 experience team.
@@ -35,15 +38,23 @@ documentation that is linked bellow.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Apollo Docs](https://www.apollographql.com/docs/)
 
-### Peggy Rayzis
+</Resources>
+
+<Guest name="Peggy Rayzis" image={peggyPhoto}>
 
 - [Twitter](https://twitter.com/peggyrayzis?lang=en)
 - [Github](https://github.com/peggyrayzis)
 - [Medium](https://medium.com/@peggyrayzis)
+
+</Guest>
+
+</div>
 
 ---
 

@@ -12,6 +12,9 @@ metaImage: './lin-clark-and-till-schneidereit-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import linAndTillPhoto from './lin-clark-and-till-schneidereit.png'
 
 Lin Clark and Till Schneidereit from Mozilla discuss where WebAssembly came from
 and where it's going. WebAssembly was inspired by asm.js, a subset of JavaScript
@@ -26,23 +29,34 @@ browser.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Lin Clark - Standardizing WASI: a system interface to run WebAssembly outside the web](https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/)
 - [Lin Clark - A cartoon intro to WebAssembly](https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/)
 - [Rust and WebAssembly Book](https://rustwasm.github.io/docs/book/)
 
-### Lin Clark
+</Resources>
+
+<div>
+
+<Guest name="Lin Clark" image={linAndTillPhoto}>
 
 - [Twitter](https://twitter.com/linclark?lang=en)
 - [Code Cartoons](https://code-cartoons.com/)
 - [Github](https://github.com/linclark)
 - [Mozilla Hacks](https://hacks.mozilla.org/author/lclarkmozilla-com/)
 
-### Till Schneidereit
+<Guest name="Till Schneidereit">
 
 - [Twitter](https://twitter.com/tschneidereit?lang=en)
 - [Github](https://github.com/tschneidereit)
+
+</Guest>
+</Guest>
+</div>
+</div>
 
 ---
 

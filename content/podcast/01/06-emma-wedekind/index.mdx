@@ -11,6 +11,9 @@ metaImage: './emma-wedekind-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import emmaPhoto from './emma-wedekind.png'
 
 Emma Wedekind launched **codingcoach.io**, a free, open-source project that
 connects mentees with mentors. Emma discusses how she launched Coding Coach
@@ -37,19 +40,27 @@ and remember that you are interviewing the company as well!
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Coding Coach](https://codingcoach.io/)
 - [Emma Wedekind - Decoding the Front-end Interview Process](https://dev.to/emmawedekind/decoding-the-front-end-interview-process-14dl)
 - [Kent C. Dodds - Solidifying What You Learn](https://kentcdodds.com/blog/solidifying-what-you-learn)
 - [HackerRank](https://www.hackerrank.com/)
 
-### Emma Wedekind
+</Resources>
+
+<Guest name="Emma Wedekind" image={emmaPhoto}>
 
 - [Twitter](https://twitter.com/EmmaWedekind?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 - [Website](https://emmawedekind.com/)
 - [Dev.to Blog](https://dev.to/emmawedekind)
 - [Github](https://github.com/emmawedekind)
+
+</Guest>
+
+</div>
 
 ---
 

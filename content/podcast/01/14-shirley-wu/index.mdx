@@ -12,6 +12,9 @@ metaImage: './shirley-wu-card.png'
 ---
 
 import Transcript from 'components/podcast/transcript'
+import Resources from 'components/podcast/resources'
+import Guest from 'components/podcast/guest'
+import shirleyPhoto from './shirley-wu.png'
 
 Shirley Wu has been freelancer since 2016, creating data visualizations for her
 clients. In this episode, Shirley talks about the four projects that had the
@@ -44,14 +47,18 @@ visualization into physical space a reality.
 
 ---
 
-### Resources
+<div style={{display: 'grid', gridGap: 10, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'}}>
+
+<Resources>
 
 - [Hamilton](https://pudding.cool/2017/03/hamilton/)
 - [The Guardian - Bussed Out](https://www.theguardian.com/us-news/ng-interactive/2017/dec/20/bussed-out-america-moves-homeless-people-country-study)
 - [Journal - Send Me Love](http://www.datasketch.es/february/)
 - [Legends](https://christmasexperiments.com/2018/23/legends)
 
-### Shirley Wu
+</Resources>
+
+<Guest name="Shirley Wu" image={shirleyPhoto}>
 
 - [Website](http://sxywu.com/)
 - [Blog](https://medium.com/@sxywu)
@@ -59,6 +66,10 @@ visualization into physical space a reality.
 - [Twitter](https://twitter.com/sxywu?lang=en)
 - [Github](https://github.com/sxywu)
 - [Instagram](https://www.instagram.com/shirleyxueyangwu/?hl=en)
+
+</Guest>
+
+</div>
 
 ---
 
