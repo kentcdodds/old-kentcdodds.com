@@ -174,14 +174,14 @@ Subscribe [here](http://kcd.im/news):
 
 **Things to not miss**:
 
-- [React... Suspense... (@ SLC frontend meetup)](https://youtu.be/7LmrS2sdMlo&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — Livestream
+- [React... Suspense... (@ SLC frontend meetup)](https://youtu.be/7LmrS2sdMlo?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — Livestream
   of my talk at
   [https://www.meetup.com/SLC-FE-DEV/eve...](https://www.meetup.com/SLC-FE-DEV/events/254256621).
   In this talk I build my own simple-cache-provider to teach you how React
   Suspense works with the cache and resources (promise throwers).
 - [Last call for Create React App v2](https://github.com/facebook/create-react-app/issues/5103) +
-  [Using and writing custom babel macros with create-react-app v2](https://youtu.be/1ERAJG9ILhk&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+  [Using and writing custom babel macros with create-react-app v2](https://youtu.be/1ERAJG9ILhk?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
   (which is a [DevTipsWithKent livestream](http://kcd.im/devtips))
-- [Validation with HTMLInputElements](https://youtu.be/kN7-EBjSilU&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u) — A
+- [Validation with HTMLInputElements](https://youtu.be/kN7-EBjSilU?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u) — A
   [DevTipsWithKent](http://kcd.im/devtips) livestream where I show you a sweet
   validation feature that's built-into browsers since IE10!

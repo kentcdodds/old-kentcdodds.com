@@ -43,10 +43,7 @@ implementation details
 Thinking about use cases though gets us closer to writing tests the way the user
 uses the application:
 
-> The more your tests resemble the way your software is used, the more
-> confidence they can give you. <span style={{paddingTop: 10, float: 'right'}}>–
-> <a href="https://twitter.com/kentcdodds/status/977018512689455106" target="_blank" rel="noopener noreferrer">me,
-> on twitter</a></span>
+https://twitter.com/kentcdodds/status/977018512689455106
 
 ## Code Coverage < Use Case Coverage
 
@@ -287,7 +284,7 @@ time.
 > For more on establishing a culture of testing and reasonable code coverage
 > targets, I suggest watching [Aaron Abramov's](https://twitter.com/aarondjents)
 > talk at [AssertJS 2018](https://2018.assertjs.com):
-> [Establishing testing patterns with software design principles](https://youtu.be/_pnW-JjmyXE&list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
+> [Establishing testing patterns with software design principles](https://youtu.be/_pnW-JjmyXE?list=PLZ66c9_z3umNSrKSb5cmpxdXZcIPNvKGw)
 
 <!-- force a break between these comments... -->
 

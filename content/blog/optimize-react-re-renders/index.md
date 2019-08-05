@@ -24,8 +24,14 @@ appreciate:
 
 https://twitter.com/kentcdodds/status/1143200604065431552
 
-Let's break that down with a simple contrived example and then talk about what
-practical application this has for you in your day-to-day apps.
+After reading this blog post,
+[Brooks Lybrand](https://twitter.com/BrooksLybrand) implemented this trick and
+this was the result:
+
+https://twitter.com/BrooksLybrand/status/1149800755404185609
+
+Excited? Let's break it down with a simple contrived example and then talk about
+what practical application this has for you in your day-to-day apps.
 
 ## An example
 

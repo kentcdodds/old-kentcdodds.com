@@ -12,4 +12,8 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
+  setupFilesAfterEnv: [
+    '@testing-library/react/cleanup-after-each',
+    '@testing-library/jest-dom/extend-expect',
+  ],
 }

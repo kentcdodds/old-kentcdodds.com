@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import SEO from 'components/seo'
 import Container from 'components/container'
 import Layout from 'components/layout'
@@ -113,7 +113,7 @@ function Workshop({data: {site, mdx}}) {
               }
             `}
           />
-          <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
           {!isLoading && isEmpty(events) && (
             <WorkshopInterestForm subscribeToTag={ckTag} title={title} />
           )}
@@ -149,9 +149,7 @@ export const pageQuery = graphql`
         description
         keywords
       }
-      code {
-        body
-      }
+      body
     }
   }
 `

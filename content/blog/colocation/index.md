@@ -186,5 +186,5 @@ you check out [this talk](https://youtu.be/x7cQ3mrcKaY) by
 
 P.P.S. I should also note that this applies great to images and really any other
 resource as well. And when you use a tool like
-[webpack](https://webpack.js.org/), co-locating those resources is crazy easy
+[webpack](https://webpack.js.org), co-locating those resources is crazy easy
 too. Honestly, this is one of the core value propositions of webpack IMO.

@@ -25,7 +25,7 @@ It's just so good. 😍_
 
 I'm super excited to share this course with you. I've been using React full time
 for almost three years now and I've never been more
-[excited (!!)](https://youtu.be/0jlTw2XI7I8&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+[excited (!!)](https://youtu.be/0jlTw2XI7I8?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
 about writing components than when I started playing around with Hooks and
 Suspense. Let's get a quick rundown of what you can expect from the course:
 

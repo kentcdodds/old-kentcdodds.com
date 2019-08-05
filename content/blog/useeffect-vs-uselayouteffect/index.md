@@ -59,7 +59,7 @@ doesn't actually see the updates until after the browser has repainted).
 
 ### Conclusion
 
-[I am extremely excited about React's upcoming hooks feature](https://youtu.be/0jlTw2XI7I8&t=39s&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
+[I am extremely excited about React's upcoming hooks feature](https://youtu.be/0jlTw2XI7I8?t=39s&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
 I think it's going to make React much easier to learn and use.
 
 **Learn more about React from me**:

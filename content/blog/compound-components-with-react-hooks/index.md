@@ -18,7 +18,7 @@ A few weeks ago I did a [DevTips with Kent](https://kcd.im/devtips) livestream
 where I show you how to refactor the compound components pattern from a class
 component to a function component with React hooks:
 
-https://youtube.com/watch?v=415EfGPuhSo&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u
+https://youtu.be/415EfGPuhSo?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u
 
 If you're unfamiliar with compound components, then you probably haven't watched
 my Advanced React Component Patterns course

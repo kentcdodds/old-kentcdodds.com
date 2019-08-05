@@ -1,51 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-64-orange.svg?style=flat-square)](#contributors)
-
-This was bootstrapped via
-[egghead-gatsby-starter](https://github.com/eggheadio/gatsby-starter-egghead-blog)
-
-This is based on Robin Wieruch's
-https://github.com/rwieruch/gatsby-mdx-blog-starter-project
-
-Lot's of nice pieces are also borrowed from Jason Lengstorf
-https://github.com/jlengstorf/lengstorf.com
-
-A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with
-[MDX](https://github.com/mdx-js/mdx).
-
-## Features
-
-- MDX: JavaScript/React in Markdown
-- Prism.js: Syntax Highlighting
-- Pagination
-- Emotion
-- Typography.js
-- Self-hosted fonts ([Inter UI](https://rsms.me/inter/))
-- Social media share buttons
-- Site & Theme config files
-- ConvertKit subscribe form (Formik and Yup)
-- Placeholder illustrations by
-  [Katerina Limpitsouni](https://twitter.com/ninalimpi) from
-  [undraw.co](https://undraw.co/)
-
-## [➞ Demo](https://egghead-gatsby-starter.netlify.com/)
-
-## Setup
-
-- `git clone git@github.com:eggheadio/gatsby-starter-egghead-blog.git`
-- `cd gatsby-starter-egghead-blog`
-- `npm install`
-- `gatsby develop`
-- visit http://localhost:8000
-
-## Setup via Gatsby CLI
-
-- `gatsby new gatsby-starter-egghead-blog git@github.com:eggheadio/gatsby-starter-egghead-blog.git`
-- `cd gatsby-starter-egghead-blog`
-- `npm install`
-- `gatsby develop`
-- visit http://localhost:8000
+[![All Contributors](https://img.shields.io/badge/all_contributors-67-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -138,6 +93,9 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://jaimemendoza.com/"><img src="https://avatars3.githubusercontent.com/u/5395811?v=4" width="100px;" alt="Jaime Mendoza"/><br /><sub><b>Jaime Mendoza</b></sub></a><br /><a href="#content-jaimemendozadev" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.jescowuester.com"><img src="https://avatars3.githubusercontent.com/u/43379421?v=4" width="100px;" alt="Jesco Wüster"/><br /><sub><b>Jesco Wüster</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jescowuester" title="Code">💻</a></td>
+    <td align="center"><a href="http:// raikusy.github.io"><img src="https://avatars0.githubusercontent.com/u/4938039?v=4" width="100px;" alt="Rakibul Hasan"/><br /><sub><b>Rakibul Hasan</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=raikusy" title="Code">💻</a></td>
+    <td align="center"><a href="http://stephan281094.github.io"><img src="https://avatars1.githubusercontent.com/u/4006802?v=4" width="100px;" alt="Stephan de Vries"/><br /><sub><b>Stephan de Vries</b></sub></a><br /><a href="#content-stephan281094" title="Content">🖋</a></td>
   </tr>
 </table>
 

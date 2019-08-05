@@ -371,7 +371,7 @@ inbox two weeks before it's published to my blog:
 
 - [Why and How I started public speaking](/blog/why-and-how-i-started-public-speaking)
 - [Getting Noticed and Widening Your Reach](https://buttondown.email/kentcdodds/archive/03761505-8609-404c-a5b7-5367013292bf)
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 **Things to not miss**:
 

@@ -159,7 +159,7 @@ custom hooks!
 There's a little more to this (like how do we port the control props pattern to
 react hooks for example). I'm going to leave that to you to discover. Once
 you've tried it out for a little bit, then
-[watch me do it](https://youtu.be/_eVyLVFlSQk&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
+[watch me do it](https://youtu.be/_eVyLVFlSQk?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u).
 There's a catch with the way we've been testing things a bit that change
 slightly with hooks (thanks to JavaScript closures).
 

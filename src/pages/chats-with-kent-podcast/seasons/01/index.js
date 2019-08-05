@@ -41,9 +41,7 @@ export const season1Query = graphql`
     allMdx(filter: {fileAbsolutePath: {regex: "//content/podcast//"}}) {
       edges {
         node {
-          code {
-            body
-          }
+          body
           frontmatter {
             id
           }

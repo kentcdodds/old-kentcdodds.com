@@ -10,16 +10,12 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-axios.defaults.headers.common.Authorization = `Bearer ${
-  process.env.SIMPLECAST_API_SECRET
-}`
+axios.defaults.headers.common.Authorization = `Bearer ${process.env.SIMPLECAST_API_SECRET}`
 axios.defaults.headers.common.Accept = 'application/json'
 
 exports.sourceNodes = async ({actions: {createNode}}) => {
   const {data} = await axios(
-    `https://api.simplecast.com/podcasts/${
-      process.env.PODCAST_ID
-    }/episodes?limit=500`,
+    `https://api.simplecast.com/podcasts/${process.env.PODCAST_ID}/episodes?limit=500`,
   )
 
   const packagePodcast = p => {
@@ -149,9 +145,6 @@ exports.createPages = async ({actions, graphql}) => {
         description
         date
         redirects
-      }
-      code {
-        scope
       }
     }
     query {

@@ -3,11 +3,19 @@ const config = require('./config/website')
 const proxy = require('http-proxy-middleware')
 
 const here = (...p) => path.join(__dirname, ...p)
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = config.siteUrl,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   developMiddleware: app => {
@@ -21,14 +29,17 @@ module.exports = {
       }),
     )
   },
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl,
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ['Video Blogger'],
-    canonicalUrl: config.siteUrl,
+    keywords: [
+      'Software Engineer',
+      'React Training',
+      'Testing JavaScript Training',
+    ],
+    canonicalUrl: siteUrl,
     image: config.siteLogo,
     author: {
       name: config.author,
@@ -36,7 +47,7 @@ module.exports = {
     },
     organization: {
       name: config.organization,
-      url: config.siteUrl,
+      url: siteUrl,
       logo: config.siteLogo,
     },
     social: {
@@ -81,7 +92,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
           default: here('./src/templates/markdown-page.js'),
@@ -96,7 +107,7 @@ module.exports = {
               maxWidth: 1035,
             },
           },
-          {resolve: require.resolve('./plugins/remark-embedder')},
+          {resolve: 'gatsby-remark-embedder'},
         ],
       },
     },
@@ -161,22 +172,37 @@ module.exports = {
         pathToConfigModule: `src/lib/typography`,
       },
     },
+    'gatsby-plugin-offline',
     {
-      resolve: `netlify-cache`,
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        extraDirsToCache: ['./public/static'],
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{userAgent: '*'}],
+          },
+          'branch-deploy': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null,
+          },
+        },
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
   ],
 }
 
 function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
   return {
-    serialize: ({query: {site, allMdx}}) => {
+    serialize: ({query: {allMdx}}) => {
       const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
       return allMdx.edges.map(edge => {
-        const siteUrl = site.siteMetadata.siteUrl
         const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
         // TODO: clean this up... This shouldn't be here and it should be dynamic.
         const footer = `
@@ -246,8 +272,6 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
          siteMetadata {
            title
            description
-           siteUrl
-           site_url: siteUrl
          }
        }
 

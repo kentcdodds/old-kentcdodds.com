@@ -375,6 +375,11 @@ test('submit calls the submit handler', () => {
 > you've got some nuance you're testing (like error states for example), then
 > this kind of abstraction is great.
 
+## Nesting
+
+I'd recommend you give [Avoid Nesting in Tests](/blog/avoid-nesting-in-tests) a
+read.
+
 ## jest-in-case and test.each
 
 If you're writing tests for a pure function, you're in luck because those are

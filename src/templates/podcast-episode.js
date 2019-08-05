@@ -8,7 +8,7 @@ import theme from '../../config/theme'
 import styled from '@emotion/styled'
 import Link from 'components/link'
 import SEO from 'components/seo'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import Layout from 'components/layout'
 import EpisodeList from 'components/podcast/list'
 
@@ -214,7 +214,7 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
             <h3 css={css({marginBottom: '2rem', marginTop: '1rem'})}>
               {episode.description}
             </h3>
-            {mdx && <MDXRenderer>{mdx.code.body}</MDXRenderer>}
+            {mdx && <MDXRenderer>{mdx.body}</MDXRenderer>}
             {children}
           </Article>
         </Container>
@@ -244,9 +244,7 @@ export const episodeQuery = graphql`
       }
     }
     mdx(frontmatter: {id: {eq: $id}}) {
-      code {
-        body
-      }
+      body
       frontmatter {
         id
         metaImage {

@@ -25,7 +25,7 @@ export default [
     deliveries: [
       {
         event:
-          '[All Things Open 2019](https://allthingsopen.org/speakers/kent-c-dodds/)',
+          '[All Things Open 2019](https://allthingsopen.org/speakers/kent-c-dodds)',
         date: '2019-10-13',
       },
     ],
@@ -39,7 +39,7 @@ export default [
     tags: [],
     deliveries: [
       {
-        event: '[Connect.Tech](https://connect.tech/)',
+        event: '[Connect.Tech](https://connect.tech)',
         date: '2019-10-16',
       },
     ],
@@ -53,7 +53,7 @@ export default [
     tags: ['react'],
     deliveries: [
       {
-        event: '[React Rally 2019](https://www.reactrally.com/)',
+        event: '[React Rally 2019](https://www.reactrally.com)',
         date: '2019-08-22',
       },
     ],
@@ -82,7 +82,7 @@ export default [
           '[React Ottawa Meetup](https://www.meetup.com/Ottawa-ReactJS-Meetup/events/260941602/?_xtd=gqFyqTIxNzkwMTQzM6FwpmlwaG9uZQ&from=ref)',
         date: '2019-05-30',
         recording:
-          'https://www.youtube.com/watch?v=-FxVK5mOewQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/-FxVK5mOewQ?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -96,9 +96,9 @@ export default [
     tags: ['react'],
     deliveries: [
       {
-        event: '[React.Amsterdam](https://react.amsterdam/)',
+        event: '[React.Amsterdam](https://react.amsterdam)',
         recording:
-          'https://www.youtube.com/watch?v=tO8qHlr6Wqg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/tO8qHlr6Wqg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2019-04-12',
       },
     ],
@@ -162,7 +162,7 @@ export default [
         event: 'BYU Presentation',
         date: '2018-12-06',
         recording:
-          'https://www.youtube.com/watch?v=k6KcaMffxac&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjsh',
+          'https://youtu.be/k6KcaMffxac?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjsh',
       },
     ],
     description: `
@@ -182,16 +182,16 @@ export default [
           '[GDG Salt Lake DevFest 2018](https://sites.google.com/view/gdgsaltlakedevfest2018)',
         date: '2018-11-17',
         recording:
-          'https://www.youtube.com/watch?v=zWsZcBiwgVE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/zWsZcBiwgVE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event:
-          '[ReactKHI Meetup #3](https://www.facebook.com/events/312802822683639/)',
+          '[ReactKHI Meetup #3](https://www.facebook.com/events/312802822683639)',
         date: '2019-01-26',
       },
       {
         event:
-          '[RVA.js Meetup](https://www.meetup.com/rva-js/events/jrgfhpyzdbhb/)',
+          '[RVA.js Meetup](https://www.meetup.com/rva-js/events/jrgfhpyzdbhb)',
         date: '2019-02-12',
       },
     ],
@@ -231,10 +231,10 @@ export default [
     deliveries: [
       {
         event:
-          '[SLC Frontend Meetup](https://www.meetup.com/SLC-FE-DEV/events/254256621/)',
+          '[SLC Frontend Meetup](https://www.meetup.com/SLC-FE-DEV/events/254256621)',
         date: '2018-09-25',
         recording:
-          'https://www.youtube.com/watch?v=7LmrS2sdMlo&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/7LmrS2sdMlo?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -251,7 +251,7 @@ export default [
         event: 'Practice Run',
         date: '2018-06-01',
         recording:
-          'https://www.youtube.com/watch?v=PJe8KXPw4cA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/PJe8KXPw4cA?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'JS@PayPal (internal conference)',
@@ -261,19 +261,19 @@ export default [
         event: '[Open West 2018](https://www.openwest.org)',
         date: '2018-06-08',
         recording:
-          'https://www.youtube.com/watch?v=Q25lkYUZTMU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/Q25lkYUZTMU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[Chain React](https://infinite.red/ChainReactConf)',
         date: '2018-07-12',
         recording:
-          'https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/M9X2qGddHkU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event: '[React Rally 2018](https://2018.reactrally.com/)',
+        event: '[React Rally 2018](https://2018.reactrally.com)',
         date: '2018-08-16',
         recording:
-          'https://www.youtube.com/watch?v=AiJ8tRRH0f8&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -301,7 +301,7 @@ export default [
         event: 'JS@PayPal (internal conference)',
         date: '2018-05-10',
         recording:
-          'https://www.youtube.com/watch?v=qXRPHRgcXJ0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/qXRPHRgcXJ0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: '[egghead.io](http://kcd.im/egghead)',
@@ -310,7 +310,7 @@ export default [
           'https://egghead.io/lessons/react-confidently-ship-production-react-apps',
       },
       {
-        event: '[ByteConf](https://byteconf.com/)',
+        event: '[ByteConf](https://byteconf.com)',
         date: '2018-08-31',
       },
     ],
@@ -351,7 +351,7 @@ export default [
     deliveries: [
       {
         event:
-          '[React Dev Summit](https://devchat.tv/event/react-dev-summit-2018/)',
+          '[React Dev Summit](https://devchat.tv/event/react-dev-summit-2018)',
         date: '2018-03-30',
       },
       {
@@ -370,11 +370,11 @@ export default [
   },
   {
     title: 'How open source has made me and the stuff I make better',
-    resources: ['[slides](https://slides.com/kentcdodds/oss-better#/)'],
+    resources: ['[slides](https://slides.com/kentcdodds/oss-better#)'],
     tags: ['open source'],
     deliveries: [
       {
-        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018/)',
+        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018)',
         date: '2018-04-13',
       },
     ],
@@ -395,10 +395,10 @@ export default [
     deliveries: [
       {
         event:
-          '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120/)',
+          '[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120)',
         date: '2018-01-31',
         recording:
-          'https://www.youtube.com/watch?v=nlAHtAQlFGk&t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
+          'https://youtu.be/nlAHtAQlFGk?t=2s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=1',
       },
     ],
     description: `
@@ -412,21 +412,21 @@ export default [
     deliveries: [
       {
         event:
-          '[UtahJS Orem Meetup](https://www.meetup.com/UtahJS/events/246047733/)',
+          '[UtahJS Orem Meetup](https://www.meetup.com/UtahJS/events/246047733)',
         date: '2018-01-04',
         recording:
-          'https://www.youtube.com/watch?v=10jYq_d8fks&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/10jYq_d8fks?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event:
-          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/244852066/)',
+          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/244852066)',
         date: '2017-11-21',
       },
       {
-        event: '[Assert(JS)](https://www.assertjs.com/)',
+        event: '[Assert(JS)](https://www.assertjs.com)',
         date: '2018-02-22',
         recording:
-          'https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/Fha2bVoC8SE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -444,15 +444,15 @@ export default [
     tags: ['react', 'jsx', 'intro'],
     deliveries: [
       {
-        event: '[UtahJS Conf](https://conf.utahjs.com/)',
+        event: '[UtahJS Conf](https://conf.utahjs.com)',
         date: '2018-09-14',
       },
       {
         event:
-          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227/)',
+          '[UtahJS SLC Meetup](https://www.meetup.com/UtahJS/events/245220227)',
         date: '2017-12-19',
         recording:
-          'https://www.youtube.com/watch?v=pugPxYH96TU&t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://youtu.be/pugPxYH96TU?t=2276s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -463,7 +463,7 @@ export default [
   },
   {
     title: 'Maintainable CSS in React',
-    resources: ['[slides](http://slides.com/kentcdodds/glamorous#/)'],
+    resources: ['[slides](http://slides.com/kentcdodds/glamorous#)'],
     tags: ['glamorous', 'css', 'css-in-js', 'react'],
     deliveries: [
       {
@@ -473,10 +473,10 @@ export default [
           'https://youtu.be/3-4KsXPO2Q4?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
-        event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528/)',
+        event: '[ReactNYC](https://www.meetup.com/ReactNYC/events/239324528)',
         date: '2017-06-22',
         recording:
-          'https://www.youtube.com/watch?v=R1_nGU0x3Wk&t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
+          'https://youtu.be/R1_nGU0x3Wk?t=21s&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&index=3',
       },
     ],
     description: `
@@ -490,7 +490,7 @@ export default [
   },
   {
     title: 'Tools of modern JavaScript projects',
-    resources: ['[slides](http://slides.com/kentcdodds/js-tools#/)'],
+    resources: ['[slides](http://slides.com/kentcdodds/js-tools#)'],
     tags: ['javascript', 'tools'],
     deliveries: [
       {
@@ -520,9 +520,9 @@ export default [
       },
       {
         event:
-          '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949/)',
+          '[UtahJS meetup](https://www.meetup.com/UtahJS/events/234009949)',
         date: '2016-11-03',
-        recording: 'https://www.youtube.com/watch?v=kI_OiAUFLkQ',
+        recording: 'https://youtu.be/kI_OiAUFLkQ',
       },
     ],
     description: `
@@ -547,7 +547,7 @@ export default [
     deliveries: [
       {
         event: '[Angular Remote Conf](http://angularremoteconf.com)',
-        recording: 'https://www.youtube.com/watch?v=Zlu3QvuwruY',
+        recording: 'https://youtu.be/Zlu3QvuwruY',
         date: '2015-09-01',
       },
       {
@@ -556,11 +556,11 @@ export default [
       },
       {
         event:
-          '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff/)',
+          '[All Things Open](https://allthingsopen.org/talk/how-to-open-source-your-stuff)',
         date: '2016-10-27',
       },
       {
-        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018/)',
+        event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018)',
         date: '2018-04-13',
       },
     ],
@@ -583,28 +583,43 @@ export default [
     tags: ['open source', 'soft skills'],
     deliveries: [
       {
-        event: '[Space City JS](http://spacecity.codes/)',
+        event: '[Space City JS](http://spacecity.codes)',
         date: '2016-05-14',
       },
       {
         event:
-          '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project/)',
+          '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
         date: '2016-10-27',
+      },
+      {
+        event: '[UthaJS Conf](https://conf.utahjs.com/)',
+        date: '2019-09-20',
+      },
+      {
+        event:
+          '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
+        date: '2019-10-15',
       },
     ],
     description: `
-        Awesome! You've made it big! You've published an open source project and people are actually using it to make the
-        world a better place. Achievement unlocked! Great job! But wait... what's this? An issue? Oh, it's just a bug.
-        Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What's this? A PR? How cool! Wait... That's not quite
-        right... Oh, a question! Cool! And another! And another... eh... and another... Uh oh... I think I've just sold my soul to
-        this project.
-        You start an open source project to scratch your own itch and suddenly other people start using it and they need
-        your help. This can easily start eating up your time big time and before you know it, your kids start feeling
-        neglected.
-        I've had to deal with this in a few projects and I've learned a thing or two about work/life/oss balance. I have a
-        few tricks that help you make the project manage itself a bit more while still being friendly and helpful to users
-        of the project.
-      `,
+      Awesome! You've made it big! You've published an open source project and
+      people are actually using it to make the world a better place. Achievement
+      unlocked! Great job! But wait... what's this? An issue? Oh, it's just a
+      bug. Pretty quick and easy. Fixed, released, done, #likeaboss 😎. What's
+      this? A PR? How cool! Wait... That's not quite right... Oh, a question!
+      Cool! And another! And another... eh... and another... Uh oh...
+      You think you've just sold your soul to this project.
+      
+      You start an open source project to scratch your own itch and suddenly
+      other people start using it and they need your help. This can easily start
+      eating up your time big time and before you know it, your kids/dogs start
+      feeling neglected.
+      
+      I've had to deal with this in a few projects and I've learned a thing or
+      two about work/life/oss balance. I have a few tricks that help you make
+      the project manage itself a bit more while still being friendly and
+      helpful to users of the project. Let's chat.
+    `,
   },
   {
     title: 'Testing React',
@@ -619,7 +634,7 @@ export default [
     tags: ['react', 'testing', 'live coding'],
     deliveries: [
       {
-        event: '[Connect.tech](http://connect.tech/)',
+        event: '[Connect.tech](http://connect.tech)',
         date: '2016-10-21',
       },
       {
@@ -627,7 +642,7 @@ export default [
         date: '2016-09-23',
       },
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         date: '2016-08-11',
       },
     ],
@@ -645,7 +660,7 @@ export default [
     tags: ['ES6', 'babel'],
     deliveries: [
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         date: '2016-08-12',
       },
       {
@@ -655,7 +670,7 @@ export default [
       },
       {
         event:
-          '[JavaScript KC Meetup](https://www.meetup.com/JavaScriptKC/events/231844450/)',
+          '[JavaScript KC Meetup](https://www.meetup.com/JavaScriptKC/events/231844450)',
         recording: 'https://youtu.be/qi_rLTcXers',
         date: '2016-06-21',
       },
@@ -698,7 +713,7 @@ export default [
         date: '2016-01-14',
       },
       {
-        event: '[KCDC](http://www.kcdc.info/)',
+        event: '[KCDC](http://www.kcdc.info)',
         date: '2016-06-23',
       },
       {
@@ -777,13 +792,13 @@ export default [
     tags: ['soft skills'],
     deliveries: [
       {
-        event: '[Foward 4 Web Summit](http://forwardjs.com/)',
+        event: '[Foward 4 Web Summit](http://forwardjs.com)',
         recording:
           'https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
         date: '2016-02-11',
       },
       {
-        event: '[BYU AIS club](http://ais.byu.edu/) Value Added Forum',
+        event: '[BYU AIS club](http://ais.byu.edu) Value Added Forum',
         date: '2016-10-13',
       },
     ],
@@ -809,7 +824,7 @@ export default [
     deliveries: [
       {
         event:
-          '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455/)',
+          '[ng-nebraska meetup November](http://www.meetup.com/ng-nebraska/events/226632455)',
         date: '2015-11-24',
       },
     ],
@@ -828,8 +843,7 @@ export default [
     tags: ['babel', 'testing', 'webpack', 'live coding'],
     deliveries: [
       {
-        event:
-          '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472/)',
+        event: '[UtahJS meetup](http://www.meetup.com/UtahJS/events/222630472)',
         recording: 'https://youtu.be/P-1ZZkpEmQA',
         date: '2015-06-16',
       },
@@ -842,7 +856,7 @@ export default [
     deliveries: [
       {
         event:
-          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910/)',
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/222511910)',
         recording: 'https://youtu.be/ii7J-k661Zg',
         date: '2015-05-28',
       },
@@ -854,7 +868,7 @@ export default [
     deliveries: [
       {
         event:
-          '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922/)',
+          '[SLC JS Learners meetup](http://www.meetup.com/SLC-JS-Learners/events/220770922)',
         recording: 'https://youtu.be/_Pn32tTtbuQ',
         date: '2015-04-21',
       },
@@ -867,13 +881,13 @@ export default [
   {
     title: 'Moxee: Enforcing modularity in AngularJS',
     resources: [
-      '[slides](http://slides.com/kentcdodds/moxee#/)',
+      '[slides](http://slides.com/kentcdodds/moxee#)',
       '[repo](https://github.com/alianza-dev/moxee)',
     ],
     deliveries: [
       {
         event:
-          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489/)',
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/221087489)',
         date: '2015-03-26',
       },
     ],
@@ -913,12 +927,12 @@ export default [
     title: 'Angular 2: Built for Huge, Long-lasting Applications',
     resources: [
       '[slides](http://slides.com/kentcdodds/ng2-introduction)',
-      '[repo](https://github.com/kentcdodds/ng2-random-user/)',
+      '[repo](https://github.com/kentcdodds/ng2-random-user)',
     ],
     deliveries: [
       {
         event:
-          '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up/)',
+          '[Philly ETE](http://phillyemergingtech.com/sessions/angularjs-2-0-leveling-up)',
         recording: 'http://www.infoq.com/presentations/angularjs-2',
         date: '2015-04-08',
       },
@@ -933,13 +947,13 @@ export default [
   {
     title: 'ng-model-options in 5 minutes',
     resources: [
-      '[slides](http://slides.com/kentcdodds/ng-model-options-in-5-minutes#/)',
+      '[slides](http://slides.com/kentcdodds/ng-model-options-in-5-minutes#)',
       '[JSBin](http://jsbin.com/qocekak/edit)',
       '[blog post](https://www.airpair.com/angularjs/posts/ngmodeloptions-total-model-control)',
     ],
     deliveries: [
       {
-        event: '[ng-conf](http://www.ng-conf.org/)',
+        event: '[ng-conf](http://www.ng-conf.org)',
         recording: 'https://youtu.be/k3t3ov6xHDw',
         date: '2015-03-06',
       },
@@ -952,18 +966,18 @@ export default [
   {
     title: 'Using ReactJS with existing AngularJS codebase',
     resources: [
-      '[app](http://kentcdodds.com/react-in-angular/app/)',
+      '[app](http://kentcdodds.com/react-in-angular/app)',
       '[repo](https://github.com/kentcdodds/react-in-angular)',
     ],
     deliveries: [
       {
-        event: '[Jfokus](http://www.jfokus.se/jfokus/)',
+        event: '[Jfokus](http://www.jfokus.se/jfokus)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
         date: '2015-02-04',
       },
       {
         event:
-          '[ReactJS Utah meetup January](http://www.meetup.com/ReactJS-Utah/events/219204576/)',
+          '[ReactJS Utah meetup January](http://www.meetup.com/ReactJS-Utah/events/219204576)',
         recording: 'https://youtu.be/AiE4ajXh7dY',
         date: '2015-01-27',
       },
@@ -984,17 +998,17 @@ export default [
     title: 'Improving UX with GenieJS',
     resources: [
       '[slides](https://slides.com/kentcdodds/genie)',
-      '[workshop](https://kentcdodds.github.io/genie/workshop/)',
+      '[workshop](https://kentcdodds.github.io/genie/workshop)',
     ],
     deliveries: [
       {
-        event: '[MidwestJS](http://midwestjs.com/)',
+        event: '[MidwestJS](http://midwestjs.com)',
         recording: 'https://youtu.be/lqf5mrrf4ZY',
         date: '2014-08-14',
       },
       {
         event:
-          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/)',
+          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202)',
         date: '2014-02-06',
       },
     ],
@@ -1015,13 +1029,13 @@ export default [
   {
     title: 'Watch your Watchers',
     resources: [
-      '[slides](http://slides.com/kentcdodds/angular-bindonce#/)',
+      '[slides](http://slides.com/kentcdodds/angular-bindonce#)',
       '[kcd-angular](http://kentcdodds.com/kcd-angular)',
     ],
     deliveries: [
       {
         event:
-          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/184204692/)',
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/184204692)',
         recording: 'https://youtu.be/hFOSXVT-Cps?t=1m34s',
         date: '2014-08-12',
       },
@@ -1038,7 +1052,7 @@ export default [
     deliveries: [
       {
         event:
-          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/160366932/)',
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/160366932)',
         recording: 'https://youtu.be/EmWBbvWJDVY',
         date: '2014-08-08',
       },
@@ -1049,11 +1063,11 @@ export default [
   },
   {
     title: 'How to Build a Demo with GitHub Pages',
-    resources: ['[slides](http://slides.com/kentcdodds/gh-pages#/)'],
+    resources: ['[slides](http://slides.com/kentcdodds/gh-pages#)'],
     deliveries: [
       {
         event:
-          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152/)',
+          '[UtahJS Orem meetup](http://www.meetup.com/UtahJS-Orem-Meetup/events/193499152)',
         date: '2014-08-07',
       },
     ],
@@ -1062,13 +1076,13 @@ export default [
     title: `JWT: Not Your Grandma's Cookies`,
     resources: [
       '[slides](http://slides.com/kentcdodds/ng-jwt-workshop)',
-      '[site](http://kentcdodds.com/ng-jwt-workshop/frontend/)',
+      '[site](http://kentcdodds.com/ng-jwt-workshop/frontend)',
       '[repo](https://github.com/kentcdodds/ng-jwt-workshop)',
     ],
     deliveries: [
       {
         event:
-          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/173788512/)',
+          '[AngularJS Utah meetup](http://www.meetup.com/AngularJS-Utah/events/173788512)',
         recording: 'https://youtu.be/vIGZxeQUUFU?t=1m51s',
         date: '2014-06-10',
       },
@@ -1083,7 +1097,7 @@ export default [
     title: 'Intro to AngularJS',
     resources: [
       '[slides](https://slides.com/kentcdodds/intro-to-angularjs)',
-      '[workshop](http://kentcdodds.com/ng-workshop/)',
+      '[workshop](http://kentcdodds.com/ng-workshop)',
     ],
     deliveries: [
       {
@@ -1096,7 +1110,7 @@ export default [
         date: '2014-06-06',
       },
       {
-        event: '[Jfokus](http://www.jfokus.se/jfokus/)',
+        event: '[Jfokus](http://www.jfokus.se/jfokus)',
         date: '2015-02-03',
       },
     ],

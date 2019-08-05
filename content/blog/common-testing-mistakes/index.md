@@ -111,7 +111,7 @@ tests are not.
 > due to the fact that they're shared in multiple projects._
 
 I talked a bit about this in
-[my livestream](https://youtu.be/O2tsvUJT09U&index=9&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u&t=0s)
+[my livestream](https://youtu.be/O2tsvUJT09U?index=9&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u&t=0s)
 the other day, check it out!
 
 ### Mistake Number 3: Repeat Testing

@@ -17,7 +17,7 @@ bannerCredit:
 
 [Participating in open source has been awesome for me](/blog/how-getting-into-open-source-has-been-awesome-for-me).
 It has
-[made me and the stuff I make better](https://youtu.be/6mtPPkKchcQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+[made me and the stuff I make better](https://youtu.be/6mtPPkKchcQ?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 A [common](https://github.com/kentcdodds/ama/issues/57)
 [question](https://github.com/kentcdodds/ama/issues/264) that I get from folks
 is how to go about learning an open source codebase and understand other's code.
@@ -97,10 +97,10 @@ to record our conversation and make it publicly available. This is appealing to
 maintainers because having material out there for new contributors to watch is
 very helpful. Here are some examples:
 
-- [Why, What, and How of React Fiber with Dan Abramov and Andrew Clark](https://youtu.be/crM1iRVGpGQ&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
-- [React events in depth w/ Kent C. Dodds, Ben Alpert, & Dan Abramov](https://youtu.be/dRo_egw7tBc&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
-- [JavaScript & React Testing with Jest](https://youtu.be/i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
-- [Contributing to ReactJS](https://youtu.be/wUpPsEcGsg8&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
+- [Why, What, and How of React Fiber with Dan Abramov and Andrew Clark](https://youtu.be/crM1iRVGpGQ?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
+- [React events in depth w/ Kent C. Dodds, Ben Alpert, & Dan Abramov](https://youtu.be/dRo_egw7tBc?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
+- [JavaScript & React Testing with Jest](https://youtu.be/i31VtyJSM-I?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
+- [Contributing to ReactJS](https://youtu.be/wUpPsEcGsg8?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
 
 I hope this is helpful! Good luck!
 

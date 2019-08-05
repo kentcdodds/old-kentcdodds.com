@@ -119,6 +119,7 @@ const PostTitle = styled.h3`
 const Description = styled.p`
   margin-bottom: 10px;
   display: inline-block;
+  width: 100%;
 `
 
 export default function Index({data: {allMdx}}) {

@@ -121,7 +121,7 @@ share! So I created [a bunch of videos](http://kcd.im/egghead-jest) for
 egghead.io about it, had a
 [tech chat](https://github.com/kentcdodds/ama/issues/125) with
 [Christoph Pojer](https://twitter.com/cpojer)
-[on YouTube](https://youtu.be/i31VtyJSM-I&list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
+[on YouTube](https://youtu.be/i31VtyJSM-I?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr&index=20)
 about Jest, and rewrote my React Testing Workshop **again** in
 [Jest](https://github.com/kentcdodds/react-jest-workshop).
 

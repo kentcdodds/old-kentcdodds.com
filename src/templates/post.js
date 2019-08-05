@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import isEmpty from 'lodash/isEmpty'
 import SEO from 'components/seo'
 import {css} from '@emotion/core'
@@ -40,7 +40,6 @@ function Post({data: {site, mdx}}) {
     editLink,
     title,
     slug,
-    date,
     description,
     banner,
     bannerCredit,
@@ -96,24 +95,6 @@ function Post({data: {site, mdx}}) {
           >
             {title}
           </h1>
-          <div
-            css={css`
-              display: flex;
-              justify-content: center;
-              margin-bottom: 20px;
-              h3,
-              span {
-                text-align: center;
-                font-size: 15px;
-                opacity: 0.6;
-                font-family: ${fonts.regular}, sans-serif;
-                font-weight: normal;
-                margin: 0 5px;
-              }
-            `}
-          >
-            {date && <h3>{date}</h3>}
-          </div>
           {banner && (
             <div
               css={css`
@@ -136,7 +117,7 @@ function Post({data: {site, mdx}}) {
           )}
           <br />
           {description ? <Markdown>{description}</Markdown> : null}
-          <MDXRenderer>{mdx.code.body}</MDXRenderer>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
         {/* <SubscribeForm /> */}
       </article>
@@ -213,7 +194,6 @@ export const pageQuery = graphql`
         noFooter
         description
         plainTextDescription
-        date(formatString: "MMMM DD, YYYY")
         author
         banner {
           ...bannerImage720
@@ -222,9 +202,7 @@ export const pageQuery = graphql`
         slug
         keywords
       }
-      code {
-        body
-      }
+      body
     }
   }
 `

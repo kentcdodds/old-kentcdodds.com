@@ -20,7 +20,7 @@ bannerCredit:
 [Episode 001: Learning and Developing JavaScript](https://javascriptair.com/episodes/2015-12-16)
 
 This quote by Ashley is one of my favorites, I reference it in my talk
-["Zero to 60 in Software Development: How to Jumpstart Your Career"](https://youtu.be/-qPh6I2hfjw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
+["Zero to 60 in Software Development: How to Jumpstart Your Career"](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 I can relate to it because it's been absolutely true in my experience. **The
 _best_ way I've found to solidifying my understanding of what I learn is through
 teaching it to others.**

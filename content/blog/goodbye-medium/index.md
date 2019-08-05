@@ -54,14 +54,14 @@ make this move without worrying about all those links breaking!**
 > Note: this is actually the same reason I use `kcd.im` so much as well. I can
 > change where those URLs go if I ever need to which I definitely have. I
 > recommend
-> [you set up a URL shortener yourself](https://youtu.be/HL6paXyx6hM&index=40&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+> [you set up a URL shortener yourself](https://youtu.be/HL6paXyx6hM?index=40&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
 > (it'll take you minutes and it's totally free).
 
 I spent 1 hour building
 [`kcd-blog-redirector`](https://github.com/kentcdodds/kcd-blog-redirector). I
 even livestreamed it on my new "Coding with Kent" series:
 
-https://youtube.com/watch?v=1EOj__JPN08&list=PLV5CVI1eNcJgJCEkMlsqXea6OIF_uV_ub
+https://youtu.be/1EOj__JPN08?list=PLV5CVI1eNcJgJCEkMlsqXea6OIF_uV_ub
 
 (You might think this would be a simple task, but it's more complicated than you
 think. Watch the first few minutes of the video and you'll know what I mean.)

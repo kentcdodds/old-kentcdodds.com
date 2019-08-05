@@ -1,7 +1,7 @@
 ---
 slug: write-tests
 title: Write tests. Not too many. Mostly integration.
-date: '2017-10-16'
+date: '2019-07-13'
 author: Kent C. Dodds
 description:
   _[Guillermo Rauch](https://twitter.com/rauchg)
@@ -29,7 +29,7 @@ Current Available Translations:
 
 I've given this blog post as a talk which you can watch here:
 
-https://youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
+https://youtu.be/Fha2bVoC8SE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
 A while back, [Guillermo Rauch‏](https://twitter.com/rauchg) (creator of
 [Socket.io](https://socket.io) and founder of [Zeit.co](https://zeit.co) (the

@@ -419,9 +419,9 @@ they're both still free):
 - [rescripts](https://github.com/rescripts/rescripts)  —  💥 Use the latest
   react-scripts with custom configurations for Babel, ESLint, TSLint,
   Webpack,... ∞ by [Harry Solovay](https://twitter.com/hsolvz)
-- [Contributing to Open Source on GitHub for beginners](https://youtu.be/k6KcaMffxac&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) 
+- [Contributing to Open Source on GitHub for beginners](https://youtu.be/k6KcaMffxac?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) 
   —  A talk I gave at my Alma mater (BYU) this last week
-- [Make a SUPER simple personal URL shortener with Netlify](https://youtu.be/HL6paXyx6hM&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+- [Make a SUPER simple personal URL shortener with Netlify](https://youtu.be/HL6paXyx6hM?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
   (I'm still livestreaming almost every week day at
   [kcd.im/devtips](https://kcd.im/devtips))
 - [The three browsers holding JavaScript back the most are:](https://twitter.com/jamiebuilds/status/1022568918949408768)...

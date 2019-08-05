@@ -114,15 +114,15 @@ Good luck!
 
 **Learn more about JavaScript from me**:
 
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 - [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
 - [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
 
 Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
 for my daily devtips, like
-[the one today where](https://youtu.be/FsgGx1SMXn0&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
+[the one today where](https://youtu.be/FsgGx1SMXn0?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
 I demo some advanced features of destructuring!
 
 **Things to not miss**:

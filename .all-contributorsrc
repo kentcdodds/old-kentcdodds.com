@@ -591,6 +591,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jescowuester",
+      "name": "Jesco Wüster",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43379421?v=4",
+      "profile": "https://www.jescowuester.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "raikusy",
+      "name": "Rakibul Hasan",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4938039?v=4",
+      "profile": "http:// raikusy.github.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "stephan281094",
+      "name": "Stephan de Vries",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4006802?v=4",
+      "profile": "http://stephan281094.github.io",
+      "contributions": [
+        "content"
+      ]
     }
   ]
 }
