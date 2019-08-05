@@ -256,7 +256,10 @@ export const episodeQuery = graphql`
         }
       }
     }
-    allEpisode(filter: {season: {number: {eq: $season}}}) {
+    allEpisode(
+      filter: {season: {number: {eq: $season}}}
+      sort: {order: ASC, fields: number}
+    ) {
       totalCount
       nodes {
         id

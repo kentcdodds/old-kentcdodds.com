@@ -1,20 +1,12 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import PodcastEpisodePage from '../../../../templates/podcast-episode'
+import {Redirect} from '@reach/router'
+import first from 'lodash/first'
+import get from 'lodash/get'
 
-function Season1({data: {allEpisode, allMdx}}) {
-  const MarkdownForLatestEpisode = allMdx.edges.filter(
-    Markdown => Markdown.node.frontmatter.id === allEpisode.nodes[0].id,
-  )
-  return (
-    <PodcastEpisodePage
-      data={{
-        episode: allEpisode.nodes[0],
-        mdx: MarkdownForLatestEpisode[0] && MarkdownForLatestEpisode[0].node,
-        allEpisode,
-      }}
-    />
-  )
+function Season1({data: {allEpisode}}) {
+  const episode = first(allEpisode.nodes)
+  return <Redirect noThrow to={`/${get(episode, 'fields.slug', '/')}`} />
 }
 
 export default Season1
@@ -38,16 +30,6 @@ export const season1Query = graphql`
         }
         fields {
           slug
-        }
-      }
-    }
-    allMdx(filter: {fileAbsolutePath: {regex: "//content/podcast//"}}) {
-      edges {
-        node {
-          body
-          frontmatter {
-            id
-          }
         }
       }
     }
