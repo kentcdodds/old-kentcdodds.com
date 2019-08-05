@@ -121,6 +121,13 @@ const Toggle = ({color = 'white'}) => {
               Workshops
             </Link>
             <Link
+              aria-label="View podcast page"
+              to="/chats-with-kent-podcast/seasons/01"
+              activeClassName="active"
+            >
+              Podcast
+            </Link>
+            <Link
               aria-label="View about page"
               to="/about"
               activeClassName="active"

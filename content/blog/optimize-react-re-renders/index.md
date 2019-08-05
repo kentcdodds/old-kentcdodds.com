@@ -30,8 +30,8 @@ this was the result:
 
 https://twitter.com/BrooksLybrand/status/1149800755404185609
 
-Excited? Let's break it down with a simple contrived example and then talk
-about what practical application this has for you in your day-to-day apps.
+Excited? Let's break it down with a simple contrived example and then talk about
+what practical application this has for you in your day-to-day apps.
 
 ## An example
 

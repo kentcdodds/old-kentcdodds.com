@@ -3,7 +3,41 @@ const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
+const axios = require('axios')
+const crypto = require('crypto')
 const _ = require('lodash')
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+axios.defaults.headers.common.Authorization = `Bearer ${process.env.SIMPLECAST_API_SECRET}`
+axios.defaults.headers.common.Accept = 'application/json'
+
+exports.sourceNodes = async ({actions: {createNode}}) => {
+  const {data} = await axios(
+    `https://api.simplecast.com/podcasts/${process.env.PODCAST_ID}/episodes?limit=500`,
+  )
+
+  const packagePodcast = p => {
+    const nodeContent = JSON.stringify(p)
+    const nodeContentDigest = crypto
+      .createHash('md5')
+      .update(nodeContent)
+      .digest('hex')
+    const node = {
+      ...p,
+      content: nodeContent,
+      internal: {
+        type: 'Episode',
+        contentDigest: nodeContentDigest,
+      },
+    }
+
+    createNode(node)
+  }
+
+  data.collection.map(packagePodcast)
+}
 
 const PAGINATION_OFFSET = 7
 
@@ -93,6 +127,39 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   return null
 }
 
+const createEpisodes = (createPage, edges) => {
+  edges.forEach(({node}) => {
+    const episodeNumber = node.number
+    const seasonNumber = node.season.number
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      seasonNumber,
+    )}/episodes/${twoDigits(episodeNumber)}`
+
+    createPage({
+      path: episodePath,
+      component: path.resolve(`./src/templates/podcast-episode.js`),
+      context: {
+        slug: episodePath,
+        id: node.id,
+        title: node.title,
+        season: node.season.number,
+      },
+    })
+  })
+}
+
+function createPodcastPages({data, actions}) {
+  if (_.isEmpty(data.edges)) {
+    throw new Error('There are no podcast episodes!')
+  }
+  const {edges} = data
+  const {createPage} = actions
+
+  createEpisodes(createPage, edges)
+  return null
+}
+
 exports.createPages = async ({actions, graphql}) => {
   const {data, errors} = await graphql(`
     fragment PostDetails on Mdx {
@@ -114,6 +181,29 @@ exports.createPages = async ({actions, graphql}) => {
       }
     }
     query {
+      podcast: allEpisode {
+        edges {
+          node {
+            id
+            title
+            number
+            season {
+              number
+            }
+          }
+        }
+      }
+      podcastMarkdown: allMdx(
+        filter: {fileAbsolutePath: {regex: "//content/podcast//"}}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              id
+            }
+          }
+        }
+      }
       blog: allMdx(
         filter: {
           frontmatter: {published: {ne: false}}
@@ -160,7 +250,13 @@ exports.createPages = async ({actions, graphql}) => {
     return Promise.reject(errors)
   }
 
-  const {blog, writing, workshops} = data
+  const {blog, writing, workshops, podcast} = data
+
+  createPodcastPages({
+    podcastPath: '',
+    data: podcast,
+    actions,
+  })
 
   createBlogPages({
     blogPath: '/blog',
@@ -232,6 +328,19 @@ function createPaginatedPages(
 // eslint-disable-next-line complexity
 exports.onCreateNode = ({node, getNode, actions}) => {
   const {createNodeField} = actions
+
+  if (node.internal.type === `Episode`) {
+    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
+      node.season.number,
+    )}/episodes/${twoDigits(node.number)}`
+
+    createNodeField({
+      name: 'slug',
+      node,
+      value: episodePath,
+    })
+  }
 
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)

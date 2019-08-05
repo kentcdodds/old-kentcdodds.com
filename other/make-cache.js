@@ -1,5 +1,6 @@
 const {execSync} = require('child_process')
 const path = require('path')
+
 const {ensureDir} = require(`fs-extra`)
 
 async function go() {

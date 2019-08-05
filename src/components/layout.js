@@ -152,6 +152,7 @@ const DefaultHero = styled.section`
 function Layout({
   data,
   headerLink,
+  siteTitle = 'Kent C. Dodds',
   frontmatter = {},
   hero = <DefaultHero />,
   subscribeForm,
@@ -164,6 +165,7 @@ function Layout({
   backgroundImage,
   fixedHeader,
   logo,
+  maxWidth = 720,
 }) {
   const {
     site: {
@@ -207,7 +209,8 @@ function Layout({
         <div css={{flex: '1 0 auto'}}>
           {React.cloneElement(hero, {headerColor})}
           <Header
-            siteTitle="Kent C. Dodds"
+            maxWidth={maxWidth}
+            siteTitle={siteTitle}
             headerLink={headerLink}
             dark={dark}
             bgColor={headerBg}
@@ -222,6 +225,7 @@ function Layout({
         <div css={{flexShrink: '0'}}>
           {noFooter ? null : (
             <Footer
+              maxWidth={maxWidth}
               author={siteMetadata.author.name}
               subscribeForm={subscribeForm}
             />
