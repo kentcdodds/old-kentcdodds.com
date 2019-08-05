@@ -130,11 +130,11 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
     <>
       <SEO
         frontmatter={episode}
-        // podcastImage={
-        //   mdx.frontmatter.childImageSharp
-        //     ? mdx.frontmatter.metaImage.childImageSharp.original.src
-        //     : null
-        // }
+        podcastImage={
+          mdx.frontmatter.metaImage
+            ? mdx.frontmatter.metaImage.childImageSharp.original.src
+            : null
+        }
       />
       <Layout maxWidth={1180} siteTitle="Chats with Kent" pageTitle="episode">
         <Container
