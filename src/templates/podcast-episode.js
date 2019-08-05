@@ -12,6 +12,7 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import Layout from 'components/layout'
 import EpisodeList from 'components/podcast/list'
 
+import podcastMetaImage from '../images/podcast/metaImage'
 import ApplePodcasts from '../images/podcast/apple.svg'
 import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
@@ -133,7 +134,7 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
         podcastImage={
           mdx.frontmatter.metaImage
             ? mdx.frontmatter.metaImage.childImageSharp.original.src
-            : null
+            : podcastMetaImage
         }
       />
       <Layout maxWidth={1180} siteTitle="Chats with Kent" pageTitle="episode">
