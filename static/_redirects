@@ -15,3 +15,4 @@
 # netlify analytics said that this page was requested a lot so we'll redirect it to blog which is probably where they want to go...
 /post                                                                   /blog
 /wp-login.php                                                           https://www.youtube.com/watch?v=dQw4w9WgXcQ
+/wp-admin.php                                                           https://www.youtube.com/watch?v=dQw4w9WgXcQ
