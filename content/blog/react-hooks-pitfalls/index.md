@@ -314,7 +314,7 @@ test('can open accordion items to see the contents', () => {
 ```
 
 The key difference here is that the previous is testing the implementation
-details of the component and the new one is not. Whether you're component is
+details of the component and the new one is not. Whether your component is
 implemented via Hooks or as a class is an implementation detail of the
 component. Therefore, if your test is written in such a way that reveals that
 (like using `.state()` or `.instance()`), then refactoring your component to
