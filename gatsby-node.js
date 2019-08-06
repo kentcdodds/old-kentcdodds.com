@@ -129,12 +129,11 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
 
 const createEpisodes = (createPage, edges) => {
   edges.forEach(({node}) => {
-    const episodeNumber = node.number
     const seasonNumber = node.season.number
     const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
     const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
       seasonNumber,
-    )}/episodes/${twoDigits(episodeNumber)}`
+    )}/episodes/${slugify(node.title)}`
 
     createPage({
       path: episodePath,
@@ -333,7 +332,7 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
     const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
       node.season.number,
-    )}/episodes/${twoDigits(node.number)}`
+    )}/episodes/${slugify(node.title)}`
 
     createNodeField({
       name: 'slug',
