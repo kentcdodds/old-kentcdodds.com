@@ -269,6 +269,8 @@ slower! So measure first!
 To avoid this pitfall: **Know that React is fast by default and do some digging
 before applying performance optimizations pre-maturely 🏎💨**
 
+Also remember that the [production version of react is faster than the development version](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build)
+
 ## Pitfall 5: Overthinking the testing of hooks
 
 I've noticed some people are concerned that they need to rewrite their tests
