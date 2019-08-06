@@ -14,7 +14,7 @@ import EpisodeList from 'components/podcast/list'
 
 import podcastMetaImage from '../images/podcast/metaImage.jpg'
 // import ApplePodcasts from '../images/podcast/apple.svg'
-// import GooglePodcasts from '../images/podcast/google.svg'
+import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
 import Rss from '../images/podcast/rss.svg'
 
@@ -155,10 +155,10 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
           {/* <ProviderLink to="/">
             <img src={ApplePodcasts} alt="Listen on Apple Podcasts" /> Apple
           </ProviderLink>
-          <ProviderLink to="/">
+          */}
+          <ProviderLink to="https://play.google.com/music/m/Iqy44l6njgx6hagdxkiobsjhwm4">
             <img src={GooglePodcasts} alt="Listen on Google Podcasts" /> Google
           </ProviderLink>
-          */}
           <ProviderLink to="https://open.spotify.com/show/7GkO2poedjbltWT5lduL5w">
             <img src={Spotify} alt="Listen on Spotify" /> Spotify
           </ProviderLink>
