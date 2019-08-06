@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-67-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-68-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -96,6 +96,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://www.jescowuester.com"><img src="https://avatars3.githubusercontent.com/u/43379421?v=4" width="100px;" alt="Jesco Wüster"/><br /><sub><b>Jesco Wüster</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jescowuester" title="Code">💻</a></td>
     <td align="center"><a href="http:// raikusy.github.io"><img src="https://avatars0.githubusercontent.com/u/4938039?v=4" width="100px;" alt="Rakibul Hasan"/><br /><sub><b>Rakibul Hasan</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=raikusy" title="Code">💻</a></td>
     <td align="center"><a href="http://stephan281094.github.io"><img src="https://avatars1.githubusercontent.com/u/4006802?v=4" width="100px;" alt="Stephan de Vries"/><br /><sub><b>Stephan de Vries</b></sub></a><br /><a href="#content-stephan281094" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/48lizards"><img src="https://avatars1.githubusercontent.com/u/3280861?v=4" width="100px;" alt="Jonathan Beller"/><br /><sub><b>Jonathan Beller</b></sub></a><br /><a href="#content-48lizards" title="Content">🖋</a></td>
   </tr>
 </table>
 
