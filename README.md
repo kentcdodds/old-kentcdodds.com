@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-71-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-72-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -102,6 +102,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://ashu96.github.io/"><img src="https://avatars1.githubusercontent.com/u/13612227?v=4" width="100px;" alt="Ashutosh"/><br /><sub><b>Ashutosh</b></sub></a><br /><a href="#content-Ashu96" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/dallanlee"><img src="https://avatars0.githubusercontent.com/u/13070764?v=4" width="100px;" alt="dallanlee"/><br /><sub><b>dallanlee</b></sub></a><br /><a href="#content-dallanlee" title="Content">🖋</a></td>
   </tr>
 </table>
 
