@@ -4,31 +4,22 @@ import {Redirect} from '@reach/router'
 import first from 'lodash/first'
 import get from 'lodash/get'
 
-function Season1({data: {allEpisode}}) {
-  const episode = first(allEpisode.nodes)
+function Season1({data: {allMdx}}) {
+  const episode = first(allMdx.nodes)
   return <Redirect noThrow to={`/${get(episode, 'fields.slug', '/')}`} />
 }
 
 export default Season1
 
-export const season1Query = graphql`
+export const latestEpisodeQuery = graphql`
   {
-    allEpisode(
-      filter: {season: {number: {eq: 1}}}
-      sort: {order: ASC, fields: number}
+    allMdx(
+      filter: {frontmatter: {season: {eq: 1}}, fields: {isPodcast: {eq: true}}}
+      sort: {order: ASC, fields: frontmatter___number}
     ) {
-      totalCount
       nodes {
-        id
-        title
-        description
-        number
-        enclosure_url
-        image_url
-        season {
-          number
-        }
         fields {
+          isPodcast
           slug
         }
       }

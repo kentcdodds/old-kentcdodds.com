@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'components/link'
+import Img from 'gatsby-image'
 import {css} from '@emotion/core'
 import theme from '../../../config/theme'
 import {fonts} from '../../lib/typography'
@@ -19,7 +20,7 @@ export default function PodcastList({data}) {
     >
       {data.nodes.map(episode => (
         <li
-          key={episode.id}
+          key={episode.frontmatter.id}
           css={css({
             marginBottom: 10,
           })}
@@ -32,7 +33,6 @@ export default function PodcastList({data}) {
                 fontSize: '18px',
                 fontFamily: fonts.semibold,
                 lineHeight: 1.3,
-                display: 'inline-block',
                 margin: 0,
                 marginBottom: 6,
               },
@@ -67,25 +67,25 @@ export default function PodcastList({data}) {
                 opacity: 0.6,
               },
               img: {
-                minWidth: 48,
-                height: 48,
                 borderRadius: '50%',
                 margin: 0,
               },
             })}
           >
-            <img
-              width="40"
-              height="40"
-              src={episode.image_url}
-              alt={episode.title}
-            />
+            <div>
+              <Img
+                fixed={episode.frontmatter.guestPhoto.childImageSharp.fixed}
+                alt={episode.frontmatter.title}
+              />
+            </div>
             <div css={css({marginLeft: 15})}>
               <h4>
-                {episode.title}
-                <small css={css({marginLeft: 5})}>E{episode.number}</small>
+                {episode.frontmatter.title}
+                <small css={css({marginLeft: 5})}>
+                  E{episode.frontmatter.number}
+                </small>
               </h4>
-              <small>{episode.description}</small>
+              <small>{episode.frontmatter.description}</small>
             </div>
           </Link>
         </li>
