@@ -124,11 +124,11 @@ const Article = styled.article(
   }),
 )
 
-function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
+function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
   return (
     <>
       <SEO
-        frontmatter={episode}
+        frontmatter={mdx.frontmatter}
         podcastImage={
           mdx.frontmatter.metaImage
             ? mdx.frontmatter.metaImage.childImageSharp.original.src
@@ -181,14 +181,14 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
         >
           <Sidebar>
             <SidebarHeading>
-              season {episode.season.number <= 9 && '0'}
-              {episode.season.number}{' '}
+              season {mdx.frontmatter.season <= 9 && '0'}
+              {mdx.frontmatter.season}{' '}
               <span className="episode-label-mobile">
-                ∙ {allEpisode && allEpisode.totalCount} episodes
+                ∙ {allMdx && allMdx.totalCount} episodes
               </span>
             </SidebarHeading>
             <div className="fade-out" />
-            <EpisodeList data={allEpisode} />
+            <EpisodeList data={allMdx} />
           </Sidebar>
           <Article>
             <iframe
@@ -198,7 +198,7 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
               frameBorder="no"
               scrolling="no"
               seamless
-              src={`https://player.simplecast.com/${episode.id}?dark=false`}
+              src={`https://player.simplecast.com/${mdx.frontmatter.id}?dark=false`}
             />
             <h1
               css={css({
@@ -210,10 +210,10 @@ function PodcastEpisodePage({data: {episode, mdx, allEpisode}, children}) {
                 fontFamily: fonts.semibold,
               })}
             >
-              {episode.title}
+              {mdx.frontmatter.title}
             </h1>
             <h3 css={css({marginBottom: '2rem', marginTop: '1rem'})}>
-              {episode.description}
+              {mdx.frontmatter.description}
             </h3>
             {mdx && <MDXRenderer>{mdx.body}</MDXRenderer>}
             {children}
@@ -228,26 +228,25 @@ export default PodcastEpisodePage
 
 export const episodeQuery = graphql`
   query($id: String!, $season: Int!) {
-    episode(id: {eq: $id}) {
-      id
-      title
-      description
-      number
-      guid
-      id
-      enclosure_url
-      image_url
-      fields {
-        slug
-      }
-      season {
-        number
-      }
-    }
     mdx(frontmatter: {id: {eq: $id}}) {
       body
       frontmatter {
         id
+        title
+        description
+        number
+        season
+        id
+        guestPhoto {
+          childImageSharp {
+            fixed(width: 80, height: 80) {
+              ...GatsbyImageSharpFixed
+            }
+            original {
+              src
+            }
+          }
+        }
         metaImage {
           childImageSharp {
             original {
@@ -256,21 +255,32 @@ export const episodeQuery = graphql`
           }
         }
       }
+      fields {
+        slug
+      }
     }
-    allEpisode(
-      filter: {season: {number: {eq: $season}}}
-      sort: {order: ASC, fields: number}
+    allMdx(
+      filter: {frontmatter: {season: {eq: $season}}}
+      sort: {order: ASC, fields: frontmatter___number}
     ) {
       totalCount
       nodes {
-        id
-        title
-        description
-        number
-        enclosure_url
-        image_url
-        season {
+        frontmatter {
+          id
+          title
+          description
           number
+          season
+          guestPhoto {
+            childImageSharp {
+              fixed(width: 48, height: 48) {
+                ...GatsbyImageSharpFixed
+              }
+              original {
+                src
+              }
+            }
+          }
         }
         fields {
           slug

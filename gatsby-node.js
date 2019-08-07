@@ -1,43 +1,10 @@
+/* eslint-disable max-statements */
 const path = require('path')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
-const axios = require('axios')
-const crypto = require('crypto')
 const _ = require('lodash')
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
-axios.defaults.headers.common.Authorization = `Bearer ${process.env.SIMPLECAST_API_SECRET}`
-axios.defaults.headers.common.Accept = 'application/json'
-
-exports.sourceNodes = async ({actions: {createNode}}) => {
-  const {data} = await axios(
-    `https://api.simplecast.com/podcasts/${process.env.PODCAST_ID}/episodes?limit=500`,
-  )
-
-  const packagePodcast = p => {
-    const nodeContent = JSON.stringify(p)
-    const nodeContentDigest = crypto
-      .createHash('md5')
-      .update(nodeContent)
-      .digest('hex')
-    const node = {
-      ...p,
-      content: nodeContent,
-      internal: {
-        type: 'Episode',
-        contentDigest: nodeContentDigest,
-      },
-    }
-
-    createNode(node)
-  }
-
-  data.collection.map(packagePodcast)
-}
 
 const PAGINATION_OFFSET = 7
 
@@ -129,21 +96,20 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
 
 const createEpisodes = (createPage, edges) => {
   edges.forEach(({node}) => {
-    const episodeNumber = node.number
-    const seasonNumber = node.season.number
+    const seasonNumber = node.frontmatter.season
     const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
     const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
       seasonNumber,
-    )}/episodes/${twoDigits(episodeNumber)}`
+    )}/episodes/${node.frontmatter.slug}`
 
     createPage({
       path: episodePath,
       component: path.resolve(`./src/templates/podcast-episode.js`),
       context: {
         slug: episodePath,
-        id: node.id,
-        title: node.title,
-        season: node.season.number,
+        id: node.frontmatter.id,
+        title: node.frontmatter.title,
+        season: node.frontmatter.season,
       },
     })
   })
@@ -181,25 +147,18 @@ exports.createPages = async ({actions, graphql}) => {
       }
     }
     query {
-      podcast: allEpisode {
-        edges {
-          node {
-            id
-            title
-            number
-            season {
-              number
-            }
-          }
-        }
-      }
-      podcastMarkdown: allMdx(
+      podcast: allMdx(
         filter: {fileAbsolutePath: {regex: "//content/podcast//"}}
       ) {
         edges {
           node {
+            fileAbsolutePath
             frontmatter {
+              title
+              slug
               id
+              season
+              number
             }
           }
         }
@@ -329,28 +288,23 @@ function createPaginatedPages(
 exports.onCreateNode = ({node, getNode, actions}) => {
   const {createNodeField} = actions
 
-  if (node.internal.type === `Episode`) {
-    const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
-    const episodePath = `chats-with-kent-podcast/seasons/${twoDigits(
-      node.season.number,
-    )}/episodes/${twoDigits(node.number)}`
-
-    createNodeField({
-      name: 'slug',
-      node,
-      value: episodePath,
-    })
-  }
-
   if (node.internal.type === `Mdx`) {
     const parent = getNode(node.parent)
     let slug =
       node.frontmatter.slug ||
       createFilePath({node, getNode, basePath: `pages`})
-    let {isWriting, isWorkshop, isScheduled} = false
+    let {isWriting, isWorkshop, isScheduled, isPodcast} = false
 
     if (node.fileAbsolutePath.includes('content/blog/')) {
       slug = `/blog/${node.frontmatter.slug || slugify(parent.name)}`
+    }
+
+    if (node.fileAbsolutePath.includes('content/podcast/')) {
+      const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
+      slug = `chats-with-kent-podcast/seasons/${twoDigits(
+        node.frontmatter.season,
+      )}/episodes/${node.frontmatter.slug}`
+      isPodcast = true
     }
 
     if (node.fileAbsolutePath.includes('content/workshops/')) {
@@ -478,6 +432,12 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       name: 'isScheduled',
       node,
       value: isScheduled,
+    })
+
+    createNodeField({
+      name: 'isPodcast',
+      node,
+      value: isPodcast,
     })
   }
 }
