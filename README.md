@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-69-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-70-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -98,6 +98,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://stephan281094.github.io"><img src="https://avatars1.githubusercontent.com/u/4006802?v=4" width="100px;" alt="Stephan de Vries"/><br /><sub><b>Stephan de Vries</b></sub></a><br /><a href="#content-stephan281094" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/48lizards"><img src="https://avatars1.githubusercontent.com/u/3280861?v=4" width="100px;" alt="Jonathan Beller"/><br /><sub><b>Jonathan Beller</b></sub></a><br /><a href="#content-48lizards" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/sag1v"><img src="https://avatars3.githubusercontent.com/u/9153149?v=4" width="100px;" alt="Sagiv ben giat"/><br /><sub><b>Sagiv ben giat</b></sub></a><br /><a href="#content-sag1v" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/bennettdams"><img src="https://avatars3.githubusercontent.com/u/29319414?v=4" width="100px;" alt="Bennett"/><br /><sub><b>Bennett</b></sub></a><br /><a href="#content-bennettdams" title="Content">🖋</a></td>
   </tr>
 </table>
 
