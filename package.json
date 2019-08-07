@@ -32,6 +32,7 @@
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-mdx": "^1.0.18",
     "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-nprogress": "^2.1.2",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-robots-txt": "^1.5.0",
