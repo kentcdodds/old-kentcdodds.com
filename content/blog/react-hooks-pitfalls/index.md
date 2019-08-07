@@ -71,7 +71,7 @@ Ok, so for the details page we make a `DogInfo` component which accepts a
 
 ```javascript
 function DogInfo({dogId}) {
-  const [dog, setdog] = useState(null)
+  const [dog, setDog] = useState(null)
   // imagine you also have loading/error states. omitting to save space...
 
   useEffect(() => {
@@ -99,7 +99,7 @@ So let's add that dependency:
 
 ```jsx {7}
 function DogInfo({dogId}) {
-  const [dog, setdog] = useState(null)
+  const [dog, setDog] = useState(null)
   // imagine you also have loading/error states. omitting to save space...
 
   useEffect(() => {
