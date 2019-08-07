@@ -29,7 +29,7 @@ scenarios if you're not thinking about React Hooks properly. So let's look a bit
 at what pitfalls you could come across and how you can change your thinking so
 you avoid them.
 
-## Pitfall 1: Not starting with a good foundation
+## Pitfall 1: Starting without a good foundation
 
 [The React Hooks documentation](https://reactjs.org/hooks) is brilliant and I
 strongly recommend you give it a read through, especially the
