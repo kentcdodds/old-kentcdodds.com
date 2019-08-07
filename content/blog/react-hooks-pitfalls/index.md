@@ -51,7 +51,7 @@ package was built and released. It has two rules: "rules of hooks" and
 "exhaustive deps." The default recommended configuration of these rules is to
 set "rules of hooks" to an error, and the "exhaustive deps" to a warning.
 
-I strongly advice that you install, use, and follow these rules. It will not
+I strongly advise that you install, use, and follow these rules. It will not
 only catch real bugs that you can easily miss, but it will also teach you things
 about your code and hooks in the process (not to mention the awesome auto-fix
 feature).
@@ -86,7 +86,7 @@ We feel comfortable omitting dependencies in the array there because this
 request should only be made on mount. And with the way things are today we'll be
 ok. But now let's imagine that the UI changes a bit and we start listing a
 "related dogs" UI on this page. We're going to have a bug and clicking on the
-related dog wont update the dog information, even though the component is
+related dog won't update the dog information, even though the component is
 re-rendered! Observe (click "Poodle" then under "Related Dogs" click
 "Bernedoodle" and notice no change occurs):
 
@@ -129,7 +129,7 @@ analysis on your code properly thanks to limitations of static analysis tools
 like ESLint. I believe this is why it's recommended to set the exhaustive deps
 rule to "warn" instead of "error." When this happens, the plugin will tell you
 so in the warning. I recommend that you try to restructure your code a bit to
-avoid that warning (please favor explicitness over cleverness). If that wont
+avoid that warning (please favor explicitness over cleverness). If that won't
 work, then disabling the plugin is your escape hatch so you can keep working.
 
 To avoid the second pitfall: **Install, use, and follow the ESLint plugin 👨‍🏫**
@@ -206,7 +206,7 @@ example, if you make an HTTP request, but a prop changes before that request
 completes, you should cancel the previous request).
 
 With React Hooks, you do still kinda think about when side effects should run,
-but you're not thinking about component lifecycles, you're thinking about
+but you're not thinking about component Lifecycles, you're thinking about
 synchronizing the state of the side-effects with the state of the application.
 Grasping that requires a little bit of unlearning, but it's such a powerful idea
 that once you wrap your head around it, you will naturally experience fewer bugs
@@ -216,7 +216,7 @@ So when you're thinking: "Hey, my dependencies list needs to be `[]`" don't do
 that because you think it only needs to run on mount, do it because you know
 that the stuff it's doing will never get stale.
 
-To avoid this pitfall: **Don't think about lifecycles, think about synchronizing
+To avoid this pitfall: **Don't think about Lifecycles, think about synchronizing
 side effects to state 🔄**
 
 ## Pitfall 4: Overthinking performance
@@ -341,7 +341,7 @@ some of the pitfalls of hooks:
 
 1. Read the docs and the FAQ 📚
 2. Install, use, and follow the ESLint plugin 👨‍🏫
-3. Don't think about lifecycles, think about synchronizing side effects to state
+3. Don't think about Lifecycles, think about synchronizing side effects to state
    🔄
 4. Know that React is fast by default and do some digging before applying
    performance optimizations pre-maturely 🏎💨
