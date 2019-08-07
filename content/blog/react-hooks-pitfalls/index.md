@@ -119,7 +119,7 @@ there's no harm in including it anyway. Also, if you think it will never change
 and it does, including it will help you avoid bugs.
 
 There are a lot of other situations which are more nasty and harder to
-identify/explain (like, if you skip adding a function do the dependencies list
+identify/explain (like, if you skip adding a function to the dependencies list
 you could be calling a stale closure). Just trust me, every time I thought "oh,
 I don't need to follow the rule this time" I later regretted disabling it
 because I was wrong.
