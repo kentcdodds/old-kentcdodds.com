@@ -14,26 +14,12 @@ export default Season1
 export const latestEpisodeQuery = graphql`
   {
     allMdx(
-      filter: {frontmatter: {season: {eq: 1}}}
+      filter: {frontmatter: {season: {eq: 1}}, fields: {isPodcast: {eq: true}}}
       sort: {order: ASC, fields: frontmatter___number}
     ) {
-      totalCount
       nodes {
-        frontmatter {
-          id
-          title
-          description
-          number
-          season
-          guestPhoto {
-            childImageSharp {
-              original {
-                src
-              }
-            }
-          }
-        }
         fields {
+          isPodcast
           slug
         }
       }
