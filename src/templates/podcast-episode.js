@@ -125,16 +125,12 @@ const Article = styled.article(
 )
 
 function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
+  const metaImage = mdx.frontmatter.metaImage
+    ? `${process.env.ROOT_URL}${mdx.frontmatter.metaImage.childImageSharp.original.src}`
+    : podcastMetaImage
   return (
     <>
-      <SEO
-        frontmatter={mdx.frontmatter}
-        podcastImage={
-          mdx.frontmatter.metaImage
-            ? mdx.frontmatter.metaImage.childImageSharp.original.src
-            : podcastMetaImage
-        }
-      />
+      <SEO frontmatter={mdx.frontmatter} podcastImage={metaImage} />
       <Layout maxWidth={1180} siteTitle="Chats with Kent" pageTitle="episode">
         <Container
           maxWidth={1180}
