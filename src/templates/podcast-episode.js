@@ -156,7 +156,7 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
             <img src={ApplePodcasts} alt="Listen on Apple Podcasts" /> Apple
           </ProviderLink>
           */}
-          <ProviderLink to="https://play.google.com/music/m/Iqy44l6njgx6hagdxkiobsjhwm4">
+          <ProviderLink to="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9YX3dTX1dZaA">
             <img src={GooglePodcasts} alt="Listen on Google Podcasts" /> Google
           </ProviderLink>
           <ProviderLink to="https://open.spotify.com/show/7GkO2poedjbltWT5lduL5w">
