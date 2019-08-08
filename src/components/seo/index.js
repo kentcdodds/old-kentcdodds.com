@@ -7,13 +7,7 @@ import SchemaOrg from './schema-org'
 import config from '../../../config/website'
 import defaultMetaImage from '../../../static/images/metaImage.jpg'
 
-const SEO = ({
-  postData,
-  frontmatter = {},
-  metaImage,
-  podcastImage,
-  isBlogPost,
-}) => (
+const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
   <StaticQuery
     query={graphql`
       {
@@ -45,11 +39,7 @@ const SEO = ({
       const title = postMeta.title || config.siteTitle
       const description =
         postMeta.plainTextDescription || postMeta.description || seo.description
-      const image = `${
-        podcastImage
-          ? podcastImage
-          : `${seo.canonicalUrl}${metaImage || defaultMetaImage}`
-      }`
+      const image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
