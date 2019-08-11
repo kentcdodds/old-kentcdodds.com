@@ -4,7 +4,7 @@ import {css} from '@emotion/core'
 import styled from '@emotion/styled'
 import theme from '../../config/theme'
 import {fonts} from '../lib/typography'
-import kent from '../images/kent.png'
+import tyler from '../images/tyler.png'
 import MobileNav from './mobile-nav'
 import Container from './container'
 import {bpMaxSM} from '../lib/breakpoints'
@@ -111,7 +111,7 @@ function Header({
               },
             }}
           >
-            {headerImage && <img src={kent} alt="Kent C. Dodds" />}{' '}
+            {headerImage && <img src={tyler} alt="Tyler Haas" />}{' '}
             <span>{siteTitle}</span>
           </HeaderLink>
           <div
@@ -144,20 +144,6 @@ function Header({
               aria-label="View talks page"
             >
               Talks
-            </NavLink>
-            <NavLink
-              headerColor={headerColor}
-              to="/workshops/"
-              aria-label="View workshops page"
-            >
-              Workshops
-            </NavLink>
-            <NavLink
-              headerColor={headerColor}
-              to="/chats-with-kent-podcast/seasons/01"
-              aria-label="View podcast page"
-            >
-              Podcast
             </NavLink>
             <NavLink
               headerColor={headerColor}

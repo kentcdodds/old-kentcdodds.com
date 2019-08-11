@@ -8,15 +8,15 @@ import Container from 'components/container'
 
 import heroImageRight from '../images/hero/path-right.svg'
 import heroImageLeft from '../images/hero/path-left.svg'
-import photoOfKent from '../images/hero/kent.png'
+import photoOfTyler from '../images/hero/kent.png'
 
 function Hero({
   children,
-  title = `Hi, I'm Kent C. Dodds. I help people make the world better through quality software.`,
+  title = `Hi, I'm Tyler Haas. I help people solve tough problems with code.`,
   text,
   background = `url(${heroImageRight}), url(${heroImageLeft}),
   linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
-  image = `${photoOfKent}`,
+  image = `${photoOfTyler}`,
 }) {
   return (
     <section
@@ -69,7 +69,7 @@ function Hero({
               width: 250px;
               height: 250px;
               //background: #241d44;
-              ${image === photoOfKent &&
+              ${image === photoOfTyler &&
                 `
                 width: 160px;
               height: 160px;
@@ -102,7 +102,7 @@ function Hero({
               height: 100%;
               display: flex;
               //align-self: center;
-              padding-bottom: ${image === photoOfKent ? '40px' : '0'};
+              padding-bottom: ${image === photoOfTyler ? '40px' : '0'};
             `}
           >
             {title}

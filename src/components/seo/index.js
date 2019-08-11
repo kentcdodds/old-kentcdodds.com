@@ -68,7 +68,7 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
 
-            <script defer type="text/javascript">
+            {/* <script defer type="text/javascript">
               {`(function(p, a, n, d, o, b) {
                   o = n.createElement('script'); o.type = 'text/javascript'; o.async = true; o.src = 'https://tag.rightmessage.com/'+p+'.js';
                   b = n.getElementsByTagName('script')[0]; b.parentNode.insertBefore(o, b);
@@ -78,7 +78,7 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
                   setTimeout(function() { o.parentNode && o.parentNode.removeChild(o); }, a);
               })('943055074', 2500, document);
             `}
-            </script>
+            </script> */}
           </Helmet>
           <SchemaOrg
             isBlogPost={isBlogPost}

@@ -5,7 +5,7 @@ import {MDXProvider} from '@mdx-js/react'
 import {Global, css} from '@emotion/core'
 import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
-import NotificationMessage from 'components/notification-message'
+// import NotificationMessage from 'components/notification-message'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import mdxComponents from 'components/mdx'
@@ -152,7 +152,7 @@ const DefaultHero = styled.section`
 function Layout({
   data,
   headerLink,
-  siteTitle = 'Kent C. Dodds',
+  siteTitle = 'Tyler Haas',
   frontmatter = {},
   hero = <DefaultHero />,
   subscribeForm,
@@ -182,8 +182,8 @@ function Layout({
 
   return (
     <ThemeProvider theme={theme}>
-      <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
-      <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage>
+      {/* <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
+      <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage> */}
       <Global styles={globalStyles} />
       <Helmet
         title={title}

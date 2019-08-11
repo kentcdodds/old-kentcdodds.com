@@ -1,5 +1,5 @@
 import React from 'react'
-import kent from '../images/kent.png'
+import tyler from '../images/tyler.png'
 
 function BlogFooter() {
   return (
@@ -10,8 +10,8 @@ function BlogFooter() {
         }}
       >
         <img
-          src={kent}
-          alt="Kent C. Dodds"
+          src={tyler}
+          alt="Tyler Haas"
           style={{
             maxWidth: 80,
             borderRadius: '50%',
@@ -19,12 +19,9 @@ function BlogFooter() {
         />
       </div>
       <p>
-        <strong>Kent C. Dodds</strong>
+        <strong>Tyler Haas</strong>
         {`
-          is a JavaScript software engineer and teacher. He's taught hundreds
-          of thousands of people how to make the world a better place with
-          quality software development tools and practices. He lives with his
-          wife and four kids in Utah.
+          is a full stack software engineer and primarily focusing on the front end. He has worked with companies of all sizes to help them deliver robust applications. He lives with his wife and three kids in Utah.
         `}
       </p>
     </div>
