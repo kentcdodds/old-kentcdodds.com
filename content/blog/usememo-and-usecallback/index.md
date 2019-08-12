@@ -384,7 +384,7 @@ const CountButton = React.memo(function CountButton({onClick, count}) {
 })
 ```
 
-Now React will only re-render `CountButton` when it's props change! Woo! But
+Now React will only re-render `CountButton` when its props change! Woo! But
 we're not done yet. Remember that whole referential equality thing? In the
 `DualCounter` component, we're defining the `increment1` and `increment2`
 functions within the component functions which means every time `DualCounter` is
