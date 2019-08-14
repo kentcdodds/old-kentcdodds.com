@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-74-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-75-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -105,6 +105,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/dallanlee"><img src="https://avatars0.githubusercontent.com/u/13070764?v=4" width="100px;" alt="dallanlee"/><br /><sub><b>dallanlee</b></sub></a><br /><a href="#content-dallanlee" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/paqe"><img src="https://avatars2.githubusercontent.com/u/4215065?v=4" width="100px;" alt="paqe"/><br /><sub><b>paqe</b></sub></a><br /><a href="#content-paqe" title="Content">🖋</a></td>
     <td align="center"><a href="http://ericjinks.com"><img src="https://avatars0.githubusercontent.com/u/3147296?v=4" width="100px;" alt="Eric Jinks"/><br /><sub><b>Eric Jinks</b></sub></a><br /><a href="#content-Jinksi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/nicoder"><img src="https://avatars2.githubusercontent.com/u/365210?v=4" width="100px;" alt="Nicolas Dermine"/><br /><sub><b>Nicolas Dermine</b></sub></a><br /><a href="#content-nicoder" title="Content">🖋</a></td>
   </tr>
 </table>
 
