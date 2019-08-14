@@ -82,7 +82,7 @@ problems–my own and other people's.
 One of the first libraries that I worked on was
 [angular-formly](https://github.com/formly-js/angular-formly) and I got into it
 because there was a feature that didn't exist that I needed. I could have
-passively moved on to another library to retrofit it's capabilities to my app
+passively moved on to another library to retrofit its capabilities to my app
 (or vice versa 😬). Instead I looked through the code to see that what I wanted
 was possible,
 [then opened an issue](https://github.com/formly-js/angular-formly/issues/16),
