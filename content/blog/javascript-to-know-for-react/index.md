@@ -75,7 +75,7 @@ function Counter({initialCount, step}) {
 Arrow functions are another way to write functions in JavaScript, but they do
 have a few semantic differences. Luckily for us in React land, we don't have to
 worry about `this` as much if we're using hooks in our project (rather than
-classes), but the arrow function allows for for terser anonymous functions and
+classes), but the arrow function allows for terser anonymous functions and
 implicit returns, so you'll see and want to use arrow functions plenty.
 
 ```jsx {20-24}
