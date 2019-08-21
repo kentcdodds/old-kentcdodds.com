@@ -380,6 +380,7 @@ following methods the most frequently:
 - find
 - some
 - every
+- includes
 - map
 - filter
 - reduce
