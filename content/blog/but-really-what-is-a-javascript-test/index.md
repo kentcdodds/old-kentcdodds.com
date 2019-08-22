@@ -70,8 +70,8 @@ functions" like those in our `math.js` module (functions which will always
 return the same output for a given input and not change the state of the world
 around them).
 
-**The part that says** `**actual !== expected**` **is called an
-"assertion."**It's a way to say in code that one thing should be a certain value
+**The part that says `actual !== expected` is called an
+"assertion."** It's a way to say in code that one thing should be a certain value
 or pass a certain... eh... test :) It could be an assertion that the `actual`
 matches a regex, is an array with a certain length, or any number of things. The
 key is that if our assertion fails, then we throw an error.
