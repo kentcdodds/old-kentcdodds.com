@@ -16,6 +16,9 @@ bannerCredit:
   'Photo by [Benjamin Voros](https://unsplash.com/photos/phIFdC6lA4E)'
 ---
 
+Current Available Translations:
+- [Türkçe](https://medium.com/p/14a6ef62bd72/)
+
 One of the things I love most about React compared to other frameworks that I've
 used is how exposed you are to JavaScript when you're using it. There's no
 template DSL (JSX compiles to sensible JavaScript), the component API has only
