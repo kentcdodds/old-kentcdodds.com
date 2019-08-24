@@ -16,6 +16,10 @@ banner: './images/banner.jpg'
 bannerCredit:
   'Photo by [Cytonn Photography](https://unsplash.com/photos/ZJEKICY5EXY)'
 ---
+Current Available Translations:
+
+- [Türkçe](https://medium.com/@ismailsimsek/bir-yaz%C4%B1l%C4%B1m-m%C3%BChendisi-olarak-nas%C4%B1l-deneyim-edinebilirsiniz-d5bc19e84c09)
+
 
 Here's the secret: More Problems, More Experience
 
