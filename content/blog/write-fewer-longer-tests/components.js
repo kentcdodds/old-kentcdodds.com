@@ -69,4 +69,14 @@ function Remounter({children}) {
   )
 }
 
-export {Course, Rendered, Remounter}
+function Example() {
+  return (
+    <Rendered>
+      <Remounter>
+        <Course />
+      </Remounter>
+    </Rendered>
+  )
+}
+
+export {Example, Course, Rendered, Remounter}
