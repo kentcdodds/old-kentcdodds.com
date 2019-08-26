@@ -17,10 +17,8 @@ bannerCredit:
   'Photo by [Bailey Zindel](https://unsplash.com/photos/NRQV-hBF10M)'
 ---
 
-import \* as Comps from './components'
-
-Imagine we have this UI that renders a loading spinner until some data is
-loaded:
+import \* as Comps from './components' Imagine we have this UI that renders a
+loading spinner until some data is loaded:
 
 ```jsx
 import React from 'react'
@@ -76,8 +74,8 @@ export default Course
 Here's what that would render (I added a "Re-mount" button so you can try making
 it re-load. I also made it fail 50% of the time):
 
-<Comps.Rendered> <Comps.Remounter> <Comps.Course /> </Comps.Remounter>
-</Comps.Rendered>
+<Comps.Rendered> {' '} <Comps.Remounter> {' '} <Comps.Course />{' '}
+</Comps.Remounter> </Comps.Rendered>
 
 Let's talk about testing this component. I'm going to mock out the
 `api.getCourseInfo(courseId)` call so we don't actually make any network
@@ -355,6 +353,8 @@ There's the old "Arrange" "Act" "Assert" model for structuring tests. I
 typically suggest that you have a single "Arrange" per test, and as many "Act"
 and "Asserts" as necessary for the workflow you're trying to get confidence
 about.
+
+> [Find runnable code for these examples here](https://github.com/kentcdodds/write-fewer-longer-tests-demo)
 
 ## Appendix
 
