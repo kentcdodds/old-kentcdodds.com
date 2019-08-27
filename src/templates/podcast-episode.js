@@ -13,7 +13,7 @@ import Layout from 'components/layout'
 import EpisodeList from 'components/podcast/list'
 
 import podcastMetaImage from '../images/podcast/metaImage.jpg'
-// import ApplePodcasts from '../images/podcast/apple.svg'
+import ApplePodcasts from '../images/podcast/apple.svg'
 import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
 import Rss from '../images/podcast/rss.svg'
@@ -125,16 +125,12 @@ const Article = styled.article(
 )
 
 function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
+  const metaImage = mdx.frontmatter.metaImage
+    ? mdx.frontmatter.metaImage.childImageSharp.original.src
+    : podcastMetaImage
   return (
     <>
-      <SEO
-        frontmatter={mdx.frontmatter}
-        podcastImage={
-          mdx.frontmatter.metaImage
-            ? mdx.frontmatter.metaImage.childImageSharp.original.src
-            : podcastMetaImage
-        }
-      />
+      <SEO frontmatter={mdx.frontmatter} metaImage={metaImage} />
       <Layout maxWidth={1180} siteTitle="Chats with Kent" pageTitle="episode">
         <Container
           maxWidth={1180}
@@ -151,12 +147,10 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
             marginBottom: 10,
           })}
         >
-          {/* ✅ TODO: Restore as provider URLs are available */}
-          {/* <ProviderLink to="/">
+          <ProviderLink to="https://podcasts.apple.com/us/podcast/chats-with-kent-c-dodds/id1475543959">
             <img src={ApplePodcasts} alt="Listen on Apple Podcasts" /> Apple
           </ProviderLink>
-          */}
-          <ProviderLink to="https://play.google.com/music/m/Iqy44l6njgx6hagdxkiobsjhwm4">
+          <ProviderLink to="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9YX3dTX1dZaA">
             <img src={GooglePodcasts} alt="Listen on Google Podcasts" /> Google
           </ProviderLink>
           <ProviderLink to="https://open.spotify.com/show/7GkO2poedjbltWT5lduL5w">

@@ -43,33 +43,24 @@ Let's take this simple component as an example:
 ```jsx
 import React from 'react'
 
-class Counter extends React.Component {
-  static defaultProps = {
-    initialCount: 0,
-    maxClicks: 3,
-  }
-  initialState = {count: this.props.initialCount}
-  state = this.initialState
-  handleReset = () => this.setState(this.initialState)
-  handleClick = () =>
-    this.setState(({count}) =>
-      this.clicksAreTooMany(count) ? null : {count: count + 1},
-    )
-  clicksAreTooMany(count) {
-    return count >= this.props.maxClicks
-  }
-  render() {
-    const {count} = this.state
-    const tooMany = this.clicksAreTooMany(count)
-    return (
-      <div>
-        <button onClick={this.handleClick} disabled={tooMany}>
-          Count: {count}
-        </button>
-        {tooMany ? <button onClick={this.handleReset}>reset</button> : null}
-      </div>
-    )
-  }
+function Counter(props) {
+  const initialProps = React.useRef(props).current
+  const {initialCount = 0, maxClicks = 3} = props
+
+  const [count, setCount] = React.useState(initialCount)
+  const tooMany = count >= maxClicks
+
+  const handleReset = () => setCount(initialProps.initialCount)
+  const handleClick = () => setCount(currentCount => currentCount + 1)
+
+  return (
+    <div>
+      <button onClick={handleClick} disabled={tooMany}>
+        Count: {count}
+      </button>
+      {tooMany ? <button onClick={handleReset}>reset</button> : null}
+    </div>
+  )
 }
 
 export {Counter}
@@ -81,28 +72,25 @@ Here's a rendered version of the component:
 
 ### Our first test suite
 
-Let's start with a test suite like the one that inspired this newsletter:
+Let's start with a test suite like the one that inspired this post:
 
 ```jsx
-import 'jest-dom/extend-expect' // gives us the toHaveTextContent/toHaveAttribute matchers
+// gives us the toHaveTextContent/toHaveAttribute matchers
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import {renderIntoDocument, cleanup, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {Counter} from '../counter'
 
-const {getByText} = renderIntoDocument(
-  <Counter maxClicks={4} initialCount={3} />,
-)
+const {getByText} = render(<Counter maxClicks={4} initialCount={3} />)
 const counterButton = getByText(/^count/i)
 
-afterAll(cleanup) // when all tests are finished, unmount the component
-
 test('the counter is initialized to the initialCount', () => {
-  expect(counterButton).toHaveTextContent(/3)
+  expect(counterButton).toHaveTextContent('3')
 })
 
 test('when clicked, the counter increments the click', () => {
   fireEvent.click(counterButton)
-  expect(counterButton).toHaveTextContent(/4)
+  expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
@@ -111,14 +99,19 @@ test(`the counter button is disabled when it's hit the maxClicks`, () => {
 })
 
 test(`the counter button does not increment the count when clicked when it's hit the maxClicks`, () => {
-  expect(counterButton).toHaveTextContent(/4)
+  expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
   fireEvent.click(getByText(/reset/i))
-  expect(counterButton).toHaveTextContent(/3)
+  expect(counterButton).toHaveTextContent('3')
 })
 ```
+
+> First of all, as of
+> [@testing-library/react@9.0.0](https://github.com/testing-library/react-testing-library/releases/tag/v9.0.0)
+> this style of testing wont even work properly, but let's imagine that it
+> would.
 
 These tests give us 100% coverage of the component and verify exactly what they
 say they'll verify. The problem is that they share mutable state. What is the
@@ -140,20 +133,18 @@ tests start breaking out of nowhere.
 So let's try something else and see how that changes things:
 
 ```jsx
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import {renderIntoDocument, cleanup, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {Counter} from '../counter'
 
 let getByText, counterButton
 
 beforeEach(() => {
-  const utils = renderIntoDocument(<Counter maxClicks={4} initialCount={3} />)
+  const utils = render(<Counter maxClicks={4} initialCount={3} />)
   getByText = utils.getByText
   counterButton = utils.getByText(/^count/i)
 })
-
-afterEach(cleanup)
 
 test('the counter is initialized to the initialCount', () => {
   expect(counterButton).toHaveTextContent(/3)
@@ -185,8 +176,9 @@ test(`the reset button has been rendered and resets the count when it's hit the 
 With this, each test is completely isolated from the other. We can delete or
 skip any test and the rest of the tests continue to pass. The biggest
 fundamental difference here is that each test has its own count instance to work
-with and it's unmounted after each test (`afterEach(cleanup)`). This
-significantly reduces the amount of complexity of our tests with minor changes.
+with and it's unmounted after each test (this happens automatically thanks to
+React Testing Library). This significantly reduces the amount of complexity of
+our tests with minor changes.
 
 One thing people often say against this approach is that it's slower than the
 previous approach. I'm not totally sure how to respond to that... Like, how much
@@ -201,21 +193,17 @@ to great watch mode support like we have in Jest.
 
 So I'm actually still not super happy with the tests we have above. I'm not a
 huge fan of `beforeEach` and sharing variables between tests.
-[I feel like they lead to tests that are harder to understand](https://www.briefs.fm/3-minutes-with-kent/27).
+[I feel like they lead to tests that are harder to understand](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing).
 Let's try again:
 
 ```jsx
 import 'jest-dom/extend-expect'
 import React from 'react'
-import {renderIntoDocument, cleanup, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {Counter} from '../counter'
 
-afterEach(cleanup)
-
 function renderCounter(props) {
-  const utils = renderIntoDocument(
-    <Counter maxClicks={4} initialCount={3} {...props} />,
-  )
+  const utils = render(<Counter maxClicks={4} initialCount={3} {...props} />)
   const counterButton = utils.getByText(/^count/i)
   return {...utils, counterButton}
 }
@@ -274,12 +262,10 @@ functionality. So what would these tests look like if we concerned ourselves
 more with the use case than the individual functionality?
 
 ```jsx
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import {renderIntoDocument, cleanup, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {Counter} from '../counter'
-
-afterEach(cleanup)
 
 test('allows clicks until the maxClicks is reached, then requires a reset', () => {
   const {getByText} = renderIntoDocument(
@@ -340,37 +326,3 @@ I hope this is helpful to you! You can find the code for this example
 [here](https://github.com/kentcdodds/react-test-isolation). Try to keep your
 tests isolated from one another and focus on use cases rather than functionality
 and you'll have a much better time testing! Good luck!
-
-**Learn more about testing from me**:
-
-- [Frontend Masters](https://frontendmasters.com):
-  [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles),
-  [Testing React Applications](https://frontendmasters.com/courses/testing-react)
-- [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — Something
-  new on [egghead.io](http://egghead.io). It's a recording of one of my talks
-  especially for [egghead.io](http://egghead.io). I think you'll really enjoy it
-  (and it's 🆓)
-- [Write tests. Not too many. Mostly integration.](https://youtu.be/Fha2bVoC8SE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
-  talk at Assert.js conference
-  ([and here's the blog post](http://kcd.im/write-tests))
-- [Testing Practices and Principles](https://youtu.be/VQZx1Z3sW0E?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
-  recording of my workshop at Assert.js
-
-**Things to not miss**:
-
-- [Byteconf React Speakers: Round One](https://medium.com/byteconf/byteconf-react-speakers-round-one-ab25af8edf23) — Look!
-  It's a free online conference and I'm speaking at it!
-- [🏎 downshift 2.0.0 released 🎉](/blog/downshift-2-0-0-released) — Even better
-  accessibility, React Native and ReasonReact support, even simpler API,
-  improved docs, new examples site, Flow and TypeScript support, and a new
-  online community ⚛️
-- [keycode.info](http://keycode.info) by
-  [Wes Bos](https://twitter.com/wesbos) — shows you the javascript character
-  code for the key you type. Handy!
-- [Chrome Pixelbook](https://store.google.com/us/product/google_pixelbook) — It's
-  what I'm using to write this right now and it's pretty slick!
-- [Testing Socket.io-client app using Jest and react-testing-library](https://medium.com/@Daajust/testing-socket-io-client-app-using-jest-and-react-testing-library-9cae93c070a3)
-  by my friend [Justice Mba](https://twitter.com/Daajust).
-- [Webpack 4 — Mysterious SplitChunks Plugin](https://medium.com/@hemal7735/webpack-4-splitchunks-plugin-d9fbbe091fd0) — My
-  fellow PayPal engineer [Hemal Patel](https://twitter.com/TheHemalPatel) wrote
-  about how the `splitChunks.chunks` feature works. Pretty interesting!

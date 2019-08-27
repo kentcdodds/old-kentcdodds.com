@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-72-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-78-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -103,6 +103,14 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://ashu96.github.io/"><img src="https://avatars1.githubusercontent.com/u/13612227?v=4" width="100px;" alt="Ashutosh"/><br /><sub><b>Ashutosh</b></sub></a><br /><a href="#content-Ashu96" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/dallanlee"><img src="https://avatars0.githubusercontent.com/u/13070764?v=4" width="100px;" alt="dallanlee"/><br /><sub><b>dallanlee</b></sub></a><br /><a href="#content-dallanlee" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/paqe"><img src="https://avatars2.githubusercontent.com/u/4215065?v=4" width="100px;" alt="paqe"/><br /><sub><b>paqe</b></sub></a><br /><a href="#content-paqe" title="Content">🖋</a></td>
+    <td align="center"><a href="http://ericjinks.com"><img src="https://avatars0.githubusercontent.com/u/3147296?v=4" width="100px;" alt="Eric Jinks"/><br /><sub><b>Eric Jinks</b></sub></a><br /><a href="#content-Jinksi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/nicoder"><img src="https://avatars2.githubusercontent.com/u/365210?v=4" width="100px;" alt="Nicolas Dermine"/><br /><sub><b>Nicolas Dermine</b></sub></a><br /><a href="#content-nicoder" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/kingingcole"><img src="https://avatars2.githubusercontent.com/u/43896019?v=4" width="100px;" alt="kingingcole"/><br /><sub><b>kingingcole</b></sub></a><br /><a href="#content-kingingcole" title="Content">🖋</a></td>
+    <td align="center"><a href="https://twitter.com/baumannzone"><img src="https://avatars0.githubusercontent.com/u/5422102?v=4" width="100px;" alt="Jorge Baumann"/><br /><sub><b>Jorge Baumann</b></sub></a><br /><a href="#content-baumannzone" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/itsmylife"><img src="https://avatars0.githubusercontent.com/u/820946?v=4" width="100px;" alt="ismail simsek"/><br /><sub><b>ismail simsek</b></sub></a><br /><a href="#translation-itsmylife" title="Translation">🌍</a></td>
   </tr>
 </table>
 

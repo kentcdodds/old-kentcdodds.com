@@ -19,18 +19,17 @@ const Discount = ({discount}) => (
       >
         <em>
           early bird ends:{' '}
-          {format(new Date(discount.ends), 'MMM Do, YYYY h:mm a (ZZ)')}!
+          {format(new Date(discount.ends), 'MMM Do, yyyy h:mm a (ZZ)')}!
         </em>
       </div>
     )}
   </>
 )
 
-const Stripe = ({discount, ...props}) => (
-  <div
-    css={css`
-      ${discount
-        ? `
+const Stripe = ({discount, ...props}) =>
+  discount ? (
+    <div
+      css={css`
         display: block;
         position: absolute;
         width: 70px;
@@ -38,23 +37,21 @@ const Stripe = ({discount, ...props}) => (
         background-image: url(${discountStripe});
         background-size: 100% 100%;
         background-repeat: no-repeat;
-      margin-top: -42px;
-      margin-left: -42px;
-      ${bpMaxSM} {
-        margin-top: -21px;
-        margin-left: -21px;
-        width: 40px;
-        height: 40px;
-        h1 {
-          margin-top: ${discount ? '40px' : 'auto'};
+        margin-top: -42px;
+        margin-left: -42px;
+        ${bpMaxSM} {
+          margin-top: -21px;
+          margin-left: -21px;
+          width: 40px;
+          height: 40px;
+          h1 {
+            margin-top: ${discount ? '40px' : 'auto'};
+          }
         }
-      }
-      `
-        : `display: none;`}
-    `}
-    {...props}
-  />
-)
+      `}
+      {...props}
+    />
+  ) : null
 
 const Header = ({
   discount = false,
@@ -152,7 +149,7 @@ const Header = ({
           <Discount discount={discount} />
           {date ? (
             <div className="date">
-              {format(new Date(startTime), 'MMM Do, YYYY')}
+              {format(new Date(startTime), 'MMM Do, yyyy')}
             </div>
           ) : (
             <div className="date">TBA</div>

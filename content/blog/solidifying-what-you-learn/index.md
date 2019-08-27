@@ -44,7 +44,7 @@ and
 Over the last two months or so, I've been revamping my
 [testing workshop](https://github.com/kentcdodds/testing-workshop). I gave it
 once before for
-[Frontend Masters](https://frontendmasters.com/courses/testing-javascript)and
+[Frontend Masters](https://frontendmasters.com/courses/testing-javascript) and
 I'm simplifying the content to make it easier to set up and less distracting to
 learn from. The content will now be used to give two distinct workshops (both of
 which I'll be giving for [Frontend Masters](https://frontendmasters.com) and

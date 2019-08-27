@@ -23,7 +23,7 @@ it becomes popular by virtue of you being so popular. If I create something, it
 goes unnoticed even if it's better than what you created."
 
 While this may be true, the attitude bothers me. I'd be classified in the
-"popular" crowed, so maybe that's why it bothers me, but it also bothers me
+"popular" crowd, so maybe that's why it bothers me, but it also bothers me
 because it feels like
 ["pride from the bottom looking up"](https://www.lds.org/general-conference/1989/04/beware-of-pride)
 or could also come from

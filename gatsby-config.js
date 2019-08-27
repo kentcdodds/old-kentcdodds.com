@@ -111,6 +111,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-remark-images',
+      options: {
+        backgroundColor: '#fafafa',
+        maxWidth: 1035,
+      },
+    },
     'gatsby-plugin-twitter',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

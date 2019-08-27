@@ -76,7 +76,7 @@ So, at this point, we had all our React tests with AVA, previous UI tests
 (mostly backbone) with Mocha, and server tests with Mocha. The natural choice
 was to move all our stuff to Mocha. But then I got involved in this thread:
 
-https://twitter.com/dan_abramov/status/760255553272705025
+[tweet temporarily unavailable](https://twitter.com/dan_abramov/status/760255553272705025)
 
 Which led to
 [this comment](https://github.com/facebook/create-react-app/pull/250#issuecomment-236980910)

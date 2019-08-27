@@ -43,8 +43,8 @@ recommendation and just show the alternative. If you want to see my original,
 > enough is just wasteful of your "complexity budget"
 
 The simplest solution to optimizing your context value involves using
-`useReducer` for your state management and putting the `state` in one context
-provider and the `dispatch` in another. Here's that:
+`useReducer` or `useState` for your state management and putting the
+`state` in one context provider and the `dispatch` in another. Here's that:
 
 https://codesandbox.io/s/ynn88nx9x?view=editor
 

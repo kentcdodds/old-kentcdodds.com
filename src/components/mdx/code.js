@@ -1,12 +1,19 @@
 import React from 'react'
 import {css} from '@emotion/core'
 import theme from 'prism-react-renderer/themes/nightOwl'
+import {bpDesktopOnly} from '../../lib/breakpoints'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 
 const RE = /{([\d,-]+)}/
 
 const wrapperStyles = css`
   overflow: auto;
+  margin-left: -20px;
+  margin-right: -20px;
+  ${bpDesktopOnly} {
+    margin-left: -80px;
+    margin-right: -80px;
+  }
 `
 
 const preStyles = css`

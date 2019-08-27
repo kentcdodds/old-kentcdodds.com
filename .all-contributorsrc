@@ -663,6 +663,60 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "paqe",
+      "name": "paqe",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4215065?v=4",
+      "profile": "https://github.com/paqe",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Jinksi",
+      "name": "Eric Jinks",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3147296?v=4",
+      "profile": "http://ericjinks.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nicoder",
+      "name": "Nicolas Dermine",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/365210?v=4",
+      "profile": "https://github.com/nicoder",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "kingingcole",
+      "name": "kingingcole",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/43896019?v=4",
+      "profile": "https://github.com/kingingcole",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "baumannzone",
+      "name": "Jorge Baumann",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5422102?v=4",
+      "profile": "https://twitter.com/baumannzone",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "itsmylife",
+      "name": "ismail simsek",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/820946?v=4",
+      "profile": "https://github.com/itsmylife",
+      "contributions": [
+        "translation"
+      ]
     }
   ]
 }
