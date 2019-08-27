@@ -341,8 +341,8 @@ arbitrarily separate your assertions into individual test blocks, there's no
 good reason to do so.
 
 I should note that I wouldn't recommend rendering the same component multiple
-times in a single test (re-renders are ok if you're testing what happens on prop
-updates for example).
+times in a single test block (re-renders are ok if you're testing what happens
+on prop updates for example).
 
 **The principle:**
 
