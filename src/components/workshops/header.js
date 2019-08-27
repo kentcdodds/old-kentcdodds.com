@@ -149,7 +149,7 @@ const Header = ({
           <Discount discount={discount} />
           {date ? (
             <div className="date">
-              {format(new Date(startTime), 'MMM Do, YYYY')}
+              {format(new Date(startTime), 'MMM Do, yyyy')}
             </div>
           ) : (
             <div className="date">TBA</div>
