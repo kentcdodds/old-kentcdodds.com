@@ -5,7 +5,7 @@ export default function TimeRange({startTime, endTime}) {
   return (
     <time>
       {format(new Date(startTime), 'h:mm a')} -{' '}
-      {format(new Date(endTime), 'h:mm a (ZZ)')}
+      {format(new Date(endTime), 'h:mm a (xx)')}
     </time>
   )
 }
