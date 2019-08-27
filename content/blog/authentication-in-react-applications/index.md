@@ -127,7 +127,8 @@ import {FullPageSpinner} from '../components/lib'
 const AuthContext = React.createContext()
 
 function AuthProvider(props) {
-  // code for pre-loading the user's information if we have their token in localStorage goes here
+  // code for pre-loading the user's information if we have their token in
+  // localStorage goes here
 
   // 🚨 this is the important bit.
   // Normally your provider components render the context provider with a value.
