@@ -118,7 +118,7 @@ This one also benefits me because it's an opportunity for me to receive some
 quick feedback on the material so I can find places to improve things. I've been
 doing this in my workshops since the beginning of 2017, and now over a year and
 a half later I have 3.6k responses to this form. Not everyone fills out the
-feedback and elaboration form, but I have been able to see which exercises and
+feedback and elaboration form, but I have been able to see which exercises are
 working and which aren't based on the responses I get here.
 
 ### Active Retrieval
