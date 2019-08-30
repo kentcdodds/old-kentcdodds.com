@@ -4,8 +4,8 @@ title: 'How to implement useState with useReducer'
 date: '2019-08-30'
 author: 'Kent C. Dodds'
 description:
-  '_A fun excercise to help understand the differences and use cases of these
-  two related hooks_'
+  '_A fun exercise to help understand the differences and use cases of these two
+  related hooks_'
 categories:
   - 'react'
 keywords:
