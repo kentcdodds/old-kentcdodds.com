@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-78-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-79-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -111,6 +111,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/itsmylife"><img src="https://avatars0.githubusercontent.com/u/820946?v=4" width="100px;" alt="ismail simsek"/><br /><sub><b>ismail simsek</b></sub></a><br /><a href="#translation-itsmylife" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/jessethomson"><img src="https://avatars1.githubusercontent.com/u/15367855?v=4" width="100px;" alt="Jesse Thomson"/><br /><sub><b>Jesse Thomson</b></sub></a><br /><a href="#content-jessethomson" title="Content">🖋</a></td>
   </tr>
 </table>
 
