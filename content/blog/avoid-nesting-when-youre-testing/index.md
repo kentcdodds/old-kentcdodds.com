@@ -553,10 +553,9 @@ test('example 2', () => {
 })
 ```
 
-> Even better, with React Testing Library, you can import
-> `@testing-library/react/cleanup-after-each` and it'll do this for you
-> automatically. Learn more
-> [in the docs](https://testing-library.com/docs/react-testing-library/setup#cleanup)
+> Even better, with React Testing Library, [`Cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup) is called after each
+> test automatically by default. Learn more
+> [in the docs](https://testing-library.com/docs/react-testing-library/setup#skipping-auto-cleanup)
 
 In addition, sometimes there are definitely good use cases for `before*`, but
 they're normally matched with a cleanup that's necessary in an `after*`. Like
