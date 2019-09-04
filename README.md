@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-81-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-82-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -114,6 +114,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/jessethomson"><img src="https://avatars1.githubusercontent.com/u/15367855?v=4" width="100px;" alt="Jesse Thomson"/><br /><sub><b>Jesse Thomson</b></sub></a><br /><a href="#content-jessethomson" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/gregoralbrecht"><img src="https://avatars0.githubusercontent.com/u/6179211?v=4" width="100px;" alt="Gregor Albrecht"/><br /><sub><b>Gregor Albrecht</b></sub></a><br /><a href="#content-gregoralbrecht" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/NoriSte"><img src="https://avatars0.githubusercontent.com/u/173663?v=4" width="100px;" alt="Stefano Magni"/><br /><sub><b>Stefano Magni</b></sub></a><br /><a href="#content-NoriSte" title="Content">🖋</a></td>
+    <td align="center"><a href="https://bouwe.io"><img src="https://avatars0.githubusercontent.com/u/4126793?v=4" width="100px;" alt="Bouwe K. Westerdijk"/><br /><sub><b>Bouwe K. Westerdijk</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=bouwe77" title="Code">💻</a></td>
   </tr>
 </table>
 
