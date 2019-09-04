@@ -19,7 +19,7 @@ const Discount = ({discount}) => (
       >
         <em>
           early bird ends:{' '}
-          {format(new Date(discount.ends), 'MMM Do, yyyy h:mm a (ZZ)')}!
+          {format(new Date(discount.ends), 'MMM do, yyyy h:mm a (ZZ)')}!
         </em>
       </div>
     )}
@@ -149,7 +149,7 @@ const Header = ({
           <Discount discount={discount} />
           {date ? (
             <div className="date">
-              {format(new Date(startTime), 'MMM Do, yyyy')}
+              {format(new Date(startTime), 'MMM do, yyyy')}
             </div>
           ) : (
             <div className="date">TBA</div>
