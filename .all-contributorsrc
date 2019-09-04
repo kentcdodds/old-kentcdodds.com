@@ -745,6 +745,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "bouwe77",
+      "name": "Bouwe K. Westerdijk",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4126793?v=4",
+      "profile": "https://bouwe.io",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
