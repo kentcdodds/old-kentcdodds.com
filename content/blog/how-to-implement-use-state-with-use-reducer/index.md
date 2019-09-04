@@ -136,7 +136,7 @@ Let's start by trying to implement this use case for the state update function:
 
 ```javascript
 const [count, setCount] = useState(0)
-setState(count + 1)
+setCount(count + 1)
 ```
 
 So we need to make the `dispatch` function actually update the state value. To
@@ -166,7 +166,7 @@ Great! Next, let's support the function update version of the `useState` API:
 
 ```javascript
 const [count, setCount] = useState(0)
-setState(previousCount => previousCount + 1)
+setCount(previousCount => previousCount + 1)
 ```
 
 If we want to continue to support the previous API, we'll need to do some
