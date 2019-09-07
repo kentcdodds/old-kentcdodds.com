@@ -62,10 +62,10 @@ personal preference):
 <label for="username">Username</label> <input id="username" />
 ```
 
-## input[aria-labeledby] ➡ label[id]
+## input[aria-labelledby] ➡ label[id]
 
 ```html
-<label id="username">Username</label> <input aria-labeledby="username" />
+<label id="username">Username</label> <input aria-labelledby="username" />
 ```
 
 ## label 🤗 input
