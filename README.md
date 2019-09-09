@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-83-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-84-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -116,6 +116,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://twitter.com/NoriSte"><img src="https://avatars0.githubusercontent.com/u/173663?v=4" width="100px;" alt="Stefano Magni"/><br /><sub><b>Stefano Magni</b></sub></a><br /><a href="#content-NoriSte" title="Content">🖋</a></td>
     <td align="center"><a href="https://bouwe.io"><img src="https://avatars0.githubusercontent.com/u/4126793?v=4" width="100px;" alt="Bouwe K. Westerdijk"/><br /><sub><b>Bouwe K. Westerdijk</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=bouwe77" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/lukasduspiva"><img src="https://avatars0.githubusercontent.com/u/9008594?v=4" width="100px;" alt="Lukáš"/><br /><sub><b>Lukáš</b></sub></a><br /><a href="#content-lukasduspiva" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.itsmycodeblog.com"><img src="https://avatars0.githubusercontent.com/u/1111211?v=4" width="100px;" alt="Nicholas Murray"/><br /><sub><b>Nicholas Murray</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=NicholasMurray" title="Code">💻</a></td>
   </tr>
 </table>
 
