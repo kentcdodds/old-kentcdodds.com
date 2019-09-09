@@ -163,6 +163,8 @@ punching yourself in the face every time you blink! So instead of just reducing
 how often a bad thing happens (_slow_ renders), maybe you could eliminate the
 bad thing and feel free to blink (render) as much as your eyes need you to 😉
 
+![stop hitting yourself](./images/stop-hitting-yourself.gif)
+
 ## How to fix slow renders
 
 So we've concluded we want to fix slow renders first. Then we can determine
@@ -188,5 +190,3 @@ It doesn't matter if 100% of your renders are necessary, if those renders are
 slow, it will still produce a bad experience for the user. Stop punching
 yourself in the face every time you blink. Fix your slow renders first. Then
 deal with the "unnecessary re-renders" (if you still need to). Good luck!
-
-![stop hitting yourself](./images/stop-hitting-yourself.gif)
