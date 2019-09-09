@@ -131,26 +131,3 @@ by itself and allow you to call them directly.
 general, I'm more in favor of ponyfills, though you just can't get away from
 polyfills completely because often your dependencies are relying on built-ins
 that your browsers don't support.
-
-**Learn more about React from me**:
-
-- [The Beginner's Guide to React](http://kcd.im/beginner-react)
-- [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
-
-**Things to not miss**:
-
-- [cypress-capybara](https://github.com/testdouble/cypress-capybara) — If you've
-  used [capybara](https://github.com/teamcapybara/capybara) before you'll
-  probably love this util from [Justin Searls](https://twitter.com/searls). If
-  you like this, then you'll probably love
-  [cypress-testing-library](https://github.com/testing-library/cypress-testing-library).
-  In any case,
-  [don't reuse your CSS selectors as test selectors](/blog/making-your-ui-tests-resilient-to-change)!
-- [guppy](https://github.com/joshwcomeau/guppy) — 🐠A friendly application
-  manager and task runner for React.js by
-  [Josh Comeau](https://twitter.com/joshwcomeau).
-- [Themes Support in Codesandbox](https://twitter.com/CompuIves/status/1018871036719325184)
-  🤩 — [I set mine to Night Owl and Dank.sh](http://kcd.im/mft) so fast you
-  wouldn't believe it. That [Ives van Hoorne](https://twitter.com/CompuIves) has
-  gone and done some amazing work again!

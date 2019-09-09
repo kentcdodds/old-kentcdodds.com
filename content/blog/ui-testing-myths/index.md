@@ -60,7 +60,7 @@ can get confidence that the registration and login flows are working, and then
 skip those for the rest of your tests so you can significantly speed up the
 tests and reduce the points of failure. When you write tests this way and use
 tools like
-[cypress-testing-library](https://github.com/testing-library/cypress-testing-library),
+[Cypress Testing Library](https://github.com/testing-library/cypress-testing-library),
 practices like page objects are totally unnecessary, and your tests are easier
 to maintain, more reliable, and run faster. You might even find yourself
 replacing Chrome with Cypress as your development workflow tool (which I show
