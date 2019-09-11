@@ -19,7 +19,7 @@ export default [
   //   `,
   // },
   {
-    title: 'All Things Open Keynote',
+    title: 'Welcome to Open Source',
     resources: [],
     tags: ['open source'],
     deliveries: [
@@ -30,21 +30,66 @@ export default [
       },
     ],
     description: `
-      More details forthcoming...
+      What kind of world do you want to live in? The world of Open Source
+      Software is supremely vast, and it's growing. We can't sit idly by, coding
+      alone in our closets with an attitude of "if you want something done
+      right, you have to do it yourself." We don't want to live in a world like
+      that. The community we want to build around OSS requires intentional
+      effort to maximize the happiness of everyone involved. And the rewards of
+      working toward that goal are serene. I'd like to personally welcome you to
+      the open source community. Bring your distinctiveness and help to make our
+      world a better place.
     `,
   },
   {
-    title: 'Connect.Tech Keynote',
+    title: 'AHA Programming',
     resources: [],
-    tags: [],
+    tags: ['software development', 'abstraction'],
     deliveries: [
+      {
+        event: '[Concatenate Conf](https://www.concatenate.dev)',
+        date: '2019-10-11',
+      },
       {
         event: '[Connect.Tech](https://connect.tech)',
         date: '2019-10-16',
       },
     ],
     description: `
-      More details forthcoming...
+      Are you the kind of programmer who prefers to never see the same code in
+      two places, or do you make liberal use of copy/paste? Many developers
+      swear by the Don't Repeat Yourself (DRY) philosophy while others prefer to
+      Write Everything Twice (WET). But which of these produces more
+      maintainable codebases? I've seen both of these approaches lay waste to
+      codebases and I have a new ideology I would like to propose to you:
+      Avoid Hasty Abstractions (AHA). In this keynote, we'll talk about
+      abstraction and how you can improve a codebase by applying and creating
+      abstractions more thoughtfully as well as how to get yourself out of a
+      mess of over or under-abstraction.
+    `,
+  },
+  {
+    title: 'Application State Management',
+    resources: [],
+    tags: ['react'],
+    deliveries: [
+      {
+        event:
+          '[Reactadelphia](https://www.meetup.com/Reactadelphia/events/264461785/)',
+        date: '2019-09-17',
+      },
+    ],
+    description: `
+      For the last few years of using React, we as a community have been trying
+      to solve the hard problem of application state management with React when
+      we already had one all along. React itself is a state management library.
+      
+      You can use features and practices that have been a part of React for a
+      long time and it will change the way you think about state management for
+      your React apps. In other words: you probably don't need Redux, MobX, or
+      any state management library other than React. Let’s explore how that’s
+      possible and why you might want to think twice before reaching for an
+      abstraction.
     `,
   },
   {
@@ -55,6 +100,8 @@ export default [
       {
         event: '[React Rally 2019](https://www.reactrally.com)',
         date: '2019-08-22',
+        recording:
+          'https://www.youtube.com/watch?v=VIRcX2X7EUk&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -193,6 +240,10 @@ export default [
         event:
           '[RVA.js Meetup](https://www.meetup.com/rva-js/events/jrgfhpyzdbhb)',
         date: '2019-02-12',
+      },
+      {
+        event: '[Connect.Tech](https://connect.tech)',
+        date: '2019-10-16',
       },
     ],
     description: `
