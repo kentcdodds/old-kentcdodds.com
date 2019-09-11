@@ -74,22 +74,22 @@ updates to the DOM.
 
 This is a really important distinction and I don't want you to miss it (and the
 names are a tiny bit misleading, so I want to make it clear). A "render" is when
-React calls your function to get React elements. A "diff" is when React compares
-those React elements with the previously rendered elements. A "commit" is when
-React takes those differences and makes the DOM updates.
+React calls your function to get React elements. "Reconciliation" is when React
+compares those React elements with the previously rendered elements. A "commit"
+is when React takes those differences and makes the DOM updates.
 
 ```
-render → diff → commit
-   ↖              ↙
-     state change
+render → reconcilitation → commit
+      ↖                   ↙
+           state change
 ```
 
 To be clear:
 
 - The "render" phase: create React elements `React.createElement`
   ([learn more](/blog/what-is-jsx))
-- The "diff" phase: compare previous elements with the new ones
-  ([learn more](/blog/optimize-react-re-renders))
+- The "reconciliation" phase: compare previous elements with the new ones
+  ([learn more](https://reactjs.org/docs/reconciliation.html))
 - The "commit" phase: update the DOM (if needed).
 
 Typically, the slowest part of this is the "commit" phase when the DOM is
@@ -139,18 +139,18 @@ renders when it doesn't actually need to update the DOM.
 
 This can definitely be a problem in some cases, but in general even mobile
 browsers on low-end devices are very fast at creating objects (render phase) and
-comparing them (diff phase). So what's the problem with re-renders?
+comparing them (reconciliation phase). So what's the problem with re-renders?
 
 ## Slow renders
 
-Given that JavaScript is really fast at handling the render and diff phases,
-then why is my app freezing up when I'm getting unnecessary re-renders? In that
-situation, I'd suggest that your problem _might_ be unnecessary re-renders, but
-it's more likely a problem with slow renders in general. There's something that
-your code is doing during the render phase that's making things slow. You
-should diagnose and fix _that_ first. Once you've fixed that problem, then you
-can profile your app again and see if you still have issues with unnecessary
-re-renders.
+Given that JavaScript is really fast at handling the render and reconciliation
+phases, then why is my app freezing up when I'm getting unnecessary re-renders?
+In that situation, I'd suggest that your problem _might_ be unnecessary
+re-renders, but it's more likely a problem with slow renders in general. There's
+something that your code is doing during the render phase that's making things
+slow. You should diagnose and fix _that_ first. Once you've fixed that problem,
+then you can profile your app again and see if you still have issues with
+unnecessary re-renders.
 
 In fact, if you leave in a slow render and just reduce re-renders instead, then
 you could wind up with a worse situation, and you'll likely wind up with more
