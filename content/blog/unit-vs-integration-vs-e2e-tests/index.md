@@ -32,7 +32,7 @@ over the ocean a hundred years ago? No way. There are different brushes for
 different use cases and the same thing applies to tests.
 
 Nearly 1 year ago,
-[created the Testing Trophy](https://twitter.com/kentcdodds/status/960723172591992832).
+[I created the Testing Trophy](https://twitter.com/kentcdodds/status/960723172591992832).
 Since then [Maggie Appleton](https://twitter.com/Mappletons) (the mastermind
 behind [egghead.io](https://egghead.io)'s masterful art/design) created this for
 [TestingJavaScript.com](https://testingjavascript.com):
