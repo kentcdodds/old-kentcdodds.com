@@ -97,10 +97,3 @@ that in more hands-on detail in the JavaScript Mocking Fundamentals module of
 the course!
 
 See you [there](https://testingjavascript.com).
-
-— Kent.
-
-**Things to not miss**:
-
-- [Episode 061 — React with Kent C. Dodds](https://6figuredev.com/podcast/episode-061-react-with-kent-c-dodds)
-  on [The 6 Figure Developer podcast](https://6figuredev.com).

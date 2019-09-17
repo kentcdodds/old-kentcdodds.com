@@ -67,18 +67,3 @@ can do magic!
 I hope that's helpful (and that
 [the free course](https://egghead.io/courses/the-beginner-s-guide-to-reactjs)
 will be helpful to you as well). Good luck!
-
-**Things to not miss**:
-
-- [Why Funding Open Source is Hard](https://medium.com/@codesponsor/why-funding-open-source-is-hard-652b7055569d) — Alternate
-  title: "Why Code Sponsor is shutting down after raising \$10k for OSS
-  developers in 4 months").
-- [Learn React Fundamentals and Advanced Patterns](/blog/learn-react-fundamentals-and-advanced-patterns) — I'm
-  just pretty excited about the course release!
-- [egghead.io Sale](https://egghead.io/gifts) — Save 30% on a year subscription!
-- [`ReactPrimer`](https://github.com/ReactPrimer/ReactPrimer) - React component
-  prototyping tool that generates fully connected class component code.
-- [Partial Application & Lambda Parameter Syntax for JavaScript](https://medium.com/@citycide/partial-application-lambda-parameters-for-js-aa16f4d94df4) — Awesome
-  use of [`babel-macros`](https://github.com/kentcdodds/babel-macros)
-- [Using Glitch as a UNIX command line playground](https://medium.com/@hugo__df/using-glitch-as-a-unix-command-line-playground-8e5cbdc9a8d5) — Interesting
-  idea!

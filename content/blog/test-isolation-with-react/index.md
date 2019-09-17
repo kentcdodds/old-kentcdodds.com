@@ -16,9 +16,6 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/alone)'
 ---
 
-**Read to the end, I've got some cool things in the "things not to miss"
-section**
-
 The inspiration for this newsletter comes from seeing React tests that look like
 this:
 

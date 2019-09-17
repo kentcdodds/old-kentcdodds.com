@@ -132,13 +132,3 @@ want!)
 I'm looking forward to working on this further and I'm also really looking
 forward to some of the content that I'm going to be bringing you to egghead.io
 and... other places :)
-
-**Stuff not to miss**:
-
-- [One Day Introduction to React with Kent C. Dodds](https://thinkster.io/tutorials/one-day-introduction-to-react-with-kent-c-dodds):
-  This is a recorded workshop from back in October. If you're totally new to
-  React and want a hands-on approach to learning it, this will be very helpful
-  to you! (There's also
-  [a HUGE sale right now on thinkster](https://www.google.com/url?q=https://thinkster.io/pro/yearly/kcd-react-workshop))
-- [I'M GIVING A HOOKS WORKSHOP IN SALT LAKE CITY!!!!!](https://ti.to/thinkster-io/react-hooks-workshop-slc-may-2019):
-  Both beginner and advanced. Check it out!

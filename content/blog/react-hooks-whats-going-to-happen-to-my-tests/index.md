@@ -402,31 +402,3 @@ any good if you have to throw it away when you refactor it.** Take my advice:
 [avoid implementation details](https://kcd.im/imp-deets) in your tests. Write
 tests that will work today with classes, and in the future if those classes are
 refactored to functions with hooks. Good luck!
-
-**Learn more about React Hooks from me**:
-
-If you thought this was interesting, I highly recommend you watch these (while
-they're both still free):
-
-- [React Hooks and Suspense](http://kcd.im/hooks-and-suspense)  —  A great
-  primer on Hooks and Suspense
-- [Simplify React Apps with React Hooks](http://kcd.im/refactor-react)  — Let's
-  take some real-world class components and refactor them to function components
-  with hooks.
-
-**Things to not miss**:
-
-- [rescripts](https://github.com/rescripts/rescripts)  —  💥 Use the latest
-  react-scripts with custom configurations for Babel, ESLint, TSLint,
-  Webpack,... ∞ by [Harry Solovay](https://twitter.com/hsolvz)
-- [Contributing to Open Source on GitHub for beginners](https://youtu.be/k6KcaMffxac?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) 
-  —  A talk I gave at my Alma mater (BYU) this last week
-- [Make a SUPER simple personal URL shortener with Netlify](https://youtu.be/HL6paXyx6hM?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
-  (I'm still livestreaming almost every week day at
-  [kcd.im/devtips](https://kcd.im/devtips))
-- [The three browsers holding JavaScript back the most are:](https://twitter.com/jamiebuilds/status/1022568918949408768)...
-  An interesting thread by [Jamie Kyle](https://twitter.com/jamiebuilds).
-- [Emotion 10 released!](https://medium.com/emotion-js/announcing-emotion-10-f1a4b17b8ccd) 
-  —  This is still my favorite CSS-in-JS solution and
-  [this is why](https://twitter.com/tkh44/status/1070901663622283265) I prefer
-  it over styled-components.

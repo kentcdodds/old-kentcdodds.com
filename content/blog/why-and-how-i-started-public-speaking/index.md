@@ -143,26 +143,3 @@ in church as a kid. That never goes away. But the more practice you get, the
 more able you will be to take that nervous energy and turn it into positive
 energy to get the audience engaged which will help you connect with them better.
 Keep practicing! Good luck :D
-
-**Learn more about "self improvement" from me**:
-
-- [Zero to 60 in Software Development: How to Jumpstart Your Career](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
-  talk I gave a few years ago that's related and has some similar stories to
-  this post.
-
-> _Folks have been telling me I should make a course about (the good side of)
-> personal brand marketing / self-promotion. Let me know if you'd be interested
-> in this._
-
-**Things to not miss**:
-
-- [How and Why to Speak at Tech Conferences](https://hackernoon.com/how-and-why-to-speak-at-tech-conferences-1d50a3f548e0)
-  by [Nick Heiner](https://twitter.com/nickheiner) — A great blog post that goes
-  deeper on this subject.
-- [Test and Code Episode 45: David Heinemeier Hansson — Software Development and Testing, TDD, and exploratory QA](http://testandcode.com/45)-
-  A refreshingly practical view of testing software from the creator of Ruby on
-  Rails.
-- [DevTips](http://kcd.im/devtips) — If you're not reviewing these on a regular
-  basis, I suggest you do. I put out some pretty cool things on this playlist.
-  You could make it easy on yourself and
-  [subscribe to my youtube channel](http://kcd.im/youtube)

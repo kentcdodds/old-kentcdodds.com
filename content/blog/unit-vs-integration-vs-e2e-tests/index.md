@@ -377,38 +377,3 @@ changes, my code satisfies the business requirements and I'll use a mix of the
 different testing strategies to accomplish that goal.
 
 Good luck!
-
----
-
-**Learn more about Testing from me**:
-
-Here are a few relevant blog posts for you as well:
-
-- [Testing Implementation Details](/blog/testing-implementation-details)
-- [React Hooks: What’s going to happen to my tests?](/blog/react-hooks-whats-going-to-happen-to-my-tests)
-- [Common Testing Mistakes](/blog/common-testing-mistakes)
-- [UI Testing Myths](/blog/ui-testing-myths)
-- [The Merits of Mocking](/blog/the-merits-of-mocking)
-- [React is an implementation detail](/blog/react-is-an-implementation-detail)
-- [Eliminate an entire category of bugs with a few simple tools](/blog/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools)
-- [Why you’ve been bad about testing](/blog/why-youve-been-bad-about-testing)
-- [Demystifying Testing](/blog/demystifying-testing)
-- [Confidently Shipping Code](/blog/confidently-shipping-code)
-- [Why I Never Use Shallow Rendering](/blog/why-i-never-use-shallow-rendering)
-- [Test Isolation with React](/blog/test-isolation-with-react)
-- [But really, what is a JavaScript mock?](/blog/but-really-what-is-a-javascript-mock)
-- [But really, what is a JavaScript test?](/blog/but-really-what-is-a-javascript-test)
-- [Effective Snapshot Testing](/blog/effective-snapshot-testing)
-- [Making your UI tests resilient to change](/blog/making-your-ui-tests-resilient-to-change)
-- [Write tests. Not too many. Mostly integration.](/blog/write-tests)
-
-**Things to not miss**:
-
-- [Testing Atoms & Molecules](https://peterhrynkow.com/testing/2019/01/01/testing-atoms-and-molecules.html)
-  by [Peter Hrynkow](https://twitter.com/peterhry) is a great blog post about
-  where to focus your testing (using a connected Redux component as an example)
-- [React Hooks: Array Destructuring Fundamentals](https://www.javascriptjanuary.com/blog/react-hooks-array-destructuring-fundamentals) -
-  This may look familiar. It's a cross-post of my blog from a while back on the
-  fantastic [JavaScriptJanuary.com](https://www.javascriptjanuary.com) by the
-  amazing [Emily Freeman](https://twitter.com/editingemily). Checkout the other
-  posts!

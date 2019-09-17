@@ -134,35 +134,3 @@ render prop component. Everyone wins!
 > _HOC)!_
 
 I hope that's helpful to you! Good luck!
-
-**Learn more about Render Props from me**:
-
-- [How to give rendering control to users with prop getters](/blog/how-to-give-rendering-control-to-users-with-prop-getters) — My
-  blog post from a few months back about a pattern that's complementary to
-  render props
-- [Testing components using render props](/blog/testing-components-using-render-props) — If
-  you want to test component A which uses component B, and component B has a
-  render prop API, read this.
-- [Answers to common questions about render props](/blog/answers-to-common-questions-about-render-props) — My
-  blog post that is what the title says it is...
-
-**Learn about Advanced React Component Patterns from me**:
-
-- [egghead.io online](https://egghead.io/courses/advanced-react-component-patterns)
-- [Frontend Masters in Minneapolis (and online) in April](https://frontendmasters.com/workshops/advanced-react-patterns)
-- [Workshop.me in Portland in July](https://workshop.me/2018-07-advanced-react?a=kent)
-- [Workshop.me in Salt Lake City in August](https://workshop.me/2018-08-advanced-react?a=kent)
-
-**Things to not miss**:
-
-- [KnowJS](http://knowjs.org) — An online training event that I'm taking part in
-- [React Dev Summit](https://reactdevsummit.com) — An online (FREE TO WATCH
-  LIVE) conference that I'm speaking for.
-- [React Round Up](https://devchat.tv/react-round-up) — A new React Podcast I'm
-  a panelist on!
-- [Carbon](https://stackedit.io/carbon.now.sh) by
-  [Dawn Labs](https://dawnlabs.io) — This is how I created the fancy code
-  screenshot in the tweet below.
-- [regexly](https://regexly.chipto.io) by
-  [Chipto Labs](https://chipto.io) — This is an awesome tool for checking
-  regexes that shows JavaScript-specific APIs. Definitely my new favorite!

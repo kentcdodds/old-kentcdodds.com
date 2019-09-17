@@ -237,18 +237,3 @@ Here are a few projects that implement the prop getters pattern:
 
 I hope to see more folks doing stuff like this in the future! Good luck to you
 all! 👍
-
-**Things to not miss:**
-
-- [`import-all.macro`](https://github.com/kentcdodds/import-all.macro) - A work
-  in progress babel-macro that allows you to import all files that match a glob
-- [`react-powerplug`](https://github.com/renatorib/react-powerplug) - Pretty
-  neat/interesting idea with the render prop pattern.
-- [`graphql-tag.macro`](https://github.com/leoasis/graphql-tag.macro) -
-  Impressive babel-macro that precompiles graphql queries.
-- [`size-limit`](https://github.com/ai/size-limit) - Prevent JS libraries bloat.
-  If you accidentally add a massive dependency, Size Limit will throw an error.
-- [left-pad not found sticker](https://www.stickermule.com/marketplace/11354-left-pad) — See
-  below. This was created by my friend
-  [Tyler McGinnis](https://twitter.com/tylermcginnis) (of Tyler McGinnis fame)
-  and I think it’s pretty funny.

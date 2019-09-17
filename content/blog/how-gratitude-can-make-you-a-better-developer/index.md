@@ -148,25 +148,3 @@ we're all feeling and hopefully we can land that promotion we're looking for
 😉🥇
 
 Good luck!
-
-**Things to not miss**:
-
-- [lerna-wizard](https://github.com/szarouski/lerna-wizard): I've been using
-  lerna and this helped me learn what I can do with the commands. Thanks
-  [Sergey Zarouski](https://twitter.com/webuniverseio)!
-- [useKonami](https://github.com/alexanderson1993/react-konami-hook): A custom
-  hook by [R. Alex Anderson](https://twitter.com/ralex1993) for supporting
-  Konami code to your app 😍
-- [Render Prop by Any Other Name](https://youtu.be/pjDOJdMM2eg?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — This
-  is a talk I gave at [FrameworkSummit](https://twitter.com/FrameworkSummit) in
-  October with [Divya Sasidharan](https://twitter.com/ShortDiv) (Vue) and
-  [Isaac Mann](https://twitter.com/MannIsaac) (Angular) that compares similar
-  patterns across the frameworks. (There were other great talks there too, see
-  them on
-  [the Framework Summit YouTube channel](https://youtube.com/channel/UCUTZdTjqY9ypGfpYWvSHC2w))
-- [React's New Defaults — Concurrent React and React Hooks](https://youtu.be/vhWaMPQhMLQ) — An
-  interesting talk about the future of React by
-  [Shawn Wang](https://twitter.com/swyx).
-- [GDG Salt Lake DevFest 2018: Why React Hooks](https://youtu.be/zWsZcBiwgVE?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — A
-  talk by me about why React Hooks are a thing and why I'm super excited to get
-  them. [Demo repo](https://github.com/kentcdodds/gdg-devfest-2018-react).

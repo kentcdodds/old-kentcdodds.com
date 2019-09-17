@@ -162,13 +162,3 @@ building your career:
   something you were proud of and that you love working at a place where you can
   tackle such challenges.
 - Go for a walk (sometimes you just need to take care of yourself and think)
-
-**Things to not miss**:
-
-- [4 things that I always manually test](https://dev.to/lkopacz/4-things-that-i-always-manually-test-2je8)
-  and
-  [a11y and JS - A Seemingly Unconventional Romance](https://dev.to/lkopacz/a11y-and-js---a-seemingly-unconventional-romance-24i0)
-  both by [Lindsey Kopacz](https://twitter.com/littlekope0903) are both terrific
-  articles about accessibility I recommend you read.
-
-> [Share and participate in the discussion on twitter](https://twitter.com/kentcdodds/status/1095101380631584769)

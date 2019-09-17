@@ -206,32 +206,3 @@ not require any breaking changes to React's API. I think that's a great thing.
 Don't go rewriting your apps! Refactor them (once hooks are stable)!
 
 Good luck!
-
-**Learn more about Refactoring to React Hooks from me**:
-
-[My new egghead.io course](/blog/introducing-a-new-course-simplify-react-apps-with-react-hooks-and-suspense)
-will show you how to refactor a typical app's components to use react hooks (and
-React.lazy/suspense). It's a good time!
-
-Also, check out
-[this free egghead playlist about hooks and suspense](http://kcd.im/hooks-and-suspense)!
-
-**Things to not miss**:
-
-- [npm malware event](https://github.com/dominictarr/event-stream/issues/116):
-  The package `event-stream` was published with a dependency that tried to steal
-  bitcoin wallets. `event-stream` is downloaded ~2million times per week, so
-  it's likely you've been infected. Check
-  [the npm blog](https://blog.npmjs.org), I'm sure they'll post more about it
-  soon.
-- [React Podcast: 29: Don't Rewrite Your App for Hooks and Suspense with Jared Palmer](https://reactpodcast.simplecast.fm/29)
-- [`htm`](https://github.com/developit/htm) by
-  [Jason Miller](https://twitter.com/_developit/status/1065026506068504577)
-  looks pretty slick. I still prefer JSX, but I can appreciate what he's doing
-  there and the fact that there's no extra special syntax for things JavaScript
-  can do (like map an array) is a major plus :)
-- [Announcing native support for the css prop in styled-components 🎉](https://medium.com/styled-components/announcing-native-support-for-the-css-prop-in-styled-components-245ca5252feb) — This
-  was always one of my biggest grievances with styled-components and a big
-  reason I preferred [emotion](https://emotion.sh). I still prefer emotion, but
-  I'm really excited that styled-components has this feature now! Stop naming
-  things "Container" and "Wrapper!"

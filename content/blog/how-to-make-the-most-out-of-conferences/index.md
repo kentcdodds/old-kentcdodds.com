@@ -122,17 +122,3 @@ Attending the talks help give you talking points and can introduce you to new
 concepts that you may not have thought to watch after the fact anyway. Good luck
 making the most of the conferences you're able to attend! It's truly a privilege
 to go.
-
-**Things to not miss**:
-
-- [tinker.macro](https://github.com/bradlc/tinker.macro) by
-  [Brad Cornes](https://twitter.com/bradlc) is an amazing PHP in JS macros for
-  babel-plugin-macros. How cool!?
-- [Deploying ES2015 code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today) — A
-  remarkably simple method for deploying ES5 and ES2015 code to browsers based
-  on whether they support `<script type="module">`. See also:
-  [bundle.sh](https://bundle.sh).
-- [`next-mdx-blog`](https://github.com/johnlindquist/next-mdx-blog) - an example
-  by [John Lindquist](https://twitter.com/johnlindquist). Uses
-  [`preval`](https://github.com/kentcdodds/babel-plugin-preval) to run mdx.
-  Pretty rad TBH :)

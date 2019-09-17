@@ -68,17 +68,17 @@ const submitButton = rootNode.querySelector('.btn')
 And here's where the problem comes in. What happens when we add another button?
 What if we added a "Sign up" button before the "Sign in" button?
 
-```
+```html
 <button
   className="btn btn-lg btn-secondary pull-xs-right"
-  disabled={this.props.inProgress}
+  disabled="{this.props.inProgress}"
 >
   Sign up
 </button>
 <button
   className="btn btn-lg btn-primary pull-xs-right"
   type="submit"
-  disabled={this.props.inProgress}
+  disabled="{this.props.inProgress}"
 >
   Sign in
 </button>
@@ -183,29 +183,12 @@ as well. So I suggest that you use it for that too! However, some folks have
 expressed to me concern about shipping these attributes to production. If that's
 you, please really consider whether it's actually a problem for you (because
 honestly it's probably not as big a deal as you think it is). If you really want
-to, you can transpile those attributes away with
+to, you can compile those attributes away with
 [`babel-plugin-react-remove-properties`](https://www.npmjs.com/package/babel-plugin-react-remove-properties).
 
 _I should also note that if you're using enzyme to test React components, you
-might be interested in_ [_this_](https://github.com/kentcdodds/enzyme-sel) _to
-avoid some issues with enzyme's_ `_find_` _returning component instances along
-with DOM nodes._
+might be interested in [this](https://github.com/kentcdodds/enzyme-sel) to avoid
+some issues with enzyme's `find` returning component instances along with DOM
+nodes._
 
 I hope this is helpful to you. Good luck! Enjoy :)
-
-**Things to not miss:**
-
-- [Use a Render Prop!](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce) — a
-  blog post from my friend [Michael Jackson](https://twitter.com/mjackson) about
-  my favorite pattern in React.
-- [React, Inline Functions, and Performance](https://cdb.reacttraining.com/react-inline-functions-and-performance-bdff784f5578) — a
-  blog post from my friend [Ryan Florence](https://twitter.com/ryanflorence)
-  about something I think is really important to remember.
-- [Testing JavaScript Applications](https://frontendmasters.com/courses/testing-javascript) — my
-  testing workshop on Frontend Masters.
-  ([Resources and practice run here](/workshops/#testing-javascript-applications)).
-- [How Node.js require() works](https://twitter.com/NTulswani/status/916961093280456705) — a
-  tweet from my friend [Nitin Tulswani](https://twitter.com/NTulswani) that
-  explains briefly what happens when you use the require function.
-- [Kitty accidentally pressed the turbo button 😂](https://twitter.com/AMAZlNGNATURE/status/916203902596296704) — One
-  of the funniest animal videos I've seen recently.

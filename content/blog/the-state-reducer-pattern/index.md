@@ -164,20 +164,3 @@ all the boilerplate and wiring up required by users of
 (And yes, I'll eventually be updating
 [my egghead.io course](http://kcd.im/advanced-react) to include a lesson on the
 reducer pattern). Good luck! 👍
-
-**Things to not miss**
-
-[**jamiebuilds/unstated**](https://github.com/jamiebuilds/unstated)
-
-A new library from [James Kyle](https://twitter.com/thejameskyle) that I'm
-pretty sure is my new favorite thing in state management. I'd suggest giving it
-a look. I think we should probably reach for this _way_ before we reach for
-Redux!
-
-This is a talk I gave at
-[ReactJS Utah](https://www.meetup.com/ReactJS-Utah/events/246683120) a few weeks
-ago. If you're curious what
-[`babel-plugin-macros`](https://github.com/kentcdodds/babel-plugin-macros) is
-all about and why it's so cool it's
-[built-into create-react-app](https://github.com/facebook/create-react-app/pull/3675),
-then give this a watch!

@@ -371,24 +371,3 @@ hard to produce useful content for people who in turn follow me because they
 want more of that value which we all create and I capture and disseminate. You
 can do this too. Don't despair. Keep working at it. Be happy with where you are
 and the direction you're going. You can do it! Good luck!
-
-**Learn more about career development from me**:
-
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-
-**Things to not miss**:
-
-- [Testing React with Kent C. Dodds and Jack Franklin](https://youtu.be/z4DNlVlOfjU?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr) — A
-  [tech chat](https://github.com/kentcdodds/ama/issues/125) with myself and
-  [Jack Franklin](https://twitter.com/jack_franklin) talking about testing
-  React. We cover a lot of subjects that you may find interesting!
-- [React Fire 🔥🔥🔥](https://github.com/facebook/react/issues/13525) — An
-  initiative to modernize react-dom
-- [Using the React DevTools Profiler to Diagnose React App Performance Issues](https://www.netlify.com/blog/2018/08/29/using-the-react-devtools-profiler-to-diagnose-react-app-performance-issues)-
-  A great blog post by [Shawn Wang](https://twitter.com/swyx) about an awesome
-  new feature in the React DevTools!
-- [ui.reach.tech](https://ui.reach.tech) — An awesome collection of highly
-  accessible React components by my friend
-  [Ryan Florence](https://twitter.com/ryanflorence) (he's also giving
-  [Advanced React trainings](https://reach.tech/workshops) all over the US
-  starting in October).

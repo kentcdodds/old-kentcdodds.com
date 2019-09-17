@@ -256,26 +256,3 @@ good testing and software practices. I hope that by using
 [the](https://github.com/testing-library/react-testing-library)
 [`react-testing-library`](https://github.com/testing-library/react-testing-library)your
 React testbases are easier to understand and maintain.
-
-**Learn more about Testing from me**:
-
-[Frontend Masters](https://frontendmasters.com) in Minneapolis (and online) this
-month!:
-
-- [Testing Practices and Principles](https://frontendmasters.com/workshops/testing-practices-principles)
-- [Testing React Applications](https://frontendmasters.com/workshops/testing-react-apps)
-
-**Things to not miss**:
-
-- I am now on Patreon! Support these newsletters and other things I do!
-  [patreon.com/kentcdodds](https://www.patreon.com/kentcdodds)
-- [React Dev Summit](https://reactdevsummit.com): Coupon code "KENT" gets 10%
-  off the ticket price
-- [polyfill.io](https://polyfill.io): It's more than just an amazing service,
-  it's a node module that you can use yourself. This last week I did exactly
-  that and it's amazing. I'll probably write about it eventually.
-- Oh, by the way, I was originally going to call this library:
-  `react-dom-testing-assistant` or `rdta`, but after
-  [I tweeted about it](https://twitter.com/kentcdodds/status/975422070656921601),
-  [Ryan suggested](https://twitter.com/ryanflorence/status/975424602699530240)`react-testing-library`
-  and I couldn't pass it up.

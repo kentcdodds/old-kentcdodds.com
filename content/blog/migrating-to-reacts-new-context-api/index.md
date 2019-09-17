@@ -219,24 +219,3 @@ luck!
 _P.S. I should note that if you're unable to upgrade to react@16.3.0, you can
 still use this API via a polyfill:_
 [_create-react-context_](https://www.npmjs.com/package/create-react-context)_._
-
-**Learn more about React from me**:
-
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns) — My
-  Advanced Component Patterns workshop I gave in person in Minneapolis in April!
-  It should be made a course soon, but it's available for review by subscribers
-  today!
-- [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Portland in July!
-- [Workshop.me](https://workshop.me/2018-07-es6?a=kent) — I'm giving my ES6 and
-  Beyond workshop in person in Salt Lake City in July!
-- [Workshop.me](https://workshop.me/2018-08-react-intro?a=kent) — I'm giving my
-  Intro to React workshop in person in Salt Lake City in August!
-- [Workshop.me](https://workshop.me/2018-08-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Salt Lake City in August!
-
-**Things to not miss**:
-
-- ["Quick Guide to TDD in React"](https://medium.com/@mbaranovski/quick-guide-to-tdd-in-react-81888be67c64)
-  by [Michał Baranowski](https://twitter.com/baranovskim). A great blog post
-  featuring [react-testing-library](http://git.io/react-testing-library)!

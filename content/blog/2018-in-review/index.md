@@ -354,12 +354,3 @@ accomplished. Then make some goals to become even better than you are now.
 > being superior to your former self." ― Ernest Hemingway
 
 I wish you the very best and happiest New Year!
-
----
-
-**Things to not miss**:
-
-- [RRU 043: Testing React Apps Without Testing Implementation Details with Kent C. Dodds](https://devchat.tv/react-round-up/rru-043-testing-react-apps-without-testing-implementation-details-with-kent-c-dodds) -
-  The ReactRoundUp podcast had me on to talk about testing!
-- [Testing Software](https://mhme-blog.now.sh/2018/december/testing-software.html) -
-  Great insights here by [Matt Hamlin](https://mobile.twitter.com/immatthamlin)

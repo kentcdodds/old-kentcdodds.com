@@ -300,38 +300,3 @@ you're interested there's
 [a section about destructuring in my ES6 workshop](https://youtu.be/t3R3R7UyN2Y?t=1h07m01s&list=PLV5CVI1eNcJgUA2ziIML3-7sMbS7utie5)
 that's available completely free on
 [my YouTube channel](https://kcd.im/youtube). Good luck!
-
----
-
-**Learn more about React from me**:
-
-- [The Beginner's Guide to React](https://kcd.im/beginner-react) - Absolute
-  fundamentals of React
-- [React Hooks and Suspense](https://kcd.im/hooks-and-suspense) - A great primer
-  on Hooks and Suspense
-- [Simplify React Apps with React Hooks](https://kcd.im/refactor-react) - Let's
-  take some real-world class components and refactor them to function components
-  with hooks.
-- [Advanced React Component Patterns](https://kcd.im/advanced-react) - Amazing
-  patterns to make your components more reusable, flexible, and simple all at
-  once. (Also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
-- [My YouTube channel](https://kcd.im/youtube) is also full of content about
-  [React](https://youtube.com/user/kentdoddsfamily/search?query=react) that
-  you'd probably enjoy (including
-  [workshops, talks](https://youtube.com/playlist?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf),
-  and [livestreams](https://kcd.im/devtips)).
-
-**Things to not miss**:
-
-- [DevHub](https://devhubapp.com) - TweetDeck for GitHub by
-  [Bruno Lemos](https://twitter.com/brunolemos). The project itself is
-  [open source](https://github.com/devhubapp/devhub) and pretty impressive. It's
-  ["a production app using React Hooks, React Native Web with a 95%+ code sharing between web and mobile, CRA, TypeScript, Yarn Workspaces and Redux"](https://twitter.com/brunolemos/status/1072871009651384320)
-- [Modern Javascript by Example](https://www.modernjsbyexample.net) - A free
-  (donations welcome) open source book by
-  [Ben Junya](https://twitter.com/MrBenJ5)
-- [What I Use: Kent C. Dodds](https://www.byteconf.com/blog/what-i-use-kent-c-dodds) -
-  [Byteconf](https://twitter.com/byteconf) is starting something new by talking
-  to their favorite folks in the software dev world to find out how they do
-  their best work. I was the first one!

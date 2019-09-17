@@ -242,28 +242,3 @@ I'm excited about what this new API has to offer. As
 https://twitter.com/kentcdodds/status/956675313966239745
 
 So much to look forward to! Good luck! 👍
-
-**Things to not miss**:
-
-- [`react-broadcast`](https://github.com/ReactTraining/react-broadcast) is a
-  library from [Michael Jackson](https://twitter.com/mjackson) that provides the
-  same capabilities as context.
-  [The next version](https://github.com/ReactTraining/react-broadcast/tree/next)
-  will be a sort of polyfill for `React.createContext` (shoutout to
-  [James Kyle](https://medium.com/@thejameskyle) as well for creating
-  [`create-react-context`](https://github.com/thejameskyle/create-react-context)).
-  I actually use `react-broadcast` in
-  [my advanced react course](https://egghead.io/courses/advanced-react-component-patterns)
-  which I'll have to update when the new context API is official 😅.
-- [`react-fns`](https://github.com/jaredpalmer/react-fns): Browser API's turned
-  into declarative React components and HoC's by
-  [Jared Palmer](https://twitter.com/jaredpalmer) 👏
-- [`react-composer`](https://github.com/jmeas/react-composer): Compose render
-  prop components (what I use in the codesandbox above) by
-  [jmeas](https://twitter.com/jmeaspls)
-- [`react-contextual`](https://github.com/drcmda/react-contextual): Tiny helper
-  around Reacts new context API by [Paul Henschel](https://twitter.com/0xca0a)
-
-https://twitter.com/acdlite/status/960288610229473280
-
-[**What's new in React 16.3(.0-alpha)**](https://medium.com/@baphemot/whats-new-in-react-16-3-d2c9b7b6193b)

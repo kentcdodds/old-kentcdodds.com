@@ -266,25 +266,3 @@ become responsible for that project. We're all maintainers of the projects we
 use.
 
 I hope this is helpful! Good luck!👍
-
-**Things to not miss**:
-
-- [Majestic](https://github.com/Raathigesh/majestic) by
-  [@Raathigesh](https://twitter.com/Raathigesh). A pretty awesome UI for Jest
-  tests!
-- [JavaScriptJanuary.com](https://www.javascriptjanuary.com) — it's going
-  strong! There's already over a week's worth of content on there. Check it out!
-- [npm link](https://docs.npmjs.com/cli/link) a command you'll want handy when
-  working with `node_modules` :) (thanks for the reminder
-  [Cole](https://twitter.com/colepatrickturner/status/949876199303475200))
-
-I've been on a few podcasts lately:
-
-- [JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio):
-  [Ep. #23, Introduction to Downshift and Glamorous](https://www.heavybit.com/library/podcasts/jamstack-radio/ep-23-introduction-to-downshift-and-glamorous)
-- [#!hashbang](https://youtube.com/playlist?list=PLZ66c9_z3umOuPSGsTu3mfzt6PGZeUyQZ):
-  [HashBang Episode 5: Assert(js) panel: Kent C. Dodds, Justin Searls, Gleb Bahmutov and Brian Mann](https://youtu.be/ltzNIOF_L3E)
-- [Full Stack Radio](http://www.fullstackradio.com):
-  [79: Kent C. Dodds — Building Reusable React Components with Render Props](http://www.fullstackradio.com/79)
-- [Web of Tomorrow](http://www.weboftomorrowpodcast.com):
-  [44: How to Jumpstart Your Career — Kent C. Dodds](http://www.weboftomorrowpodcast.com/44)

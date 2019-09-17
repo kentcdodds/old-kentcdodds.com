@@ -178,12 +178,3 @@ one 😀
 
 I really hope that this course will help you build more useful React components.
 The course will hit [egghead.io](http://egghead.io) 🔜 Enjoy!
-
-**Things to not miss**:
-
-- [StackEdit](https://stackedit.io/app) is the tool I used to write this
-  newsletter. It's a super duper awesome markdown editor :)
-- [`ReactVR`](https://github.com/nitin42/React-AR) by the amazing
-  [Nitin Tulswani](https://twitter.com/NTulswani/status/932165538318508033) 🕶
-- [`chimi`](https://github.com/Huemul/chimi): Validate the JavaScript code of
-  your Markdown files.

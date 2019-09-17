@@ -91,10 +91,3 @@ I hope this is helpful! I personally have many projects that could use more
 active project maintainers. And I've transitioned some of them to others in the
 past as well. So feel free to start helping out on the projects you're using.
 You never know. Good luck!
-
-**Things to not miss**:
-
-- [Simplicity Matters](https://youtu.be/rI8tNMsozo0) — Always a good talk to
-  review every few months.
-- [Carbon](https://carbon.now.sh) — Create and share beautiful images of your
-  source code.

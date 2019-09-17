@@ -48,19 +48,18 @@ once before for
 I'm simplifying the content to make it easier to set up and less distracting to
 learn from. The content will now be used to give two distinct workshops (both of
 which I'll be giving for [Frontend Masters](https://frontendmasters.com) and
-[Workshop.me](https://workshop.me/?a=kent)):
+[Workshop.me](https://twitter.com/workshop_me)):
 
-- [Testing Practices and Principles](/workshops/#testing-practices-and-principles)
-- [Testing React and Web Applications](/workshops/#testing-react-and-web-applications)
+- [Testing Practices and Principles](/workshops/past#testing-practices-and-principles)
+- [Testing React and Web Applications](/workshops/past#testing-react-and-web-applications)
 
 The process of updating the content for this and splitting one workshop into two
 has been interesting for me. Being able to iterate and make content better is
 cool. After you've given the same content over and over, you learn how to
 deliver it better. For example, I've given my
-[ES6 and Beyond workshop](/workshops/#es6-and-beyond) six times now, so I feel
-pretty great about how to help people understand what I'm trying to communicate
-and avoid distractions (come to Salt Lake for
-[my next presentation of it!](https://workshop.me/2018-07-es6?a=kent))
+[ES6 and Beyond workshop](/workshops/past#es6-and-beyond) six times now, so I
+feel pretty great about how to help people understand what I'm trying to
+communicate and avoid distractions.
 
 An awesome side-effect of this iteration is the impact it has on me and my
 understanding of the material. I _really_ know how these things work now because
@@ -100,12 +99,3 @@ reach.
 I hope that you take every opportunity to teach that you can. It's seriously the
 _best_ way to increase the impact of the time you spend sharpening your skills.
 Good luck!
-
-**Things to not miss**:
-
-- I updated my [workshops](/workshops) and [talks](/talks) pages on my website
-  to list the talks and workshops I'm scheduled to give this year so far.
-- [Top React Blogs, Newsletters, and Online Communities](https://blog.instabug.com/2018/02/react-blogs) — some
-  handy resources here!
-- Thinking hard about what to put here and came up dry this week! Also, I'm
-  short on time. Sorry 😅

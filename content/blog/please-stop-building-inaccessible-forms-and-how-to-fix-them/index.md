@@ -123,11 +123,3 @@ accessibility of your forms.
 > [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)**
 
 Good luck! 💪
-
----
-
-**Things to not miss**:
-
-- Join the [Shurlan News](https://kcd.im/shurlan-news) mailing list for
-  irregular updates on the progress of my fantasy novel and a discount and early
-  access to the books when they're published.

@@ -106,25 +106,3 @@ had already done it before.**
 bring to the company it wont do you or your career a whole lot of use.**Make
 sure to maximize the impact of your communication by preparing well for demos
 like this. Good luck!
-
-**Things to not miss**:
-
-- [GridCritters](https://gridcritters.com) by
-  [Dave Geddes](https://twitter.com/geddski) (creator of
-  [FlexboxZombies](https://flexboxzombies.com)) will be released on Cyber
-  Monday! This is the final chance you have to get the pre-order price. Give it
-  a look!
-- [Announcing CodeSandbox 2.0](https://medium.com/@CompuIves/announcing-codesandbox-2-0-938cff3a0fcb)
-  by [Ives van Hoorne](https://twitter.com/CompuIves) who is an incredibly
-  skilled engineer.
-- [Assert.js tickets are available](https://www.assertjs.com)! I'll be giving a
-  talk and a workshop ([tickets available](https://www.assertjs.com/training))
-  🎉
-- [`xstate`](https://www.npmjs.com/package/xstate) by
-  [David K. Piano](https://twitter.com/DavidKPiano) (See
-  [the React Rally talk](https://youtu.be/VU1NKX6Qkxc)). Also see
-  [this video](https://youtu.be/MkdV2-U16tc) from
-  [Ryan Florence](https://twitter.com/ryanflorence) which helped solidify the
-  awesomeness of xstate for me.
-- [`react-fns`](https://github.com/jaredpalmer/react-fns) by
-  [Jared Palmer](https://twitter.com/jaredpalmer)

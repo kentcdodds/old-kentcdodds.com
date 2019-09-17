@@ -147,29 +147,3 @@ Babel's online REPL.
 [Start here](http://babeljs.io/repl/#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwEwlgbgfAEgpgGwQewAQHdkCcEmAenGgG4g&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=true&fileSize=false&sourceType=module&lineWrap=false&presets=react%2Cstage-2&prettier=true&targets=&version=6.26.0&envVersion=1.6.2).
 Hopefully this helps you understand a little more about how JSX works and how
 you can use it more effectively. Good luck!
-
-**Learn more about React from me**:
-
-- [The Beginner's Guide to React](http://kcd.im/beginner-react)
-- [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
-
-**Things to not miss**:
-
-- ["Headless User Interface Components](https://medium.com/merrickchristensen/headless-user-interface-components-565b0c0f2e18) — "A
-  headless user interface component is a component that offers maximum visual
-  flexibility by providing no interface. "Wait for a second, are you advocating
-  a user interface pattern that doesn't have a user interface?" Yes. That is
-  exactly what I'm advocating." Brilliant article by my friend
-  [Merrick Christensen](https://twitter.com/iammerrick).
-- [vscode-go-to-file](https://github.com/jackfranklin/vscode-go-to-file) — A
-  plugin that aims to replicate some of Vim's "go to file" (`gf`) functionality
-  by the great [Jack Franklin](https://twitter.com/Jack_Franklin)
-- [tabb](http://tabb-extension.com) — A Chrome extension to search, save, and
-  manage your tabs, history, and bookmarks written in
-  [Reason](https://reasonml.github.io) by my friend
-  [Ethan Godt](https://twitter.com/ethangodt)
-- [deps-report](https://github.com/pichillilorenzo/deps-report) — Generate
-  reports about dependencies and dependents of your JavaScript/TypeScript files
-  through an AST. It supports import and require statements. By the insightful
-  [Lorenzo Pichilli](https://twitter.com/LorenzoPichilli).

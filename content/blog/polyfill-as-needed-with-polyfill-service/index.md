@@ -164,7 +164,7 @@ cached version isn't used.
 
 One ["fun" experience](https://twitter.com/kentcdodds/status/997228884864139264)
 I had while building this involved polyfill-service not playing nice with the
-way that babel transpiles classes. Follow that twitter thread and github issues
+way that babel compiles classes. Follow that twitter thread and github issues
 linked for a "fun" time of your own... 😅
 
 ### Conclusion
@@ -177,38 +177,6 @@ browsers pay a "tax" for users of older browsers.
 
 Best of luck to you!
 
-P.S. Soon after sending this newsletter,
-[Kevin Deisz](https://github.com/kddeisz) made
+P.S. Inspired by this blog post, [Kevin Deisz](https://github.com/kddeisz) made
 [an open source AWS Lambda service](https://github.com/CultureHQ/polyfill-lambda).
 Pretty cool!
-
-**Learn more about JavaScript from me**:
-
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
-- [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
-
-Also, don't forget to subscribe to [my youtube channel](http://kcd.im/youtube)
-for my daily devtips, like
-[the one a while back where](https://youtu.be/FsgGx1SMXn0?list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u)
-I demo some advanced features of destructuring!
-
-**Things to not miss**:
-
-- [`express-async-errors`](https://github.com/davidbanham/express-async-errors) -
-  a nice package that allows me to use `async/await`on express route
-  handlers/middleware without worrying about rejected promises being ignored and
-  making my server hang :)
-- [ReactJS Denver: Confidently Testing React Apps](https://youtu.be/2HnNo4t8534?t=541) — A
-  great talk at [React Denver](https://www.meetup.com/ReactDenver) by
-  [Matt Parrish](https://twitter.com/mattparrish).
-- [React is no abstraction, React is JavaScript](https://www.robinwieruch.de/javascript-fundamentals-react-requirements) — A
-  very interesting and important blog post from
-  [Robin Wieruch](https://twitter.com/rwieruch) that teaches some common
-  JavaScript fundamentals that you'll need when working with React.
-- [The Surface Book 2 is everything the MacBook Pro should be](https://medium.com/@ow/the-surface-book-2-is-everything-the-macbook-pro-should-be-5ef560edb505)
-  by [Owen Williams](https://twitter.com/ow) — I'm getting more and more
-  convinced that my next computer is NOT going to be a MacBook. Here's hoping
-  that the Surface Book can get me 32 GB of RAM before I need another computer!

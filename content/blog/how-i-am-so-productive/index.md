@@ -366,24 +366,3 @@ happiness through your relationships. Good luck!
 
 Subscribe to my newsletter below to get content like this delivered to your
 inbox two weeks before it's published to my blog:
-
-**Learn more about career development from me**:
-
-- [Why and How I started public speaking](/blog/why-and-how-i-started-public-speaking)
-- [Getting Noticed and Widening Your Reach](https://buttondown.email/kentcdodds/archive/03761505-8609-404c-a5b7-5367013292bf)
-- [Zero to 60 in Software Development: How to Jumpstart Your Career — Forward 4 Web Summit](https://youtu.be/-qPh6I2hfjw?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-
-**Things to not miss**:
-
-- [Take the State of JavaScript 2018 Survey!](https://medium.com/@sachagreif/take-the-state-of-javascript-2018-survey-c43be2fcaa9) — And
-  make sure to add react-testing-library in the "other" field for "testing
-  tools." If they can add enzyme, then they should have react-testing-library as
-  well!
-- [A Geek Leader 059: Kent C. Dodds](https://www.ageekleader.com/agl-059-kent-c-dodds) — On
-  this podcast I talk about my career story and stuff! Should be interesting if
-  you thought this blog post was interesting :)
-- [jest-expect-message](https://github.com/mattphillips/jest-expect-message) by
-  [Matt Phillips](https://twitter.com/mattphillipsio): Add custom message to
-  Jest expects 🃏🗯
-- [jest-extended](https://github.com/jest-community/jest-extended): Additional
-  Jest matchers 🃏💪

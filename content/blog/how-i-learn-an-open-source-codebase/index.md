@@ -103,19 +103,3 @@ very helpful. Here are some examples:
 - [Contributing to ReactJS](https://youtu.be/wUpPsEcGsg8?list=PLV5CVI1eNcJi8sor_aQ2AzOeQ3On3suOr)
 
 I hope this is helpful! Good luck!
-
-**Learn more about Open Source from me**:
-
-- [How to Contribute to an Open Source Project on GitHub](http://kcd.im/pull-request)
-  (on [egghead.io](http://egghead.io), absolutely free!)
-- [How to Write an Open Source JavaScript Library](http://kcd.im/write-oss) (on
-  [egghead.io](http://egghead.io), absolutely free!)
-- [Creating an Open Source JavaScript Library on Github](https://frontendmasters.com/courses/open-source)
-  (on Frontend Masters, subscribers only).
-- [My Talks](/talks) — I've got several about open source
-
-**Things to not miss**:
-
-- [The Node.js Project Introduces Latest Release Line: Node.js 10.x](https://medium.com/the-node-js-collection/the-node-js-project-introduces-latest-release-line-node-js-10-x-bf07abfa9076)
-- [Zeit Day](https://zeit.co/day) — Some awesome talks I'm looking forward to
-  check out myself!

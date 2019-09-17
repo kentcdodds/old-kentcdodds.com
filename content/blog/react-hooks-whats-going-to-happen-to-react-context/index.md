@@ -152,24 +152,3 @@ wonder if there may be some things I could do about my code to simplify things
 for other people as well 🤔.
 
 Until next time! Good luck! 👋
-
-**Things to not miss**:
-
-- [Simplify React Apps with React Hooks and Suspense](http://kcd.im/refactor-react) — My
-  new egghead course... of course!
-- [Shurlan](http://kcd.im/shurlan) — I WON [NANOWRIMO](https://nanowrimo.org)
-  THIS YEAR! That means that I successfully wrote 50,000 words of a novel in the
-  month of November (for perspective, Harry Potter book 1 is 76k words). It was
-  a wild month, and it was tons of fun. And you can read what I ended up with.
-  It's a fantasy novel about a utopian world where things start to go bad and a
-  14-year-old girl is tasked with stopping a rebellion from inadvertently
-  destroying the city. I think you'll love the characters, plot, and magic
-  system :)
-- [React 16.x Roadmap](https://reactjs.org/blog/2018/11/27/react-16-roadmap.html) — Tl;DR:
-  React 16.6: Suspense for Code Splitting (already shipped), React 16.7: React
-  Hooks (~Q1 2019), React 16.8: Concurrent Mode (~Q2 2019), React 16.9: Suspense
-  for Data Fetching (~mid 2019)
-- [Modern React Workshop: Hooks & Suspense](https://youtu.be/xcZXS_VEJS0?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — a
-  recording of a livestream I did last week at PayPal.
-  [Here's the workshop repo](https://github.com/kentcdodds/modern-react) and
-  [here's the part 2](https://youtu.be/NKAfuguroRY?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).

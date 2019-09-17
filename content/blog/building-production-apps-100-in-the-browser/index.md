@@ -126,13 +126,3 @@ building something, it'll be a lot more valuable to you and stick much better.
 facing and build something to solve that problem. You'll learn a bunch!**
 
 I hope this is helpful! Good luck!👍
-
-**Things to not miss**:
-
-- [Brandon Sanderson](https://brandonsanderson.com). Literally just read
-  everything written by that man.
-  [I recently read a bunch of stuff](https://twitter.com/kentcdodds/status/947657545056841728)
-  and plan to read more.
-- [JavaScript January](https://www.javascriptjanuary.com) is a cool thing that
-  [Emily Freeman](https://twitter.com/editingemily) is doing. My article is the
-  first one published!!

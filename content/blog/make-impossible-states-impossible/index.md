@@ -95,34 +95,6 @@ P.S.P.S. Further revelation about the origin of a similar phrase:
 
 https://twitter.com/yminsky/status/1034947939364425731
 
-**Learn more about React from me**:
-
-- [The Beginner's Guide to React](http://kcd.im/beginner-react)
-- [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
-- [Confidently Ship Production React Apps](https://egghead.io/lessons/react-confidently-ship-production-react-apps) — **A
-  30 talk on egghead** (30 minutes... weird right?!) about testing React
-  components.
-
-**Things to not miss**:
-
-- [Babel 7 Released](http://babeljs.io/blog/2018/08/27/7.0.0) — Congratulations
-  to the Babel team for releasing Babel 7! I wrote the portion on
-  `babel-plugin-macros`!
-- [Simply React](https://youtube.com/watch?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf&v=AiJ8tRRH0f8):
-  In my ReactRally talk ⚛️I tell a familiar story about an component that you
-  can probably relate to. Then I explain how it could have gone better. I think
-  you'll enjoy this!
-- [`fastpack`](https://github.com/fastpack/fastpack) - a JavaScript bundler
-  (like webpack, but with fewer features at the moment) that is BLAZING FAST
-  🔥🔥🔥🔥 (bundles 1000 modules in < 1 second!)
-- [Byteconf React](https://byteconf.com) — Byteconf React is a 100% free
-  conference with the best JavaScript and React speakers in the world.
-  Conferences are great, but flights, hotels, and tickets are expensive, so not
-  everyone can go. Byteconf is streamed on Twitch, for free, so anyone and
-  everyone can attend. We're building a community of developers around the
-  world — see you there?
-
 ### Bonus:
 
 Here's a part from my section in the babel 7 blog post that didn't make the

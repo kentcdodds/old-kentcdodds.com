@@ -66,8 +66,10 @@ it gets etc.). The logic behind the component is what I'm trying to share. It
 will have three implementations for how it will look. For now, the layout of all
 three implementations is:
 
-`{currencyCode}{input}`  
-`{currencyCodeSelect}`
+```
+{currencyCode}{input}
+{currencyCodeSelect}
+```
 
 Though the layout is the same, the styles are different. Normally I'd account
 for those differences with CSS, but I'm confident that in the future it could
@@ -91,29 +93,3 @@ separations of functionality that a component has which enhances the
 flexibility, deletability, and usability of this API.
 
 I hope this is helpful! Good luck!
-
-**Learn more about Render Props from me**:
-
-- [How to give rendering control to users with prop getters](/blog/how-to-give-rendering-control-to-users-with-prop-getters) — My
-  blog post from a few months back about a pattern that's complementary to
-  render props
-- [Testing components using render props](/blog/testing-components-using-render-props) — If
-  you want to test component A which uses component B, and component B has a
-  render prop API, read this.
-- [Answers to common questions about render props](/blog/answers-to-common-questions-about-render-props) — My
-  blog post that is what the title says it is...
-- [egghead.io](https://egghead.io/courses/advanced-react-component-patterns) — My
-  Advanced React Component Patterns course.
-- [Frontend Masters](https://frontendmasters.com/workshops/advanced-react-patterns) — I'm
-  giving my Advanced Component Patterns workshop in person in Minniapolis in
-  April!
-- [Workshop.me](https://workshop.me/2018-07-advanced-react?a=kent) — I'm giving
-  my Advanced Component Patterns workshop in person in Portland in July!
-
-**Things to not miss**:
-
-- [CodeSandbox Live!!!](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9)
-- [React Round Up Episode 3](https://devchat.tv/react-round-up/rru-003-advanced-component-patterns-and-downshift-with-kent-c-dodds) — "Advanced
-  Component Patterns and Downshift with Kent C. Dodds"
-- [Test Talks Episode 195](https://joecolantonio.com/testtalks/195-javascript-testing-using-jest-with-kent-c-dodds) — "JavaScript
-  Testing Using Jest with Kent C. Dodds"

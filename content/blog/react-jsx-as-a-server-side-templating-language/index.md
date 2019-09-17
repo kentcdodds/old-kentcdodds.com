@@ -234,21 +234,3 @@ of the app and that's a real win. Trying things out and doing experiments is a
 good thing, but circling back to refactor things to the winning abstraction is
 an important step to making applications that are maintainable for the
 long-term. I hope this is helpful to you! Good luck!
-
-**Learn more about React from me**:
-
-- [The Beginner's Guide to React](http://kcd.im/beginner-react)
-- [Advanced React Component Patterns](http://kcd.im/advanced-react) (also on
-  [Frontend Masters](https://frontendmasters.com/courses/advanced-react-patterns)).
-
-**Things to not miss**:
-
-- [The introduction to React you've been missing](https://youtu.be/SAIdyBFHfVU?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf) — My
-  talk from UtahJS Conf 2018. Lots of livecoding here. In this talk I teach
-  React from scratch in a single index.html file with no magic up my sleeves. We
-  start with a basic Hello World in vanilla JavaScript and incrementally iterate
-  through React APIs and JSX. We continue with introducing more of React's APIs.
-  [Watch all the talks from UtahJS Conf 2018](https://youtube.com/playlist?list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva)
-- [Testing React Components @ PayPal 2018–09](https://youtube.com/playlist?list=PLV5CVI1eNcJhU1eyqkTjR0B5P7PzMVubB) — I
-  gave a ~4 hour workshop at PayPal last week and livestreamed it.
-  [Here's the material](https://github.com/kentcdodds/react-testing-library-course/tree/workshop-2018-09).

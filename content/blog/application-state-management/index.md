@@ -189,12 +189,3 @@ necessary (which it very likely is not). This means that you will _very likely_
 be using component state in your application. You _may_ want to use context or
 singletons somewhere within your application. Even in a small sub-section of the
 tree this could be useful. Good luck! 👍
-
-**Things to not miss**:
-
-- [Cypress.io](https://www.cypress.io): If you haven't tried this testing tool
-  out yet, you seriously have been missing out. It's amazing (I use it for E2E
-  tests).
-- [BUY TICKETS 🎟 FOR MY WORKSHOPS. SEE ME IN PERSON](https://workshop.me/?a=kent) :)
-- [Testing React with Enzyme and Jest.](https://javascriptplayground.com/testing-react-enzyme-jest)
-  A new course by [@Jack_Franklin](https://twitter.com/Jack_Franklin)!

@@ -206,23 +206,3 @@ generic without sacraficing usability or implementation complexity.
 Good luck! And stay awesome 😎
 
 ![Who's awesome? You are!](./images/1.gif)
-
-**Things to not miss**:
-
-- ["Addressable Errors"](https://rauchg.com/2016/addressable-errors) by
-  [Guillermo Rauch](https://twitter.com/rauchg). I was thinking about writing my
-  blogpost as an expansion on this (I think it's a great idea, in addition I
-  think you should version the error messages with your project). Maybe one day.
-- ["The Future of RethinkDB"](https://changelog.com/podcast/266) on
-  [The Changelog](https://changelog.com). It's a great example of a community
-  rallying together to keep open source going. And RethinkDB seems really
-  awesome so I'm glad it's pushing forward!
-- [Flexbox Zombies](http://geddski.teachable.com/p/flexbox-zombies). The best
-  way to learn flexbox by the amazing
-  [Dave Geddes](https://twitter.com/geddski). Also check out
-  [Grid Critters](https://gridcritters.com/p/gridcritters) (to learn CSS Grid,
-  also by Dave) which will be released soon!
-- [Code Sponsor](https://codesponsor.io). I've already shared this, but they
-  have a bunch of money they can give developers who want their OSS work to be
-  funded and are looking for more folks to sign up. So if you're a dev who does
-  OSS, give them a look :)

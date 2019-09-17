@@ -108,23 +108,3 @@ P.S. One other thing that I really love about unpkg is the index page for a
 package. Simply add a `/` at the end of the URL and you'll see an index of the
 files as well as a version chooser which is pretty awesome:
 [`https://unpkg.com/d3/`](https://unpkg.com/d3)
-
-**Learn more about JavaScript from me**:
-
-- [More than you want to know about ES6 Modules @ Learn to Code Websites and Apps Meetup (remote)](https://youtu.be/kTlcu16rSLc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 1 at PayPal (Jan 2017)](https://youtu.be/t3R3R7UyN2Y&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [ES6 and Beyond Workshop Part 2 at PayPal (March 2017)](https://youtu.be/eOKQDh50ECU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-- [Code Transformation and Linting](/workshops/#code-transformation-and-linting)
-- [Writing custom Babel and ESLint plugins with ASTs](/talks/#writing-custom-babel-and-eslint-plugins-with-asts)
-
-**Things to not miss**:
-
-- [gh-polls.com](https://gh-polls.com) — "GH polls is a quick and effective way
-  to request feedback from community members in GitHub issues." by
-  [TJ Holowaychuk](https://twitter.com/tjholowaychuk).
-- [There](https://there.pm) — A really neat app by
-  [Mo Rajabifard](https://twitter.com/morajabi) that'll tell you what time it is
-  for your friends and co-workers in a nice UI.
-- [wretch](https://github.com/elbywan/wretch) — "A tiny wrapper built around
-  fetch with an intuitive syntax. 🍬" by
-  [Julien Elbaz](https://github.com/elbywan).

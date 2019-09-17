@@ -98,16 +98,3 @@ projects/work/jobs you find enjoyable? Be kind, make what you do public, and
 maximize the impact of the time you invest in your experience.
 
 I hope this is helpful to you! Good luck!
-
-**Things to not miss**:
-
-- [react-component-component](https://github.com/ryanflorence/react-component-component)
-  by [Ryan Florence](https://twitter.com/ryanflorence) — Declarative version of
-  React.Component (it's not a joke and it's way cooler than you think)
-- [Dan's Teaser tweet!](https://twitter.com/dan_abramov/status/967242377030262784):
-  "Using a new strange API. I never felt this productive using React before.
-  You're going to hate it, then you're going to love it. Will spill some beans
-  in a week at @jsconfis" I've seen it, and it's pretty awesome!
-- [Winamp2-js](https://twitter.com/captbaritone/status/961274714013319168) by
-  [Jordan Eldredge‏](https://twitter.com/captbaritone). This'll take you back to
-  the good ol' days!

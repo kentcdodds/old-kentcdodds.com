@@ -237,11 +237,3 @@ to help the developer figure out what's going on. This is possible because if
 So yeah, there's my use case for making a function iterable 😉
 
 I hope that's helpful and interesting! Good luck!
-
-**Things to not miss**:
-
-- [React Call Return](https://youtu.be/GK_rI4V4tZE) — A new **experimental**
-  that should be available in React@16.0.1 explained by Ryan Florence. Pretty
-  interesting.
-- [Between Microsoft, Google, and Apple, Microsoft's the only one that knows how to make a burger](https://twitter.com/shanselman/status/924782140272795648)
-- [A relevant bug in React v16 I found while writing this newsletter](https://github.com/facebook/react/issues/11396).

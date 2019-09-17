@@ -85,14 +85,3 @@ got something coming that I think you'll love. Especially if you've struggled to
 know what to test. I've been working hard putting together **the most
 comprehensive work of my life**, and I think it'll knock your socks off. Stay
 tuned.
-
-**Things to not miss**:
-
-- [TestingJavaScript.com ](https://testingjavascript.com)— I'm about to release
-  a HUGE series of courses that you'll definitely want to checkout. Early bird
-  pricing starts on October 19th.
-- [Professional React Training from Ryan Florence](https://reach.tech/workshops?a=kent) — I
-  strongly recommend you look. [Ryan's](https://twitter.com/ryanflorence) doing
-  a tour to 12 cities in the US!!
-- [DevTips with Kent](http://kcd.im/devtips) — I'm still doing (week)daily
-  livestreams that hundreds of people watch :) Don't miss it!

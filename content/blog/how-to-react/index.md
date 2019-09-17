@@ -219,11 +219,3 @@ I hope that this gives you (and your friends) a path for how to learn react as
 well as where to start when building React applications. Adding abstractions to
 your application too early makes them less flexible, so I would generally follow
 this pattern when building apps as well. Good luck!
-
-**Things to not miss**:
-
-- [Introducing CodeSandbox Live — real time code collaboration in the browser](https://medium.com/@CompuIves/introducing-codesandbox-live-real-time-code-collaboration-in-the-browser-6d508cfc70c9) — This
-  is SO COOL! and [Ives van Hoorne](https://twitter.com/CompuIves) is very cool
-  too.
-- [React v16.3.0: New lifecycles and context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html) — HOORAY!
-  Awesome release!

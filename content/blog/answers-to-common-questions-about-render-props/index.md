@@ -184,20 +184,3 @@ added to [Jared Palmer's](https://twitter.com/jaredpalmer)
 What I love about the Render Prop pattern is that it can encapsulate the logic
 of a component without sacrificing customizability and simplicity in the markup.
 More awesome to come I think... Good luck! 👍
-
-**Things to not miss**:
-
-- [post 0: styles as objects](https://twitter.com/threepointone/status/954783976748732418)
-  by [Sunil Pai](https://twitter.com/threepointone). It's the first in a series
-  of blog posts about css-in-js. Follow him to keep up!
-- [`react-powerplug`](https://github.com/renatorib/react-powerplug): "🔌
-  Renderless Pluggable State Containers" by
-  [Renato Ribeiro](http://twitter.com/renatorib_)
-- [`awesome-toolkits`](https://github.com/reyronald/awesome-toolkits) by
-  [Ronald Rey](https://twitter.com/reyronald). Some awesome projects on there!
-  👍
-- [tellmewhenitcloses.com](https://tellmewhenitcloses.com): "Get 1 email when an
-  issue or PR closes (instead of getting a million emails by subscribing)".
-  Created by [@thoughtbot](https://twitter.com/thoughtbot).
-- [bundlephobia.com](https://bundlephobia.com): "Find the cost of adding a npm
-  package to your bundle"

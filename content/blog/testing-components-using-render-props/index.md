@@ -291,19 +291,3 @@ of doing this in my
 [testing workshop for frontend masters](http://kcd.im/fm-testing).
 
 I hope this is helpful to you! Good luck!
-
-**Things to not miss**:
-
-- [Learn, Build, and Teach with Kent C. Dodds](http://itcareerenergizer.com/e35)
-  on [I.T. Career Energizer](http://itcareerenergizer.com) — You can find my
-  other appearances on podcasts and things on
-  [my website appearances page](/appearances) 🎙
-- [ReactJS RFCs repo](https://github.com/reactjs/rfcs) — RFCs for changes to
-  React. Check it out. It already has a few very interesting pull requests.
-- [Learn React Fundamentals 🆓 and Advanced Patterns ⚛️ 🎁](/blog/learn-react-fundamentals-and-advanced-patterns) — If
-  you've missed this, then you've either just started following me or you
-  haven't been paying attention 😅
-- [React 🎄](https://react.holiday) — "This is a React advent thingy; the whole
-  25 days, 25 lessons deal." By [Michael Chan](https://twitter.com/chantastic).
-  It's awesome and it's a great companion to my free
-  [Beginner's Guide to ReactJS](https://egghead.io/courses/the-beginner-s-guide-to-reactjs).
