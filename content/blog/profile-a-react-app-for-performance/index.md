@@ -285,4 +285,7 @@ We've only covered what you need to do to get started properly profiling a React
 app, but hopefully you've learned enough to try it out on your own app and start
 exploring the performance implications of your app.
 
+Also, if you'd like to dive a little further into the React DevTools,
+[this blog post on the react blog can help](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html).
+
 Good luck!
