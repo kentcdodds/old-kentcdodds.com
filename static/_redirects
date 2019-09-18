@@ -16,6 +16,9 @@
 # Joel whoopsies
 /chats-with-kent-podcast/seasons/01/episodes/01                         /chats-with-kent-podcast/seasons/01/episodes/growing-your-skills-and-career-through-teaching-with-ali-spittel
 
+# Rewritten posts
+/blog/application-state-management                                      /blog/application-state-management-with-react
+
 # netlify analytics said that this page was requested a lot so we'll redirect it to blog which is probably where they want to go...
 /post                                                                   /blog
 /wp-login.php                                                           https://www.youtube.com/watch?v=dQw4w9WgXcQ

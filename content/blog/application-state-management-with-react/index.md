@@ -40,14 +40,14 @@ some magical `connect` function was wonderful. Its use of reducers/action
 creators/etc. is great too, but I'm convinced that the ubiquity of redux is
 because it solved the prop drilling pain point for developers.
 
-Unfortunately, this led to the reason that I only ever used redux on one
-project: I consistently see developers putting _all_ of their state into redux.
-Not just global application state, but local state as well. This leads to a lot
-of problems, not the least of which is that when you're maintaining any state
-interaction, it involves interacting with reducers, action creators/types, and
-dispatch calls, which ultimately results in having to open many files and trace
-through the code in your head to figure out what's happening and what impact it
-has on the rest of the codebase.
+This is the reason that I only ever used redux on one project: I consistently
+see developers putting _all_ of their state into redux. Not just global
+application state, but local state as well. This leads to a lot of problems, not
+the least of which is that when you're maintaining any state interaction, it
+involves interacting with reducers, action creators/types, and dispatch calls,
+which ultimately results in having to open many files and trace through the code
+in your head to figure out what's happening and what impact it has on the rest
+of the codebase.
 
 To be clear, this is fine for state that is truly global, but for simple state
 (like whether a modal is open or form input value state) this is a big problem.
@@ -239,8 +239,7 @@ function CountPage() {
 > context too soon!
 
 And what's cool about this approach is that we could put all the logic for
-common ways to update the state in our `useContext` hook (or directly in context
-if you want I guess):
+common ways to update the state in our `useContext` hook:
 
 ```javascript
 function useCount() {
@@ -360,6 +359,10 @@ components underneath it. Code splitting "just works" for this stuff as well.
 How you get data _into_ each provider is up to the hooks those providers use and
 how you retrieve data in your application, but you know just where to start
 looking to find out how that works (in the provider).
+
+**For even more about why this colocation is beneficial, check out my
+["Colocation"](/blog/colocation) blog post. And for more about context, read
+[How to use React Context effectively](/blog/how-to-use-react-context-effectively)**
 
 ## Conclusion
 
