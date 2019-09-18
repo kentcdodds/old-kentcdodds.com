@@ -266,10 +266,10 @@ The show did prove to take more time than I had, so I did eventually
 [Sunset JavaScript Air](/blog/sunsetting-javascript-air). But maybe one day I'll
 start it back up again. It was awesome.
 
-> _I'll just add here really quick that I'm also way more likely to be able to
+> I'll just add here really quick that I'm also way more likely to be able to
 > give you an hour of my time if I know that the value we create will be spread
-> to impact more people. I'm always happy to join you on a podcast._ >
-> [_Here's a list of podcasts I've been a guest on in the past_](/appearances)_._
+> to impact more people. I'm always happy to join you on a podcast.
+> [Here's a list of podcasts I've been a guest on in the past](/appearances).
 
 ### [Newslettering](http://kcd.im/news) & [Blogging](/blog)
 
