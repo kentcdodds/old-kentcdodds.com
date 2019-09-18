@@ -190,36 +190,36 @@ I had met Marc at my first MidwestJS where we were both speakers and thought he
 was a pretty cool dude. I knew of Frontend Masters and had a great deal of
 respect for Marc and his company. So I reached out to him:
 
-> _Hey dude,  
+> Hey dude,  
 > I'm listening to your JSJabber episode and I've been wanting to do a FEM
 > workshop for a long time. I've been trying to think about what I could
 > contribute and something that I'm really into is open source. I have a growing
-> list of open source libraries_ [_on npm_](https://www.npmjs.com/~kentcdodds) >
-> _and_ [_GitHub_](https://github.com/kentcdodds) _and I'm the owner and
-> maintainer of_ >
-> [_angular-formly_](https://github.com/formly-js/angular-formly) > _which has
-> grown in popularity._
-
-> _I also have an_ >
-> [_egghead.io series_](https://egghead.io/series/how-to-write-an-open-source-javascript-library) >
-> _on the subject. But, as you know, a workshop format would make it pretty
-> useful._
-
-> _I think that we could get more people into open source if they just knew how
+> list of open source libraries [on npm](https://www.npmjs.com/~kentcdodds) and
+> [GitHub](https://github.com/kentcdodds) and I'm the owner and maintainer of
+> [angular-formly](https://github.com/formly-js/angular-formly) which has grown
+> in popularity.
+>
+> I also have an
+> [egghead.io series](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
+> on the subject. But, as you know, a workshop format would make it pretty
+> useful.
+>
+> I think that we could get more people into open source if they just knew how
 > to get started. I believe you're interested in open source as well with your
 > jQuery UI Datepicker experience. I think you could be pretty jazzed about this
 > workshop.  
-> What do I need to do to make this happen?_
+> What do I need to do to make this happen?
 
-> _Thanks!  
-> Kent_
+> Thanks!
+>
+> Kent
 
 To which Marc responded:
 
-> _Sounds awesome! When were you thinking?_
+> Sounds awesome! When were you thinking?
 
 And so began my relationship with Frontend Masters. I now have
-[six courses (almost 7) on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds).
+[five courses on Frontend Masters](https://frontendmasters.com/teachers/kentcdodds).
 **The takeaway here** is courage. I'm mostly sharing my success stories in this
 blog post, but you gotta know that there were plenty of rejections as well. But
 it's ok! Have the courage to ask.
