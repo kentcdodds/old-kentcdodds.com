@@ -127,6 +127,10 @@ You don't need anything installed to get a really long way! And once you do, you
 can get really far without having to configure any tools. I know of several
 companies shipping their application with create-react-app.
 
+I'll mention also that the beginner course is missing content on React Hooks. If
+you'd like to learn that, then I've got another set of videos that are free on
+egghead.io: [React Hooks Playlist](https://kcd.im/hooks-playlist)
+
 ### Dependencies and npm
 
 Once you've decided that you don't want to write your own version of every
