@@ -1,6 +1,6 @@
 ---
 slug: 'state-colocation-will-make-your-react-app-faster'
-title: 'State Colocation will make your react app faster'
+title: 'State Colocation will make your React app faster'
 date: '2019-09-23'
 author: 'Kent C. Dodds'
 description:
