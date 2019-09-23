@@ -4,7 +4,7 @@ title: 'State Colocation will make your react app faster'
 date: '2019-09-23'
 author: 'Kent C. Dodds'
 description:
-  '_How localizing your state makes your app not only more maintainable but also
+  '_How state colocation makes your app not only more maintainable but also
   faster._'
 categories:
   - 'react'
