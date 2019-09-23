@@ -160,7 +160,8 @@ Often the solution that people try for this kind of problem is to "debounce" the
 user interaction (ie wait for the user to stop typing before applying the state
 update). This is sometimes the best we can do, but it definitely leads to a
 sub-optimal user experience (React's upcoming concurrent mode should make this
-less necessary in the future [watch demo](https://youtu.be/nLF0n9SACd4?t=181)).
+less necessary in the future.
+[Watch this demo from Dan about it](https://youtu.be/nLF0n9SACd4?t=181)).
 
 Another solution people try is to apply one of React's rendering bailout escape
 hatches like `React.memo`. This works pretty well in our contrived example
