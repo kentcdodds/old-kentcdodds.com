@@ -781,6 +781,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "flexdinesh",
+      "name": "Dinesh Pandiyan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5777880?v=4",
+      "profile": "https://dineshpandiyan.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
