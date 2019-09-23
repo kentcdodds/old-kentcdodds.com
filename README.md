@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-85-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-86-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -120,6 +120,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://tvernon.tech"><img src="https://avatars1.githubusercontent.com/u/3386714?v=4" width="100px;" alt="Timothy Vernon"/><br /><sub><b>Timothy Vernon</b></sub></a><br /><a href="#content-tvthatsme" title="Content">🖋</a></td>
+    <td align="center"><a href="https://dineshpandiyan.com"><img src="https://avatars2.githubusercontent.com/u/5777880?v=4" width="100px;" alt="Dinesh Pandiyan"/><br /><sub><b>Dinesh Pandiyan</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3Aflexdinesh" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
