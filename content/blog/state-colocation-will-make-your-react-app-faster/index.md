@@ -281,6 +281,36 @@ patterns and tools to ensure that components aren't re-rendering when they
 shouldn't be (like [reselect](https://github.com/reduxjs/reselect)) and they're
 putting too much state into Redux.
 
+## So how do you decide where to put state?
+
+I made this decision tree chart to help:
+
+![where to put react state](./images/where-to-put-react-state.png)
+
+Here's that written out (for screen readers and friends):
+
+- 1. Start building an app. Go to 2
+- 2. State in a component. Go to 3
+- 3. Is it needed **only** by this component?
+  - Yes? Go to 4.
+  - No? Is it needed **only** by _one_ of the children?
+    - Yes? Move it to that child. (Colocation step)
+    - No? Is it needed by a sibling or parent?
+      - Yes? Move it to the parent (Lifting state step)
+      - No? Go to 4.
+- 4. Leave it there
+- 5. Is "prop drilling" a problem here?
+  - Yes? Put the state in a context provider and render that provider in the
+    component where that state was managed.
+  - No? Go to 6.
+- 6. Ship the app. As requirements change, Go to 1
+
+It's important that this is something you do as part of your regular
+refactoring/app maintenance process. This is because lifting state up is a
+requirement of getting this _working_ so it happens naturally, but your app will
+"work" whether you colocate your state or not, so being intentional about
+thinking through this is important to keep your app manageable and fast.
+
 ## Conclusion
 
 In general, I think people are pretty good at "lifting state" as things change,
