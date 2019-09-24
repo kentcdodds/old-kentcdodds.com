@@ -256,6 +256,21 @@ and you'll benefit from a maintenance perspective and a performance perspective.
 From there, the only performance concerns you should have is the occasional
 especially complex UI interaction.
 
+## What about context or redux?
+
+If you read [One simple trick to optimize React re-renders](/blog/optimize-react-re-renders),
+then you know that you can make it so only components that actually use the changing state will
+be updated. So that can side step this issue. While this is true, people do still have
+performance problems with redux. If it's not React, what is it? The problem I'm that case
+is that there's a bunch of non-React code that needs to run any time there's a change in the
+state, and that doesn't come for free. And the impact becomes worse and worse with every
+component you connect and every reducer you add. There are things you can do to help reduce the
+impact of these performance issues, but the fact remains that if you colocate your state, you
+don't have these problems and maintenance is improved.
+
+In addition, if you separate your state by domain (by having multiple domain-specific contexts),
+then the problem is less pronounced as well.
+
 ## Conclusion
 
 In general, I think people are pretty good at "lifting state" as things change,
