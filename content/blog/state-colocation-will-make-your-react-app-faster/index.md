@@ -294,14 +294,14 @@ Here's that written out (for screen readers and friends):
 - 3 Is it needed **only** by this component?
   - Yes? Go to 4
   - No? Is it needed **only** by _one_ of the children?
-    - Yes? Move it to that child (Colocation step)
+    - Yes? Move it to that child (Colocation step). Go to 3
     - No? Is it needed by a sibling or parent?
-      - Yes? Move it to the parent (Lifting state step)
+      - Yes? Move it to the parent (Lifting state step) Go to 3
       - No? Go to 4
-- 4 Leave it there
+- 4 Leave it there. Go to 5
 - 5 Is "prop drilling" a problem here?
   - Yes? Put the state in a context provider and render that provider in the
-    component where that state was managed
+    component where that state was managed. Go to 6
   - No? Go to 6
 - 6 Ship the app. As requirements change, Go to 1
 
