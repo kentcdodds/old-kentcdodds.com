@@ -102,7 +102,7 @@ serves as an argument to that initialization function, so you can rename that to
 something like `initialArg`.
 
 ```javascript
-const initializationFn = initialArg => initialValue
+const initializationFn = initialArg => initialArg
 
 const [state, dispatch] = useReducer(reducerFn, initialArg, initializationFn)
 ```
