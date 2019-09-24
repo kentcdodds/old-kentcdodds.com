@@ -13,7 +13,7 @@ keywords:
   - 'colocation'
   - 'react'
   - 'state'
-  - 'redux'
+  - 'Redux'
   - 'mobx'
 banner: './images/banner.jpg'
 bannerCredit:
@@ -150,7 +150,7 @@ be checked. This resulted in a big performance win! Sweet!
 ## Real World
 
 Where I see this principle apply in real-world applications is when people put
-things into a global redux store or in a global context that don't really need
+things into a global Redux store or in a global context that don't really need
 to be global. Inputs like the `DogName` in the example above are often the
 places where this perf issue manifests itself, but I've also seen it happen
 plenty on mouse interactions as well (like showing a tooltip over a graph or
@@ -256,13 +256,13 @@ and you'll benefit from a maintenance perspective and a performance perspective.
 From there, the only performance concerns you should have is the occasional
 especially complex UI interaction.
 
-## What about context or redux?
+## What about context or Redux?
 
 If you read
 "[One simple trick to optimize React re-renders](/blog/optimize-react-re-renders),"
 then you know that you can make it so only components that actually use the
 changing state will be updated. So that can side step this issue. While this is
-true, people do still have performance problems with redux. If it's not React,
+true, people do still have performance problems with Redux. If it's not React,
 what is it? The problem in that case is that there's a bunch of non-React code
 that needs to run any time there's a change in the state, and that doesn't come
 for free. And the impact becomes worse and worse with every component you
@@ -274,8 +274,12 @@ In addition, if you separate your state by domain (by having multiple
 domain-specific contexts), then the problem is less pronounced as well.
 
 I also want to note that you can definitely apply colocation with Redux to get
-these benefits as well. Just limit what you store in redux to be actual global
-state and colocate everything else and you're golden.
+these benefits as well. Just limit what you store in Redux to be actual global
+state and colocate everything else and you're golden. The problem is that people
+are having perf issues with Redux because they aren't using proper Redux
+patterns and tools to ensure that components aren't re-rendering when they
+shouldn't be (like [reselect](https://github.com/reduxjs/reselect)) and they're
+putting too much state into Redux.
 
 ## Conclusion
 
@@ -283,5 +287,5 @@ In general, I think people are pretty good at "lifting state" as things change,
 but we don't often think to "colocate" state as things change in our codebase.
 So my challenge to you is to look through your codebase and look for
 opportunities to colocate state. Ask yourself "do I really need the modal's
-`isOpen` state to be in redux?" (the answer is probably "no"). Colocate your
+`isOpen` state to be in Redux?" (the answer is probably "no"). Colocate your
 state and you'll find yourself with a faster, simpler codebase. Good luck!
