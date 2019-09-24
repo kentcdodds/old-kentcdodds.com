@@ -204,7 +204,7 @@ function DogName({time}) {
 
 But what happens when we break that up? Where does that state go? The answer is
 the same: "as close to where it's relevant as possible." That would be the
-**least common parent.** As an example, let's break the `DogName` component up
+**closest common parent.** As an example, let's break the `DogName` component up
 so the `input` and the `p` show up in different components:
 
 ```jsx
