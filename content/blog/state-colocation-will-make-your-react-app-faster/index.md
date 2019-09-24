@@ -289,21 +289,21 @@ I made this decision tree chart to help:
 
 Here's that written out (for screen readers and friends):
 
-- 1. Start building an app. Go to 2
-- 2. State in a component. Go to 3
-- 3. Is it needed **only** by this component?
-  - Yes? Go to 4.
+- 1 Start building an app. Go to 2
+- 2 State in a component. Go to 3
+- 3 Is it needed **only** by this component?
+  - Yes? Go to 4
   - No? Is it needed **only** by _one_ of the children?
-    - Yes? Move it to that child. (Colocation step)
+    - Yes? Move it to that child (Colocation step)
     - No? Is it needed by a sibling or parent?
       - Yes? Move it to the parent (Lifting state step)
-      - No? Go to 4.
-- 4. Leave it there
-- 5. Is "prop drilling" a problem here?
+      - No? Go to 4
+- 4 Leave it there
+- 5 Is "prop drilling" a problem here?
   - Yes? Put the state in a context provider and render that provider in the
-    component where that state was managed.
-  - No? Go to 6.
-- 6. Ship the app. As requirements change, Go to 1
+    component where that state was managed
+  - No? Go to 6
+- 6 Ship the app. As requirements change, Go to 1
 
 It's important that this is something you do as part of your regular
 refactoring/app maintenance process. This is because lifting state up is a
