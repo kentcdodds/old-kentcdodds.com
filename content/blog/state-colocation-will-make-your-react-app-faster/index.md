@@ -285,7 +285,7 @@ putting too much state into Redux.
 
 I made this decision tree chart to help:
 
-![where to put react state](./images/where-to-put-state.jpg)
+![where to put react state](./images/where-to-put-react-state.png)
 
 <small>
   Chart perfected by{' '}
