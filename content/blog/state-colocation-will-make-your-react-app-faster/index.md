@@ -262,24 +262,27 @@ If you read
 "[One simple trick to optimize React re-renders](/blog/optimize-react-re-renders),"
 then you know that you can make it so only components that actually use the
 changing state will be updated. So that can side step this issue. While this is
-true, people do still have performance problems with Redux. If it's not React,
-what is it? The problem in that case is that there's a bunch of non-React code
-that needs to run any time there's a change in the state, and that doesn't come
-for free. And the impact becomes worse and worse with every component you
-connect and every reducer you add. There are things you can do to help reduce
-the impact of these performance issues, but the fact remains that if you
-colocate your state, you don't have these problems and maintenance is improved.
+true, people do still have performance problems with Redux. If it's not React itself,
+what is it? The problem is that [React-Redux expects you to follow guidelines to avoid unnecessary renders of connected components](https://react-redux.js.org/using-react-redux/connect-mapstate#mapstatetoprops-and-performance),
+and it can be easy to accidentally set up components that render too often when other
+global state changes.  The impact of that becomes worse and worse as your app grows larger,
+especially if you're putting too much state into Redux.
+
+Fortunately, there are things you can do to help reduce the impact of these performance issues,
+like [using memoized Reselect selectors to optimize `mapState` functions](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/), and the Redux docs
+have [additional info on improving performance of Redux apps](https://redux.js.org/faq). 
+
+I also want to note that you can definitely apply colocation with Redux to get
+these benefits as well. Just limit what you store in Redux to be actual global
+state and colocate everything else and you're golden. The Redux FAQ has 
+[some rules of thumb to help decide whether state should go in Redux, or stay in a component](https://redux.js.org/faq/organizing-state#do-i-have-to-put-all-my-state-into-redux-should-i-ever-use-reacts-setstate). 
 
 In addition, if you separate your state by domain (by having multiple
 domain-specific contexts), then the problem is less pronounced as well.
 
-I also want to note that you can definitely apply colocation with Redux to get
-these benefits as well. Just limit what you store in Redux to be actual global
-state and colocate everything else and you're golden. The problem is that people
-are having perf issues with Redux because they aren't using proper Redux
-patterns and tools to ensure that components aren't re-rendering when they
-shouldn't be (like [reselect](https://github.com/reduxjs/reselect)) and they're
-putting too much state into Redux.
+But the fact remains that if you colocate your state, you don't have these 
+problems and maintenance is improved.
+
 
 ## So how do you decide where to put state?
 
