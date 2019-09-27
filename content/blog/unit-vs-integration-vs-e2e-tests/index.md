@@ -182,10 +182,9 @@ test('login as an existing user', async () => {
 ### Unit
 
 ```javascript
-import 'react-testing-library/cleanup-after-each'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import {render} from 'react-testing-library'
+import {render} from '@testing-library/react'
 import ItemList from '../item-list'
 
 // Some people don't call these a unit test because we're render to the DOM with React.

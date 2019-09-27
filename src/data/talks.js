@@ -185,7 +185,7 @@ export default [
     `,
   },
   {
-    title: 'LIVE! Understanding react-testing-library internals',
+    title: 'LIVE! Understanding React Testing Library internals',
     resources: [],
     tags: ['react', 'testing'],
     deliveries: [

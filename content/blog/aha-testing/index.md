@@ -336,7 +336,7 @@ the `setup` function here. Here's a simple example:
 
 ```jsx
 import React from 'react'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import LoginForm from '../login-form'
 
 function renderLoginForm(props) {

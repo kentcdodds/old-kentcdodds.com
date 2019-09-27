@@ -69,9 +69,9 @@ because of all the extra utilities that enzyme provides (utilities which
 facilitate testing implementation details). Read more about this in
 [the FAQ](https://github.com/testing-library/react-testing-library/blob/master/README.md#faq).
 
-Also, while the react-testing-library is intended for react-dom, it can support
-React Native with
-[this short setup file](https://github.com/testing-library/react-testing-library/issues/22#issuecomment-376756260).
+Also, while the React Testing Library is intended for react-dom, you can use
+[React Native Testing Library](https://testing-library.com/docs/native-testing-library/intro)
+which has a very similar API.
 
 **What this library is not**:
 
@@ -80,41 +80,160 @@ React Native with
     the library works with any framework, and even
     [in codesandbox](https://codesandbox.io/s/5z6x4r7n0p)!)
 
+## Examples
+
+### Basic Example
+
+```jsx
+// hidden-message.js
+import React from 'react'
+
+// NOTE: React Testing Library works with React Hooks _and_ classes just as well
+// and your tests will be the same however you write your components.
+function HiddenMessage({children}) {
+  const [showMessage, setShowMessage] = React.useState(false)
+  return (
+    <div>
+      <label htmlFor="toggle">Show Message</label>
+      <input
+        id="toggle"
+        type="checkbox"
+        onChange={e => setShowMessage(e.target.checked)}
+        checked={showMessage}
+      />
+      {showMessage ? children : null}
+    </div>
+  )
+}
+
+export default HiddenMessage
+
+// __tests__/hidden-message.js
+// these imports are something you'd normally configure Jest to import for you
+// automatically. Learn more in the setup docs: https://testing-library.com/docs/react-testing-library/setup#cleanup
+import '@testing-library/jest-dom/extend-expect'
+// NOTE: jest-dom adds handy assertions to Jest and is recommended, but not required
+
+import React from 'react'
+import {render, fireEvent} from '@testing-library/react'
+import HiddenMessage from '../hidden-message'
+
+test('shows the children when the checkbox is checked', () => {
+  const testMessage = 'Test Message'
+  const {queryByText, getByLabelText, getByText} = render(
+    <HiddenMessage>{testMessage}</HiddenMessage>,
+  )
+
+  // query* functions will return the element or null if it cannot be found
+  // get* functions will return the element or throw an error if it cannot be found
+  expect(queryByText(testMessage)).toBeNull()
+
+  // the queries can accept a regex to make your selectors more resilient to content tweaks and changes.
+  fireEvent.click(getByLabelText(/show/i))
+
+  // .toBeInTheDocument() is an assertion that comes from jest-dom
+  // otherwise you could use .toBeDefined()
+  expect(getByText(testMessage)).toBeInTheDocument()
+})
+```
+
 ### Practical Example
 
 ```jsx
+// login.js
 import React from 'react'
-import {render, Simulate, wait} from 'react-testing-library'
-// this adds custom expect matchers
-import 'react-testing-library/extend-expect'
-// the mock lives in a __mocks__ directory
-import axiosMock from 'axios'
-import GreetingFetcher from '../greeting-fetcher'
-test('displays greeting when clicking Load Greeting', async () => {
-  // Arrange
-  axiosMock.get.mockImplementationOnce(({name}) =>
-    Promise.resolve({
-      data: {greeting: `Hello ${name}`},
-    }),
-  )
-  const {getByLabelText, getByText, getByTestId, container} = render(
-    <GreetingFetcher />,
-  )
 
-  // Act
-  getByLabelText('name').value = 'Mary'
-  Simulate.click(getByText('Load Greeting'))
-  // let's wait for our mocked `get` request promise to resolve
-  // wait will wait until the callback doesn't throw an error
-  await wait(() => getByTestId('greeting-text'))
+function Login() {
+  const [state, setState] = React.useReducer((s, a) => ({...s, ...a}), {
+    resolved: false,
+    loading: false,
+    error: null,
+  })
 
-  // Assert
-  expect(axiosMock.get).toHaveBeenCalledTimes(1)
-  expect(axiosMock.get).toHaveBeenCalledWith(url)
-  // here's a custom matcher!
-  expect(getByTestId('greeting-text')).toHaveTextContent('Hello Mary')
-  // snapshots work great with regular DOM nodes!
-  expect(container.firstChild).toMatchSnapshot()
+  function handleSubmit(event) {
+    event.preventDefault()
+    const {usernameInput, passwordInput} = event.target.elements
+
+    setState({loading: true, resolved: false, error: null})
+
+    window
+      .fetch('/api/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          username: usernameInput.value,
+          password: passwordInput.value,
+        }),
+      })
+      .then(r => r.json())
+      .then(
+        user => {
+          setState({loading: false, resolved: true, error: null})
+          window.localStorage.setItem('token', user.token)
+        },
+        error => {
+          setState({loading: false, resolved: false, error: error.message})
+        },
+      )
+  }
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="usernameInput">Username</label>
+          <input id="usernameInput" />
+        </div>
+        <div>
+          <label htmlFor="passwordInput">Password</label>
+          <input id="passwordInput" type="password" />
+        </div>
+        <button type="submit">Submit{state.loading ? '...' : null}</button>
+      </form>
+      {state.error ? <div role="alert">{state.error.message}</div> : null}
+      {state.resolved ? (
+        <div role="alert">Congrats! You're signed in!</div>
+      ) : null}
+    </div>
+  )
+}
+
+export default Login
+
+// __tests__/login.js
+// again, these first two imports are something you'd normally handle in
+// your testing framework configuration rather than importing them in every file.
+import '@testing-library/jest-dom/extend-expect'
+import React from 'react'
+import {render, fireEvent} from '@testing-library/react'
+import Login from '../login'
+
+test('allows the user to login successfully', async () => {
+  // mock out window.fetch for the test
+  const fakeUserResponse = {token: 'fake_user_token'}
+  jest.spyOn(window, 'fetch').mockImplementationOnce(() => {
+    return Promise.resolve({
+      json: () => Promise.resolve(fakeUserResponse),
+    })
+  })
+
+  const {getByLabelText, getByText, findByRole} = render(<Login />)
+
+  // fill out the form
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'chuck'}})
+  fireEvent.change(getByLabelText(/password/i), {target: {value: 'norris'}})
+
+  fireEvent.click(getByText(/submit/i))
+
+  // just like a manual tester, we'll instruct our test to wait for the alert
+  // to show up before continuing with our assertions.
+  const alert = await findByRole('alert')
+
+  // .toHaveTextContent() comes from jest-dom's assertions
+  // otherwise you could use expect(alert.textContent).toMatch(/congrats/i)
+  // but jest-dom will give you better error messages which is why it's recommended
+  expect(alert).toHaveTextContent(/congrats/i)
+  expect(window.localStorage.getItem('token')).toEqual(fakeUserResponse.token)
 })
 ```
 
@@ -125,7 +244,8 @@ The most important takeaway from this example is:
 
 Let's explore this further...
 
-Our `GreetingFetcher` might render some HTML like this:
+Let's say we have a `GreetingFetcher` component that fetches a greeting for a
+user. It might render some HTML like this:
 
 ```jsx
 <div>

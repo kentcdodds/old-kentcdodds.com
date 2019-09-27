@@ -40,19 +40,19 @@ apply with other frameworks — like whichever framework you're using right 
 or will use in the future.
 
 In fact, I have an entire course showing you how to get up and running with your
-own testing utility and enjoy the same benefits that you'll see with
-react-testing-library. That's thanks to the fact that react-testing-library
-itself is a very small library, and the real brains behind it is
-dom-testing-library — which is totally framework-agnostic! Cool right!? 😎
+own testing utility and enjoy the same benefits that you'll see with React
+Testing Library. That's thanks to the fact that React Testing Library itself is
+a very small library, and the real brains behind it is DOM Testing Library 
+ which is totally framework-agnostic! Cool right!? 😎
 
 In fact,
 [check out this example](https://github.com/kentcdodds/dom-testing-library-with-anything/blob/9361a120bc52334968e94a10363bab9724d5dbd3/jquery.test.js)
-from the course for testing a jQuery plugin with dom-testing-library:
+from the course for testing a jQuery plugin with DOM Testing Library:
 
 ```js
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import $ from 'jquery'
-import {getQueriesForElement, fireEvent} from 'dom-testing-library'
+import {getQueriesForElement, fireEvent} from '@testing-library/dom'
 
 $.fn.countify = function countify() {
   this.html(`  

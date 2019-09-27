@@ -70,8 +70,7 @@ use hooks:
 ```jsx
 // __tests__/counter.js
 import React from 'react'
-import 'react-testing-library/cleanup-after-each'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import Counter from '../counter.js'
 
 test('counter increments the count', () => {
@@ -186,8 +185,7 @@ implementation-details-free test would look like:
 ```jsx
 // __tests__/counter.js
 import React from 'react'
-import 'react-testing-library/cleanup-after-each'
-import {render, fireEvent, cleanup} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import Counter from '../counter.js'
 
 afterEach(() => {
@@ -260,10 +258,11 @@ unobservable as well.
 
 Whelp, thanks to the new [`act`](https://reactjs.org/docs/test-utils.html#act)
 utility from [`react-dom/test-utils`](https://reactjs.org/docs/test-utils.html)
-we can make that happen. So `react-testing-library` integrates with that utility
-and makes it so all our tests continue to pass as written, allowing the tests we
-write to be free of implementation details and continue to resemble the way our
-software is used as closely as possible.
+we can make that happen. So
+[React Testing Library](https://testing-library.com/react) integrates with that
+utility and makes it so all our tests continue to pass as written, allowing the
+tests we write to be free of implementation details and continue to resemble the
+way our software is used as closely as possible.
 
 ### What about render props components?
 
@@ -292,8 +291,7 @@ Here's how I would test this:
 ```jsx
 // __tests__/counter.js
 import React from 'react'
-import 'react-testing-library/cleanup-after-each'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import Counter from '../counter.js'
 
 function renderCounter(props) {

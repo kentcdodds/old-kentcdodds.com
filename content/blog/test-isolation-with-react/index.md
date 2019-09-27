@@ -194,7 +194,7 @@ huge fan of `beforeEach` and sharing variables between tests.
 Let's try again:
 
 ```jsx
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
 import {render, fireEvent} from '@testing-library/react'
 import {Counter} from '../counter'

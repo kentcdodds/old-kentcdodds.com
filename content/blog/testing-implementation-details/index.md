@@ -235,14 +235,14 @@ would! And guess what, we DO have such a tool!
 
 So we could rewrite all these tests with enzyme, limiting ourselves to APIs that
 are free of implementation details, but instead, I'm just going to use
-[react-testing-library](https://github.com/testing-library/react-testing-library)
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 which will make it very difficult to include implementation details in my tests.
 Let's check that out now!
 
 ```jsx
 // __tests__/accordion.rtl.js
 import React from 'react'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import Accordion from '../accordion'
 
 test('can open accordion items to see the contents', () => {
@@ -296,7 +296,7 @@ component. So our test should typically only see/interact with the props that
 are passed, and the rendered output.
 
 This is precisely what the
-[react-testing-library](https://github.com/testing-library/react-testing-library)
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 test does. It passes fake props to the Accordion, then it interacts with the
 rendered output by querying the output for the contents that will be displayed
 to the user (or ensuring that it wont be displayed) and clicking the buttons
@@ -325,7 +325,7 @@ that the application code works for the production users._
 Oh, and [React Hooks](https://reactjs.org/hooks) got you all excited? If you
 rewrite that accordion component to use React hooks, the enzyme test fails
 terribly, while the
-[react-testing-library](https://github.com/testing-library/react-testing-library)
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 test continues to work.
 
 ![happy goats](./images/0.gif)

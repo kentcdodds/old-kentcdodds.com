@@ -444,6 +444,10 @@ failure would result in your cleanup not running which could then lead to other
 tests failing, ultimately resulting in a lot of error output that is harder to
 debug.
 
+> NOTE: This example was written before `@testing-library/react@9` which made
+> cleanup automatic. But the concept still applies and I didn't want to rewrite
+> the example 😅
+
 For example, React Testing Library will insert your component into the document,
 and if you don't cleanup after each test, then your tests can run over
 themselves:
@@ -553,8 +557,9 @@ test('example 2', () => {
 })
 ```
 
-> Even better, with React Testing Library, [`Cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup) is called after each
-> test automatically by default. Learn more
+> Even better, with React Testing Library,
+> [`Cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup)
+> is called after each test automatically by default. Learn more
 > [in the docs](https://testing-library.com/docs/react-testing-library/setup#skipping-auto-cleanup)
 
 In addition, sometimes there are definitely good use cases for `before*`, but

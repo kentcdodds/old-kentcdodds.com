@@ -22,7 +22,7 @@ figure out how to test React components. I tried
 immediately decided that I would never use it to test my React components. I've
 expressed this feeling on many occasions and get asked on a regular basis why I
 feel the way I do about `shallow` rendering and why
-[`react-testing-library`](https://github.com/testing-library/react-testing-library)
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 will never support `shallow` rendering.
 
 So finally I'm coming out with it and explaining why I never use shallow
@@ -246,7 +246,7 @@ my mind and is evidence to me that we're testing implementation details.
 
 In addition, you can _definitely_ unit test react components without shallow
 rendering. Checkout the section near the end for an example of such a test (uses
-react-testing-library, but you could do this with enzyme as well) that uses Jest
+React Testing Library, but you could do this with enzyme as well) that uses Jest
 mocking to mock out the `<CSSTransition />` component.
 
 I should add that I generally am against mocking even third party components
@@ -271,15 +271,15 @@ mocks.
 ### Without shallow rendering
 
 I'm a huge believer of the guiding principle of
-[`react-testing-library`](https://github.com/testing-library/react-testing-library):
+[React Testing Library](https://github.com/testing-library/react-testing-library):
 
-> [_The more your tests resemble the way your software is used, the more confidence they can give you._](https://twitter.com/kentcdodds/status/977018512689455106)_ — Kent
-> C. Dodds 👋_
+> _[The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
+>  — Kent C. Dodds 👋_
 
 That's why I wrote the library in the first place. As a side-note to this
 shallow rendering post, I want to mention there are fewer ways for you to do
 things that are impossible for the user to do. Here's the list of things that
-react-testing-library cannot do (out of the box):
+React Testing Library cannot do (out of the box):
 
 1.  shallow rendering
 2.  Static rendering (like enzyme's
@@ -288,7 +288,7 @@ react-testing-library cannot do (out of the box):
     [`find`](http://airbnb.io/enzyme/docs/api/ReactWrapper/find.html)) which
     include the ability to find by a component class or even its `displayName`
     (again, the user does not care what your component is called and neither
-    should your test). Note: react-testing-library supports querying for
+    should your test). Note: React Testing Library supports querying for
     elements in ways that encourage accessibility in your components and more
     maintainable tests.
 4.  Getting a component instance (like enzyme's
@@ -303,10 +303,9 @@ closely. In addition, it can verify that you're using `<CSSTransition />`
 properly (something the shallow rendering example was _incapable_ of doing).
 
 ```jsx
-import 'react-testing-library/cleanup-after-each'
 import React from 'react'
 import {CSSTransition} from 'react-transition-group'
-import {render, fireEvent} from 'react-testing-library'
+import {render, fireEvent} from '@testing-library/react'
 import {HiddenMessage} from '../hidden-message'
 
 // NOTE: you do NOT have to do this in every test.

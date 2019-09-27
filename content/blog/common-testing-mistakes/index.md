@@ -42,7 +42,7 @@ export class Counter extends React.Component {
 
 // __tests__/counter.js
 import React from 'react'
-// (it's hard to test implementation details with react-testing-library,
+// (it's hard to test implementation details with React Testing Library,
 //  so we'll use enzyme in this example 😅)
 import {mount} from 'enzyme'
 import {Counter} from '../counter'

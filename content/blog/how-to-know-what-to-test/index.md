@@ -228,15 +228,15 @@ would be useful to test:
 
 - User interactions (using
   [`fireEvent`](https://testing-library.com/docs/dom-testing-library/api-events)
-  from react-testing-library): Is the end user able to interact with the
+  from React Testing Library): Is the end user able to interact with the
   elements that the component renders?
 - Changing props (using
   [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
-  from react-testing-library): What happens when the developer user re-renders
+  from React Testing Library): What happens when the developer user re-renders
   your component with new props?
 - Context changes (using
   [`rerender`](https://testing-library.com/docs/react-testing-library/api#rerender)
-  from react-testing-library): What happens when the developer user changes
+  from React Testing Library): What happens when the developer user changes
   context resulting in your component re-rendering?
 - Subscription changes: What happens when an event emitter the component
   subscribes to changes? (Like firebase, a redux store, a router, a media query,
