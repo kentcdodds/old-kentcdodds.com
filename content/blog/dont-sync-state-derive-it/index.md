@@ -359,6 +359,10 @@ functions will be run anyway, so we've actually not accomplished much with this
 
 > [Learn more about `useMemo` and `useCallback`](/blog/usememo-and-usecallback)
 
+Oh, and I'd like to mention that derived state can sometimes be even faster than
+state synchronization because it will result in fewer unnecessary re-renders,
+[which can be a problem sometimes](/blog/fix-the-slow-render-before-you-fix-the-re-render).
+
 ## What about MobX/Reselect?
 
 [Reselect](https://github.com/reduxjs/reselect) (which you should _absolutely_
