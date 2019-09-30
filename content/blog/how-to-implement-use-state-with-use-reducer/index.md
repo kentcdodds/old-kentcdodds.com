@@ -116,7 +116,7 @@ function, you can do that via the `reducerFn` which is called with whatever
 const reducerFn = (prevState, dispatchArg) => newState
 ```
 
-With that, API, we can implement all the features of `useState`.
+With that, we can implement all the features of `useState`.
 
 ## The `useReducer`-based `useState` implementation
 
