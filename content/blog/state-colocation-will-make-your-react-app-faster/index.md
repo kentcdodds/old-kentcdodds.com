@@ -218,7 +218,7 @@ function DogName({time}) {
   )
 }
 
-function DogInput(params) {
+function DogInput({dog, onChange}) {
   return (
     <>
       <label htmlFor="dog">Dog Name</label>
