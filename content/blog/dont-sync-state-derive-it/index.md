@@ -379,7 +379,7 @@ be using if you're using Redux) has memoization built-in which is cool. MobX has
 this as well, but they also take it a step further with
 ["computed values"](https://mobx.js.org/refguide/computed-decorator.html) which
 is basically an API to give you memoized and optimized derived state values.
-What makes it even better that what we already have is that the computation is
+What makes it even better than what we already have is that the computation is
 only processed when it's accessed.
 
 For (contrived) example:
@@ -448,8 +448,8 @@ function FavoriteNumber() {
           ? `${name}'s favorite number is ${number}`
           : 'Please type your name'}
       </div>
-      <div>{number > 10 ? numberWarning : null}</div>
-      <div>{number < 0 ? numberWarning : null}</div>
+      <div>{numberIsTooHigh ? numberWarning : null}</div>
+      <div>{numberIsTooLow ? numberWarning : null}</div>
     </div>
   )
 }
