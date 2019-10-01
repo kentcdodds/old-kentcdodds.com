@@ -95,7 +95,7 @@ function Board() {
   }
 
   function selectTwoSquares(square1, square2) {
-    if (winner || squares[square]) {
+    if (winner || squares[square1] || squares[square2]) {
       return
     }
     const squaresCopy = [...squares]
@@ -151,7 +151,7 @@ function Board() {
   }
 
   function selectTwoSquares(square1, square2) {
-    if (winner || squares[square]) {
+    if (winner || squares[square1] || squares[square2]) {
       return
     }
     const squaresCopy = [...squares]
@@ -217,7 +217,7 @@ function Board() {
   }
 
   function selectTwoSquares(square1, square2) {
-    if (winner || squares[square]) {
+    if (winner || squares[square1] || squares[square2]) {
       return
     }
     const squaresCopy = [...squares]
