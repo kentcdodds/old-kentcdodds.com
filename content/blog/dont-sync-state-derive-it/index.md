@@ -35,7 +35,7 @@ managed on their own.
 
 There's a good reason that I wrote it the way I did. Let's find out the benefits
 of derived state over state synchronization by reimplementing this with a more
-naive approach. The fact is that all for variables are technically state so you
+naive approach. The fact is that all four variables are technically state so you
 may automatically think that you need to use `useState` or `useReducer` for
 them.
 
