@@ -327,6 +327,12 @@ function Board({squares, onSelectSquare}) {
 
 It's _way_ simpler, and it works really well.
 
+P.S. Remember `getDerivedStateFromProps`? Well
+[you probably don't need it](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html)
+but if you do and you want to do so with hooks, then calling the state updater
+function during render is actually the correct way to do it.
+[Learn more from the React Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#how-do-i-implement-getderivedstatefromprops).
+
 ## What about performance?
 
 I know you've been waiting for me to address this... Here's the deal. JavaScript
