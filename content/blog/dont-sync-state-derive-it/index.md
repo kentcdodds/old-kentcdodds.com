@@ -297,7 +297,16 @@ function Board({squares, onSelectSquare}) {
 
   // ... hmmm... we're no longer managing updating the squares state, so how
   // do we keep these variables up to date? useEffect? useLayoutEffect?
-  // Just call it right in the render method?
+  // React.useEffect(() => {
+  //   setNextValue... etc... eh...
+  // }, [squares])
+  //
+  // Just call the state updaters when squares change
+  // right in the render method?
+  // if (prevSquares !== squares) {
+  //   setNextValue... etc... ugh...
+  // }
+  //
   // I've seen people do all of these things... And none of them are great.
 
   // return beautiful JSX
