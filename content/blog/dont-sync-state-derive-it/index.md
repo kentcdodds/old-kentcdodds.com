@@ -246,7 +246,7 @@ function calculateDerivedState(squares) {
   const winner = calculateWinner(squares)
   const nextValue = calculateNextValue(squares)
   const status = calculateStatus(winner, squares, nextValue)
-  return {squares, nextValue, winner, status}
+  return {nextValue, winner, status}
 }
 
 function ticTacToeReducer(state, square) {
