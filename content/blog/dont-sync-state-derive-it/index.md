@@ -515,7 +515,7 @@ isn't enough for you, then consider doing something like this or use MobX.
 
 ## Conclusion
 
-Ok, so we got a little distracting overthinking performance for a second there.
+Ok, so we got a little distracted overthinking performance for a second there.
 The fact is that you can really simplify your app's state by considering whether
 the state needs to be managed by itself or if it can be derived. We learned that
 derived state can be the result of a single variable of state, or it can be
