@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-89-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-90-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -124,6 +124,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/weelillad"><img src="https://avatars3.githubusercontent.com/u/3506248?v=4" width="100px;" alt="Andy Hong"/><br /><sub><b>Andy Hong</b></sub></a><br /><a href="#content-weelillad" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/fxOne"><img src="https://avatars2.githubusercontent.com/u/5929640?v=4" width="100px;" alt="fxOne"/><br /><sub><b>fxOne</b></sub></a><br /><a href="#content-fxOne" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/GillesDebunne"><img src="https://avatars0.githubusercontent.com/u/1897114?v=4" width="100px;" alt="Gilles Debunne"/><br /><sub><b>Gilles Debunne</b></sub></a><br /><a href="#content-GillesDebunne" title="Content">🖋</a></td>
+    <td align="center"><a href="https://twitter.com/ZubinKhavarian"><img src="https://avatars3.githubusercontent.com/u/210675?v=4" width="100px;" alt="Zubin Khavarian"/><br /><sub><b>Zubin Khavarian</b></sub></a><br /><a href="#content-zubinkhavarian" title="Content">🖋</a></td>
   </tr>
 </table>
 
