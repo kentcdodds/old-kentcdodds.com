@@ -6,6 +6,8 @@ import get from 'lodash/get'
 import intersection from 'lodash/intersection'
 import emojiStrip from 'emoji-strip'
 
+const normalize = s => emojiStrip(s.toLowerCase()).trim()
+
 const workshopQuery = graphql`
   query {
     data: allMdx(filter: {fields: {isWorkshop: {eq: true}}}) {
@@ -71,14 +73,17 @@ function useWorkshopEvents({keywords: keywordsFilter} = {}) {
   const {data} = context
   const events = get(data, 'events', []).map(event => {
     const workshop =
-      workshops.find(
-        w =>
-          emojiStrip(w.title.toLowerCase()).trim() ===
-          emojiStrip(event.title.toLowerCase()).trim(),
-      ) || {}
+      workshops.find(w => normalize(w.title) === normalize(event.title)) || {}
     return {
       ...workshop,
       ...event,
+      // by adding the title as keywords it helps us capture workshops
+      // which don't have associated events, but *do* have words like "testing"
+      // or "react" in them.
+      keywords: normalize(event.title)
+        .split(' ')
+        .concat(event.keywords)
+        .filter(Boolean),
       workshopSlug: workshop.slug,
     }
   })
