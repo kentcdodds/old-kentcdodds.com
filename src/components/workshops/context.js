@@ -4,6 +4,7 @@ import {useStaticQuery, graphql} from 'gatsby'
 import isEmpty from 'lodash/isEmpty'
 import get from 'lodash/get'
 import intersection from 'lodash/intersection'
+import emojiStrip from 'emoji-strip'
 
 const workshopQuery = graphql`
   query {
@@ -70,9 +71,11 @@ function useWorkshopEvents({keywords: keywordsFilter} = {}) {
   const {data} = context
   const events = get(data, 'events', []).map(event => {
     const workshop =
-      workshops.find(w => {
-        return w.title.toLowerCase() === event.title.toLowerCase()
-      }) || {}
+      workshops.find(
+        w =>
+          emojiStrip(w.title.toLowerCase()).trim() ===
+          emojiStrip(event.title.toLowerCase()).trim(),
+      ) || {}
     return {
       ...workshop,
       ...event,
