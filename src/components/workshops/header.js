@@ -64,11 +64,13 @@ const Header = ({
   startTime,
   endTime,
   url,
+  className,
 }) => {
   const ticketUrl = discount ? discount.url : url
 
   return (
     <div
+      className={className}
       css={css`
         ${styles}
         background: white;

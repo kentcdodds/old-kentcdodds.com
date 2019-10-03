@@ -6,9 +6,7 @@ const {isFuture} = require('date-fns')
 
 const site = 'kent-c-dodds'
 
-axios.defaults.headers.common.Authorization = `Bearer ${
-  process.env.TITO_API_SECRET
-}`
+axios.defaults.headers.common.Authorization = `Bearer ${process.env.TITO_API_SECRET}`
 axios.defaults.headers.common.Accept = 'application/json'
 
 function buildEvents(eventsData) {
@@ -18,11 +16,6 @@ function buildEvents(eventsData) {
     }),
     eventData => {
       const {slug, url, logo, title} = eventData
-      function getReleases(eventSlug) {
-        return axios
-          .get(`https://api.tito.io/v3/${site}/${eventSlug}/releases`)
-          .then(({data}) => data.releases)
-      }
 
       function getDiscountCodes(eventSlug) {
         return axios
@@ -54,14 +47,9 @@ function buildEvents(eventsData) {
       }
 
       return axios
-        .all([
-          getReleases(slug),
-          getDiscountCodes(slug),
-          getActivities(slug),
-          getEvent(slug),
-        ])
+        .all([getDiscountCodes(slug), getActivities(slug), getEvent(slug)])
         .then(
-          axios.spread((releases, codes, activities, event) => {
+          axios.spread((codes, activities, event) => {
             const discounts = _.reduce(
               _.map(codes, code => {
                 return {url: code.share_url, code: code.code, ends: code.end_at}
@@ -81,7 +69,7 @@ function buildEvents(eventsData) {
             const activity = _.first(activities)
 
             const tickets = _.reduce(
-              releases,
+              event.releases,
               (acc, release) => {
                 return {
                   quantity: acc.quantity + release.quantity,

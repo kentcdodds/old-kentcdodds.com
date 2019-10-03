@@ -77,6 +77,7 @@ function useWorkshopEvents({keywords: keywordsFilter} = {}) {
     return {
       ...workshop,
       ...event,
+      workshop,
       // by adding the title as keywords it helps us capture workshops
       // which don't have associated events, but *do* have words like "testing"
       // or "react" in them.

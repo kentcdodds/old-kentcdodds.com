@@ -27,10 +27,8 @@ export default function WorkshopPage(props) {
 function Workshop({data: {site, mdx}}) {
   const {title, banner} = mdx.fields
   const {ckTag} = mdx.frontmatter
-  const {events: allEvents, isLoading} = useWorkshopEvents()
-  const events = allEvents.filter(event => {
-    return event.title.toLowerCase() === title.toLowerCase()
-  })
+  const {events: allEvents, isLoading} = useWorkshopEvents({title})
+  const events = allEvents.filter(event => event.workshop.title === title)
   return (
     <Layout
       site={site}
@@ -75,9 +73,17 @@ function Workshop({data: {site, mdx}}) {
             </div>
           ) : null}
 
-          {isLoading
-            ? '... loading workshop details...'
-            : events.map(scheduledEvent => {
+          {isLoading ? (
+            '... loading workshop details...'
+          ) : (
+            <div
+              css={css`
+                & > *:not(:last-child) {
+                  margin-bottom: 30px;
+                }
+              `}
+            >
+              {events.map(scheduledEvent => {
                 const soldOut = scheduledEvent.remaining <= 0
                 const discount = get(scheduledEvent, 'discounts.early', false)
                 return (
@@ -97,6 +103,8 @@ function Workshop({data: {site, mdx}}) {
                   />
                 )
               })}
+            </div>
+          )}
 
           <div
             css={css`
