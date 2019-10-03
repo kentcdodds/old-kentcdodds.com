@@ -96,7 +96,7 @@ So if you want to get an accurate measurement of your app's production
 performance, you should be sure to do your measurements on the production
 version of your code (the code that your end-users will be using).
 
-## Build and measure the production app
+### Build and measure the production app
 
 So let's run the optimized production build with `npm run build`. Next we'll run
 `npx serve -s build` to serve up the built version of the app on an HTTP server.
@@ -118,7 +118,13 @@ from the production build of React. Thanks React! Except now what do we do?
 Well, I guess we could go to the linked gist by Brian! Or you could continue
 reading and I'll show you what to do.
 
-## Update the webpack config for production-profiling
+**NOTE: If you're using create-react-app** with `react-scripts@>=3.2.0` then you
+can simply run `npx react-scripts build --profile` and it will do all this stuff
+for you
+([thanks to Jacob](https://github.com/facebook/create-react-app/pull/7737)) and
+you can skip to the next pitfall. Otherwise, please read on.
+
+### Update the webpack config for production-profiling
 
 As noted in the message, there's a production build of React that removes most
 of the development-time helpful code, but leaves the profiling code in-tact.
@@ -163,7 +169,7 @@ resolve: {
 // ... more config ...
 ```
 
-## Profile the production-profiling build
+### Profile the production-profiling build
 
 Great, now run `npm run build`, then `npx serve -s build` and let's profile the
 app again! I'll follow the same registration steps I did last time. Here's what
@@ -182,7 +188,7 @@ it faster to load/parse which is a good thing for our end-users, but a bad thing
 for our performance measuring because it's hard for us to know which of these
 components is the culprit of our performance problems.
 
-## Disable function name mangling
+### Disable function name mangling
 
 React knows what to call your components based on the `name` property of the
 component:
