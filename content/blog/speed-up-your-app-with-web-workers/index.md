@@ -100,7 +100,7 @@ another thread:
 You can even put a breakpoint in your code and debug it like you're used to.
 Neat!
 
-## Practical
+## Practical use
 
 I remember when Web Workers became a thing. And I guess it was longer ago than I
 remember because IE10 supports Web Workers. So if you have to support a browser
