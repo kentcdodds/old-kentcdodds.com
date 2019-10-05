@@ -21,11 +21,11 @@ wouldn't be able to click any of these buttons at the same time iTunes is
 playing this music."
 
 JavaScript is single-threaded. This means that any JavaScript environment will
-not multiple lines of JavaScript in the same process simultaneously (the browser
-handles audio-playback separate from the thread it gives you for your JavaScript
-which is why your code can run while music is playing in the browser). The
-single threaded-ness of JavaScript drastically simplifies a lot of programming
-in JavaScript, but it does come with some drawbacks.
+not run multiple lines of JavaScript in the same process simultaneously (the
+browser handles audio-playback separate from the thread it gives you for your
+JavaScript which is why your code can run while music is playing in the
+browser). The single threaded-ness of JavaScript drastically simplifies a lot of
+programming in JavaScript, but it does come with some drawbacks.
 
 One of the most significant of these drawbacks comes in the form of user
 experience. To illustrate my point, go ahead and open a new tab to twitter.com
