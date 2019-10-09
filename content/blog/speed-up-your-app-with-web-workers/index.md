@@ -60,7 +60,7 @@ threads to run different JavaScript files.
 [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 are a browser standard that enables you to do just that! And you can even
 communicate between those different threads (with some limitations, which we
-wont get into in this post).
+won't get into in this post).
 
 ## Super Simple Start to Web Workers
 
