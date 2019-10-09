@@ -78,6 +78,8 @@ worker.postMessage('Hello Worker')
 worker.onmessage = e => {
   console.log('main.js: Message received from worker:', e.data)
 }
+// if you want to "uninstall" the web worker then use:
+// worker.terminate()
 ```
 
 ```javascript
