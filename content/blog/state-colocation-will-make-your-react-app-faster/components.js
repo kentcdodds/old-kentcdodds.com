@@ -20,7 +20,7 @@ function SlowComponent({time, onChange}) {
         type="number"
         onChange={e => onChange(Number(e.target.value))}
       />
-      ms slow
+      {'ms slow'}
     </div>
   )
 }
