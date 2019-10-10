@@ -1,6 +1,6 @@
 ---
-slug: 'welcome-to-open-source'
-title: 'Welcome to Open Source'
+slug: 'building-the-open-source-community-we-want'
+title: 'Building The Open Source Community We Want'
 date: '2019-10-08'
 author: 'Kent C. Dodds'
 description: "_Let's be intentionally inclusive_"
