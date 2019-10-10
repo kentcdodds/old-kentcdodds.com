@@ -68,15 +68,17 @@ part of, and now more and more people want to be a part of it as well.
 
 What strikes me about this is I think a lot of us would think that she and Larry
 would have been best served to just leave the community for their own safety. I
-don't think anyone could have blamed them for doing that and I don't think we
+don't think anyone could have blamed them for doing that and **I don't think we
 can judge anyone for leaving a community (physical or digital) for their own
-physical and mental health. But for Sharon and Larry, instead of moving to a
-different community in the hopes it would be better for them, they changed the
-community where they were to make it one they could be proud of. They saw the
-good that could be had in their neighborhood and intentionally put forth effort
-to enhance and build that. They improved it so that it not only improved the
-community for themselves, but for others in the community as well and eventually
-others wanted to join their community.
+physical and mental health.**
+
+For Sharon and Larry, instead of moving to a different community in the hopes it
+would be better for them, they changed the community where they were to make it
+one they could be proud of. They saw the good that could be had in their
+neighborhood and intentionally put forth effort to enhance and build that. They
+improved it so that it not only improved the community for themselves, but for
+others in the community as well and eventually others wanted to join their
+community.
 
 I think this is a beautiful thing. Sharon and Larry worked to improve their
 physical community, and I think we can do the same to our digital communities. I
