@@ -19,7 +19,7 @@ export default [
   //   `,
   // },
   {
-    title: 'Welcome to Open Source',
+    title: 'Building the Open Source Community We Want',
     resources: [],
     tags: ['open source'],
     deliveries: [
