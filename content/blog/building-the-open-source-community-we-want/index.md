@@ -3,7 +3,9 @@ slug: 'building-the-open-source-community-we-want'
 title: 'Building The Open Source Community We Want'
 date: '2019-10-08'
 author: 'Kent C. Dodds'
-description: "_Let's be intentionally inclusive_"
+description:
+  "_Let's be intentional about the open source community we want and work hard
+  to build it._"
 categories:
   - 'open source'
 banner: './images/banner.jpg'
