@@ -20,7 +20,9 @@ export default [
   // },
   {
     title: 'Building the Open Source Community We Want',
-    resources: [],
+    resources: [
+      '[slides](https://drive.google.com/open?id=1-kpw_RlWNjzGcV4E69KlsOktbCru6LFx)',
+    ],
     tags: ['open source'],
     deliveries: [
       {
@@ -43,7 +45,9 @@ export default [
   },
   {
     title: 'AHA Programming',
-    resources: [],
+    resources: [
+      '[slides](https://github.com/kentcdodds/aha-programming-slides)',
+    ],
     tags: ['software development', 'abstraction'],
     deliveries: [
       {
@@ -70,7 +74,9 @@ export default [
   },
   {
     title: 'Application State Management',
-    resources: [],
+    resources: [
+      '[slides](https://github.com/kentcdodds/application-state-management-talk)',
+    ],
     tags: ['react'],
     deliveries: [
       {
@@ -94,7 +100,7 @@ export default [
   },
   {
     title: 'React Hook Pitfalls',
-    resources: [],
+    resources: ['[slides](https://github.com/kentcdodds/react-hooks-pitfalls)'],
     tags: ['react'],
     deliveries: [
       {
