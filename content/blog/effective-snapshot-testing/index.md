@@ -87,8 +87,8 @@ Justin!
 ![You're awesome](./images/1.gif)
 
 _One thing I want to make clear before continuing is that snapshot testing is an
-assertion, just like the_ `_toBe_` _in:_ `_expect('foo').toBe('foo')_`_. I think
-there's sometimes confusion on this point, so I just wanted to clear that up._
+assertion, just like the `toBe` in: `expect('foo').toBe('foo')`. I think there's
+sometimes confusion on this point, so I just wanted to clear that up._
 
 Despite Justin's arguments against snapshots, I'd suggest that there is value in
 them if you use them effectively. With that in mind, I thought I'd share a few
@@ -214,8 +214,8 @@ Justin mentioned).
 it, see if you can actually change it from a snapshot to a more explicit
 assertion (because you probably can 😉).**
 
-> _I should add that even huge snapshots aren't_ entirely _useless. Because if
-> the snapshot changes unexpectedly it can (and has) inform us that we've made a
+> _I should add that even huge snapshots aren't entirely useless. Because if the
+> snapshot changes unexpectedly it can (and has) inform us that we've made a
 > change with further reaching impacts than anticipated._
 
 Edit: Since I wrote this blog post, a new lint rule was added to
