@@ -143,7 +143,7 @@ like this:
 
 1. Type a fake email in the input labeled `email`
 2. Type a fake password in the input labeled `password`
-3. Click on the button that `sign in`
+3. Click on the button that has text `sign in`
 
 And that would help to ensure that you are testing your software as closely to
 how it's used as possible. Giving you more value from your test.
