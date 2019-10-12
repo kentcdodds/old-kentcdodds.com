@@ -266,6 +266,7 @@ export default [
       {
         event: '[Framework Summit](https://www.frameworksummit.com/sessions)',
         date: '2018-10-02',
+        recording: 'https://www.youtube.com/watch?v=pjDOJdMM2eg',
       },
     ],
     description: `
