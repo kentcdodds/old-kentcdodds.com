@@ -20,34 +20,24 @@ You're a developer and you want to avoid shipping a broken login experience, so
 you're writing some tests to make sure you don't. Let's get a quick look at
 [an example of such a form](https://github.com/kentcdodds/testing-workshop/blob/1938d6fc2048e55362679905f700f938a3b497c4/client/src/screens/login.js#L50-L82):
 
-![Login form from the Conduit App](./images/0.png)
+![Login form from the Bookshelf App](./images/login.png)
 
 ```jsx
 const form = (
-  <form onSubmit={this.submitForm}>
-    <fieldset>
-      <fieldset className="form-group">
-        <input
-          className="email-field form-control form-control-lg"
-          type="email"
-          placeholder="Email"
-        />
-      </fieldset>
-      <fieldset className="form-group">
-        <input
-          className="password-field form-control form-control-lg"
-          type="password"
-          placeholder="Password"
-        />
-      </fieldset>
-      <button
-        className="btn btn-lg btn-primary pull-xs-right"
-        type="submit"
-        disabled={this.props.inProgress}
-      >
-        Sign in
+  <form onSubmit={handleSubmit}>
+    <div>
+      <label htmlFor="username">Username</label>
+      <input id="username" className="username-field" />
+    </div>
+    <div>
+      <label htmlFor="password">Password</label>
+      <input id="password" type="password" className="password-field" />
+    </div>
+    <div>
+      <button type="submit" className="btn">
+        Login
       </button>
-    </fieldset>
+    </div>
   </form>
 )
 ```
@@ -58,35 +48,38 @@ the document to find and operate on those nodes. Here's what you might try to do
 to make that happen:
 
 ```js
-const emailField = rootNode.querySelector('.email-field')
+const usernameField = rootNode.querySelector('.username-field')
 const passwordField = rootNode.querySelector('.password-field')
 const submitButton = rootNode.querySelector('.btn')
 ```
 
 And here's where the problem comes in. What happens when we add another button?
-What if we added a "Sign up" button before the "Sign in" button?
+What if we added a "Sign up" button before the "Login" button?
 
-```html
-<button
-  className="btn btn-lg btn-secondary pull-xs-right"
-  disabled="{this.props.inProgress}"
->
-  Sign up
-</button>
-<button
-  className="btn btn-lg btn-primary pull-xs-right"
-  type="submit"
-  disabled="{this.props.inProgress}"
->
-  Sign in
-</button>
+```jsx {12-14}
+const form = (
+  <form onSubmit={handleSubmit}>
+    <div>
+      <label htmlFor="username">Username</label>
+      <input id="username" className="username-field" />
+    </div>
+    <div>
+      <label htmlFor="password">Password</label>
+      <input id="password" type="password" className="password-field" />
+    </div>
+    <div>
+      <button type="submit" className="btn">
+        Sign up
+      </button>
+      <button type="submit" className="btn">
+        Login
+      </button>
+    </div>
+  </form>
+)
 ```
 
-Whelp, that's going to break our tests. Total bummer.
-
-![total bummer...](./images/1.gif)
-
-But that'd be pretty easy to fix right?
+Whelp, that's going to break our tests. But that'd be pretty easy to fix right?
 
 ```js
 // change this:
@@ -96,8 +89,8 @@ const submitButton = rootNode.querySelectorAll('.btn')[1]
 ```
 
 And we're good to go! Well, if we start using CSS-in-JS to style our form and no
-longer need the `email-field` and `password-field` class names, should we remove
-those? Or do we keep them because our tests use them? Hmmmmmmm..... 🤔
+longer need the `username-field` and `password-field` class names, should we
+remove those? Or do we keep them because our tests use them? Hmmmmmmm..... 🤔
 
 ## So how do we write resilient selectors?
 
@@ -110,16 +103,16 @@ So, let's imagine that you have a manual tester on your team and you're writing
 instructions for them to test the page for you. What would those instructions
 say?
 
-1. get the element with the class name `email-field`
+1. get the element with the class name `username-field`
 2. ...
 
 "Wait," they say. "How am I going to find the element with the class name
-`email-field`?"
+`username-field`?"
 
 "Oh, just open your devtools and..."
 
 "But our users wont do that. Why don't I just find the field that has a label
-that says `email`?"
+that says `username`?"
 
 "Oh, yeah, good idea."
 
@@ -141,7 +134,7 @@ certainly are trade-offs with these approaches, but if you wrote out
 instructions for a manual tester using these queries, it would look something
 like this:
 
-1. Type a fake email in the input labeled `email`
+1. Type a fake username in the input labeled `username`
 2. Type a fake password in the input labeled `password`
 3. Click on the button that has text `sign in`
 
@@ -170,11 +163,7 @@ relationship more explicit.**
 
 If we could add some metadata to the element we're trying to select that would
 solve the problem. Well guess what! There's actually an existing API for this!
-It's `data-` attributes!
-
-![Data from Star Trek The Next Generation saying YES](./images/2.gif)
-
-For example:
+It's `data-` attributes! For example:
 
 ```jsx
 function UsernameDisplay({user}) {
