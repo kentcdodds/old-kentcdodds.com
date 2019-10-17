@@ -835,6 +835,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "dericgw",
+      "name": "Deric Cain",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/34040106?v=4",
+      "profile": "https://github.com/dericgw",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
