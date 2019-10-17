@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-91-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-92-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -126,6 +126,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/GillesDebunne"><img src="https://avatars0.githubusercontent.com/u/1897114?v=4" width="100px;" alt="Gilles Debunne"/><br /><sub><b>Gilles Debunne</b></sub></a><br /><a href="#content-GillesDebunne" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/ZubinKhavarian"><img src="https://avatars3.githubusercontent.com/u/210675?v=4" width="100px;" alt="Zubin Khavarian"/><br /><sub><b>Zubin Khavarian</b></sub></a><br /><a href="#content-zubinkhavarian" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/BillyLevin"><img src="https://avatars3.githubusercontent.com/u/4649675?v=4" width="100px;" alt="Billy Levin"/><br /><sub><b>Billy Levin</b></sub></a><br /><a href="#content-BillyLevin" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/dericgw"><img src="https://avatars2.githubusercontent.com/u/34040106?v=4" width="100px;" alt="Deric Cain"/><br /><sub><b>Deric Cain</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=dericgw" title="Code">💻</a></td>
   </tr>
 </table>
 
