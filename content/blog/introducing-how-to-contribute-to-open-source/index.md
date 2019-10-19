@@ -25,7 +25,7 @@ others could jump on the boat as well.
 The big challenge we face when inviting new people to jump on the open source
 bandwagon is knowing how to get started. There are various tools, protocols, and
 open source etiquette involved of which people are just simply not aware and
-which make contributing really indimidating.
+which make contributing really intimidating.
 
 > This is a problem with education, and can be fixed.
 
