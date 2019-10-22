@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-92-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-93-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -129,6 +129,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/dericgw"><img src="https://avatars2.githubusercontent.com/u/34040106?v=4" width="100px;" alt="Deric Cain"/><br /><sub><b>Deric Cain</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=dericgw" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.abelmbula.com"><img src="https://avatars3.githubusercontent.com/u/14941675?v=4" width="100px;" alt="Abel Lifaefi Mbula"/><br /><sub><b>Abel Lifaefi Mbula</b></sub></a><br /><a href="#content-Bam92" title="Content">🖋</a></td>
   </tr>
 </table>
 
