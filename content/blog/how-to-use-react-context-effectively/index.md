@@ -255,14 +255,14 @@ render-prop based API for context consumers:
 ```jsx
 function CountConsumer({children}) {
   return (
-    <CountContext.Consumer>
+    <CountStateContext.Consumer>
       {context => {
         if (context === undefined) {
           throw new Error('CountConsumer must be used within a CountProvider')
         }
         return children(context)
       }}
-    </CountContext.Consumer>
+    </CountStateContext.Consumer>
   )
 }
 ```
