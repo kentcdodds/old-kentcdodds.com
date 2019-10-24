@@ -20,6 +20,11 @@ bannerCredit:
   'Photo by [Samuel Zeller](https://unsplash.com/photos/j0g8taxHZa0)'
 ---
 
+Current Available Translations:
+
+- [Korean](https://ideveloper2.dev/blog/2019-10-12--state-colocation-will-make-your-react-app-faster/)
+
+
 import {Layout, App, FastApp} from './components'
 
 One of the leading causes to slow React applications is global state, especially
