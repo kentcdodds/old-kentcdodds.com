@@ -1,6 +1,6 @@
 ---
-slug: 'how-to-start-testing'
-title: 'How to start testing'
+slug: 'how-to-add-testing-to-an-existing-project'
+title: 'How to add testing to an existing project'
 date: '2019-10-28'
 author: 'Kent C. Dodds'
 description: '_This is how you get started in testing your application_'
