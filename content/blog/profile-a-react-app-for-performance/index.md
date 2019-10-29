@@ -24,7 +24,7 @@ is an amazing piece of software and is available as a browser extension for
 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and
 is capable of being wired up to work with React app's anywhere.
 
-One of the coolest features of the React DevTools is it's profiling
+One of the coolest features of the React DevTools is its profiling
 capabilities. There's a lot to the profiler, and we're not going to get into it
 all in this post, but I thought I'd show you how you can get started using the
 React Profiler and avoid a common pitfall people run into when profiling their
@@ -127,7 +127,7 @@ you can skip to the next pitfall. Otherwise, please read on.
 ### Update the webpack config for production-profiling
 
 As noted in the message, there's a production build of React that removes most
-of the development-time helpful code, but leaves the profiling code in-tact.
+of the development-time helpful code, but leaves the profiling code intact.
 It's still a tiny bit slower, but it gives us the best idea of how our
 components are performing in a production environment.
 
