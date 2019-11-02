@@ -35,10 +35,8 @@ sanction omitting semicolons in a project.
 
 The first thing that you need to know is something called Automatic Semicolon
 Insertion (ASI). It's the "feature" that allows us to even have this
-conversation. Read up on that if you're not familiar. Like
-[Kyle's](https://twitter.com/getify)
-([post](http://blog.getify.com/not-all-semicolons)), I agree that you **should
-not** rely on ASI. It's a really bad idea for many reasons.
+conversation. Read up on that if you're not familiar. You **should not** rely
+on ASI. It's a really bad idea for many reasons.
 
 The problems with relying on ASI go away when you transpile or minify your code
 (depending on your technology). For example, transpiling with
