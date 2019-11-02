@@ -862,6 +862,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Crushford",
+      "name": "Crushford",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45968181?v=4",
+      "profile": "https://github.com/Crushford",
+      "contributions": [
+        "bug"
+      ]
     }
   ]
 }
