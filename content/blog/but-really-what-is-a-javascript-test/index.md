@@ -55,7 +55,7 @@ Here's the most basic form of a test I can think of:
 const actual = true
 const expected = false
 if (actual !== expected) {
-  throw new Error('${actual} is not ${expected}')
+  throw new Error(`${actual} is not ${expected}`)
 }
 ```
 
