@@ -65,7 +65,7 @@ general I'd say 😉
 In the entry file of your project, you probably have something that looks like
 this:
 
-```javascript
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
@@ -78,15 +78,15 @@ To enable Concurrent Mode, you'll use a new
 [`createRoot`](https://reactjs.org/docs/concurrent-mode-reference.html#createroot)
 API:
 
-```diff
-  import React from 'react'
-  import ReactDOM from 'react-dom'
-  import App from './app'
+```jsx {6-8}
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './app'
 
-  const rootEl = document.getElementById('root')
-- ReactDOM.render(<App />, rootEl)
-+ const root = ReactDOM.createRoot(rootEl)
-+ root.render(<App />)
+const rootEl = document.getElementById('root')
+// ReactDOM.render(<App />, rootEl)
+const root = ReactDOM.createRoot(rootEl)
+root.render(<App />)
 ```
 
 That's it.
@@ -126,7 +126,7 @@ linked above for more about this).
 You can try refactoring one of your asynchronous interactions to suspense, or
 just try adding this to somewhere in your app:
 
-```javascript
+```jsx
 function SuspenseDemo() {
   const [greetingResource, setGreetingResource] = React.useState(null)
   const [startTransition, isPending] = React.useTransition({
