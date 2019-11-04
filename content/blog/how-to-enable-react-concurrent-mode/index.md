@@ -127,11 +127,13 @@ You can try refactoring one of your asynchronous interactions to suspense, or
 just try adding this to somewhere in your app:
 
 ```jsx
+const TRANSITION_CONFIG = {
+  timeoutMs: 3000, // 🐨 Play with this number a bit...
+}
 function SuspenseDemo() {
   const [greetingResource, setGreetingResource] = React.useState(null)
-  const [startTransition, isPending] = React.useTransition({
-    timeoutMs: 3000, // 🐨 Play with this number a bit...
-  })
+  const [startTransition, isPending] = React.useTransition(TRANSITION_CONFIG)
+
   function handleSubmit(event) {
     event.preventDefault()
     const name = event.target.elements.nameInput.value
@@ -139,6 +141,7 @@ function SuspenseDemo() {
       setGreetingResource(createGreetingResource(name))
     })
   }
+
   return (
     <div>
       <strong>Suspense Demo</strong>
@@ -158,7 +161,7 @@ function SuspenseDemo() {
 
 function Greeting({greetingResource, isPending}) {
   return (
-    <p style={{opacity: isPending ? 0.6 : 1}}>
+    <p style={{opacity: isPending ? 0.4 : 1}}>
       {greetingResource ? greetingResource.read() : 'Please submit a name'}
     </p>
   )
