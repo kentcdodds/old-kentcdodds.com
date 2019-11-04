@@ -13,7 +13,7 @@ keywords:
   - 'testing'
   - 'javascript'
 banner: './images/banner.jpg'
-bannerCredit: 'Photo by [Unknown](https://unsplash.com/photos/_uM5_nG2ssc)'
+bannerCredit: 'Photo by [Gia Oris](https://unsplash.com/photos/_uM5_nG2ssc)'
 ---
 
 We've all been there. You're working on an app that was "just a prototype" and
