@@ -124,13 +124,10 @@ async function getPhotoCredit(unsplashPhotoId) {
     headers: {'User-Agent': fakeUa()},
   })
   const {
-    groups: {title},
-  } = response.data.match(/<title.*?>(?<title>.*?)<\/title>/) || {
-    groups: {title: 'by Unknown ('},
-  }
-  const {
     groups: {name},
-  } = title.match(/by (?<name>.+?) \(/) || {groups: {name: 'Unknown'}}
+  } = response.data.match(/Photo by (?<name>.*?) on Unsplash/) || {
+    groups: {name: 'Unknown'},
+  }
   return `Photo by [${name}](https://unsplash.com/photos/${unsplashPhotoId})`
 }
 
