@@ -13,7 +13,7 @@ keywords:
   - 'Concurrent Mode'
   - 'async react'
 banner: './images/banner.jpg'
-bannerCredit: 'Photo by [Unknown](https://unsplash.com/photos/a2g3LM0cGFg)'
+bannerCredit: 'Photo by [Marc Schulte](https://unsplash.com/photos/a2g3LM0cGFg)'
 ---
 
 React's new [Concurrent Mode](https://reactjs.org/concurrent) has just been
