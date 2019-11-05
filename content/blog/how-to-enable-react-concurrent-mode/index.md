@@ -230,7 +230,7 @@ these are atomic features which work really well within an abstraction and can
 be easily shared. So once you've got that abstraction, you're golden. It's
 awesome.
 
-## Step 5
+## Step 6
 
 **Undo all your changes.**
 
@@ -247,7 +247,7 @@ stuff, so there are still a lot of unknowns around trade-offs for different
 approaches. It's an exciting time. But if you value stability, then maybe
 pretend Concurrent Mode and suspense don't exist for a little while.
 
-## Step 6
+## Step 7
 
 **Enable Strict Mode.**
 
