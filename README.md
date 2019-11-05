@@ -8,7 +8,8 @@ Thanks goes to these wonderful people
 ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars0.githubusercontent.com/u/1500684?v=4" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=kentcdodds" title="Code">💻</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
@@ -134,8 +135,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/Crushford"><img src="https://avatars1.githubusercontent.com/u/45968181?v=4" width="100px;" alt="Crushford"/><br /><sub><b>Crushford</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3ACrushford" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://www.arnaurius.tech"><img src="https://avatars0.githubusercontent.com/u/32937662?v=4" width="100px;" alt="arnau-rius"/><br /><sub><b>arnau-rius</b></sub></a><br /><a href="#content-arnau-rius" title="Content">🖋</a></td>
     <td align="center"><a href="https://jsjoe.io"><img src="https://avatars3.githubusercontent.com/u/3806031?v=4" width="100px;" alt="JavaScript Joe"/><br /><sub><b>JavaScript Joe</b></sub></a><br /><a href="#content-jsjoeio" title="Content">🖋</a></td>
+    <td align="center"><a href="http://twitter.com/dan_abramov"><img src="https://avatars0.githubusercontent.com/u/810438?v=4" width="100px;" alt="Dan Abramov"/><br /><sub><b>Dan Abramov</b></sub></a><br /><a href="#ideas-gaearon" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
