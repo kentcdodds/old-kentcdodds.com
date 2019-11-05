@@ -4,8 +4,8 @@ title: 'How to Enable React Concurrent Mode'
 date: '2019-11-04'
 author: 'Kent C. Dodds'
 description:
-  "_Concurrent Mode is an enormous improvement for performance. Here's how you
-  enable it._"
+  "_Concurrent Mode is an enormous improvement for user experience and developer
+  experience. Here's how you enable it._"
 categories:
   - 'react'
 keywords:
@@ -22,8 +22,8 @@ published in the
 It's the result of years of research and that shows. If you'd like to learn more
 about why it's so cool, definitely watch
 [Dan Abramov's talk at JSIceland](https://www.youtube.com/watch?v=nLF0n9SACd4).
-And people have started playing around with it and seeing some real huge perf
-wins out of the box.
+And people have started playing around with it and seeing some nice perf wins
+out of the box.
 
 All that said, please remember that this _is_ experimental. The experimental
 release channel does not honor semver (so code relying on it could break
@@ -117,11 +117,11 @@ Try out Concurrent Mode. There are two primary things that Concurrent Mode
 enables for us:
 
 1. Time Slicing
-2. Suspense everything asynchronous
+2. Suspense for everything asynchronous
 
 If you have some user interaction in your app that you know is slow, try that
-out and hopefully it's faster. That's time slicing at work (watch Dan's talk
-linked above for more about this).
+out and if it's less janky, that's time slicing at work (watch Dan's talk linked
+above for more about this).
 
 You can try refactoring one of your asynchronous interactions to suspense, or
 just try adding this to somewhere in your app:
@@ -178,6 +178,9 @@ function getGreeting(name) {
   })
 }
 
+// 🚨 This should NOT be copy/pasted for production code and is only here
+// for experimentation purposes. The API for suspense (currently throwing a
+// promise) is likely to change before suspense is officially released.
 function createGreetingResource(name) {
   let status = 'pending'
   let result
