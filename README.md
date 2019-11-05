@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-96-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-97-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -133,6 +133,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://iamandrewluca.com/"><img src="https://avatars1.githubusercontent.com/u/1881266?v=4" width="100px;" alt="Andrew Luca"/><br /><sub><b>Andrew Luca</b></sub></a><br /><a href="#content-iamandrewluca" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Crushford"><img src="https://avatars1.githubusercontent.com/u/45968181?v=4" width="100px;" alt="Crushford"/><br /><sub><b>Crushford</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3ACrushford" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://www.arnaurius.tech"><img src="https://avatars0.githubusercontent.com/u/32937662?v=4" width="100px;" alt="arnau-rius"/><br /><sub><b>arnau-rius</b></sub></a><br /><a href="#content-arnau-rius" title="Content">🖋</a></td>
+    <td align="center"><a href="https://jsjoe.io"><img src="https://avatars3.githubusercontent.com/u/3806031?v=4" width="100px;" alt="JavaScript Joe"/><br /><sub><b>JavaScript Joe</b></sub></a><br /><a href="#content-jsjoeio" title="Content">🖋</a></td>
   </tr>
 </table>
 
