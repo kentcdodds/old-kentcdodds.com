@@ -233,7 +233,7 @@ export default Counter
 
 Cool, as far as the user is concerned, this component will work _exactly_ the
 same as it had before. But it's actually working differently from how it was
-before. The real trick here is that **the** `**useEffect**` **callback is
+before. The real trick here is that **the** **`useEffect`** **callback is
 _scheduled_ to run at a later time**. So before, we set the value of
 `localStorage` synchronously after rendering. Now, it's scheduled to run later
 after rendering. Why is this? Let's checkout
