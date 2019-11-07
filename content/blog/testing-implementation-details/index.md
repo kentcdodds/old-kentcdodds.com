@@ -31,8 +31,8 @@ we have to make all these rules to make it harder?
 There are two distinct reasons that it's important to avoid testing
 implementation details. Tests which test implementation details:
 
-1.  Can break when you refactor application code. **False negatives**
-2.  May not fail when you break application code. **False positives**
+1.  Can break when you refactor application code. **False positives**
+2.  May not fail when you break application code. **False negatives**
 
 Let's take a look at each of these in turn, using the following simple accordion
 component as an example:
@@ -104,7 +104,7 @@ Raise your hand if you've seen (or written) tests like this in your codebase
 
 Ok, now let's take a look at how things break down with these tests...
 
-### False negatives when refactoring
+### False positives when refactoring
 
 A surprising number of people find testing distasteful, especially UI testing.
 Why is this? There are various reasons for it, but one big reason I hear again
@@ -164,7 +164,7 @@ Received:
 Is that test failure warning us of a real problem? Nope! The component still
 works fine.
 
-**This is what's called a false negative.** It means that we got a test failure,
+**This is what's called a false positive (or false alarm).** It means that we got a test failure,
 but it was because of a broken test, not broken app code. I honestly cannot
 think of a more annoying test failure situation. Oh well, let's go ahead and fix
 our test:
@@ -181,10 +181,10 @@ our test:
 ```
 
 The takeaway: Tests which test implementation details can give you a false
-negative when you refactor your code. This leads to brittle and frustrating
+positive when you refactor your code. This leads to brittle and frustrating
 tests that seem to break anytime you so much as look at the code.
 
-### False positives
+### False negatives
 
 Ok, so now let's say your co-worker is working in the Accordion and they see
 this code:
@@ -216,8 +216,8 @@ So what went wrong? Didn't we have a test to verify that the state changes when
 appropriately!? Yes you did! But the problem is that there was no test to verify
 that the button was wired up to `setOpenIndex` correctly.
 
-**This is called a false positive.** It means that we didn't get a test failure,
-but we should have! So how do we cover ourselves to make sure this doesn't
+**This is called a false negative.** It means that we _didn't_ get a test failure,
+but we _should_ have! So how do we cover ourselves to make sure this doesn't
 happen again? We need to add another test to verify clicking the button updates
 the state correctly. And then I need to add a coverage threshold of 100% code
 coverage so we don't make this mistake again. Oh, and I should write a dozen or
