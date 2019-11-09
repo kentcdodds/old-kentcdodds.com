@@ -898,6 +898,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "baker-travis",
+      "name": "Travis Baker",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6519999?v=4",
+      "profile": "https://github.com/baker-travis",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none"
