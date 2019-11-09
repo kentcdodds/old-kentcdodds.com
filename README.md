@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-98-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-99-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -135,6 +135,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://www.arnaurius.tech"><img src="https://avatars0.githubusercontent.com/u/32937662?v=4" width="100px;" alt="arnau-rius"/><br /><sub><b>arnau-rius</b></sub></a><br /><a href="#content-arnau-rius" title="Content">🖋</a></td>
     <td align="center"><a href="https://jsjoe.io"><img src="https://avatars3.githubusercontent.com/u/3806031?v=4" width="100px;" alt="JavaScript Joe"/><br /><sub><b>JavaScript Joe</b></sub></a><br /><a href="#content-jsjoeio" title="Content">🖋</a></td>
     <td align="center"><a href="http://twitter.com/dan_abramov"><img src="https://avatars0.githubusercontent.com/u/810438?v=4" width="100px;" alt="Dan Abramov"/><br /><sub><b>Dan Abramov</b></sub></a><br /><a href="#ideas-gaearon" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/baker-travis"><img src="https://avatars2.githubusercontent.com/u/6519999?v=4" width="100px;" alt="Travis Baker"/><br /><sub><b>Travis Baker</b></sub></a><br /><a href="#content-baker-travis" title="Content">🖋</a></td>
   </tr>
 </table>
 
