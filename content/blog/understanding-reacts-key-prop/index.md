@@ -4,7 +4,7 @@ title: "Understanding React's key prop"
 date: '2019-11-11'
 author: 'Kent C. Dodds'
 description:
-  '_They key prop is a mechanism for controlling component instances._'
+  '_The key prop is a mechanism for controlling component instances._'
 categories:
   - 'react'
 keywords:
