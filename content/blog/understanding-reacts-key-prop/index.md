@@ -16,8 +16,12 @@ bannerCredit:
   'Photo by [Florian Berger](https://unsplash.com/photos/SzG0ncGBOeo)'
 ---
 
-import { WorkingContact, BrokenContact, CounterParent, Rendered, } from
-'./components'
+import {
+  WorkingContact,
+  BrokenContact,
+  CounterParent,
+  Rendered,
+} from './components'
 
 Play around with this form:
 
