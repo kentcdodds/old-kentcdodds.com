@@ -16,12 +16,8 @@ bannerCredit:
   'Photo by [Florian Berger](https://unsplash.com/photos/SzG0ncGBOeo)'
 ---
 
-import {
-  WorkingContact,
-  BrokenContact,
-  CounterParent,
-  Rendered,
-} from './components'
+import { WorkingContact, BrokenContact, CounterParent, Rendered, } from
+'./components'
 
 Play around with this form:
 
@@ -157,11 +153,15 @@ function Counter() {
 }
 
 function CounterParent() {
-  const [keyCounterKey, setKeyCounterKey] = React.useReducer(() => ({}))
+  // using useReducer this way basically ensures that any time you call
+  // setCounterKey, the `counterKey` is set to a new object which will
+  // make the `key` different resulting in React unmounting the previous
+  // component and mounting a new one.
+  const [counterKey, setCounterKey] = React.useReducer(() => ({}))
   return (
     <div>
-      <button onClick={setKeyCounterKey}>reset</button>
-      <Counter key={keyCounterKey} />
+      <button onClick={setCounterKey}>reset</button>
+      <Counter key={counterKey} />
     </div>
   )
 }
