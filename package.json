@@ -129,7 +129,7 @@
     "build-and-test": "yarn build && yarn test:e2e",
     "validate": "npm-run-all --parallel lint test:coverage build-and-test",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|graphql)\" && prettier --parser mdx --write \"**/*.+(md|mdx)\"",
     "cy": "is-ci \"test:e2e\" \"cy:open\"",
     "cy:open": "cypress open",
     "cy:run": "CYPRESS_BASE_URL=http://localhost:5020 cypress run",

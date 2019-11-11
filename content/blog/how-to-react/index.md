@@ -172,10 +172,11 @@ actually get you a long way with React and I encourage you to keep doing this as
 long as you're able. Eventually you'll start running into some trouble with "the
 prop-drilling problem." You'll know it when you feel it. When this happens, then
 I suggest you give my blog post
-["Application State Management"](/blog/application-state-management-with-react) a
-read through.
+["Application State Management"](/blog/application-state-management-with-react)
+a read through.
 
-> TL;DR: React is an Application State Management library and you don't need Redux
+> TL;DR: React is an Application State Management library and you don't need
+> Redux
 
 ### Component Styling
 

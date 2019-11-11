@@ -4,4 +4,5 @@ module.exports = {
     'prettier --write',
     'git add',
   ],
+  '*.+(md|mdx)': ['prettier --parser mdx --write', 'git add'],
 }

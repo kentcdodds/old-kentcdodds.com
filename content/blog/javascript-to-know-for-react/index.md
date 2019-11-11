@@ -17,6 +17,7 @@ bannerCredit:
 ---
 
 Current Available Translations:
+
 - [Türkçe](https://medium.com/p/14a6ef62bd72/)
 
 One of the things I love most about React compared to other frameworks that I've

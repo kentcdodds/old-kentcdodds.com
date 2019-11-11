@@ -266,7 +266,8 @@ React has available to you like `React.memo`, `React.useMemo`, and
 sometimes you can apply performance optimizations and your app actually runs
 slower! So measure first!
 
-Also remember that the [production version of react is faster than the development version](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build)
+Also remember that the
+[production version of react is faster than the development version](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build)
 
 To avoid this pitfall: **Know that React is fast by default and do some digging
 before applying performance optimizations pre-maturely 🏎💨**

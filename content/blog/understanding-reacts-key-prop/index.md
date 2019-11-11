@@ -16,12 +16,14 @@ bannerCredit:
   'Photo by [Florian Berger](https://unsplash.com/photos/SzG0ncGBOeo)'
 ---
 
+import {
+  WorkingContact,
+  BrokenContact,
+  CounterParent,
+  Rendered,
+} from './components'
+
 Play around with this form:
-
-<!-- prettier is super weird with this import... -->
-
-<!-- prettier-ignore -->
-import {WorkingContact, BrokenContact, CounterParent, Rendered} from './components'
 
 <Rendered>
   <BrokenContact />

@@ -16,10 +16,10 @@ banner: './images/banner.jpg'
 bannerCredit:
   'Photo by [Cytonn Photography](https://unsplash.com/photos/ZJEKICY5EXY)'
 ---
+
 Current Available Translations:
 
 - [Türkçe](https://medium.com/@ismailsimsek/bir-yaz%C4%B1l%C4%B1m-m%C3%BChendisi-olarak-nas%C4%B1l-deneyim-edinebilirsiniz-d5bc19e84c09)
-
 
 Here's the secret: More Problems, More Experience
 
@@ -86,9 +86,9 @@ problems–my own and other people's.
 One of the first libraries that I worked on was
 [angular-formly](https://github.com/formly-js/angular-formly) and I got into it
 because there was a feature that didn't exist that I needed. I could have
-passively moved on to another library to retrofit its capabilities to my app
-(or vice versa 😬). Instead I looked through the code to see that what I wanted
-was possible,
+passively moved on to another library to retrofit its capabilities to my app (or
+vice versa 😬). Instead I looked through the code to see that what I wanted was
+possible,
 [then opened an issue](https://github.com/formly-js/angular-formly/issues/16),
 followed by
 [a pull request](https://github.com/formly-js/angular-formly/pull/17). A few

@@ -220,8 +220,7 @@ function AddWithInput({n1, initialN2 = 0}) {
 
   return (
     <div>
-      {n1} + {' '}
-      <input type="number" value={n2} onChange={handleInputChange} /> ={' '}
+      {n1} + <input type="number" value={n2} onChange={handleInputChange} /> ={' '}
       {n1 + n2}
     </div>
   )

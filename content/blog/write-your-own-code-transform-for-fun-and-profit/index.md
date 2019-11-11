@@ -35,10 +35,10 @@ Up until now, only early adopters have tried to
 though there are a fair amount of
 [people using](https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md)
 the growing list of
-[existing macros](https://github.com/jgierer12/awesome-babel-macros).
-There are tons of awesome things you can do with `babel-plugin-macros`, and I
-want to dedicate this newsletter to showing you how to get started playing
-around with writing your own.
+[existing macros](https://github.com/jgierer12/awesome-babel-macros). There are
+tons of awesome things you can do with `babel-plugin-macros`, and I want to
+dedicate this newsletter to showing you how to get started playing around with
+writing your own.
 
 Let's start off with a contrived macro that can split a string of text and
 replace every space with `🐶`. We'll call it `gemmafy` because my dog's name is
