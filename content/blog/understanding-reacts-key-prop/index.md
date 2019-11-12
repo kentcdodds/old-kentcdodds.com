@@ -16,13 +16,13 @@ bannerCredit:
   'Photo by [Florian Berger](https://unsplash.com/photos/SzG0ncGBOeo)'
 ---
 
+<!-- prettier-ignore -->
 import {
   WorkingContact,
   BrokenContact,
   CounterParent,
   Rendered,
 } from './components'
-
 Play around with this form:
 
 <Rendered>
@@ -132,6 +132,9 @@ completely removed and the component is "reinitialized" for all intents and
 purposes. For components, this means that React will run cleanup on effects (or
 `componentWillUnmount`), then it will run state initializers (or the
 `constructor`) and effect callbacks (or `componentDidMount`).
+
+> NOTE: effect cleanup actually happens _after_ the new component has been
+> mounted, but before the next effect callback is run.
 
 Here's a simple example of this working in a counter:
 
