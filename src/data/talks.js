@@ -29,6 +29,8 @@ export default [
         event:
           '[All Things Open 2019](https://allthingsopen.org/speakers/kent-c-dodds)',
         date: '2019-10-13',
+        recording:
+          'https://www.youtube.com/watch?v=OGeoH-sqePE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
@@ -657,6 +659,8 @@ export default [
         event:
           '[All Things Open](https://allthingsopen.org/talk/managing-an-open-source-project)',
         date: '2019-10-15',
+        recording:
+          'https://www.youtube.com/watch?v=zCJyiBu12Jw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
