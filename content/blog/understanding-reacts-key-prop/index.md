@@ -29,11 +29,11 @@ Play around with this form:
   <BrokenContact />
 </Rendered>
 
-Specifically, try changing the subject, then switch the topic and notice that the value in the input
-field doesn't change to a more sensible subject. Even if you type something like
-"My company needs training" and then changing the topic from "Training" to
-"Question" it would make more sense to have it reset the subject to a better
-default.
+Specifically, try changing the subject, then switch the topic and notice that
+the value in the input field doesn't change to a more sensible subject. Even if
+you type something like "My company needs training" and then changing the topic
+from "Training" to "Question" it would make more sense to have it reset the
+subject to a better default.
 
 Now try this one:
 
