@@ -100,7 +100,7 @@ function Counter() {
 }
 
 function CounterParent() {
-  const [keyCounterKey, setKeyCounterKey] = React.useReducer(() => ({}))
+  const [keyCounterKey, setKeyCounterKey] = React.useReducer(c => c + 1, 0)
   return (
     <div>
       <button style={{marginRight: 10}} onClick={setKeyCounterKey}>

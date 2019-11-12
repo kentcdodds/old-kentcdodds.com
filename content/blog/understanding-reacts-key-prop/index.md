@@ -24,7 +24,6 @@ import {
   Rendered,
 } from './components'
 Play around with this form:
-
 <Rendered>
   <BrokenContact />
 </Rendered>
@@ -164,7 +163,7 @@ function CounterParent() {
   // setCounterKey, the `counterKey` is set to a new object which will
   // make the `key` different resulting in React unmounting the previous
   // component and mounting a new one.
-  const [counterKey, setCounterKey] = React.useReducer(() => ({}))
+  const [counterKey, setCounterKey] = React.useReducer(c => c + 1, 0)
   return (
     <div>
       <button onClick={setCounterKey}>reset</button>
