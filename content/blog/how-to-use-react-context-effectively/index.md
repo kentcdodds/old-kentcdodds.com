@@ -154,7 +154,7 @@ export {CountProvider}
 > NOTE: this is a contrived example that I'm intentionally over-engineering to
 > show you what a more real-world scenario would be like. **This does not mean
 > it has to be this complicated every time!** Feel free to use `useState` if
-> that suites your scenario. In addition, some providers are going to be short
+> that suits your scenario. In addition, some providers are going to be short
 > and simple like this, and others are going to be MUCH more involved with many
 > hooks.
 
