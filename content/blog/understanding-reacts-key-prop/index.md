@@ -24,6 +24,7 @@ import {
   Rendered,
 } from './components'
 Play around with this form:
+
 <Rendered>
   <BrokenContact />
 </Rendered>
