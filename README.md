@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-100-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-101-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -139,6 +139,7 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://github.com/baker-travis"><img src="https://avatars2.githubusercontent.com/u/6519999?v=4" width="100px;" alt="Travis Baker"/><br /><sub><b>Travis Baker</b></sub></a><br /><a href="#content-baker-travis" title="Content">🖋</a></td>
     <td align="center"><a href="http://kengregory.com"><img src="https://avatars0.githubusercontent.com/u/3155127?v=4" width="100px;" alt="Ken Gregory"/><br /><sub><b>Ken Gregory</b></sub></a><br /><a href="#content-kgregory" title="Content">🖋</a></td>
+    <td align="center"><a href="https://medium.com/enjoy-life-enjoy-coding"><img src="https://avatars2.githubusercontent.com/u/32596896?v=4" width="100px;" alt="GQSM"/><br /><sub><b>GQSM</b></sub></a><br /><a href="#translation-ms314006" title="Translation">🌍</a></td>
   </tr>
 </table>
 
