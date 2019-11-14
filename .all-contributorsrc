@@ -916,6 +916,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ms314006",
+      "name": "GQSM",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32596896?v=4",
+      "profile": "https://medium.com/enjoy-life-enjoy-coding",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none"
