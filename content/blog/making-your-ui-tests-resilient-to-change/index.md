@@ -16,6 +16,10 @@ banner: ./images/banner.jpg
 bannerCredit: 'Photo by [Warren Wong](https://unsplash.com/photos/tHiGKAJxaA8)'
 ---
 
+Current Available Translations:
+
+- [Traditional Chinese](https://medium.com/enjoy-life-enjoy-coding/react-unit-test-%E8%AE%93%E4%BD%A0%E7%9A%84-ui-%E6%B8%AC%E8%A9%A6%E9%81%A9%E6%87%89%E8%AE%8A%E5%8C%96-%E7%BF%BB%E8%AD%AF-b9b2c1c4110f)
+
 You're a developer and you want to avoid shipping a broken login experience, so
 you're writing some tests to make sure you don't. Let's get a quick look at
 [an example of such a form](https://github.com/kentcdodds/testing-workshop/blob/1938d6fc2048e55362679905f700f938a3b497c4/client/src/screens/login.js#L50-L82):
