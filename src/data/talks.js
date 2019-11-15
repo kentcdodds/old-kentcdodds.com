@@ -759,6 +759,13 @@ export default [
     tags: ['ECMAScript', 'babel', 'eslint', 'live coding'],
     deliveries: [
       {
+        event:
+          '[PDXNode Meetup](https://www.meetup.com/pdxnode/events/dcvjdnywnbqb/)',
+        date: '2017-10-12',
+        recording:
+          'https://www.youtube.com/watch?v=VicU_XwriWw&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
         event: '[Open West 2017](https://www.openwest.org/schedule/#talk-99)',
         date: '2017-07-13',
         recording:
