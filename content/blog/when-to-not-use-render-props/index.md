@@ -66,7 +66,7 @@ by [Michael Jackson](https://twitter.com/mjackson).
 
 Another problem that render props have solved for me in my codebases is
 abstracting away imperative code. I love the example
-[Ryan Florence](https://twitter.com/mjackson) gave in his talk almost 2 years
+[Ryan Florence](https://twitter.com/ryanflorence) gave in his talk almost 2 years
 ago at [React Rally](http://www.reactrally.com)called
 [`‹Rethinker stop={false}/›`](https://youtu.be/kp-NOggyz54) where he refactored
 a bunch of imperative code in a React Component's lifecycle methods to a
