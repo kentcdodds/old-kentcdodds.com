@@ -925,6 +925,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "AMashoshyna",
+      "name": "Anastasiya Mashoshyna",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17703790?v=4",
+      "profile": "https://github.com/AMashoshyna",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none"
