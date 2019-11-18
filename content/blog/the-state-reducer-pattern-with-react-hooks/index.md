@@ -52,6 +52,8 @@ this, I strongly recommend you give my React Rally 2018 talk a watch:
 
 https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf
 
+> Read also on my blog: ["Inversion of Control"](/blog/inversion-of-control)
+
 So in the downshift example, I had made the decision that when an end user
 selects an item, the `isOpen` should be set to `false` (and the menu should be
 closed). Someone was building a multi-select with downshift and wanted to keep

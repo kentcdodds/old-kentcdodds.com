@@ -184,11 +184,7 @@ Toggle.Button = Button
 
 Here's this component in action:
 
-<iframe
-  src="https://codesandbox.io/embed/9yp5p2z7yr"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-/>
+https://codesandbox.io/s/9yp5p2z7yr
 
 So the way this works is we create a context with React where we store the state
 and a mechanism for updating the state. Then the `<Toggle>` component is
@@ -200,3 +196,5 @@ that!
 
 I hope that helps you get some ideas of ways you can make your component APIs
 more expressive and useful. Good luck!
+
+> Read also on my blog: ["Inversion of Control"](/blog/inversion-of-control)
