@@ -280,7 +280,7 @@ function filterWithOptions(
 ) {
   return filter(
     array,
-    el =>
+    element =>
       !(
         (filterNull && element === null) ||
         (filterUndefined && element === undefined) ||
