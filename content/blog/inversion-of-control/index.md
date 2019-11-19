@@ -234,13 +234,13 @@ filter(
     {name: 'elephant', legs: 4, mammal: true},
     {name: 'robin', legs: 2, mammal: true},
     {name: 'cat', legs: 4, mammal: true},
-    {name: 'slamon', legs: 0, mammal: false},
+    {name: 'salmon', legs: 0, mammal: false},
   ],
   animal => animal.legs === 0,
 )
 // [
 //   {name: 'dolphin', legs: 0, mammal: true},
-//   {name: 'slamon', legs: 0, mammal: false},
+//   {name: 'salmon', legs: 0, mammal: false},
 // ]
 ```
 
@@ -315,13 +315,13 @@ filterByLegCount(
     {name: 'elephant', legs: 4, mammal: true},
     {name: 'robin', legs: 2, mammal: true},
     {name: 'cat', legs: 4, mammal: true},
-    {name: 'slamon', legs: 0, mammal: false},
+    {name: 'salmon', legs: 0, mammal: false},
   ],
   0,
 )
 // [
 //   {name: 'dolphin', legs: 0, mammal: true},
-//   {name: 'slamon', legs: 0, mammal: false},
+//   {name: 'salmon', legs: 0, mammal: false},
 // ]
 ```
 
