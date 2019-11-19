@@ -1,6 +1,6 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-102-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-103-orange.svg?style=flat-square)](#contributors)
 
 ## Contributors
 
@@ -141,6 +141,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://kengregory.com"><img src="https://avatars0.githubusercontent.com/u/3155127?v=4" width="100px;" alt="Ken Gregory"/><br /><sub><b>Ken Gregory</b></sub></a><br /><a href="#content-kgregory" title="Content">🖋</a></td>
     <td align="center"><a href="https://medium.com/enjoy-life-enjoy-coding"><img src="https://avatars2.githubusercontent.com/u/32596896?v=4" width="100px;" alt="GQSM"/><br /><sub><b>GQSM</b></sub></a><br /><a href="#translation-ms314006" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/AMashoshyna"><img src="https://avatars0.githubusercontent.com/u/17703790?v=4" width="100px;" alt="Anastasiya Mashoshyna"/><br /><sub><b>Anastasiya Mashoshyna</b></sub></a><br /><a href="#content-AMashoshyna" title="Content">🖋</a></td>
+    <td align="center"><a href="http://arkalyk.org"><img src="https://avatars2.githubusercontent.com/u/12795961?v=4" width="100px;" alt="Arkalyk Akash"/><br /><sub><b>Arkalyk Akash</b></sub></a><br /><a href="#content-aarkalyk" title="Content">🖋</a></td>
   </tr>
 </table>
 
