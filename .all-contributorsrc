@@ -934,6 +934,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "aarkalyk",
+      "name": "Arkalyk Akash",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12795961?v=4",
+      "profile": "http://arkalyk.org",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none"
