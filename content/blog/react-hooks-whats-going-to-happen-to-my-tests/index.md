@@ -389,7 +389,7 @@ Fun trick right? I show you how to do this in
 
 If you're writing a generic or open source hook, then you may want to test it
 without a specific component in mind. In that case, I recommend using
-[`react-hooks-testing-library`](https://www.npmjs.com/package/react-hooks-testing-library).
+[`@testing-library/react-hooks`](https://www.npmjs.com/package/@testing-library/react-hooks).
 
 ## Conclusion
 
