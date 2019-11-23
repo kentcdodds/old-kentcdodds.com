@@ -154,7 +154,7 @@ function Header({
             </NavLink>
             <NavLink
               headerColor={headerColor}
-              to="/chats-with-kent-podcast/seasons/01"
+              to="/chats-with-kent-podcast"
               aria-label="View podcast page"
             >
               Podcast

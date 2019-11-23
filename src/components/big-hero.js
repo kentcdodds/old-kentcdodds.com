@@ -17,6 +17,7 @@ function Hero({
   background = `url(${heroImageRight}), url(${heroImageLeft}),
   linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
   image = `${photoOfKent}`,
+  ...props
 }) {
   return (
     <section
@@ -43,8 +44,8 @@ function Hero({
           padding-top: 60px;
         }
       `}
+      {...props}
     >
-      {children}
       <Container
         css={css`
           display: flex;
@@ -129,6 +130,7 @@ function Hero({
               {text}
             </Markdown>
           )}
+          {children}
         </div>
         <div
           css={{

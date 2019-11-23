@@ -42,7 +42,7 @@ const theme = {
     vertical: '3rem',
   },
   transition: {
-    ease: 'all 200ms ease',
+    ease: 'all 100ms ease',
   },
 }
 

@@ -3,20 +3,24 @@ slug: the-state-reducer-pattern
 title: "The state reducer pattern ⚛️ \U0001F3CE"
 date: '2018-02-19'
 author: Kent C. Dodds
-description: >-
+description:
   _A new pattern has been implemented in downshift and it's awesome. Use the
   state reducer pattern to make your components more useful._
+categories:
+  - react
 keywords:
   - react
+  - state reducer
   - javascript
 banner: ./images/banner.jpg
 bannerCredit:
-  'Photo by [Daniel Wallace](https://unsplash.com/photos/IliTEyruu7U) on
-  [Unsplash](https://unsplash.com/search/photos/waterfall)'
+  'Photo by [Daniel Wallace](https://unsplash.com/photos/IliTEyruu7U)'
 ---
 
 > NOTE: I've published
 > [an updated version of this blog post with React Hooks](/blog/the-state-reducer-pattern-with-react-hooks)!
+
+> Read also on my blog: ["Inversion of Control"](/blog/inversion-of-control)
 
 This last week, [@notruth](https://github.com/notruth) (new code contributor to
 the

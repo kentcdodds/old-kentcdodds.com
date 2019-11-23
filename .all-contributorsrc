@@ -916,6 +916,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ms314006",
+      "name": "GQSM",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32596896?v=4",
+      "profile": "https://medium.com/enjoy-life-enjoy-coding",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "AMashoshyna",
+      "name": "Anastasiya Mashoshyna",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/17703790?v=4",
+      "profile": "https://github.com/AMashoshyna",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "aarkalyk",
+      "name": "Arkalyk Akash",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12795961?v=4",
+      "profile": "http://arkalyk.org",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none"

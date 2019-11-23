@@ -20,7 +20,7 @@ bannerCredit:
 import {Counter, Layout} from './components'
 
 Performance is a serious issue and we should make our apps as fast as possible.
-How we go about doing that will make a big impact on not only the the
+How we go about doing that will make a big impact on not only the
 effectiveness of our optimizations but also the complexity of our code (how
 quickly we can make improvements and changes in the future).
 
