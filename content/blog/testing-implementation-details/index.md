@@ -16,6 +16,10 @@ bannerCredit:
   [Unsplash](https://unsplash.com)'
 ---
 
+Current Available Translations:
+
+- [Traditional Chinese](https://medium.com/@GQSM/react-unit-test-%E7%82%BA%E5%9F%B7%E8%A1%8C%E7%B4%B0%E7%AF%80%E5%AF%AB%E4%B8%8B%E6%B8%AC%E8%A9%A6-%E7%BF%BB%E8%AD%AF-7bec3bca4ee1)
+
 Last year when I was using enzyme (like everyone else at the time), I stepped
 carefully around certain APIs in enzyme. I
 [completely avoided shallow rendering](/blog/why-i-never-use-shallow-rendering),
