@@ -10,7 +10,7 @@ import HeaderImage from '../../images/chats-with-kent.svg'
 import theme from '../../../config/theme'
 import {bpMaxSM, bpMaxMD} from 'lib/breakpoints'
 
-function SeasonIndex({data: {s1}}) {
+function SeasonIndex({data: {s1, s2}}) {
   return (
     <Layout
       hero={
@@ -50,7 +50,8 @@ function SeasonIndex({data: {s1}}) {
           zIndex: 5,
         }}
       >
-        <PodcastSeason data={s1} />
+        <PodcastSeason data={s2} />
+        <PodcastSeason css={{marginTop: '1.5rem'}} data={s1} />
       </Container>
     </Layout>
   )
@@ -62,6 +63,31 @@ export const seasonIndexQuery = graphql`
   {
     s1: allMdx(
       filter: {frontmatter: {season: {eq: 1}}, fields: {isPodcast: {eq: true}}}
+      sort: {order: ASC, fields: frontmatter___number}
+    ) {
+      totalCount
+      nodes {
+        id
+        fields {
+          isPodcast
+          slug
+        }
+        frontmatter {
+          title
+          season
+          number
+          guestPhoto {
+            childImageSharp {
+              fluid(maxWidth: 80) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      }
+    }
+    s2: allMdx(
+      filter: {frontmatter: {season: {eq: 2}}, fields: {isPodcast: {eq: true}}}
       sort: {order: ASC, fields: frontmatter___number}
     ) {
       totalCount

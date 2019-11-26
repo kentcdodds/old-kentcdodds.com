@@ -40,9 +40,6 @@ const typography = new Typography({
       color: 'hsla(0,0%,0%,0.775)',
       fontFamily: fonts.semibold,
     },
-    h3: {
-      color: 'hsla(0,0%,0%,0.8)',
-    },
     'h1,h2,h3,h4,h5,h6': {
       lineHeight: 1,
     },
