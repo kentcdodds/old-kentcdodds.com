@@ -8,11 +8,12 @@ import theme from '../../../config/theme'
 import {fonts} from 'lib/typography'
 import SoundWave from '../../images/sound-wave.svg'
 
-function PodcastSeason({data, isNew}) {
+function PodcastSeason({data, isNew, ...restProps}) {
   const firstEpisode = first(data.nodes)
 
   return (
     <div
+      {...restProps}
       css={{
         background: 'white',
         borderRadius: 5,
