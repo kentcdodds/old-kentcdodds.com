@@ -364,7 +364,7 @@ function useCounter() {
   return {count, increment}
 }
 
-const Counter = ({children, ...props}) => children(useCounter(props))
+const Counter = ({children, ...props}) => children({useCounter, ...props})
 
 export default Counter
 export {useCounter}
