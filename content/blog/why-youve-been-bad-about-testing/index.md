@@ -27,7 +27,7 @@ Pretty much everyone's had a situation where tests saved them from a production
 bug...or would have saved them if tests had been in place.
 
 But there's still a struggle.
-[The other day I asked on twitter](https://twitter.com/kentcdodds/status/1048645068616163328)
+[I asked on twitter](https://twitter.com/kentcdodds/status/1048645068616163328)
 what you all struggle with around testing. The struggle comes when you're trying
 to determine what to test, how much time you have to test, what granularity to
 test, what to mock and what to keep real, or just the daunting task of setting
@@ -79,6 +79,3 @@ With the tools and techniques I'm going to show you, this process will become a
 natural habit. 💯
 
 Stop the struggle. Follow me.
-
-P.S. Stay tuned, because over the next couple weeks I'll share more strategy and
-tactics for getting your testing skills up to date.
