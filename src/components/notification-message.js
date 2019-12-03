@@ -8,6 +8,7 @@ import parseQueryString from '../lib/parse-query-string'
 // and it's such a simple single-use component hack something I could ship...
 function NotificationMessage({queryStringKey, children}) {
   const portalContainerRef = React.useRef(null)
+  const [message, setMessage] = React.useState(children)
   const [showMessage, setShowMessage] = React.useState(false)
   const [animateIn, setAnimateIn] = React.useState(false)
   React.useEffect(() => {
@@ -23,9 +24,12 @@ function NotificationMessage({queryStringKey, children}) {
   }, [])
 
   React.useEffect(() => {
-    if (
-      parseQueryString(window.location.search).hasOwnProperty(queryStringKey)
-    ) {
+    const query = parseQueryString(window.location.search)
+    const queryStringValue = query.hasOwnProperty(queryStringKey)
+    if (queryStringValue) {
+      if (query[queryStringKey] && !message) {
+        setMessage(query[queryStringKey])
+      }
       setTimeout(() => {
         setShowMessage(true)
         setTimeout(() => {
@@ -33,7 +37,7 @@ function NotificationMessage({queryStringKey, children}) {
         }, 8000)
       }, 200)
     }
-  }, [queryStringKey])
+  }, [message, queryStringKey])
 
   React.useEffect(() => {
     if (showMessage) {
@@ -58,7 +62,7 @@ function NotificationMessage({queryStringKey, children}) {
           transform: translateY(${animateIn ? '0' : '-85'}px);
         `}
       >
-        {children}
+        {message}
       </button>,
       portalContainerRef.current,
     )

@@ -182,6 +182,7 @@ function Layout({
 
   return (
     <ThemeProvider theme={theme}>
+      <NotificationMessage queryStringKey="message" />
       <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
       <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage>
       <Global styles={globalStyles} />
