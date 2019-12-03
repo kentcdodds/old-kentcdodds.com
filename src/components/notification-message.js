@@ -27,7 +27,7 @@ function NotificationMessage({queryStringKey, children}) {
     const query = parseQueryString(window.location.search)
     const queryStringValue = query.hasOwnProperty(queryStringKey)
     if (queryStringValue) {
-      if (query[queryStringKey] && !message) {
+      if (query[queryStringKey]) {
         setMessage(query[queryStringKey])
       }
       setTimeout(() => {
