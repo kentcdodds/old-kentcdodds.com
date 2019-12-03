@@ -42,7 +42,8 @@ and direction.
 The author, [Kent C. Dodds](https://kentcdodds.com), is a highly respected
 member of the community and we use open source software that he has created and
 contributed to. He has deep knowledge of testing and has taught hundreds of
-thousands of software engineers.
+thousands of software engineers. He's even the author and maintainer of some of
+the open source testing tools we plan to use.
 
 Please do let us know if you have questions. We'd love to discuss it. To get
 things started, go to
