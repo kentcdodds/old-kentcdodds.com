@@ -8,7 +8,8 @@ Thanks goes to these wonderful people
 ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars0.githubusercontent.com/u/1500684?v=4" width="100px;" alt="Kent C. Dodds"/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=kentcdodds" title="Code">💻</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
@@ -142,9 +143,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://medium.com/enjoy-life-enjoy-coding"><img src="https://avatars2.githubusercontent.com/u/32596896?v=4" width="100px;" alt="GQSM"/><br /><sub><b>GQSM</b></sub></a><br /><a href="#translation-ms314006" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/AMashoshyna"><img src="https://avatars0.githubusercontent.com/u/17703790?v=4" width="100px;" alt="Anastasiya Mashoshyna"/><br /><sub><b>Anastasiya Mashoshyna</b></sub></a><br /><a href="#content-AMashoshyna" title="Content">🖋</a></td>
     <td align="center"><a href="http://arkalyk.org"><img src="https://avatars2.githubusercontent.com/u/12795961?v=4" width="100px;" alt="Arkalyk Akash"/><br /><sub><b>Arkalyk Akash</b></sub></a><br /><a href="#content-aarkalyk" title="Content">🖋</a></td>
+    <td align="center"><a href="https://n8finch.com/"><img src="https://avatars0.githubusercontent.com/u/7983116?v=4" width="100px;" alt="Nate Finch"/><br /><sub><b>Nate Finch</b></sub></a><br /><a href="#content-n8finch" title="Content">🖋</a></td>
   </tr>
 </table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
