@@ -515,7 +515,7 @@ specific use case).
 
 If you'd like to play around with the example in this blog post, feel free:
 
-[![Edit inversion-of-control](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/trusting-sound-qunm8?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit Inversion of Control](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/inversion-of-control-qunm8?fontsize=14&hidenavigation=1&theme=dark)
 
 Good luck!
 
