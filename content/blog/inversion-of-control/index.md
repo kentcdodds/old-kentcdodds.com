@@ -513,6 +513,10 @@ control and move the logic to where it's being used (or if it's being used in
 multiple places, then you can build a more custom-made abstraction for that
 specific use case).
 
+If you'd like to play around with the example in this blog post, feel free:
+
+[![Edit inversion-of-control](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/trusting-sound-qunm8?fontsize=14&hidenavigation=1&theme=dark)
+
 Good luck!
 
 P.S. If you liked this blog post, then you'll probably like this talk:
