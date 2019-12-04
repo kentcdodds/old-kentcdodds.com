@@ -943,7 +943,17 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "n8finch",
+      "name": "Nate Finch",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7983116?v=4",
+      "profile": "https://n8finch.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
-  "commitConvention": "none"
+  "commitConvention": "none",
+  "skipCi": true
 }
