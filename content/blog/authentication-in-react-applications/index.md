@@ -182,6 +182,11 @@ don't need a spinner and you have the user's information available to you by the
 time you start rendering. Even in that situation, taking a branch higher up in
 the tree of your app drastically simplifies the maintenance of your app.
 
+If you want to play around with a really simple version of this, open up this
+codesandbox:
+
+[![Edit React App Auth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-app-auth-bc99t?fontsize=14&hidenavigation=1&theme=dark)
+
 I hope this is helpful to you. You can checkout
 [the bookshelf repo](https://github.com/kentcdodds/bookshelf)
 ([or even edit it on codesandbox](https://codesandbox.io/s/github/kentcdodds/bookshelf))
