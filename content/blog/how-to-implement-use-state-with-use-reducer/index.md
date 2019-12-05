@@ -17,6 +17,14 @@ bannerCredit:
   'Photo by [Marc Sendra Martorell](https://unsplash.com/photos/7ajo0Vz98yU)'
 ---
 
+**[Watch "Implement useState with useReducer" on egghead.io](https://egghead.io/lessons/react-implement-usestate-with-usereducer/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+<iframe
+  src="https://egghead.io/lessons/react-implement-usestate-with-usereducer/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
+  allowfullscreen
+/>
+
 Here's the TL;DR:
 
 ```javascript

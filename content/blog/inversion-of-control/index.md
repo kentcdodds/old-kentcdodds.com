@@ -20,6 +20,14 @@ bannerCredit:
   'Photo by [Jasper Garratt](https://unsplash.com/photos/CL96u03iK_Y)'
 ---
 
+**[Watch "Implement Inversion of Control" on egghead.io](https://egghead.io/lessons/egghead-implement-inversion-of-control/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+<iframe
+  src="https://egghead.io/lessons/egghead-implement-inversion-of-control/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
+  allowfullscreen
+/>
+
 If you've ever built code that was used in more than one place before, then
 you're likely familiar with this story:
 
