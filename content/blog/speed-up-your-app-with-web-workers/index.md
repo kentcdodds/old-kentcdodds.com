@@ -15,6 +15,14 @@ bannerCredit:
   'Photo by [Matthew Brodeur](https://unsplash.com/photos/eJ9mX6yEbAw)'
 ---
 
+**[Watch "Get started with Web Workers" on egghead.io](https://egghead.io/lessons/javascript-get-started-with-web-workers?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+<iframe
+  src="https://egghead.io/lessons/javascript-get-started-with-web-workers/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
+  allowfullscreen
+/>
+
 I remember when I started learning about threads in Java. My college professor
 pulled up iTunes, hit play on a song and said: "if it weren't for threads, I
 wouldn't be able to click any of these buttons at the same time iTunes is
