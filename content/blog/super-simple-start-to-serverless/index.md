@@ -19,10 +19,10 @@ bannerCredit:
   'Photo by [Klemen Vrankar](https://unsplash.com/photos/F_7Z1A6Jp_s)'
 ---
 
-**[Watch "Get started with Netlify Serverless Functions" on egghead.io](https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+**[Watch "Get started with Netlify Serverless Functions" on egghead.io](https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
 <iframe
-  src="https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  src="https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
   style="width: 100%; height: 410px; border: none; border-radius: 4px;"
   allowfullscreen
 />

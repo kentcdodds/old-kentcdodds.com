@@ -20,10 +20,10 @@ bannerCredit:
   'Photo by [Jasper Garratt](https://unsplash.com/photos/CL96u03iK_Y)'
 ---
 
-**[Watch "Implement Inversion of Control" on egghead.io](https://egghead.io/lessons/egghead-implement-inversion-of-control?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+**[Watch "Implement Inversion of Control" on egghead.io](https://egghead.io/lessons/egghead-implement-inversion-of-control?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
 <iframe
-  src="https://egghead.io/lessons/egghead-implement-inversion-of-control/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  src="https://egghead.io/lessons/egghead-implement-inversion-of-control/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
   style="width: 100%; height: 410px; border: none; border-radius: 4px;"
   allowfullscreen
 />

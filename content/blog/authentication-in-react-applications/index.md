@@ -17,10 +17,10 @@ banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Mike Enerio](https://unsplash.com/photos/H58bnmnedTc)'
 ---
 
-**[Watch "Organization of Authentication State in React Apps" on egghead.io](https://egghead.io/lessons/egghead-organization-of-authentication-state-in-react-apps?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+**[Watch "Organization of Authentication State in React Apps" on egghead.io](https://egghead.io/lessons/egghead-organization-of-authentication-state-in-react-apps?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
 <iframe
-  src="https://egghead.io/lessons/egghead-organization-of-authentication-state-in-react-apps/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  src="https://egghead.io/lessons/egghead-organization-of-authentication-state-in-react-apps/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
   style="width: 100%; height: 410px; border: none; border-radius: 4px;"
   allowfullscreen
 />
