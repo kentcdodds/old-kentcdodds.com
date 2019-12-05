@@ -17,7 +17,7 @@ bannerCredit:
   'Photo by [Marc Sendra Martorell](https://unsplash.com/photos/7ajo0Vz98yU)'
 ---
 
-**[Watch "Implement useState with useReducer" on egghead.io](https://egghead.io/lessons/react-implement-usestate-with-usereducer/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+**[Watch "Implement useState with useReducer" on egghead.io](https://egghead.io/lessons/react-implement-usestate-with-usereducer?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
 
 <iframe
   src="https://egghead.io/lessons/react-implement-usestate-with-usereducer/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"

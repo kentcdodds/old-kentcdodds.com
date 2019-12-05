@@ -19,6 +19,14 @@ bannerCredit:
   'Photo by [Klemen Vrankar](https://unsplash.com/photos/F_7Z1A6Jp_s)'
 ---
 
+**[Watch "Get started with Netlify Serverless Functions" on egghead.io](https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+<iframe
+  src="https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c"
+  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
+  allowfullscreen
+/>
+
 This last little while I've been doing a fair amount of work on
 [kentcdodds.com](https://kentcdodds.com). One page that I've been working on is
 the [contact page](/contact) where you can
