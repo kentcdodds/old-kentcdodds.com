@@ -2,6 +2,8 @@ const path = require('path')
 const config = require('./config/website')
 const proxy = require('http-proxy-middleware')
 
+const eggheadTransformer = require('./embedder-transformers/egghead')
+
 const here = (...p) => path.join(__dirname, ...p)
 
 require('dotenv').config({
@@ -107,7 +109,12 @@ module.exports = {
               maxWidth: 1035,
             },
           },
-          {resolve: 'gatsby-remark-embedder'},
+          {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+              customTransformers: [eggheadTransformer],
+            },
+          },
         ],
       },
     },

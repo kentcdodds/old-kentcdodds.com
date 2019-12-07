@@ -885,6 +885,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.6.3":
+  version "7.7.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.5.tgz#4b087f183f5d83647744d4157f66199081d17a00"
+  integrity sha512-UXhClKWTL7/vlYX49kETXti6VbpPJK/pdsIOqUMhUUES/lqThpNTsmC/0aU/IW4uozDUx17axjeqel7SCYF6EQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.4.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -7145,12 +7152,12 @@ gatsby-remark-copy-linked-files@^2.1.20:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embedder@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-1.2.0.tgz#b5d4095bc136b15c9d4be3fc1d09c6131f0bb50e"
-  integrity sha512-l1C6ERrChQWZOkj9m/TgY2wZU7uEutcHVpp27nJ/gTkjyBrx94Te9z+w13rvE5aXoiR5cDNHg+Veb40G9/l6Fw==
+gatsby-remark-embedder@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-1.6.0.tgz#395b9af81192b653f9612e58293bb80f1b20434f"
+  integrity sha512-d2DLsYbrPMZDeRrlRuTrI8Y5aE0chGu34ibhsfRgNbkZArb8a5QftUSXFSK98P71IOHEGJjXvQplYT6fIESWlw==
   dependencies:
-    "@babel/runtime" "^7.6.0"
+    "@babel/runtime" "^7.6.3"
     node-fetch "^2.6.0"
     unist-util-visit "^2.0.0"
 

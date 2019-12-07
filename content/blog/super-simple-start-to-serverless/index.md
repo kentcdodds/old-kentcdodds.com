@@ -21,11 +21,7 @@ bannerCredit:
 
 **[Watch "Get started with Netlify Serverless Functions" on egghead.io](https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
-<iframe
-  src="https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
-  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
-  allowfullscreen
-/>
+https://egghead.io/lessons/javascript-get-started-with-netlify-serverless-functions?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad
 
 This last little while I've been doing a fair amount of work on
 [kentcdodds.com](https://kentcdodds.com). One page that I've been working on is
