@@ -19,11 +19,7 @@ bannerCredit:
 
 **[Watch "Implement useState with useReducer" on egghead.io](https://egghead.io/lessons/react-implement-usestate-with-usereducer?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
-<iframe
-  src="https://egghead.io/lessons/react-implement-usestate-with-usereducer/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
-  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
-  allowfullscreen
-/>
+https://egghead.io/lessons/react-implement-usestate-with-usereducer?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad
 
 Here's the TL;DR:
 

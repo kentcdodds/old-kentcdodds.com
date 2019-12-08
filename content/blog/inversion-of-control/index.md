@@ -22,11 +22,7 @@ bannerCredit:
 
 **[Watch "Implement Inversion of Control" on egghead.io](https://egghead.io/lessons/egghead-implement-inversion-of-control?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad)**
 
-<iframe
-  src="https://egghead.io/lessons/egghead-implement-inversion-of-control/embed?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad"
-  style="width: 100%; height: 410px; border: none; border-radius: 4px;"
-  allowfullscreen
-/>
+https://egghead.io/lessons/egghead-implement-inversion-of-control?pl=kent-s-blog-posts-as-screencasts-eefa540c&af=5236ad
 
 If you've ever built code that was used in more than one place before, then
 you're likely familiar with this story:
