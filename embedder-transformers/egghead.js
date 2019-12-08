@@ -22,4 +22,4 @@ const getHTML = url => {
   return `<iframe src="${iframeSrc}" style="width: 100%; height: 410px; border: none; border-radius: 4px;" allowfullscreen></iframe>`
 }
 
-export {getHTML, shouldTransform}
+module.exports = {getHTML, shouldTransform}
