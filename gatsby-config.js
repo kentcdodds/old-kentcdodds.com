@@ -7,6 +7,10 @@ const eggheadTransformer = require('./embedder-transformers/egghead')
 const here = (...p) => path.join(__dirname, ...p)
 
 require('dotenv').config({
+  path: `.env`,
+})
+
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -123,6 +127,22 @@ module.exports = {
       options: {
         backgroundColor: '#fafafa',
         maxWidth: 1035,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-cloudinary',
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        uploadFolder: 'gatsby-cloudinary',
       },
     },
     'gatsby-plugin-twitter',
