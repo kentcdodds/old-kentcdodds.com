@@ -178,7 +178,8 @@ function WorkshopInterestForm({style, subscribeToTag, title}) {
           }}
           validationSchema={SubscribeSchema}
           onSubmit={setValues}
-          render={() => (
+        >
+          {() => (
             <div
               css={css`
                 display: flex;
@@ -242,7 +243,7 @@ function WorkshopInterestForm({style, subscribeToTag, title}) {
               </StyledForm>
             </div>
           )}
-        />
+        </Formik>
       )}
       {submitted && !pending && <PostSubmissionMessage response={response} />}
       {errorMessage && <div>{errorMessage}</div>}

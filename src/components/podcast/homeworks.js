@@ -35,9 +35,10 @@ function Homework({children = [], ...props}) {
       }}
       {...props}
     >
-      <label className="container" onClick={handleChange}>
+      <label className="container">
         <input
           type="checkbox"
+          onClick={handleChange}
           name={
             Array.isArray(children.props.children)
               ? children.props.children[0]

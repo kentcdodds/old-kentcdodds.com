@@ -219,9 +219,7 @@ function Layout({
             fixed={fixedHeader}
             headerImage={logo}
           />
-          <MDXProvider components={mdxComponents}>
-            <>{children}</>
-          </MDXProvider>
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
         </div>
         <div css={{flexShrink: '0'}}>
           {noFooter ? null : (

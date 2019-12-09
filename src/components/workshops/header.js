@@ -9,22 +9,19 @@ import discountStripe from '../../images/icons/stripe.svg'
 import {format} from 'date-fns'
 import TimeRange from './time-range'
 
-const Discount = ({discount}) => (
-  <>
-    {discount && (
-      <div
-        css={css`
-          padding: 0 0 15px 0;
-        `}
-      >
-        <em>
-          early bird ends:{' '}
-          {format(new Date(discount.ends), 'MMM do, yyyy h:mm a (xx)')}!
-        </em>
-      </div>
-    )}
-  </>
-)
+const Discount = ({discount}) =>
+  discount ? (
+    <div
+      css={css`
+        padding: 0 0 15px 0;
+      `}
+    >
+      <em>
+        early bird ends:{' '}
+        {format(new Date(discount.ends), 'MMM do, yyyy h:mm a (xx)')}!
+      </em>
+    </div>
+  ) : null
 
 const Stripe = ({discount, ...props}) =>
   discount ? (

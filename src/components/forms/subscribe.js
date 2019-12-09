@@ -45,7 +45,7 @@ const SubscribeFormWrapper = styled.div({
   borderRadius: '5px',
 })
 
-const StyledForm = styled(Form)`
+const formCss = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,6 +78,12 @@ const StyledForm = styled(Form)`
     margin-top: 20px;
     font-size: 16px;
   }
+`
+const StyledForm = styled.form`
+  ${formCss}
+`
+const StyledFormikForm = styled(Form)`
+  ${formCss}
 `
 
 export function TinyLetterSubscribe() {
@@ -204,8 +210,9 @@ function Subscribe({style, tags = [], header = 'Join the Newsletter'}) {
           }}
           validationSchema={SubscribeSchema}
           onSubmit={setValues}
-          render={() => (
-            <StyledForm>
+        >
+          {() => (
+            <StyledFormikForm>
               <label htmlFor="first_name">
                 <div
                   css={css`
@@ -256,9 +263,9 @@ function Subscribe({style, tags = [], header = 'Join the Newsletter'}) {
                 {!pending && 'Subscribe'}
                 {pending && 'Submitting...'}
               </button>
-            </StyledForm>
+            </StyledFormikForm>
           )}
-        />
+        </Formik>
       )}
       {submitted && !pending && <PostSubmissionMessage response={response} />}
       {errorMessage && <div>{errorMessage}</div>}

@@ -13,7 +13,7 @@ function CountupTextarea({
     onChange(e)
   }
   // this allows us to increase the opacity exponensially as they near the maxLength
-  const level = Math.pow(length, 6) / Math.pow(maxLength, 6)
+  const level = length ** 6 / maxLength ** 6
   return (
     <div>
       <textarea

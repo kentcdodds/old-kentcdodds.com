@@ -291,10 +291,8 @@ const Register = props => {
           }
         `}
       >
-        <>
-          <TitoWidget discount={discount} event={event} />
-          <p>{props.children}</p>
-        </>
+        <TitoWidget discount={discount} event={event} />
+        <p>{props.children}</p>
       </div>
       {title ||
         (dealEndDate && (
