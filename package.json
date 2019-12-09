@@ -63,6 +63,7 @@
     "react": "^16.12.0",
     "react-countdown-now": "^2.1.2",
     "react-dom": "^16.12.0",
+    "react-error-boundary": "^1.2.5",
     "react-helmet": "~5.2.1",
     "react-live": "^2.2.2",
     "react-markdown": "^4.2.2",
