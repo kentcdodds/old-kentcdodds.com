@@ -77,7 +77,7 @@ async function generateBlogPost() {
     ...require('../prettier.config'),
     parser: 'mdx',
   })
-  fs.writeFileSync(path.join(destination, 'index.md'), markdown)
+  fs.writeFileSync(path.join(destination, 'index.mdx'), markdown)
 
   console.log(`${destination.replace(process.cwd(), '')} is all ready for you`)
 }
