@@ -252,6 +252,7 @@ export default [
       {
         event: '[Connect.Tech](https://connect.tech)',
         date: '2019-10-16',
+        recording: 'https://www.recallact.com/presentation/why-react-hooks',
       },
     ],
     description: `
