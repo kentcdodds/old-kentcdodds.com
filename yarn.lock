@@ -7021,6 +7021,13 @@ gatsby-plugin-typography@^2.3.18:
   dependencies:
     "@babel/runtime" "^7.7.4"
 
+gatsby-plugin-workerize-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-workerize-loader/-/gatsby-plugin-workerize-loader-1.1.0.tgz#56fae3d2afecd3e672ac6c08e18c3f661fd71ec1"
+  integrity sha512-65wbQlLzI8W0xIIjgkbGBss39z1gP3O57RnR6O+pboXn7x6UfM8k4qVYd+dV/yQCScz+rfVk+QaAffOmpDH55w==
+  dependencies:
+    workerize-loader "^1.1.0"
+
 gatsby-react-router-scroll@^2.1.17:
   version "2.1.17"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.17.tgz#1a8cbb8c5ca7dae40d1a650766d21a92a2a8f565"
@@ -17405,6 +17412,13 @@ worker-farm@^1.7.0:
   integrity sha512-rvw3QTZc8lAxyVrqcSGVm5yP/IJ2UcB3U0graE3LCFoZ0Yn2x4EoVSqJKdB/T5M+FLcRPjz4TDacRf3OCfNUzw==
   dependencies:
     errno "~0.1.7"
+
+workerize-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/workerize-loader/-/workerize-loader-1.1.0.tgz#d3a634390dcb685cc1ee292cd1fffeef0a646044"
+  integrity sha512-cU2jPVE3AzzVxOonBe9lCCO//qwE9s/K4a9njFVRLueznzNDNND5vGHVorGuzK6xvamdDOZ9+g7CPIc7QKzucQ==
+  dependencies:
+    loader-utils "^1.2.3"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"

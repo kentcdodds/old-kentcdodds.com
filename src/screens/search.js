@@ -1,9 +1,18 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import debounceFn from 'debounce-fn'
 import {useStaticQuery, graphql, Link} from 'gatsby'
-import matchSorter from 'match-sorter'
+import {rankings as matchSorterRankings} from 'match-sorter'
+import MatchSorterWorker from './match-sorter.worker'
 import theme from '../../config/theme'
+
+let matchSorterWorker
+
+function getMatchSorterWorker() {
+  if (!matchSorterWorker) {
+    matchSorterWorker = new MatchSorterWorker()
+  }
+  return matchSorterWorker
+}
 
 function BlogPostCard({blogpost}) {
   const {slug, title, description, keywords, banner} = blogpost
@@ -23,10 +32,6 @@ function BlogPostCard({blogpost}) {
       </div>
     </Link>
   )
-}
-
-function useDebFn(cb, opts) {
-  return React.useCallback(debounceFn(cb, opts), [])
 }
 
 function SearchScreen() {
@@ -71,16 +76,29 @@ function SearchScreen() {
   }, [result.blogposts.edges])
 
   const [search, setSearch] = React.useState('')
-  const searchInputRef = React.useRef()
-  const filteredBlogPosts = matchSorter(blogposts, search, {
-    keys: [
-      'title',
-      'categories',
-      'keywords',
-      {key: 'description', threshold: matchSorter.rankings.CONTAINS},
-      {key: 'excerpt', threshold: matchSorter.rankings.CONTAINS},
-    ],
-  })
+  const [filteredBlogPosts, setFilteredBlogPosts] = React.useState(blogposts)
+  React.useEffect(() => {
+    if (!search) {
+      setFilteredBlogPosts(blogposts)
+    }
+    getMatchSorterWorker()
+      .searchAndSort(blogposts, search, {
+        keys: [
+          'title',
+          {key: 'categories', threshold: matchSorterRankings.CONTAINS},
+          {key: 'keywords', threshold: matchSorterRankings.CONTAINS},
+          {key: 'description', threshold: matchSorterRankings.CONTAINS},
+          {key: 'excerpt', threshold: matchSorterRankings.CONTAINS},
+        ],
+      })
+      .then(
+        results => setFilteredBlogPosts(results),
+        error => {
+          // eslint-disable-next-line no-console
+          console.error(error)
+        },
+      )
+  }, [blogposts, search])
 
   return (
     <div>
@@ -104,10 +122,7 @@ function SearchScreen() {
         <input
           id="search-input"
           css={{width: '100%'}}
-          ref={searchInputRef}
-          onChange={useDebFn(() => setSearch(searchInputRef.current.value), {
-            wait: 200,
-          })}
+          onChange={event => setSearch(event.target.value)}
           type="search"
           autoFocus
         />

@@ -125,6 +125,7 @@ module.exports = {
         maxWidth: 1035,
       },
     },
+    'gatsby-plugin-workerize-loader',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
