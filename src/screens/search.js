@@ -16,22 +16,46 @@ function getMatchSorterWorker() {
 
 function BlogPostCard({siteUrl, blogpost}) {
   const {slug, title, description, keywords, banner} = blogpost
+  const defaultCopyText = 'Copy URL'
+  const [copyText, setCopyText] = React.useState(defaultCopyText)
+
+  React.useEffect(() => {
+    let current = true
+    if (copyText !== defaultCopyText) {
+      setTimeout(() => {
+        if (current) {
+          setCopyText(defaultCopyText)
+        }
+      }, 3000)
+    }
+    return () => (current = false)
+  }, [copyText])
+
   function copy(event) {
     event.preventDefault()
-    navigator.clipboard.writeText(`${siteUrl}${slug}`)
+    navigator.clipboard.writeText(`${siteUrl}${slug}`).then(
+      () => {
+        setCopyText('Copied')
+      },
+      () => {
+        setCopyText('Error copying text')
+      },
+    )
   }
   return (
-    <Link to={slug} css={{color: 'initial', margin: 20, width: 320}}>
-      <div
-        css={{
-          background: theme.colors.white,
-          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
-          borderRadius: 5,
-          padding: 30,
-          position: 'relative',
-          paddingBottom: 60,
-        }}
-      >
+    <div
+      css={{
+        margin: 20,
+        width: 320,
+        background: theme.colors.white,
+        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+        borderRadius: 5,
+        padding: 30,
+        position: 'relative',
+        paddingBottom: 60,
+      }}
+    >
+      <Link to={slug} css={{color: 'initial'}}>
         <h2 css={{marginTop: 0}}>{title}</h2>
         <div css={{width: '100%'}}>
           <button
@@ -46,13 +70,13 @@ function BlogPostCard({siteUrl, blogpost}) {
             }}
             onClick={copy}
           >
-            Copy URL
+            {copyText}
           </button>
         </div>
         <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 BlogPostCard = React.memo(BlogPostCard)
@@ -184,7 +208,7 @@ function SearchScreen() {
         </a>
         {'.'}
       </small>
-      <div css={{marginTop: 50}}>
+      <div css={{marginTop: 50, position: 'relative'}}>
         <label
           htmlFor="search-input"
           css={{margin: '0 10px 0 0', display: 'block'}}
@@ -193,12 +217,23 @@ function SearchScreen() {
         </label>
         <input
           id="search-input"
-          css={{width: '100%'}}
+          css={{width: '100%', paddingRight: 50}}
           onChange={event => setSearch(event.target.value)}
           type="search"
           value={search}
           autoFocus
         />
+        <div
+          css={{
+            position: 'absolute',
+            right: 14,
+            top: 35,
+            opacity: 0.6,
+            fontSize: '0.8rem',
+          }}
+        >
+          {filteredBlogPosts.length}
+        </div>
       </div>
       <div
         css={{
