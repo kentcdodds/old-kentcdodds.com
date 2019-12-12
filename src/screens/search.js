@@ -99,8 +99,7 @@ function useQueryParamState(searchParamName) {
     newUrl.searchParams.set(searchParamName, value)
     if (value) {
       window.history.replaceState(window.history.state, '', newUrl)
-    }
-    return () => {
+    } else {
       newUrl.searchParams.delete(searchParamName)
       window.history.replaceState(window.history.state, '', newUrl)
     }
