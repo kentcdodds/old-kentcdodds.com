@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import {css} from '@emotion/core'
 import styled from '@emotion/styled'
+import Markdown from 'react-markdown'
 import SEO from 'components/seo'
 import Layout from 'components/layout'
 import Link from 'components/link'
@@ -51,7 +52,8 @@ const Card = ({
       ${bpMaxMD} {
           flex-direction: column;
           align-items: center;
-          ${big &&
+          ${
+            big &&
             `
           text-align: center;
           h4 {
@@ -63,9 +65,11 @@ const Card = ({
           p {
             padding-bottom: 40px;
           }
-          `}
+          `
+          }
         }
-      ${!big &&
+      ${
+        !big &&
         `
         align-items: flex-start;
         flex-direction: column; 
@@ -81,7 +85,8 @@ const Card = ({
            padding: 40px 0 0 0;
          }
         }
-      `}
+      `
+      }
       background: ${backgroundColor};
       overflow: hidden;
       border-radius: 5px;
@@ -116,10 +121,11 @@ const PostTitle = styled.h3`
   }
 `
 
-const Description = styled.p`
-  margin-bottom: 10px;
-  display: inline-block;
+const Description = styled.div`
   width: 100%;
+  p {
+    margin-bottom: 4px;
+  }
 `
 
 export default function Index({data: {allMdx}}) {
@@ -161,7 +167,9 @@ export default function Index({data: {allMdx}}) {
               <PostTitle>{post.frontmatter.title}</PostTitle>
             </Link>
             <Description>
-              {post.excerpt}{' '}
+              {post.frontmatter.description ? (
+                <Markdown>{post.frontmatter.description}</Markdown>
+              ) : null}
               <Link
                 to={post.fields.slug}
                 aria-label={`View ${post.frontmatter.title}`}
@@ -169,7 +177,6 @@ export default function Index({data: {allMdx}}) {
                 Read →
               </Link>
             </Description>
-            <span />
           </div>
         ))}
         <Link to="/blog" aria-label="Visit blog page">
@@ -234,7 +241,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 190)
           id
           fields {
             title
