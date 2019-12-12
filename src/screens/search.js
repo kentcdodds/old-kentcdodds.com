@@ -14,8 +14,12 @@ function getMatchSorterWorker() {
   return matchSorterWorker
 }
 
-function BlogPostCard({blogpost}) {
+function BlogPostCard({siteUrl, blogpost}) {
   const {slug, title, description, keywords, banner} = blogpost
+  function copy(event) {
+    event.preventDefault()
+    navigator.clipboard.writeText(`${siteUrl}${slug}`)
+  }
   return (
     <Link to={slug} css={{color: 'initial', margin: 20, width: 320}}>
       <div
@@ -23,21 +27,45 @@ function BlogPostCard({blogpost}) {
           background: theme.colors.white,
           boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
           borderRadius: 5,
-          padding: '30px',
+          padding: 30,
+          position: 'relative',
+          paddingBottom: 60,
         }}
       >
         <h2 css={{marginTop: 0}}>{title}</h2>
+        <div css={{width: '100%'}}>
+          <button
+            css={{
+              display: 'block',
+              width: '100%',
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              borderTopRightRadius: '0',
+              borderTopLeftRadius: '0',
+            }}
+            onClick={copy}
+          >
+            Copy URL
+          </button>
+        </div>
         <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
       </div>
     </Link>
   )
 }
+BlogPostCard = React.memo(BlogPostCard)
 
 function SearchScreen() {
   const result = useStaticQuery(
     graphql`
       query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
         blogposts: allMdx(
           sort: {fields: frontmatter___date, order: DESC}
           filter: {
@@ -136,7 +164,11 @@ function SearchScreen() {
         }}
       >
         {filteredBlogPosts.map(blogpost => (
-          <BlogPostCard key={blogpost.id} blogpost={blogpost} />
+          <BlogPostCard
+            key={blogpost.id}
+            blogpost={blogpost}
+            siteUrl={result.site.siteMetadata.siteUrl}
+          />
         ))}
       </div>
     </div>
@@ -144,3 +176,8 @@ function SearchScreen() {
 }
 
 export default SearchScreen
+
+/*
+eslint
+  no-func-assign: "off"
+*/
