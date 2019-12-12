@@ -1,6 +1,5 @@
 import React from 'react'
 import {navigate} from 'gatsby-link'
-import parseQueryString from '../../lib/parse-query-string'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {
   return (
@@ -77,20 +76,19 @@ function StoredFormControl({
   queryParamName = lsKey.replace(/lsfc:/, ''),
   defaultValue = formControl.props.defaultValue,
 }) {
-  const queryParams =
-    typeof window === 'undefined'
-      ? {}
-      : parseQueryString(window.location.search)
-  const queryParamValue = queryParams[queryParamName]
   const [hasChanged, setHasChanged] = React.useState(false)
-  const [value, setValue] = React.useState(
-    () =>
+  const [value, setValue] = React.useState(() => {
+    const searchParams =
+      typeof window === 'undefined' ? {} : new URL(window.location).searchParams
+    const queryParamValue = searchParams.get(queryParamName)
+    return (
       queryParamValue ||
       (typeof window === 'undefined'
         ? false
         : window.localStorage.getItem(lsKey)) ||
-      defaultValue,
-  )
+      defaultValue
+    )
+  })
 
   if (
     formControl.props.value !== undefined &&

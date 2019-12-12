@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {css} from '@emotion/core'
 import theme from '../../config/theme'
-import parseQueryString from '../lib/parse-query-string'
 
 // this component is one big shrug. I didn't have time to get good at animation
 // and it's such a simple single-use component hack something I could ship...
@@ -24,11 +23,11 @@ function NotificationMessage({queryStringKey, children}) {
   }, [])
 
   React.useEffect(() => {
-    const query = parseQueryString(window.location.search)
-    const queryStringValue = query.hasOwnProperty(queryStringKey)
-    if (queryStringValue) {
-      if (query[queryStringKey]) {
-        setMessage(query[queryStringKey])
+    const searchParams = new URL(window.location).searchParams
+    if (searchParams.has(queryStringKey)) {
+      const searchParamValue = searchParams.get(queryStringKey)
+      if (searchParamValue) {
+        setMessage(searchParamValue)
       }
       setTimeout(() => {
         setShowMessage(true)

@@ -57,6 +57,32 @@ function BlogPostCard({siteUrl, blogpost}) {
 }
 BlogPostCard = React.memo(BlogPostCard)
 
+function useQueryParamState(searchParamName) {
+  const [value, setValue] = React.useState(() => {
+    const searchParams =
+      typeof window === 'undefined' ? {} : new URL(window.location).searchParams
+    if (searchParams.has(searchParamName)) {
+      return searchParams.get(searchParamName)
+    } else {
+      return ''
+    }
+  })
+
+  React.useEffect(() => {
+    const newUrl = new URL(window.location)
+    newUrl.searchParams.set(searchParamName, value)
+    if (value) {
+      window.history.replaceState(window.history.state, '', newUrl)
+    }
+    return () => {
+      newUrl.searchParams.delete(searchParamName)
+      window.history.replaceState(window.history.state, '', newUrl)
+    }
+  }, [searchParamName, value])
+
+  return [value, setValue]
+}
+
 function SearchScreen() {
   const result = useStaticQuery(
     graphql`
@@ -103,8 +129,12 @@ function SearchScreen() {
     }))
   }, [result.blogposts.edges])
 
-  const [search, setSearch] = React.useState('')
-  const [filteredBlogPosts, setFilteredBlogPosts] = React.useState(blogposts)
+  const [search, setSearch] = useQueryParamState('q')
+  const [filteredBlogPosts, setFilteredBlogPosts] = React.useState(
+    // if there's a search, let's wait for it to load
+    // otherwise let's initialize to the blogposts
+    search ? [] : blogposts,
+  )
   React.useEffect(() => {
     if (!search) {
       setFilteredBlogPosts(blogposts)
@@ -113,9 +143,21 @@ function SearchScreen() {
       .searchAndSort(blogposts, search, {
         keys: [
           'title',
-          {key: 'categories', threshold: matchSorterRankings.CONTAINS},
-          {key: 'keywords', threshold: matchSorterRankings.CONTAINS},
-          {key: 'description', threshold: matchSorterRankings.CONTAINS},
+          {
+            key: 'categories',
+            threshold: matchSorterRankings.CONTAINS,
+            maxRanking: matchSorterRankings.CONTAINS,
+          },
+          {
+            key: 'keywords',
+            threshold: matchSorterRankings.CONTAINS,
+            maxRanking: matchSorterRankings.CONTAINS,
+          },
+          {
+            key: 'description',
+            threshold: matchSorterRankings.CONTAINS,
+            maxRanking: matchSorterRankings.CONTAINS,
+          },
           {key: 'excerpt', threshold: matchSorterRankings.CONTAINS},
         ],
       })
@@ -152,6 +194,7 @@ function SearchScreen() {
           css={{width: '100%'}}
           onChange={event => setSearch(event.target.value)}
           type="search"
+          value={search}
           autoFocus
         />
       </div>
