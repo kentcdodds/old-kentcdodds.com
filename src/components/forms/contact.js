@@ -78,16 +78,12 @@ function StoredFormControl({
 }) {
   const [hasChanged, setHasChanged] = React.useState(false)
   const [value, setValue] = React.useState(() => {
-    const searchParams =
-      typeof window === 'undefined' ? {} : new URL(window.location).searchParams
+    if (typeof window === 'undefined') {
+      return defaultValue
+    }
+    const searchParams = new URL(window.location).searchParams
     const queryParamValue = searchParams.get(queryParamName)
-    return (
-      queryParamValue ||
-      (typeof window === 'undefined'
-        ? false
-        : window.localStorage.getItem(lsKey)) ||
-      defaultValue
-    )
+    return queryParamValue || window.localStorage.getItem(lsKey) || defaultValue
   })
 
   if (

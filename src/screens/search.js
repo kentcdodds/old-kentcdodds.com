@@ -59,8 +59,10 @@ BlogPostCard = React.memo(BlogPostCard)
 
 function useQueryParamState(searchParamName) {
   const [value, setValue] = React.useState(() => {
-    const searchParams =
-      typeof window === 'undefined' ? {} : new URL(window.location).searchParams
+    if (typeof window === 'undefined') {
+      return ''
+    }
+    const searchParams = new URL(window.location).searchParams
     if (searchParams.has(searchParamName)) {
       return searchParams.get(searchParamName)
     } else {
