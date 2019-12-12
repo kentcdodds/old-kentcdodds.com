@@ -13,7 +13,7 @@ const shouldTransform = url => {
 const getEggheadIFrameSrc = url => {
   const {host, pathname, search} = new URL(url)
 
-  return `https://${host}/${pathname}/embed${search}`
+  return `https://${host}${pathname}/embed${search}`
 }
 
 const getHTML = url => {
