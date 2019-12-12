@@ -19,7 +19,14 @@ const getEggheadIFrameSrc = url => {
 const getHTML = url => {
   const iframeSrc = getEggheadIFrameSrc(url)
 
-  return `<iframe src="${iframeSrc}" style="width: 100%; height: 410px; border: none; border-radius: 4px;" allowfullscreen></iframe>`
+  return `
+    <iframe
+      src="${iframeSrc}"
+      style="width: 100%; height: 54vw; max-height: 410px; border: none; border-radius: 4px;"
+      allowfullscreen
+    >
+    </iframe>
+  `
 }
 
 module.exports = {getHTML, shouldTransform}
