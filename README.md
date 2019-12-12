@@ -146,6 +146,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://n8finch.com/"><img src="https://avatars0.githubusercontent.com/u/7983116?v=4" width="100px;" alt=""/><br /><sub><b>Nate Finch</b></sub></a><br /><a href="#content-n8finch" title="Content">🖋</a></td>
     <td align="center"><a href="http://jeremytice.com"><img src="https://avatars0.githubusercontent.com/u/1740479?v=4" width="100px;" alt=""/><br /><sub><b>Jeremy Tice</b></sub></a><br /><a href="#content-jetpacmonkey" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/DrShpongle"><img src="https://avatars3.githubusercontent.com/u/1519448?v=4" width="100px;" alt=""/><br /><sub><b>Evgeniy Nagalskiy</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=DrShpongle" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
