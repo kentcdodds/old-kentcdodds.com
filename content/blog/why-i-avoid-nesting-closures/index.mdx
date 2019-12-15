@@ -99,6 +99,20 @@ and sometimes that can be useful for more complicated functions, but like I
 said, I'm not religious about the "avoid nesting closures" rule so I think this
 code is simpler the way that it is now and I'll probably leave it as-is.
 
+I've had some conversations about this on twitter that have been interesting and
+I think the most interesting insight so far has been
+[this one](https://twitter.com/jed_fox1/status/1206061752737320960) from
+[Jed Fox](https://twitter.com/jed_fox1):
+
+https://twitter.com/jed_fox1/status/1206061752737320960
+
+So yes, this concept has nuance and there are trade-offs. I think I still prefer
+extracting things because most of the time my files are only a few hundred lines
+at most, so pulling something out does not increase the number of things that
+can depend on it and I also feel like it's easier to think about "what can
+depend on this thing" than "what can affect this thing." But again, it's too
+nuanced to make a rule for.
+
 Finding ways to offload thinking of trivial things is one skill that I'm always
 trying to develop (automation plays a big role in that). I really don't want
 anyone to make an ESLint rule about this idea (please don't do that), but it's
