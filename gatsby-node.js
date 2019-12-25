@@ -273,7 +273,7 @@ function createPaginatedPages(
         pagination: {
           page,
           nextPagePath: index === pages.length - 1 ? null : nextPagePath,
-          previousPagePath:	          previousPagePath: index === 0 ? null : previousPagePath,
+          previousPagePath: index === 0 ? null : previousPagePath,
           pageCount: pages.length,
           pathPrefix,
         },
