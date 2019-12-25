@@ -272,9 +272,8 @@ function createPaginatedPages(
       context: {
         pagination: {
           page,
-          nextPagePath: index === 0 ? null : nextPagePath,
-          previousPagePath:
-            index === pages.length - 1 ? null : previousPagePath,
+          nextPagePath: index === pages.length - 1 ? null : nextPagePath,
+          previousPagePath:	          previousPagePath: index === 0 ? null : previousPagePath,
           pageCount: pages.length,
           pathPrefix,
         },
