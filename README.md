@@ -148,6 +148,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/DrShpongle"><img src="https://avatars3.githubusercontent.com/u/1519448?v=4" width="100px;" alt=""/><br /><sub><b>Evgeniy Nagalskiy</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=DrShpongle" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dbrudner"><img src="https://avatars1.githubusercontent.com/u/32269552?v=4" width="100px;" alt=""/><br /><sub><b>Dave Brudner</b></sub></a><br /><a href="#content-dbrudner" title="Content">🖋</a></td>
   </tr>
 </table>
 
