@@ -164,6 +164,8 @@ super excited about doing QA and he was offering me an opportunity to work in
 his org as a Business Intelligence Engineer (which is what I thought I wanted to
 do).
 
+Oh, and this is the year I finally caved and joined Twitter.
+
 ## 2012
 
 ![Me in a Domo shirt](./images/2012.jpg)
@@ -773,8 +775,14 @@ still widely used today:
   [live-streamed building it (in silence)](https://www.youtube.com/watch?v=3vxov5xUai8&list=PLV5CVI1eNcJgJCEkMlsqXea6OIF_uV_ub))
 - [babel-plugin-codegen](https://github.com/kentcdodds/babel-plugin-codegen)
 
+![My GitHub contribution graph](./images/2017-githubgraph.png)
+
+2017 was my biggest year in open source contributions. According to GitHub, I
+had 3,180 contributions that year with a mostly full "contributor graph".
+
 Partway through the year, I changed roles at PayPal. I joined/helped create a
-new web infra team where I started working on
+new web infra team where I supported several teams in the consumer organization
+(mostly peer-to-peer payments type stuff). I also started working on
 [paypal-scripts](/blog/tools-without-config) (basically a create-react-app kind
 of tool for PayPal). Tons of projects at PayPal are still using it today. I also
 created an open source version of it for my open source projects called
@@ -815,18 +823,175 @@ This is me on the Chain React stage in Portland Oregon giving
 [my first ever keynote talk](https://www.youtube.com/watch?v=M9X2qGddHkU&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf).
 It was fantastic.
 
+In 2018, I was still working at PayPal and still working on paypal-scripts, but
+we needed to rewrite [paypal.me](https://paypal.me) from scratch and they wanted
+to try out paypal-scripts on a greenfield project. So I and a few other
+engineers started to work on it and eventually we shipped an entirely new
+experience. Though kept the surprise emoji easter egg
+([🍕](https://www.paypal.me/kentcdodds/🍕),
+[💰](https://www.paypal.me/kentcdodds/💰), etc.). It was built on graphql (we
+used [graphql-request](https://www.npmjs.com/package/graphql-request)), React,
+and unstated. I was pretty happy with what we built together there (though if
+I'm being honest, [Arnab Banik](https://twitter.com/arnab0831) did a lot more of
+the work than I did, and there were several other engineers, PMs, and designers
+who had their hand in rebuilding it as well).
+
+After the paypal.me rewrite, I returned to supporting the teams in the consumer
+org and working on paypal-scripts, but eventually the work that I was doing with
+paypal-scripts became more encompassing than just the consumer org and we
+created a more official "Web Infra" team which worked directly under
+[Bill Scott](https://twitter.com/billwscott) where I helped to support _all_ of
+the consumer org teams at PayPal. paypal-scripts was my particular area of
+focus. It enabled teams to stop worrying about the hundreds of development
+dependencies they used to build their app and instead focus on building their
+app. My guess is it has saved the company millions of dollars of engineering
+time because instead of one engineer per team spending time managing those
+dependencies and configuration for the tooling, there was just me and occasional
+contributors doing it.
+
+I mean, stuff as trivial as a 2 hour dep upgrade:
+
+https://twitter.com/kentcdodds/status/1020087780041424896
+
+Or as intense as a major version bump of a major dependency:
+
+https://twitter.com/kentcdodds/status/1007044090570072064
+
+Or even adding support for TypeScript that's as simple to opt-into as adding a
+`tsconfig.json` file!
+
+https://twitter.com/kentcdodds/status/1075544397809299457
+
+There weren't many breaking changes for any of these awesome upgrades either.
+People just upgraded and all of the sudden their apps were faster, smaller, and
+they had a better experience developing their apps.
+
+I'm super thrilled to know that since I left PayPal, paypal-scripts is being
+actively used and maintained:
+
+https://twitter.com/carloscastrodev/status/1156951507125714945
+
+It definitely was my magnum opus of my time at PayPal. As awesome as it was to
+build products that are used by millions of people all over the world, building
+some software that accelerated the rate at which other engineers could do that
+was immensely satisfying.
+
+Toward the end of the year, I decided to shift my focus from developer tooling
+to a component library. At the time a few engineers on a product team had put
+together something, but it wasn't serving the broader PayPal community like it
+needed to (and it was struggling with adoption for that reason). So I started
+working on a PayPal component library I called `pp-react`. Right as I was
+starting with that, some other folks reached out to me who were trying to solve
+the same problem and we worked together to develop a design system that I think
+is really quite good. pp-react became key to that initiative (because most teams
+at PayPal were either using or moving to React).
+
+I'm thrilled to know that pp-react is also still alive and strong!
+
+https://twitter.com/carloscastrodev/status/1156776252167974913
+
+When you believe in your company's mission and truly think that it's making the
+world a better place, contributing toward that goal is satisfying. If you can
+enable others around you to contribute to that goal more effectively, the thrill
+is compounded.
+
+![Me teaching a testing workshop for workshop.me at Trulia](./images/2018-workshop.jpg)
+
+This is me teaching a 2 day testing workshop at Trulia
+
+https://twitter.com/kentcdodds/status/974298832929353729
+
+https://twitter.com/kentcdodds/status/974278185540964352
+
+In 2018, I gave a bunch of testing workshops (one at Assert.js, two at Trulia,
+and two at Frontend Masters). I remember that the first testing workshop went
+pretty well, (it was based on the Frontend Masters workshop I had already given)
+but I wanted to improve the way I taught testing React code. Typically when I
+teach an abstraction (like `enzyme` which was the de facto standard testing
+library for testing React at the time), I like to start without the abstraction
+and teach what the abstraction is doing for us. So I back tracked a bit and made
+some exercises for that. Then I realized that the jump from `ReactDOM.render` to
+enzyme's `mount` was pretty big. They give you so many helper functions and I
+spent so much time telling people which ones were ok to use and which ones to
+never use under any circumstances. It dawned on me that instead of telling
+people to use only part of a tool, I could build my own tool that only allowed
+the kinds of things that people should be doing, and suddenly I didn't need
+enzyme anymore and React Testing Library was born 🐐
+
+https://twitter.com/kentcdodds/status/980799621080391680
+
+Eventually, I realized that most of the APIs in React Testing Library were
+independent of React and I extracted that stuff to a DOM Testing Library 🐙
+
+https://twitter.com/kentcdodds/status/982252230613938177
+
+And there have since been implementations of Testing Library for all the major
+testing platforms and frameworks.
+
+Very soon after building React Testing Library, I went on to teach it in
+workshops. I'm relieved that it's caught on so well and wasn't just some silly
+idea that fizzled off and died. I felt really confident about it though
+(otherwise I wouldn't have taught it).
+
+It was around August time of 2018 that I started itching to do something big
+with testing. I was ready to turn those testing workshops into several egghead
+courses when [Joel](https://twitter.com/jhooks) asked if I would be willing to
+try an experiment with him. I had enough material that he suggested we make a
+site separate from egghead that's totally dedicated to testing. After several
+months of hard work, I created the content, the egghead team created the
+platform, and we published
+[TestingJavaScript.com](https://testingjavascript.com) which is the premium
+resource for learning how to test JavaScript applications for absolute beginners
+to total experts. It was way more successful than I expected, which enabled me
+to leave PayPal and pursue this full-time the following year (more on that
+later).
+
+Also around August, I got another itch. My kids kept asking me to tell them
+stories and I would make up silly ones on the spot (I'd try to work in a few
+good morals and stuff to teach them as I could). I became interested in making
+stories that were actually good. I did a little research on story, and then I
+remembered that [National Novel Writing Month](https://nanowrimo.org)
+(NaNoWriMo) is a thing (write 50k words of a novel in one month) and decided to
+give it a shot. I started [Devs Who Write](https://kcd.im/dww) on Discord with
+[Antonín Janus](https://twitter.com/AntJanus) so we could encourage each other
+and we were joined by several other developers who write as well.
+[Zack Argyle](https://twitter.com/ZackArgyle) worked on his first novel as well
+and he was a huge help and encouragement to me.
+
+So, I spent the next two months consuming as much information as I could cram
+into my brain about story structure. Joel directed me to
+[the story grid](https://storygrid.com/) which is a phenomenal way to look at
+the craft of storytelling.
+[Brandon Sanderson](https://www.brandonsanderson.com/) (a huge inspiration of
+mine) teaches at BYU and I found some recordings of his material he's published
+and watched it all... twice. I listened to hours worth of
+[Writing Excuses](https://writingexcuses.com/) podcast episodes. And I did all
+of this on 3x speed (our brains are amazingly capable!) so I could be ready to
+go.
+
+I also planned out a world, characters, and story which I personally think is
+really really awesome.
+
+![A circular city](./images/2018-shurlan.jpg)
+
+My wife made me this card for my birthday. She also made a cake that was shaped
+like the city I created for my story. I was... obsessed... But when November
+hit, I started writing and it was amazing what came out of that experience. It
+was incredibly hard. There were times that I fell way behind, but I pulled
+through and I won NaNoWriMo!
+
+![A word count showing I wrote 50,000 words](./images/2018-nanowrimo.jpg)
+
 ![Me with a dog](./images/2018-gemma.jpg)
 
 We got a dog. Her name is "Gemma" and she's a Bernedoodle. She's practically
 perfect in every way and I couldn't possibly appreciate her as much as she
 deserves.
 
-![Me teaching a testing workshop for workshop.me at Trulia](./images/2018-workshop.jpg)
-
-March react-testing-library
-
 Started DevTips and coding with kent
 
 ## 2019
+
+React Testing Library won an award
 
 ## Looking forward
