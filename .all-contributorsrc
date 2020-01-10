@@ -988,6 +988,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "AntJanus",
+      "name": "Antonin Januska",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/733810?v=4",
+      "profile": "https://antjanus.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
