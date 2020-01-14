@@ -42,6 +42,11 @@ const commands = lines
 commands.forEach(command => execSync(command))
 ```
 
+Basically all this does is uses the linux `find` command to find a list of files
+in a directory, then separate the results of that script into lines, trim them
+to get rid of whitespace, remove empty lines, then map those to commands to move
+those files, and then run those commands.
+
 I shared the script
 [on twitter](https://twitter.com/kentcdodds/status/1215785900413599744) and had
 several people critiquing the script and suggest that I could have used `reduce`
