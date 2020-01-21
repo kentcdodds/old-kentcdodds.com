@@ -997,6 +997,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ovieokeh",
+      "name": "Ovie Okeh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/36507972?v=4",
+      "profile": "http://ovie.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
