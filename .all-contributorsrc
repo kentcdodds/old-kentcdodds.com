@@ -1006,6 +1006,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hriziya",
+      "name": "Hitesh Riziya",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4135216?v=4",
+      "profile": "https://twitter.com/hitriz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
