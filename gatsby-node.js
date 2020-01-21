@@ -263,8 +263,8 @@ function createPaginatedPages(
   }, [])
 
   pages.forEach((page, index) => {
-    const previousPagePath = `${pathPrefix}/${index + 1}`
-    const nextPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
+    const previousPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
+    const nextPagePath = `${pathPrefix}/${index + 1}`
 
     createPage({
       path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
@@ -272,9 +272,8 @@ function createPaginatedPages(
       context: {
         pagination: {
           page,
-          nextPagePath: index === 0 ? null : nextPagePath,
-          previousPagePath:
-            index === pages.length - 1 ? null : previousPagePath,
+          nextPagePath: index === pages.length - 1 ? null : nextPagePath,
+          previousPagePath: index === 0 ? null : previousPagePath,
           pageCount: pages.length,
           pathPrefix,
         },
