@@ -151,6 +151,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/dbrudner"><img src="https://avatars1.githubusercontent.com/u/32269552?v=4" width="100px;" alt=""/><br /><sub><b>Dave Brudner</b></sub></a><br /><a href="#content-dbrudner" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/rchinerman"><img src="https://avatars3.githubusercontent.com/u/17489675?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Hinerman</b></sub></a><br /><a href="#content-rchinerman" title="Content">🖋</a></td>
     <td align="center"><a href="https://antjanus.com"><img src="https://avatars2.githubusercontent.com/u/733810?v=4" width="100px;" alt=""/><br /><sub><b>Antonin Januska</b></sub></a><br /><a href="#content-AntJanus" title="Content">🖋</a></td>
+    <td align="center"><a href="http://ovie.dev"><img src="https://avatars1.githubusercontent.com/u/36507972?v=4" width="100px;" alt=""/><br /><sub><b>Ovie Okeh</b></sub></a><br /><a href="#content-ovieokeh" title="Content">🖋</a></td>
   </tr>
 </table>
 
