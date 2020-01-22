@@ -489,6 +489,8 @@ export default [
       {
         event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018)',
         date: '2018-04-13',
+        recording:
+          'https://www.youtube.com/watch?v=6mtPPkKchcQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
