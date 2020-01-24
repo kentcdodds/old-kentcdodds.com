@@ -4,7 +4,7 @@ import theme from '../../../config/theme'
 import {lighten, darken} from 'polished'
 import {rhythm, fonts} from '../../lib/typography'
 import {bpMaxSM} from '../../lib/breakpoints'
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown'
 
 const TitoWidget = props => {
   const {event, discount} = props

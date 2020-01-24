@@ -62,10 +62,10 @@
     "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-countdown-now": "^2.1.2",
+    "react-countdown": "^2.2.0",
     "react-dom": "^16.12.0",
     "react-error-boundary": "^1.2.5",
-    "react-helmet": "~5.2.1",
+    "react-helmet": "^5.2.1",
     "react-live": "^2.2.2",
     "react-markdown": "^4.3.1",
     "react-responsive-carousel": "^3.1.51",
@@ -108,7 +108,7 @@
     "ncp": "^2.0.0",
     "netlify-lambda": "^1.6.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
+    "prettier": "1.19.1",
     "react-async": "^10.0.0",
     "start-server-and-test": "^1.10.7",
     "unist-util-visit": "^2.0.1"
@@ -149,5 +149,9 @@
   "browserslist": [
     ">1%",
     "not dead"
-  ]
+  ],
+  "engines": {
+    "node": ">=10.13",
+    "npm": ">=6"
+  }
 }
