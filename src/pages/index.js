@@ -52,8 +52,7 @@ const Card = ({
       ${bpMaxMD} {
           flex-direction: column;
           align-items: center;
-          ${
-            big &&
+          ${big &&
             `
           text-align: center;
           h4 {
@@ -65,11 +64,9 @@ const Card = ({
           p {
             padding-bottom: 40px;
           }
-          `
-          }
+          `}
         }
-      ${
-        !big &&
+      ${!big &&
         `
         align-items: flex-start;
         flex-direction: column; 
@@ -85,8 +82,7 @@ const Card = ({
            padding: 40px 0 0 0;
          }
         }
-      `
-      }
+      `}
       background: ${backgroundColor};
       overflow: hidden;
       border-radius: 5px;

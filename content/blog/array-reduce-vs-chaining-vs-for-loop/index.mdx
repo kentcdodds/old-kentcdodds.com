@@ -82,16 +82,15 @@ In any case, I did want to address the idea of using `reduce` instead of the
 Here's what that same code would be like if we use `reduce`
 
 ```javascript
-const commands = lines
-  .reduce((accumulator, line) => {
-    let file = line.trim()
-    if (file) {
-      const destFile = getDestFile(file)
-      const destFileDir = path.dirname(destFile)
-      accumulator.push(`mkdir -p "${destFileDir}" && mv "${file}" "${destFile}"`)
-    }
-    return accumulator
-  }, [])
+const commands = lines.reduce((accumulator, line) => {
+  let file = line.trim()
+  if (file) {
+    const destFile = getDestFile(file)
+    const destFileDir = path.dirname(destFile)
+    accumulator.push(`mkdir -p "${destFileDir}" && mv "${file}" "${destFile}"`)
+  }
+  return accumulator
+}, [])
 ```
 
 Now, I'm not one of those people who think that
