@@ -55,7 +55,7 @@
     "match-sorter": "^4.0.2",
     "memory-cache": "^0.2.0",
     "nodemailer": "^6.4.2",
-    "ow": "^0.15.0",
+    "ow": "^0.15.1",
     "polished": "^3.4.2",
     "prism-react-renderer": "^1.0.2",
     "prism-themes": "^1.3.0",
