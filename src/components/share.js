@@ -10,13 +10,11 @@ const Share = ({url, title, twitterHandle}) => (
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      div,
-      button {
+      div {
         margin-right: 20px;
         cursor: pointer;
         :hover {
-          /* react-share uses inline styles... */
-          color: ${theme.brand.primary} !important;
+          color: ${theme.brand.primary};
         }
       }
       span {
