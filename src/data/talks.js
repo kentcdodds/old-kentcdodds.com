@@ -24,6 +24,19 @@ export default [
     tags: [],
     deliveries: [
       {
+        event: '[JS Day Canaries](https://jsdaycanarias.com/)',
+        date: '2020-11-13',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
         event: '[React Loop](https://reactloop.com/)',
         date: '2020-06-19',
       },
