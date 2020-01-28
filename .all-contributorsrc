@@ -1015,6 +1015,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mjfneto",
+      "name": "mjfneto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/25172271?v=4",
+      "profile": "https://github.com/mjfneto",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
