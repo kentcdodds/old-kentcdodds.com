@@ -263,7 +263,8 @@ function createPaginatedPages(
   }, [])
 
   pages.forEach((page, index) => {
-    const previousPagePath = index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
+    const previousPagePath =
+      index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
     const nextPagePath = `${pathPrefix}/${index + 1}`
 
     createPage({
@@ -314,8 +315,9 @@ exports.onCreateNode = ({node, getNode, actions}) => {
         isWriting = false
         isScheduled = true
       }
-      slug = `/workshops/${node.frontmatter.slug ||
-        slugify(node.frontmatter.title)}`
+      slug = `/workshops/${
+        node.frontmatter.slug || slugify(node.frontmatter.title)
+      }`
     }
 
     if (node.fileAbsolutePath.includes('content/writing-blog/')) {

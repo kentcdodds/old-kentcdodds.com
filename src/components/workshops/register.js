@@ -199,7 +199,7 @@ const Register = props => {
         margin-top: ${rhythm(2.5)};
         margin-bottom: 50px;
         ${!light &&
-          `
+        `
         background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%),
           linear-gradient(
             32deg,

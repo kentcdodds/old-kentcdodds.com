@@ -33,10 +33,11 @@ const WorkshopEvents = React.createContext()
 
 function WorkshopEventsProvider(props) {
   const headers = {Accept: 'application/json'}
-  const {data, error, isLoading} = useFetch(
-    `${process.env.NETLIFY_FUNCTIONS_URL}/tickets`,
-    {headers},
-  )
+  const {
+    data,
+    error,
+    isLoading,
+  } = useFetch(`${process.env.NETLIFY_FUNCTIONS_URL}/tickets`, {headers})
   const value = React.useMemo(() => ({data, error, isLoading}), [
     data,
     error,
