@@ -153,6 +153,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://antjanus.com"><img src="https://avatars2.githubusercontent.com/u/733810?v=4" width="100px;" alt=""/><br /><sub><b>Antonin Januska</b></sub></a><br /><a href="#content-AntJanus" title="Content">🖋</a></td>
     <td align="center"><a href="http://ovie.dev"><img src="https://avatars1.githubusercontent.com/u/36507972?v=4" width="100px;" alt=""/><br /><sub><b>Ovie Okeh</b></sub></a><br /><a href="#content-ovieokeh" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/hitriz"><img src="https://avatars2.githubusercontent.com/u/4135216?v=4" width="100px;" alt=""/><br /><sub><b>Hitesh Riziya</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=hriziya" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mjfneto"><img src="https://avatars2.githubusercontent.com/u/25172271?v=4" width="100px;" alt=""/><br /><sub><b>mjfneto</b></sub></a><br /><a href="#translation-mjfneto" title="Translation">🌍</a></td>
   </tr>
 </table>
 
