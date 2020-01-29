@@ -92,6 +92,7 @@ function Header({
             activeClassName="none"
             headerColor={headerColor}
             css={{
+              position: 'relative',
               fontFamily: fonts.regular,
               display: 'flex',
               alignItems: 'center',
