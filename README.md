@@ -155,11 +155,13 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://twitter.com/hitriz"><img src="https://avatars2.githubusercontent.com/u/4135216?v=4" width="100px;" alt=""/><br /><sub><b>Hitesh Riziya</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=hriziya" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/mjfneto"><img src="https://avatars2.githubusercontent.com/u/25172271?v=4" width="100px;" alt=""/><br /><sub><b>mjfneto</b></sub></a><br /><a href="#translation-mjfneto" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/vedran"><img src="https://avatars3.githubusercontent.com/u/473826?v=4" width="100px;" alt=""/><br /><sub><b>Vedran</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=vedran" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
