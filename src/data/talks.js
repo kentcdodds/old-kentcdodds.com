@@ -19,6 +19,71 @@ export default [
   //   `,
   // },
   {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[JS Day Canaries](https://jsdaycanarias.com/)',
+        date: '2020-11-13',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[React Loop](https://reactloop.com/)',
+        date: '2020-06-19',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[React Finland](https://react-finland.fi/)',
+        date: '2020-05-28',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[React Summit](https://reactsummit.com/)',
+        date: '2020-04-17',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
+    title: 'Keynote: TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[Reactathon 2020](https://www.reactathon.com/)',
+        date: '2020-03-31',
+      },
+    ],
+    description: `
+    `,
+  },
+  {
     title: 'Building the Open Source Community We Want',
     resources: [
       '[slides](https://drive.google.com/open?id=1-kpw_RlWNjzGcV4E69KlsOktbCru6LFx)',
@@ -437,6 +502,8 @@ export default [
       {
         event: '[KnowJS](https://certifiedfreshevents.com/events/knowjs-2018)',
         date: '2018-04-13',
+        recording:
+          'https://www.youtube.com/watch?v=6mtPPkKchcQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `

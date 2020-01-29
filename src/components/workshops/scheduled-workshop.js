@@ -78,7 +78,7 @@ function ScheduledWorkshop({
           margin-right: 20px;
         }
         ${soldOut &&
-          `
+        `
         .button {
          color: ${theme.brand.primary};
          border: 2px solid ${theme.brand.primary};

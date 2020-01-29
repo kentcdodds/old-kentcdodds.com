@@ -3,7 +3,8 @@ module.exports = {
   siteTitleAlt: 'The personal website of Kent C. Dodds', // Alternative Site title for SEO
   siteTitleShort: 'kentcdodds', // short_name for manifest
   siteUrl: process.env.ROOT_URL || 'https://kentcdodds.com', // Domain of your site. No trailing slash!
-  siteLanguage: 'en', // Language Tag on <html> element
+  lang: 'en', // Language Tag on <html> element
+  pathPrefix: '/',
   siteLogo: 'images/logo.png', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription:
     'Come check out how Kent C. Dodds can help you level up your career as a software engineer.',

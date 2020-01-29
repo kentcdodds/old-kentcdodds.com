@@ -52,7 +52,10 @@ function Post({data: {site, mdx}}) {
   })
 
   const commonKeyword = first(
-    intersection(flatMap(eventsByKeywords, event => event.keywords), keywords),
+    intersection(
+      flatMap(eventsByKeywords, event => event.keywords),
+      keywords,
+    ),
   )
 
   const blogPostUrl = `${config.siteUrl}${slug}`

@@ -149,6 +149,14 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://github.com/DrShpongle"><img src="https://avatars3.githubusercontent.com/u/1519448?v=4" width="100px;" alt=""/><br /><sub><b>Evgeniy Nagalskiy</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=DrShpongle" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dbrudner"><img src="https://avatars1.githubusercontent.com/u/32269552?v=4" width="100px;" alt=""/><br /><sub><b>Dave Brudner</b></sub></a><br /><a href="#content-dbrudner" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/rchinerman"><img src="https://avatars3.githubusercontent.com/u/17489675?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Hinerman</b></sub></a><br /><a href="#content-rchinerman" title="Content">🖋</a></td>
+    <td align="center"><a href="https://antjanus.com"><img src="https://avatars2.githubusercontent.com/u/733810?v=4" width="100px;" alt=""/><br /><sub><b>Antonin Januska</b></sub></a><br /><a href="#content-AntJanus" title="Content">🖋</a></td>
+    <td align="center"><a href="http://ovie.dev"><img src="https://avatars1.githubusercontent.com/u/36507972?v=4" width="100px;" alt=""/><br /><sub><b>Ovie Okeh</b></sub></a><br /><a href="#content-ovieokeh" title="Content">🖋</a></td>
+    <td align="center"><a href="https://twitter.com/hitriz"><img src="https://avatars2.githubusercontent.com/u/4135216?v=4" width="100px;" alt=""/><br /><sub><b>Hitesh Riziya</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=hriziya" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mjfneto"><img src="https://avatars2.githubusercontent.com/u/25172271?v=4" width="100px;" alt=""/><br /><sub><b>mjfneto</b></sub></a><br /><a href="#translation-mjfneto" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/vedran"><img src="https://avatars3.githubusercontent.com/u/473826?v=4" width="100px;" alt=""/><br /><sub><b>Vedran</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=vedran" title="Code">💻</a></td>
   </tr>
 </table>
 

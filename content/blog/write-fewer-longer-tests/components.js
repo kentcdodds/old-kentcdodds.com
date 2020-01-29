@@ -24,12 +24,10 @@ function Course({courseId}) {
   const {loading, course, error} = state
   React.useEffect(() => {
     setState({loading: true, course: null, error: null})
-    api
-      .getCourseInfo(courseId)
-      .then(
-        data => setState({loading: false, course: data, error: null}),
-        e => setState({loading: false, course: null, error: e}),
-      )
+    api.getCourseInfo(courseId).then(
+      data => setState({loading: false, course: data, error: null}),
+      e => setState({loading: false, course: null, error: e}),
+    )
   }, [courseId])
   return (
     <>

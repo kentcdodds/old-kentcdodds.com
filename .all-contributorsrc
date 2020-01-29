@@ -979,6 +979,60 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rchinerman",
+      "name": "Ryan Hinerman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17489675?v=4",
+      "profile": "https://github.com/rchinerman",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AntJanus",
+      "name": "Antonin Januska",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/733810?v=4",
+      "profile": "https://antjanus.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ovieokeh",
+      "name": "Ovie Okeh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/36507972?v=4",
+      "profile": "http://ovie.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hriziya",
+      "name": "Hitesh Riziya",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4135216?v=4",
+      "profile": "https://twitter.com/hitriz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mjfneto",
+      "name": "mjfneto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/25172271?v=4",
+      "profile": "https://github.com/mjfneto",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "vedran",
+      "name": "Vedran",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/473826?v=4",
+      "profile": "https://github.com/vedran",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",

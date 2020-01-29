@@ -148,6 +148,7 @@ module.exports = {
         short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
+        lang: config.lang,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
