@@ -71,9 +71,9 @@ export default [
     `,
   },
   {
-    title: 'Keynote: TBA',
+    title: 'Keynote: Managing React Application State Management',
     resources: [],
-    tags: [],
+    tags: ['react'],
     deliveries: [
       {
         event: '[Reactathon 2020](https://www.reactathon.com/)',
@@ -81,6 +81,18 @@ export default [
       },
     ],
     description: `
+      Application State Management is one of the hardest parts of building and
+      maintaining React Applications. The number of options you have is numerous
+      and the reason is that it's just such a hard problem with so many nuances
+      and trade-offs. One thing that makes application state management harder
+      is when we aren't thoughtful about how that state is organized and
+      categorized in our app. There are different kinds of state and they
+      require different approaches for management. When you try to treat all app
+      state exactly the same is when problems come into play.
+
+      Let's talk about what some of those categories are and how we can
+      drastically simplify our application code and improve our app's
+      performance by thinking about and organizing our state differently.
     `,
   },
   {
