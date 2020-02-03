@@ -272,148 +272,43 @@ If you're still experiencing the `act` warning, then the most likely reason is
 something is happening **after your test completes** for which you should be
 waiting (like in our earlier examples).
 
-Let's take a look at another example here (this example is borrowed from my blog
-post [Write fewer, longer tests](/blog/write-fewer-longer-tests)):
+## An Alternative: waiting for the mocked promise
 
-```jsx
-import React from 'react'
-import * as api from './api'
+There's one alternative I want to show you that isn't quite as good for this use
+case, but could be useful, especially if there's no visual indication of the
+async task completing.
 
-function Course({courseId}) {
-  const [state, setState] = React.useState({
-    status: 'idle',
-    course: null,
-    error: null,
-  })
+Because our code waits for the `updateUsername` promise to resolve before
+continuing, we could return a promise from our fake version and use an async act
+to await that promise resolution:
 
-  const {status, course, error} = state
+```jsx {2,3,13}
+test('calls updateUsername with the new username', async () => {
+  const promise = Promise.resolve()
+  const handleUpdateUsername = jest.fn(() => promise)
+  const fakeUsername = 'sonicthehedgehog'
 
-  React.useEffect(() => {
-    setState({status: 'pending', course: null, error: null})
-    api.getCourseInfo(courseId).then(
-      data => setState({status: 'fulfilled', course: data, error: null}),
-      e => setState({status: 'rejected', course: null, error: e}),
-    )
-  }, [courseId])
+  render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
-  return (
-    <>
-      <div role="alert" aria-live="polite">
-        {status === 'loading'
-          ? 'Loading...'
-          : status === 'rejected'
-          ? error.message
-          : null}
-      </div>
-      {status === 'fulfilled' ? <CourseInfo course={course} /> : null}
-    </>
-  )
-}
+  const usernameInput = screen.getByLabelText(/username/i)
+  user.type(usernameInput, fakeUsername)
+  user.click(screen.getByText(/submit/i))
 
-function CourseInfo({course}) {
-  const {title, subtitle, topics} = course
-  return (
-    <div>
-      <h1>{title}</h1>
-      <strong>{subtitle}</strong>
-      <ul>
-        {topics.map(t => (
-          <li key={t}>{t}</li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-export default Course
-```
-
-Here's an example of a test suffering from this problem:
-
-```jsx
-import React from 'react'
-import {render, screen} from '@testing-library/react'
-import {getCourseInfo} from '../api'
-import Course from '../course'
-
-jest.mock('../api')
-
-function buildCourse(overrides) {
-  return {
-    title: 'TEST_COURSE_TITLE',
-    subtitle: 'TEST_COURSE_SUBTITLE',
-    topics: ['TEST_COURSE_TOPIC'],
-    ...overrides,
-  }
-}
-
-// 🛑 THIS IS AN EXAMPLE OF WHAT NOT TO DO...
-test('course shows loading screen', () => {
-  getCourseInfo.mockResolvedValueOnce(buildCourse())
-  render(<Course courseId="123" />)
-  const alert = screen.getByRole('alert')
-  expect(alert).toHaveTextContent(/loading/i)
-})
-```
-
-Here we're rendering the `Course` and just trying to verify that the loading
-message shows up properly. The problem is when we `render` the `<Course />`
-component, it immediately fires an async request. We're correctly mocking that
-out (which we have to do, otherwise our test will actually make the request).
-However, our test completes synchronously before the mocked out request has a
-chance to resolve. When it finally does, our success handler is called which
-calls the state updater function and we get the `act` warning.
-
-There are three ways to fix this.
-
-1. Wait for the promise to resolve
-2. Use React Testing Library's `wait` utility
-3. Put this assertion in another test (the premise of my article
-   [Write fewer, longer tests](/blog/write-fewer-longer-tests))
-
-```jsx
-// 1. Wait for the promise to resolve
-// ⚠️ this is an ok way to solve this problem, but there's a better way, read on
-test('course shows loading screen', async () => {
-  const promise = Promise.resolve(buildCourse())
-  getCourseInfo.mockImplementationOnce(() => promise)
-  render(<Course courseId="123" />)
-  const alert = screen.getByRole('alert')
-  expect(alert).toHaveTextContent(/loading/i)
+  expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await act(() => promise)
 })
 ```
 
-This is actually not all that bad. I would recommend this if there are no
-observable changes to the DOM. I had a situation like this in a UI I built where
-I had implemented an optimistic update (meaning the DOM update happened before
-the request finished) and therefore had no way to wait for/assert on changes in
-the DOM.
+Note that we're manually calling `act` here and you can get that from
+`react-dom/test-utils` or React Testing Library re-exports it so you can get
+grab it from the import you already have. You're welcome.
 
-```jsx
-// 2. Use React Testing Library's `wait` utility
-// ⚠️ this is an ok way to solve this problem, but there's a better way, read on
-test('course shows loading screen', async () => {
-  getCourseInfo.mockResolvedValueOnce(buildCourse())
-  render(<Course courseId="123" />)
-  const alert = screen.getByRole('alert')
-  expect(alert).toHaveTextContent(/loading/i)
-  await wait()
-})
-```
+This isn't preferable because it's still not going to catch the bug we
+demonstrated earlier by commenting out that `setState` call, but it does make
+the warning go away properly. I'd just recommend making additional assertions
+about the way things look after the async action has completed.
 
-This only really works if the mock you've created resolves immediately, which is
-most likely (especially if you're using `mockResolvedValueOnce`). Here you don't
-have to use `act` directly, but this test is basically just ignoring everything
-that happened during that waiting time which is why I don't really recommend
-this.
-
-The last (and best) recommendation I have for you is to just include this
-assertion in the other tests of your component. There's not a whole lot of value
-out of keeping this assertion all by itself. To read more about this, please
-read [Write fewer, longer tests](/blog/write-fewer-longer-tests).
-
-## Other use cases for `act(...)`
+## Other use cases for manually calling `act(...)`
 
 If you're using all the React Testing Library async utilities and are waiting
 for your component to settle before finishing your test and you're _still_
