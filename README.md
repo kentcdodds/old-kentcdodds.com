@@ -157,6 +157,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/vedran"><img src="https://avatars3.githubusercontent.com/u/473826?v=4" width="100px;" alt=""/><br /><sub><b>Vedran</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=vedran" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/hossammourad/"><img src="https://avatars2.githubusercontent.com/u/4350401?v=4" width="100px;" alt=""/><br /><sub><b>Hossam Mourad</b></sub></a><br /><a href="#content-hos4m" title="Content">🖋</a></td>
   </tr>
 </table>
 
