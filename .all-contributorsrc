@@ -1033,6 +1033,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "hos4m",
+      "name": "Hossam Mourad",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4350401?v=4",
+      "profile": "https://www.linkedin.com/in/hossammourad/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
