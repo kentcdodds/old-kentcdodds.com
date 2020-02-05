@@ -1,9 +1,10 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import {useStaticQuery, graphql, Link} from 'gatsby'
+import styled from '@emotion/styled'
+import {Link as RouterLink} from '@reach/router'
 import {rankings as matchSorterRankings} from 'match-sorter'
 import MatchSorterWorker from './match-sorter.worker'
-import theme from '../../config/theme'
+import theme from '../../../config/theme'
 
 let matchSorterWorker
 
@@ -14,8 +15,8 @@ function getMatchSorterWorker() {
   return matchSorterWorker
 }
 
-function BlogPostCard({siteUrl, blogpost}) {
-  const {slug, title, description, keywords, banner} = blogpost
+function BlogPostCard({blogpost}) {
+  const {slug, productionUrl, title, description, keywords, banner} = blogpost
   const defaultCopyText = 'Copy URL'
   const [copyText, setCopyText] = React.useState(defaultCopyText)
 
@@ -33,7 +34,7 @@ function BlogPostCard({siteUrl, blogpost}) {
 
   function copy(event) {
     event.preventDefault()
-    navigator.clipboard.writeText(`${siteUrl}${slug}`).then(
+    navigator.clipboard.writeText(productionUrl).then(
       () => {
         setCopyText('Copied')
       },
@@ -42,6 +43,7 @@ function BlogPostCard({siteUrl, blogpost}) {
       },
     )
   }
+
   return (
     <div
       css={{
@@ -55,7 +57,7 @@ function BlogPostCard({siteUrl, blogpost}) {
         paddingBottom: 60,
       }}
     >
-      <Link to={slug} css={{color: 'initial'}}>
+      <RouterLink to={slug} css={{color: 'initial'}}>
         <h2 css={{marginTop: 0}}>{title}</h2>
         <div css={{width: '100%'}}>
           <button
@@ -75,7 +77,7 @@ function BlogPostCard({siteUrl, blogpost}) {
         </div>
         <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
-      </Link>
+      </RouterLink>
     </div>
   )
 }
@@ -108,51 +110,44 @@ function useQueryParamState(searchParamName) {
   return [value, setValue]
 }
 
-function SearchScreen() {
-  const result = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            siteUrl
-          }
-        }
-        blogposts: allMdx(
-          sort: {fields: frontmatter___date, order: DESC}
-          filter: {
-            frontmatter: {published: {ne: false}}
-            fileAbsolutePath: {regex: "//content/blog//"}
-          }
-        ) {
-          edges {
-            node {
-              fields {
-                id
-                slug
-                title
-                categories
-                keywords
-                description: plainTextDescription
-                banner {
-                  ...bannerImage260
-                }
-              }
-              excerpt(pruneLength: 190)
-            }
-          }
-        }
-      }
-    `,
-  )
+const CategoryButton = styled.button([
+  {
+    cursor: 'pointer',
+    padding: '2px 4px',
+    border: `1px solid ${theme.colors.gray}`,
+    borderRadius: 3,
+    fontSize: 10,
+    margin: '2.5px',
+  },
+  ({isSelected}) => {
+    const selectedStyles = {
+      color: theme.colors.white,
+      backgroundColor: theme.colors.link_color_hover,
+    }
+    const unselectedStyles = {
+      color: theme.colors.link_color_hover,
+      backgroundColor: theme.colors.white,
+    }
+    return isSelected
+      ? {'&&&': {...selectedStyles, ':hover': unselectedStyles}}
+      : {'&&&': {...unselectedStyles, ':hover': selectedStyles}}
+  },
+])
 
+function Search(props) {
   // this will be the same every time and because this re-renders on every
   // keystroke I'm pretty sure useMemo is appropriate here.
   const blogposts = React.useMemo(() => {
-    return result.blogposts.edges.map(e => ({
+    return props.blogposts.edges.map(e => ({
       ...e.node.fields,
       excerpt: e.node.excerpt,
     }))
-  }, [result.blogposts.edges])
+  }, [props.blogposts.edges])
+
+  const categories = React.useMemo(
+    () => Array.from(new Set(blogposts.flatMap(post => post.categories))),
+    [blogposts],
+  )
 
   const [search, setSearch] = useQueryParamState('q')
   const [filteredBlogPosts, setFilteredBlogPosts] = React.useState(
@@ -167,7 +162,10 @@ function SearchScreen() {
     getMatchSorterWorker()
       .searchAndSort(blogposts, search, {
         keys: [
-          'title',
+          {
+            key: 'title',
+            threshold: matchSorterRankings.CONTAINS,
+          },
           {
             key: 'categories',
             threshold: matchSorterRankings.CONTAINS,
@@ -183,7 +181,6 @@ function SearchScreen() {
             threshold: matchSorterRankings.CONTAINS,
             maxRanking: matchSorterRankings.CONTAINS,
           },
-          {key: 'excerpt', threshold: matchSorterRankings.CONTAINS},
         ],
       })
       .then(
@@ -194,6 +191,18 @@ function SearchScreen() {
         },
       )
   }, [blogposts, search])
+
+  function handleCategoryClick(category) {
+    setSearch(s => {
+      if (s.includes(category)) {
+        return s
+          .split(category)
+          .join('')
+          .trim()
+      }
+      return `${s.trim()} ${category}`.trim()
+    })
+  }
 
   return (
     <div>
@@ -219,6 +228,17 @@ function SearchScreen() {
           {filteredBlogPosts.length}
         </div>
       </div>
+      <div>
+        {categories.map(category => (
+          <CategoryButton
+            key={category}
+            onClick={() => handleCategoryClick(category)}
+            isSelected={search.includes(category)}
+          >
+            {category}
+          </CategoryButton>
+        ))}
+      </div>
       <small css={{marginTop: 10, display: 'block'}}>
         {`If you can't find what you're looking for with this, try `}
         <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
@@ -235,18 +255,14 @@ function SearchScreen() {
         }}
       >
         {filteredBlogPosts.map(blogpost => (
-          <BlogPostCard
-            key={blogpost.id}
-            blogpost={blogpost}
-            siteUrl={result.site.siteMetadata.siteUrl}
-          />
+          <BlogPostCard key={blogpost.id} blogpost={blogpost} />
         ))}
       </div>
     </div>
   )
 }
 
-export default SearchScreen
+export default Search
 
 /*
 eslint

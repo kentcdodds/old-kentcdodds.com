@@ -49,7 +49,6 @@
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-transformer-sharp": "^2.3.13",
-    "htmltojsx": "^0.3.0",
     "http-proxy-middleware": "^0.20.0",
     "lodash": "^4.17.15",
     "match-sorter": "^4.0.2",

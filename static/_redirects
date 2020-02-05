@@ -1,3 +1,6 @@
+/search q=:q                                                            /blog?q=:q
+/search                                                                 /blog
+
 # no idea why, but the gatsby redirect doesn't always work right
 
 /blog/always-use-memo-your-context-value                                /blog/how-to-optimize-your-context-value

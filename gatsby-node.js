@@ -1,12 +1,12 @@
 /* eslint-disable max-statements */
 const path = require('path')
+const {URL} = require('url')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
 const _ = require('lodash')
-
-const PAGINATION_OFFSET = 7
+const config = require('./config/website')
 
 const createWorkshops = (createPage, edges) => {
   edges.forEach(({node}, i) => {
@@ -74,7 +74,7 @@ const createPosts = (createPage, createRedirect, edges) => {
   })
 }
 
-function createBlogPages({blogPath, data, paginationTemplate, actions}) {
+function createBlogPages({data, actions}) {
   if (_.isEmpty(data.edges)) {
     throw new Error('There are no posts!')
   }
@@ -82,15 +82,6 @@ function createBlogPages({blogPath, data, paginationTemplate, actions}) {
   const {edges} = data
   const {createRedirect, createPage} = actions
   createPosts(createPage, createRedirect, edges)
-  createPaginatedPages(
-    actions.createPage,
-    edges,
-    blogPath,
-    paginationTemplate,
-    {
-      categories: [],
-    },
-  )
   return null
 }
 
@@ -220,13 +211,11 @@ exports.createPages = async ({actions, graphql}) => {
   createBlogPages({
     blogPath: '/blog',
     data: blog,
-    paginationTemplate: path.resolve(`src/templates/blog.js`),
     actions,
   })
   createBlogPages({
     blogPath: '/writing/blog',
     data: writing,
-    paginationTemplate: path.resolve(`src/templates/writing-blog.js`),
     actions,
   })
   createWorkshopPages({
@@ -240,47 +229,6 @@ exports.onCreateWebpackConfig = ({actions}) => {
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
-  })
-}
-
-function createPaginatedPages(
-  createPage,
-  edges,
-  pathPrefix,
-  paginationTemplate,
-  context,
-) {
-  const pages = edges.reduce((acc, value, index) => {
-    const pageIndex = Math.floor(index / PAGINATION_OFFSET)
-
-    if (!acc[pageIndex]) {
-      acc[pageIndex] = []
-    }
-
-    acc[pageIndex].push(value.node.id)
-
-    return acc
-  }, [])
-
-  pages.forEach((page, index) => {
-    const previousPagePath =
-      index === 1 ? pathPrefix : `${pathPrefix}/${index - 1}`
-    const nextPagePath = `${pathPrefix}/${index + 1}`
-
-    createPage({
-      path: index > 0 ? `${pathPrefix}/${index}` : `${pathPrefix}`,
-      component: paginationTemplate,
-      context: {
-        pagination: {
-          page,
-          nextPagePath: index === pages.length - 1 ? null : nextPagePath,
-          previousPagePath: index === 0 ? null : previousPagePath,
-          pageCount: pages.length,
-          pathPrefix,
-        },
-        ...context,
-      },
-    })
   })
 }
 
@@ -364,6 +312,15 @@ exports.onCreateNode = ({node, getNode, actions}) => {
       name: 'slug',
       node,
       value: slug,
+    })
+
+    const productionUrl = new URL(config.siteUrl)
+    productionUrl.pathname = slug
+
+    createNodeField({
+      name: 'productionUrl',
+      node,
+      value: productionUrl.toString(),
     })
 
     createNodeField({
