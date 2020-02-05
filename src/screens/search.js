@@ -197,17 +197,7 @@ function SearchScreen() {
 
   return (
     <div>
-      <div>
-        <h1>Search Kent C. Dodds Blogposts</h1>
-      </div>
-      <small>
-        {`If you can't find what you're looking for with this, try `}
-        <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
-          using Google
-        </a>
-        {'.'}
-      </small>
-      <div css={{marginTop: 50, position: 'relative'}}>
+      <div css={{position: 'relative'}}>
         <label
           htmlFor="search-input"
           css={{margin: '0 10px 0 0', display: 'block'}}
@@ -234,6 +224,13 @@ function SearchScreen() {
           {filteredBlogPosts.length}
         </div>
       </div>
+      <small css={{marginTop: 10}}>
+        {`If you can't find what you're looking for with this, try `}
+        <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
+          using Google
+        </a>
+        {'.'}
+      </small>
       <div
         css={{
           marginTop: 20,
