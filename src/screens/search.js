@@ -198,17 +198,12 @@ function SearchScreen() {
   return (
     <div>
       <div css={{position: 'relative'}}>
-        <label
-          htmlFor="search-input"
-          css={{margin: '0 10px 0 0', display: 'block'}}
-        >
-          Search Blogposts
-        </label>
         <input
-          id="search-input"
           css={{width: '100%', paddingRight: 50}}
           onChange={event => setSearch(event.target.value)}
           type="search"
+          placeholder="Search Blogposts"
+          aria-label="Search Blogposts"
           value={search}
           autoFocus
         />
@@ -216,7 +211,7 @@ function SearchScreen() {
           css={{
             position: 'absolute',
             right: 14,
-            top: 35,
+            top: 10,
             opacity: 0.6,
             fontSize: '0.8rem',
           }}
@@ -224,7 +219,7 @@ function SearchScreen() {
           {filteredBlogPosts.length}
         </div>
       </div>
-      <small css={{marginTop: 10}}>
+      <small css={{marginTop: 10, display: 'block'}}>
         {`If you can't find what you're looking for with this, try `}
         <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
           using Google
