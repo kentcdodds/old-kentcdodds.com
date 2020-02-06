@@ -38,8 +38,10 @@ function Post({data: {site, mdx}}) {
   const {
     isWriting,
     editLink,
+    historyLink,
     title,
     slug,
+    lastUpdatedDate,
     description,
     banner,
     bannerCredit,
@@ -125,6 +127,21 @@ function Post({data: {site, mdx}}) {
         {/* <SubscribeForm /> */}
       </article>
       <Container noVerticalPadding>
+        <a href={historyLink}>
+          <time
+            css={{
+              textAlign: 'right',
+              display: 'block',
+              fontSize: '12px',
+              marginBottom: '10px',
+            }}
+            title="Last Updated Date"
+          >
+            {lastUpdatedDate}
+          </time>
+        </a>
+      </Container>
+      <Container noVerticalPadding>
         <p css={{textAlign: 'right'}}>
           <a
             target="_blank"
@@ -192,8 +209,10 @@ export const pageQuery = graphql`
     mdx(fields: {id: {eq: $id}}) {
       fields {
         editLink
+        historyLink
         isWriting
         title
+        lastUpdatedDate
         noFooter
         description
         plainTextDescription

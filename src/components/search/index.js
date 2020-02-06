@@ -116,7 +116,7 @@ const CategoryButton = styled.button([
     padding: '2px 4px',
     border: `1px solid ${theme.colors.gray}`,
     borderRadius: 3,
-    fontSize: 10,
+    fontSize: 12,
     margin: '2.5px',
   },
   ({isSelected}) => {
@@ -129,8 +129,8 @@ const CategoryButton = styled.button([
       backgroundColor: theme.colors.white,
     }
     return isSelected
-      ? {'&&&': {...selectedStyles, ':hover': unselectedStyles}}
-      : {'&&&': {...unselectedStyles, ':hover': selectedStyles}}
+      ? {'&&&': {...selectedStyles, ':hover': selectedStyles}}
+      : {'&&&': {...unselectedStyles, ':hover': unselectedStyles}}
   },
 ])
 
@@ -230,46 +230,48 @@ function Search(props) {
 
   return (
     <div>
-      <div css={{position: 'relative'}}>
-        <input
-          css={{width: '100%', paddingRight: 50}}
-          onChange={event => setSearch(event.target.value)}
-          type="search"
-          placeholder="Search Blogposts"
-          aria-label="Search Blogposts"
-          value={search}
-          autoFocus
-        />
-        <div
-          css={{
-            position: 'absolute',
-            right: 14,
-            top: 10,
-            opacity: 0.6,
-            fontSize: '0.8rem',
-          }}
-        >
-          {filteredBlogPosts.length}
-        </div>
-      </div>
-      <div>
-        {categories.map(category => (
-          <CategoryButton
-            key={category}
-            onClick={() => handleCategoryClick(category)}
-            isSelected={search.includes(category)}
+      <div css={{maxWidth: 500, margin: 'auto'}}>
+        <div css={{position: 'relative'}}>
+          <input
+            css={{width: '100%', paddingRight: 50}}
+            onChange={event => setSearch(event.target.value)}
+            type="search"
+            placeholder="Search Blogposts"
+            aria-label="Search Blogposts"
+            value={search}
+            autoFocus
+          />
+          <div
+            css={{
+              position: 'absolute',
+              right: 14,
+              top: 10,
+              opacity: 0.6,
+              fontSize: '0.8rem',
+            }}
           >
-            {category}
-          </CategoryButton>
-        ))}
+            {filteredBlogPosts.length}
+          </div>
+        </div>
+        <div>
+          {categories.map(category => (
+            <CategoryButton
+              key={category}
+              onClick={() => handleCategoryClick(category)}
+              isSelected={search.includes(category)}
+            >
+              {category}
+            </CategoryButton>
+          ))}
+        </div>
+        <small css={{marginTop: 10, display: 'block'}}>
+          {`If you can't find what you're looking for with this, try `}
+          <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
+            using Google
+          </a>
+          {'.'}
+        </small>
       </div>
-      <small css={{marginTop: 10, display: 'block'}}>
-        {`If you can't find what you're looking for with this, try `}
-        <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
-          using Google
-        </a>
-        {'.'}
-      </small>
       <div
         css={{
           marginTop: 20,
@@ -281,13 +283,15 @@ function Search(props) {
         {blogPostsToDisplay.map(blogpost => (
           <BlogPostCard key={blogpost.id} blogpost={blogpost} />
         ))}
-        {maxPostsToRender < filteredBlogPosts.length ? (
-          <>
-            <div>Oh? You wanna scroll do you? Loading all the posts...</div>
-            <Intersection onVisible={() => setMaxPostsToRender(Infinity)} />
-          </>
-        ) : null}
       </div>
+      {maxPostsToRender < filteredBlogPosts.length ? (
+        <>
+          <div css={{marginTop: 20, textAlign: 'center'}}>
+            Oh? You wanna scroll do you? Rendering all the posts...
+          </div>
+          <Intersection onVisible={() => setMaxPostsToRender(Infinity)} />
+        </>
+      ) : null}
     </div>
   )
 }

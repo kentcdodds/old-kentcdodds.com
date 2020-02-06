@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import {graphql, StaticQuery} from 'gatsby'
+import {graphql, useStaticQuery} from 'gatsby'
 import {MDXProvider} from '@mdx-js/react'
 import {Global, css} from '@emotion/core'
 import styled from '@emotion/styled'
@@ -150,7 +150,6 @@ const DefaultHero = styled.section`
 `
 
 function Layout({
-  data,
   headerLink,
   siteTitle = 'Kent C. Dodds',
   frontmatter = {},
@@ -167,6 +166,20 @@ function Layout({
   logo,
   maxWidth = 720,
 }) {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+          description
+          author {
+            name
+          }
+          keywords
+        }
+      }
+    }
+  `)
   const {
     site: {
       siteMetadata,
@@ -235,24 +248,4 @@ function Layout({
   )
 }
 
-export default function LayoutWithSiteData(props) {
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              author {
-                name
-              }
-              keywords
-            }
-          }
-        }
-      `}
-      render={data => <Layout data={data} {...props} />}
-    />
-  )
-}
+export default Layout

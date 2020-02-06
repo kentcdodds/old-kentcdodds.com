@@ -143,7 +143,6 @@ export const pageQuery = graphql`
         ckTag
       }
       fields {
-        editLink
         title
         noFooter
         description

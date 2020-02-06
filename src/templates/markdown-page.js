@@ -22,7 +22,7 @@ function MarkdownPage({children, pageContext: {frontmatter}}) {
         frontmatter={frontmatter}
         headerColor={theme.colors.white}
       >
-        <Container>{children}</Container>
+        <Container maxWidth={frontmatter.maxWidth}>{children}</Container>
       </Layout>
     </>
   )

@@ -9,12 +9,16 @@ const Container = props => {
     noVerticalPadding = false,
     ...restProps
   } = props
+  const fullMaxWidth =
+    typeof maxWidth === 'number'
+      ? `${maxWidth + (noHorizontalPadding ? 0 : 80)}px`
+      : maxWidth
   return (
     <div
       css={css`
         width: 100%;
         margin: 0 auto;
-        max-width: ${maxWidth + (noHorizontalPadding ? 0 : 80)}px;
+        max-width: ${fullMaxWidth};
         padding: ${noVerticalPadding ? 0 : '40'}px
           ${noHorizontalPadding ? 0 : '40'}px;
         ${bpMaxSM} {
