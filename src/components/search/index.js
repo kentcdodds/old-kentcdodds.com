@@ -134,6 +134,27 @@ const CategoryButton = styled.button([
   },
 ])
 
+function Intersection({onVisible}) {
+  const target = React.useRef(null)
+  const onVisibleRef = React.useRef(onVisible)
+
+  React.useEffect(() => {
+    onVisibleRef.current = onVisible
+  })
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      const isIntersecting = entries.some(e => e.isIntersecting)
+      if (isIntersecting) {
+        onVisibleRef.current()
+      }
+    })
+    observer.observe(target.current)
+    return () => observer.disconnect()
+  }, [])
+  return <div ref={target} />
+}
+
 function Search(props) {
   // this will be the same every time and because this re-renders on every
   // keystroke I'm pretty sure useMemo is appropriate here.
@@ -155,6 +176,9 @@ function Search(props) {
     // otherwise let's initialize to the blogposts
     search ? [] : blogposts,
   )
+
+  const [maxPostsToRender, setMaxPostsToRender] = React.useState(10)
+  const blogPostsToDisplay = filteredBlogPosts.slice(0, maxPostsToRender)
   React.useEffect(() => {
     if (!search) {
       setFilteredBlogPosts(blogposts)
@@ -254,9 +278,15 @@ function Search(props) {
           justifyContent: 'center',
         }}
       >
-        {filteredBlogPosts.map(blogpost => (
+        {blogPostsToDisplay.map(blogpost => (
           <BlogPostCard key={blogpost.id} blogpost={blogpost} />
         ))}
+        {maxPostsToRender < filteredBlogPosts.length ? (
+          <>
+            <div>Oh? You wanna scroll do you? Loading all the posts...</div>
+            <Intersection onVisible={() => setMaxPostsToRender(Infinity)} />
+          </>
+        ) : null}
       </div>
     </div>
   )
