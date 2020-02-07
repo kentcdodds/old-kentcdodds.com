@@ -158,11 +158,13 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://github.com/vedran"><img src="https://avatars3.githubusercontent.com/u/473826?v=4" width="100px;" alt=""/><br /><sub><b>Vedran</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=vedran" title="Code">💻</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/hossammourad/"><img src="https://avatars2.githubusercontent.com/u/4350401?v=4" width="100px;" alt=""/><br /><sub><b>Hossam Mourad</b></sub></a><br /><a href="#content-hos4m" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.zaklaughton.dev"><img src="https://avatars1.githubusercontent.com/u/3655666?v=4" width="100px;" alt=""/><br /><sub><b>Zak</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3AZakLaughton" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the

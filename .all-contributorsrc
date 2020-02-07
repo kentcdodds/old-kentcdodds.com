@@ -1042,6 +1042,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ZakLaughton",
+      "name": "Zak",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3655666?v=4",
+      "profile": "http://www.zaklaughton.dev",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "commitConvention": "none",
