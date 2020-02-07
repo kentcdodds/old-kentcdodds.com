@@ -58,7 +58,7 @@ export default [
     `,
   },
   {
-    title: 'Keynote: TBA',
+    title: 'Keynote: Consume ➡️ Build ➡️ Teach',
     resources: [],
     tags: [],
     deliveries: [
@@ -68,6 +68,14 @@ export default [
       },
     ],
     description: `
+      How do you level up? How do you jumpstart your learning when getting into
+      something new? Nobody has more than 24 hours a day, so how do you maximize
+      the impact of your limited time?
+
+      In this keynote, I'm going to tell you a bit of my own story, and some
+      tips and tricks that I've learned so you can be as productive as you can
+      be at learning new things and solidifying that knowledge so it's there
+      when you need it.
     `,
   },
   {
