@@ -1051,6 +1051,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "zerkms",
+      "name": "Ivan Kurnosov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/302295?v=4",
+      "profile": "http://cv.zerkms.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
