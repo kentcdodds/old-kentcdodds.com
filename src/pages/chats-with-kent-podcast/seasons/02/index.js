@@ -19,7 +19,6 @@ export const query = graphql`
     ) {
       nodes {
         fields {
-          isPodcast
           slug
         }
       }

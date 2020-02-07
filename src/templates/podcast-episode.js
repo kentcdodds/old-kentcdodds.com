@@ -142,7 +142,7 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
               frameBorder="no"
               scrolling="no"
               seamless
-              src={`https://player.simplecast.com/${mdx.frontmatter.id}?dark=false`}
+              src={`https://player.simplecast.com/${mdx.frontmatter.simpleCastId}?dark=false`}
             />
             <h1
               css={css({
@@ -171,16 +171,15 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
 export default PodcastEpisodePage
 
 export const query = graphql`
-  query($id: String!, $season: Int!) {
-    mdx(frontmatter: {id: {eq: $id}}) {
+  query($simpleCastId: String!, $season: Int!) {
+    mdx(frontmatter: {simpleCastId: {eq: $simpleCastId}}) {
       body
       frontmatter {
-        id
+        simpleCastId
         title
         description
         number
         season
-        id
         guestPhoto {
           childImageSharp {
             fixed(width: 80, height: 80) {
@@ -210,7 +209,7 @@ export const query = graphql`
       totalCount
       nodes {
         frontmatter {
-          id
+          simpleCastId
           title
           description
           number

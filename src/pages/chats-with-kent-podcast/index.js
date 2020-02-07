@@ -67,12 +67,12 @@ export const seasonIndexQuery = graphql`
     ) {
       totalCount
       nodes {
-        id
         fields {
           isPodcast
           slug
         }
         frontmatter {
+          simpleCastId
           title
           season
           number
@@ -92,12 +92,12 @@ export const seasonIndexQuery = graphql`
     ) {
       totalCount
       nodes {
-        id
         fields {
           isPodcast
           slug
         }
         frontmatter {
+          simpleCastId
           title
           season
           number
