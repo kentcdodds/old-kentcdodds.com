@@ -11,7 +11,7 @@ function Season1({data: {allMdx}}) {
 
 export default Season1
 
-export const latestEpisodeQuery = graphql`
+export const query = graphql`
   {
     allMdx(
       filter: {frontmatter: {season: {eq: 1}}, fields: {isPodcast: {eq: true}}}

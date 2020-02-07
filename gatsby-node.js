@@ -95,7 +95,7 @@ const createEpisodes = (createPage, edges) => {
       component: path.resolve(`./src/templates/podcast-episode.js`),
       context: {
         slug: node.fields.slug,
-        id: node.fields.id,
+        id: node.id,
         title: node.fields.title,
         season: node.frontmatter.season,
       },
@@ -140,12 +140,12 @@ exports.createPages = async ({actions, graphql}) => {
       ) {
         edges {
           node {
+            id
             fileAbsolutePath
             frontmatter {
               season
             }
             fields {
-              id
               title
               slug
             }

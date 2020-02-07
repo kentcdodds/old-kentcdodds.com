@@ -159,7 +159,7 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
             <h3 css={css({marginBottom: '2rem', marginTop: '1rem'})}>
               {mdx.frontmatter.description}
             </h3>
-            {mdx && <MDXRenderer>{mdx.body}</MDXRenderer>}
+            <MDXRenderer>{mdx.body}</MDXRenderer>
             {children}
           </Article>
         </Container>
@@ -170,7 +170,7 @@ function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
 
 export default PodcastEpisodePage
 
-export const episodeQuery = graphql`
+export const query = graphql`
   query($id: String!, $season: Int!) {
     mdx(frontmatter: {id: {eq: $id}}) {
       body

@@ -9,10 +9,9 @@ const Container = props => {
     noVerticalPadding = false,
     ...restProps
   } = props
-  const fullMaxWidth =
-    typeof maxWidth === 'number'
-      ? `${maxWidth + (noHorizontalPadding ? 0 : 80)}px`
-      : maxWidth
+  const fullMaxWidth = Number.isNaN(Number(maxWidth))
+    ? maxWidth
+    : `${maxWidth + (noHorizontalPadding ? 0 : 80)}px`
   return (
     <div
       css={css`
