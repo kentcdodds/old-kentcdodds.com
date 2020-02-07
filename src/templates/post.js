@@ -40,8 +40,8 @@ function Post({data: {site, mdx}}) {
     editLink,
     historyLink,
     title,
+    date,
     slug,
-    lastUpdatedDate,
     description,
     banner,
     bannerCredit,
@@ -137,7 +137,7 @@ function Post({data: {site, mdx}}) {
             }}
             title="Last Updated Date"
           >
-            {lastUpdatedDate}
+            {date}
           </time>
         </a>
       </Container>
@@ -212,7 +212,7 @@ export const pageQuery = graphql`
         historyLink
         isWriting
         title
-        lastUpdatedDate
+        date
         noFooter
         description
         plainTextDescription

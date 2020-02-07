@@ -1,14 +1,12 @@
 /* eslint-disable max-statements */
 const path = require('path')
 const {URL} = require('url')
-const util = require('util')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
 const config = require('./config/website')
 
-const exec = util.promisify(require('child_process').exec)
 const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
 
 const createWorkshops = (createPage, edges) => {
@@ -231,15 +229,13 @@ exports.onCreateWebpackConfig = ({actions}) => {
 }
 
 exports.onCreateNode = (...args) => {
-  const promises = []
   if (args[0].node.internal.type === `Mdx`) {
-    promises.push(onCreateMdxNode(...args))
+    onCreateMdxNode(...args)
   }
-  return Promise.all(promises)
 }
 
 // eslint-disable-next-line complexity
-async function onCreateMdxNode({node, getNode, actions}) {
+function onCreateMdxNode({node, getNode, actions}) {
   const parentNode = getNode(node.parent)
   const {createNodeField} = actions
   let slug =
@@ -333,12 +329,6 @@ async function onCreateMdxNode({node, getNode, actions}) {
   })
 
   createNodeField({
-    name: 'lastUpdatedDate',
-    node,
-    value: await getLastCommitDateForFile(node.fileAbsolutePath),
-  })
-
-  createNodeField({
     name: 'banner',
     node,
     value: node.frontmatter.banner,
@@ -415,18 +405,6 @@ async function onCreateMdxNode({node, getNode, actions}) {
     node,
     value: isPodcast,
   })
-}
-
-async function getLastCommitDateForFile(fileAbsolutePath) {
-  const lastUpdatedDateCommand = `git log --pretty=format:%at --follow -- "${fileAbsolutePath}" | head -n 1`
-  const lastUpdatedDateString = (await exec(lastUpdatedDateCommand)).stdout
-    .trim()
-    .concat('000')
-  const lastUpdatedDate = new Date(Number(lastUpdatedDateString))
-  const mm = twoDigits(lastUpdatedDate.getMonth() + 1)
-  const dd = twoDigits(lastUpdatedDate.getDate())
-  const yyyy = lastUpdatedDate.getFullYear()
-  return `${yyyy}-${mm}-${dd}`
 }
 
 /* eslint consistent-return:0 */
