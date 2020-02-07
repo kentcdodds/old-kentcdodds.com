@@ -11,9 +11,19 @@ const shouldTransform = url => {
 }
 
 const getEggheadIFrameSrc = url => {
-  const {host, pathname, search} = new URL(url)
+  const {host, pathname, searchParams} = new URL(url)
 
-  return `https://${host}${pathname}/embed${search}`
+  // Don't preload videos
+  if (!searchParams.has('preload')) {
+    searchParams.set('preload', false)
+  }
+
+  // Kent's affiliate link
+  if (!searchParams.has('af')) {
+    searchParams.set('af', '5236ad')
+  }
+
+  return `https://${host}${pathname}/embed?${searchParams.toString()}`
 }
 
 const getHTML = url => {
