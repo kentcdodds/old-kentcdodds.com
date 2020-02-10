@@ -24,7 +24,7 @@ export default [
     tags: ['javascript'],
     deliveries: [
       {
-        event: '[DotJS 2020](https://www.dotjs.io/)',
+        event: '[DotJS 2021](https://www.dotjs.io/)',
         date: '2021-02-18',
       },
     ],
