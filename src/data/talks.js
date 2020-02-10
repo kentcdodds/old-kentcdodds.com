@@ -19,6 +19,21 @@ export default [
   //   `,
   // },
   {
+    title: 'Surprise Talk',
+    resources: [],
+    tags: ['javascript'],
+    deliveries: [
+      {
+        event: '[DotJS 2020](https://www.dotjs.io/)',
+        date: '2021-02-18',
+      },
+    ],
+    description: `
+      dotJS has a tradition of not announcing the topics before the conference
+      and I will honor that here. You'll have to come and find out!
+    `,
+  },
+  {
     title: 'Keynote: TBA',
     resources: [],
     tags: [],
