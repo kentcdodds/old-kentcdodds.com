@@ -115,6 +115,9 @@ module.exports = {
               customTransformers: [eggheadTransformer],
             },
           },
+          {
+            resolve: require.resolve('./other/gatsby-remark-af'),
+          },
         ],
       },
     },
