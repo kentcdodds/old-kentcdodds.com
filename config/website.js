@@ -21,7 +21,6 @@ module.exports = {
   userTwitter: '@kentcdodds', // Twitter Username
   ogSiteName: 'Kent C. Dodds', // Facebook Site Name
   ogLanguage: 'en_US',
-  googleAnalyticsID: 'UA-62924965-1',
 
   // Manifest and Progress color
   themeColor: '#4147DC',
