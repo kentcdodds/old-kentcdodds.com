@@ -32,5 +32,4 @@ module.exports = {
   github: 'https://github.com/kentcdodds/',
   linkedin: 'https://www.linkedin.com/in/kentcdodds/',
   youtube: 'https://www.youtube.com/channel/UCz-BYvuntVRt_VpfR6FKXJw',
-  rss: 'https://kentcdodds.com/blog/rss.xml',
 }
