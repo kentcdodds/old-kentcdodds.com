@@ -1069,6 +1069,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "acusti",
+      "name": "Andrew Patton",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/517889?v=4",
+      "profile": "http://www.acusti.ca",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
