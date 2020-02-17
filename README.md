@@ -161,6 +161,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://www.zaklaughton.dev"><img src="https://avatars1.githubusercontent.com/u/3655666?v=4" width="100px;" alt=""/><br /><sub><b>Zak</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3AZakLaughton" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://cv.zerkms.com"><img src="https://avatars0.githubusercontent.com/u/302295?v=4" width="100px;" alt=""/><br /><sub><b>Ivan Kurnosov</b></sub></a><br /><a href="#content-zerkms" title="Content">🖋</a></td>
     <td align="center"><a href="https://ianjones.us/"><img src="https://avatars2.githubusercontent.com/u/4407263?v=4" width="100px;" alt=""/><br /><sub><b>Ian Jones</b></sub></a><br /><a href="#content-theianjones" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.acusti.ca"><img src="https://avatars2.githubusercontent.com/u/517889?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Patton</b></sub></a><br /><a href="#content-acusti" title="Content">🖋</a></td>
   </tr>
 </table>
 
