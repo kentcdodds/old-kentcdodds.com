@@ -2,7 +2,7 @@ const path = require('path')
 const config = require('./config/website')
 const proxy = require('http-proxy-middleware')
 
-const eggheadTransformer = require('./embedder-transformers/egghead')
+const eggheadTransformer = require('./other/embedder-transformers/egghead')
 
 const here = (...p) => path.join(__dirname, ...p)
 
