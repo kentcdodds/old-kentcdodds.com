@@ -7,7 +7,7 @@ import theme from '../../config/theme'
 // and it's such a simple single-use component hack something I could ship...
 function NotificationMessage({onClick, children}) {
   const portalContainerRef = React.useRef(null)
-  if (!portalContainerRef.current) {
+  if (!portalContainerRef.current && typeof document !== 'undefined') {
     portalContainerRef.current = document.createElement('div')
   }
 
