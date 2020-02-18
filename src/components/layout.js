@@ -5,7 +5,7 @@ import {MDXProvider} from '@mdx-js/react'
 import {Global, css} from '@emotion/core'
 import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
-import NotificationMessage from 'components/notification-message'
+import {QueryParamNotificationMessage} from 'components/notification-message'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import mdxComponents from 'components/mdx'
@@ -195,9 +195,9 @@ function Layout({
 
   return (
     <ThemeProvider theme={theme}>
-      <NotificationMessage queryStringKey="message" />
-      <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
-      <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage>
+      <QueryParamNotificationMessage queryStringKey="message" />
+      <QueryParamNotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</QueryParamNotificationMessage>
+      <QueryParamNotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</QueryParamNotificationMessage>
       <Global styles={globalStyles} />
       <Helmet
         title={title}
