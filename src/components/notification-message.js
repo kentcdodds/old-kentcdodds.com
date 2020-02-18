@@ -11,22 +11,30 @@ function NotificationMessage({onClick, children}) {
     portalContainerRef.current = document.createElement('div')
   }
 
+  const container = portalContainerRef.current
+
   const [animateIn, setAnimateIn] = React.useState(false)
 
   React.useEffect(() => {
-    Object.assign(portalContainerRef.current.style, {
+    Object.assign(container.style, {
       position: 'fixed',
       top: 0,
       left: 0,
       width: '100%',
       zIndex: 11,
     })
-    document.body.append(portalContainerRef.current)
-  }, [])
+    document.body.append(container)
+
+    return () => document.body.removeChild(container)
+  }, [container])
 
   React.useEffect(() => {
     setAnimateIn(!!children)
   }, [children])
+
+  if (!container) {
+    return null
+  }
 
   return ReactDOM.createPortal(
     <button
@@ -45,7 +53,7 @@ function NotificationMessage({onClick, children}) {
     >
       {children}
     </button>,
-    portalContainerRef.current,
+    container,
   )
 }
 
