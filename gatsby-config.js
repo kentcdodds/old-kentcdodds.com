@@ -221,106 +221,73 @@ module.exports = {
 }
 
 function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
+  /**
+   * These RSS feeds can be quite expensive to generate. Limiting the number of
+   * posts and keeping each item's template lightweight (only using frontmatter,
+   * avoiding the html/excerpt fields) helps negate this.
+   */
   return {
     serialize: ({query: {allMdx}}) => {
       const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
       return allMdx.edges.map(edge => {
         const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
-        // TODO: clean this up... This shouldn't be here and it should be dynamic.
-        const footer = `
-          <div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
-            <div style="display: flex;">
-              <div style="padding-right: 20px;">
-                <img
-                  src="https://kentcdodds.com/images/small-circular-kent.png"
-                  alt="Kent C. Dodds"
-                  style="max-width: 80px; border-radius: 50%;"
-                />
-              </div>
-              <p>
-                <strong>Kent C. Dodds</strong> is a JavaScript software engineer and
-                teacher. He's taught hundreds of thousands of people how to make the world
-                a better place with quality software development tools and practices. He
-                lives with his wife and four kids in Utah.
-              </p>
-            </div>
-            <div>
-              <p>Learn more with Kent C. Dodds:</p>
-              <ul>
-                <li>
-                  <a href="https://kentcdodds.com/workshops">Live, professional workshops</a>:
-                  Join Kent C. Dodds from the comfort of your home for live remote workshops.
-                  Tickets are limited! 🎟
-                </li>
-                <li>
-                  <a href="https://testingjavascript.com">TestingJavaScript.com</a>: Jump on
-                  this self-paced workshop and learn the smart, efficient way to test any
-                  JavaScript application. 🏆
-                </li>
-              </ul>
-            </div>
-          </div>
-        `
-
-        const postText = `<div>${footer}</div><div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
-
-        // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
-        const html = (edge.node.html || ``)
-          .replace(/href="\//g, `href="${siteUrl}/`)
-          .replace(/src="\//g, `src="${siteUrl}/`)
-          .replace(/"\/static\//g, `"${siteUrl}/static/`)
-          .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+        let banner = edge.node.frontmatter.banner.childImageSharp.fluid.src
+        // Workaround per https://github.com/gaearon/overreacted.io/issues/65
+        if (banner.startsWith('/')) {
+          banner = `${siteUrl}/${stripSlash(banner)}`
+        }
 
         return {
           ...edge.node.frontmatter,
-          description: edge.node.excerpt,
           date: edge.node.fields.date,
           url,
           guid: url,
           custom_elements: [
             {
               'content:encoded': `<div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
-                ${html}
-                ${postText}
-              </div>`,
+                  <img src="${banner}" alt="" >
+                  <p>
+                    I've posted a new article <em>"${edge.node.frontmatter.title}"</em> and you can <a href="${url}">read it online</a>.
+                    <br>
+                    You can also <a href="${siteUrl}/subscribe">subscribe</a> for weekly emails on what I'm learning, working on, and writing about.
+                  </p>
+                </div>`,
             },
           ],
         }
       })
     },
     query: `
-     {
-       site {
-         siteMetadata {
-           title
-           description
-         }
-       }
-
-       allMdx(
-         limit: 1000,
-         filter: {
-           frontmatter: {published: {ne: false}}
-           fileAbsolutePath: {regex: "${filePathRegex}"}
-         }
-         sort: { order: DESC, fields: [frontmatter___date] }
-       ) {
-         edges {
-           node {
-             excerpt(pruneLength: 250)
-             html
-             fields {
-               slug
-               date
-             }
-             frontmatter {
-               title
+       {
+         allMdx(
+           limit: 25,
+           filter: {
+             frontmatter: {published: {ne: false}}
+             fileAbsolutePath: {regex: "${filePathRegex}"}
+           }
+           sort: { order: DESC, fields: [frontmatter___date] }
+         ) {
+           edges {
+             node {
+               fields {
+                 slug
+                 date
+               }
+               frontmatter {
+                 title
+                 banner {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
+                 }
+               }
              }
            }
          }
        }
-     }
-   `,
+     `,
     ...overrides,
   }
 }
