@@ -170,6 +170,25 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          getBlogFeed({
+            filePathRegex: `//content/blog//`,
+            blogUrl: 'https://kentcdodds.com/blog',
+            output: '/blog/rss.xml',
+            title: 'Kent C. Dodds Blog RSS Feed',
+          }),
+          getBlogFeed({
+            filePathRegex: `//content/writing-blog//`,
+            blogUrl: 'https://kentcdodds.com/writing/blog',
+            output: '/writing/blog/rss.xml',
+            title: `Kent's Writing Blog RSS Feed`,
+          }),
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/lib/typography`,
@@ -199,4 +218,76 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
   ],
+}
+
+function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
+  /**
+   * These RSS feeds can be quite expensive to generate. Limiting the number of
+   * posts and keeping each item's template lightweight (only using frontmatter,
+   * avoiding the html/excerpt fields) helps negate this.
+   */
+  return {
+    serialize: ({query: {allMdx}}) => {
+      const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
+      return allMdx.edges.map(edge => {
+        const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
+        let banner = edge.node.frontmatter.banner.childImageSharp.fluid.src
+        // Workaround per https://github.com/gaearon/overreacted.io/issues/65
+        if (banner.startsWith('/')) {
+          banner = `${siteUrl}/${stripSlash(banner)}`
+        }
+
+        return {
+          ...edge.node.frontmatter,
+          date: edge.node.fields.date,
+          url,
+          guid: url,
+          custom_elements: [
+            {
+              'content:encoded': `<div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
+                  <img src="${banner}" alt="" >
+                  <p>
+                    I've posted a new article <em>"${edge.node.frontmatter.title}"</em> and you can <a href="${url}">read it online</a>.
+                    <br>
+                    You can also <a href="${siteUrl}/subscribe">subscribe</a> for weekly emails on what I'm learning, working on, and writing about.
+                  </p>
+                </div>`,
+            },
+          ],
+        }
+      })
+    },
+    query: `
+       {
+         allMdx(
+           limit: 25,
+           filter: {
+             frontmatter: {published: {ne: false}}
+             fileAbsolutePath: {regex: "${filePathRegex}"}
+           }
+           sort: { order: DESC, fields: [frontmatter___date] }
+         ) {
+           edges {
+             node {
+               fields {
+                 slug
+                 date
+               }
+               frontmatter {
+                 title
+                 banner {
+                  childImageSharp {
+                    fluid {
+                      src
+                    }
+                  }
+                 }
+               }
+             }
+           }
+         }
+       }
+     `,
+    ...overrides,
+  }
 }
