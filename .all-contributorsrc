@@ -1078,6 +1078,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "nchlswhttkr",
+      "name": "Nicholas Whittaker",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26531118?v=4",
+      "profile": "https://nchlswhttkr.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
