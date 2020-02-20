@@ -170,6 +170,25 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          getBlogFeed({
+            filePathRegex: `//content/blog//`,
+            blogUrl: 'https://kentcdodds.com/blog',
+            output: '/blog/rss.xml',
+            title: 'Kent C. Dodds Blog RSS Feed',
+          }),
+          getBlogFeed({
+            filePathRegex: `//content/writing-blog//`,
+            blogUrl: 'https://kentcdodds.com/writing/blog',
+            output: '/writing/blog/rss.xml',
+            title: `Kent's Writing Blog RSS Feed`,
+          }),
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/lib/typography`,
@@ -199,4 +218,109 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
   ],
+}
+
+function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
+  return {
+    serialize: ({query: {allMdx}}) => {
+      const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
+      return allMdx.edges.map(edge => {
+        const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
+        // TODO: clean this up... This shouldn't be here and it should be dynamic.
+        const footer = `
+          <div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
+            <div style="display: flex;">
+              <div style="padding-right: 20px;">
+                <img
+                  src="https://kentcdodds.com/images/small-circular-kent.png"
+                  alt="Kent C. Dodds"
+                  style="max-width: 80px; border-radius: 50%;"
+                />
+              </div>
+              <p>
+                <strong>Kent C. Dodds</strong> is a JavaScript software engineer and
+                teacher. He's taught hundreds of thousands of people how to make the world
+                a better place with quality software development tools and practices. He
+                lives with his wife and four kids in Utah.
+              </p>
+            </div>
+            <div>
+              <p>Learn more with Kent C. Dodds:</p>
+              <ul>
+                <li>
+                  <a href="https://kentcdodds.com/workshops">Live, professional workshops</a>:
+                  Join Kent C. Dodds from the comfort of your home for live remote workshops.
+                  Tickets are limited! 🎟
+                </li>
+                <li>
+                  <a href="https://testingjavascript.com">TestingJavaScript.com</a>: Jump on
+                  this self-paced workshop and learn the smart, efficient way to test any
+                  JavaScript application. 🏆
+                </li>
+              </ul>
+            </div>
+          </div>
+        `
+
+        const postText = `<div>${footer}</div><div style="margin-top=55px; font-style: italic;">(This article was posted to my blog at <a href="${blogUrl}">${blogUrl}</a>. You can <a href="${url}">read it online by clicking here</a>.)</div>`
+
+        // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
+        const html = (edge.node.html || ``)
+          .replace(/href="\//g, `href="${siteUrl}/`)
+          .replace(/src="\//g, `src="${siteUrl}/`)
+          .replace(/"\/static\//g, `"${siteUrl}/static/`)
+          .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+
+        return {
+          ...edge.node.frontmatter,
+          description: edge.node.excerpt,
+          date: edge.node.fields.date,
+          url,
+          guid: url,
+          custom_elements: [
+            {
+              'content:encoded': `<div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
+                ${html}
+                ${postText}
+              </div>`,
+            },
+          ],
+        }
+      })
+    },
+    query: `
+     {
+       site {
+         siteMetadata {
+           title
+           description
+         }
+       }
+
+       allMdx(
+         limit: 1000,
+         filter: {
+           frontmatter: {published: {ne: false}}
+           fileAbsolutePath: {regex: "${filePathRegex}"}
+         }
+         sort: { order: DESC, fields: [frontmatter___date] }
+       ) {
+         edges {
+           node {
+             excerpt(pruneLength: 250)
+             html
+             fields {
+               slug
+               date
+             }
+             frontmatter {
+               title
+             }
+           }
+         }
+       }
+     }
+   `,
+    ...overrides,
+  }
 }
