@@ -164,6 +164,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://www.acusti.ca"><img src="https://avatars2.githubusercontent.com/u/517889?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Patton</b></sub></a><br /><a href="#content-acusti" title="Content">🖋</a></td>
     <td align="center"><a href="https://nchlswhttkr.com"><img src="https://avatars3.githubusercontent.com/u/26531118?v=4" width="100px;" alt=""/><br /><sub><b>Nicholas Whittaker</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=nchlswhttkr" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://twitter.com/gnapse"><img src="https://avatars0.githubusercontent.com/u/15199?v=4" width="100px;" alt=""/><br /><sub><b>Ernesto García</b></sub></a><br /><a href="#content-gnapse" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
