@@ -1096,6 +1096,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "iaurg",
+      "name": "Italo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11761170?v=4",
+      "profile": "https://segredo.dev",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
