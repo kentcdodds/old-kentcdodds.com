@@ -1105,6 +1105,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "iwilsonq",
+      "name": "Ian Wilson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7942604?v=4",
+      "profile": "https://ianwilson.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
