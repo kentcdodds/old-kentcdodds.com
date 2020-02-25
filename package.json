@@ -6,6 +6,7 @@
   "author": "Kent C. Dodds <kent@doddsfamily.us> (https://kentcdodds.com)",
   "repository": "https://github.com/kentcdodds/kentcdodds.com",
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@mdx-js/mdx": "^1.5.5",
@@ -92,7 +93,6 @@
     "@testing-library/user-event": "^8.1.0",
     "babel-jest": "^25.1.0",
     "babel-preset-gatsby": "^0.2.27",
-    "babel-runtime": "^6.26.0",
     "cypress": "^3.8.3",
     "dotenv-cli": "^3.1.0",
     "eslint": "^6.8.0",
