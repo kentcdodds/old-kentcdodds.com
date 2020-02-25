@@ -245,9 +245,10 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
           custom_elements: [
             {
               'content:encoded': `<div style="width: 100%; margin: 0 auto; max-width: 800px; padding: 40px 40px;">
-                  <img src="${banner}" alt="" >
                   <p>
                     I've posted a new article <em>"${edge.node.frontmatter.title}"</em> and you can <a href="${url}">read it online</a>.
+                    <br>
+                    ${edge.node.fields.plainTextDescription}
                     <br>
                     You can also <a href="${siteUrl}/subscribe">subscribe</a> for weekly emails on what I'm learning, working on, and writing about.
                   </p>
@@ -272,16 +273,10 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
                fields {
                  slug
                  date
+                 plainTextDescription
                }
                frontmatter {
                  title
-                 banner {
-                  childImageSharp {
-                    fluid {
-                      src
-                    }
-                  }
-                 }
                }
              }
            }
