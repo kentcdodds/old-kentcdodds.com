@@ -231,11 +231,6 @@ function getBlogFeed({filePathRegex, blogUrl, ...overrides}) {
       const stripSlash = slug => (slug.startsWith('/') ? slug.slice(1) : slug)
       return allMdx.edges.map(edge => {
         const url = `${siteUrl}/${stripSlash(edge.node.fields.slug)}`
-        let banner = edge.node.frontmatter.banner.childImageSharp.fluid.src
-        // Workaround per https://github.com/gaearon/overreacted.io/issues/65
-        if (banner.startsWith('/')) {
-          banner = `${siteUrl}/${stripSlash(banner)}`
-        }
 
         return {
           ...edge.node.frontmatter,
