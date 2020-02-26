@@ -7,7 +7,7 @@ function onServiceWorkerUpdateReady() {
   document.body.appendChild(root)
   ReactDOM.render(
     <NotificationMessage onClick={() => window.location.reload()}>
-      The app has been updated in the background. Click here to display the
+      This website has been updated in the background. Click here to display the
       latest version.
     </NotificationMessage>,
     root,
