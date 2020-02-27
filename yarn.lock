@@ -7258,10 +7258,10 @@ gatsby-page-utils@^0.0.39:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-parallel-runner@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/gatsby-parallel-runner/-/gatsby-parallel-runner-1.2.2.tgz#1af0544350591dc1ba0c58804ebd559a280a8837"
-  integrity sha512-GK1KcRbuCQkRiIp2lCwo4POimKJ81/XahRStA1Uh1VTZ+IHlDfFo8qh3A/GL6IxgY/dPO/HDHU7fVF5wbYMSTQ==
+gatsby-parallel-runner@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-parallel-runner/-/gatsby-parallel-runner-1.2.3.tgz#eb86847c4b99a06342f8d4ab8c4c3112c4f43b8f"
+  integrity sha512-uRC90wFyLOOYW48NVZAWr3XupqthE6zXU26E4LtjvUyfw2CUog3dB20gkvc0NIddC6vOHiolR0ZFCF/NmWso/g==
   dependencies:
     "@google-cloud/pubsub" "^0.29.1"
     "@google-cloud/storage" "^4.3.0"
@@ -12078,7 +12078,7 @@ node-object-hash@^2.0.0:
   resolved "https://registry.yarnpkg.com/node-object-hash/-/node-object-hash-2.0.0.tgz#9971fcdb7d254f05016bd9ccf508352bee11116b"
   integrity sha512-VZR0zroAusy1ETZMZiGeLkdu50LGjG5U1KHZqTruqtTyQ2wfWhHG2Ow4nsUbfTFGlaREgNHcCWoM/OzEm6p+NQ==
 
-node-pre-gyp@*, node-pre-gyp@^0.14.0:
+node-pre-gyp@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
   integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
