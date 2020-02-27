@@ -48,7 +48,7 @@ function onServiceWorkerUpdateReady() {
           <div>
             {`This website has been updated in the background. `}
             <LinkButton onClick={() => window.location.reload()}>
-              Click here to display the latest version.
+              Get the latest version.
             </LinkButton>{' '}
             {learnMoreAboutServiceWorkers}{' '}
             <LinkButton
