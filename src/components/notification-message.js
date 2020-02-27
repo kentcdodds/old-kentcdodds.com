@@ -5,17 +5,16 @@ import theme from '../../config/theme'
 
 // this component is one big shrug. I didn't have time to get good at animation
 // and it's such a simple single-use component hack something I could ship...
-function NotificationMessage({onClick, children}) {
+function NotificationMessage({children}) {
   const portalContainerRef = React.useRef(null)
   if (!portalContainerRef.current && typeof document !== 'undefined') {
     portalContainerRef.current = document.createElement('div')
   }
 
-  const container = portalContainerRef.current
-
   const [animateIn, setAnimateIn] = React.useState(false)
 
   React.useEffect(() => {
+    const container = portalContainerRef.current
     Object.assign(container.style, {
       position: 'fixed',
       top: 0,
@@ -26,34 +25,56 @@ function NotificationMessage({onClick, children}) {
     document.body.append(container)
 
     return () => document.body.removeChild(container)
-  }, [container])
+  }, [])
+
+  const hasChildren = !!children
+  React.useEffect(() => {
+    setAnimateIn(hasChildren)
+  }, [hasChildren])
 
   React.useEffect(() => {
-    setAnimateIn(!!children)
-  }, [children])
+    if (animateIn) {
+      portalContainerRef.current.style.display = 'block'
+    } else {
+      const timeout = setTimeout(() => {
+        portalContainerRef.current.style.display = 'none'
+      }, 350)
+      return () => clearTimeout(timeout)
+    }
+  }, [animateIn])
 
-  if (!container) {
+  if (!portalContainerRef.current) {
     return null
   }
 
   return ReactDOM.createPortal(
-    <button
-      onClick={onClick || (() => setAnimateIn(false))}
+    <div
       css={css`
         border-radius: 0;
         width: 100%;
         padding: 20px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         background-color: ${theme.colors.green};
         color: ${theme.colors.primary_light};
         transition: 0.3s;
         transform: translateY(${animateIn ? '0' : '-85'}px);
       `}
     >
-      {children}
-    </button>,
-    container,
+      <div
+        css={css`
+          display: flex;
+          justify-content: center;
+        `}
+      >
+        {children}
+      </div>
+      <button css={{marginLeft: 10}} onClick={() => setAnimateIn(false)}>
+        Close
+      </button>
+    </div>,
+    portalContainerRef.current,
   )
 }
 
