@@ -168,6 +168,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://twitter.com/gnapse"><img src="https://avatars0.githubusercontent.com/u/15199?v=4" width="100px;" alt=""/><br /><sub><b>Ernesto García</b></sub></a><br /><a href="#content-gnapse" title="Content">🖋</a></td>
     <td align="center"><a href="https://segredo.dev"><img src="https://avatars2.githubusercontent.com/u/11761170?v=4" width="100px;" alt=""/><br /><sub><b>Italo</b></sub></a><br /><a href="#translation-iaurg" title="Translation">🌍</a></td>
     <td align="center"><a href="https://ianwilson.io"><img src="https://avatars1.githubusercontent.com/u/7942604?v=4" width="100px;" alt=""/><br /><sub><b>Ian Wilson</b></sub></a><br /><a href="#content-iwilsonq" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/unikitty37"><img src="https://avatars2.githubusercontent.com/u/139183?v=4" width="100px;" alt=""/><br /><sub><b>John Yeates</b></sub></a><br /><a href="#content-unikitty37" title="Content">🖋</a></td>
   </tr>
 </table>
 
