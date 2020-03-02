@@ -1114,6 +1114,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "unikitty37",
+      "name": "John Yeates",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/139183?v=4",
+      "profile": "https://github.com/unikitty37",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
