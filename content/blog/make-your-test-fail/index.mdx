@@ -41,7 +41,7 @@ test('allows passwords that are good', () => {
 })
 
 test('disallows passwords less than 7 characters', () => {
-  expect(isPasswordAllowed('Ab3.')).toBe(false)
+  expect(isPasswordAllowed('Ab3.ef')).toBe(false)
 })
 
 test('disallows passwords that do not contain a non-alphanumeric character', () => {
@@ -155,7 +155,7 @@ test('allows passwords that are good', () => {
 })
 
 test('disallows passwords less than 7 characters', () => {
-  expect(isPasswordAllowed('Ab3.')).toBe(false)
+  expect(isPasswordAllowed('Ab3.ef')).toBe(false)
 })
 
 test('disallows passwords that do not contain a non-alphanumeric character', () => {
