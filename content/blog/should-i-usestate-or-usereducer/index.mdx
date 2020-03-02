@@ -1,6 +1,6 @@
 ---
 slug: should-i-usestate-or-usereducer
-date: 2019-02-11
+date: 2020-03-02
 title: 'Should I useState or useReducer?'
 author: 'Kent C. Dodds'
 description:
@@ -14,162 +14,231 @@ bannerCredit:
 ---
 
 Whenever there are two things to do the same thing, people inevitably ask: "When
-do I use one over the other?"
+do I use one over the other?" There are two possible reasons for having multiple
+ways of doing the same thing:
 
-For example
-["When do I use `useEffect` and `useLayoutEffect`?"](/blog/useeffect-vs-uselayouteffect)
-Or
-["When do I use Unit, Integration, or E2E tests?"](/blog/unit-vs-integration-vs-e2e-tests)
-Or
-["When to use Control Props or State Reducers?"](/blog/control-props-vs-state-reducers)
+1. One is the "old way" and the other is the "new (and improved) way". Typically
+   the old way is kept around for backward compatibility reasons and the new way
+   is the path forward for new code. For example: class components (old way) vs
+   function components (new way).
+2. They come with different trade-offs that should be considered and therefore
+   should be applied in situations that suit them better (sometimes meaning
+   you'll use more than one in a given application). For example:
+   [`useEffect` vs `useLayoutEffect`](/blog/useeffect-vs-uselayouteffect) or
+   [Static vs Unit vs Integration vs E2E tests](/blog/unit-vs-integration-vs-e2e-tests)
+   or
+   ["Control Props" vs "State Reducers"](/blog/control-props-vs-state-reducers)
 
-I think `useState` and `useReducer` are no exception to this at all. In fact,
-[Matt Hamlin](https://twitter.com/immatthamlin) already posted
-[useReducer, don't useState](https://matthamlin.me/blog/usereducer-do-not-usestate)
-and he makes some great points there. I'd like to throw my hat in this
-discussion though because
-[I was asked about it on my AMA](https://github.com/kentcdodds/ama/issues/587).
+`useState` and `useReducer` fall into the second category here. So let's talk
+about the trade-offs
 
-> Congratulations on the new design of your website kentcdodds.com. Looking at
-> the source code of your website, in the
-> [`Subscribe`](https://github.com/kentcdodds/kentcdodds.com/blob/ed55aea3a58d24813a59cf72d8ffbdfbd96f769e/src/components/Forms/Subscribe.js)
-> component, you used useState hooks to handle the state of this component. My
-> question is, is not it more optimized to use a useReducer here instead of
-> several useState? If not, why?
+(and no, it's not a
+[trick question](https://twitter.com/ryanflorence/status/1234534306707456000)
+😂).
 
-Here's the top of that Subscribe component
+## Examples
 
-```jsx
-const [submitted, setSubmitted] = React.useState(false)
-const [loading, setLoading] = React.useState(false)
-const [response, setResponse] = React.useState(null)
-const [errorMessage, setErrorMessage] = React.useState(null)
-```
+I think the best way to discuss these trade-offs is through the lens of
+examples. We'll look at two examples. One which suits `useState` better, and one
+which suits `useReducer` better. This won't be enough to cover all of the
+trade-offs, but hopefully can be a good starting point for us.
 
-Then there's logic throughout the component for calling those state updater
-functions with the appropriate data, like here:
+### Custom `useGeoLocation` hook
 
-```jsx
-async function handleSubmit(values) {
-  setSubmitted(false)
-  setLoading(true)
-  try {
-    const responseJson = await fetch(/* stuff */).then(r => r.json())
-    setSubmitted(true)
-    setResponse(responseJson)
-    setErrorMessage(null)
-  } catch (error) {
-    setSubmitted(false)
-    setErrorMessage('Something went wrong!')
-  }
-  setLoading(false)
-}
-```
+#### `useState` implementation
 
-If I were to rewrite this to use `useReducer` then it would look like this:
+```javascript
+function useGeoPosition() {
+  const [position, setPosition] = useState(null)
+  const [error, setError] = useState(null)
 
-```jsx
-const [state, dispatch] = React.useReducer(reducer, {
-  submitted: false,
-  loading: false,
-  response: null,
-  errorMessage: null,
-})
-```
-
-Then the `reducer` would look something like this:
-
-```jsx
-const types = {
-  SUBMIT_STARTED: 0,
-}
-function reducer(state, action) {
-  switch (action.type) {
-    case types.SUBMIT_STARTED: {
-      return {...state, submitted: false, loading: true}
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setError(new Error('Geolocation is not supported'))
+      return
     }
-    case types.SUBMIT_COMPLETE: {
+    const geoWatch = navigator.geolocation.watchPosition(
+      (position) =>
+        setPosition(position,
+      error => setError(error),
+    )
+    return () => navigator.geolocation.clearWatch(geoWatch)
+  }, [])
+
+  return {position, error}
+}
+```
+
+This is an example of situation that is not as well suited for `useState`. There
+are actually some problems with this approach. Can you think of what those might
+be? Let me show you how a developer might use this hook:
+
+```jsx
+function YourPosition() {
+  const {position, error} = useGeoPosition()
+  if (!position && !error) {
+    return <div>Loading your position...</div>
+  } else if (position) {
+    return (
+      <div>
+        Lat: {position.coords.latitude}, Long: {position.coords.longitude}
+      </div>
+    )
+  } else if (error) {
+    return (
+      <div>
+        <div>Oh no, there was a problem getting your position:</div>
+        <pre>{error.message}</pre>
+      </div>
+    )
+  }
+}
+```
+
+Can you identify the problem yet? No? Imagine what would happen if the user were
+to hop into a car, started driving around, and the device failed with a
+`GeolocationPositionError.POSITION_UNAVAILABLE` or
+`GeolocationPositionError.TIMEOUT` or even if the user decided to disable the
+geoposition permission for your app and you got a
+`GeolocationPositionError.PERMISSION_DENIED`. What would happen then? With the
+way the component above is written, we'd always show the last recorded position
+and never show the user the error message!
+
+If we swapped things around and only show the position if there's no error, then
+we'd have the opposite problem: we'd only show an error, even if subsequent
+requests for the position succeeded.
+
+There are a few ways we could change this to avoid that problem:
+
+1. Ensure users of the hook always show the position AND error if they're
+   available.
+2. Clear the `error` when getting the position is successful, and clear the
+   `position` if there's an error.
+3. Return an additional property indicating the current status of the
+   geoposition information.
+
+As a creator of something reusable, it's always easier to make it so people
+_can't_ do the wrong thing even if they _want_ to or at least it's more natural
+to do the right thing than the wrong thing (pit of success and all that). So
+option #1 is out. For option #2, there may be some people who want to show the
+most recent position even if there was an error, so that won't work. So let's go
+with option #3:
+
+```javascript
+function useGeoPosition() {
+  const [status, setStatus] = React.useState('idle')
+  const [position, setPosition] = useState(null)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setStatus('rejected')
+      setError(new Error('Geolocation is not supported'))
+      return
+    }
+    setStatus('pending')
+    const geoWatch = navigator.geolocation.watchPosition(
+      position => {
+        setStatus('resolved')
+        setPosition(position)
+      },
+      error => {
+        setStatus('rejected')
+        setError(error)
+      },
+    )
+    return () => navigator.geolocation.clearWatch(geoWatch)
+  }, [])
+
+  return {status, position, error}
+}
+```
+
+Awesome, now users can use the `status` to render instead:
+
+```jsx
+function YourPosition() {
+  const {status, position, error} = useGeoPosition()
+  if (status === 'idle' || status === 'pending') {
+    return <div>Loading your position...</div>
+  } else if (status === 'resolved') {
+    return (
+      <div>
+        Lat: {position.coords.latitude}, Long: {position.coords.longitude}
+      </div>
+    )
+  } else if (status === 'rejected') {
+    return (
+      <div>
+        <div>Oh no, there was a problem getting your position:</div>
+        <pre>{error.message}</pre>
+      </div>
+    )
+  }
+}
+```
+
+Now, we've solved the problem, and we did it with `useState`, so why do we need
+`useReducer`? Well, let's checkout what this example would be like with
+`useReducer` instead...
+
+#### `useReducer` implementation
+
+```javascript
+function geoPositionReducer(state, action) {
+  switch (action.type) {
+    case 'error': {
       return {
+        status: 'rejected',
+        error: action.error,
         ...state,
-        submitted: true,
-        response: action.response,
-        errorMessage: null,
-        loading: false,
       }
     }
-    case types.SUBMIT_ERROR: {
+    case 'success': {
       return {
+        status: 'resolved',
+        position: action.position,
         ...state,
-        submitted: false,
-        errorMessage: action.errorMessage,
-        loading: false,
+      }
+    }
+    case 'started': {
+      return {
+        status: 'pending',
+        ...state,
       }
     }
     default: {
-      return state
+      throw new Error(`Unhandled action type: ${action.type}`)
     }
   }
 }
-```
 
-And the `handleSubmit` function would look like this:
+function useGeoPosition() {
+  const [state, dispatch] = React.useReducer(geoPositionReducer, {
+    status: 'idle',
+    position: null,
+    error: null,
+  })
 
-```jsx
-async function handleSubmit(values) {
-  dispatch({type: types.SUBMIT_STARTED})
-  try {
-    const responseJson = await fetch(/* stuff */).then(r => r.json())
-    dispatch({type: types.SUBMIT_COMPLETE, response: responseJson})
-  } catch (error) {
-    dispatch({type: types.SUBMIT_ERROR, errorMessage: 'Something went wrong!'})
-  }
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      dispatch({
+        type: 'error',
+        error: new Error('Geolocation is not supported'),
+      })
+      return
+    }
+    dispatch({type: 'started'})
+    const geoWatch = navigator.geolocation.watchPosition(
+      position => dispatch({type: 'success', position}),
+      error => dispatch({type: 'error', error}),
+    )
+    return () => navigator.geolocation.clearWatch(geoWatch)
+  }, [])
+
+  return {status, position, error}
 }
 ```
-
-Matt Hamlin brings up in his blog post a few benefits to `useReducer` over
-`useState`:
-
-- Easier to manage larger state shapes
-- Easier to reason about by other developers
-- Easier to test
-
-For this specific case I don't think that the first or second point really
-applies. Four elements of state is hardly a "large state shape" and the
-before/after here is no easier or harder to "reason about" for me. I think
-they're equally simple/complex.
-
-As for testing, I would definitely agree that you could test the `reducer` in
-isolation and that could be a nice benefit if I were doing a bunch of business
-logic in there, but I'm not really. It's pretty simple there.
-
-Typically I prefer to write higher-level integration-like tests, so I wouldn't
-want to write tests for that `reducer` in isolation and instead would test the
-`<Subscribe />` component and my tests would treat the reducer as an
-implementation detail.
-
-> Now if there were some complex business logic in that `reducer` or several
-> edge cases, then I definitely would want to test that in isolation (and I
-> would use [`jest-in-case`](https://github.com/atlassian/jest-in-case) to do
-> it!).
-
-I think there is one main situation in which I prefer `useState` over
-`useReducer`:
-
-**When prototyping/building the component and you're not certain of the
-implementation**
-
-While building a new component, you're often adding/removing state from that
-component's implementation. I think it would be harder to do that if you do this
-with a reducer. Once you solidified what you want your component to look like
-then you can go make the decision of whether converting from several `useState`s
-to a `useReducer` makes sense. Additionally, maybe you'll decide that
-`useReducer` makes sense for some of it and a custom hook that uses `useState`
-would make sense for other parts of your component logic. I find it's almost
-always better to wait until I know what my code is going to look like before I
-start making abstractions.
-
-Oh, and if you're prototyping, the code can be as unmaintainable as you want :)
-So who cares? Do what's faster.
 
 ## One situation when `useReducer` is basically always better
 
@@ -207,6 +276,17 @@ depend on one another when they're updated.
 Here's an example of tic-tac-toe with `useReducer`:
 
 https://codesandbox.io/s/r1m6pz58mq
+
+## Other considerations
+
+Using previous values of state. When the current value of state A determines the
+next value of state B.
+
+[I asked about when people use each](https://twitter.com/kentcdodds/status/1234532781402640384)
+and got a lot of answers where people stated what they consider to be a general
+rule of thumb, but I disagree.
+
+TODO: write more stuff here...
 
 ## Conclusion
 
