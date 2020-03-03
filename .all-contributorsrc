@@ -1132,6 +1132,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Arcath",
+      "name": "Adam Laycock",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19609?v=4",
+      "profile": "https://arcath.net",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
