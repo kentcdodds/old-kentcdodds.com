@@ -3,7 +3,9 @@ slug: 'stop-using-isloading-booleans'
 title: 'Stop using isLoading booleans'
 date: '2020-03-02'
 author: 'Kent C. Dodds'
-description: '_Why using a status enum will help your app stay bug free_'
+description:
+  '_Why using a status enum (or even better: a **state machine**) will help your
+  app stay bug free_'
 categories:
   - 'javascript'
 keywords:
@@ -282,9 +284,9 @@ function useGeoPosition() {
 
 ## State machines
 
-Everything is a state machine, and this one is particularly noticeable. XState
-is an awesome library for representing state machines in code, so I thought I'd
-show you what that could be like:
+Everything is a state machine, and this one is particularly noticeable.
+[XState](https://xstate.js.org) is an awesome library for representing state
+machines in code, so I thought I'd show you what that could be like:
 
 ```javascript
 import {Machine, assign} from 'xstate'
@@ -357,11 +359,16 @@ function useGeoPosition() {
 
 [Play with this on codesandbox here](https://codesandbox.io/s/youthful-hofstadter-4kunj)
 
-You'll notice several things. I added a special state for when geolocation is
-not supported. This state doesn't have any "event handlers" attached to it and
-is therefore called a "terminal state." That makes sense for our use case
-because if it's not supported then it's impossible to transition to any other
-state and our state machine ensures that will never happen.
+Firstly, if you're unfamiliar with state machines or xstate, be careful of
+familiarity bias against this code. It may not be straightforward to you today,
+but just like every abstraction, it becomes more straightforward the more time
+you spend with it.
+
+You'll notice several things about this example. I added a special state for
+when geolocation is not supported. This state doesn't have any "event handlers"
+attached to it and is therefore called a "terminal state." That makes sense for
+our use case because if it's not supported then it's impossible to transition to
+any other state and our state machine ensures that will never happen.
 
 But more than this, I want you to notice that there is no longer a `status`
 state we have to maintain. The `status` state is now just part of the machine's
