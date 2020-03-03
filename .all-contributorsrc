@@ -1123,6 +1123,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "davidluhr",
+      "name": "David Luhr",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16038754?v=4",
+      "profile": "https://luhr.co",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
