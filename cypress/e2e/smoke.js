@@ -3,6 +3,6 @@ describe('app', () => {
     cy.visit('/')
       .findByText(/about/i, {selector: 'a'})
       .click()
-      .findByText(/About Kent C. Dodds/i)
+    cy.findByText(/About Kent C. Dodds/i)
   })
 })
