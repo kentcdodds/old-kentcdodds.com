@@ -171,6 +171,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/unikitty37"><img src="https://avatars2.githubusercontent.com/u/139183?v=4" width="100px;" alt=""/><br /><sub><b>John Yeates</b></sub></a><br /><a href="#content-unikitty37" title="Content">🖋</a></td>
     <td align="center"><a href="https://luhr.co"><img src="https://avatars1.githubusercontent.com/u/16038754?v=4" width="100px;" alt=""/><br /><sub><b>David Luhr</b></sub></a><br /><a href="#content-davidluhr" title="Content">🖋</a></td>
     <td align="center"><a href="https://arcath.net"><img src="https://avatars1.githubusercontent.com/u/19609?v=4" width="100px;" alt=""/><br /><sub><b>Adam Laycock</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=Arcath" title="Code">💻</a></td>
+    <td align="center"><a href="https://berzavlu.com"><img src="https://avatars1.githubusercontent.com/u/13424294?v=4" width="100px;" alt=""/><br /><sub><b>@berzavlu</b></sub></a><br /><a href="#content-berzavlu" title="Content">🖋</a></td>
   </tr>
 </table>
 
