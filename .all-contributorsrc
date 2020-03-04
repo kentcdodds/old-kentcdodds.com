@@ -1141,6 +1141,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "berzavlu",
+      "name": "@berzavlu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13424294?v=4",
+      "profile": "https://berzavlu.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
