@@ -1150,6 +1150,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "dcorn068",
+      "name": "Daniel Corner",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9141196?v=4",
+      "profile": "https://dcorn068.github.io/dc_gatsby/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
