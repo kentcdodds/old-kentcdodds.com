@@ -173,6 +173,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://arcath.net"><img src="https://avatars1.githubusercontent.com/u/19609?v=4" width="100px;" alt=""/><br /><sub><b>Adam Laycock</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=Arcath" title="Code">💻</a></td>
     <td align="center"><a href="https://berzavlu.com"><img src="https://avatars1.githubusercontent.com/u/13424294?v=4" width="100px;" alt=""/><br /><sub><b>@berzavlu</b></sub></a><br /><a href="#content-berzavlu" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://dcorn068.github.io/dc_gatsby/"><img src="https://avatars2.githubusercontent.com/u/9141196?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Corner</b></sub></a><br /><a href="#content-dcorn068" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
