@@ -378,7 +378,7 @@ any other state and our state machine ensures that will never happen.
 
 But more than this, I want you to notice that there is no longer a `status`
 state we have to maintain. The `status` state is now just part of the machine's
-finite state value. So the `status` is _built-into_ the machine, rather than
+finite state value. So the `status` is _built into_ the machine, rather than
 managed separately.
 
 Here's how we would use that (with as minimal changes as possible):
@@ -438,7 +438,7 @@ Oh, and take a look at
 he completely removes the need for `useEffect` and instead puts the subscription
 logic within the machine itself!!! This is cool because it means that our
 machine is totally framework agnostic and can work regardless of which UI
-framework you're using (or even if you've built your own). He even built-in a
+framework you're using (or even if you've built your own). He even built in a
 timeout (just for fun). Very cool stuff here.
 
 ## Conclusion
