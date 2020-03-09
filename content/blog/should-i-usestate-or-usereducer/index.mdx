@@ -1,6 +1,6 @@
 ---
 slug: should-i-usestate-or-usereducer
-date: 2020-03-02
+date: 2020-03-09
 title: 'Should I useState or useReducer?'
 author: 'Kent C. Dodds'
 description:
@@ -43,200 +43,423 @@ examples. We'll look at two examples. One which suits `useState` better, and one
 which suits `useReducer` better. This won't be enough to cover all of the
 trade-offs, but hopefully can be a good starting point for us.
 
-### Custom `useGeoLocation` hook
+### Custom `useDarkMode` hook
+
+I recently wrote this for my workshop projects
+([for example](https://react-fundamentals.netlify.com)). It's pretty
+interesting, so let's compare `useState` and `useReducer` implementations for
+that:
 
 #### `useState` implementation
 
-```javascript
-function useGeoPosition() {
-  const [position, setPosition] = useState(null)
-  const [error, setError] = useState(null)
+I'll highlight the areas where we're interacting with the state:
 
-  useEffect(() => {
-    if (!navigator.geolocation) {
-      setError(new Error('Geolocation is not supported'))
-      return
-    }
-    const geoWatch = navigator.geolocation.watchPosition(
-      (position) =>
-        setPosition(position,
-      error => setError(error),
-    )
-    return () => navigator.geolocation.clearWatch(geoWatch)
+```javascript {2-7,11,20}
+function useDarkMode() {
+  const preferDarkQuery = '(prefers-color-scheme: dark)'
+  const [mode, setMode] = React.useState(
+    () =>
+      window.localStorage.getItem('colorMode') ||
+      (window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light'),
+  )
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia(preferDarkQuery)
+    const handleChange = () => setMode(mediaQuery.matches ? 'dark' : 'light')
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
   }, [])
 
-  return {position, error}
+  React.useEffect(() => {
+    window.localStorage.setItem('colorMode', mode)
+  }, [mode])
+
+  return [mode, setMode]
 }
 ```
 
-This is an example of situation that is not as well suited for `useState`. There
-are actually some problems with this approach. Can you think of what those might
-be? Let me show you how a developer might use this hook:
+Hopefully that makes sense. Basically we're saying, if the user's set their
+preferences to dark mode, then we'll initialize our mode to `dark`, otherwise
+we'll initialize to `light` and then return the `mode` and `setMode` and as the
+mode changes (whether by calling `setMode` directly or as the user changes their
+system preferences) we'll keep that value set in `localStorage` for future use.
 
-```jsx
-function YourPosition() {
-  const {position, error} = useGeoPosition()
-  if (!position && !error) {
-    return <div>Loading your position...</div>
-  } else if (position) {
-    return (
-      <div>
-        Lat: {position.coords.latitude}, Long: {position.coords.longitude}
-      </div>
-    )
-  } else if (error) {
-    return (
-      <div>
-        <div>Oh no, there was a problem getting your position:</div>
-        <pre>{error.message}</pre>
-      </div>
-    )
-  }
-}
-```
+#### `useReducer` implementation:
 
-Can you identify the problem yet? No? Imagine what would happen if the user were
-to hop into a car, started driving around, and the device failed with a
-`GeolocationPositionError.POSITION_UNAVAILABLE` or
-`GeolocationPositionError.TIMEOUT` or even if the user decided to disable the
-geoposition permission for your app and you got a
-`GeolocationPositionError.PERMISSION_DENIED`. What would happen then? With the
-way the component above is written, we'd always show the last recorded position
-and never show the user the error message!
+There are several ways you could write this with `useReducer`. I'll start out
+with the typical way most people write reducers:
 
-If we swapped things around and only show the position if there's no error, then
-we'd have the opposite problem: we'd only show an error, even if subsequent
-requests for the position succeeded.
+```javascript {3-17,21-27,30-35,40-43,56-59,61}
+const preferDarkQuery = '(prefers-color-scheme: dark)'
 
-There are a few ways we could change this to avoid that problem:
-
-1. Ensure users of the hook always show the position AND error if they're
-   available.
-2. Clear the `error` when getting the position is successful, and clear the
-   `position` if there's an error.
-3. Return an additional property indicating the current status of the
-   geoposition information.
-
-As a creator of something reusable, it's always easier to make it so people
-_can't_ do the wrong thing even if they _want_ to or at least it's more natural
-to do the right thing than the wrong thing (pit of success and all that). So
-option #1 is out. For option #2, there may be some people who want to show the
-most recent position even if there was an error, so that won't work. So let's go
-with option #3:
-
-```javascript
-function useGeoPosition() {
-  const [status, setStatus] = React.useState('idle')
-  const [position, setPosition] = useState(null)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    if (!navigator.geolocation) {
-      setStatus('rejected')
-      setError(new Error('Geolocation is not supported'))
-      return
-    }
-    setStatus('pending')
-    const geoWatch = navigator.geolocation.watchPosition(
-      position => {
-        setStatus('resolved')
-        setPosition(position)
-      },
-      error => {
-        setStatus('rejected')
-        setError(error)
-      },
-    )
-    return () => navigator.geolocation.clearWatch(geoWatch)
-  }, [])
-
-  return {status, position, error}
-}
-```
-
-Awesome, now users can use the `status` to render instead:
-
-```jsx
-function YourPosition() {
-  const {status, position, error} = useGeoPosition()
-  if (status === 'idle' || status === 'pending') {
-    return <div>Loading your position...</div>
-  } else if (status === 'resolved') {
-    return (
-      <div>
-        Lat: {position.coords.latitude}, Long: {position.coords.longitude}
-      </div>
-    )
-  } else if (status === 'rejected') {
-    return (
-      <div>
-        <div>Oh no, there was a problem getting your position:</div>
-        <pre>{error.message}</pre>
-      </div>
-    )
-  }
-}
-```
-
-Now, we've solved the problem, and we did it with `useState`, so why do we need
-`useReducer`? Well, let's checkout what this example would be like with
-`useReducer` instead...
-
-#### `useReducer` implementation
-
-```javascript
-function geoPositionReducer(state, action) {
+function darkModeReducer(state, action) {
   switch (action.type) {
-    case 'error': {
-      return {
-        status: 'rejected',
-        error: action.error,
-        ...state,
-      }
+    case 'MEDIA_CHANGE': {
+      return {...state, mode: action.mode}
     }
-    case 'success': {
-      return {
-        status: 'resolved',
-        position: action.position,
-        ...state,
-      }
-    }
-    case 'started': {
-      return {
-        status: 'pending',
-        ...state,
-      }
+    case 'SET_MODE': {
+      // make sure to spread that state just in case!
+      return {...state, mode: action.mode}
     }
     default: {
+      // helps us avoid typos!
       throw new Error(`Unhandled action type: ${action.type}`)
     }
   }
 }
 
-function useGeoPosition() {
-  const [state, dispatch] = React.useReducer(geoPositionReducer, {
-    status: 'idle',
-    position: null,
-    error: null,
-  })
+// use the init function to lazily initialize state so we don't read into
+// localstorage or call matchMedia every render
+function init() {
+  return {
+    mode:
+      window.localStorage.getItem('colorMode') ||
+      (window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light'),
+  }
+}
 
-  useEffect(() => {
-    if (!navigator.geolocation) {
+function useDarkMode() {
+  const [state, dispatch] = React.useReducer(
+    darkModeReducer,
+    {mode: 'light'},
+    init,
+  )
+  const {mode} = state
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia(preferDarkQuery)
+    const handleChange = () =>
       dispatch({
-        type: 'error',
-        error: new Error('Geolocation is not supported'),
+        type: 'MEDIA_CHANGE',
+        mode: mediaQuery.matches ? 'dark' : 'light',
       })
-      return
-    }
-    dispatch({type: 'started'})
-    const geoWatch = navigator.geolocation.watchPosition(
-      position => dispatch({type: 'success', position}),
-      error => dispatch({type: 'error', error}),
-    )
-    return () => navigator.geolocation.clearWatch(geoWatch)
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
   }, [])
 
-  return {status, position, error}
+  React.useEffect(() => {
+    window.localStorage.setItem('colorMode', mode)
+  }, [mode])
+
+  // We like the API the way it is, so instead of returning the state object
+  // and the dispatch function, we'll return the `mode` property and we'll
+  // create a setMode helper (which we have to memoize in case someone wants
+  // to use it in a dependency list):
+  const setMode = React.useCallback(
+    newMode => dispatch({type: 'SET_MODE', mode: newMode}),
+    [],
+  )
+
+  return [mode, setMode]
+}
+```
+
+Wow, I think we can both agree that the `useState` version was WAY simpler! But
+wait! We can drastically simplify the `useReducer` version by going against the
+"grain" and not writing your typical redux-style reducer. Let's try that:
+
+```javascript {3-10,14,23}
+function useDarkMode() {
+  const preferDarkQuery = '(prefers-color-scheme: dark)'
+  const [mode, setMode] = React.useReducer(
+    (prevMode, nextMode) =>
+      typeof nextMode === 'function' ? nextMode(prevMode) : nextMode,
+    'light',
+    () =>
+      window.localStorage.getItem('colorMode') ||
+      (window.matchMedia(preferDarkQuery).matches ? 'dark' : 'light'),
+  )
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia(preferDarkQuery)
+    const handleChange = () => setMode(mediaQuery.matches ? 'dark' : 'light')
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
+  }, [])
+
+  React.useEffect(() => {
+    window.localStorage.setItem('colorMode', mode)
+  }, [mode])
+
+  return [mode, setMode]
+}
+```
+
+That's a lot better than our other try with `useReducer`. But we basically
+[implemented `useState` with `useReducer`](/blog/how-to-implement-usestate-with-usereducer).
+And even then, it's still less clear than our `useState` version. So at the end
+of the day, `useState` was a much better solution in this case.
+
+**When it's just an independent element of state you're managing: `useState`**
+
+### Custom `useUndo` hook
+
+There's a great
+[`useUndo` hook on GitHub](https://github.com/xxhomey19/use-undo). I took
+inspiration from that for this example. Thank you
+[Homer Chen](https://twitter.com/xxhomey19)!
+
+#### `useState` implementation
+
+```javascript
+function useUndo(initialPresent) {
+  const [past, setPast] = React.useState([])
+  const [present, setPresent] = React.useState(initialPresent)
+  const [future, setFuture] = React.useState([])
+
+  const canUndo = past.length !== 0
+  const canRedo = future.length !== 0
+
+  const undo = React.useCallback(() => {
+    if (!canUndo) return
+
+    const previous = past[past.length - 1]
+    const newPast = past.slice(0, past.length - 1)
+
+    setPast(newPast)
+    setPresent(previous)
+    setFuture([present, ...future])
+  }, [canUndo, future, past, present])
+
+  const redo = React.useCallback(() => {
+    if (!canRedo) return
+
+    const next = future[0]
+    const newFuture = future.slice(1)
+
+    setPast([...past, present])
+    setPresent(next)
+    setFuture(newFuture)
+  }, [canRedo, future, past, present])
+
+  const set = React.useCallback(
+    newPresent => {
+      if (newPresent === present) {
+        return
+      }
+      setPast([...past, present])
+      setPresent(newPresent)
+      setFuture([])
+    },
+    [past, present],
+  )
+
+  const reset = React.useCallback(newPresent => {
+    setPast([])
+    setPresent(newPresent)
+    setFuture([])
+  }, [])
+
+  return [
+    {past, present, future},
+    {set, reset, undo, redo, canUndo, canRedo},
+  ]
+}
+```
+
+Looks pretty ok right? It probably is, but there's actually a situation where
+this could be pretty buggy. But first, I want to address a common misconception
+people have about calling multiple state updaters in sequence (like we're doing
+in each of those functions).
+
+Often people think this means that you'll trigger a re-render for each call (so,
+they're suggesting that calling `reset` would trigger three rerenders). First,
+remember to focus on
+[Fixing the slow render before you fix the re-render](/blog/fix-the-slow-render-before-you-fix-the-re-render),
+but secondly, remember that React has a batch system so if you were to call
+`reset` from an event handler or in a `useEffect` callback, it would trigger
+only one re-render.
+
+That said, if we were to call `reset` in an async function (like after making an
+HTTP request), then that _would_ result in three re-renders. However, in the
+future with concurrent mode those will be batched as well. So my main concern
+isn't the re-renders.
+
+My concern is with the insidious stale closure bugs in our code! Can you spot
+them? There are three! I'll give you a hint, there's one in each of `undo`,
+`redo`, and `set`, but there's not one in `reset`.
+
+Here's a contrived example that would reveal this bug:
+
+```jsx
+function Example() {
+  const [state, {set}] = useUndo('first')
+
+  React.useEffect(() => {
+    set('second')
+  }, [])
+
+  React.useEffect(() => {
+    set('third')
+  }, [])
+
+  return <pre>{JSON.stringify(state, null, 2)}</pre>
+}
+```
+
+After `500ms`, the printed result here would be:
+
+```json
+{
+  "past": ["first"],
+  "present": "third",
+  "future": []
+}
+```
+
+It should be:
+
+```json
+{
+  "past": ["first", "second"],
+  "present": "third",
+  "future": []
+}
+```
+
+So what happened to `"second"` in our situation? Ah! Turns out we're missing our
+dependency on `set` in the effect dependency array. Silly goose. Let's add
+those:
+
+```jsx {6,10}
+function Example() {
+  const [state, {set}] = useUndo('first')
+
+  React.useEffect(() => {
+    set('second')
+  }, [set])
+
+  React.useEffect(() => {
+    set('third')
+  }, [set])
+
+  return <pre>{JSON.stringify(state, null, 2)}</pre>
+}
+```
+
+Great, save, reload... Wait wut? Oh no! Here's what happened when I added those:
+
+```json
+{
+  "past": [
+    "first",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "second",
+    "third",
+    "... this goes on forever..."
+  ],
+  "present": "third",
+  "future": []
+}
+```
+
+Alright, that's pretty ok I think. Let's check out the `useReducer` version:
+
+#### `useReducer` implementation
+
+```javascript
+const UNDO = 'UNDO'
+const REDO = 'REDO'
+const SET = 'SET'
+const RESET = 'RESET'
+
+const initialState = {
+  past: [],
+  present: null,
+  future: [],
+}
+
+function undoReducer(state, action) {
+  const {past, present, future} = state
+
+  const canUndo = state.past.length !== 0
+  const canRedo = state.future.length !== 0
+
+  switch (action.type) {
+    case UNDO: {
+      if (!canUndo) return
+      const previous = past[past.length - 1]
+      const newPast = past.slice(0, past.length - 1)
+
+      return {
+        past: newPast,
+        present: previous,
+        future: [present, ...future],
+      }
+    }
+
+    case REDO: {
+      if (!canRedo) return
+      const next = future[0]
+      const newFuture = future.slice(1)
+
+      return {
+        past: [...past, present],
+        present: next,
+        future: newFuture,
+      }
+    }
+
+    case SET: {
+      const {newPresent} = action
+
+      if (newPresent === present) {
+        return state
+      }
+      return {
+        past: [...past, present],
+        present: newPresent,
+        future: [],
+      }
+    }
+
+    case RESET: {
+      const {newPresent} = action
+
+      return {
+        past: [],
+        present: newPresent,
+        future: [],
+      }
+    }
+  }
+}
+
+function useUndo(initialPresent) {
+  const [state, dispatch] = React.useReducer(undoReducer, {
+    ...initialState,
+    present: initialPresent,
+  })
+
+  const canUndo = state.past.length !== 0
+  const canRedo = state.future.length !== 0
+  const undo = React.useCallback(() => dispatch({type: UNDO}), [])
+  const redo = React.useCallback(() => dispatch({type: REDO}), [])
+  const set = React.useCallback(
+    newPresent => dispatch({type: SET, newPresent}),
+    [],
+  )
+  const reset = React.useCallback(
+    newPresent => dispatch({type: RESET, newPresent}),
+    [],
+  )
+
+  return [state, {set, reset, undo, redo, canUndo, canRedo}]
 }
 ```
 
