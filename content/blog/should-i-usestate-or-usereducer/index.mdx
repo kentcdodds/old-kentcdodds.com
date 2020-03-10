@@ -4,7 +4,7 @@ date: 2020-03-09
 title: 'Should I useState or useReducer?'
 author: 'Kent C. Dodds'
 description:
-  Two built-in React hooks that handle state, which one should you use?
+  _Two built-in React hooks that handle state, which one should you use?_
 categories: ['react']
 keywords: ['react', 'javascript', 'hooks']
 banner: './banner.png'
@@ -30,7 +30,7 @@ ways of doing the same thing:
    ["Control Props" vs "State Reducers"](/blog/control-props-vs-state-reducers)
 
 `useState` and `useReducer` fall into the second category here. So let's talk
-about the trade-offs
+about the trade-offs.
 
 (and no, it's not a
 [trick question](https://twitter.com/ryanflorence/status/1234534306707456000)
@@ -54,7 +54,7 @@ that:
 
 I'll highlight the areas where we're interacting with the state:
 
-```javascript {2-7,11,20}
+```javascript {2-7,11}
 function useDarkMode() {
   const preferDarkQuery = '(prefers-color-scheme: dark)'
   const [mode, setMode] = React.useState(
@@ -89,7 +89,7 @@ system preferences) we'll keep that value set in `localStorage` for future use.
 There are several ways you could write this with `useReducer`. I'll start out
 with the typical way most people write reducers:
 
-```javascript {3-17,21-27,30-35,40-43,56-59,61}
+```javascript {3-17,21-27,30-35,40-43,56-59}
 const preferDarkQuery = '(prefers-color-scheme: dark)'
 
 function darkModeReducer(state, action) {
@@ -158,7 +158,7 @@ Wow, I think we can both agree that the `useState` version was WAY simpler! But
 wait! We can drastically simplify the `useReducer` version by going against the
 "grain" and not writing your typical redux-style reducer. Let's try that:
 
-```javascript {3-10,14,23}
+```javascript {3-10,14}
 function useDarkMode() {
   const preferDarkQuery = '(prefers-color-scheme: dark)'
   const [mode, setMode] = React.useReducer(
@@ -190,7 +190,7 @@ That's a lot better than our other try with `useReducer`. But we basically
 And even then, it's still less clear than our `useState` version. So at the end
 of the day, `useState` was a much better solution in this case.
 
-**When it's just an independent element of state you're managing: `useState`**
+> **When it's just an independent element of state you're managing: `useState`**
 
 ### Custom `useUndo` hook
 
@@ -198,6 +198,8 @@ There's a great
 [`useUndo` hook on GitHub](https://github.com/xxhomey19/use-undo). I took
 inspiration from that for this example. Thank you
 [Homer Chen](https://twitter.com/xxhomey19)!
+
+(For these, almost everything is interacting with state, so... no highlights...)
 
 #### `useState` implementation
 
@@ -381,6 +383,11 @@ it's dependencies change... Wait... That includes the `past` and `present`
 values... And whoops! When we call `set` those values are changed, which leads
 to our infinite loop!
 
+Now, this may seem contrived, but a similar bug could come up if you were
+updating the state based on network events and they came back in a different
+order from when they were sent out. Either way, you just don't want to have to
+think about this kind of thing right? Right.
+
 So we can fix this problem with `useReducer`, but we can actually change our
 `useState` implementation and side-step this issue and I thought you'd enjoy
 that, so here it is:
@@ -458,7 +465,7 @@ function useUndo(initialPresent) {
 There are a few things I did to fix this issue:
 
 1. I used state updater callbacks in when calling the state updater functions so
-   I could receive the current state as an argument. This meant that I didn't
+   I could receive the `currentState` as an argument. This meant that I didn't
    need to list the state as a dependency.
 2. I combined all the state into a single object. I had to do this because there
    are situations where you need one value to determine another. For example, in
@@ -563,16 +570,16 @@ issue naturally.
 You may find it interesting that the switch cases in our reducer are basically
 exactly what the contents of our functions were before we made the change.
 
-**When your one element of your state relies on the value of another element of
-your state: `useReducer`**
+> **When one element of your state relies on the value of another element of
+> your state in order to update: `useReducer`**
 
 ## Conclusion
 
 So if you want some "rules" (NOT ESLINT RULES), here they are:
 
 - **When it's just an independent element of state you're managing: `useState`**
-- **When your one element of your state relies on the value of another element
-  of your state: `useReducer`**
+- **When one element of your state relies on the value of another element of
+  your state in order to update: `useReducer`**
 
 Outside of these "rules," everything else is really subjective. Honestly, even
 the "rules" are subjective because as I demonstrated, you can do everything you
