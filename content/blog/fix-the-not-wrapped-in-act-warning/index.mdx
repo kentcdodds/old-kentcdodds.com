@@ -22,7 +22,17 @@ bannerCredit: 'Photo by [Lubo Minar](https://unsplash.com/photos/HUnKka6VtZc)'
 
 https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning?pl=kent-s-blog-posts-as-screencasts-eefa540c
 
-> Note also there are more short videos further down in the blog post!
+**[Watch "Fix the "not wrapped in act(...)" warning with Jest fake timers" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-with-jest-fake-timers?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-with-jest-fake-timers?pl=kent-s-blog-posts-as-screencasts-eefa540c
+
+**[Watch "Fix the "not wrapped in act(...)" warning when testing Custom Hooks" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-custom-hooks?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-custom-hooks?pl=kent-s-blog-posts-as-screencasts-eefa540c
+
+**[Watch "Fix the "not wrapped in act(...)" warning when testing the useImperativeHandle Hook" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-the-useimperativehandle-hook?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
+
+https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-the-useimperativehandle-hook?pl=kent-s-blog-posts-as-screencasts-eefa540c
 
 import {
   Rendered,
@@ -322,10 +332,6 @@ examples:
 
 ### 1. When using `jest.useFakeTimers()`
 
-**[Watch "Fix the "not wrapped in act(...)" warning with Jest fake timers" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-with-jest-fake-timers?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
-
-https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-with-jest-fake-timers?pl=kent-s-blog-posts-as-screencasts-eefa540c
-
 Let's say you have a component that's checking against an API on an interval:
 
 ```jsx
@@ -464,10 +470,6 @@ Notice, that we can pull React DOM's `act` testing utility directly from
 
 ### 2. When testing custom hooks
 
-**[Watch "Fix the "not wrapped in act(...)" warning when testing Custom Hooks" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-custom-hooks?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
-
-https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-custom-hooks?pl=kent-s-blog-posts-as-screencasts-eefa540c
-
 You'll get an `act(...)` warning with custom hooks when you call functions that
 are returned from your custom hook which result in state updates. Here's a
 simple example of that:
@@ -531,10 +533,6 @@ that's because it simply re-exports the `act` function from
 right!?
 
 ### 3. When using `useImperativeHandle`
-
-**[Watch "Fix the "not wrapped in act(...)" warning when testing the useImperativeHandle Hook" on egghead.io](https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-the-useimperativehandle-hook?pl=kent-s-blog-posts-as-screencasts-eefa540c)**
-
-https://egghead.io/lessons/react-fix-the-not-wrapped-in-act-warning-when-testing-the-useimperativehandle-hook?pl=kent-s-blog-posts-as-screencasts-eefa540c
 
 You may not have even heard of this hook, and if you have you may not have run
 into this problem. That's because you only run into this if you're calling
