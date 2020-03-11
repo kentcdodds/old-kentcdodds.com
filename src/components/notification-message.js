@@ -9,6 +9,7 @@ function NotificationMessage({children}) {
   const portalContainerRef = React.useRef(null)
   if (!portalContainerRef.current && typeof document !== 'undefined') {
     portalContainerRef.current = document.createElement('div')
+    portalContainerRef.current.style.display = 'none'
   }
 
   const [animateIn, setAnimateIn] = React.useState(false)
