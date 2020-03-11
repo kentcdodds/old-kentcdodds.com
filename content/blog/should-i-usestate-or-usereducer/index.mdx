@@ -387,7 +387,7 @@ Great, save, reload... Wait wut? Oh no! Here's what happened when I added those:
 ```
 
 But wait! Aren't we memoizing the `set` function? It shouldn't change unless
-it's dependencies change... Wait... That includes the `past` and `present`
+its dependencies change... Wait... That includes the `past` and `present`
 values... And whoops! When we call `set` those values are changed, which leads
 to our infinite loop!
 
