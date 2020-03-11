@@ -1159,6 +1159,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "gdarchen",
+      "name": "Gautier Darchen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17927632?v=4",
+      "profile": "https://github.com/gdarchen",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
