@@ -4,11 +4,14 @@ slug: build-react-apps
 tech: react
 description:
   'We’ll cover everything common to most frontend React applications like
-  routing, code splitting, data fetching, styling, authentication, and forms.'
+  routing, data fetching, styling, and forms.'
 keywords:
   - react
 ckTag: 896449
 ---
+
+import List from 'components/mdx/list'
+import Li from 'components/mdx/li'
 
 ### Use common libraries to build ReactJS applications
 
@@ -20,16 +23,21 @@ splitting, data fetching, styling, authentication, and forms.
 
 ## Topics
 
-- Bootstrap a new react application with create-react-app
-- Support client-side routing with @reach/router
-- Manage global application state with context
-- Use React's Suspense feature for code-splitting
-- Authentication
-- Data management
-- Manage forms and lists
+<List>
+  <Li check>Bootstrap a new react application with create-react-app</Li>
+  <Li check>Styling Components</Li>
+  <Li check>Support client-side routing with react-router</Li>
+  <Li check>Manage forms and lists of data</Li>
+  <Li check>Authentication</Li>
+  <Li check>Data Fetching</Li>
+  <Li check>
+    Use react-query to manage client-side cache of backend resources
+  </Li>
+</List>
 
 ## Pre-requisites
 
-- Attend my [Advanced React Hooks Workshop](/workshops/advanced-react-hooks), or
-  have the equivalent basic experience of using advanced hooks. You should be
-  experienced with `useContext`, `useReducer`, `useMemo`, and `useCallback`.
+- Attend my [React Hooks Workshop](/workshops/advanced-react-hooks), or have the
+  equivalent basic experience of using advanced hooks. You should be experienced
+  with creating custom React components and the `useState`, `useEffect`, and
+  `useRef` hooks.
