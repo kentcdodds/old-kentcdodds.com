@@ -9,7 +9,6 @@ function NotificationMessage({children}) {
   const portalContainerRef = React.useRef(null)
   if (!portalContainerRef.current && typeof document !== 'undefined') {
     portalContainerRef.current = document.createElement('div')
-    portalContainerRef.current.style.display = 'none'
   }
 
   const [animateIn, setAnimateIn] = React.useState(false)
@@ -22,6 +21,7 @@ function NotificationMessage({children}) {
       left: 0,
       width: '100%',
       zIndex: 11,
+      display: 'none',
     })
     document.body.append(container)
 
