@@ -34,6 +34,9 @@ const LinkButton = styled.button({
 })
 
 function onServiceWorkerUpdateReady() {
+  if (typeof window.Cypress !== 'undefined') {
+    return
+  }
   const neverShow = window.localStorage.getItem(NEVER_SHOW_KEY) === 'true'
   if (neverShow) {
     return
@@ -68,6 +71,9 @@ function onServiceWorkerUpdateReady() {
 }
 
 function onServiceWorkerInstalled() {
+  if (typeof window.Cypress !== 'undefined') {
+    return
+  }
   const root = document.createElement('div')
   document.body.appendChild(root)
   ReactDOM.render(
