@@ -1,6 +1,6 @@
 const path = require('path')
 const config = require('./config/website')
-const proxy = require('http-proxy-middleware')
+const {createProxyMiddleware} = require('http-proxy-middleware')
 
 const eggheadTransformer = require('./other/embedder-transformers/egghead')
 
@@ -23,7 +23,7 @@ module.exports = {
   developMiddleware: app => {
     app.use(
       '/.netlify/functions/',
-      proxy({
+      createProxyMiddleware({
         target: 'http://localhost:9000',
         pathRewrite: {
           '/.netlify/functions/': '',
