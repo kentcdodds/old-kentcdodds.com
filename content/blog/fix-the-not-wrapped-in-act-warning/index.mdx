@@ -95,15 +95,15 @@ import React from 'react'
 import user from '@testing-library/user-event'
 import {render, screen} from '@testing-library/react'
 
-test('calls updateUsername with the new username', () => {
+test('calls updateUsername with the new username', async () => {
   const handleUpdateUsername = jest.fn()
   const fakeUsername = 'sonicthehedgehog'
 
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
 })
@@ -254,8 +254,8 @@ test('calls updateUsername with the new username', async () => {
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await waitForElementToBeRemoved(() => screen.getByText(/saving/i))
@@ -306,8 +306,8 @@ test('calls updateUsername with the new username', async () => {
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await act(() => promise)

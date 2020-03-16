@@ -18,15 +18,15 @@ afterEach(() => {
   console.error.mockRestore()
 })
 
-test('calls updateUsername with the new username (with act warning)', () => {
+test('calls updateUsername with the new username (with act warning)', async () => {
   const handleUpdateUsername = jest.fn()
   const fakeUsername = 'sonicthehedgehog'
 
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
 })
@@ -38,8 +38,8 @@ test('calls updateUsername with the new username', async () => {
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await waitForElementToBeRemoved(() => screen.getByText(/saving/i))
@@ -53,8 +53,8 @@ test('calls updateUsername with the new username (with manual act and promise)',
   render(<UsernameForm updateUsername={handleUpdateUsername} />)
 
   const usernameInput = screen.getByLabelText(/username/i)
-  user.type(usernameInput, fakeUsername)
-  user.click(screen.getByText(/submit/i))
+  await user.type(usernameInput, fakeUsername)
+  await user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await act(() => promise)
