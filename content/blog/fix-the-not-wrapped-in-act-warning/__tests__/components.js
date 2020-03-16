@@ -26,7 +26,7 @@ test('calls updateUsername with the new username (with act warning)', async () =
 
   const usernameInput = screen.getByLabelText(/username/i)
   await user.type(usernameInput, fakeUsername)
-  await user.click(screen.getByText(/submit/i))
+  user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
 })
@@ -54,7 +54,7 @@ test('calls updateUsername with the new username (with manual act and promise)',
 
   const usernameInput = screen.getByLabelText(/username/i)
   await user.type(usernameInput, fakeUsername)
-  await user.click(screen.getByText(/submit/i))
+  user.click(screen.getByText(/submit/i))
 
   expect(handleUpdateUsername).toHaveBeenCalledWith(fakeUsername)
   await act(() => promise)
