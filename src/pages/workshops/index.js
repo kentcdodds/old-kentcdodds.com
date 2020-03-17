@@ -30,6 +30,29 @@ export default function RemoteWorkshopsPage(props) {
   )
 }
 
+const TechToggle = styled.button`
+  padding: 8px 15px 8px 12px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border: none !important;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  margin: 5px;
+  :focus {
+    outline: none;
+  }
+  img {
+    margin: 0;
+    margin-right: 10px;
+  }
+  :hover,
+  :focus {
+    color: ${theme.colors.body_color};
+    background: #fafafa !important;
+    border: none;
+  }
+`
+
 function RemoteWorkshops({data: {workshops}}) {
   const workshopTech = uniq(
     workshops.edges.map(({node: workshop}) => workshop.frontmatter.tech),
@@ -49,29 +72,6 @@ function RemoteWorkshops({data: {workshops}}) {
       (tech === 'testing' && `${testingIcon}`)
     )
   }
-
-  const TechToggle = styled.button`
-    padding: 8px 15px 8px 12px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    border: none !important;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    margin: 5px;
-    :focus {
-      outline: none;
-    }
-    img {
-      margin: 0;
-      margin-right: 10px;
-    }
-    :hover,
-    :focus {
-      color: ${theme.colors.body_color};
-      background: #fafafa !important;
-      border: none;
-    }
-  `
 
   return (
     <Layout

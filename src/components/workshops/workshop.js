@@ -19,7 +19,7 @@ function Workshop({title, description, url, tech}) {
     )
   }
   return (
-    <Link to={url}>
+    <Link css={{cursor: 'pointer'}} to={url}>
       <div
         css={css`
           ${styles}
