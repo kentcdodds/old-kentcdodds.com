@@ -47,7 +47,7 @@ const headers = {
   'Access-Control-Allow-Headers': 'Content-Type',
 }
 
-exports.handler = async event => {
+async function handler(event) {
   const runId = Date.now()
     .toString()
     .slice(-5)
@@ -143,3 +143,5 @@ exports.handler = async event => {
     headers,
   }
 }
+
+module.exports = {handler}
