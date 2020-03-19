@@ -411,17 +411,21 @@ function onCreateMdxNode({node, getNode, actions}) {
 
 const onPreBootstrap = () => {
   require('./other/load-cache')
-  if (!process.env.SKIP_BUILD_VALIDATION) {
+  // can't run cypress on gatsby cloud currently
+  if (!process.env.SKIP_BUILD_VALIDATION && !process.env.GATSBY_CLOUD) {
     // fire and forget...
-    spawn('./node_modules/.bin/cypress install', {shell: true, stdio: 'ignore'})
+    spawn('./node_modules/.bin/cypress install', {
+      shell: true,
+      stdio: 'ignore',
+    })
+  }
 
-    const result = spawnSync(
-      './node_modules/.bin/npm-run-all --parallel lint test:coverage',
-      {stdio: 'inherit', shell: true},
-    )
-    if (result.status !== 0) {
-      throw new Error(`pre build failure. Status: ${result.status}`)
-    }
+  const result = spawnSync(
+    './node_modules/.bin/npm-run-all --parallel lint test:coverage',
+    {stdio: 'inherit', shell: true},
+  )
+  if (result.status !== 0) {
+    throw new Error(`pre build failure. Status: ${result.status}`)
   }
 }
 
@@ -434,7 +438,8 @@ const onPostBuild = async () => {
   }
   fs.mkdirSync(outputLocation)
   await zipFunctions(srcLocation, outputLocation)
-  if (!process.env.SKIP_BUILD_VALIDATION) {
+  // can't run cypress on gatsby cloud currently
+  if (!process.env.SKIP_BUILD_VALIDATION && !process.env.GATSBY_CLOUD) {
     const result = spawnSync('npm run test:e2e', {
       stdio: 'inherit',
       shell: true,
