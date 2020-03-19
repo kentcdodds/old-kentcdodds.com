@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const {URL} = require('url')
 const rimraf = require('rimraf')
+const {spawnSync, spawn} = require('child_process')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
@@ -408,20 +409,47 @@ function onCreateMdxNode({node, getNode, actions}) {
   })
 }
 
-const onPostBuild = () => {
+const onPreBuild = () => {
+  require('./other/load-cache')
+  if (!process.env.SKIP_BUILD_VALIDATION) {
+    // fire and forget...
+    spawn('./node_modules/.bin/cypress install')
+
+    const result = spawnSync(
+      './node_modules/.bin/npm-run-all --parallel lint test:coverage',
+      {stdio: 'inherit', shell: true},
+    )
+    if (result.status !== 0) {
+      throw new Error(`pre build failure. Status: ${result.status}`)
+    }
+  }
+}
+
+const onPostBuild = async () => {
+  require('./other/make-cache')
   const srcLocation = path.join(__dirname, `netlify/functions`)
   const outputLocation = path.join(__dirname, `public/functions`)
   if (fs.existsSync(outputLocation)) {
     rimraf.sync(outputLocation)
   }
   fs.mkdirSync(outputLocation)
-  return zipFunctions(srcLocation, outputLocation)
+  await zipFunctions(srcLocation, outputLocation)
+  if (!process.env.SKIP_BUILD_VALIDATION) {
+    const result = spawnSync('npm run test:e2e', {
+      stdio: 'inherit',
+      shell: true,
+    })
+    if (result.status !== 0) {
+      throw new Error(`post build failure. Status: ${result.status}`)
+    }
+  }
 }
 
 module.exports = {
   createPages,
   onCreateWebpackConfig,
   onCreateNode,
+  onPreBuild,
   onPostBuild,
 }
 
