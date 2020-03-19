@@ -1,3 +1,7 @@
+const path = require('path')
+
+const here = (...p) => path.join(__dirname, ...p)
+
 module.exports = {
   transform: {
     '^.+\\.jsx?$': `<rootDir>/tests/jest-preprocess.js`,
@@ -12,5 +16,5 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: [here('./tests/setup')],
 }
