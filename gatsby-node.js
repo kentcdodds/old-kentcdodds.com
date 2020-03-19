@@ -409,11 +409,11 @@ function onCreateMdxNode({node, getNode, actions}) {
   })
 }
 
-const onPreBuild = () => {
+const onPreBootstrap = () => {
   require('./other/load-cache')
   if (!process.env.SKIP_BUILD_VALIDATION) {
     // fire and forget...
-    spawn('./node_modules/.bin/cypress install')
+    spawn('./node_modules/.bin/cypress install', {shell: true, stdio: 'ignore'})
 
     const result = spawnSync(
       './node_modules/.bin/npm-run-all --parallel lint test:coverage',
@@ -449,7 +449,7 @@ module.exports = {
   createPages,
   onCreateWebpackConfig,
   onCreateNode,
-  onPreBuild,
+  onPreBootstrap,
   onPostBuild,
 }
 
