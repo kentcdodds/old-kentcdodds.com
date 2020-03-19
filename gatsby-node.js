@@ -1,10 +1,12 @@
-/* eslint-disable max-statements */
+const fs = require('fs')
 const path = require('path')
 const {URL} = require('url')
+const rimraf = require('rimraf')
 const slugify = require('@sindresorhus/slugify')
 const {createFilePath} = require('gatsby-source-filesystem')
 const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
+const {zipFunctions} = require('@netlify/zip-it-and-ship-it')
 const config = require('./config/website')
 
 const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
@@ -112,7 +114,7 @@ function createPodcastPages({data, actions}) {
   return null
 }
 
-exports.createPages = async ({actions, graphql}) => {
+const createPages = async ({actions, graphql}) => {
   const {data, errors} = await graphql(`
     fragment PostDetails on Mdx {
       fileAbsolutePath
@@ -220,7 +222,7 @@ exports.createPages = async ({actions, graphql}) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({actions}) => {
+const onCreateWebpackConfig = ({actions}) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -228,7 +230,7 @@ exports.onCreateWebpackConfig = ({actions}) => {
   })
 }
 
-exports.onCreateNode = (...args) => {
+const onCreateNode = (...args) => {
   if (args[0].node.internal.type === `Mdx`) {
     onCreateMdxNode(...args)
   }
@@ -261,9 +263,8 @@ function onCreateMdxNode({node, getNode, actions}) {
       isWriting = false
       isScheduled = true
     }
-    slug = `/workshops/${
-      node.frontmatter.slug || slugify(node.frontmatter.title)
-    }`
+    slug = `/workshops/${node.frontmatter.slug ||
+      slugify(node.frontmatter.title)}`
   }
 
   if (node.fileAbsolutePath.includes('content/writing-blog/')) {
@@ -407,4 +408,25 @@ function onCreateMdxNode({node, getNode, actions}) {
   })
 }
 
-/* eslint consistent-return:0 */
+const onPostBuild = () => {
+  const srcLocation = path.join(__dirname, `netlify/functions`)
+  const outputLocation = path.join(__dirname, `public/functions`)
+  if (fs.existsSync(outputLocation)) {
+    rimraf.sync(outputLocation)
+  }
+  fs.mkdirSync(outputLocation)
+  return zipFunctions(srcLocation, outputLocation)
+}
+
+module.exports = {
+  createPages,
+  onCreateWebpackConfig,
+  onCreateNode,
+  onPostBuild,
+}
+
+/*
+eslint
+  consistent-return: "off",
+  max-statements: "off",
+*/
