@@ -386,10 +386,10 @@ Great, save, reload... Wait wut? Oh no! Here's what happened when I added those:
 }
 ```
 
-But wait! Aren't we memoizing the `set` function? It shouldn't change unless
-its dependencies change... Wait... That includes the `past` and `present`
-values... And whoops! When we call `set` those values are changed, which leads
-to our infinite loop!
+But wait! Aren't we memoizing the `set` function? It shouldn't change unless its
+dependencies change... Wait... That includes the `past` and `present` values...
+And whoops! When we call `set` those values are changed, which leads to our
+infinite loop!
 
 Now, this may seem contrived, but a similar bug could come up if you were
 updating the state based on network events and they came back in a different

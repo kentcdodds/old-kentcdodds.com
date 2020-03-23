@@ -219,10 +219,7 @@ function Search(props) {
   function handleCategoryClick(category) {
     setSearch(s => {
       if (s.includes(category)) {
-        return s
-          .split(category)
-          .join('')
-          .trim()
+        return s.split(category).join('').trim()
       }
       return `${s.trim()} ${category}`.trim()
     })

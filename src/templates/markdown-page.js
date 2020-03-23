@@ -14,9 +14,7 @@ function MarkdownPage({children, pageContext: {frontmatter}}) {
         hero={
           frontmatter.useBigHero ? (
             <BigHero message={frontmatter.heroMessage} />
-          ) : (
-            undefined
-          )
+          ) : undefined
         }
         noFooter={frontmatter.noFooter}
         frontmatter={frontmatter}

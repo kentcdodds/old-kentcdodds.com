@@ -48,9 +48,7 @@ const headers = {
 }
 
 async function handler(event) {
-  const runId = Date.now()
-    .toString()
-    .slice(-5)
+  const runId = Date.now().toString().slice(-5)
   // eslint-disable-next-line no-console
   const log = (...args) => console.log(runId, ...args)
 

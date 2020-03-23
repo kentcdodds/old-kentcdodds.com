@@ -70,15 +70,17 @@ function Hero({
               visibility: visible;
               width: 250px;
               height: 250px;
-              //background: #241d44;
-              ${image === photoOfKent &&
-                `
-                width: 160px;
-              height: 160px;
-              overflow: 'hidden';
-              border-radius: 50%;
-              background: #4b4ddf;
-              `}
+              ${
+                image === photoOfKent
+                  ? `
+                      width: 160px;
+                      height: 160px;
+                      overflow: 'hidden';
+                      border-radius: 50%;
+                      background: #4b4ddf;
+                    `
+                  : null
+              }
               background-image: url(${image});
               background-size: cover;
               background-position-y: 10px;

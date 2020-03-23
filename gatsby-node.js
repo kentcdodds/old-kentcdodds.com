@@ -264,8 +264,9 @@ function onCreateMdxNode({node, getNode, actions}) {
       isWriting = false
       isScheduled = true
     }
-    slug = `/workshops/${node.frontmatter.slug ||
-      slugify(node.frontmatter.title)}`
+    slug = `/workshops/${
+      node.frontmatter.slug || slugify(node.frontmatter.title)
+    }`
   }
 
   if (node.fileAbsolutePath.includes('content/writing-blog/')) {
