@@ -411,6 +411,9 @@ function onCreateMdxNode({node, getNode, actions}) {
 }
 
 const onPreBootstrap = () => {
+  if (process.env.gatsby_executing_command === 'develop') {
+    return
+  }
   require('./other/load-cache')
   // can't run cypress on gatsby cloud currently
   if (!process.env.SKIP_BUILD_VALIDATION && !process.env.GATSBY_CLOUD) {
@@ -431,6 +434,9 @@ const onPreBootstrap = () => {
 }
 
 const onPostBuild = async () => {
+  if (process.env.gatsby_executing_command === 'develop') {
+    return
+  }
   require('./other/make-cache')
   const srcLocation = path.join(__dirname, `netlify/functions`)
   const outputLocation = path.join(__dirname, `public/functions`)
