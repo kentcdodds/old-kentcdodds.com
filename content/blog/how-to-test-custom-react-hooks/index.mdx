@@ -160,6 +160,11 @@ Error: Invalid hook call. Hooks can only be called inside of the body of a funct
 
 (I've gotten that error for all three reasons mentioned 🙈)
 
+Now, you _might_ start to think: "Hey, if I just mock the built-in React hooks
+I'm using like `useState` and `useEffect` then I could still test it like a
+function." But for the love of all things pure, please don't do that. You throw
+away a LOT of confidence in doing so.
+
 But don't fret, if you were to test this manually, rather simply calling the
 function, you'd probably write a component that uses the hook, and then interact
 with that component rendered to the page (perhaps using
