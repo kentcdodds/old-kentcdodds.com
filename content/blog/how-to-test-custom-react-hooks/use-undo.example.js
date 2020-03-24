@@ -29,7 +29,6 @@ function UseUndoExample() {
           <button type="submit">Submit</button>
         </div>
       </form>
-      <hr />
       <div>Present: {present}</div>
       <div>Past: {past.join(', ')}</div>
       <div>Future: {future.join(', ')}</div>

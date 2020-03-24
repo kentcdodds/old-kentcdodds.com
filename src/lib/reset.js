@@ -75,6 +75,9 @@ const reset = css`
   [tabindex='-1']:focus {
     outline: none !important;
   }
+  details {
+    margin-bottom: 1rem;
+  }
   pre {
     margin-top: 0;
     margin-bottom: 1rem;

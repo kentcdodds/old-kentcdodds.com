@@ -21,6 +21,14 @@ bannerCredit: 'Photo by [Grant Durr](https://unsplash.com/photos/21ztbENjzeI)'
 import * as Comps from './components'
 import {UseUndoExample} from './use-undo.example'
 
+If you're using `react@>=16.8`, then you can use hooks and you've probably
+written several custom ones yourself. You may have wondered how to be confident
+that your hook continues to work over the lifetime of your application. And I'm
+not talking about the one-off custom hook you pull out just to make your
+component body smaller and organize your code (those should be covered by your
+component tests), I'm talking about that reusable hook you've published to
+github/npm (or you've been talking with your legal department about it).
+
 Let's say we've got this custom hook called `useUndo` (inspired by
 [`useUndo`](https://github.com/xxhomey19/use-undo) by
 [Homer Chen](https://twitter.com/xxhomey19)):
@@ -129,9 +137,33 @@ Remember that software is all about automating things that we don't want to or
 cannot do manually. Tests are no different, so consider how you would test this
 manually, then write your test to do the same thing.
 
-If you were to test this manually, you'd probably write a component that uses
-the hook, and then interact with that component rendered to the page. So let's
-do that:
+A mistake that I see a lot of people make is thinking "well, it's just a
+function right, that's what we love about hooks. So can't I just call the
+function and assert on the output? Unit tests FTW!" They're not wrong. It _is_
+just a function, but technically speaking, it's not a
+[_pure_ function](https://en.wikipedia.org/wiki/Pure_function) (your hooks are
+supposed to be [idempotent](https://en.wikipedia.org/wiki/Idempotence) though).
+If the function were _pure_, then it would be a simple task of calling it and
+asserting on the output.
+
+If you try simply calling the function in a test, you're breaking
+[the rules of hooks](https://reactjs.org/docs/hooks-rules.html) and you'll get
+this error:
+
+```
+Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+  1. You might have mismatching versions of React and the renderer (such as React DOM)
+  2. You might be breaking the Rules of Hooks
+  3. You might have more than one copy of React in the same app
+  See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
+```
+
+(I've gotten that error for all three reasons mentioned 🙈)
+
+But don't fret, if you were to test this manually, rather simply calling the
+function, you'd probably write a component that uses the hook, and then interact
+with that component rendered to the page (perhaps using
+[storybook](https://storybook.js.org/)). So let's do that instead:
 
 ```javascript
 import React from 'react'
@@ -165,7 +197,6 @@ function UseUndoExample() {
           <button type="submit">Submit</button>
         </div>
       </form>
-      <hr />
       <div>Present: {present}</div>
       <div>Past: {past.join(', ')}</div>
       <div>Future: {future.join(', ')}</div>
