@@ -79,7 +79,7 @@
     "remark-parse": "^7.0.2",
     "remark-rehype": "^6.0.0",
     "strip-indent": "^3.0.0",
-    "strip-markdown": "^3.1.1",
+    "strip-markdown": "^3.1.2",
     "typography": "^0.16.19",
     "unified": "^8.4.2",
     "yup": "^0.28.3"
@@ -105,7 +105,7 @@
     "is-ci-cli": "^2.0.0",
     "jest": "^25.1.0",
     "jest-in-case": "^1.0.2",
-    "lint-staged": "^10.0.8",
+    "lint-staged": "^10.0.9",
     "netlify-lambda": "^1.6.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
