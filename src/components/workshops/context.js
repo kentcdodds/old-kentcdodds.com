@@ -1,10 +1,10 @@
 import React from 'react'
-import {useFetch} from 'react-async'
 import {useStaticQuery, graphql} from 'gatsby'
 import isEmpty from 'lodash/isEmpty'
 import get from 'lodash/get'
 import intersection from 'lodash/intersection'
 import emojiStrip from 'emoji-strip'
+import {useAsync} from 'lib/use-async'
 
 const normalize = s => emojiStrip(s.toLowerCase()).trim()
 
@@ -32,12 +32,16 @@ const workshopQuery = graphql`
 const WorkshopEvents = React.createContext()
 
 function WorkshopEventsProvider(props) {
-  const headers = {Accept: 'application/json'}
-  const {
-    data,
-    error,
-    isLoading,
-  } = useFetch(`${process.env.NETLIFY_FUNCTIONS_URL}/tickets`, {headers})
+  const {run, data, error, isLoading} = useAsync()
+  React.useEffect(() => {
+    run(
+      window
+        .fetch(`${process.env.NETLIFY_FUNCTIONS_URL}/tickets`, {
+          headers: {Accept: 'application/json'},
+        })
+        .then(r => r.json()),
+    )
+  }, [run])
   const value = React.useMemo(() => ({data, error, isLoading}), [
     data,
     error,
