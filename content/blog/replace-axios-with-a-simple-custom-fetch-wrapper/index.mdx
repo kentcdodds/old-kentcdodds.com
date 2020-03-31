@@ -286,6 +286,10 @@ using it (I use it for node projects because it's just great and I haven't been
 motivated to investigate the alternatives that I'm sure you're dying to tell me
 all about right now). But for the browser, I think that you'll often be better
 off making your own simple wrapper around `fetch` that does exactly what you
-need it to do and no more.
+need it to do and no more. Anything you can think of for an axios interceptor or
+transform to do, you can make your wrapper do it. If you don't want it applied
+to all requests, then you can make a wrapper for your wrapper.
+
+https://twitter.com/kentcdodds/status/1244820744564965376
 
 Good luck!
