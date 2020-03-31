@@ -196,7 +196,7 @@ function client(endpoint, {body, ...customConfig} = {}) {
 }
 ```
 
-So basically if we have a toke in `localStorage` by that key, then we add the
+So basically if we have a token in `localStorage` by that key, then we add the
 `Authorization` header (per [the JWT spec](https://jwt.io/)) which our server
 can then use to determine whether the user is authorized. Very common practice
 there.
