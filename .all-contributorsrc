@@ -1168,6 +1168,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "nermand",
+      "name": "Nerman Deliahmetovic",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3857276?v=4",
+      "profile": "https://github.com/nermand",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
