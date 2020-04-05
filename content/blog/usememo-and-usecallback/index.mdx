@@ -72,8 +72,7 @@ function CandyDispenser() {
 }
 ```
 
-Now I want to ask you a question and I want you to think hard about it before
-moving forward. I'm going to make a change to this and I want you to tell me
+I'm going to make a change to this and I want you to tell me
 which will have the better performance characteristics.
 
 The only thing I'm going to change is wrap the `dispense` function inside
@@ -93,7 +92,7 @@ const dispense = candy => {
 }
 ```
 
-So here's my question, in this specific case, which of these is better for
+In this specific case, which of these is better for
 performance? Go ahead and submit your guess (this is not recorded anywhere):
 
 <Poll />
@@ -143,8 +142,8 @@ Notice anything about these? Let's look at the diff:
 + const dispenseCallback = React.useCallback(dispense, [])
 ```
 
-Yeah, they're _exactly_ the same except the `useCallback` version is doing
-_more_ work. Not only do we have to define the function, but we also have to
+Yeah, they're _exactly_ the same except that the `useCallback` version is doing
+_more_ work. Not only do we have to define the function but we also have to
 define an array (`[]`) _and_ call the `React.useCallback` which itself is
 setting properties/running through logical expressions etc.
 
@@ -192,7 +191,7 @@ I could make this change:
 + )
 ```
 
-And I would avoid that problem, but the savings would be so minimal that the
+And I would avoid that problem but the savings would be so minimal that the
 cost of making the code more complex just isn't worth it. In fact, it's probably
 worse to use `useMemo` for this as well because again we're making a function
 call and that code is doing property assignments etc.
@@ -250,20 +249,19 @@ z === z // true
 // NOTE: React actually uses Object.is, but it's very similar to ===
 ```
 
-I'm not going to go too deep into this, but suffice it to say when you define an
+I'm not going to go too deep into this but when you define an
 object inside your React function component, it is _not_ going to be
 referentially equal to the last time that same object was defined (even if it
 has all the same properties with all the same values).
 
-There are two situations where referential equality matters in React, let's go
+There are two situations where referential equality matters in React. Let's go
 through them one at a time.
 
 ### Dependencies lists
 
 Let's review an example.
 
-> Warning, you're about to see some seriously contrived code. Please don't
-> nit-pick that and just focus on the concepts please, thank you.
+> The following code is a bit contrived. Just focus on the concepts.
 
 ```jsx
 function Foo({bar, baz}) {
