@@ -1,7 +1,7 @@
 ---
 slug: 'the-state-reducer-pattern-with-react-hooks'
 title: 'The State Reducer Pattern with React Hooks'
-date: '2019-03-25'
+date: '2020-04-06'
 author: 'Kent C. Dodds'
 description:
   '_A pattern for you to use in custom hooks to enhance the power and
@@ -193,23 +193,24 @@ So that's great, except it prevents changes from happening when people click the
 
 Hmmm... What if we change `modifyStateChange` to be called `reducer` and it
 accepts an `action` as the second argument? Then the `action` could have a
-`type` that determines what type of change is happening, and the `changes` could
-just be a property on that object. We'll just say that the `type` for clicking
-the switch is `TOGGLE`.
+`type` that determines what type of change is happening, and we could get the
+`changes` from the `toggleReducer` which would be exported by our `useToggle`
+hook. We'll just say that the `type` for clicking the switch is `TOGGLE`.
 
-```jsx {6-7}
+```jsx {6-8}
 function Toggle() {
   const [clicksSinceReset, setClicksSinceReset] = React.useState(0)
   const tooManyClicks = clicksSinceReset >= 4
 
   const {on, toggle, setOn, setOff} = useToggle({
     reducer(currentState, action) {
+      const changes = toggleReducer(currenState, action)
       if (tooManyClicks && action.type === 'TOGGLE') {
         // other changes are fine, but on needs to be unchanged
-        return {...action.changes, on: currentState.on}
+        return {...changes, on: currentState.on}
       } else {
         // the changes are fine
-        return action.changes
+        return changes
       }
     },
   })
@@ -235,21 +236,22 @@ function Toggle() {
 Nice! This gives us all kinds of control. One last thing, let's not bother with
 the string `'TOGGLE'` for the type. Instead we'll have an object of all the
 change types that people can reference instead. This'll help avoid typos and
-improve editor autocompletion:
+improve editor autocompletion (for folks not using TypeScript):
 
-```jsx {7}
+```jsx {8}
 function Toggle() {
   const [clicksSinceReset, setClicksSinceReset] = React.useState(0)
   const tooManyClicks = clicksSinceReset >= 4
 
   const {on, toggle, setOn, setOff} = useToggle({
     reducer(currentState, action) {
-      if (tooManyClicks && action.type === useToggle.types.toggle) {
+      const changes = toggleReducer(currenState, action)
+      if (tooManyClicks && action.type === actionTypes.toggle) {
         // other changes are fine, but on needs to be unchanged
-        return {...action.changes, on: currentState.on}
+        return {...changes, on: currentState.on}
       } else {
         // the changes are fine
-        return action.changes
+        return changes
       }
     },
   })
@@ -325,18 +327,24 @@ function useToggle() {
 ```
 
 Ok, cool. Really quick, let's add that `types` property to our `useToggle` to
-avoid the strings thing:
+avoid the strings thing. And we'll export that so users of our hook can
+reference them:
 
-```jsx {3,6,9,21-23,28-32}
+```jsx {1-5,8,11,14,26-28,33}
+const actionTypes = {
+  toggle: 'TOGGLE',
+  on: 'ON',
+  off: 'OFF',
+}
 function toggleReducer(state, action) {
   switch (action.type) {
-    case useToggle.types.toggle: {
+    case actionTypes.toggle: {
       return {on: !state.on}
     }
-    case useToggle.types.on: {
+    case actionTypes.on: {
       return {on: true}
     }
-    case useToggle.types.off: {
+    case actionTypes.off: {
       return {on: false}
     }
     default: {
@@ -348,18 +356,14 @@ function toggleReducer(state, action) {
 function useToggle() {
   const [{on}, dispatch] = React.useReducer(toggleReducer, {on: false})
 
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
+  const toggle = () => dispatch({type: actionTypes.toggle})
+  const setOn = () => dispatch({type: actionTypes.on})
+  const setOff = () => dispatch({type: actionTypes.off})
 
   return {on, toggle, setOn, setOff}
 }
 
-useToggle.types = {
-  toggle: 'TOGGLE',
-  on: 'ON',
-  off: 'OFF',
-}
+export {useToggle, actionTypes}
 ```
 
 Cool, so now, users are going to pass `reducer` as a configuration object to our
@@ -369,89 +373,55 @@ Cool, so now, users are going to pass `reducer` as a configuration object to our
 function useToggle({reducer}) {
   const [{on}, dispatch] = React.useReducer(toggleReducer, {on: false})
 
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
+  const toggle = () => dispatch({type: actionTypes.toggle})
+  const setOn = () => dispatch({type: actionTypes.on})
+  const setOff = () => dispatch({type: actionTypes.off})
 
   return {on, toggle, setOn, setOff}
 }
 ```
 
 Great, so now that we have the developer's `reducer`, how do we combine that
-with our reducer? Well remember that the developer needs to know what our
-changes will be, so we'll definitely need to determine those changes first.
-Let's make an inline reducer:
+with our reducer? Well, if we're truly going to invert control for the user of
+our hook, we don't want to call our own `reducer`. Instead, let's expose our own
+reducer and they can use it themselves if they want to, so let's export it, and
+then we'll use the `reducer` they give us instead of our own:
 
-```jsx {3-6}
+```jsx {2, 11}
 function useToggle({reducer}) {
-  const [{on}, dispatch] = React.useReducer(
-    (state, action) => {
-      const changes = toggleReducer(state, action)
-      return changes
-    },
-    {on: false},
-  )
+  const [{on}, dispatch] = React.useReducer(reducer, {on: false})
 
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
+  const toggle = () => dispatch({type: actionTypes.toggle})
+  const setOn = () => dispatch({type: actionTypes.on})
+  const setOff = () => dispatch({type: actionTypes.off})
 
   return {on, toggle, setOn, setOff}
 }
+
+export {useToggle, actionTypes, toggleReducer}
 ```
 
-That was a straight-up refactor. In fact, no functionality has changed for our
-toggle hook (which is actually kinda neat if you think of it. The magic of black
-boxes and implementation details ✨).
-
-Awesome, so now we have all the info we need to pass along to the `reducer`
-they've given to us:
-
-```jsx {5}
-function useToggle({reducer}) {
-  const [{on}, dispatch] = React.useReducer(
-    (state, action) => {
-      const changes = toggleReducer(state, action)
-      return reducer(state, {...action, changes})
-    },
-    {on: false},
-  )
-
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
-
-  return {on, toggle, setOn, setOff}
-}
-```
-
-Cool! So we just call the developer's `reducer` with the `state` and make a new
-`action` object that has all the properties of the original `action` plus the
-`changes`. Then we return whatever they return to us. And they have complete
-control over our state updates! That's pretty neat! And thanks to `useReducer`
-it's pretty simple too.
-
-But not everyone's going to need this `reducers` feature, so let's default the
-configuration object to `{}` and we'll default the `reducer` property to a
-simple reducer that just always returns the changes:
+Great, but now everyone using our component has to provide a reducer which is
+not really what we want. We want to enable inversion of control for people who
+_do_ want control, but for the more common case, they shouldn't have to do
+anything special, so let's add some defaults:
 
 ```jsx {1}
-function useToggle({reducer = (s, a) => a.changes} = {}) {
-  const [{on}, dispatch] = React.useReducer(
-    (state, action) => {
-      const changes = toggleReducer(state, action)
-      return reducer(state, {...action, changes})
-    },
-    {on: false},
-  )
+function useToggle({reducer = toggleReducer} = {}) {
+  const [{on}, dispatch] = React.useReducer(reducer, {on: false})
 
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
+  const toggle = () => dispatch({type: actionTypes.toggle})
+  const setOn = () => dispatch({type: actionTypes.on})
+  const setOff = () => dispatch({type: actionTypes.off})
 
   return {on, toggle, setOn, setOff}
 }
+
+export {useToggle, actionTypes, toggleReducer}
 ```
+
+Sweet, so now people can use our `useToggle` hook with their own reducer or they
+can use it with the built-in one. Either way works just as well.
 
 ## Conclusion
 
@@ -462,15 +432,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Switch from './switch'
 
+const actionTypes = {
+  toggle: 'TOGGLE',
+  on: 'ON',
+  off: 'OFF',
+}
+
 function toggleReducer(state, action) {
   switch (action.type) {
-    case useToggle.types.toggle: {
+    case actionTypes.toggle: {
       return {on: !state.on}
     }
-    case useToggle.types.on: {
+    case actionTypes.on: {
       return {on: true}
     }
-    case useToggle.types.off: {
+    case actionTypes.off: {
       return {on: false}
     }
     default: {
@@ -479,26 +455,17 @@ function toggleReducer(state, action) {
   }
 }
 
-function useToggle({reducer = (s, a) => a.changes} = {}) {
-  const [{on}, dispatch] = React.useReducer(
-    (state, action) => {
-      const changes = toggleReducer(state, action)
-      return reducer(state, {...action, changes})
-    },
-    {on: false},
-  )
+function useToggle({reducer = toggleReducer} = {}) {
+  const [{on}, dispatch] = React.useReducer(reducer, {on: false})
 
-  const toggle = () => dispatch({type: useToggle.types.toggle})
-  const setOn = () => dispatch({type: useToggle.types.on})
-  const setOff = () => dispatch({type: useToggle.types.off})
+  const toggle = () => dispatch({type: actionTypes.toggle})
+  const setOn = () => dispatch({type: actionTypes.on})
+  const setOff = () => dispatch({type: actionTypes.off})
 
   return {on, toggle, setOn, setOff}
 }
-useToggle.types = {
-  toggle: 'TOGGLE',
-  on: 'ON',
-  off: 'OFF',
-}
+
+// export {useToggle, actionTypes, toggleReducer, actionTypes}
 
 function Toggle() {
   const [clicksSinceReset, setClicksSinceReset] = React.useState(0)
@@ -506,12 +473,13 @@ function Toggle() {
 
   const {on, toggle, setOn, setOff} = useToggle({
     reducer(currentState, action) {
-      if (tooManyClicks && action.type === useToggle.types.toggle) {
+      const changes = toggleReducer(currentState, action)
+      if (tooManyClicks && action.type === actionTypes.toggle) {
         // other changes are fine, but on needs to be unchanged
-        return {...action.changes, on: currentState.on}
+        return {...changes, on: currentState.on}
       } else {
         // the changes are fine
-        return action.changes
+        return changes
       }
     },
   })
