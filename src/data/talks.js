@@ -155,6 +155,7 @@ export default [
       {
         event: '[Concatenate Conf](https://www.concatenate.dev)',
         date: '2019-10-11',
+        recording: 'https://youtu.be/-Ez53J0vj9c?t=18077',
       },
       {
         event: '[Connect.Tech](https://connect.tech)',
