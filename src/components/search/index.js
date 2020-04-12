@@ -2,6 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 import {Link as RouterLink} from '@reach/router'
+import {useUserAgent} from '@oieduardorabelo/use-user-agent'
 import {rankings as matchSorterRankings} from 'match-sorter'
 import MatchSorterWorker from './match-sorter.worker'
 import theme from '../../../config/theme'
@@ -44,6 +45,15 @@ function BlogPostCard({blogpost}) {
     )
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const details = typeof window === `undefined` ? null : useUserAgent()
+  if (!details) {
+    return <span>No details</span>
+  }
+
+  const {browser} = details
+  const isSafari = browser.name === 'Safari'
+
   return (
     <div
       css={{
@@ -59,22 +69,24 @@ function BlogPostCard({blogpost}) {
     >
       <RouterLink to={slug} css={{color: 'initial'}}>
         <h2 css={{marginTop: 0}}>{title}</h2>
-        <div css={{width: '100%'}}>
-          <button
-            css={{
-              display: 'block',
-              width: '100%',
-              position: 'absolute',
-              bottom: '0',
-              left: '0',
-              borderTopRightRadius: '0',
-              borderTopLeftRadius: '0',
-            }}
-            onClick={copy}
-          >
-            {copyText}
-          </button>
-        </div>
+        {isSafari ? null : (
+          <div css={{width: '100%'}}>
+            <button
+              css={{
+                display: 'block',
+                width: '100%',
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                borderTopRightRadius: '0',
+                borderTopLeftRadius: '0',
+              }}
+              onClick={copy}
+            >
+              {copyText}
+            </button>
+          </div>
+        )}
         <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
       </RouterLink>
