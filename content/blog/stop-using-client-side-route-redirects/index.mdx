@@ -125,8 +125,11 @@ but I chose the [`_redirects` file](https://docs.netlify.com/routing/redirects/)
 option. Here's what that file needs to get that redirect in place:
 
 ```
-/     /list         302!
+/  /list  302!
 ```
+
+You can check out this file as it stands today
+[right here](https://github.com/kentcdodds/bookshelf/blob/f87266c4cc215865be6453e114f954df7172e0e6/public/_redirects)
 
 If I wanted to use the `netlify.toml` file, then it would be more like this:
 
@@ -137,9 +140,6 @@ If I wanted to use the `netlify.toml` file, then it would be more like this:
   status = 302
   force = true
 ```
-
-You can check out this file as it stands today
-[right here](https://github.com/kentcdodds/bookshelf/blob/f87266c4cc215865be6453e114f954df7172e0e6/public/_redirects)
 
 ### Locally built file
 
