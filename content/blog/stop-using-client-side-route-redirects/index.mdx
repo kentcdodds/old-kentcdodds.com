@@ -83,7 +83,11 @@ Now, let's not be disingenuous! `<Redirect />` only supports redirecting within
 the same app, so the user's going to need to download all of that stuff anyway.
 But the concept still applies: Don't do a client-side redirect from a known
 route to another known route. If it's from one app to another, then the user
-just downloaded and ran a bunch of code they didn't need.
+just downloaded and ran a bunch of code they didn't need. Also, even if it's
+within-app, then depending on how you have things configured with
+code-splitting, it's definitely possible that this resulted in the user
+downloading too much or kicking off a waterfall effect (resulting in suboptimal
+performance).
 
 As for using `<Redirect />` when it _is_ within your own app, the user will have
 to wait until the app finishes loading and is actually run before the URL in
