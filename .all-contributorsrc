@@ -1195,6 +1195,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "KarelVerschraegen",
+      "name": "KarelVerschraegen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11301291?v=4",
+      "profile": "https://github.com/KarelVerschraegen",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
