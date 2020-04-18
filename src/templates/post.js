@@ -179,14 +179,16 @@ function Post({data: {site, mdx}}) {
             justify-content: center;
           `}
         >
-          <UpcomingWorkshops
-            headline={
-              commonKeyword
-                ? titleCase(`Upcoming ${commonKeyword} Workshops`)
-                : 'Upcoming Workshops'
-            }
-            events={eventsByKeywords}
-          />
+          <Container noVerticalPadding>
+            <UpcomingWorkshops
+              headline={
+                commonKeyword
+                  ? titleCase(`Upcoming ${commonKeyword} Workshops`)
+                  : 'Upcoming Workshops'
+              }
+              events={eventsByKeywords}
+            />
+          </Container>
         </div>
       )}
       {keywords.map(keyword => keyword.toLowerCase()).includes('testing') && (
