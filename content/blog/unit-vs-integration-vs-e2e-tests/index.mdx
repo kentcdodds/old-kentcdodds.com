@@ -184,7 +184,7 @@ import React from 'react'
 import {render, screen} from '@testing-library/react'
 import ItemList from '../item-list'
 
-// Some people don't call these a unit test because we're render to the DOM with React.
+// Some people don't call these a unit test because we're rendering to the DOM with React.
 // They'd tell you to use shallow rendering instead.
 // When they tell you this, send them to https://kcd.im/shallow
 test('renders "no items" when the item list is empty', () => {
@@ -251,7 +251,7 @@ PR will get rejected unless it includes tests? Is it because testing enhances
 your workflow?
 
 The biggest and most important reason that I write tests is **CONFIDENCE**. I
-want to be confident that the code I'm writing for the future wont break the app
+want to be confident that the code I'm writing for the future won't break the app
 that I have running in production today. So whatever I do, I want to make sure
 that the kinds of tests I write bring me the most confidence possible and I need
 to be cognizant of the trade-offs I'm making when testing.
