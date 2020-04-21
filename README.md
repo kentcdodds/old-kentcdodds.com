@@ -180,6 +180,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/mattdenkers"><img src="https://avatars0.githubusercontent.com/u/22377540?v=4" width="100px;" alt=""/><br /><sub><b>mattdenkers</b></sub></a><br /><a href="#content-mattdenkers" title="Content">🖋</a></td>
     <td align="center"><a href="https://pavelkeyzik.github.io"><img src="https://avatars3.githubusercontent.com/u/17102399?v=4" width="100px;" alt=""/><br /><sub><b>Pavel Keyzik</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=pavelkeyzik" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/KarelVerschraegen"><img src="https://avatars3.githubusercontent.com/u/11301291?v=4" width="100px;" alt=""/><br /><sub><b>KarelVerschraegen</b></sub></a><br /><a href="#content-KarelVerschraegen" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/pranjaljately"><img src="https://avatars3.githubusercontent.com/u/30666375?v=4" width="100px;" alt=""/><br /><sub><b>Pranjal Jately</b></sub></a><br /><a href="#content-pranjaljately" title="Content">🖋</a></td>
   </tr>
 </table>
 
