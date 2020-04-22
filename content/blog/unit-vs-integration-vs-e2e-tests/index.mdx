@@ -82,9 +82,9 @@ describe('todo app', () => {
 
     cy.findByText(/register/i).click()
 
-    cy.findByLabelText(/username).type(user.username)
+    cy.findByLabelText(/username/i).type(user.username)
 
-    cy.findByLabelText(/password).type(user.password)
+    cy.findByLabelText(/password/i).type(user.password)
 
     cy.findByText(/login/i).click()
 
