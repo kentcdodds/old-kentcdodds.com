@@ -182,6 +182,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/KarelVerschraegen"><img src="https://avatars3.githubusercontent.com/u/11301291?v=4" width="100px;" alt=""/><br /><sub><b>KarelVerschraegen</b></sub></a><br /><a href="#content-KarelVerschraegen" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/pranjaljately"><img src="https://avatars3.githubusercontent.com/u/30666375?v=4" width="100px;" alt=""/><br /><sub><b>Pranjal Jately</b></sub></a><br /><a href="#content-pranjaljately" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/steric85"><img src="https://avatars0.githubusercontent.com/u/11133505?v=4" width="100px;" alt=""/><br /><sub><b>Steric</b></sub></a><br /><a href="#content-steric85" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
