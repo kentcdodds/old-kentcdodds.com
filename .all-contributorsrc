@@ -1222,6 +1222,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "JulianG",
+      "name": "Julian",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/237818?v=4",
+      "profile": "https://juliangaramendy.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
