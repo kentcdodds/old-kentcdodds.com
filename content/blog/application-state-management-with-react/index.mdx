@@ -174,12 +174,61 @@ app.
 "Sure Kent, ok, but what about the [prop drilling](/blog/prop-drilling)
 problem?"
 
-This is one problem that's actually also had a "solution" for a long time, but
-only recently was that solution "official" and "blessed." As I said, many people
-reached for `react-redux` because it solved this problem using the mechanism I'm
-referring to without them having to be worried about the warning that was in the
-React docs. But now that `context` is an officially supported part of the React
-API, we can use this directly without any problem:
+Great question, your first line of defense against this is to change the way
+your structuring your components. Take advantage of
+[component composition](https://reactjs.org/docs/context.html#before-you-use-context).
+Maybe instead of:
+
+```javascript
+function App() {
+  const [someState, setSomeState] = React.useState('some state')
+  return (
+    <>
+      <Header someState={someState} onStateChange={setSomeState} />
+      <LeftNav someState={someState} onStateChange={setSomeState} />
+      <MainContent someState={someState} onStateChange={setSomeState} />
+    </>
+  )
+}
+```
+
+You could do this instead:
+
+```javascript
+function App() {
+  const [someState, setSomeState] = React.useState('some state')
+  return (
+    <>
+      <Header
+        logo={<Logo someState={someState} />}
+        settings={<Settings onStateChange={setSomeState} />}
+      />
+      <LeftNav>
+        <SomeLink someState={someState} />
+        <SomeOtherLink someState={someState} />
+        <Etc someState={someState} />
+      </LeftNav>
+      <MainContent>
+        <SomeSensibleComponent someState={someState} />
+        <AndSoOn someState={someState} />
+      </MainContent>
+    </>
+  )
+}
+```
+
+If that's not super clear (because it's super contrived),
+[Michael Jackson](https://twitter.com/mjackson) has
+[a great video](https://www.youtube.com/watch?v=3XaXKiXtNjw) you can watch to
+help clarify what I mean.
+
+Eventually though, even composition's not going to do it for you, so you're next
+step is to jump into React's Context API. This has actually been a "solution"
+for a long time, but for a long time that solution was "unofficial." As I said,
+many people reached for `react-redux` because it solved this problem using the
+mechanism I'm referring to without them having to be worried about the warning
+that was in the React docs. But now that `context` is an officially supported
+part of the React API, we can use this directly without any problem:
 
 ```javascript
 // src/count/count-context.js
@@ -365,6 +414,35 @@ looking to find out how that works (in the provider).
 and ["Colocation"](/blog/colocation) blog posts. And for more about context,
 read
 [How to use React Context effectively](/blog/how-to-use-react-context-effectively)**
+
+## Server Cache vs UI State
+
+One last thing I want to add. There are various categories of state, but every
+type of state can fall into one of two buckets:
+
+1. Server Cache - State that's actually stored on the server and we store in the
+   client for quick-access (like user data).
+2. UI State - State that's only useful in the UI for controlling the interactive
+   parts of our app (like modal `isOpen` state).
+
+We make a mistake when we combine the two. Server cache has inherently different
+problems from UI state and therefore needs to be managed differently. If you
+embrace the fact that what you have is not actually state at all but is instead
+a cache of state, then you can start thinking about it correctly and therefore
+managing it correctly.
+
+You can definitely manage this yourself with your own `useState` or `useReducer`
+with the right `useContext` here and there. But allow me to help you cut to the
+chase and say that caching is a really hard problem (some say that it's one of
+the hardest in computer science) and it would be wise to stand on the shoulders
+of giants on this one.
+
+This is why I use and recommend
+[react-query](https://github.com/tannerlinsley/react-query) for this kind of
+state. I know I know, I told you that you don't need a state management library,
+but I don't really consider react-query to be a state management library. I
+consider it to be a cache. And it's a darn good one. Give it a look! That
+[Tanner Linsley](https://twitter.com/tannerlinsley) is one smart cookie.
 
 ## Conclusion
 
