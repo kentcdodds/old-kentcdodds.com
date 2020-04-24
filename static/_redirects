@@ -11,6 +11,8 @@
 /blog/aha                                                               /blog/aha-programming
 /workshops/advanced-react-component-patterns                            /workshops/advanced-react-patterns
 /workshops/hooks                                                        /workshops/react-hooks
+/workshops/build-react-apps                                             /workshops/build-react-apps-1
+/workshops/build-react-apps-advanced                                    /workshops/build-react-apps-3
 /blog/make-test-utils-for-your-app                                      /blog/test-utils
 /blog/what-code-comments-can-teach-us-about-scaling-a-codebase          /blog/colocation
 /blog/avoid-nesting-in-tests                                            /blog/avoid-nesting-when-youre-testing
