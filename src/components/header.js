@@ -138,13 +138,15 @@ function Header({
             >
               Blog
             </NavLink>
+            {/*{' '}
             <NavLink
               headerColor={headerColor}
               to="/talks/"
               aria-label="View talks page"
             >
               Talks
-            </NavLink>
+            </NavLink>{' '}
+            */}
             <NavLink
               headerColor={headerColor}
               to="/about/"

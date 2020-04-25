@@ -141,13 +141,7 @@ function Hero({
               visibility: 'hidden',
             },
           }}
-        >
-          <img
-            src={image}
-            alt="Kent C. Dodds"
-            css={{maxWidth: '100%', marginBottom: 0}}
-          />
-        </div>
+        />
       </Container>
     </section>
   )
