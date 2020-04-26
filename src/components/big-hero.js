@@ -6,16 +6,13 @@ import {rhythm, fonts} from '../lib/typography'
 import Markdown from 'react-markdown'
 import Container from 'components/container'
 
-import heroImageRight from '../images/hero/path-right.svg'
-import heroImageLeft from '../images/hero/path-left.svg'
 import photoOfTyler from '../images/hero/kent.png'
 
 function Hero({
   children,
   title = `Hi, I'm Tyler Haas. I help people solve tough problems with code.`,
   text,
-  background = `url(${heroImageRight}), url(${heroImageLeft}),
-  linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
+  background = `linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
   image = `${photoOfTyler}`,
 }) {
   return (

@@ -5,7 +5,6 @@ import {StaticQuery, graphql} from 'gatsby'
 import PropTypes from 'prop-types'
 import SchemaOrg from './schema-org'
 import config from '../../../config/website'
-import defaultMetaImage from '../../../static/images/metaImage.jpg'
 
 const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
   <StaticQuery
@@ -16,14 +15,12 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
             title
             description
             canonicalUrl
-            image
             author {
               name
             }
             organization {
               name
               url
-              logo
             }
             social {
               twitter
@@ -39,7 +36,7 @@ const SEO = ({postData, frontmatter = {}, metaImage, isBlogPost}) => (
       const title = postMeta.title || config.siteTitle
       const description =
         postMeta.plainTextDescription || postMeta.description || seo.description
-      const image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`
+      const image = `${seo.canonicalUrl}${metaImage || ''}`
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl

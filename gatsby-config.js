@@ -40,7 +40,7 @@ module.exports = {
       'Testing JavaScript Training',
     ],
     canonicalUrl: siteUrl,
-    image: config.siteLogo,
+    // image: config.siteLogo,
     author: {
       name: config.author,
       minibio: config.minibio,
@@ -48,7 +48,7 @@ module.exports = {
     organization: {
       name: config.organization,
       url: siteUrl,
-      logo: config.siteLogo,
+      // logo: config.siteLogo,
     },
     social: {
       twitter: config.twitterHandle,
@@ -134,18 +134,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'standalone',
-        icons: [
-          {
-            src: '/favicons/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/favicons/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        icons: [],
       },
     },
     {
