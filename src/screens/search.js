@@ -85,11 +85,11 @@ function SearchScreen() {
   return (
     <div>
       <div>
-        <h1>Search Kent C. Dodds Blogposts</h1>
+        <h1>Search Tyler Haas's Blogposts</h1>
       </div>
       <small>
         {`If you can't find what you're looking for with this, try `}
-        <a href="https://www.google.com/search?q=site%3Akentcdodds.com%2Fblog+testing">
+        <a href="https://www.google.com/search?q=site%3Atylerhaas.dev%2Fblog+testing">
           using Google
         </a>
         {'.'}
