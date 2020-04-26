@@ -132,7 +132,7 @@
     "cy:open": "cypress open",
     "cy:run": "CYPRESS_BASE_URL=http://localhost:5020 cypress run",
     "test:e2e": "start-server-and-test start http://localhost:5020 cy:run",
-    "test": "yarn test:watch",
+    "test": "yarn test:coverage",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch"
