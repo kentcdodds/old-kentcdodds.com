@@ -85,7 +85,7 @@ function SearchScreen() {
   return (
     <div>
       <div>
-        <h1>Search Tyler Haas's Blogposts</h1>
+        <h1>Search Tyler Haas&apos;s Blogposts</h1>
       </div>
       <small>
         {`If you can't find what you're looking for with this, try `}
