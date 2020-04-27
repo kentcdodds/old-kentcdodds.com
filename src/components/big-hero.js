@@ -6,14 +6,14 @@ import {rhythm, fonts} from '../lib/typography'
 import Markdown from 'react-markdown'
 import Container from 'components/container'
 
-import photoOfTyler from '../images/hero/kent.png'
+const photoOfTyler = ''
 
 function Hero({
   children,
   title = `Hi, I'm Tyler Haas. I help people solve tough problems with code.`,
   text,
   background = `linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
-  image = `${photoOfTyler}`,
+  image = ``,
 }) {
   return (
     <section
@@ -63,17 +63,17 @@ function Hero({
             ${bpMaxMD} {
               display: block;
               visibility: visible;
-              width: 250px;
-              height: 250px;
+              /* width: 250px;
+              height: 250px; */
               //background: #241d44;
-              ${image === photoOfTyler &&
+              /* ${image === photoOfTyler &&
                 `
                 width: 160px;
               height: 160px;
               overflow: 'hidden';
               border-radius: 50%;
               background: #4b4ddf;
-              `}
+              `} */
               background-image: url(${image});
               background-size: cover;
               background-position-y: 10px;
@@ -99,7 +99,7 @@ function Hero({
               height: 100%;
               display: flex;
               //align-self: center;
-              padding-bottom: ${image === photoOfTyler ? '40px' : '0'};
+              /* padding-bottom: ${image === photoOfTyler ? '40px' : '0'}; */
             `}
           >
             {title}

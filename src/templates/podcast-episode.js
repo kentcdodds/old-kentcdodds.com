@@ -12,7 +12,6 @@ import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import Layout from 'components/layout'
 import EpisodeList from 'components/podcast/list'
 
-import podcastMetaImage from '../images/podcast/metaImage.jpg'
 // import ApplePodcasts from '../images/podcast/apple.svg'
 import GooglePodcasts from '../images/podcast/google.svg'
 import Spotify from '../images/podcast/spotify.svg'
@@ -127,7 +126,7 @@ const Article = styled.article(
 function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
   const metaImage = mdx.frontmatter.metaImage
     ? mdx.frontmatter.metaImage.childImageSharp.original.src
-    : podcastMetaImage
+    : ''
   return (
     <>
       <SEO frontmatter={mdx.frontmatter} metaImage={metaImage} />
