@@ -158,11 +158,11 @@ Which kicks off the following conversation:
 
 > Us: "Please update it with the object stored at memoryLocation1"
 
-> React: "No problem!" React: "Looks like I've already got that set in state
-> nothing to do here!"
+> React: "No problem! Looks like I've already got that set in state nothing to
+> do here!"
 
 > Us: "No wait! React! There is definitely stuff to do because we updated the
-> properties of the object."
+> properties of the object! 😡"
 
 So how do we solve this problem? Luckily the solution is fairly simple. We just
 have to initialize our reducer function with a totally new object so that the
