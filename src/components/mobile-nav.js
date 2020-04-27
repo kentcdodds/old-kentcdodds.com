@@ -106,13 +106,13 @@ const Toggle = ({color = 'white'}) => {
             >
               Blog
             </Link>
-            <Link
+            {/* <Link
               aria-label="View talks page"
               to="/talks"
               activeClassName="active"
             >
               Talks
-            </Link>
+            </Link> */}
             <Link
               aria-label="View about page"
               to="/about"
