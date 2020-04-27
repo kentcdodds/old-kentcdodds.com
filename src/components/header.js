@@ -63,17 +63,13 @@ function Header({
   return (
     <header
       css={css`
+        display: flex;
+        align-items: center;
         width: 100%;
-        flex-shrink: 0;
-        background: none;
-        padding: 30px 0 0 0;
+        background: #090a0b;
         ${bpMaxSM} {
           padding: 35px 0 0 0;
         }
-        background: ${dark ? '#090909' : `${bgColor}` || 'none'};
-        z-index: 10;
-        position: ${fixed ? 'fixed' : 'absolute'};
-        top: 0;
         font-family: ${fonts.light};
       `}
     >

@@ -16,10 +16,16 @@ import {fonts} from '../lib/typography'
 import config from '../../config/website'
 
 export const globalStyles = css`
+  html,
+  body,
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    height: 100%;
+  }
   .button-secondary {
     border-radius: 4px;
     padding: 12px 12px;
-    background: ${theme.colors.primary_light};
+    background: ${theme.colors.primary_dark};
   }
   ${bpMaxSM} {
     h1 {
@@ -122,47 +128,16 @@ export const globalStyles = css`
   ${reset};
 `
 
-const DefaultHero = styled.section`
-  * {
-    color: ${theme.colors.white};
-  }
-  width: 100%;
-  ${({headerColor}) =>
-    headerColor
-      ? css`
-          background: #3155dc;
-          background-image: linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%);
-          background-position: center right, center left;
-          background-repeat: no-repeat;
-          background-size: contain;
-        `
-      : null} position: relative;
-  z-index: 0;
-  align-items: center;
-  display: flex;
-  height: 100px;
-  ${bpMaxMD} {
-    background-size: cover;
-  }
-  ${bpMaxSM} {
-    padding-top: 60px;
-  }
-`
-
 function Layout({
   data,
   headerLink,
   siteTitle = 'Tyler Haas',
   frontmatter = {},
-  hero = <DefaultHero />,
   subscribeForm,
   children,
   dark,
   headerBg,
   headerColor,
-  noFooter,
-  backgroundColor,
-  backgroundImage,
   fixedHeader,
   logo,
   maxWidth = 720,
@@ -182,8 +157,6 @@ function Layout({
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <NotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</NotificationMessage>
-      <NotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</NotificationMessage> */}
       <Global styles={globalStyles} />
       <Helmet
         title={title}
@@ -198,39 +171,30 @@ function Layout({
       </Helmet>
       <div
         css={css`
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          min-height: 100vh;
-          ${backgroundColor && `background: ${backgroundColor}`};
-          ${backgroundImage && `background-image: url(${backgroundImage})`};
+          display: grid;
+          grid-template-rows: 80px 1fr 80px;
+          align-content: center;
+          background: #191b1f;
         `}
       >
-        <div css={{flex: '1 0 auto'}}>
-          {React.cloneElement(hero, {headerColor})}
-          <Header
-            maxWidth={maxWidth}
-            siteTitle={siteTitle}
-            headerLink={headerLink}
-            dark={dark}
-            bgColor={headerBg}
-            headerColor={headerColor}
-            fixed={fixedHeader}
-            headerImage={logo}
-          />
-          <MDXProvider components={mdxComponents}>
-            <>{children}</>
-          </MDXProvider>
-        </div>
-        <div css={{flexShrink: '0'}}>
-          {noFooter ? null : (
-            <Footer
-              maxWidth={maxWidth}
-              author={siteMetadata.author.name}
-              subscribeForm={subscribeForm}
-            />
-          )}
-        </div>
+        <Header
+          maxWidth={maxWidth}
+          siteTitle={siteTitle}
+          headerLink={headerLink}
+          dark={dark}
+          bgColor={headerBg}
+          headerColor={headerColor}
+          fixed={fixedHeader}
+          headerImage={logo}
+        />
+        <MDXProvider components={mdxComponents}>
+          <>{children}</>
+        </MDXProvider>
+        <Footer
+          maxWidth={maxWidth}
+          author={siteMetadata.author.name}
+          subscribeForm={subscribeForm}
+        />
       </div>
     </ThemeProvider>
   )

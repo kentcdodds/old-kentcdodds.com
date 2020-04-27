@@ -10,9 +10,10 @@ import Container from './container'
 const Footer = ({/*subscribeForm = <SubscribeForm />, */ maxWidth}) => (
   <footer
     css={css`
-      background: ${theme.colors.purple_dark};
+      display: flex;
+      background: ${theme.colors.black};
       color: white;
-      margin-top: 70px;
+      width: 100%;
     `}
   >
     <Container
@@ -35,12 +36,6 @@ const Footer = ({/*subscribeForm = <SubscribeForm />, */ maxWidth}) => (
           flex-direction: column;
           align-items: flex-end;
           div,
-          img {
-            margin: 50px 0;
-            ${bpMaxSM} {
-              margin: 20px 0;
-            }
-          }
           ${bpMaxSM} {
             align-items: center;
           }

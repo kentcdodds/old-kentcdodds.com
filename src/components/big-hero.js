@@ -8,13 +8,7 @@ import Container from 'components/container'
 
 const photoOfTyler = ''
 
-function Hero({
-  children,
-  title = `Hi, I'm Tyler Haas. I help people solve tough problems with code.`,
-  text,
-  background = `linear-gradient(-213deg, #5e31dc 0%, #3155dc 100%)`,
-  image = ``,
-}) {
+function Hero({children, title = ``, text, background = ``, image = ``}) {
   return (
     <section
       css={css`
@@ -22,7 +16,7 @@ function Hero({
           color: ${theme.colors.white};
         }
         width: 100%;
-        background: #3155dc;
+        background: #090a0b;
         background-image: ${background};
         background-position: center right, center left;
         background-repeat: no-repeat;
@@ -127,18 +121,6 @@ function Hero({
             </Markdown>
           )}
         </div>
-        <div
-          css={{
-            marginRight: '-160px',
-            width: 380,
-            height: 336,
-            display: 'flex',
-            [bpMaxMD]: {
-              display: 'none',
-              visibility: 'hidden',
-            },
-          }}
-        />
       </Container>
     </section>
   )
