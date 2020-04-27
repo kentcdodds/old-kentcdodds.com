@@ -64,6 +64,7 @@ function Post({data: {site, mdx}}) {
       headerLink={isWriting ? '/writing/blog' : '/blog'}
       noFooter={noFooter}
       subscribeForm={isWriting ? <TinyLetterSubscribe /> : <SubscribeForm />}
+      height="unset"
     >
       <SEO
         frontmatter={mdx.fields}

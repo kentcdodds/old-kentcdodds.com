@@ -30,7 +30,12 @@ const Description = styled.p`
 
 export default function Index({data: {allMdx}}) {
   return (
-    <Layout headerColor={theme.colors.white} logo={false} hero={<Hero />}>
+    <Layout
+      headerColor={theme.colors.white}
+      logo={false}
+      hero={<Hero />}
+      height="100vh"
+    >
       <SEO />
       <Container
         css={css`

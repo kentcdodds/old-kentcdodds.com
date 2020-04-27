@@ -24,6 +24,7 @@ const Footer = ({/*subscribeForm = <SubscribeForm />, */ maxWidth}) => (
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 80px;
         ${bpMaxSM} {
           padding-top: 0;
           flex-direction: column;

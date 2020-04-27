@@ -22,14 +22,13 @@ function Blog({data: {allMdx}, pageContext: {pagination}, subscribeForm}) {
     .filter(post => post !== undefined)
 
   return (
-    <Layout headerColor={theme.colors.white} subscribeForm={subscribeForm}>
+    <Layout
+      headerColor={theme.colors.white}
+      subscribeForm={subscribeForm}
+      height="unset"
+    >
       <SEO />
-      <Container
-        noVerticalPadding
-        css={css`
-          height: calc(100vh - 160px);
-        `}
-      >
+      <Container noVerticalPadding>
         {/* <div
           css={{
             marginTop: 20,

@@ -3,25 +3,18 @@ import Helmet from 'react-helmet'
 import {graphql, StaticQuery} from 'gatsby'
 import {MDXProvider} from '@mdx-js/react'
 import {Global, css} from '@emotion/core'
-import styled from '@emotion/styled'
 import {ThemeProvider} from 'emotion-theming'
 // import NotificationMessage from 'components/notification-message'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import mdxComponents from 'components/mdx'
-import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
+import {bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'
 import reset from '../lib/reset'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
 
 export const globalStyles = css`
-  html,
-  body,
-  #___gatsby,
-  #gatsby-focus-wrapper {
-    height: 100%;
-  }
   .button-secondary {
     border-radius: 4px;
     padding: 12px 12px;
@@ -141,6 +134,7 @@ function Layout({
   fixedHeader,
   logo,
   maxWidth = 720,
+  height = '100vh',
 }) {
   const {
     site: {
@@ -174,7 +168,7 @@ function Layout({
           display: grid;
           grid-template-rows: 80px 1fr 80px;
           align-content: center;
-          background: #191b1f;
+          height: ${height};
         `}
       >
         <Header

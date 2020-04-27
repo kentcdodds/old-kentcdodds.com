@@ -17,22 +17,14 @@ function HeaderLink({headerColor, activeClassName = 'active', ...props}) {
       partiallyActive={true}
       css={{
         textDecoration: 'none',
-        color: headerColor ? headerColor : theme.colors.body_color,
+        color: theme.colors.white,
         '&:hover,&:focus': {
-          background:
-            headerColor === theme.colors.white
-              ? 'rgba(40, 28, 77, 0.3)'
-              : lighten(0.4, theme.brand.primary),
-          color:
-            headerColor === theme.colors.white
-              ? 'white'
-              : theme.colors.link_color_hover,
+          textDecoration: `underline solid ${theme.colors.white}`,
+          color: theme.colors.white,
         },
         '&.active': {
-          background:
-            headerColor === theme.colors.white
-              ? 'rgba(40, 28, 77, 0.3)'
-              : lighten(0.4, theme.brand.primary),
+          background: lighten(0.4, theme.brand.primary),
+          color: theme.colors.black,
         },
       }}
       {...props}
@@ -51,12 +43,9 @@ const NavLink = styled(HeaderLink)({
 })
 
 function Header({
-  dark,
-  bgColor = 'none',
   siteTitle,
   headerLink = '/',
   headerColor = 'black',
-  fixed = false,
   headerImage = true,
   maxWidth = 720,
 }) {
