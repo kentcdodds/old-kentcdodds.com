@@ -115,7 +115,6 @@ async function handler(event) {
   const message = {
     from: sender,
     to: `"KCD Team" <team@kentcdodds.com>`,
-    cc: sender,
     subject,
     text,
     html: await markdownToHtml(text),
