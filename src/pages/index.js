@@ -136,7 +136,6 @@ export default function Index({data: {allMdx}}) {
         css={css`
           margin-top: -20px;
           position: relative;
-          padding-bottom: 0;
           background: white;
           border-radius: 5px;
           padding: 40px 80px 60px 80px;
