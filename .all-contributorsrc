@@ -1231,6 +1231,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "pranesh239",
+      "name": "Pranesh",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/24464629?v=4",
+      "profile": "https://github.com/pranesh239",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
