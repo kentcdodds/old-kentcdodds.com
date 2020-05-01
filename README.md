@@ -185,6 +185,7 @@ Thanks goes to these wonderful people
   <tr>
     <td align="center"><a href="https://github.com/steric85"><img src="https://avatars0.githubusercontent.com/u/11133505?v=4" width="100px;" alt=""/><br /><sub><b>Steric</b></sub></a><br /><a href="#content-steric85" title="Content">🖋</a></td>
     <td align="center"><a href="https://juliangaramendy.dev"><img src="https://avatars1.githubusercontent.com/u/237818?v=4" width="100px;" alt=""/><br /><sub><b>Julian</b></sub></a><br /><a href="#content-JulianG" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/pranesh239"><img src="https://avatars3.githubusercontent.com/u/24464629?v=4" width="100px;" alt=""/><br /><sub><b>Pranesh</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=pranesh239" title="Code">💻</a></td>
   </tr>
 </table>
 
