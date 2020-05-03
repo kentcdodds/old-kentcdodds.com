@@ -1240,6 +1240,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "abhishekjakhar",
+      "name": "Abhishek Jakhar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/19193724?v=4",
+      "profile": "http://www.abhishekjakhar.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
