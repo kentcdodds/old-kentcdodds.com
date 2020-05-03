@@ -1,6 +1,6 @@
 ---
 slug: unit-vs-integration-vs-e2e-tests
-date: 2020-04-15
+date: '2020-04-15'
 title: 'Static vs Unit vs Integration vs E2E Testing for Frontend Apps'
 author: 'Kent C. Dodds'
 description: _What these mean, why they matter, and why they don't_
@@ -88,7 +88,9 @@ describe('todo app', () => {
 
     cy.findByText(/login/i).click()
 
-    cy.findByLabelText(/add todo/i).type(todo.description).type('{enter}')
+    cy.findByLabelText(/add todo/i)
+      .type(todo.description)
+      .type('{enter}')
 
     cy.findByTestId('todo-0').should('have.value', todo.description)
 
@@ -251,10 +253,10 @@ PR will get rejected unless it includes tests? Is it because testing enhances
 your workflow?
 
 The biggest and most important reason that I write tests is **CONFIDENCE**. I
-want to be confident that the code I'm writing for the future won't break the app
-that I have running in production today. So whatever I do, I want to make sure
-that the kinds of tests I write bring me the most confidence possible and I need
-to be cognizant of the trade-offs I'm making when testing.
+want to be confident that the code I'm writing for the future won't break the
+app that I have running in production today. So whatever I do, I want to make
+sure that the kinds of tests I write bring me the most confidence possible and I
+need to be cognizant of the trade-offs I'm making when testing.
 
 ## Let's talk trade-offs
 
