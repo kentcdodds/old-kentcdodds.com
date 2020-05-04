@@ -1,5 +1,5 @@
 import React from 'react'
-import ErrorBoundary from 'react-error-boundary'
+import {ErrorBoundary} from 'react-error-boundary'
 
 function Counter() {
   const [count, setCount] = React.useState(0)
@@ -33,13 +33,14 @@ function GoodCounterList() {
   )
 }
 
-function ErrorFallback({error}) {
+function ErrorFallback({error, resetErrorBoundary}) {
   return (
     <div>
       <div>Oh no, there was an error. Check the console for more info.</div>
       <div>
         <pre style={{color: 'rgb(214, 222, 235)'}}>{error.message}</pre>
       </div>
+      <button onClick={resetErrorBoundary}>Reset</button>
     </div>
   )
 }
