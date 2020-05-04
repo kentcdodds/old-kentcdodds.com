@@ -110,15 +110,21 @@ function RemoteWorkshops({data: {workshops}}) {
                 css={css`
                   ${techToggleIsActive(displayedTech, tech)
                     ? `
-                  color: white; background: #2F313E;
-                  :hover {
+                  color: white; 
+                  background: #2F313E;
+                  :hover,
+                  :focus {
                     color: white !important;
-                    background: #232323 !important;}`
+                    background: #232323 !important;
+                  }`
                     : `
-                  color: black; background: white;
-                  :hover {
+                  color: black; 
+                  background: white;
+                  :hover,
+                  :focus {
                     color: black !important;
-                    background: #fafafa; !important}`}
+                    background: #fafafa !important;
+                  }`}
                 `}
                 key={tech}
                 onClick={() => {
