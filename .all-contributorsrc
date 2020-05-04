@@ -1249,6 +1249,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "balazsorban44",
+      "name": "Balázs Orbán",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18369201?v=4",
+      "profile": "https://balazsorban.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
