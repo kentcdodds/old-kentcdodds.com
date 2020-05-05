@@ -370,6 +370,34 @@ accessibly or follow the WAI-ARIA practices. They often have
 
 **Advice: Avoid adding unnecessary or incorrect accessibility attributes.**
 
+## Not using `@testing-library/user-event`
+
+> Importance: medium
+
+```javascript
+// ❌
+fireEvent.change(input, {target: {value: 'hello world'}})
+
+// ✅
+await userEvent.type(input, 'hello world')
+```
+
+[`@testing-library/user-event`](https://github.com/testing-library/user-event)
+is a package that's built on top of `fireEvent`, but it provides several methods
+that resemble the user interactions more closely. In the example above,
+`fireEvent.change` will simply trigger a single change event on the input.
+However the `type` call, will trigger `keyDown`, `keyPress`, and `keyUp` events
+for each character as well. It's much closer to the user's actual interactions.
+This has the benefit of working well with libraries that you may use which don't
+actually listen for the change event.
+
+We're still working on `@testing-library/user-event` to ensure that it delivers
+what it promises: firing all the same events the user would fire when performing
+a specific action. I don't think we're quite there yet and this is why it's not
+baked-into `@testing-library/dom` (though it may be at some point in the
+future). However, I'm confident enough in it to recommend you give it a look and
+use it's utilities over `fireEvent`.
+
 ## Using `query*` variants for _anything_ except checking for non-existance
 
 > Importance: high
@@ -521,8 +549,8 @@ explicit.**
 
 > Importance: medium
 
-If you'd like to avoid several of these common mistakes, then
-the official ESLint plugins could help out a lot:
+If you'd like to avoid several of these common mistakes, then the official
+ESLint plugins could help out a lot:
 
 - [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
 - [eslint-plugin-jest-dom](https://github.com/testing-library/eslint-plugin-jest-dom)
