@@ -48,7 +48,7 @@ const wrapper = render(<Example prop="1" />)
 wrapper.rerender(<Example prop="2" />)
 
 // ✅
-const {rerender} = render(<Example />)
+const {rerender} = render(<Example prop="1" />)
 rerender(<Example prop="2" />)
 ```
 
