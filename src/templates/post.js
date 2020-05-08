@@ -10,7 +10,7 @@ import Layout from 'components/layout'
 import Share from 'components/share'
 import SubscribeForm, {TinyLetterSubscribe} from 'components/forms/subscribe'
 import BlogPostFooter from 'components/blog-post-footer'
-import TestingCta from 'components/testing-cta'
+import TestingSaleCta from 'components/testing-sale-cta'
 import {
   WorkshopEventsProvider,
   useWorkshopEvents,
@@ -192,7 +192,7 @@ function Post({data: {site, mdx}}) {
         </div>
       )}
       {keywords.map(keyword => keyword.toLowerCase()).includes('testing') && (
-        <TestingCta />
+        <TestingSaleCta background="#fff" />
       )}
       <Container>
         <BlogPostFooter />
