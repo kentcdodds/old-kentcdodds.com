@@ -12,6 +12,7 @@ import TestingCta from 'components/testing-cta'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import {rhythm, fonts} from '../lib/typography'
+import TestingSaleCta from 'components/testing-sale-cta'
 
 import workshopsImg from '../images/workshops.svg'
 import talksImg from '../images/talks.svg'
@@ -151,6 +152,7 @@ export default function Index({data: {allMdx}}) {
           }
         `}
       >
+        <TestingSaleCta />
         <h2>Blog</h2>
         {allMdx.edges.map(({node: post}) => (
           <div
