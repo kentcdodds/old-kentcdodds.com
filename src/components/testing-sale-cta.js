@@ -66,7 +66,7 @@ export default function TestingSaleCta({
         <Title>
           <Markdown source={title} escapeHtml={false} />
         </Title>
-        <Button>{button}</Button>
+        <Button href="https://testingjavascript.com">{button}</Button>
         <div css={css({marginTop: '0.75rem', fontSize: 15, opacity: 0.8})}>
           {byline}
         </div>
@@ -172,7 +172,9 @@ const Title = styled.h3({
   },
 })
 
-const Button = styled.button({
+const Button = styled.a({
+  padding: '10px 16px',
+  color: 'white !important',
   backgroundImage: 'linear-gradient(180deg, #566FF8 0%, #394FDC 100%)',
   borderRadius: '5px',
   fontSize: '17px',
