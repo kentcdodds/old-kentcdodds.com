@@ -156,7 +156,8 @@ const Content = styled.div({
   width: '100%',
   padding: '40px 0 40px 40px',
   [bpMaxSM]: {
-    padding: '16px',
+    padding: '32px 16px',
+    textAlign: 'center',
   },
 })
 
