@@ -188,6 +188,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/pranesh239"><img src="https://avatars3.githubusercontent.com/u/24464629?v=4" width="100px;" alt=""/><br /><sub><b>Pranesh</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=pranesh239" title="Code">💻</a></td>
     <td align="center"><a href="http://www.abhishekjakhar.com/"><img src="https://avatars1.githubusercontent.com/u/19193724?v=4" width="100px;" alt=""/><br /><sub><b>Abhishek Jakhar</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=abhishekjakhar" title="Code">💻</a></td>
     <td align="center"><a href="https://balazsorban.com"><img src="https://avatars1.githubusercontent.com/u/18369201?v=4" width="100px;" alt=""/><br /><sub><b>Balázs Orbán</b></sub></a><br /><a href="#content-balazsorban44" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/arequejo"><img src="https://avatars0.githubusercontent.com/u/16929242?v=4" width="100px;" alt=""/><br /><sub><b>Alejandro Requejo</b></sub></a><br /><a href="#content-arequejo" title="Content">🖋</a></td>
   </tr>
 </table>
 
