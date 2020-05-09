@@ -135,9 +135,9 @@ function PodcastSeason({data, isNew, ...restProps}) {
           }}
         >
           {data.nodes.map(p => {
-            const {title, number} = p.frontmatter
+            const {title, number, simpleCastId} = p.frontmatter
             return (
-              <li key={p.simpleCastId} css={{margin: 0}}>
+              <li key={simpleCastId} css={{margin: 0}}>
                 <Link
                   to={`/${p.fields.slug}`}
                   css={{
