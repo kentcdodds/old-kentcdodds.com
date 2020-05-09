@@ -8,7 +8,7 @@ import DistributionPlatforms from 'components/podcast/platforms'
 import Hero from 'components/big-hero'
 import HeaderImage from '../../images/chats-with-kent.svg'
 import theme from '../../../config/theme'
-import {bpMaxSM, bpMaxMD} from 'lib/breakpoints'
+import {bpMaxXS, bpMaxSM, bpMaxMD} from 'lib/breakpoints'
 
 function SeasonIndex({data: {s1, s2}}) {
   return (
@@ -33,6 +33,9 @@ function SeasonIndex({data: {s1, s2}}) {
               },
               [bpMaxSM]: {
                 paddingBottom: '1rem',
+              },
+              [bpMaxXS]: {
+                flexWrap: 'wrap',
               },
             }}
           >

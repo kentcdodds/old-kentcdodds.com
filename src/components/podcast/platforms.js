@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import {bpMaxSM} from '../../lib/breakpoints'
+import {bpMaxXS, bpMaxSM} from '../../lib/breakpoints'
 import ApplePodcasts from '../../images/podcast/apple.svg'
 import GooglePodcasts from '../../images/podcast/google.svg'
 import Spotify from '../../images/podcast/spotify.svg'
@@ -37,6 +37,9 @@ const ProviderLink = styled(Link)({
     img: {
       maxWidth: 20,
     },
+  },
+  [bpMaxXS]: {
+    flexBasis: 'calc(50% - 7px)',
   },
 })
 

@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Link from 'components/link'
 import first from 'lodash/first'
 import get from 'lodash/get'
+import {bpMaxXS} from '../../lib/breakpoints'
 import theme from '../../../config/theme'
 import {fonts} from 'lib/typography'
 import SoundWave from '../../images/sound-wave.svg'
@@ -46,6 +47,10 @@ function PodcastSeason({data, isNew, ...restProps}) {
                 },
               },
             },
+
+            [bpMaxXS]: {
+              padding: '.5rem',
+            },
           }}
         >
           <div
@@ -67,6 +72,11 @@ function PodcastSeason({data, isNew, ...restProps}) {
                 justifyContent: 'center',
                 marginRight: '1rem',
                 transition: '100ms ease-in-out',
+
+                [bpMaxXS]: {
+                  width: 56,
+                  height: 56,
+                },
               }}
             >
               <svg
