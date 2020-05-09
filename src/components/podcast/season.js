@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Link from 'components/link'
 import first from 'lodash/first'
 import get from 'lodash/get'
+import {bpMaxXS} from '../../lib/breakpoints'
 import theme from '../../../config/theme'
 import {fonts} from 'lib/typography'
 import SoundWave from '../../images/sound-wave.svg'
@@ -46,6 +47,10 @@ function PodcastSeason({data, isNew, ...restProps}) {
                 },
               },
             },
+
+            [bpMaxXS]: {
+              padding: '.5rem',
+            },
           }}
         >
           <div
@@ -67,6 +72,11 @@ function PodcastSeason({data, isNew, ...restProps}) {
                 justifyContent: 'center',
                 marginRight: '1rem',
                 transition: '100ms ease-in-out',
+
+                [bpMaxXS]: {
+                  width: 56,
+                  height: 56,
+                },
               }}
             >
               <svg
@@ -125,9 +135,9 @@ function PodcastSeason({data, isNew, ...restProps}) {
           }}
         >
           {data.nodes.map(p => {
-            const {title, number} = p.frontmatter
+            const {title, number, simpleCastId} = p.frontmatter
             return (
-              <li key={p.simpleCastId} css={{margin: 0}}>
+              <li key={simpleCastId} css={{margin: 0}}>
                 <Link
                   to={`/${p.fields.slug}`}
                   css={{

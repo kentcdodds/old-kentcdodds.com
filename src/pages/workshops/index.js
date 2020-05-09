@@ -6,6 +6,7 @@ import Layout from 'components/layout'
 import Container from 'components/container'
 import {rhythm} from '../../lib/typography'
 import SEO from 'components/seo'
+import {bpMaxSM} from '../../lib/breakpoints'
 import theme from '../../../config/theme'
 import Hero from 'components/big-hero'
 import {uniq, includes, truncate} from 'lodash'
@@ -145,7 +146,10 @@ function RemoteWorkshops({data: {workshops}}) {
             display: grid;
             grid-gap: 20px;
             grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            margin-bottom: ${rhythm(2)};
+
+            ${bpMaxSM} {
+              grid-template-columns: 1fr;
+            }
           `}
         >
           {workshops.edges

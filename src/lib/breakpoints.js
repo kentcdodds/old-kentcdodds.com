@@ -1,6 +1,8 @@
+const maxXS = 320
 const maxSM = 767
 const maxMD = 1023
 
+export const bpMaxXS = `@media (max-width: ${maxXS}px)`
 export const bpMaxSM = `@media (max-width: ${maxSM}px)`
 export const bpMaxMD = `@media (max-width: ${maxMD}px)`
 
