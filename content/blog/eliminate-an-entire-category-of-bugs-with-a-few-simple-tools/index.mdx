@@ -1,23 +1,26 @@
 ---
 slug: eliminate-an-entire-category-of-bugs-with-a-few-simple-tools
 title: Eliminate an entire category of bugs with a few simple tools
-date: '2018-10-18'
+date: '2020-05-07'
 author: Kent C. Dodds
-description: >-
-  _How you can use a few simple static code analysis tools to avoid common
-  programming bugs._
+description:
+  '_How you can use a few simple static code analysis tools to avoid common
+  programming bugs._'
 keywords:
   - javascript
   - testing
+  - prettier
+  - eslint
+  - typescript
 banner: ./images/banner.jpg
 bannerCredit:
   'Photo by [Matt Artz](https://unsplash.com/photos/4mAcustUNPs) on
   [Unsplash](https://unsplash.com/search/photos/tools)'
 ---
 
-You've probably heard of ESLint, Prettier, and Flow/TypeScript. These are static
-code analysis tools that are wildly popular in the JavaScript ecosystem. I
-consider them all testing tools. Let's take a look at each:
+You've probably heard of ESLint, Prettier, and TypeScript. These are static code
+analysis tools that are wildly popular in the JavaScript ecosystem. I consider
+them all testing tools. Let's take a look at each:
 
 ### [ESLint](https://eslint.org)
 
@@ -72,7 +75,7 @@ yourself and Prettier will leave it that way (`const d = a && (b || c)`).
 This is one example of things Prettier does to make the intent of your code more
 obvious — freeing your brain to focus on harder problems.
 
-### [Flow](https://flow.org)/[TypeScript](https://www.typescriptlang.org)
+### [TypeScript](https://www.typescriptlang.org)
 
 These are static type checkers for JavaScript. A static type checker adds syntax
 to JavaScript to allow you to specify what data type a variable is. It can
@@ -86,7 +89,7 @@ function getFullName(user) {
   const {
     name: {first, middle, last},
   } = user
-  return [first, middle, last].filter(Boolean).join('')
+  return [first, middle, last].filter(Boolean).join(' ')
 }
 
 getFullName({first: 'Joe', middle: 'Bud', last: 'Matthews'})
@@ -94,28 +97,9 @@ getFullName({first: 'Joe', middle: 'Bud', last: 'Matthews'})
 
 Maybe you can, maybe you can't. Maybe your coworkers can, maybe they can't. In
 any case, wouldn't it be cool if we had some software that could spot the issue
-for us? If we run that code with Flow, here's what we get:
+for us? Let's rewrite that function to TypeScript:
 
-```
-Error ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ flow-example.js:8:13
-
-Cannot call getFullName with object literal bound to user because
-property name is missing in object literal [1].
-
-      5│   return [first, middle, last].filter(Boolean).join('')
-      6│ }
-      7│
- [1]  8│ getFullName({first: 'Joe', middle: 'Bud', last: 'Matthews'})
-      9│
-     10│
-```
-
-So without changing our code at all, we get notified something's wrong. Nice!
-Now, what if we add type annotations?
-
-```js
-// @flow
-
+```javascript
 type User = {
   name: {
     first: string,
@@ -127,41 +111,27 @@ function getFullName(user: User): string {
   const {
     name: {first, middle, last},
   } = user
-  return [first, middle, last].filter(Boolean).join('')
+  return [first, middle, last].filter(Boolean).join(' ')
 }
-
-getFullName({first: 'Joe', middle: 'Bud', last: 'Matthews'})
 ```
 
-Now if we run Flow on this, the error is even more helpful:
+Now if we call it like we did before, here's what we get:
 
 ```
-Error ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ flow-example.js:15:13
-
-Cannot call getFullName with object literal bound to user because
-property name is missing in object literal [1] but exists in
-User [2].
-
- [2] 10│ function getFullName(user: User): string {
-     11│   const {name: {first, middle, last}} = user
-     12│   return [first, middle, last].filter(Boolean).join('')
-     13│ }
-     14│
- [1] 15│ getFullName({first: 'Joe', middle: 'Bud', last: 'Matthews'})
-     16│
-     17|
+Argument of type '{ first: string; middle: string; last: string; }' is not assignable to parameter of type 'User'.
+  Object literal may only specify known properties, and 'first' does not exist in type 'User'.(2345)
 ```
 
-I like to consider type definitions with Flow or TypeScript to be a form of
-inline automated tests. I strongly recommend you give it a shot if you haven't
-yet. Incremental adoption is possible with these tools (especially if you're
-already using babel, you can just start using `babel-preset-{flow,typescript}`).
-Try it out on your next feature and see what you think.
+I like to consider type definitions with TypeScript to be a form of inline
+automated tests. I strongly recommend you give it a shot if you haven't yet.
+Incremental adoption is possible with these tools (especially if you're already
+using babel, you can just start using `babel-preset-typescript`). Try it out on
+your next feature and see what you think.
 
 ### Conclusion
 
 Static code analysis is a great way to get a significant boost of
 confidence — fast, easily, and with less effort than writing unit tests for the
 entire codebase. That's why it forms the base of
-[the Testing Trophy 🏆](https://twitter.com/kentcdodds/status/960723172591992832).
-If you're not using these tools already, start now.
+[the Testing Trophy 🏆](/blog/unit-vs-integration-vs-e2e-tests). If you're not
+using these tools already, start now.
