@@ -24,7 +24,7 @@ const Sidebar = styled.aside(
       visibility: 'hidden',
       position: 'absolute',
       bottom: '0',
-      zIndex: '10',
+      zIndex: '9',
       width: '100%',
       height: 40,
       backgroundImage:
