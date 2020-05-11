@@ -161,6 +161,12 @@ export default [
         event: '[Connect.Tech](https://connect.tech)',
         date: '2019-10-16',
       },
+      {
+        event: '[React Summit](https://remote.reactsummit.com/)',
+        date: '2020-04-17',
+        recording:
+          'https://www.youtube.com/watch?v=wuVy7rwkCfc&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
     ],
     description: `
       Are you the kind of programmer who prefers to never see the same code in
@@ -436,6 +442,12 @@ export default [
         date: '2018-08-16',
         recording:
           'https://youtu.be/AiJ8tRRH0f8?list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+      {
+        event: '[Byteconf React 2020](https://www.bytesized.xyz/react-2020)',
+        date: '202-04-01',
+        recording:
+          'https://www.youtube.com/watch?v=5io81WLgXtg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
