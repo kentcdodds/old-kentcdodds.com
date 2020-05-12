@@ -394,7 +394,7 @@ export default [
       },
       {
         event: '[Byteconf React 2020](https://www.bytesized.xyz/react-2020)',
-        date: '202-04-01',
+        date: '2020-04-01',
         recording:
           'https://www.youtube.com/watch?v=5io81WLgXtg&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
