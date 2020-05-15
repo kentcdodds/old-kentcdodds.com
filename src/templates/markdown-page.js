@@ -5,6 +5,9 @@ import Layout from 'components/layout'
 import BigHero from 'components/big-hero'
 import theme from '../../config/theme'
 
+import {css} from '@emotion/core'
+import {bpMaxSM} from 'lib/breakpoints'
+
 function MarkdownPage({children, pageContext: {frontmatter}}) {
   return (
     <>
@@ -20,7 +23,17 @@ function MarkdownPage({children, pageContext: {frontmatter}}) {
         frontmatter={frontmatter}
         headerColor={theme.colors.white}
       >
-        <Container maxWidth={frontmatter.maxWidth}>{children}</Container>
+        <Container
+          maxWidth={frontmatter.maxWidth}
+          css={css`
+            ${bpMaxSM} {
+              padding: 20px
+                ${frontmatter.noMobileHorizontalPadding ? 0 : '20'}px;
+            }
+          `}
+        >
+          {children}
+        </Container>
       </Layout>
     </>
   )
