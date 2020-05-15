@@ -191,6 +191,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/arequejo"><img src="https://avatars0.githubusercontent.com/u/16929242?v=4" width="100px;" alt=""/><br /><sub><b>Alejandro Requejo</b></sub></a><br /><a href="#content-arequejo" title="Content">🖋</a></td>
     <td align="center"><a href="https://dawneraq.github.io"><img src="https://avatars0.githubusercontent.com/u/9038965?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Aquino</b></sub></a><br /><a href="#content-dawneraq" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/todoroff"><img src="https://avatars1.githubusercontent.com/u/48935314?v=4" width="100px;" alt=""/><br /><sub><b>todoroff</b></sub></a><br /><a href="#content-todoroff" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
