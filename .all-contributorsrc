@@ -1276,6 +1276,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "todoroff",
+      "name": "todoroff",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/48935314?v=4",
+      "profile": "https://github.com/todoroff",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
