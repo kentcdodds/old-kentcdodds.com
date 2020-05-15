@@ -120,7 +120,7 @@ Now, we can look at the remaining lines and determine that there are two more
 use cases that our tests don't support yet:
 
 - it returns an empty array if given a falsy value
-- it returns an array with the given argument if it's not an array or falsy
+- it returns an array with the given argument if it's not an array and not falsy
 
 Let's add tests for those use cases and see how it effects the code coverage.
 
@@ -145,7 +145,7 @@ function arrayify(maybeArray) {
 Nice, almost there!
 
 ```javascript
-test(`returns an array with the given argument if it's not an array or falsy`, () => {
+test(`returns an array with the given argument if it's not an array and not falsy`, () => {
   expect(arrayify('Leopard')).toEqual(['Leopard'])
 })
 ```
