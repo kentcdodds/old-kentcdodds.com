@@ -1285,6 +1285,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "puzzledbytheweb",
+      "name": "Pedro Filipe",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/35262512?v=4",
+      "profile": "https://github.com/puzzledbytheweb",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
