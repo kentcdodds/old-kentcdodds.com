@@ -193,6 +193,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/todoroff"><img src="https://avatars1.githubusercontent.com/u/48935314?v=4" width="100px;" alt=""/><br /><sub><b>todoroff</b></sub></a><br /><a href="#content-todoroff" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/puzzledbytheweb"><img src="https://avatars2.githubusercontent.com/u/35262512?v=4" width="100px;" alt=""/><br /><sub><b>Pedro Filipe</b></sub></a><br /><a href="#content-puzzledbytheweb" title="Content">🖋</a></td>
   </tr>
 </table>
 
