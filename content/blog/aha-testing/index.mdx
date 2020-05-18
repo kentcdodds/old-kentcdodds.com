@@ -307,7 +307,7 @@ test('lists blog posts for the logged in user', async () => {
 })
 
 test('returns an empty list when there are no blog posts', async () => {
-  const {req, res, next} = setup({locale: })
+  const {req, res, next} = setup()
   req.user.latitude = 31.230416
   req.user.longitude = 121.473701
 
