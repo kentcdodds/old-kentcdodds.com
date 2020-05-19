@@ -8,13 +8,14 @@ function Homework({children = [], ...props}) {
   const [homeworks, setHomeworks] = React.useState(
     typeof window === 'undefined'
       ? []
-      : JSON.parse(localStorage.getItem('completed-homeworks')),
+      : JSON.parse(localStorage.getItem('completed-homeworks')) || [],
   )
 
   React.useEffect(() => {
-    if (typeof window !== 'undefined')
+    if (typeof window !== 'undefined') {
       localStorage.setItem('completed-homeworks', JSON.stringify(homeworks))
-  }, [homeworks])
+    }
+  }, [homeworks, setHomeworks])
 
   function handleChange(e) {
     if (e.target.checked && homeworks) {
