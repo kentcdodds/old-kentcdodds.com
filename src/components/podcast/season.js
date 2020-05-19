@@ -155,15 +155,22 @@ function PodcastSeason({data, isNew, ...restProps}) {
                   <small css={{opacity: 0.6, fontSize: 12, flexBasis: '3%'}}>
                     {number}.
                   </small>
-                  <div>
+                  <div
+                    css={{
+                      '.gatsby-image-wrapper': {maxWidth: 40, maxHeight: 40},
+                      width: 40,
+                      height: 40,
+                      img: {margin: 0},
+                      marginRight: 18,
+                    }}
+                  >
                     <Img
                       css={{
                         margin: '0 0.75rem 0 0.45rem',
-                        width: 32,
-                        height: 32,
+
                         borderRadius: '50%',
                       }}
-                      fluid={p.frontmatter.guestPhoto.childImageSharp.fluid}
+                      fixed={p.frontmatter.guestPhoto.childImageSharp.fixed}
                       alt={title}
                     />
                   </div>

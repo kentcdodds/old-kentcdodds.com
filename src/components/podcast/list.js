@@ -85,7 +85,9 @@ export default function PodcastList({data}) {
                   E{episode.frontmatter.number}
                 </small>
               </h4>
-              <small>{episode.frontmatter.description}</small>
+              {episode.frontmatter.description && (
+                <small>{episode.frontmatter.description}</small>
+              )}
             </div>
           </Link>
         </li>
