@@ -195,6 +195,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/todoroff"><img src="https://avatars1.githubusercontent.com/u/48935314?v=4" width="100px;" alt=""/><br /><sub><b>todoroff</b></sub></a><br /><a href="#content-todoroff" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/puzzledbytheweb"><img src="https://avatars2.githubusercontent.com/u/35262512?v=4" width="100px;" alt=""/><br /><sub><b>Pedro Filipe</b></sub></a><br /><a href="#content-puzzledbytheweb" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Creeland"><img src="https://avatars2.githubusercontent.com/u/518406?v=4" width="100px;" alt=""/><br /><sub><b>Creeland A. Provinsal </b></sub></a><br /><a href="#content-Creeland" title="Content">🖋</a></td>
+    <td align="center"><a href="https://hung.dev"><img src="https://avatars3.githubusercontent.com/u/8603085?v=4" width="100px;" alt=""/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="#content-nvh95" title="Content">🖋</a></td>
   </tr>
 </table>
 
