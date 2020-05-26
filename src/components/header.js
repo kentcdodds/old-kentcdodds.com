@@ -162,6 +162,13 @@ function Header({
             </NavLink>
             <NavLink
               headerColor={headerColor}
+              to="/courses"
+              aria-label="View courses page"
+            >
+              Courses
+            </NavLink>
+            <NavLink
+              headerColor={headerColor}
               to="/about/"
               aria-label="View about page"
             >

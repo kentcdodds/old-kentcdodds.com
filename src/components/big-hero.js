@@ -53,7 +53,6 @@ function Hero({
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          //justify-content: center;
           padding-bottom: 0;
           ${bpMaxMD} {
             flex-direction: column;
@@ -83,7 +82,6 @@ function Hero({
               }
               background-image: url(${image});
               background-size: cover;
-              background-position-y: 10px;
               background-repeat: no-repeat;
               margin-bottom: 25px;
             }
@@ -105,7 +103,6 @@ function Hero({
               font-size: 30px;
               height: 100%;
               display: flex;
-              //align-self: center;
               padding-bottom: ${image === photoOfKent ? '40px' : '0'};
             `}
           >
@@ -147,11 +144,13 @@ function Hero({
             },
           }}
         >
-          <img
-            src={image}
-            alt="Kent C. Dodds"
-            css={{maxWidth: '100%', marginBottom: 0}}
-          />
+          {image && (
+            <img
+              src={image}
+              alt="Kent C. Dodds"
+              css={{maxWidth: '100%', marginBottom: 0}}
+            />
+          )}
         </div>
       </Container>
     </section>
