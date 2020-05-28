@@ -41,6 +41,12 @@ export default function Courses({data}) {
             fluid={data.advancedReactComponentPatterns.childImageSharp.fluid}
           />
         )
+      case `JavaScript Testing Practices and Principles`:
+        return <Img fluid={data.testingPrinciples.childImageSharp.fluid} />
+      case `Testing React Applications`:
+        return <Img fluid={data.testingReact.childImageSharp.fluid} />
+      case `Code Transformation and Linting with ASTs`:
+        return <Img fluid={data.asts.childImageSharp.fluid} />
       case `How to Write an Open Source JavaScript Library`:
         return (
           <Img
@@ -411,6 +417,32 @@ export const imagesQuery = graphql`
         eq: "images/courses/how-to-write-an-open-source-javascript-library@2x.png"
       }
     ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+
+    testingPrinciples: file(
+      relativePath: {eq: "images/courses/testing-principles.png"}
+    ) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+
+    testingReact: file(relativePath: {eq: "images/courses/testing-react.png"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+
+    asts: file(relativePath: {eq: "images/courses/asts.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

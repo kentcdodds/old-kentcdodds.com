@@ -80,6 +80,31 @@ export default [
     ],
   },
   {
+    title: `JavaScript Testing Practices and Principles`,
+    summary: `Learn the principles and best practices for writing maintainable test applications to catch errors before your product reaches the end user!`,
+    url: `https://frontendmasters.com/courses/testing-practices-principles/`,
+    cta: `Gain a solid foundation on testing`,
+    tags: ['testing'],
+    reviews: [],
+  },
+  {
+    title: `Testing React Applications`,
+    summary: `Fix errors before your app reaches the end user by writing maintainable unit test & integration tests for your React applications!`,
+    url: `https://frontendmasters.com/courses/testing-react/`,
+    cta: `Ship React Applications with Confidence`,
+    tags: ['react', 'testing'],
+    reviews: [],
+  },
+  {
+    title: `Code Transformation and Linting with ASTs`,
+    summary: `Learn to use Abstract Syntax Trees (ASTs) to make stylistic code changes, reveal logical problems, and prevent bugs from entering your codebase.`,
+    url: `https://frontendmasters.com/courses/linting-asts/`,
+    cta: `Bend JavaScript to your will 💪`,
+    tags: ['babel', 'eslint', 'asts'],
+    reviews: [],
+  },
+
+  {
     title: 'How to Write an Open Source JavaScript Library',
     summary:
       'From Github and npm, to releasing beta versions, semantic versioning, code coverage, continuous integration, and providing your library with a solid set of unit tests, there are a ton of things to learn.<br/><br/>This series will guide you through a set of steps to publish a JavaScript open source library.',
