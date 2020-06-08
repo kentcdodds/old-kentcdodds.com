@@ -23,7 +23,7 @@
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "formik": "^2.1.4",
-    "gatsby": "^2.23.1",
+    "gatsby": "2.22.20",
     "gatsby-image": "^2.4.6",
     "gatsby-link": "^2.4.5",
     "gatsby-parallel-runner": "^1.2.8",
