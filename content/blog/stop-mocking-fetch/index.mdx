@@ -244,17 +244,17 @@ mock server:
 ```javascript
 // server-handlers.js
 // this is put into here so I can share these same handlers between my tests
-// as well as my development. Pretty sweet!
-import { rest } from 'msw'
+// as well as my development in the browser. Pretty sweet!
+import {rest} from 'msw' // msw supports graphql too!
 import * as users from './users'
 import * as products from './products'
 
 const handlers = [
-  rest.get('/login', (req, res, ctx) => {
+  rest.get('/login', async (req, res, ctx) => {
     const user = await users.login(JSON.parse(config.body))
-    return res(ctx.json({ user }))
-  })
-  rest.get('/checkout', (req, res, ctx) => {
+    return res(ctx.json({user}))
+  }),
+  rest.post('/checkout', async (req, res, ctx) => {
     const user = await users.login(JSON.parse(config.body))
     const isAuthorized = user.authorize(config.headers.Authorization)
     if (!isAuthorized) {
@@ -263,18 +263,26 @@ const handlers = [
     const shoppingCart = JSON.parse(config.body)
     // do whatever other things you need to do with this shopping cart
     return res(ctx.json({succes: true}))
-  })
+  }),
 ]
 
 export {handlers}
 ```
 
 ```javascript
-// add this to your setupFilesAfterEnv config in jest so it's imported for every test file
+// test/server.js
+import {rest} from 'msw'
 import {setupServer} from 'msw/node'
 import {handlers} from './server-handlers'
 
 const server = setupServer(...handlers)
+export {server, rest}
+```
+
+```javascript
+// test/setup-env.js
+// add this to your setupFilesAfterEnv config in jest so it's imported for every test file
+import {server} from './server.js'
 
 beforeAll(() => server.listen())
 // if you need to add a handler after calling setupServer for some specific test
@@ -310,6 +318,64 @@ I'm happier with this solution than mocking fetch because:
    won't be called and my test (correctly) fails, which would save me from
    shipping broken code.
 3. I can reuse these exact same server handlers in my development!
+
+## Colocation and error/edge case testing
+
+One reasonable concern about this approach is that you end up putting all of
+your server handlers in one place and then the tests that rely on those server
+handlers end up in entirely different files, so you lose the benefits of
+[colocation](/blog/colocation).
+
+First off, I'd say that you want to only colocate the things that are _important
+and unique_ to your test. You wouldn't want to have to duplicate all the setup
+in every test. Only the parts that are unique. So the "happy path" stuff is
+typically better to just include in your setup file, removed from the test
+itself. Otherwise you have too much noise and it's hard to isolate what's
+actually being tested.
+
+But what about edge cases and errors? For those, MSW has the ability for you to
+add additional server handlers at runtime (within a test) and then reset the
+server to the original handlers (effectively removing the runtime handlers) to
+preserve test isolation. Here's an example:
+
+```jsx
+// __tests__/checkout.js
+import React from 'react'
+import {server, rest} from 'test/server'
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+// happy path test, no special server stuff
+test('clicking "confirm" submits payment', async () => {
+  const shoppingCart = buildShoppingCart()
+  render(<Checkout shoppingCart={shoppingCart} />)
+
+  userEvent.click(screen.getByRole('button', {name: /confirm/i}))
+
+  expect(await screen.findByText(/success/i)).toBeInTheDocument()
+})
+
+// edge/error case, special server stuff
+// note that the afterEach(() => server.resetHandlers()) we have in our
+// setup file will ensure that the special handler is removed for other tests
+test('shows server error if the request fails', async () => {
+  const testErrorMessage = 'THIS IS A TEST FAILURE'
+  server.use(
+    rest.post('/checkout', async (req, res, ctx) => {
+      return res(ctx.status(500), ctx.json({message: testErrorMessage}))
+    }),
+  )
+  const shoppingCart = buildShoppingCart()
+  render(<Checkout shoppingCart={shoppingCart} />)
+
+  userEvent.click(screen.getByRole('button', {name: /confirm/i}))
+
+  expect(await screen.findByRole('alert')).toHaveTextContent(testErrorMessage)
+})
+```
+
+So you can have colocation where it's needed, and abstraction where abstraction
+is sensible.
 
 ## Conclusion
 
