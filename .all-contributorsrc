@@ -1312,6 +1312,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Dru89",
+      "name": "Drew Hays",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/229118?v=4",
+      "profile": "http://www.andrewhays.net",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
