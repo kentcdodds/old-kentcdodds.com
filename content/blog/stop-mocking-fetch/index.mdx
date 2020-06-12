@@ -141,7 +141,6 @@ well. You can think of it like this:
 ```javascript
 // add this to your setupFilesAfterEnv config in jest so it's imported for every test file
 import * as users from './users'
-import * as products from './products'
 
 async function mockFetch(url, config) {
   switch (url) {
@@ -247,7 +246,6 @@ mock server:
 // as well as my development in the browser. Pretty sweet!
 import {rest} from 'msw' // msw supports graphql too!
 import * as users from './users'
-import * as products from './products'
 
 const handlers = [
   rest.get('/login', async (req, res, ctx) => {
