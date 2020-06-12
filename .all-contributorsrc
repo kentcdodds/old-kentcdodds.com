@@ -1321,6 +1321,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "kimroen",
+      "name": "Kim Røen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/520420?v=4",
+      "profile": "http://twitter.com/kimroen",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
