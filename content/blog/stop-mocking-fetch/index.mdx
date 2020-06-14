@@ -51,7 +51,7 @@ answer. So, sorry about that. But, one issue with this is because you're mocking
 out the `client`, how do you really know the client is being used correctly in
 this case? Sure, the `client` could be unit tested to make sure it's calling
 `window.fetch` properly, but how do you know that `client` didn't just recently
-change it's API to accept a `body` instead of `data`? Oh, you're using
+change its API to accept a `body` instead of `data`? Oh, you're using
 TypeScript so
 [you've eliminated a category of bugs](/blog/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools).
 Good! But there are definitely some business logic bugs that can slip in because
