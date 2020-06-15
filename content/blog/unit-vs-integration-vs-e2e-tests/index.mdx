@@ -136,8 +136,8 @@ test('login as an existing user', async () => {
 
   // fill out form
   const fakeUser = generate.loginForm()
-  await userEvent.type(getByLabelText(/username/i), fakeUser.username)
-  await userEvent.type(getByLabelText(/password/i), fakeUser.password)
+  userEvent.type(getByLabelText(/username/i), fakeUser.username)
+  userEvent.type(getByLabelText(/password/i), fakeUser.password)
 
   // submit form
   const {post} = axiosMock.__mock.instance

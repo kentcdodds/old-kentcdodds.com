@@ -373,7 +373,7 @@ accessibly or follow the WAI-ARIA practices. They often have
 fireEvent.change(input, {target: {value: 'hello world'}})
 
 // ✅
-await userEvent.type(input, 'hello world')
+userEvent.type(input, 'hello world')
 ```
 
 [`@testing-library/user-event`](https://github.com/testing-library/user-event)
