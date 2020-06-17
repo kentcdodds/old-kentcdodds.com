@@ -198,6 +198,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://hung.dev"><img src="https://avatars3.githubusercontent.com/u/8603085?v=4" width="100px;" alt=""/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="#content-nvh95" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.andrewhays.net"><img src="https://avatars3.githubusercontent.com/u/229118?v=4" width="100px;" alt=""/><br /><sub><b>Drew Hays</b></sub></a><br /><a href="#content-Dru89" title="Content">🖋</a></td>
     <td align="center"><a href="http://twitter.com/kimroen"><img src="https://avatars1.githubusercontent.com/u/520420?v=4" width="100px;" alt=""/><br /><sub><b>Kim Røen</b></sub></a><br /><a href="#content-kimroen" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/JavierMartinz"><img src="https://avatars1.githubusercontent.com/u/1155507?v=4" width="100px;" alt=""/><br /><sub><b>Javier Martínez</b></sub></a><br /><a href="#content-JavierMartinz" title="Content">🖋</a></td>
   </tr>
 </table>
 
