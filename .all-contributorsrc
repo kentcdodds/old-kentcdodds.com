@@ -1340,6 +1340,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jeltehomminga",
+      "name": "Jelte Homminga",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35220102?v=4",
+      "profile": "https://jelte.tech",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
