@@ -200,6 +200,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://twitter.com/kimroen"><img src="https://avatars1.githubusercontent.com/u/520420?v=4" width="100px;" alt=""/><br /><sub><b>Kim Røen</b></sub></a><br /><a href="#content-kimroen" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/JavierMartinz"><img src="https://avatars1.githubusercontent.com/u/1155507?v=4" width="100px;" alt=""/><br /><sub><b>Javier Martínez</b></sub></a><br /><a href="#content-JavierMartinz" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://jelte.tech"><img src="https://avatars1.githubusercontent.com/u/35220102?v=4" width="100px;" alt=""/><br /><sub><b>Jelte Homminga</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jeltehomminga" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
