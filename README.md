@@ -202,6 +202,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://jelte.tech"><img src="https://avatars1.githubusercontent.com/u/35220102?v=4" width="100px;" alt=""/><br /><sub><b>Jelte Homminga</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=jeltehomminga" title="Code">💻</a></td>
+    <td align="center"><a href="http://davidstockton.dev/"><img src="https://avatars2.githubusercontent.com/u/775393?v=4" width="100px;" alt=""/><br /><sub><b>David Stockton</b></sub></a><br /><a href="#content-dstockto" title="Content">🖋</a></td>
   </tr>
 </table>
 
