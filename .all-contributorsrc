@@ -1349,6 +1349,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dstockto",
+      "name": "David Stockton",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/775393?v=4",
+      "profile": "http://davidstockton.dev/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
