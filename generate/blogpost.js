@@ -98,24 +98,26 @@ async function getBannerPhoto(title, destination) {
   ])
   mkdirp.sync(imagesDestination)
 
-  const source = tinify
-    .fromUrl(
-      `https://unsplash.com/photos/${unsplashPhotoId}/download?force=true`,
-    )
-    .resize({
-      method: 'scale',
-      width: 2070,
-    })
+  if (unsplashPhotoId) {
+    const source = tinify
+      .fromUrl(
+        `https://unsplash.com/photos/${unsplashPhotoId}/download?force=true`,
+      )
+      .resize({
+        method: 'scale',
+        width: 2070,
+      })
 
-  const spinner = ora('compressing the image with tinypng.com').start()
-  await util
-    .promisify(source.toFile)
-    .call(source, path.join(imagesDestination, 'banner.jpg'))
-  spinner.text = 'compressed the image with tinypng.com'
-  spinner.stop()
-
-  const bannerCredit = await getPhotoCredit(unsplashPhotoId)
-  return bannerCredit
+    const spinner = ora('compressing the image with tinypng.com').start()
+    await util
+      .promisify(source.toFile)
+      .call(source, path.join(imagesDestination, 'banner.jpg'))
+    spinner.text = 'compressed the image with tinypng.com'
+    spinner.stop()
+    const bannerCredit = await getPhotoCredit(unsplashPhotoId)
+    return bannerCredit
+  }
+  return null
 }
 
 async function getPhotoCredit(unsplashPhotoId) {
