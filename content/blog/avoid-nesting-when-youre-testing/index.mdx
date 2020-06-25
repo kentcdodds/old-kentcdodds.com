@@ -460,9 +460,9 @@ import Login from '../login'
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'little lamb'},
+    target: {value: 'ilovetwix'},
   })
   // more test here
 })
@@ -474,7 +474,7 @@ test('example 2', () => {
   // entire document, and because we didn't cleanup after the previous test
   // we'll get an error indicating that RTL found more than one field with the
   // label "username"
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   // more test here
 })
 ```
@@ -490,9 +490,9 @@ import Login from '../login'
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'little lamb'},
+    target: {value: 'ilovetwix'},
   })
   // more test here
   cleanup()
@@ -501,7 +501,7 @@ test('example 1', () => {
 test('example 2', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   // more test here
   cleanup()
 })
@@ -514,11 +514,11 @@ cleanup wont run, like this:
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   // 💣 the following typo will result in a error thrown:
   //   "no field with the label matching passssword"
   fireEvent.change(getByLabelText(/passssword/i), {
-    target: {value: 'little lamb'},
+    target: {value: 'ilovetwix'},
   })
   // more test here
   cleanup()
@@ -542,9 +542,9 @@ afterEach(() => cleanup())
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'little lamb'},
+    target: {value: 'ilovetwix'},
   })
   // more test here
 })
@@ -552,7 +552,7 @@ test('example 1', () => {
 test('example 2', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'mary'}})
+  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
   // more test here
 })
 ```
