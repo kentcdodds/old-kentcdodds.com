@@ -5,10 +5,10 @@
     "axios": "^0.19.2",
     "fake-useragent": "^1.0.1",
     "json-to-pretty-yaml": "^1.2.2",
-    "open": "^7.0.3",
+    "open": "^7.0.4",
     "tinify": "^1.6.0-beta.2"
   },
   "dependencies": {
-    "ora": "^4.0.3"
+    "ora": "^4.0.4"
   }
 }
