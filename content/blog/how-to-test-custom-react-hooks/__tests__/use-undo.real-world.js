@@ -24,7 +24,7 @@ test('allows you to undo and redo', () => {
   fireEvent.click(submit)
 
   // assert new state
-  expect(undo).not.toBeDisabled()
+  expect(undo).toBeEnabled()
   expect(redo).toBeDisabled()
   expect(past).toHaveTextContent(`Past: one`)
   expect(present).toHaveTextContent(`Present: two`)
@@ -35,7 +35,7 @@ test('allows you to undo and redo', () => {
   fireEvent.click(submit)
 
   // assert new state
-  expect(undo).not.toBeDisabled()
+  expect(undo).toBeEnabled()
   expect(redo).toBeDisabled()
   expect(past).toHaveTextContent(`Past: one, two`)
   expect(present).toHaveTextContent(`Present: three`)
@@ -45,8 +45,8 @@ test('allows you to undo and redo', () => {
   fireEvent.click(undo)
 
   // assert "undone" state
-  expect(undo).not.toBeDisabled()
-  expect(redo).not.toBeDisabled()
+  expect(undo).toBeEnabled()
+  expect(redo).toBeEnabled()
   expect(past).toHaveTextContent(`Past: one`)
   expect(present).toHaveTextContent(`Present: two`)
   expect(future).toHaveTextContent(`Future: three`)
@@ -56,7 +56,7 @@ test('allows you to undo and redo', () => {
 
   // assert "double-undone" state
   expect(undo).toBeDisabled()
-  expect(redo).not.toBeDisabled()
+  expect(redo).toBeEnabled()
   expect(past).toHaveTextContent(`Past:`)
   expect(present).toHaveTextContent(`Present: one`)
   expect(future).toHaveTextContent(`Future: two, three`)
@@ -65,8 +65,8 @@ test('allows you to undo and redo', () => {
   fireEvent.click(redo)
 
   // assert undo + undo + redo state
-  expect(undo).not.toBeDisabled()
-  expect(redo).not.toBeDisabled()
+  expect(undo).toBeEnabled()
+  expect(redo).toBeEnabled()
   expect(past).toHaveTextContent(`Past: one`)
   expect(present).toHaveTextContent(`Present: two`)
   expect(future).toHaveTextContent(`Future: three`)
@@ -76,7 +76,7 @@ test('allows you to undo and redo', () => {
   fireEvent.click(submit)
 
   // assert final state (note the lack of "third")
-  expect(undo).not.toBeDisabled()
+  expect(undo).toBeEnabled()
   expect(redo).toBeDisabled()
   expect(past).toHaveTextContent(`Past: one, two`)
   expect(present).toHaveTextContent(`Present: four`)
