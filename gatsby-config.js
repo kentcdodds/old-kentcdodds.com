@@ -199,7 +199,6 @@ module.exports = {
         pathToConfigModule: `src/lib/typography`,
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
