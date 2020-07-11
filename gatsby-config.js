@@ -149,6 +149,7 @@ module.exports = {
         showSpinner: false,
       },
     },
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
