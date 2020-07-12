@@ -79,10 +79,10 @@ test('clicking "confirm" submits payment', async () => {
   const shoppingCart = buildShoppingCart()
   render(<Checkout shoppingCart={shoppingCart} />)
 
-  window.fetch.mockResolvedValueOnce(() => ({
+  window.fetch.mockResolvedValueOnce({
     ok: true,
     json: async () => ({success: true}),
-  }))
+  })
 
   userEvent.click(screen.getByRole('button', {name: /confirm/i}))
 
