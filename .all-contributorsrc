@@ -1358,6 +1358,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "delacruz-dev",
+      "name": "Dani de la Cruz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5173869?v=4",
+      "profile": "https://delacruz.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
