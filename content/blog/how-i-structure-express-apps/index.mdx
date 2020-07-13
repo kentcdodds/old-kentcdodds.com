@@ -1,7 +1,7 @@
 ---
 slug: 'how-i-structure-express-apps'
 title: 'How I structure Express apps'
-date: '2020-07-11'
+date: '2020-07-13'
 author: 'Kent C. Dodds'
 description: '_The build/dev tools and scripts I use for Node backends._'
 categories:
@@ -197,15 +197,12 @@ This file is pretty simple:
 import logger from 'loglevel'
 import {startServer} from './start'
 
-const isTest = process.env.NODE_ENV === 'test'
-const logLevel = process.env.LOG_LEVEL || (isTest ? 'warn' : 'info')
-
-logger.setLevel(logLevel)
+logger.setLevel('info')
 
 startServer()
 ```
 
-All it does is configure the logger based on the current environment and starts
+All it does is configure the logger and starts
 the server. Most projects I've seen actually kick off the server in the
 `src/index.js` file, but I prefer to take the logic for starting the server and
 put it in a function because it makes it easier for testing.
@@ -252,6 +249,8 @@ function startServer({port = process.env.PORT} = {}) {
 
       // this ensures that we properly close the server when the program exists
       setupCloseOnExit(server)
+
+      // resolve the whole promise with the express server
       resolve(server)
     })
   })
@@ -324,7 +323,7 @@ afterAll(() => server.close())
 // make requests to the baseURL
 ```
 
-**If this sounds interesting to you, then watch me teach you on
+**If this sounds interesting to you, then let me teach you on
 [TestingJavaScript.com 🏆](https://testingjavascript.com)**
 
 ## src/routes/index.js
