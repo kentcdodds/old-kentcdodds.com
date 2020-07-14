@@ -1367,6 +1367,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "marcuslyons",
+      "name": "Marcus Lyons",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10541922?v=4",
+      "profile": "https://www.marcuslyons.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
