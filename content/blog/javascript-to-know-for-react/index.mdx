@@ -1,7 +1,7 @@
 ---
 slug: 'javascript-to-know-for-react'
 title: 'JavaScript to Know for React'
-date: '2019-08-19'
+date: '2020-07-15'
 author: 'Kent C. Dodds'
 description:
   '_What JavaScript features you should be familiar with when learning and using
@@ -321,8 +321,26 @@ export const now = new Date()
  * console.assert(now instanceof Date)
  */
 
+// dynamic imports
+import('./some-module').then(
+  allModuleExports => {
+    // the allModuleExports object will be the same object you get if you had
+    // used: import * as allModuleExports from './some-module'
+    // the only difference is this will be loaded asynchronously which can
+    // have performance benefits in some cases
+  },
+  error => {
+    // handle the error
+    // this will happen if there's an error loading or running the module
+  },
+)
+
 // in React:
 import React, {Suspense, Fragment} from 'react'
+
+// dynamic import of a React component
+const BigComponent = React.lazy(() => import('./big-component'))
+// big-component.js would need to "export default BigComponent" for this to work
 ```
 
 [MDN: import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
@@ -467,6 +485,86 @@ function RepositoryList({repositories, owner}) {
 ```
 
 [MDN: Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+## Nullish coalescing operator
+
+If a value is `null` or `undefined`, then you may want to fallback to some
+default value:
+
+```javascript
+// here's what we often did for this:
+x = x || 'some default'
+
+// but this was problematic for numbers or booleans where "0" or "false" are valid values
+
+// So, if we wanted to support this:
+add(null, 3)
+
+// here's what we had to do before:
+function add(a, b) {
+  a = a == null ? 0 : a
+  b = b == null ? 0 : b
+  return a + b
+}
+
+// here's what we can do now
+function add(a, b) {
+  a = a ?? 0
+  b = b ?? 0
+  return a + b
+}
+
+// in React:
+function DisplayContactName({contact}) {
+  return <div>{contact.name ?? 'Unknown'}</div>
+}
+```
+
+[MDN: Nullish coalescing operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+
+## Optional chaining
+
+Also known as the "Elvis Operator," this allows you to safely access properties
+and call functions that may or may not exist. Before optional chaining, we used
+a hacky-workaround that relied on falsy/truthy-ness.
+
+```javascript
+// what we did before optional chaining:
+const streetName = user && user.address && user.address.street.name
+
+// what we can do now:
+const streetName = user?.address?.street?.name
+
+// this will run even if options is undefined (in which case, onSuccess would be undefined as well)
+const onSuccess = options?.onSuccess
+
+// this will run without error even if onSuccess is undefined (in which case, no function will be called)
+onSuccess?.({data: 'yay'})
+
+// and we can combine those things into a single line:
+options?.onSuccess?.({data: 'yay'})
+
+// and if you are 100% certain that onSuccess is a function if options exists
+// then you don't need the extra ?. before calling it. Only use ?. in situations
+// where the thing on the left might not exist.
+options?.onSuccess({data: 'yay'})
+
+// in React:
+function UserProfile({user}) {
+  return (
+    <div>
+      <h1>{user.name}</h1>
+      <strong>{user.bio?.slice(0, 50)}...</strong>
+    </div>
+  )
+}
+```
+
+A word of caution around this is that if you find yourself doing `?.` a lot in
+your code, you might want to consider the place where those values originate and
+make sure they consistently return the values they should.
+
+[MDN: Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 ## Promises and async/await
 
