@@ -1,5 +1,4 @@
 import React from 'react'
-import {ErrorBoundary} from 'react-error-boundary'
 
 function ErrorFallback({error}) {
   return (
@@ -10,21 +9,15 @@ function ErrorFallback({error}) {
   )
 }
 
-function Greeting({subject}) {
-  return <div>Hello {subject.toUpperCase()}</div>
-}
-
-function Farewell({subject}) {
-  return <div>Goodbye {subject.toUpperCase()}</div>
-}
-
 function App() {
   return (
     <div>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Greeting />
-        <Farewell />
-      </ErrorBoundary>
+      {/* gatsby doesn't like error boundaries I guess */}
+      <ErrorFallback
+        error={{
+          message: `TypeError: Cannot read property 'toUpperCase' of undefined`,
+        }}
+      />
     </div>
   )
 }
