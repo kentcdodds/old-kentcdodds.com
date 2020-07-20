@@ -20,6 +20,7 @@ function Bomb({username}) {
 
 function App() {
   const [username, setUsername] = React.useState('')
+  const usernameRef = React.useRef(null)
 
   return (
     <div>
@@ -29,12 +30,16 @@ function App() {
           placeholder={`type "bomb"`}
           value={username}
           onChange={e => setUsername(e.target.value)}
+          ref={usernameRef}
         />
       </label>
       <div>
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
-          onReset={() => setUsername('')}
+          onReset={() => {
+            setUsername('')
+            usernameRef.focus()
+          }}
           resetKeys={[username]}
         >
           <Bomb username={username} />

@@ -238,7 +238,7 @@ tools we need to manage this as well.
 
 Here's a more complex example:
 
-```jsx
+```jsx {6,36-40}
 function ErrorFallback({error, resetErrorBoundary}) {
   return (
     <div role="alert">
@@ -258,6 +258,7 @@ function Bomb({username}) {
 
 function App() {
   const [username, setUsername] = React.useState('')
+  const usernameRef = React.useRef(null)
 
   return (
     <div>
@@ -267,12 +268,16 @@ function App() {
           placeholder={`type "bomb"`}
           value={username}
           onChange={e => setUsername(e.target.value)}
+          ref={usernameRef}
         />
       </label>
       <div>
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
-          onReset={() => setUsername('')}
+          onReset={() => {
+            setUsername('')
+            usernameRef.focus()
+          }}
           resetKeys={[username]}
         >
           <Bomb username={username} />
