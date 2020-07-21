@@ -38,7 +38,7 @@ function App() {
           FallbackComponent={ErrorFallback}
           onReset={() => {
             setUsername('')
-            usernameRef.focus()
+            usernameRef.current.focus()
           }}
           resetKeys={[username]}
         >
