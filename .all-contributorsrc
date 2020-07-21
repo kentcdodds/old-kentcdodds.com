@@ -1376,6 +1376,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rbusquet",
+      "name": "Ricardo Busquet",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7198302?v=4",
+      "profile": "https://ricardobusquet.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
