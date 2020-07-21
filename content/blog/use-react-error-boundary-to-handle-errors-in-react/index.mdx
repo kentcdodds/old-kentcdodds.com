@@ -335,7 +335,7 @@ function Greeting() {
     )
   }
 
-  return status === 'error' ? (
+  return status === 'rejected' ? (
     <ErrorFallback error={error} />
   ) : status === 'resolved' ? (
     <div>{greeting}</div>
