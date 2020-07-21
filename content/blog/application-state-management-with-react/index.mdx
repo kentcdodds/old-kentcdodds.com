@@ -444,6 +444,40 @@ but I don't really consider react-query to be a state management library. I
 consider it to be a cache. And it's a darn good one. Give it a look! That
 [Tanner Linsley](https://twitter.com/tannerlinsley) is one smart cookie.
 
+## What about performance?
+
+When you follow the advice above, performance will rarely be an issue.
+Particularly when you're following
+[the recommendations around colocation](/blog/state-colocation-will-make-your-react-app-faster).
+However, there are definitely use cases where performance can be problematic.
+When you have state-related performance problems, the first thing to check is
+how many components are being re-rendered due to a state change and determine
+whether those components really need to be re-rendered due to that state change.
+If they do, then the perf issue isn't in your mechanism for managing state, but
+in the speed of your render in which case you need to
+[speed up your renders](/blog/fix-the-slow-render-before-you-fix-the-re-render).
+
+However, if you notice that there are a lot of components that are rendering
+with no DOM updates or needed side-effects, then those components are rendering
+unnecessarily. This happens all the time with React and it's normally not a
+problem by itself (and you should
+[focus on making even unnecessary re-renders fast first](/blog/fix-the-slow-render-before-you-fix-the-re-render)),
+but if it really is the bottleneck, then here are a few approaches to solving
+performance issues with state in React context:
+
+1. Separate your state into different logical pieces rather than in one big
+   store, so a single update to any part of state does NOT trigger an update to
+   every component in your app.
+2. [Optimize your context provider](/blog/how-to-use-react-context-effectively)
+3. Bring in [recoil](https://recoiljs.org/)
+
+There it is again, another recommendation for a library. It's true, there are
+_some_ use cases for which React's built-in state management abstractions are
+not well stuited. Of all the available abstractions, recoil is the most
+promising for those use cases. If you're curious what those use cases are, the
+types of problems recoil solves well are described in
+[Recoil: State Management for Today's React - Dave McCabe aka @mcc_abe at @ReactEurope 2020](https://www.youtube.com/watch?v=_ISAA_Jt9kI)
+
 ## Conclusion
 
 Again, this is something that you can do with class components (you don't have
