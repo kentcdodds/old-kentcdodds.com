@@ -205,6 +205,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://davidstockton.dev/"><img src="https://avatars2.githubusercontent.com/u/775393?v=4" width="100px;" alt=""/><br /><sub><b>David Stockton</b></sub></a><br /><a href="#content-dstockto" title="Content">🖋</a></td>
     <td align="center"><a href="https://delacruz.dev"><img src="https://avatars2.githubusercontent.com/u/5173869?v=4" width="100px;" alt=""/><br /><sub><b>Dani de la Cruz</b></sub></a><br /><a href="#content-delacruz-dev" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.marcuslyons.com"><img src="https://avatars1.githubusercontent.com/u/10541922?v=4" width="100px;" alt=""/><br /><sub><b>Marcus Lyons</b></sub></a><br /><a href="#content-marcuslyons" title="Content">🖋</a></td>
+    <td align="center"><a href="https://ricardobusquet.com"><img src="https://avatars1.githubusercontent.com/u/7198302?v=4" width="100px;" alt=""/><br /><sub><b>Ricardo Busquet</b></sub></a><br /><a href="#content-rbusquet" title="Content">🖋</a></td>
   </tr>
 </table>
 
