@@ -19,7 +19,7 @@ const SubscribeSchema = Yup.object().shape({
   acceptedCoC: Yup.bool().oneOf([true], 'Required'),
 })
 
-function PostSubmissionMessage() {
+function PostSubmissionMessage({response}) {
   return (
     <div
       css={css`
@@ -31,7 +31,11 @@ function PostSubmissionMessage() {
       <Message
         illustration={PleaseConfirmIllustration}
         title="Great, one last thing..."
-        body="I just sent you an email with the confirmation link. **Please check your inbox!**"
+        body={
+          response.status === 'quarantined'
+            ? `[Please click here](${response.url}) to verify you are a human.`
+            : 'I just sent you an email with the confirmation link. **Please check your inbox!**'
+        }
       />
     </div>
   )
@@ -88,7 +92,7 @@ const StyledFormikForm = styled(Form)`
 `
 
 function Subscribe({style}) {
-  const {run, isLoading, isError, isSuccess} = useAsync()
+  const {run, data: response, isLoading, isError, isSuccess} = useAsync()
 
   function handleSubmit(values) {
     run(
@@ -216,7 +220,7 @@ function Subscribe({style}) {
           )}
         </Formik>
       )}
-      {isSuccess ? <PostSubmissionMessage /> : null}
+      {isSuccess ? <PostSubmissionMessage response={response} /> : null}
       {isError ? <div>{errorMessage}</div> : null}
     </SubscribeFormWrapper>
   )
