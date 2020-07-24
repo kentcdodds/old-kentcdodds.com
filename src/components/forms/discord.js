@@ -19,7 +19,7 @@ const SubscribeSchema = Yup.object().shape({
   acceptedCoC: Yup.bool().oneOf([true], 'Required'),
 })
 
-function PostSubmissionMessage({response}) {
+function PostSubmissionMessage({convertKitResponse}) {
   return (
     <div
       css={css`
@@ -32,8 +32,8 @@ function PostSubmissionMessage({response}) {
         illustration={PleaseConfirmIllustration}
         title="Great, one last thing..."
         body={
-          response.status === 'quarantined'
-            ? `[Please click here](${response.url}) to verify you are a human.`
+          convertKitResponse.status === 'quarantined'
+            ? `[Please click here](${convertKitResponse.url}) to verify you are a human.`
             : 'I just sent you an email with the confirmation link. **Please check your inbox!**'
         }
       />
@@ -92,19 +92,30 @@ const StyledFormikForm = styled(Form)`
 `
 
 function Subscribe({style}) {
-  const {run, data: response, isLoading, isError, isSuccess} = useAsync()
+  const {run, data, isLoading, error, isError, isSuccess} = useAsync()
+  const [convertKitResponse] = data ?? []
 
   function handleSubmit(values) {
     run(
-      client('https://app.convertkit.com/forms/1547100/subscriptions', {
-        data: values,
-      }),
+      Promise.all([
+        client('https://app.convertkit.com/forms/1547100/subscriptions', {
+          data: values,
+        }),
+        client(`${process.env.NETLIFY_FUNCTIONS_URL}/discord`, {data: values}),
+      ]),
     )
   }
 
-  const errorMessage = isError
-    ? 'Something went wrong! Try again, or hit me up on Twitter @kentcdodds'
-    : null
+  const errorMessage = isError ? (
+    <div css={{marginTop: 10}}>
+      <div>
+        Something went wrong! Try again, or hit me up on Twitter @kentcdodds
+      </div>
+      <div css={{fontFamily: 'monospace', fontWeight: 'bold', marginTop: 5}}>
+        {error.message}
+      </div>
+    </div>
+  ) : null
 
   return (
     <SubscribeFormWrapper style={style}>
@@ -220,7 +231,9 @@ function Subscribe({style}) {
           )}
         </Formik>
       )}
-      {isSuccess ? <PostSubmissionMessage response={response} /> : null}
+      {isSuccess ? (
+        <PostSubmissionMessage convertKitResponse={convertKitResponse} />
+      ) : null}
       {isError ? <div>{errorMessage}</div> : null}
     </SubscribeFormWrapper>
   )

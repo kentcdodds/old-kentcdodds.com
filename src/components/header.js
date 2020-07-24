@@ -141,13 +141,6 @@ function Header({
             </NavLink>
             <NavLink
               headerColor={headerColor}
-              to="/talks/"
-              aria-label="View talks page"
-            >
-              Talks
-            </NavLink>
-            <NavLink
-              headerColor={headerColor}
               to="/workshops/"
               aria-label="View workshops page"
             >
@@ -166,6 +159,13 @@ function Header({
               aria-label="View courses page"
             >
               Courses
+            </NavLink>
+            <NavLink
+              headerColor={headerColor}
+              to="/discord"
+              aria-label="Join the KCD Discord"
+            >
+              Discord
             </NavLink>
             <NavLink
               headerColor={headerColor}

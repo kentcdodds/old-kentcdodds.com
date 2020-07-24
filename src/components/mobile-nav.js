@@ -107,13 +107,6 @@ const Toggle = ({color = 'white'}) => {
               Blog
             </Link>
             <Link
-              aria-label="View talks page"
-              to="/talks"
-              activeClassName="active"
-            >
-              Talks
-            </Link>
-            <Link
               aria-label="View workshops page"
               to="/workshops"
               activeClassName="active"
@@ -133,6 +126,13 @@ const Toggle = ({color = 'white'}) => {
               activeClassName="active"
             >
               Courses
+            </Link>
+            <Link
+              aria-label="Join the KCD Discord"
+              to="/discord"
+              activeClassName="active"
+            >
+              Discord
             </Link>
             <Link
               aria-label="View about page"
