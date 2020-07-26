@@ -1385,6 +1385,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "immigration9",
+      "name": "MinGu Anthony Lee",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/18402319?v=4",
+      "profile": "http://immigration9.github.io",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
