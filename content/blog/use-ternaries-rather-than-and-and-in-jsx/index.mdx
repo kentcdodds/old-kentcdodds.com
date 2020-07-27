@@ -124,7 +124,7 @@ returning `undefined`. But on top of that layer of protection, how about we be
 more explicit about our intentions. If you want to do something _conditionally_,
 don't abuse the logical AND operator (`&&`).
 
-It actually seems counter-intuitive because we often us `&&` in an `if`
+It actually seems counter-intuitive because we often use `&&` in an `if`
 condition to say: if both of these values are truthy, then do this thing,
 otherwise don't. Unfortunately for our use-case, the `&&` operator also has this
 "feature" where if both values aren't truthy, it returns the value of the falsy
