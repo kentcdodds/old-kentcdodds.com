@@ -1394,6 +1394,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "ahmdtalat",
+      "name": "Ahmed Talaat",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/46477493?v=4",
+      "profile": "http://ahmd.talat95@gmail.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
