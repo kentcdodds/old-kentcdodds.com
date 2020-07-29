@@ -110,7 +110,7 @@ async function handler(event) {
   const text = `
 Hello ${name},
 
-Congratulations and welcome! Your application has been approved and can now  **[join the KCD Community on Discord](https://discord.gg/4zZT9rd)**. We're happy to have you!
+Congratulations and welcome! Your application has been approved and you can now  **[join the KCD Community on Discord](https://discord.gg/4zZT9rd)**. We're happy to have you!
 
 When you join, you'll be greeted by a bot with more instructions and tips. For now, simply click the link above. See you soon!
 
