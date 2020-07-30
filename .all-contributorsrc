@@ -1412,6 +1412,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "aericson",
+      "name": "André Ericson",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/692542?v=4",
+      "profile": "https://github.com/aericson",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
