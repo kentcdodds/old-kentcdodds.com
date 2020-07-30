@@ -211,6 +211,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://solverfox.dev"><img src="https://avatars3.githubusercontent.com/u/12292047?v=4" width="100px;" alt=""/><br /><sub><b>Sebastian Silbermann</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=eps1lon" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/aericson"><img src="https://avatars3.githubusercontent.com/u/692542?v=4" width="100px;" alt=""/><br /><sub><b>André Ericson</b></sub></a><br /><a href="#content-aericson" title="Content">🖋</a></td>
   </tr>
 </table>
 
