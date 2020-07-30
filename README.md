@@ -209,6 +209,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://immigration9.github.io"><img src="https://avatars0.githubusercontent.com/u/18402319?v=4" width="100px;" alt=""/><br /><sub><b>MinGu Anthony Lee</b></sub></a><br /><a href="#translation-immigration9" title="Translation">🌍</a></td>
     <td align="center"><a href="http://ahmd.talat95@gmail.com"><img src="https://avatars1.githubusercontent.com/u/46477493?v=4" width="100px;" alt=""/><br /><sub><b>Ahmed Talaat</b></sub></a><br /><a href="#content-ahmdtalat" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://solverfox.dev"><img src="https://avatars3.githubusercontent.com/u/12292047?v=4" width="100px;" alt=""/><br /><sub><b>Sebastian Silbermann</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=eps1lon" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
