@@ -1,26 +1,33 @@
 const {URL} = require('url')
-const nodemailer = require('nodemailer')
+const Discord = require('discord.js')
 const ow = require('ow')
-const unified = require('unified')
-const markdown = require('remark-parse')
-const remark2rehype = require('remark-rehype')
-const doc = require('rehype-document')
-const format = require('rehype-format')
-const html = require('rehype-stringify')
-const {username} = require('os').userInfo()
+const axios = require('axios')
+const osUserInfo = require('os').userInfo()
 
-function markdownToHtml(markdownString) {
-  return unified()
-    .use(markdown)
-    .use(remark2rehype)
-    .use(doc)
-    .use(format)
-    .use(html)
-    .process(markdownString)
-    .then(x => x.contents)
+function deferred() {
+  let resolve, reject
+  const promise = new Promise((res, rej) => {
+    resolve = res
+    reject = rej
+  })
+  return {promise, resolve, reject}
 }
 
+const client = new Discord.Client()
+const clientReadyDeferred = deferred()
+
+client.on('ready', error => {
+  if (error) {
+    clientReadyDeferred.reject(error)
+  } else {
+    clientReadyDeferred.resolve()
+  }
+})
+
+client.login(process.env.DISCORD_BOT_TOKEN)
+
 const isEmail = ow.string.is(e => /^.+@.+\..+$/.test(e))
+const isDiscordUsername = ow.string.is(e => /^.+#.+$/.test(e))
 
 function owWithMessage(val, message, validator) {
   try {
@@ -41,16 +48,6 @@ owWithMessage(
   isEmail,
 )
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.mailgun.org',
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.EMAIL_USERNAME,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-})
-
 const headers = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'Content-Type',
@@ -62,7 +59,7 @@ async function handler(event) {
 
   const origin = new URL(event.headers.origin)
   const acceptable =
-    (origin.hostname === 'localhost' && username === 'kentcdodds') ||
+    (origin.hostname === 'localhost' && osUserInfo.username === 'kentcdodds') ||
     origin.hostname === 'kentcdodds.com'
 
   if (!acceptable) {
@@ -79,14 +76,17 @@ async function handler(event) {
       headers,
     }
   }
-  const {first_name: name, email_address: email, acceptedCoC} = JSON.parse(
-    event.body,
-  )
+  const {name, email, username, acceptedCoC} = JSON.parse(event.body)
 
   try {
-    log('> Validating input', ' name: ', name, ' email:', email)
+    log('> Validating input', {name, email, username})
     owWithMessage(name, 'The name is required.', ow.string.minLength(1))
     owWithMessage(name, 'The name is too long.', ow.string.maxLength(60))
+    owWithMessage(
+      username,
+      'The username is invalid. Please enter a valid discord username (example#1234).',
+      isDiscordUsername,
+    )
     owWithMessage(
       email,
       'The email is invalid. Please enter a valid email address.',
@@ -106,38 +106,22 @@ async function handler(event) {
     }
   }
 
-  // TODO: work with the discord API to generate the discord invite URL
-  const text = `
-Hello ${name},
-
-Congratulations and welcome! Your application has been approved and you can now  **[join the KCD Community on Discord](https://discord.gg/4zZT9rd)**. We're happy to have you!
-
-When you join, you'll be greeted by a bot with more instructions and tips. For now, simply click the link above. See you soon!
-
-– Kent
-
-P.S. It's more fun with your friends, [invite them to join us](https://twitter.com/intent/tweet?url=https%3A%2F%2Fkentcdodds.com%2Fdiscord&text=I've%20joined%20the%20KCD%20Discord%20community%2C%20come%20hang%20out%20with%20us%20%F0%9F%92%AC&via=kentcdodds)!
-
-[![Kent doing a flip on rollerblades](https://media.giphy.com/media/SwOkV0xTEZMXUM1BTr/giphy.gif)](https://twitter.com/kentcdodds/status/1116215606213214208)
-
-(yes, [that's me](https://twitter.com/kentcdodds/status/1116215606213214208))
-`.trim()
-
-  const message = {
-    from: `"Kent C. Dodds" <hello@kentcdodds.com>`,
-    to: `"${name}" <${email}>`,
-    subject: 'KCD Discord: Application approved',
-    text,
-    html: await markdownToHtml(text),
-  }
+  await axios.post('https://app.convertkit.com/forms/1547100/subscriptions', {
+    data: {first_name: name, email_address: email},
+  })
 
   try {
-    log('> Sending...')
-    await transporter.verify()
-    await transporter.sendMail(message)
-    log('> Send success!')
+    await clientReadyDeferred.promise
+
+    const kcdGuild = client.guilds.cache.get('715220730605731931')
+
+    const role = kcdGuild.roles.cache.find(r => r.name === 'Member')
+    const member = kcdGuild.members.cache.find(
+      ({user}) => `${user.username}#${user.discriminator}` === username,
+    )
+
+    member.roles.add(role)
   } catch (error) {
-    log('> Send failure!', error.message)
     return {
       statusCode: 500,
       body: JSON.stringify({message: error.message}),

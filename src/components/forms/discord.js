@@ -12,10 +12,11 @@ import Message from '../confirm-message/message'
 import {PleaseConfirmIllustration} from '../confirm-message/illustrations'
 
 const SubscribeSchema = Yup.object().shape({
-  email_address: Yup.string()
-    .email('Invalid email address')
+  email: Yup.string().email('Invalid email address').required('Required'),
+  name: Yup.string().length(2),
+  username: Yup.string()
+    .matches(/^.+#.+$/, 'Invalid discord username')
     .required('Required'),
-  first_name: Yup.string(),
   acceptedCoC: Yup.bool().oneOf([true], 'Required'),
 })
 
@@ -96,14 +97,7 @@ function Subscribe({style}) {
   const [convertKitResponse] = data ?? []
 
   function handleSubmit(values) {
-    run(
-      Promise.all([
-        client('https://app.convertkit.com/forms/1547100/subscriptions', {
-          data: values,
-        }),
-        client(`${process.env.NETLIFY_FUNCTIONS_URL}/discord`, {data: values}),
-      ]),
-    )
+    run(client(`${process.env.NETLIFY_FUNCTIONS_URL}/discord`, {data: values}))
   }
 
   const errorMessage = isError ? (
@@ -134,8 +128,9 @@ function Subscribe({style}) {
       {isSuccess ? null : (
         <Formik
           initialValues={{
-            email_address: '',
-            first_name: '',
+            email: '',
+            name: '',
+            username: '',
             acceptedCoC: false,
           }}
           validationSchema={SubscribeSchema}
@@ -143,7 +138,7 @@ function Subscribe({style}) {
         >
           {() => (
             <StyledFormikForm>
-              <label htmlFor="first_name">
+              <label htmlFor="name">
                 <div
                   css={css`
                     display: flex;
@@ -153,16 +148,16 @@ function Subscribe({style}) {
                 >
                   First Name
                   <ErrorMessage
-                    name="first_name"
+                    name="name"
                     component="span"
                     className="field-error"
                   />
                 </div>
               </label>
               <Field
-                id="first_name"
+                id="name"
                 aria-required="false"
-                name="first_name"
+                name="name"
                 placeholder="Jane"
                 type="text"
               />
@@ -176,7 +171,7 @@ function Subscribe({style}) {
                 >
                   Email
                   <ErrorMessage
-                    name="email_address"
+                    name="email"
                     component="span"
                     className="field-error"
                   />
@@ -185,9 +180,32 @@ function Subscribe({style}) {
               <Field
                 id="email"
                 aria-required="true"
-                name="email_address"
+                name="email"
                 placeholder="jane@acme.com"
                 type="email"
+              />
+              <label htmlFor="username">
+                <div
+                  css={css`
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                  `}
+                >
+                  Email
+                  <ErrorMessage
+                    name="username"
+                    component="span"
+                    className="field-error"
+                  />
+                </div>
+              </label>
+              <Field
+                id="username"
+                aria-required="true"
+                name="username"
+                placeholder="example#1234"
+                type="text"
               />
               <div
                 css={{
