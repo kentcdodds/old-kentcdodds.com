@@ -1431,6 +1431,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "codejet",
+      "name": "Oliver Schmidt",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/802203?v=4",
+      "profile": "http://oliverschmidt.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
