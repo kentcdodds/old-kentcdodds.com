@@ -1440,6 +1440,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "uhoh-itsmaciek",
+      "name": "Maciek Sakrejda",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/159100?v=4",
+      "profile": "http://bitrotincarnate.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
