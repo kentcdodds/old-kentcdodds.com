@@ -213,6 +213,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://solverfox.dev"><img src="https://avatars3.githubusercontent.com/u/12292047?v=4" width="100px;" alt=""/><br /><sub><b>Sebastian Silbermann</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=eps1lon" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/aericson"><img src="https://avatars3.githubusercontent.com/u/692542?v=4" width="100px;" alt=""/><br /><sub><b>André Ericson</b></sub></a><br /><a href="#content-aericson" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/TimothyJones"><img src="https://avatars1.githubusercontent.com/u/914369?v=4" width="100px;" alt=""/><br /><sub><b>Timothy Jones</b></sub></a><br /><a href="#content-TimothyJones" title="Content">🖋</a></td>
+    <td align="center"><a href="http://oliverschmidt.dev"><img src="https://avatars3.githubusercontent.com/u/802203?v=4" width="100px;" alt=""/><br /><sub><b>Oliver Schmidt</b></sub></a><br /><a href="#content-codejet" title="Content">🖋</a></td>
   </tr>
 </table>
 
