@@ -1,0 +1,45 @@
+---
+slug: 'better-tests-and-faster-development-with-msw'
+title: 'Better tests and faster development with MSW'
+date: '2020-08-10'
+author: 'Kent C. Dodds'
+description:
+  '_How to get started with MSW to improve your tests and development time._'
+categories:
+  - 'tools'
+keywords:
+  - 'msw'
+  - 'tools'
+  - 'javascript'
+  - 'web'
+  - 'testing'
+  - 'productivity'
+banner: './images/banner.jpg'
+bannerCredit: 'Photo by [Faye Cornish](https://unsplash.com/photos/Uq3gTiPlqRo)'
+---
+
+Every place I've worked, someone else built the API that I was consuming. Often
+that API already existed, but often it was being built while I was building the
+frontend for it. And even if it was already "finished," it often was incomplete
+or buggy. In any case, I couldn't always rely on the backend to work for me
+during development.
+
+This was often a source of frustration for me. Until I found
+[MSW](https://mswjs.io/). This was a game changer. Before my hacks were
+intrusive on my source code. They involved hard-coding the return value from a
+function that was supposed to make an API call. Just don't forget to remove that
+before pushing to production 😬
+
+With MSW, I'm able to take that same hard-coded data and have it handled at the
+network request layer without it spidering throughout my codebase. I can make
+regular network requests and MSW can intercept them from it's little corner of
+my development tooling setup. And then I can take that same MSW code and reuse
+it in my tests rather than mocking fetch
+([which is a bad idea](/blog/stop-mocking-fetch)).
+
+With MSW, I don't worry about the API changing from under me when I'm the middle
+of developing my feature. I can work in isolation if I want to (MSW works with
+storybook super well) but I don't have to. I can work on my components in the
+context of the entire application without worrying about the stability of the
+APIs I'm using. I can write integration tests without have to mock and re-mock
+every request all my components make.
