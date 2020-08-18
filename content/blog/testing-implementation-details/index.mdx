@@ -1,7 +1,7 @@
 ---
 slug: testing-implementation-details
 title: Testing Implementation Details
-date: '2018-11-20'
+date: '2020-08-17'
 author: Kent C. Dodds
 description: >-
   _Testing implementation details is a recipe for disaster. Why is that? And
@@ -20,7 +20,7 @@ Current Available Translations:
 
 - [Traditional Chinese](https://medium.com/@GQSM/react-unit-test-%E7%82%BA%E5%9F%B7%E8%A1%8C%E7%B4%B0%E7%AF%80%E5%AF%AB%E4%B8%8B%E6%B8%AC%E8%A9%A6-%E7%BF%BB%E8%AD%AF-7bec3bca4ee1)
 
-Last year when I was using enzyme (like everyone else at the time), I stepped
+Back when I was using enzyme (like everyone else at the time), I stepped
 carefully around certain APIs in enzyme. I
 [completely avoided shallow rendering](/blog/why-i-never-use-shallow-rendering),
 _never_ used APIs like `instance()`, `state()`, or `find('ComponentName')`. And
@@ -35,8 +35,16 @@ we have to make all these rules to make it harder?
 There are two distinct reasons that it's important to avoid testing
 implementation details. Tests which test implementation details:
 
-1.  Can break when you refactor application code. **False negatives**
-2.  May not fail when you break application code. **False positives**
+1. Can break when you refactor application code. **False negatives**
+2. May not fail when you break application code. **False positives**
+
+> To be clear, the test is: "does the software work". If the test passes, then
+> that means the test came back "positive" (found working software). If it does
+> not, that means the test comes back "negative" (did not find working
+> software). The term "False" refers to when the test came back with an
+> incorrect result, meaning the software is actually broken but the test passes
+> (false positive) or the software is actually working but the test fails (false
+> negative).
 
 Let's take a look at each of these in turn, using the following simple accordion
 component as an example:
@@ -70,6 +78,11 @@ class Accordion extends React.Component {
 
 export default Accordion
 ```
+
+If you're wondering why I'm using a dated class component and not modern
+function component (with hooks) for these examples, keep reading, it's an
+interesting reveal (which some of those of you experienced with enzyme you might
+already be expecting).
 
 And here's a test that tests implementation details:
 
@@ -119,7 +132,11 @@ productivity! Let's see how our tests fall prey to this frustrating problem.
 Let's say I come in and I'm refactoring this accordion to prepare it to allow
 for multiple accordion items to be open at once. A refactor doesn't change
 existing behavior at all, it just changes the **implementation**. So let's
-change the **implementation** in a way that doesn't change the behavior:
+change the **implementation** in a way that doesn't change the behavior.
+
+Let's say that we're working on adding the ability for multiple accordion
+elements to be opened at once, so we're changing our internal state from
+`openIndex` to `openIndexes`:
 
 ```diff
 class Accordion extends React.Component {
@@ -184,9 +201,9 @@ our test:
 })
 ```
 
-The takeaway: Tests which test implementation details can give you a false
+The takeaway: **Tests which test implementation details can give you a false
 negative when you refactor your code. This leads to brittle and frustrating
-tests that seem to break anytime you so much as look at the code.
+tests that seem to break anytime you so much as look at the code.**
 
 ### False positives
 
@@ -245,8 +262,10 @@ Let's check that out now!
 
 ```jsx
 // __tests__/accordion.rtl.js
+import '@testing-library/jest-dom/extend-expect'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import Accordion from '../accordion'
 
 test('can open accordion items to see the contents', () => {
@@ -255,17 +274,15 @@ test('can open accordion items to see the contents', () => {
     title: 'Favorite Footware',
     contents: 'Flipflops are the best',
   }
-  const {getByText, queryByText} = render(
-    <Accordion items={[hats, footware]} />,
-  )
+  render(<Accordion items={[hats, footware]} />)
 
-  expect(getByText(hats.contents)).toBeInTheDocument()
-  expect(queryByText(footware.contents)).toBeNull()
+  expect(screen.getByText(hats.contents)).toBeInTheDocument()
+  expect(screen.queryByText(footware.contents)).not.toBeInTheDocument()
 
-  fireEvent.click(getByText(footware.title))
+  userEvent.click(screen.getByText(footware.title))
 
-  expect(getByText(footware.contents)).toBeInTheDocument()
-  expect(queryByText(hats.contents)).toBeNull()
+  expect(screen.getByText(footware.contents)).toBeInTheDocument()
+  expect(screen.queryByText(hats.contents)).not.toBeInTheDocument()
 })
 ```
 
@@ -273,10 +290,9 @@ Sweet! A single test that verifies all the behavior really well. And this test
 passes whether my state is called `openIndex`, `openIndexes`, or `tacosAreTasty`
 🌮. Nice! Got rid of that false negative! And if I wire up my click handler
 incorrectly, this test will fail. Sweet, got rid of that false positive too! And
-I didn't have to memorize any list of rules or install a bunch of annoying
-ESLint plugins. I just use the tool in the typical usage, and I get a test that
-actually can give me confidence my accordion is working as the user wants it
-too.
+I didn't have to memorize any list of rules. I just use the tool in the
+idiomatic usage, and I get a test that actually can give me confidence my
+accordion is working as the user wants it too.
 
 ### So... What are implementation details then?
 
@@ -301,10 +317,10 @@ are passed, and the rendered output.
 
 This is precisely what the
 [React Testing Library](https://github.com/testing-library/react-testing-library)
-test does. It passes fake props to the Accordion, then it interacts with the
-rendered output by querying the output for the contents that will be displayed
-to the user (or ensuring that it wont be displayed) and clicking the buttons
-that are rendered.
+test does. We give it our own React element of the Accordion component with our
+fake props, then we interact with the rendered output by querying the output for
+the contents that will be displayed to the user (or ensuring that it wont be
+displayed) and clicking the buttons that are rendered.
 
 Now consider the enzyme test. With enzyme, we access the `state` of `openIndex`.
 This is not something that either of our users care about directly. They don't
@@ -326,20 +342,29 @@ that the application code works for the production users._
 
 > Read more about this in [Avoid the Test User](/blog/avoid-the-test-user).
 
-Oh, and [React Hooks](https://reactjs.org/hooks) got you all excited? If you
-rewrite that accordion component to use React hooks, the enzyme test fails
-terribly, while the
-[React Testing Library](https://github.com/testing-library/react-testing-library)
-test continues to work.
+## So, what about hooks
+
+Well, as it turns out,
+[enzyme still has a lot of trouble with hooks](https://github.com/enzymejs/enzyme/issues/2263).
+Turns out when you're testing implementation details, a change in the
+implementation has a big impact on your tests. This is a big bummer because if
+you're migrating class components to function components with hooks, then your
+tests can't help you know that you didn't break anything in the process.
+
+React Testing Library on the other hand? It works either way. Check the
+codesandbox link at the end to see it in action. I like to call tests you write
+with React Testing Library:
+
+> Implementation detail free and refactor friendly.
 
 ![happy goats](./images/0.gif)
 
 ### Conclusion
 
 So how do you avoid testing implementation details? Using the right tools is a
-good start. A few weeks ago I sent this process for how to know what to test,
-following this process helps you have the right mindset when testing and you
-will naturally avoid implementation details:
+good start. Here's a process for how to know what to test. Following this
+process helps you have the right mindset when testing and you will naturally
+avoid implementation details:
 
 1.  What part of your untested codebase would be really bad if it broke? (The
     checkout process)
@@ -364,5 +389,4 @@ P.S. If you'd like to play around with all this,
 [here's a codesandbox](https://codesandbox.io/s/rlnw1r5nxo).
 
 P.S.P.S. As an exercise for you... What happens to that second enzyme test if I
-change the name of the `AccordionContents` component? {insert biggest eye roll
-ever}
+change the name of the `AccordionContents` component?
