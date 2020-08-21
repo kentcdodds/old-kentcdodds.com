@@ -1,8 +1,6 @@
 /search q=:q                                                            /blog?q=:q
 /search                                                                 /blog
 
-# no idea why, but the gatsby redirect doesn't always work right
-
 /blog/always-use-memo-your-context-value                                /blog/how-to-optimize-your-context-value
 /blog/always-use-memo-your-context-value/                               /blog/how-to-optimize-your-context-value
 /blog/moist-programming                                                 /blog/aha-programming
@@ -19,6 +17,8 @@
 /podcast                                                                /chats-with-kent-podcast
 /blog/state-colocation-will-make-your-app-faster                        /blog/state-colocation-will-make-your-react-app-faster
 /blog/why-your-team-needs-testing-java-script-com                       /blog/why-your-team-needs-testing-javascript-com
+/cohorts                                                                /clubs
+/learning-clubs                                                         /clubs
 
 # Joel whoopsies
 /chats-with-kent-podcast/seasons/01/episodes/01                         /chats-with-kent-podcast/seasons/01/episodes/growing-your-skills-and-career-through-teaching-with-ali-spittel
