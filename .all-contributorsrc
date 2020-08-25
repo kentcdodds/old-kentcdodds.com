@@ -1458,6 +1458,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "leettaylor",
+      "name": "Lee Taylor",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/48020564?v=4",
+      "profile": "https://www.leetaylor.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
