@@ -218,6 +218,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://adamtuttle.codes"><img src="https://avatars2.githubusercontent.com/u/46990?v=4" width="100px;" alt=""/><br /><sub><b>Adam Tuttle</b></sub></a><br /><a href="#content-atuttle" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.leetaylor.dev"><img src="https://avatars2.githubusercontent.com/u/48020564?v=4" width="100px;" alt=""/><br /><sub><b>Lee Taylor</b></sub></a><br /><a href="#content-leettaylor" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/brookslybrand"><img src="https://avatars3.githubusercontent.com/u/12396812?v=4" width="100px;" alt=""/><br /><sub><b>Brooks Lybrand</b></sub></a><br /><a href="#content-brookslybrand" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->

@@ -1467,6 +1467,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "brookslybrand",
+      "name": "Brooks Lybrand",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12396812?v=4",
+      "profile": "https://github.com/brookslybrand",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
