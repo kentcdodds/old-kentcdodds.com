@@ -47,13 +47,13 @@ export default [
     `,
   },
   {
-    title: 'Keynote: Consume ➡️ Build ➡️ Teach',
+    title: 'Consume ➡️ Build ➡️ Teach',
     resources: [],
     tags: [],
     deliveries: [
       {
         event: '[React Summit](https://reactsummit.com/)',
-        date: '2020-09-11',
+        date: '2020-10-15',
       },
     ],
     description: `
@@ -435,6 +435,10 @@ export default [
       {
         event: '[ByteConf](https://byteconf.com)',
         date: '2018-08-31',
+      },
+      {
+        event: 'YYC Dev',
+        date: '2020-09-15',
       },
     ],
     description: `
