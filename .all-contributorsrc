@@ -1476,6 +1476,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "willworth",
+      "name": "Will Worth",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4967253?v=4",
+      "profile": "http://willworth.dev/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
