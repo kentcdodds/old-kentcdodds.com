@@ -45,15 +45,15 @@ your team down.
 
 The `react-testing-library` is a very light-weight solution for testing React
 components. It provides light utility functions on top of `react-dom` and
-`react-dom/test-utils`, in a way that encourages better testing practices. It's
+`react-dom/test-utils`, in a way that encourages better testing practices. Its
 primary guiding principle is:
 
 https://twitter.com/kentcdodds/status/977018512689455106
 
 So rather than dealing with instances of rendered react components, your tests
 will work with actual DOM nodes. The utilities this library provides facilitate
-querying the DOM in the same way the user would. Finding for elements by their
-label text (just like a user would), finding links and buttons from their text
+querying the DOM in the same way the user would. Finding form elements by their
+label text (just like a user would), finding links and buttons by their text
 (like a user would). It also exposes a recommended way to find elements by a
 `data-testid` as an "escape hatch" for elements where the text content and label
 do not make sense or is not practical.
@@ -67,10 +67,10 @@ This library is a replacement for [enzyme](http://airbnb.io/enzyme). While you
 _can_ follow these guidelines using enzyme itself, enforcing this is harder
 because of all the extra utilities that enzyme provides (utilities which
 facilitate testing implementation details). Read more about this in
-[the FAQ](https://github.com/testing-library/react-testing-library/blob/master/README.md#faq).
+[the FAQ](https://testing-library.com/docs/react-testing-library/faq).
 
 Also, while the React Testing Library is intended for react-dom, you can use
-[React Native Testing Library](https://testing-library.com/docs/native-testing-library/intro)
+[React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro)
 which has a very similar API.
 
 **What this library is not**:
@@ -109,8 +109,8 @@ function HiddenMessage({children}) {
 export default HiddenMessage
 
 // __tests__/hidden-message.js
-// these imports are something you'd normally configure Jest to import for you
-// automatically. Learn more in the setup docs: https://testing-library.com/docs/react-testing-library/setup#cleanup
+// These imports are something you'd normally configure Jest to import for you automatically.
+// Learn more in the setup docs: https://testing-library.com/docs/react-testing-library/setup#skipping-auto-cleanup
 import '@testing-library/jest-dom/extend-expect'
 // NOTE: jest-dom adds handy assertions to Jest and is recommended, but not required
 
