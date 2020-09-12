@@ -8,9 +8,13 @@ categories:
   - 'react'
 keywords:
   - 'react'
+  - 'state'
   - 'javascript'
   - 'redux'
   - 'mobx'
+  - 'recoil'
+  - 'react query'
+  - 'jotai'
 banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Rene Böhmer](https://unsplash.com/photos/YeUVDKZWSZ4)'
 ---
@@ -469,14 +473,19 @@ performance issues with state in React context:
    store, so a single update to any part of state does NOT trigger an update to
    every component in your app.
 2. [Optimize your context provider](/blog/how-to-use-react-context-effectively)
-3. Bring in [recoil](https://recoiljs.org/)
+3. Bring in [jotai](https://github.com/react-spring/jotai)
 
 There it is again, another recommendation for a library. It's true, there are
 _some_ use cases for which React's built-in state management abstractions are
-not well suited. Of all the available abstractions, recoil is the most
-promising for those use cases. If you're curious what those use cases are, the
-types of problems recoil solves well are described in
+not well suited. Of all the available abstractions, jotai is the most promising
+for those use cases. If you're curious what those use cases are, the types of
+problems jotai solves well are actually really well described in
 [Recoil: State Management for Today's React - Dave McCabe aka @mcc_abe at @ReactEurope 2020](https://www.youtube.com/watch?v=_ISAA_Jt9kI).
+Recoil and jotai are very similar (and solve the same types of problems). But
+based on my (limited) experience with them, I prefer jotai.
+
+In any case, _most_ apps won't need an atomic state management tool like recoil
+or jotai.
 
 ## Conclusion
 
