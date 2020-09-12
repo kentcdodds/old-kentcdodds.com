@@ -17,6 +17,9 @@ import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
 import get from 'lodash/get'
 
+// to add back workshop tickets check to the page, check this commit where
+// that was removed: c94057d
+
 export default function PostPage({data: {site, mdx}}) {
   const {
     isWriting,
