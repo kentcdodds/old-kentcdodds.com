@@ -223,6 +223,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://willworth.dev/"><img src="https://avatars2.githubusercontent.com/u/4967253?v=4" width="100px;" alt=""/><br /><sub><b>Will Worth</b></sub></a><br /><a href="#content-willworth" title="Content">🖋</a></td>
     <td align="center"><a href="https://glumac.me"><img src="https://avatars0.githubusercontent.com/u/31325167?v=4" width="100px;" alt=""/><br /><sub><b>Nemanja Glumac</b></sub></a><br /><a href="#content-nemanjaglumac" title="Content">🖋</a></td>
     <td align="center"><a href="https://nicknisi.com"><img src="https://avatars1.githubusercontent.com/u/293805?v=4" width="100px;" alt=""/><br /><sub><b>Nick Nisi</b></sub></a><br /><a href="#content-nicknisi" title="Content">🖋</a></td>
+    <td align="center"><a href="http://t.me/ipovos"><img src="https://avatars0.githubusercontent.com/u/6066305?v=4" width="100px;" alt=""/><br /><sub><b>Victor Osipov</b></sub></a><br /><a href="#content-ipovos" title="Content">🖋</a></td>
   </tr>
 </table>
 

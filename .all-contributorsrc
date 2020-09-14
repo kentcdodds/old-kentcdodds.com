@@ -1503,6 +1503,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ipovos",
+      "name": "Victor Osipov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6066305?v=4",
+      "profile": "http://t.me/ipovos",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
