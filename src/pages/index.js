@@ -187,7 +187,7 @@ export default function Index({data: {allMdx}}) {
       <Container>
         <Card
           big
-          backgroundColor={theme.colors.purple}
+          backgroundColor={theme.colors.red}
           title="KCD Community on Discord"
           description="Come join us and make connections, share ideas, and use software to make the world a better place."
           image={devtipsImg}
@@ -204,7 +204,7 @@ export default function Index({data: {allMdx}}) {
           `}
         >
           <Card
-            backgroundColor={theme.colors.red}
+            backgroundColor={theme.colors.purple}
             title="Workshops"
             image={workshopsImg}
             link="/workshops"
