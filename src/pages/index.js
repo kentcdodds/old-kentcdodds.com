@@ -186,11 +186,11 @@ export default function Index({data: {allMdx}}) {
       <Container>
         <Card
           big
-          backgroundColor={theme.colors.red}
-          title="DevTips"
-          description="My YouTube channel where I livestream every weekday about Web Development. Come join me and learn something new."
+          backgroundColor={theme.colors.purple}
+          title="KCD Community on Discord"
+          description="Come join us and make connections, share ideas, and use software to make the world a better place."
           image={devtipsImg}
-          link="http://kcd.im/devtips"
+          link="/discord"
         />
         <div
           css={css`
@@ -203,7 +203,7 @@ export default function Index({data: {allMdx}}) {
           `}
         >
           <Card
-            backgroundColor={theme.colors.purple}
+            backgroundColor={theme.colors.red}
             title="Workshops"
             image={workshopsImg}
             link="/workshops"
@@ -215,10 +215,10 @@ export default function Index({data: {allMdx}}) {
             link="/talks"
           />
           <Card
-            title="3 Minutes with Kent"
+            title="Chats with Kent"
             backgroundColor={theme.colors.yellow}
             image={minutesImg}
-            link="https://www.briefs.fm/3-minutes-with-kent"
+            link="/podcast"
           />
         </div>
       </Container>
