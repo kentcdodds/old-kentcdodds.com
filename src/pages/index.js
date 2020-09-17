@@ -90,6 +90,7 @@ const Card = ({
       margin-bottom: ${big ? '20px' : '0'};
       img {
         transition: ${theme.transition.ease};
+        flex-shrink: 0;
       }
       @media (hover: hover) {
         :hover:not(.touch) {
