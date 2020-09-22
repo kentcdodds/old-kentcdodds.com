@@ -225,19 +225,28 @@ function Search(props) {
     })
   }
 
+  function handlePreventSubmit(event) {
+    // the form is used only to enable https://support.mozilla.org/en-US/kb/how-search-from-address-bar
+    // we want to prevent an actual submit (page reload) when pressing Enter
+    event.preventDefault()
+  }
+
   return (
     <div>
       <div css={{maxWidth: 500, margin: 'auto'}}>
         <div css={{position: 'relative'}}>
-          <input
-            css={{width: '100%', paddingRight: 50}}
-            onChange={event => setSearch(event.target.value)}
-            type="search"
-            placeholder="Search Blogposts"
-            aria-label="Search Blogposts"
-            value={search}
-            autoFocus
-          />
+          <form action="/blog" method="GET" onSubmit={handlePreventSubmit}>
+            <input
+              name="q" /* the GET query parameter in https://kentcdodds.com/blog/?q=test */
+              css={{width: '100%', paddingRight: 50}}
+              onChange={event => setSearch(event.target.value)}
+              type="search"
+              placeholder="Search Blogposts"
+              aria-label="Search Blogposts"
+              value={search}
+              autoFocus
+            />
+          </form>
           <div
             css={{
               position: 'absolute',
