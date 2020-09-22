@@ -305,7 +305,7 @@ properly (something the shallow rendering example was _incapable_ of doing).
 ```jsx
 import React from 'react'
 import {CSSTransition} from 'react-transition-group'
-import {render, fireEvent} from '@testing-library/react'
+import {render, screen, fireEvent} from '@testing-library/react'
 import {HiddenMessage} from '../hidden-message'
 
 // NOTE: you do NOT have to do this in every test.
@@ -318,8 +318,8 @@ jest.mock('react-transition-group', () => {
 })
 
 test('you can mock things with jest.mock', () => {
-  const {getByText, queryByText} = render(<HiddenMessage initialShow={true} />)
-  const toggleButton = getByText(/toggle/i)
+  render(<HiddenMessage initialShow={true} />)
+  const toggleButton = screen.getByText(/toggle/i)
 
   const context = expect.any(Object)
   const children = expect.any(Object)
@@ -329,13 +329,13 @@ test('you can mock things with jest.mock', () => {
     {in: true, ...defaultProps},
     context,
   )
-  expect(getByText(/hello world/i)).not.toBeNull()
+  expect(screen.getByText(/hello world/i)).not.toBeNull()
 
   CSSTransition.mockClear()
 
   fireEvent.click(toggleButton)
 
-  expect(queryByText(/hello world/i)).toBeNull()
+  expect(screen.queryByText(/hello world/i)).toBeNull()
   expect(CSSTransition).toHaveBeenCalledWith(
     {in: false, ...defaultProps},
     context,
