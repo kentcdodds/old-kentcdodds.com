@@ -269,7 +269,7 @@ function setup(overrides = {}) {
         Authorization: 'Bearer TEST_TOKEN',
       }[name]
     },
-    ...overrides
+    ...overrides,
   }
 
   const res = {
@@ -337,22 +337,22 @@ the `setup` function here. Here's a simple example:
 
 ```jsx
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import LoginForm from '../login-form'
 
 function renderLoginForm(props) {
-  const utils = render(<LoginForm {...props} />)
-  const usernameInput = utils.getByLabelText(/username/i)
-  const passwordInput = utils.getByLabelText(/password/i)
-  const submitButton = utils.getByText(/submit/i)
+  render(<LoginForm {...props} />)
+  const usernameInput = screen.getByLabelText(/username/i)
+  const passwordInput = screen.getByLabelText(/password/i)
+  const submitButton = screen.getByText(/submit/i)
   return {
-    ...utils,
     usernameInput,
     passwordInput,
     submitButton,
-    changeUsername: value => fireEvent.change(usernameInput, {target: {value}}),
-    changePassword: value => fireEvent.change(passwordInput, {target: {value}}),
-    submitForm: () => fireEvent.click(submitButton),
+    changeUsername: value => userEvent.type(usernameInput, value),
+    changePassword: value => userEvent.type(passwordInput, value),
+    submitForm: () => userEvent.click(submitButton),
   }
 }
 
