@@ -1,0 +1,158 @@
+---
+slug: 'one-legit-case-to-ignore-react-hooks-exhaustive-deps'
+title: 'One legit case to ignore react-hooks/exhaustive-deps'
+date: '2020-09-24'
+author: 'Kent C. Dodds'
+description:
+  '_A situation I came across where I could ignore the
+  react-hooks/exhaustive-deps rule._'
+categories:
+  - 'react'
+keywords:
+  - 'javascript'
+  - 'react'
+  - 'react hooks'
+  - 'useEffect'
+  - 'useMemo'
+  - 'useCallback'
+  - 'dependency array'
+banner: './images/banner.jpg'
+bannerCredit: 'Photo by [Joel Muniz](https://unsplash.com/photos/Y6CT3a-RJ68)'
+---
+
+In the [EpicReact.Dev](https://epicreact.dev) curriculum, we build
+[a React App](https://github.com/kentcdodds/bookshelf). In that app, we use
+react-query's `useMutate` hook to perform an asynchronous HTTP request.
+
+There's one interaction in the app that requires a debounce behavior:
+
+![User types in the notes text area. A few moments after they're finished, a loading spinner appears for a moment](./images/notes-debounce.gif)
+
+We don't want to have a "save" button for the notes textarea, but we also want
+to wait until the user has finished typing out their notes before we actually
+attempt the save.
+
+[Here's the code for that interaction](https://github.com/kentcdodds/bookshelf/blob/209d2b69203d6c43176d0d65a807560aeae52097/src/screens/book.js#L105-L148):
+
+```javascript {10}
+// ...
+import debounceFn from 'debounce-fn'
+// ...
+
+function NotesTextarea({listItem}) {
+  const [mutate, {error, isError, isLoading}] = useUpdateListItem()
+  // this is one of the *very* rare exceptions where we know we're not
+  // going to end up in a stale closure, so we'll ignore exhaustive deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedMutate = React.useCallback(debounceFn(mutate, {wait: 300}), [])
+
+  function handleNotesChange(e) {
+    debouncedMutate({id: listItem.id, notes: e.target.value})
+  }
+
+  return (
+    <React.Fragment>
+      <div>
+        <label
+          htmlFor="notes"
+          css={{
+            display: 'inline-block',
+            marginRight: 10,
+            marginTop: '0',
+            marginBottom: '0.5rem',
+            fontWeight: 'bold',
+          }}
+        >
+          Notes
+        </label>
+        {isError ? (
+          <ErrorMessage
+            variant="inline"
+            error={error}
+            css={{fontSize: '0.7em'}}
+          />
+        ) : null}
+        {isLoading ? <Spinner /> : null}
+      </div>
+      <Textarea
+        id="notes"
+        defaultValue={listItem.notes}
+        onChange={handleNotesChange}
+        css={{width: '100%', minHeight: 300}}
+      />
+    </React.Fragment>
+  )
+}
+```
+
+This blog post is about this line:
+
+```javascript
+const debouncedMutate = React.useCallback(debounceFn(mutate, {wait: 300}), [])
+```
+
+The warning I get from `react-hooks/exhaustive-deps` on this line is:
+
+> React Hook useCallback received a function whose dependencies are unknown.
+> Pass an inline function instead.
+
+So it wants me to rewrite this to:
+
+```javascript
+const debouncedMutate = React.useCallback(debounceFn(mutate, {wait: 300}), [])
+```
+
+## Never ignore react-hooks/exhaustive-deps\*
+
+_\*without really good reason_
+
+I want to make it clear that 99% of the time when the ESLint plugin is warning
+you about missing dependencies, it's saving you from a bug. Let me show you a
+quick example of a bug you could run into when you ignore this rule:
+
+```javascript {6-9}
+function DogInfo({dogId}) {
+  const [dog, setDog] = React.useState(null)
+
+  const getDogInfo = React.useCallback(
+    () => fetchDog(dogId).then(d => setDog(d)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [], // 😱
+  )
+
+  React.useEffect(() => {
+    getDogInfo()
+  }, [getDogInfo])
+
+  return <div>{/* render dog info */}</div>
+}
+```
+
+First off, I'd recommend writing code like this in the first place. Put the
+`getDogInfo` function _inside_ the `useEffect` callback and then you don't need
+to worry about memoization.
+
+But let's assume you don't want to do that for some reason. You've memoized
+`getDogInfo` because you have to include it in the `useEffect` dependency array
+and you know if it's not memoized that'll result in a "runaway `useEffect`." But
+then `react-hooks/exhaustive-deps` got mad at you for having `[]` as the
+dependency array for `useCallback`.
+
+You might want to leave it as `[]` because you don't want the `useEffect` to get
+called again, but you only want to get the dog's info on "mount".
+
+What you need to remember is that `useEffect` has nothing to do with component
+lifecycle and everything to do with synchronizing side-effects. So instead of
+thinking about "mount" think about the state of the app (`dogId` in this case)
+and consider that if the `dogId` were to change, then our side-effect (getting
+the dog's information) would fall out of sync with the state of our app (the
+`dogId`). Long story short, this is a bug. And the eslint rule is here to
+protect you from bugs like this.
+
+I could think of _so many_ examples where ignoring this rule would cause a bug.
+Just obey the rule... _almost_ all the time.
+
+## When it's ok to break the rule
+
+It's ok to break the rule if you _know_ that the state of the world won't fall
+out of sync with the state of your app.
