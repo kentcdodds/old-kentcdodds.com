@@ -97,8 +97,10 @@ Here's a test suite that resembles the kind of testing I've seen over the years.
 
 ```jsx
 // __tests__/login.js
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import Login from '../login'
 
 describe('Login', () => {
@@ -114,10 +116,10 @@ describe('Login', () => {
     user = {username: 'michelle', password: 'smith'}
     utils = render(<Login onSubmit={handleSubmit} />)
     changeUsernameInput = value =>
-      fireEvent.change(utils.getByLabelText(/username/i), {target: {value}})
+      userEvent.type(utils.getByLabelText(/username/i), value)
     changePasswordInput = value =>
-      fireEvent.change(utils.getByLabelText(/password/i), {target: {value}})
-    clickSubmit = () => fireEvent.click(utils.getByText(/submit/i))
+      userEvent.type(utils.getByLabelText(/password/i), value)
+    clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
   })
 
   describe('when username and password is provided', () => {
@@ -255,8 +257,10 @@ abstraction as possible. Check this out:
 
 ```jsx
 // __tests__/login.js
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import Login from '../login'
 
 test('calls onSubmit with the username and password when submit is clicked', () => {
@@ -264,13 +268,9 @@ test('calls onSubmit with the username and password when submit is clicked', () 
   const {getByLabelText, getByText} = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
 
-  fireEvent.change(getByLabelText(/username/i), {
-    target: {value: user.username},
-  })
-  fireEvent.change(getByLabelText(/password/i), {
-    target: {value: user.password},
-  })
-  fireEvent.click(getByText(/submit/i))
+  userEvent.type(getByLabelText(/username/i), user.username)
+  userEvent.type(getByLabelText(/password/i), user.password)
+  userEvent.click(getByText(/submit/i))
 
   expect(handleSubmit).toHaveBeenCalledTimes(1)
   expect(handleSubmit).toHaveBeenCalledWith(user)
@@ -282,8 +282,8 @@ test('shows an error message when submit is clicked and no username is provided'
     <Login onSubmit={handleSubmit} />,
   )
 
-  fireEvent.change(getByLabelText(/password/i), {target: {value: 'anything'}})
-  fireEvent.click(getByText(/submit/i))
+  userEvent.type(getByLabelText(/password/i), 'anything')
+  userEvent.click(getByText(/submit/i))
 
   const errorMessage = getByRole('alert')
   expect(errorMessage).toHaveTextContent(/username is required/i)
@@ -296,8 +296,8 @@ test('shows an error message when submit is clicked and no password is provided'
     <Login onSubmit={handleSubmit} />,
   )
 
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'anything'}})
-  fireEvent.click(getByText(/submit/i))
+  userEvent.type(getByLabelText(/username/i), 'anything')
+  userEvent.click(getByText(/submit/i))
 
   const errorMessage = getByRole('alert')
   expect(errorMessage).toHaveTextContent(/password is required/i)
@@ -335,8 +335,10 @@ assignments again and we'd like to avoid that. How else could we share code
 between our tests? AHA! We could use functions!
 
 ```jsx
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import Login from '../login'
 
 // here we have a bunch of setup functions that compose together for our test cases
@@ -347,11 +349,9 @@ function setup() {
   const handleSubmit = jest.fn()
   const utils = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
-  const changeUsernameInput = value =>
-    fireEvent.change(utils.getByLabelText(/username/i), {target: {value}})
-  const changePasswordInput = value =>
-    fireEvent.change(utils.getByLabelText(/password/i), {target: {value}})
-  const clickSubmit = () => fireEvent.click(utils.getByText(/submit/i))
+  const changeUsernameInput = value => userEvent.type(utils.getByLabelText(/username/i), value)
+  const changePasswordInput = value => userEvent.type(utils.getByLabelText(/password/i), value)
+  const clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
   return {
     ...utils,
     handleSubmit,
@@ -453,17 +453,17 @@ and if you don't cleanup after each test, then your tests can run over
 themselves:
 
 ```jsx
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import Login from '../login'
 
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
-  fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'ilovetwix'},
-  })
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
+  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
   // more test here
 })
 
@@ -474,7 +474,7 @@ test('example 2', () => {
   // entire document, and because we didn't cleanup after the previous test
   // we'll get an error indicating that RTL found more than one field with the
   // label "username"
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
   // more test here
 })
 ```
@@ -482,18 +482,18 @@ test('example 2', () => {
 Fixing this is pretty simple, you need to execute the `cleanup` method from
 `@testing-library/react` after each test.
 
-```jsx {2,13,21}
+```jsx {1,13,21}
+import {cleanup, render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent, cleanup} from '@testing-library/react'
+
 import Login from '../login'
 
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
-  fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'ilovetwix'},
-  })
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
+  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
   // more test here
   cleanup()
 })
@@ -501,7 +501,7 @@ test('example 1', () => {
 test('example 2', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
   // more test here
   cleanup()
 })
@@ -510,16 +510,14 @@ test('example 2', () => {
 However, if you _don't_ use `afterEach` to do this then if a test fails your
 cleanup wont run, like this:
 
-```jsx {5-9}
+```jsx {5-7}
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
   // 💣 the following typo will result in a error thrown:
   //   "no field with the label matching passssword"
-  fireEvent.change(getByLabelText(/passssword/i), {
-    target: {value: 'ilovetwix'},
-  })
+  userEvent.type(getByLabelText(/passssword/i), 'ilovetwix')
   // more test here
   cleanup()
 })
@@ -533,8 +531,10 @@ So instead, you should use `afterEach` and that will ensure that even if your
 test fails, you can cleanup:
 
 ```jsx
+import {cleanup, render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent, cleanup} from '@testing-library/react'
+
 import Login from '../login'
 
 afterEach(() => cleanup())
@@ -542,23 +542,21 @@ afterEach(() => cleanup())
 test('example 1', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
-  fireEvent.change(getByLabelText(/password/i), {
-    target: {value: 'ilovetwix'},
-  })
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
+  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
   // more test here
 })
 
 test('example 2', () => {
   const handleSubmit = jest.fn()
   const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  fireEvent.change(getByLabelText(/username/i), {target: {value: 'kentcdodds'}})
+  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
   // more test here
 })
 ```
 
 > Even better, with React Testing Library,
-> [`Cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup)
+> [`cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup)
 > is called after each test automatically by default. Learn more
 > [in the docs](https://testing-library.com/docs/react-testing-library/setup#skipping-auto-cleanup)
 
