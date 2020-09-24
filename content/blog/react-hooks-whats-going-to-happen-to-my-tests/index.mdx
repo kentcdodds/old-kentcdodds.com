@@ -35,8 +35,8 @@ test('setOpenIndex sets the open index state properly', () => {
 
 That enzyme test works when `Accordion` is a class component where the
 `instance` actually exists, but there's no concept of a component "instance"
-when your components are function components. So doing things like `.instance()`
-or `.state()` wont work when you refactor your components from class components
+when your components are function components. So doing things like `.instance()`
+or `.state()` wont work when you refactor your components from class components
 with state/lifecycles to function components with hooks.
 
 So if you were to refactor the `Accordion` component to a function component,
@@ -69,16 +69,16 @@ use hooks:
 
 ```jsx
 // __tests__/counter.js
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
-import Counter from '../counter.js'
 
 test('counter increments the count', () => {
-  const {container} = render(<Counter />)
-  const button = container.firstChild
-  expect(button.textContent).toBe('0')
-  fireEvent.click(button)
-  expect(button.textContent).toBe('1')
+  render(<Counter />)
+  const button = screen.getByRole('button')
+  expect(button).toHaveTextContent('0')
+  userEvent.click(button)
+  expect(button).toHaveTextContent('1')
 })
 ```
 
@@ -99,7 +99,7 @@ export default Counter
 ```
 
 Guess what! Because our tests avoided implementation details, our hooks are
-passing! How neat is that!? :)
+passing! How neat is that!? :)
 
 ### useEffect is not componentDidMount + componentDidUpdate + componentWillUnmount
 
@@ -184,29 +184,31 @@ implementation-details-free test would look like:
 
 ```jsx
 // __tests__/counter.js
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
-import Counter from '../counter.js'
+
+import Counter from '../counter'
 
 afterEach(() => {
   window.localStorage.removeItem('count')
 })
 
 test('counter increments the count', () => {
-  const {container} = render(<Counter />)
-  const button = container.firstChild
-  expect(button.textContent).toBe('0')
-  fireEvent.click(button)
-  expect(button.textContent).toBe('1')
+  render(<Counter />)
+  const button = screen.getByRole('button')
+  expect(button).toHaveTextContent('0')
+  userEvent.click(button)
+  expect(button).toHaveTextContent('1')
 })
 
 test('reads and updates localStorage', () => {
   window.localStorage.setItem('count', 3)
-  const {container, rerender} = render(<Counter />)
-  const button = container.firstChild
-  expect(button.textContent).toBe('3')
-  fireEvent.click(button)
-  expect(button.textContent).toBe('4')
+  render(<Counter />)
+  const button = screen.getByRole('button')
+  expect(button).toHaveTextContent('3')
+  userEvent.click(button)
+  expect(button).toHaveTextContent('4')
   expect(window.localStorage.getItem('count')).toBe('4')
 })
 ```
@@ -291,8 +293,9 @@ Here's how I would test this:
 ```jsx
 // __tests__/counter.js
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
-import Counter from '../counter.js'
+import {render} from '@testing-library/react'
+
+import Counter from '../counter'
 
 function renderCounter(props) {
   let utils
