@@ -16,8 +16,7 @@ bannerCredit:
   [Unsplash](https://unsplash.com/search/photos/alone)'
 ---
 
-The inspiration for this newsletter comes from seeing React tests that look like
-this:
+The inspiration for this blogpost comes from seeing React tests that look like this:
 
 ```jsx
 const utils = render(<Foo />)
@@ -38,10 +37,10 @@ the code, and increase the confidence your tests and provide as well.
 Let's take this simple component as an example:
 
 ```jsx
-import React from 'react'
+import React, {useRef} from 'react'
 
 function Counter(props) {
-  const initialProps = React.useRef(props).current
+  const initialProps = useRef(props).current
   const {initialCount = 0, maxClicks = 3} = props
 
   const [count, setCount] = React.useState(initialCount)
@@ -67,15 +66,17 @@ Here's a rendered version of the component:
 
 ![a rendered version of the component](./images/0.gif)
 
-### Our first test suite
+### Our first test suite
 
 Let's start with a test suite like the one that inspired this post:
 
 ```jsx
 // gives us the toHaveTextContent/toHaveAttribute matchers
 import '@testing-library/jest-dom/extend-expect'
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import {Counter} from '../counter'
 
 const {getByText} = render(<Counter maxClicks={4} initialCount={3} />)
@@ -86,12 +87,12 @@ test('the counter is initialized to the initialCount', () => {
 })
 
 test('when clicked, the counter increments the click', () => {
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveAttribute('disabled')
 })
 
@@ -100,20 +101,20 @@ test(`the counter button does not increment the count when clicked when it's hit
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
-  fireEvent.click(getByText(/reset/i))
+  userEvent.click(getByText(/reset/i))
   expect(counterButton).toHaveTextContent('3')
 })
 ```
 
 > First of all, as of
 > [@testing-library/react@9.0.0](https://github.com/testing-library/react-testing-library/releases/tag/v9.0.0)
-> this style of testing wont even work properly, but let's imagine that it
+> this style of testing won't even work properly, but let's imagine that it
 > would.
 
 These tests give us 100% coverage of the component and verify exactly what they
 say they'll verify. The problem is that they share mutable state. What is the
 mutable state they're sharing? The component! One test clicks the counter button
-and the other tests rely on that fact to pass. If we were to delete (or `.skip`)
+and the other tests rely on that fact to pass. If we were to delete (or `.skip`)
 the test called "when clicked, the counter increments the click" it would break
 all the following tests:
 
@@ -131,8 +132,10 @@ So let's try something else and see how that changes things:
 
 ```jsx
 import '@testing-library/jest-dom/extend-expect'
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import {Counter} from '../counter'
 
 let getByText, counterButton
@@ -148,24 +151,24 @@ test('the counter is initialized to the initialCount', () => {
 })
 
 test('when clicked, the counter increments the click', () => {
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the counter button is disabled when it's hit the maxClicks`, () => {
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveAttribute('disabled')
 })
 
 test(`the counter button does not increment the count when clicked when it's hit the maxClicks`, () => {
-  fireEvent.click(counterButton)
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
-  fireEvent.click(counterButton)
-  fireEvent.click(getByText(/reset/i))
+  userEvent.click(counterButton)
+  userEvent.click(getByText(/reset/i))
   expect(counterButton).toHaveTextContent('3')
 })
 ```
@@ -195,8 +198,10 @@ Let's try again:
 
 ```jsx
 import '@testing-library/jest-dom/extend-expect'
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import {Counter} from '../counter'
 
 function renderCounter(props) {
@@ -212,7 +217,7 @@ test('the counter is initialized to the initialCount', () => {
 
 test('when clicked, the counter increments the click', () => {
   const {counterButton} = renderCounter()
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 
@@ -229,14 +234,14 @@ test(`the counter button does not increment the count when clicked when it's hit
     maxClicks: 4,
     initialCount: 4,
   })
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 
 test(`the reset button has been rendered and resets the count when it's hit the maxClicks`, () => {
   const {getByText, counterButton} = renderCounter()
-  fireEvent.click(counterButton)
-  fireEvent.click(getByText(/reset/i))
+  userEvent.click(counterButton)
+  userEvent.click(getByText(/reset/i))
   expect(counterButton).toHaveTextContent('3')
 })
 ```
@@ -247,7 +252,7 @@ does without having to worry about what hooks are happening within the test.
 This is a big win in the ability for you to be able to refactor, remove, or add
 to the tests.
 
-### Even better better
+### Even better better
 
 I like what we have now, but I think we need to take things one step further
 before I feel really happy about things. We've split our tests up by
@@ -260,8 +265,10 @@ more with the use case than the individual functionality?
 
 ```jsx
 import '@testing-library/jest-dom/extend-expect'
+import {render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
-import {render, fireEvent} from '@testing-library/react'
+
 import {Counter} from '../counter'
 
 test('allows clicks until the maxClicks is reached, then requires a reset', () => {
@@ -274,23 +281,23 @@ test('allows clicks until the maxClicks is reached, then requires a reset', () =
   expect(counterButton).toHaveTextContent('3')
 
   // when clicked, the counter increments the click
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 
   // the counter button is disabled when it's hit the maxClicks
   expect(counterButton).toHaveAttribute('disabled')
   // the counter button no longer increments the count when clicked.
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 
   // the reset button has been rendered and is clickable
-  fireEvent.click(getByText(/reset/i))
+  userEvent.click(getByText(/reset/i))
 
   // the counter is reset to the initialCount
   expect(counterButton).toHaveTextContent('3')
 
   // the counter can be clicked and increment the count again
-  fireEvent.click(counterButton)
+  userEvent.click(counterButton)
   expect(counterButton).toHaveTextContent('4')
 })
 ```
