@@ -118,11 +118,11 @@ mock:
    your tests?)
 
 ```javascript
-import React from 'react'
-import axiosMock from 'axios'
-import {render, generate, fireEvent, screen} from 'til-client-test-utils'
 import userEvent from '@testing-library/user-event'
-import {init as initAPI} from '../utils/api'
+import axiosMock from 'axios'
+import React from 'react'
+import {render, generate, screen} from 'til-client-test-utils'
+
 import App from '../app'
 
 test('login as an existing user', async () => {
@@ -136,8 +136,8 @@ test('login as an existing user', async () => {
 
   // fill out form
   const fakeUser = generate.loginForm()
-  userEvent.type(getByLabelText(/username/i), fakeUser.username)
-  userEvent.type(getByLabelText(/password/i), fakeUser.password)
+  userEvent.type(screen.getByLabelText(/username/i), fakeUser.username)
+  userEvent.type(screen.getByLabelText(/password/i), fakeUser.password)
 
   // submit form
   const {post} = axiosMock.__mock.instance
