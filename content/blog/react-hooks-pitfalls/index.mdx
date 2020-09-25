@@ -308,15 +308,15 @@ test('can open accordion items to see the contents', () => {
   }
   const items = [hats, footware]
   // using React Testing Library
-  const {getByText, queryByText} = render(<Accordion items={items} />)
+  render(<Accordion items={items} />)
 
-  expect(getByText(hats.contents)).toBeInTheDocument()
-  expect(queryByText(footware.contents)).toBeNull()
+  expect(screen.getByText(hats.contents)).toBeInTheDocument()
+  expect(screen.queryByText(footware.contents)).toBeNull()
 
-  fireEvent.click(getByText(footware.title))
+  userEvent.click(screen.getByText(footware.title))
 
-  expect(getByText(footware.contents)).toBeInTheDocument()
-  expect(queryByText(hats.contents)).toBeNull()
+  expect(screen.getByText(footware.contents)).toBeInTheDocument()
+  expect(screen.queryByText(hats.contents)).toBeNull()
 })
 ```
 
