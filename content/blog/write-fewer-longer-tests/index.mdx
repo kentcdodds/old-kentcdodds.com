@@ -204,8 +204,9 @@ Instead, I suggest that we combine the tests like so:
 
 ```jsx
 // ✅ This is an example of what to do
+import {render, screen, wait} from '@testing-library/react'
 import React from 'react'
-import {render, wait} from '@testing-library/react'
+
 import {getCourseInfo} from '../api'
 import Course from '../course'
 
@@ -232,22 +233,20 @@ test('course loads and renders the course information', async () => {
 
   getCourseInfo.mockResolvedValueOnce(buildCourse({title, subtitle, topics}))
 
-  const {getByRole, getByText, getAllByRole, findByRole} = render(
-    <Course courseId={courseId} />,
-  )
+  render(<Course courseId={courseId} />)
 
   expect(getCourseInfo).toHaveBeenCalledWith(courseId)
   expect(getCourseInfo).toHaveBeenCalledTimes(1)
 
-  const alert = getByRole('alert')
+  const alert = screen.getByRole('alert')
   expect(alert).toHaveTextContent(/loading/i)
 
-  const titleEl = await findByRole('heading')
+  const titleEl = await screen.findByRole('heading')
   expect(titleEl).toHaveTextContent(title)
 
-  expect(getByText(subtitle)).toBeInTheDocument()
+  expect(screen.getByText(subtitle)).toBeInTheDocument()
 
-  const topicElsText = getAllByRole('listitem').map(el => el.textContent)
+  const topicElsText = screen.getAllByRole('listitem').map(el => el.textContent)
   expect(topicElsText).toEqual(topics)
 })
 
@@ -257,12 +256,12 @@ test('an error is rendered if there is a problem getting course info', async () 
 
   getCourseInfo.mockRejectedValueOnce({message})
 
-  const {getByRole} = render(<Course courseId={courseId} />)
+  render(<Course courseId={courseId} />)
 
   expect(getCourseInfo).toHaveBeenCalledWith(courseId)
   expect(getCourseInfo).toHaveBeenCalledTimes(1)
 
-  const alert = getByRole('alert')
+  const alert = screen.getByRole('alert')
   expect(alert).toHaveTextContent(/loading/i)
 
   await wait(() => expect(alert).toHaveTextContent(message))
@@ -380,8 +379,8 @@ this problem:
 // 🛑 THIS IS AN EXAMPLE OF WHAT NOT TO DO...
 test('course shows loading screen', () => {
   getCourseInfo.mockResolvedValueOnce(buildCourse())
-  const {getByRole} = render(<Course courseId="123" />)
-  const alert = getByRole('alert')
+  render(<Course courseId="123" />)
+  const alert = screen.getByRole('alert')
   expect(alert).toHaveTextContent(/loading/i)
 })
 ```
@@ -406,8 +405,8 @@ There are three ways to fix this.
 test('course shows loading screen', async () => {
   const promise = Promise.resolve(buildCourse())
   getCourseInfo.mockImplementationOnce(() => promise)
-  const {getByRole} = render(<Course courseId="123" />)
-  const alert = getByRole('alert')
+  render(<Course courseId="123" />)
+  const alert = screen.getByRole('alert')
   expect(alert).toHaveTextContent(/loading/i)
   await act(() => promise)
 })
@@ -421,11 +420,10 @@ the DOM.
 
 ```jsx
 // 2. Use React Testing Library's `wait` utility
-// ⚠️ this is an ok way to solve this problem, but there's a better way, read on
 test('course shows loading screen', async () => {
   getCourseInfo.mockResolvedValueOnce(buildCourse())
-  const {getByRole} = render(<Course courseId="123" />)
-  const alert = getByRole('alert')
+  render(<Course courseId="123" />)
+  const alert = screen.getByRole('alert')
   expect(alert).toHaveTextContent(/loading/i)
   await wait()
 })
