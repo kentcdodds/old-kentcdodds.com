@@ -303,9 +303,11 @@ closely. In addition, it can verify that you're using `<CSSTransition />`
 properly (something the shallow rendering example was _incapable_ of doing).
 
 ```jsx
+import {render, screen} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import {CSSTransition} from 'react-transition-group'
-import {render, screen, fireEvent} from '@testing-library/react'
+
 import {HiddenMessage} from '../hidden-message'
 
 // NOTE: you do NOT have to do this in every test.
@@ -333,7 +335,7 @@ test('you can mock things with jest.mock', () => {
 
   CSSTransition.mockClear()
 
-  fireEvent.click(toggleButton)
+  userEvent.click(toggleButton)
 
   expect(screen.queryByText(/hello world/i)).toBeNull()
   expect(CSSTransition).toHaveBeenCalledWith(
