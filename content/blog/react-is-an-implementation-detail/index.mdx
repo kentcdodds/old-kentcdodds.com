@@ -51,14 +51,15 @@ from the course for testing a jQuery plugin with DOM Testing Library:
 
 ```js
 import '@testing-library/jest-dom/extend-expect'
+import {getQueriesForElement} from '@testing-library/dom'
+import userEvent from '@testing-library/user-event'
 import $ from 'jquery'
-import {getQueriesForElement, fireEvent} from '@testing-library/dom'
 
 $.fn.countify = function countify() {
-  this.html(`  
-    <div>  
-      <button>0</button>  
-    </div>  
+  this.html(`
+    <div>
+      <button>0</button>
+    </div>
   `)
   const $button = this.find('button')
   $button._count = 0
@@ -74,10 +75,10 @@ test('counter increments', () => {
   $(div).countify()
   const {getByText} = getQueriesForElement(div)
   const counter = getByText('0')
-  fireEvent.click(counter)
+  userEvent.click(counter)
   expect(counter).toHaveTextContent('1')
 
-  fireEvent.click(counter)
+  userEvent.click(counter)
   expect(counter).toHaveTextContent('2')
 })
 ```
