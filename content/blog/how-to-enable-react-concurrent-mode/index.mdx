@@ -83,7 +83,7 @@ ReactDOM.render(<App />, rootEl)
 
 To enable Concurrent Mode, you'll use a new
 [`createRoot`](https://reactjs.org/docs/concurrent-mode-reference.html#createroot)
-API:
+API (NOTE the `unstable_` prefix):
 
 ```jsx {6-8}
 import React from 'react'
@@ -92,7 +92,7 @@ import App from './app'
 
 const rootEl = document.getElementById('root')
 // ReactDOM.render(<App />, rootEl)
-const root = ReactDOM.createRoot(rootEl)
+const root = ReactDOM.unstable_createRoot(rootEl)
 root.render(<App />)
 ```
 
@@ -134,12 +134,9 @@ You can try refactoring one of your asynchronous interactions to suspense, or
 just try adding this to somewhere in your app:
 
 ```jsx
-const TRANSITION_CONFIG = {
-  timeoutMs: 3000, // 🐨 Play with this number a bit...
-}
 function SuspenseDemo() {
   const [greetingResource, setGreetingResource] = React.useState(null)
-  const [startTransition, isPending] = React.useTransition(TRANSITION_CONFIG)
+  const [startTransition, isPending] = React.unstable_useTransition()
 
   function handleSubmit(event) {
     event.preventDefault()
