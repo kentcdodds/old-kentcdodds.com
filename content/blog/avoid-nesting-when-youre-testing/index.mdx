@@ -349,8 +349,10 @@ function setup() {
   const handleSubmit = jest.fn()
   const utils = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
-  const changeUsernameInput = value => userEvent.type(utils.getByLabelText(/username/i), value)
-  const changePasswordInput = value => userEvent.type(utils.getByLabelText(/password/i), value)
+  const changeUsernameInput = value =>
+    userEvent.type(utils.getByLabelText(/username/i), value)
+  const changePasswordInput = value =>
+    userEvent.type(utils.getByLabelText(/password/i), value)
   const clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
   return {
     ...utils,
@@ -443,122 +445,6 @@ after it. If you try to put that code inline within your test, then a test
 failure would result in your cleanup not running which could then lead to other
 tests failing, ultimately resulting in a lot of error output that is harder to
 debug.
-
-> NOTE: This example was written before `@testing-library/react@9` which made
-> cleanup automatic. But the concept still applies and I didn't want to rewrite
-> the example 😅
-
-For example, React Testing Library will insert your component into the document,
-and if you don't cleanup after each test, then your tests can run over
-themselves:
-
-```jsx
-import {render} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import React from 'react'
-
-import Login from '../login'
-
-test('example 1', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
-  // more test here
-})
-
-test('example 2', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  // 💣 this will blow up because the `getByLabelText` is actually querying the
-  // entire document, and because we didn't cleanup after the previous test
-  // we'll get an error indicating that RTL found more than one field with the
-  // label "username"
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  // more test here
-})
-```
-
-Fixing this is pretty simple, you need to execute the `cleanup` method from
-`@testing-library/react` after each test.
-
-```jsx {1,13,21}
-import {cleanup, render} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import React from 'react'
-
-import Login from '../login'
-
-test('example 1', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
-  // more test here
-  cleanup()
-})
-
-test('example 2', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  // more test here
-  cleanup()
-})
-```
-
-However, if you _don't_ use `afterEach` to do this then if a test fails your
-cleanup wont run, like this:
-
-```jsx {5-7}
-test('example 1', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  // 💣 the following typo will result in a error thrown:
-  //   "no field with the label matching passssword"
-  userEvent.type(getByLabelText(/passssword/i), 'ilovetwix')
-  // more test here
-  cleanup()
-})
-```
-
-Because of this, the `cleanup` function in "example 1" will not run and then
-"example 2" wont run properly, so instead of only seeing 1 test failure, you'll
-see that all the tests failed and it'll make it much harder to debug.
-
-So instead, you should use `afterEach` and that will ensure that even if your
-test fails, you can cleanup:
-
-```jsx
-import {cleanup, render} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import React from 'react'
-
-import Login from '../login'
-
-afterEach(() => cleanup())
-
-test('example 1', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  userEvent.type(getByLabelText(/password/i), 'ilovetwix')
-  // more test here
-})
-
-test('example 2', () => {
-  const handleSubmit = jest.fn()
-  const {getByLabelText} = render(<Login onSubmit={handleSubmit} />)
-  userEvent.type(getByLabelText(/username/i), 'kentcdodds')
-  // more test here
-})
-```
-
-> Even better, with React Testing Library,
-> [`cleanup`](https://testing-library.com/docs/react-testing-library/api#cleanup)
-> is called after each test automatically by default. Learn more
-> [in the docs](https://testing-library.com/docs/react-testing-library/setup#skipping-auto-cleanup)
 
 In addition, sometimes there are definitely good use cases for `before*`, but
 they're normally matched with a cleanup that's necessary in an `after*`. Like
