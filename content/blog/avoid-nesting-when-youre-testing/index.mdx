@@ -97,29 +97,25 @@ Here's a test suite that resembles the kind of testing I've seen over the years.
 
 ```jsx
 // __tests__/login.js
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 
 import Login from '../login'
 
 describe('Login', () => {
-  let utils,
-    handleSubmit,
-    user,
-    changeUsernameInput,
-    changePasswordInput,
-    clickSubmit
+  let handleSubmit, user, changeUsernameInput, changePasswordInput, clickSubmit
 
   beforeEach(() => {
     handleSubmit = jest.fn()
     user = {username: 'michelle', password: 'smith'}
-    utils = render(<Login onSubmit={handleSubmit} />)
+    render(<Login onSubmit={handleSubmit} />)
+
     changeUsernameInput = value =>
-      userEvent.type(utils.getByLabelText(/username/i), value)
+      userEvent.type(screen.getByLabelText(/username/i), value)
     changePasswordInput = value =>
-      userEvent.type(utils.getByLabelText(/password/i), value)
-    clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
+      userEvent.type(screen.getByLabelText(/password/i), value)
+    clickSubmit = () => userEvent.click(screen.getByText(/submit/i))
   })
 
   describe('when username and password is provided', () => {
@@ -149,7 +145,7 @@ describe('Login', () => {
       let errorMessage
       beforeEach(() => {
         clickSubmit()
-        errorMessage = utils.getByRole('alert')
+        errorMessage = screen.getByRole('alert')
       })
 
       it('should show an error message', () => {
@@ -167,7 +163,7 @@ describe('Login', () => {
       let errorMessage
       beforeEach(() => {
         clickSubmit()
-        errorMessage = utils.getByRole('alert')
+        errorMessage = screen.getByRole('alert')
       })
 
       it('should show an error message', () => {
@@ -257,7 +253,7 @@ abstraction as possible. Check this out:
 
 ```jsx
 // __tests__/login.js
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 
@@ -265,12 +261,12 @@ import Login from '../login'
 
 test('calls onSubmit with the username and password when submit is clicked', () => {
   const handleSubmit = jest.fn()
-  const {getByLabelText, getByText} = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
+  render(<Login onSubmit={handleSubmit} />)
 
-  userEvent.type(getByLabelText(/username/i), user.username)
-  userEvent.type(getByLabelText(/password/i), user.password)
-  userEvent.click(getByText(/submit/i))
+  userEvent.type(screen.getByLabelText(/username/i), user.username)
+  userEvent.type(screen.getByLabelText(/password/i), user.password)
+  userEvent.click(screen.getByText(/submit/i))
 
   expect(handleSubmit).toHaveBeenCalledTimes(1)
   expect(handleSubmit).toHaveBeenCalledWith(user)
@@ -278,28 +274,24 @@ test('calls onSubmit with the username and password when submit is clicked', () 
 
 test('shows an error message when submit is clicked and no username is provided', () => {
   const handleSubmit = jest.fn()
-  const {getByLabelText, getByText, getByRole} = render(
-    <Login onSubmit={handleSubmit} />,
-  )
+  render(<Login onSubmit={handleSubmit} />)
 
-  userEvent.type(getByLabelText(/password/i), 'anything')
-  userEvent.click(getByText(/submit/i))
+  userEvent.type(screen.getByLabelText(/password/i), 'anything')
+  userEvent.click(screen.getByText(/submit/i))
 
-  const errorMessage = getByRole('alert')
+  const errorMessage = screen.getByRole('alert')
   expect(errorMessage).toHaveTextContent(/username is required/i)
   expect(handleSubmit).not.toHaveBeenCalled()
 })
 
 test('shows an error message when submit is clicked and no password is provided', () => {
   const handleSubmit = jest.fn()
-  const {getByLabelText, getByText, getByRole} = render(
-    <Login onSubmit={handleSubmit} />,
-  )
+  render(<Login onSubmit={handleSubmit} />)
 
-  userEvent.type(getByLabelText(/username/i), 'anything')
-  userEvent.click(getByText(/submit/i))
+  userEvent.type(screen.getByLabelText(/username/i), 'anything')
+  userEvent.click(screen.getByText(/submit/i))
 
-  const errorMessage = getByRole('alert')
+  const errorMessage = screen.getByRole('alert')
   expect(errorMessage).toHaveTextContent(/password is required/i)
   expect(handleSubmit).not.toHaveBeenCalled()
 })
@@ -335,7 +327,7 @@ assignments again and we'd like to avoid that. How else could we share code
 between our tests? AHA! We could use functions!
 
 ```jsx
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 
@@ -347,15 +339,15 @@ import Login from '../login'
 // much abstraction. Read more: https://kcd.im/aha-testing
 function setup() {
   const handleSubmit = jest.fn()
-  const utils = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
+  render(<Login onSubmit={handleSubmit} />)
+
   const changeUsernameInput = value =>
-    userEvent.type(utils.getByLabelText(/username/i), value)
+    userEvent.type(screen.getByLabelText(/username/i), value)
   const changePasswordInput = value =>
-    userEvent.type(utils.getByLabelText(/password/i), value)
-  const clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
+    userEvent.type(screen.getByLabelText(/password/i), value)
+  const clickSubmit = () => userEvent.click(screen.getByText(/submit/i))
   return {
-    ...utils,
     handleSubmit,
     user,
     changeUsernameInput,
@@ -376,7 +368,7 @@ function setupWithNoPassword() {
   const utils = setup()
   utils.changeUsernameInput(utils.user.username)
   utils.clickSubmit()
-  const errorMessage = utils.getByRole('alert')
+  const errorMessage = screen.getByRole('alert')
   return {...utils, errorMessage}
 }
 
@@ -384,7 +376,7 @@ function setupWithNoUsername() {
   const utils = setup()
   utils.changePasswordInput(utils.user.password)
   utils.clickSubmit()
-  const errorMessage = utils.getByRole('alert')
+  const errorMessage = screen.getByRole('alert')
   return {...utils, errorMessage}
 }
 
