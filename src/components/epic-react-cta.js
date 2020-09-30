@@ -81,7 +81,7 @@ export default function EpicReactCta({
             </>
           ) : (
             <div className="card-content">
-              <h3>Write professional React.</h3>
+              <h3 css={{color: 'white'}}>Write professional React.</h3>
               {/* prettier-ignore */}
               <svg xmlns="http://www.w3.org/2000/svg" width="116" height="19" viewBox="0 0 116 19"> <path fill="#FFCD5D" d="M10,0.5 L12.645,6.86 L19.511,7.41 L14.28,11.89 L15.878,18.59 L10,15 L4.122,18.59 L5.72,11.89 L0.49,7.41 L7.355,6.86 L10,0.5 Z M34,0.5 L36.645,6.86 L43.511,7.41 L38.28,11.89 L39.878,18.59 L34,15 L28.122,18.59 L29.72,11.89 L24.49,7.41 L31.355,6.86 L34,0.5 Z M58,0.5 L60.645,6.86 L67.511,7.41 L62.28,11.89 L63.878,18.59 L58,15 L52.122,18.59 L53.72,11.89 L48.49,7.41 L55.355,6.86 L58,0.5 Z M82,0.5 L84.645,6.86 L91.511,7.41 L86.28,11.89 L87.878,18.59 L82,15 L76.122,18.59 L77.72,11.89 L72.49,7.41 L79.355,6.86 L82,0.5 Z M106,0.5 L108.645,6.86 L115.511,7.41 L110.28,11.89 L111.878,18.59 L106,15 L100.122,18.59 L101.72,11.89 L96.49,7.41 L103.355,6.86 L106,0.5 Z"/></svg>
             </div>
@@ -182,6 +182,7 @@ const Card = styled.div({
     h3: {
       fontSize: 20,
       marginTop: '1.5rem',
+      color: theme.colors.white,
     },
   },
 })
