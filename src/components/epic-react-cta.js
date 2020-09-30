@@ -14,7 +14,7 @@ export default function EpicReactCta({
   button = `Blast Off`,
   byline = `Get yourself the most comprehensive guide to React for professional developers in the universe.`,
   background = '#0F1B35',
-  countdownEndDate = 1601395200000, // launch date
+  countdownEndDate,
 }) {
   const data = useStaticQuery(graphql`
     {
