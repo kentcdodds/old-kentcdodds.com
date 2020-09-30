@@ -1,6 +1,9 @@
 import React from 'react'
 
-const sleep = t => new Promise(resolve => setTimeout(resolve, t))
+const sleep = t =>
+  new Promise(resolve => {
+    setTimeout(resolve, t)
+  })
 
 function DelayedCounterBug() {
   const [count, setCount] = React.useState(0)

@@ -11,7 +11,10 @@ function useAuth() {
   return {user: {username: 'jackiechan', tagline: '', bio: ''}}
 }
 
-const sleep = t => new Promise(resolve => setTimeout(resolve, t))
+const sleep = t =>
+  new Promise(resolve => {
+    setTimeout(resolve, t)
+  })
 
 const userClient = {
   async updateUser(user, updates) {
