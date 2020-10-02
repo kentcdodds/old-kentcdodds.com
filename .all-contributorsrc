@@ -1531,6 +1531,15 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "onemen",
+      "name": "onemen",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3650909?v=4",
+      "profile": "https://github.com/onemen",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
