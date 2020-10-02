@@ -1,10 +1,10 @@
-import React from 'react'
-import Img from 'gatsby-image'
 import styled from '@emotion/styled'
 import {Link as RouterLink} from '@reach/router'
+import Img from 'gatsby-image'
 import {rankings as matchSorterRankings} from 'match-sorter'
-import MatchSorterWorker from './match-sorter.worker'
+import React from 'react'
 import theme from '../../../config/theme'
+import MatchSorterWorker from './match-sorter.worker'
 
 let matchSorterWorker
 
@@ -182,38 +182,39 @@ function Search(props) {
   React.useEffect(() => {
     if (!search) {
       setFilteredBlogPosts(blogposts)
+    } else {
+      getMatchSorterWorker()
+        .searchAndSort(blogposts, search, {
+          keys: [
+            {
+              key: 'title',
+              threshold: matchSorterRankings.CONTAINS,
+            },
+            {
+              key: 'categories',
+              threshold: matchSorterRankings.CONTAINS,
+              maxRanking: matchSorterRankings.CONTAINS,
+            },
+            {
+              key: 'keywords',
+              threshold: matchSorterRankings.CONTAINS,
+              maxRanking: matchSorterRankings.CONTAINS,
+            },
+            {
+              key: 'description',
+              threshold: matchSorterRankings.CONTAINS,
+              maxRanking: matchSorterRankings.CONTAINS,
+            },
+          ],
+        })
+        .then(
+          results => setFilteredBlogPosts(results),
+          error => {
+            // eslint-disable-next-line no-console
+            console.error(error)
+          },
+        )
     }
-    getMatchSorterWorker()
-      .searchAndSort(blogposts, search, {
-        keys: [
-          {
-            key: 'title',
-            threshold: matchSorterRankings.CONTAINS,
-          },
-          {
-            key: 'categories',
-            threshold: matchSorterRankings.CONTAINS,
-            maxRanking: matchSorterRankings.CONTAINS,
-          },
-          {
-            key: 'keywords',
-            threshold: matchSorterRankings.CONTAINS,
-            maxRanking: matchSorterRankings.CONTAINS,
-          },
-          {
-            key: 'description',
-            threshold: matchSorterRankings.CONTAINS,
-            maxRanking: matchSorterRankings.CONTAINS,
-          },
-        ],
-      })
-      .then(
-        results => setFilteredBlogPosts(results),
-        error => {
-          // eslint-disable-next-line no-console
-          console.error(error)
-        },
-      )
   }, [blogposts, search])
 
   function handleCategoryClick(category) {
