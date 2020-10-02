@@ -227,6 +227,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/vebradev"><img src="https://avatars2.githubusercontent.com/u/230534?v=4" width="100px;" alt=""/><br /><sub><b>Justinas Vebra</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/issues?q=author%3Avebradev" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://peter.hozak.info/"><img src="https://avatars0.githubusercontent.com/u/1087670?v=4" width="100px;" alt=""/><br /><sub><b>Peter Hozák</b></sub></a><br /><a href="#content-Aprillion" title="Content">🖋</a> <a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=Aprillion" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/onemen"><img src="https://avatars0.githubusercontent.com/u/3650909?v=4" width="100px;" alt=""/><br /><sub><b>onemen</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=onemen" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
