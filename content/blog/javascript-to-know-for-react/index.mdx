@@ -467,7 +467,7 @@ dogs.filter(dog => dog.temperament.includes('Faithful'))
 // [{id: 'dog-1', ..etc}, {id: 'dog-2', ...etc}]
 
 dogs.reduce((allTemperaments, dog) => {
-  return [...allTemperaments, ...dog.temperaments]
+  return [...allTemperaments, ...dog.temperament]
 }, [])
 // [ 'Intelligent', 'Active', 'Alert', ...etc ]
 
