@@ -9,6 +9,7 @@ const remark = require('remark')
 const stripMarkdownPlugin = require('strip-markdown')
 const {zipFunctions} = require('@netlify/zip-it-and-ship-it')
 const config = require('./config/website')
+const blogUtils = require('./other/blog-utils')
 
 const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
 
@@ -433,11 +434,12 @@ const onPreBootstrap = () => {
   }
 }
 
-const onPostBuild = async () => {
+const onPostBuild = async ({graphql}) => {
   if (process.env.gatsby_executing_command === 'develop') {
     return
   }
   require('./other/make-cache')
+  blogUtils.createJSONFile(graphql, './public/blog.json')
   const srcLocation = path.join(__dirname, `netlify/functions`)
   const outputLocation = path.join(__dirname, `public/functions`)
   if (fs.existsSync(outputLocation)) {
