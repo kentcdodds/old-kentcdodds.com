@@ -15,6 +15,9 @@ const {
   URL: NETLIFY_SITE_URL = config.siteUrl,
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
+  GATSBY_ALGOLIA_APP_ID,
+  ALGOLIA_API_KEY,
+  GATSBY_ALGOLIA_INDEX_NAME,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
@@ -222,6 +225,52 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: GATSBY_ALGOLIA_APP_ID,
+        apiKey: ALGOLIA_API_KEY,
+        indexName: GATSBY_ALGOLIA_INDEX_NAME,
+        queries: [
+          {
+            query: `
+            {
+              blogposts: allMdx(
+                filter: {
+                  frontmatter: {published: {ne: false}}
+                  fileAbsolutePath: {regex: "//content/blog//"}
+                }
+              ) {
+                edges {
+                  node {
+                    objectID: id
+                    fields {
+                      slug
+                      productionUrl
+                      title
+                      categories
+                      keywords
+                      description: plainTextDescription
+                    }
+                  }
+                }
+              }
+            }
+            `,
+            transformer: ({data}) =>
+              data.blogposts.edges.map(({node: {fields, ...rest}}) => {
+                return {
+                  ...fields,
+                  ...rest,
+                }
+              }),
+            indexName: GATSBY_ALGOLIA_INDEX_NAME,
+            settings: {attributesToSnippet: [`excerpt:20`]},
+          },
+        ],
+        chunkSize: 10000,
+      },
+    },
   ],
 }
 
