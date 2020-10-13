@@ -34,6 +34,13 @@ effective building applications with React. So here are a few JavaScript
 features I'd recommend you spend some time learning so you can be as effective
 as possible working with React.
 
+Before we get into some syntax stuff, another thing that's really useful to
+understand for React is the concept of a function "closure". There's a great
+write-up of this concept here:
+[whatthefork.is/closure](https://whatthefork.is/closure).
+
+Ok, let's get to the JS features you'll want to know for React.
+
 ## Template Literals
 
 Template literals are like regular strings with super-powers:
@@ -537,7 +544,7 @@ const streetName = user && user.address && user.address.street.name
 const streetName = user?.address?.street?.name
 
 // this will run even if options is undefined (in which case, onSuccess would be undefined as well)
-// however, it will still fail if options was never declared, 
+// however, it will still fail if options was never declared,
 // since optional chaining cannot be used on a non-existent root object.
 // optional chaining does not replace checks like if (typeof options == "undefined")
 const onSuccess = options?.onSuccess
