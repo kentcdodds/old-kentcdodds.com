@@ -1558,6 +1558,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hucki",
+      "name": "Stefan Huckschlag",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/42623858?v=4",
+      "profile": "https://www.linkedin.com/in/hucki/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
