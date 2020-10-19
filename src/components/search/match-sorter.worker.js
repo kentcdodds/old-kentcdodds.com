@@ -1,4 +1,4 @@
-import matchSorter, {rankings} from 'match-sorter'
+import {matchSorter, rankings} from 'match-sorter'
 
 export function searchAndSort(items, searchString, options) {
   const allResults = matchSorter(items, searchString, options)
