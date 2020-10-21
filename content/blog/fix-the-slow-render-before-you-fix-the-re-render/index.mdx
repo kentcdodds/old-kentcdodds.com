@@ -65,7 +65,7 @@ running them one after another. To do this batching though, they would have to
 take ownership over updating the DOM, so we have `React.createElement` (which is
 [what JSX is](/blog/what-is-jsx)) to describe what we want the DOM to look like,
 and when there's a state change, React calls our function again to get the React
-elements we need rendered to the DOM. It then compares that those new React
+elements we need rendered to the DOM. It then compares those new React
 elements with the ones we gave it last time we rendered. From that it can tell
 what DOM updates to make, and then makes those updates for us in the most
 performant way possible. The process of updating the DOM is called "committing"
