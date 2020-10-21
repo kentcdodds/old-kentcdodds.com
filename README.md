@@ -232,6 +232,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/marcosvega91"><img src="https://avatars2.githubusercontent.com/u/5365582?v=4" width="100px;" alt=""/><br /><sub><b>Marco Moretti</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=marcosvega91" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/decisa"><img src="https://avatars0.githubusercontent.com/u/35339760?v=4" width="100px;" alt=""/><br /><sub><b>Art Telesh</b></sub></a><br /><a href="#content-decisa" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/hucki/"><img src="https://avatars1.githubusercontent.com/u/42623858?v=4" width="100px;" alt=""/><br /><sub><b>Stefan Huckschlag</b></sub></a><br /><a href="#content-hucki" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Atif252"><img src="https://avatars2.githubusercontent.com/u/50226353?v=4" width="100px;" alt=""/><br /><sub><b>Atif</b></sub></a><br /><a href="#content-Atif252" title="Content">🖋</a></td>
   </tr>
 </table>
 
