@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {css} from '@emotion/core'
 import theme from 'prism-react-renderer/themes/nightOwl'
 import {bpDesktopOnly} from '../../lib/breakpoints'

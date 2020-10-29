@@ -37,7 +37,7 @@ context there:
 
 ```jsx
 // src/count-context.js
-import React from 'react'
+import * as React from 'react'
 
 const CountStateContext = React.createContext()
 const CountDispatchContext = React.createContext()
@@ -118,7 +118,7 @@ So let's make a component that can be used like that:
 
 ```jsx
 // src/count-context.js
-import React from 'react'
+import * as React from 'react'
 
 const CountStateContext = React.createContext()
 const CountDispatchContext = React.createContext()
@@ -164,7 +164,7 @@ Most of the APIs for context usages I've seen in the wild look something like
 this:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {SomethingContext} from 'some-context-package'
 
 function YourComponent() {
@@ -176,7 +176,7 @@ But I think that's a missed opportunity at providing a better user experience.
 Instead, I think it should be like this:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {useSomething} from 'some-context-package'
 
 function YourComponent() {
@@ -189,7 +189,7 @@ the implementation now:
 
 ```jsx {32-38,40-46,48}
 // src/count-context.js
-import React from 'react'
+import * as React from 'react'
 
 const CountStateContext = React.createContext()
 const CountDispatchContext = React.createContext()
@@ -444,7 +444,7 @@ So here's the final version of the code:
 
 ```jsx
 // src/count-context.js
-import React from 'react'
+import * as React from 'react'
 
 const CountStateContext = React.createContext()
 const CountDispatchContext = React.createContext()

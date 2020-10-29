@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Link from 'components/link'
 import Img from 'gatsby-image'
 import {css} from '@emotion/core'

@@ -26,7 +26,7 @@ https://egghead.io/lessons/egghead-organization-of-authentication-state-in-react
 Here's the secret to this blog post in one short code example:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {useUser} from './context/auth'
 import AuthenticatedApp from './authenticated-app'
 import UnauthenticatedApp from './unauthenticated-app'
@@ -47,7 +47,7 @@ they happen to land on a page that they're not supposed to, instead you don't
 render that stuff at all. Things get even cooler when you do this:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {useUser} from './context/auth'
 
 const AuthenticatedApp = React.lazy(() => import('./authenticated-app'))
@@ -81,7 +81,7 @@ Ok, so what do you do to get to this point? Let's start by looking at where
 we're actually rendering the app:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 import AppProviders from './context'
@@ -97,7 +97,7 @@ ReactDOM.render(
 And here's that `<AppProviders />` component:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {AuthProvider} from './auth-context'
 import {UserProvider} from './user-context'
 
@@ -125,7 +125,7 @@ has some stuff in it that's outside the scope of this blog post/domain specific,
 so I'm only going to show a slimmed down/modified version of it:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {FullPageSpinner} from '../components/lib'
 
 const AuthContext = React.createContext()

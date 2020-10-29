@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import TestingTrophy from 'components/courses/testing-js/trophy'
 
 export default [

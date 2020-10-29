@@ -43,7 +43,7 @@ For the purposes of this article, let's use this example as our subject under
 test:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {CSSTransition} from 'react-transition-group'
 
 function Fade({children, ...props}) {
@@ -78,7 +78,7 @@ export {HiddenMessage}
 Here's an example of a test that uses shallow rendering with enzyme:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import Enzyme, {shallow} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import {HiddenMessage} from '../hidden-message'
@@ -305,7 +305,7 @@ properly (something the shallow rendering example was _incapable_ of doing).
 ```jsx
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 import {CSSTransition} from 'react-transition-group'
 
 import {HiddenMessage} from '../hidden-message'

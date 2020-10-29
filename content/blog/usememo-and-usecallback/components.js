@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 function CandyDispenser() {
   const initialCandies = ['snickers', 'skittles', 'twix', 'milky way']

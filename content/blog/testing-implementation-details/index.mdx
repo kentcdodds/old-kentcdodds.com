@@ -51,7 +51,7 @@ component as an example:
 
 ```jsx
 // accordion.js
-import React from 'react'
+import * as React from 'react'
 import AccordionContents from './accordion-contents'
 
 class Accordion extends React.Component {
@@ -88,7 +88,7 @@ And here's a test that tests implementation details:
 
 ```jsx
 // __tests__/accordion.enzyme.js
-import React from 'react'
+import * as React from 'react'
 // if you're wondering why not shallow,
 // then please read https://kcd.im/shallow
 import Enzyme, {mount} from 'enzyme'
@@ -263,7 +263,7 @@ Let's check that out now!
 ```jsx
 // __tests__/accordion.rtl.js
 import '@testing-library/jest-dom/extend-expect'
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Accordion from '../accordion'

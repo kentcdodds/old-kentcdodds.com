@@ -36,7 +36,7 @@ repo, we have a component called `FruitAutocomplete` which is (basically)
 implemented like so:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {render} from 'react-dom'
 import Downshift from 'downshift'
 
@@ -117,7 +117,7 @@ there's no indication that the `FruitAutocomplete` component is implemented with
 a render prop component (an implementation detail):
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {mount} from 'enzyme'
 import FruitAutocomplete from '../fruit-autocomplete'
 
@@ -191,7 +191,7 @@ And now you can import that function directly into your test and use it to
 render JSX like so:
 
 ```js
-import React from 'react'
+import * as React from 'react'
 import {render} from 'enzyme'
 
 const downshiftStub = {
@@ -238,7 +238,7 @@ render prop without extracting and exporting it though. Here's that last test
 implemented as if we didn't export the render prop function:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {mount, render} from 'enzyme'
 import Downshift from 'downshift'
 import FruitAutocomplete from '../fruit-autocomplete'

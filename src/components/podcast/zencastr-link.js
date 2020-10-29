@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 function ZencastrLink() {
   const [{link, retrievedLink}, dispatch] = React.useReducer(

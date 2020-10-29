@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {css} from '@emotion/core'
 import {isEmpty} from 'lodash'
 import Markdown from 'react-markdown'

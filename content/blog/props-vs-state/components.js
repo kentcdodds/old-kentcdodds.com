@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 function Add({n1, n2 = 0}) {
   return (

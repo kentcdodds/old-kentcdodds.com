@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {bpMaxSM} from 'lib/breakpoints'
 
 function TheSpectrumOfAbstraction() {

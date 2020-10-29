@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import ScheduledWorkshop from './scheduled-workshop'
 import get from 'lodash/get'
 import {css} from '@emotion/core'

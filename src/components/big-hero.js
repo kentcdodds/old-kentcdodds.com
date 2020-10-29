@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {css} from '@emotion/core'
 import theme from '../../config/theme'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
@@ -69,17 +69,15 @@ function Hero({
               visibility: visible;
               width: 250px;
               height: 250px;
-              ${
-                image === photoOfKent
-                  ? `
+              ${image === photoOfKent
+                ? `
                       width: 160px;
                       height: 160px;
                       overflow: 'hidden';
                       border-radius: 50%;
                       background: #4b4ddf;
                     `
-                  : null
-              }
+                : null}
               background-image: url(${image});
               background-size: cover;
               background-repeat: no-repeat;

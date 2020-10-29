@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {css, keyframes} from '@emotion/core'
 import {fonts} from '../../lib/typography'
 import theme from '../../../config/theme'

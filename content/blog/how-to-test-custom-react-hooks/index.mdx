@@ -39,8 +39,9 @@ expand this if you're curious):
 <details>
   <summary>useUndo implementation</summary>
 
+
 ```javascript
-import React from 'react'
+import * as React from 'react'
 
 const UNDO = 'UNDO'
 const REDO = 'REDO'
@@ -129,6 +130,7 @@ export default useUndo
 
 </details>
 
+
 Let's say we want to write a test for this so we can maintain confidence that as
 we make changes and bug fixes we don't break existing functionality. To get the
 maximum confidence we need, we should ensure that our tests
@@ -171,7 +173,7 @@ with that component rendered to the page (perhaps using
 [storybook](https://storybook.js.org/)). So let's do that instead:
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import useUndo from '../use-undo'
 
 function UseUndoExample() {
@@ -226,7 +228,7 @@ like:
 ```javascript
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import {UseUndoExample} from '../use-undo.example'
 
@@ -332,7 +334,7 @@ associated with it and you interact with the hook return value directly.
 Here's an example of what that would be like for our `useUndo` hook:
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import {render, act} from '@testing-library/react'
 import useUndo from '../use-undo'
 

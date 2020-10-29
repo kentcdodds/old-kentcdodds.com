@@ -31,7 +31,7 @@ Here's a React component that I want to test:
 
 ```jsx
 // login.js
-import React from 'react'
+import * as React from 'react'
 
 function Login({onSubmit}) {
   const [error, setError] = React.useState('')
@@ -99,7 +99,7 @@ Here's a test suite that resembles the kind of testing I've seen over the years.
 // __tests__/login.js
 import {render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 
@@ -259,7 +259,7 @@ abstraction as possible. Check this out:
 // __tests__/login.js
 import {render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 
@@ -337,7 +337,7 @@ between our tests? AHA! We could use functions!
 ```jsx
 import {render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 
@@ -349,8 +349,10 @@ function setup() {
   const handleSubmit = jest.fn()
   const utils = render(<Login onSubmit={handleSubmit} />)
   const user = {username: 'michelle', password: 'smith'}
-  const changeUsernameInput = value => userEvent.type(utils.getByLabelText(/username/i), value)
-  const changePasswordInput = value => userEvent.type(utils.getByLabelText(/password/i), value)
+  const changeUsernameInput = value =>
+    userEvent.type(utils.getByLabelText(/username/i), value)
+  const changePasswordInput = value =>
+    userEvent.type(utils.getByLabelText(/password/i), value)
   const clickSubmit = () => userEvent.click(utils.getByText(/submit/i))
   return {
     ...utils,
@@ -455,7 +457,7 @@ themselves:
 ```jsx
 import {render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 
@@ -485,7 +487,7 @@ Fixing this is pretty simple, you need to execute the `cleanup` method from
 ```jsx {1,13,21}
 import {cleanup, render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 
@@ -533,7 +535,7 @@ test fails, you can cleanup:
 ```jsx
 import {cleanup, render} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Login from '../login'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import kent from '../images/kent.png'
 
 function BlogFooter() {

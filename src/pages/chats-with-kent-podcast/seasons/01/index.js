@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {graphql} from 'gatsby'
 import {Redirect} from '@reach/router'
 import first from 'lodash/first'

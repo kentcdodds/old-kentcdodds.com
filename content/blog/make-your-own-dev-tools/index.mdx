@@ -62,7 +62,7 @@ Here's the basic idea:
 ```javascript
 // src/index.js
 import loadDevTools from './dev-tools/load'
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
@@ -135,7 +135,7 @@ the races:
 ```javascript
 // src/dev-tools/dev-tools.js
 
-import React from 'react'
+import * as React from 'react'
 
 function install() {
   function DevTools() {

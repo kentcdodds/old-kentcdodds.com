@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
-import React from 'react'
+import * as React from 'react'
 import IconHomework from '../../images/icons/homework.svg'
 import theme from '../../../config/theme'
 
