@@ -1576,6 +1576,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "DaleSeo",
+      "name": "Dale Seo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5466341?v=4",
+      "profile": "https://www.daleseo.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
