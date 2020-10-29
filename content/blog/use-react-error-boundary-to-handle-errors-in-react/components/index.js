@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 export {App as BoundaryApp} from './boundary'
 export {App as TryCatchApp} from './try-catch'

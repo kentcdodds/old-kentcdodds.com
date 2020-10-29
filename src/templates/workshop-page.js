@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {graphql} from 'gatsby'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import SEO from 'components/seo'

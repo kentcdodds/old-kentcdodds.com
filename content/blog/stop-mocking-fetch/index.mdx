@@ -24,7 +24,7 @@ What's wrong with this test?
 
 ```jsx
 // __tests__/checkout.js
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {client} from '../../utils/api-client'
@@ -51,8 +51,8 @@ answer. So, sorry about that. But, one issue with this is because you're mocking
 out the `client`, how do you really know the client is being used correctly in
 this case? Sure, the `client` could be unit tested to make sure it's calling
 `window.fetch` properly, but how do you know that `client` didn't just recently
-change its API to accept a `body` instead of `data`? Oh, you're using
-TypeScript so
+change its API to accept a `body` instead of `data`? Oh, you're using TypeScript
+so
 [you've eliminated a category of bugs](/blog/eliminate-an-entire-category-of-bugs-with-a-few-simple-tools).
 Good! But there are definitely some business logic bugs that can slip in because
 we're mocking the `client` here. Sure you could lean on your
@@ -66,7 +66,7 @@ But we don't want to _actually_ make `fetch` requests right? So let's mock out
 
 ```jsx
 // __tests__/checkout.js
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -183,7 +183,7 @@ Now my test can look like this:
 
 ```jsx
 // __tests__/checkout.js
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -294,7 +294,7 @@ Now my test can look like this:
 
 ```jsx
 // __tests__/checkout.js
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -338,7 +338,7 @@ preserve test isolation. Here's an example:
 
 ```jsx
 // __tests__/checkout.js
-import React from 'react'
+import * as React from 'react'
 import {server, rest} from 'test/server'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'

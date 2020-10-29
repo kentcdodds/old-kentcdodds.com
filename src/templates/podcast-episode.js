@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Container from 'components/container'
 import {graphql} from 'gatsby'
 import {css} from '@emotion/core'

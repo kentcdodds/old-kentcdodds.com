@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import {navigate} from 'gatsby-link'
 
 function SubjectSelector({options, noSelectionUi, label, value, ...rest}) {

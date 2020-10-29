@@ -120,7 +120,7 @@ mock:
 ```javascript
 import userEvent from '@testing-library/user-event'
 import axiosMock from 'axios'
-import React from 'react'
+import * as React from 'react'
 import {render, generate, screen} from 'til-client-test-utils'
 
 import App from '../app'
@@ -180,7 +180,7 @@ Learn how to setup a test-utils file like the one above in the
 
 ```javascript
 import '@testing-library/jest-dom/extend-expect'
-import React from 'react'
+import * as React from 'react'
 // if you have a test utils module like in the integration test example above
 // then use that instead of @testing-library/react
 import {render, screen} from '@testing-library/react'
@@ -329,9 +329,9 @@ Earlier I told you to remember two things:
 >   mock those dependencies (effectively swapping what could be thousands of
 >   lines of code with only a few).
 
-What those are saying is that the lower down the trophy you are, the less code your
-tests are testing. If you're operating at a low level you need more tests to
-cover the same number of lines of code in your application as a single test
+What those are saying is that the lower down the trophy you are, the less code
+your tests are testing. If you're operating at a low level you need more tests
+to cover the same number of lines of code in your application as a single test
 could higher up the trophy. In fact, as you go lower down the testing trophy,
 there are some things that are impossible to test.
 

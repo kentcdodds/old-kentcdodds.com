@@ -29,7 +29,7 @@ testing implementation details:
 
 ```jsx
 // counter.js
-import React from 'react'
+import * as React from 'react'
 
 export class Counter extends React.Component {
   state = {count: 0}
@@ -41,7 +41,7 @@ export class Counter extends React.Component {
 }
 
 // __tests__/counter.js
-import React from 'react'
+import * as React from 'react'
 // (it's hard to test implementation details with React Testing Library,
 //  so we'll use enzyme in this example 😅)
 import {mount} from 'enzyme'

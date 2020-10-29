@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 function Login({onSubmit}) {
   const [error, setError] = React.useState('')

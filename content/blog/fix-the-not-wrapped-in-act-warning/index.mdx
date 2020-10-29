@@ -91,7 +91,7 @@ So, let's imagine we want to write a test for this. Here's what you might write
 to verify that the component is working properly:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import user from '@testing-library/user-event'
 import {render, screen} from '@testing-library/react'
 
@@ -382,7 +382,7 @@ So we've handled all the edge cases and cleaned up after ourselves nicely, but
 when we write our test for it, we're going to get the `act` warning again:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import {checkStatus} from '../api'
 
@@ -436,7 +436,7 @@ Library does not have a utility for jest fake timers and so we need to wrap the
 timer advancement in `act` ourselves, like this:
 
 ```jsx {2,18}
-import React from 'react'
+import * as React from 'react'
 import {render, screen, act} from '@testing-library/react'
 import {checkStatus} from '../api'
 
@@ -475,7 +475,7 @@ are returned from your custom hook which result in state updates. Here's a
 simple example of that:
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 
 function useCount() {
   const [count, setCount] = React.useState(0)
@@ -490,7 +490,7 @@ export default useCount
 Here, we'll use `@testing-library/react-hooks` to validate our hook works:
 
 ```javascript
-import React from 'react'
+import * as React from 'react'
 import {renderHook} from '@testing-library/react-hooks'
 import useCount from '../use-count'
 
@@ -511,7 +511,7 @@ triggers a state update and because we're not in the React callstack we're going
 to get an `act(...)` warning. So, let's wrap that in `act(...)`!
 
 ```javascript {2,9,12}
-import React from 'react'
+import * as React from 'react'
 import {renderHook, act} from '@testing-library/react-hooks'
 import useCount from '../use-count'
 
@@ -558,7 +558,7 @@ ImperativeCounter = React.forwardRef(ImperativeCounter)
 Here's how you might test this:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import {render, screen, act} from '@testing-library/react'
 import ImperativeCounter from '../imperative-counter'
 
@@ -579,7 +579,7 @@ You'll get an `act` warning on those `increment` and `decrement` calls because
 they're happening outside the React callstack. So, let's wrap them in `act`:
 
 ```jsx {2,10,13}
-import React from 'react'
+import * as React from 'react'
 import {render, screen, act} from '@testing-library/react'
 import ImperativeCounter from '../imperative-counter'
 

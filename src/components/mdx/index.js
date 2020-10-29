@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 import Title from './title'
 import Subtitle from './subtitle'

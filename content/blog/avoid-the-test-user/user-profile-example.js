@@ -1,6 +1,6 @@
 // React Context
 
-import React from 'react'
+import * as React from 'react'
 import {isEqual} from 'lodash'
 
 // ./context/user-context.js

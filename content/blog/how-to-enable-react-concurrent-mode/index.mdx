@@ -73,7 +73,7 @@ In the entry file of your project, you probably have something that looks like
 this:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 
@@ -86,7 +86,7 @@ To enable Concurrent Mode, you'll use a new
 API (NOTE the `unstable_` prefix):
 
 ```jsx {6-8}
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 

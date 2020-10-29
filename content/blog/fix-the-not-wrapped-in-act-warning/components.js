@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 
 class UsernameFormClass extends React.Component {
   state = {status: 'idle', error: null}

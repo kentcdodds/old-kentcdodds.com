@@ -51,7 +51,7 @@ Let's look at a simpler example of a class component. My favorite example is a
 
 ```jsx
 // counter.js
-import React from 'react'
+import * as React from 'react'
 
 class Counter extends React.Component {
   state = {count: 0}
@@ -71,7 +71,7 @@ use hooks:
 // __tests__/counter.js
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 test('counter increments the count', () => {
   render(<Counter />)
@@ -87,7 +87,7 @@ component:
 
 ```jsx
 // counter.js
-import React from 'react'
+import * as React from 'react'
 
 function Counter() {
   const [count, setCount] = useState(0)
@@ -186,7 +186,7 @@ implementation-details-free test would look like:
 // __tests__/counter.js
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import React from 'react'
+import * as React from 'react'
 
 import Counter from '../counter'
 
@@ -292,7 +292,7 @@ Here's how I would test this:
 
 ```jsx
 // __tests__/counter.js
-import React from 'react'
+import * as React from 'react'
 import {render} from '@testing-library/react'
 
 import Counter from '../counter'

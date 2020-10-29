@@ -236,7 +236,7 @@ part of the React API, we can use this directly without any problem:
 
 ```jsx
 // src/count/count-context.js
-import React from 'react'
+import * as React from 'react'
 
 const CountContext = React.createContext()
 
@@ -257,7 +257,7 @@ function CountProvider(props) {
 export {CountProvider, useCount}
 
 // src/count/page.js
-import React from 'react'
+import * as React from 'react'
 import {CountProvider, useCount} from './count-context'
 
 function Counter() {

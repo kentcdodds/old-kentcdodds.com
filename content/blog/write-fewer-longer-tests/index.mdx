@@ -21,7 +21,7 @@ Imagine we have this UI that renders a loading spinner until some data is
 loaded:
 
 ```jsx
-import React from 'react'
+import * as React from 'react'
 import * as api from './api'
 
 function Course({courseId}) {
@@ -99,7 +99,7 @@ per test best practice." Let's give that a try:
 
 ```jsx
 // 🛑 THIS IS AN EXAMPLE OF WHAT NOT TO DO...
-import React from 'react'
+import * as React from 'react'
 import {render, wait, cleanup} from '@testing-library/react/pure'
 import {getCourseInfo} from '../api'
 import Course from '../course'
@@ -205,7 +205,7 @@ Instead, I suggest that we combine the tests like so:
 ```jsx
 // ✅ This is an example of what to do
 import {render, screen, wait} from '@testing-library/react'
-import React from 'react'
+import * as React from 'react'
 
 import {getCourseInfo} from '../api'
 import Course from '../course'
