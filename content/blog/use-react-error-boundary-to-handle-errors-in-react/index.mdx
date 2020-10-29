@@ -157,7 +157,7 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-Unfortunately, this doesn't work. And that's because we're not the one's calling
+Unfortunately, this doesn't work. And that's because we're not the ones calling
 `Greeting` and `Farewell`. React calls those functions. When we use them in JSX,
 we're simply creating React elements with those functions as the `type`. Telling
 React that "if the `App` is rendered, here are the other components that will
@@ -294,7 +294,7 @@ Here's what that experience is like:
   <RecoveryApp />
 </Layout>
 
-You'll notice that if you type "bomb" it the `Bomb` component is replaced by the
+You'll notice that if you type "bomb", the `Bomb` component is replaced by the
 `ErrorFallback` component and you can recover by either changing the `username`
 (because that's in the `resetKeys` prop) or by clicking "Try again" because
 that's wired up to `resetErrorBoundary` and we have an `onReset` that resets our
