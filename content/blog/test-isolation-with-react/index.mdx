@@ -273,7 +273,7 @@ import * as React from 'react'
 import {Counter} from '../counter'
 
 test('allows clicks until the maxClicks is reached, then requires a reset', () => {
-  const {getByText} = renderIntoDocument(
+  const {getByText} = render(
     <Counter maxClicks={4} initialCount={3} />,
   )
   const counterButton = getByText(/^count/i)
