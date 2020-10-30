@@ -236,6 +236,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://www.daleseo.com"><img src="https://avatars1.githubusercontent.com/u/5466341?v=4" width="100px;" alt=""/><br /><sub><b>Dale Seo</b></sub></a><br /><a href="#content-DaleSeo" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.ganevdev.com"><img src="https://avatars3.githubusercontent.com/u/8168280?v=4" width="100px;" alt=""/><br /><sub><b>Ivan Ganev</b></sub></a><br /><a href="#translation-Ganevru" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://j-rubin.com"><img src="https://avatars2.githubusercontent.com/u/19940147?v=4" width="100px;" alt=""/><br /><sub><b>Jonathan Rubin</b></sub></a><br /><a href="#content-rubinj30" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
