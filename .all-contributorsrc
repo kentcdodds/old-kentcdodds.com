@@ -1594,6 +1594,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "rubinj30",
+      "name": "Jonathan Rubin",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/19940147?v=4",
+      "profile": "http://j-rubin.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
