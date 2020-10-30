@@ -238,6 +238,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="http://j-rubin.com"><img src="https://avatars2.githubusercontent.com/u/19940147?v=4" width="100px;" alt=""/><br /><sub><b>Jonathan Rubin</b></sub></a><br /><a href="#content-rubinj30" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/devserkan"><img src="https://avatars3.githubusercontent.com/u/22248543?v=4" width="100px;" alt=""/><br /><sub><b>devserkan</b></sub></a><br /><a href="#content-devserkan" title="Content">🖋</a></td>
   </tr>
 </table>
 
