@@ -1585,6 +1585,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Ganevru",
+      "name": "Ivan Ganev",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8168280?v=4",
+      "profile": "https://www.ganevdev.com",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
