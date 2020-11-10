@@ -1,6 +1,7 @@
 # Kent C. Dodds personal website
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-103-orange.svg?style=flat-square)](#contributors)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/057e2119-6baa-48d2-abc5-c15a5733f911/deploy-status)](https://app.netlify.com/sites/kentcdodds/deploys)
+[![All Contributors][all-contributors-badge]](#contributors)
 
 ## Contributors
 
@@ -245,8 +246,13 @@ Thanks goes to these wonderful people
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
 [all-contributors](https://github.com/all-contributors/all-contributors)
 specification. Contributions of any kind welcome!
+
+<!-- prettier-ignore-start -->
+[all-contributors-badge]: https://img.shields.io/github/all-contributors/kentcdodds/kentcdodds.com?color=orange&style=flat-square
+<!-- prettier-ignore-end -->
