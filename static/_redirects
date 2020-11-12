@@ -26,6 +26,7 @@
 # Rewritten posts
 /blog/application-state-management                                      /blog/application-state-management-with-react
 /blog/how-to-start-testing                                              /blog/how-to-add-testing-to-an-existing-project
+/blog/super-simple-start-to-serverless                                  /blog/super-simple-start-to-netlify-functions
 
 # netlify analytics said that this page was requested a lot so we'll redirect it to blog which is probably where they want to go...
 /post                                                                   /blog
