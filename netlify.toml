@@ -4,8 +4,8 @@
     Access-Control-Allow-Origin = "*"
 
 [[plugins]]
-  package = "netlify-plugin-gatsby-cache"
-  package = "netlify-plugin-cypress"
+  - package = "netlify-plugin-gatsby-cache"
+  - package = "netlify-plugin-cypress"
 
 [build]
   command = "npm run netlify"
