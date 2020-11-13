@@ -134,7 +134,7 @@ node_modules
 
 ### Step 6: Install function dependencies
 
-```
+```shell
 cd functions && npm install
 ```
 
@@ -180,13 +180,13 @@ something else, then you'll need to set that in the `main` field in your
 To deploy locally, you'll need to have `firebase-tools` installed so you can use
 the `firebase` CLI:
 
-```
+```shell
 npm install --global firebase-tools
 ```
 
 Now you can login:
 
-```
+```shell
 firebase login
 ```
 
@@ -204,25 +204,25 @@ pretty sweet.
 
 From within your project directory, run the following command:
 
-```
+```shell
 firebase emulators:start
 ```
 
 That does a bunch of stuff, but here's the important output:
 
-```
+```shell
 i  emulators: Starting emulators: functions
 ... some irrelevant stuff here ...
 ✔  functions[hello]: http function initialized (http://localhost:5001/{your-project-id}/us-central1/hello).
 
 ┌───────────────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! View status and logs at http://localhost:4000        │
+│ ✔  All emulators ready! View status and logs at http://localhost:4000 │
 └───────────────────────────────────────────────────────────────────────┘
 
 ┌───────────┬────────────────┬─────────────────────────────────┐
-│ Emulator   │ Host:Port        │ View in Emulator UI                │
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
 ├───────────┼────────────────┼─────────────────────────────────┤
-│ Functions  │ localhost:5001   │ http://localhost:4000/functions    │
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
 └───────────┴────────────────┴─────────────────────────────────┘
   Other reserved ports: 4400, 4500
 ```
@@ -247,13 +247,13 @@ Awesome! So the function is working! On to the next step.
 Now you're ready to deploy your function to the world wide web. From within your
 project directory, run the following command:
 
-```
+```shell
 firebase deploy
 ```
 
 This will trigger your function to be deployed.... But wait! What's this I see?
 
-```
+```shell
 Error: HTTP Error: 400, Billing account for project '189225252738' is not found.
 Billing must be enabled for activation of service(s)
 'cloudbuild.googleapis.com,containerregistry.googleapis.com' to proceed.
@@ -288,14 +288,14 @@ function.
 
 Now that your account is configured for billing, you can try to deploy again:
 
-```
+```shell
 firebase deploy
 ```
 
 It will take a little bit of time, but when it's finally finished, you should
 get output like this:
 
-```
+```shell
 === Deploying to '{your-project-id}'...
 
 i  deploying functions
@@ -378,14 +378,14 @@ Let's get that firebase token set up.
 
 Run this:
 
-```
+```shell
 firebase login:ci
 ```
 
 This will take you through the login process once again, when you've finished,
 it will give you the token in the terminal output:
 
-```
+```shell
 ✔  Success! Use this token to login on a CI server:
 
 1//06SeHVPB6AOF9CgYIARAAGAYSNwF-L9IrcdTvBfmn_ako1m3iJXRNpyV6tROQ193ZTGUtwLB95aoCC1l45ES40dRYfa5YjNCRxRc
@@ -395,7 +395,7 @@ Example: firebase deploy --token "$FIREBASE_TOKEN"
 
 And don't even try using that token, I've already revoked it 😜 Get your own!
 
-```
+```shell
 firebase logout --token 1//06SeHVPB6AOF9CgYIARAAGAYSNwF-L9IrcdTvBfmn_ako1m3iJXRNpyV6tROQ193ZTGUtwLB95aoCC1l45ES40dRYfa5YjNCRxRc
 ✔  Logged out token "1//06SeHVPB6AOF9CgYIARAAGAYSNwF-L9IrcdTvBfmn_ako1m3iJXRNpyV6tROQ193ZTGUtwLB95aoCC1l45ES40dRYfa5YjNCRxRc"
 ```
@@ -414,7 +414,7 @@ With that added, you're ready to deploy!
 
 Now commit and push all of your changes:
 
-```
+```shell
 git add -A
 git commit -m "firebase functions rock"
 git push
