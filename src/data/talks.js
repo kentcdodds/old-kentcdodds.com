@@ -54,6 +54,8 @@ export default [
       {
         event: '[React Summit](https://reactsummit.com/)',
         date: '2020-10-15',
+        recording:
+          'https://www.youtube.com/watch?v=jMqQh7JFxEQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
