@@ -208,7 +208,7 @@ This effectively does all the same stuff we were doing, except because it's a
 special Jest mock function, there are some special assertions we can use just
 for that purpose (like `toHaveBeenCalledTimes`). Unfortunately there's not
 currently an assertion called `nthCalledWith`
-([though there will be one soon!](https://facebook.github.io/jest/docs/en/next/expect.html#nthcalledwithnthcall-arg1-arg2-)),
+([though there will be one soon!](https://jestjs.io/docs/en/next/expect.html#tohavebeennthcalledwithnthcall-arg1-arg2-)),
 otherwise we could have avoided our `forEach`, but I think it's ok as it is (and
 luckily we implemented our own metadata collection in the same way Jest does, so
 we don't need to change that assertion. Fancy that!).
