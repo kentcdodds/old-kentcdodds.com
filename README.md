@@ -241,12 +241,12 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://j-rubin.com"><img src="https://avatars2.githubusercontent.com/u/19940147?v=4" width="100px;" alt=""/><br /><sub><b>Jonathan Rubin</b></sub></a><br /><a href="#content-rubinj30" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/devserkan"><img src="https://avatars3.githubusercontent.com/u/22248543?v=4" width="100px;" alt=""/><br /><sub><b>devserkan</b></sub></a><br /><a href="#content-devserkan" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/herculesgabriel/"><img src="https://avatars0.githubusercontent.com/u/51159478?v=4" width="100px;" alt=""/><br /><sub><b>Hercules Gabriel</b></sub></a><br /><a href="#content-herculesgabriel" title="Content">🖋</a></td>
+    <td align="center"><a href="http://linkedin.com/in/gabrielsanttana"><img src="https://avatars1.githubusercontent.com/u/47339825?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Santana</b></sub></a><br /><a href="#content-gabrielsanttana" title="Content">🖋</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
