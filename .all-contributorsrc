@@ -1621,6 +1621,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "gabrielsanttana",
+      "name": "Gabriel Santana",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/47339825?v=4",
+      "profile": "http://linkedin.com/in/gabrielsanttana",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
