@@ -313,19 +313,20 @@ I made this decision tree chart to help:
 Here's that written out (for screen readers and friends):
 
 - 1 Start building an app. Go to 2
-- 2 State in a component. Go to 3
-- 3 Is it needed **only** by this component?
-  - Yes? Go to 4
-  - No? Is it needed **only** by _one_ of the children?
-    - Yes? Move it to that child (Colocate state). Go to 3
-    - No? Is it needed by a sibling or parent?
-      - Yes? Move it to the parent (Lift state) Go to 3
-      - No? Go to 4
-- 4 Leave it there. Go to 5
-- 5 Is "prop drilling" a problem here?
-  - Yes? Put the state in a context provider and render that provider in the
-    component where that state was managed. Go to 6
-  - No? Go to 6
+- 2 useState. Go to 3
+- 3 used by only this component?
+  - Yes: Go to 4
+  - No: used by only one child?
+    - Yes: Colocate state. Go to 3
+    - No: used by a sibling/parent?
+      - Yes: Lift state. Go to 3
+      - No: Go to 4
+- 4 Leave it. Go to 5
+- 5 having a "prop drilling" problem?
+  - Yes: Can child function outside of parent?
+    - Yes: Move State to Context Provider. Go to 6
+    - No: Use Component Composition. Go to 6
+  - No: Go to 6
 - 6 Ship the app. As requirements change, Go to 1
 
 It's important that this is something you do as part of your regular
@@ -334,11 +335,16 @@ requirement of getting this _working_ so it happens naturally, but your app will
 "work" whether you colocate your state or not, so being intentional about
 thinking through this is important to keep your app manageable and fast.
 
+If you want to learn a bit more about that component composition step, read
+about that in
+[One React mistake that's slowing you down](https://epicreact.dev/one-react-mistake-thats-slowing-you-down).
+
 ## Conclusion
 
 In general, I think people are pretty good at "lifting state" as things change,
 but we don't often think to "colocate" state as things change in our codebase.
 So my challenge to you is to look through your codebase and look for
 opportunities to colocate state. Ask yourself "do I really need the modal's
-`isOpen` state to be in Redux?" (the answer is probably "no"). Colocate your
-state and you'll find yourself with a faster, simpler codebase. Good luck!
+`status` (open/closed) state to be in Redux?" (the answer is probably "no").
+Colocate your state and you'll find yourself with a faster, simpler codebase.
+Good luck!
