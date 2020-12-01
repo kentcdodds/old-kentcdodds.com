@@ -107,7 +107,7 @@ const useSSRLayoutEffect = isSSR ? noop : React.useLayoutEffect
 
 // then, later in your component:
 useSSRLayoutEffect(() => {
-  // safly do DOM mutations here
+  // safely do DOM mutations here
 }, [deps, go, here])
 ```
 
