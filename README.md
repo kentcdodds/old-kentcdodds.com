@@ -244,6 +244,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://linkedin.com/in/gabrielsanttana"><img src="https://avatars1.githubusercontent.com/u/47339825?v=4" width="100px;" alt=""/><br /><sub><b>Gabriel Santana</b></sub></a><br /><a href="#content-gabrielsanttana" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/pafry7"><img src="https://avatars0.githubusercontent.com/u/41058200?v=4" width="100px;" alt=""/><br /><sub><b>Patryk Fryda</b></sub></a><br /><a href="#content-pafry7" title="Content">🖋</a></td>
     <td align="center"><a href="https://cascandaliato.com"><img src="https://avatars0.githubusercontent.com/u/8927157?v=4" width="100px;" alt=""/><br /><sub><b>Carmelo Scandaliato</b></sub></a><br /><a href="#content-cascandaliato" title="Content">🖋</a></td>
+    <td align="center"><a href="https://dev.to/jacobmgevans"><img src="https://avatars1.githubusercontent.com/u/27247160?v=4" width="100px;" alt=""/><br /><sub><b>Jacob M-G Evans</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/pulls?q=is%3Apr+reviewed-by%3AJacobMGEvans" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 

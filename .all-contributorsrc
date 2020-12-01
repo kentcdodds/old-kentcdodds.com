@@ -1648,6 +1648,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "JacobMGEvans",
+      "name": "Jacob M-G Evans",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/27247160?v=4",
+      "profile": "https://dev.to/jacobmgevans",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "commitConvention": "none",
