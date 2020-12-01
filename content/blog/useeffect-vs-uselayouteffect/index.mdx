@@ -57,31 +57,7 @@ doesn't actually see the updates until after the browser has repainted).
 - **useEffect:** If you don't need to interact with the DOM at all or your DOM
   changes are unobservable (seriously, most of the time you should use this).
 
-## Two special cases
-
-Ok, so nothing's ever _quite_ that simple. Most of the time, the above are the
-reasons to use one or the other. But here are two other special cases to
-consider when deciding which of these hooks to use:
-
-### 1. Server Side Rendering
-
-`useLayoutEffect` runs on the server, but `useEffect` does not. So, imagine a
-situation where what you're doing in the effect callback makes an observable
-change to the DOM (so you should use `useLayoutEffect`), but you're server
-rendering. If you're server rendering, then _is_ no DOM to update on the server.
-This means that your effect callback will result in an error if you're
-referencing the DOM in a `useLayoutEffect` when running on the server. Or, at
-least it would, except React knows when you're trying to do this and gives you
-the following warning:
-
-```
-Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
-```
-
-There are some suggestions in that warning for how to fix it, and I recommend
-you [follow those suggestions](https://reactjs.org/link/uselayouteffect-ssr).
-
-### 2. Timing
+## One special case
 
 One other situation you might want to use `useLayoutEffect` instead of
 `useEffect` is if you're updating a value (like a `ref`) and you want to make
