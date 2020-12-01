@@ -70,35 +70,21 @@ situation where what you're doing in the effect callback makes an observable
 change to the DOM (so you should use `useLayoutEffect`), but you're server
 rendering. If you're server rendering, then _is_ no DOM to update on the server.
 This means that your effect callback will result in an error if you're
-referencing the DOM in a `useLayoutEffect` when running on the server.
+referencing the DOM in a `useLayoutEffect` when running on the server. Or, at
+least it would, except React knows when you're trying to do this and gives you
+the following warning:
 
-But you really want to avoid the bad user experience of updating the DOM in a
-`useEffect`. This is a common problem with a common solution:
-
-```javascript
-React.useLayoutEffect(() => {
-  // skip this callback for SSR:
-  const isSSR = typeof window === 'undefined'
-  if (isSSR) return
-
-  // safely do mutations here
-})
+```
+Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
 ```
 
-You could turn that into a custom hook:
+There are some suggestions in that warning for how to fix it, but here's my
+preferred solution...
 
-```javascript
-function useSSRLayoutEffect(cb, deps) {
-  React.useLayoutEffect(() => {
-    const isSSR = typeof window === 'undefined'
-    if (!isSSR) {
-      return cb()
-    }
-  }, deps)
-}
-```
-
-Or, since nothing's going to happen anyway, you could try this little trick:
+Let's assume you really want to avoid the bad user experience of updating the
+DOM in a `useEffect`, which is why you want to use `useLayoutEffect`. Since
+nothing's going to happen when rendering on the server anyway, you could try
+this little trick:
 
 ```javascript
 const isSSR = typeof window === 'undefined'
