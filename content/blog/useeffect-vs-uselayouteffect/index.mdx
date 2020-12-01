@@ -57,7 +57,65 @@ doesn't actually see the updates until after the browser has repainted).
 - **useEffect:** If you don't need to interact with the DOM at all or your DOM
   changes are unobservable (seriously, most of the time you should use this).
 
-## One special case
+## Two special cases
+
+Ok, so nothing's ever _quite_ that simple. Most of the time, the above are the
+reasons to use one or the other. But here are two other special cases to
+consider when deciding which of these hooks to use:
+
+### 1. Server Side Rendering
+
+`useLayoutEffect` runs on the server, but `useEffect` does not. So, imagine a
+situation where what you're doing in the effect callback makes an observable
+change to the DOM (so you should use `useLayoutEffect`), but you're server
+rendering. If you're server rendering, then _is_ no DOM to update on the server.
+This means that your effect callback will result in an error if you're
+referencing the DOM in a `useLayoutEffect` when running on the server.
+
+But you really want to avoid the bad user experience of updating the DOM in a
+`useEffect`. This is a common problem with a common solution:
+
+```javascript
+React.useLayoutEffect(() => {
+  // skip this callback for SSR:
+  const isSSR = typeof window === 'undefined'
+  if (isSSR) return
+
+  // safely do mutations here
+})
+```
+
+You could turn that into a custom hook:
+
+```javascript
+function useSSRLayoutEffect(cb, deps) {
+  React.useLayoutEffect(() => {
+    const isSSR = typeof window === 'undefined'
+    if (!isSSR) {
+      return cb()
+    }
+  }, deps)
+}
+```
+
+Or, since nothing's going to happen anyway, you could try this little trick:
+
+```javascript
+const isSSR = typeof window === 'undefined'
+const noop = () => {}
+const useSSRLayoutEffect = isSSR ? noop : React.useLayoutEffect
+
+// then, later in your component:
+useSSRLayoutEffect(() => {
+  // safly do DOM mutations here
+}, [deps, go, here])
+```
+
+With that, during the server render, it does nothing (`noop` is short for "no
+operation"), but when the component is rehydrated on the client, it will run as
+expected.
+
+### 2. Timing
 
 One other situation you might want to use `useLayoutEffect` instead of
 `useEffect` is if you're updating a value (like a `ref`) and you want to make
