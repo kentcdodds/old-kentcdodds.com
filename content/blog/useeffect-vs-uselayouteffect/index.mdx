@@ -78,28 +78,8 @@ the following warning:
 Warning: useLayoutEffect does nothing on the server, because its effect cannot be encoded into the server renderer's output format. This will lead to a mismatch between the initial, non-hydrated UI and the intended UI. To avoid this, useLayoutEffect should only be used in components that render exclusively on the client. See https://reactjs.org/link/uselayouteffect-ssr for common fixes.
 ```
 
-There are some suggestions in that warning for how to fix it, but here's my
-preferred solution...
-
-Let's assume you really want to avoid the bad user experience of updating the
-DOM in a `useEffect`, which is why you want to use `useLayoutEffect`. Since
-nothing's going to happen when rendering on the server anyway, you could try
-this little trick:
-
-```javascript
-const isSSR = typeof window === 'undefined'
-const noop = () => {}
-const useSSRLayoutEffect = isSSR ? noop : React.useLayoutEffect
-
-// then, later in your component:
-useSSRLayoutEffect(() => {
-  // safely do DOM mutations here
-}, [deps, go, here])
-```
-
-With that, during the server render, it does nothing (`noop` is short for "no
-operation"), but when the component is rehydrated on the client, it will run as
-expected.
+There are some suggestions in that warning for how to fix it, and I recommend
+you [follow those suggestions](https://reactjs.org/link/uselayouteffect-ssr).
 
 ### 2. Timing
 
