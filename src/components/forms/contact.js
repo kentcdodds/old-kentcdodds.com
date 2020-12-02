@@ -357,15 +357,14 @@ function ContactForm() {
                       </small>
                       <br />
                       <small>
-                        {`I prefer general questions to be asked on `}
-                        <a href="https://kcd.im/ama">{`my AMA`}</a>
+                        {`I prefer general questions to be asked during `}
+                        <a href="https://kcd.im/office-hours">{`my Office Hours`}</a>
                         {`. If you ask here, `}
                         <strong>
-                          {`I can't make any promises that `}
-                          <a href="https://kcd.im/no-time">{`I'll have time`}</a>
-                          {` to respond,`}
+                          <a href="https://kcd.im/no-time">
+                            {`I can't make any promises that I will respond.`}
+                          </a>
                         </strong>
-                        {` but I'll try.`}
                       </small>
                     </div>
                     <div>
