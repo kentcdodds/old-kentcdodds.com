@@ -1657,6 +1657,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "AdamVig",
+      "name": "Adam Vigneaux",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5354752?v=4",
+      "profile": "https://adamvig.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",

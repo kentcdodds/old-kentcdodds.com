@@ -246,6 +246,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://cascandaliato.com"><img src="https://avatars0.githubusercontent.com/u/8927157?v=4" width="100px;" alt=""/><br /><sub><b>Carmelo Scandaliato</b></sub></a><br /><a href="#content-cascandaliato" title="Content">🖋</a></td>
     <td align="center"><a href="https://dev.to/jacobmgevans"><img src="https://avatars1.githubusercontent.com/u/27247160?v=4" width="100px;" alt=""/><br /><sub><b>Jacob M-G Evans</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/pulls?q=is%3Apr+reviewed-by%3AJacobMGEvans" title="Reviewed Pull Requests">👀</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://adamvig.com"><img src="https://avatars2.githubusercontent.com/u/5354752?v=4" width="100px;" alt=""/><br /><sub><b>Adam Vigneaux</b></sub></a><br /><a href="#content-AdamVig" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
