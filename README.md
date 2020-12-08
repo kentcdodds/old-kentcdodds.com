@@ -248,6 +248,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://adamvig.com"><img src="https://avatars2.githubusercontent.com/u/5354752?v=4" width="100px;" alt=""/><br /><sub><b>Adam Vigneaux</b></sub></a><br /><a href="#content-AdamVig" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/julianbetancourt"><img src="https://avatars2.githubusercontent.com/u/11728570?v=4" width="100px;" alt=""/><br /><sub><b>Julian Betancourt</b></sub></a><br /><a href="#translation-julianbetancourt" title="Translation">🌍</a></td>
   </tr>
 </table>
 
