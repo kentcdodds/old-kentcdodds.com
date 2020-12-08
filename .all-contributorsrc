@@ -1666,6 +1666,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "julianbetancourt",
+      "name": "Julian Betancourt",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11728570?v=4",
+      "profile": "https://github.com/julianbetancourt",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
