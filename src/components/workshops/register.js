@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import theme from '../../../config/theme'
 import {lighten, darken} from 'polished'
 import {rhythm, fonts} from '../../lib/typography'

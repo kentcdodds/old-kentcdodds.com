@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core'
+import {jsx} from '@emotion/react'
 import Img from 'gatsby-image'
 import Link from 'components/link'
 import first from 'lodash/first'

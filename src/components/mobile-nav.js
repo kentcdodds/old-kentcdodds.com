@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import theme from '../../config/theme'
 import Container from './container'
 import {Link} from 'gatsby'

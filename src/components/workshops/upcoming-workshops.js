@@ -1,7 +1,7 @@
 import * as React from 'react'
 import ScheduledWorkshop from './scheduled-workshop'
 import get from 'lodash/get'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 
 function UpcomingWorkshops({events, headline}) {
   return (

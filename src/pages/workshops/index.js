@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import styled from '@emotion/styled'
 import Layout from 'components/layout'
 import Container from 'components/container'

@@ -5,7 +5,7 @@ import Layout from 'components/layout'
 import BigHero from 'components/big-hero'
 import theme from '../../config/theme'
 
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import {bpMaxSM} from 'lib/breakpoints'
 
 function MarkdownPage({children, pageContext: {frontmatter}}) {

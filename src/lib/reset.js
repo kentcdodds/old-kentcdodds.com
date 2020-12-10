@@ -1,4 +1,4 @@
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import theme from '../../config/theme'
 import typography, {fonts} from '../lib/typography'
 

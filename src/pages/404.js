@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import {UnsubscribeIllustration} from 'components/confirm-message/illustrations'
 
 function FourOFour() {

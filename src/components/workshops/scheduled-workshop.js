@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import {rhythm} from '../../lib/typography'
 import theme from '../../../config/theme'
 import Markdown from 'react-markdown'

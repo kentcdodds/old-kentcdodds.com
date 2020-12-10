@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css, keyframes} from '@emotion/core'
+import {css, keyframes} from '@emotion/react'
 import styled from '@emotion/styled'
 import Markdown from 'react-markdown'
 import Link from '../link'

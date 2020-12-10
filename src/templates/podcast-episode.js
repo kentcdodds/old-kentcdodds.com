@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Container from 'components/container'
 import {graphql} from 'gatsby'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import {fonts} from '../lib/typography'
 import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import theme from '../../config/theme'

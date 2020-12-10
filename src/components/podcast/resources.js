@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import externalLinkIcon from '../../images/icons/external-link.svg'
 
 function Resources({children = []}) {

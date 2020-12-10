@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import {bpMaxSM} from 'lib/breakpoints'
 import {fonts} from 'lib/typography'
 import ReactCountdown from 'react-countdown-now'

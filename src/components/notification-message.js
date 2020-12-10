@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import theme from '../../config/theme'
 
 // this component is one big shrug. I didn't have time to get good at animation

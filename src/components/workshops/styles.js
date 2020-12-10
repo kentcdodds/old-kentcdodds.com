@@ -1,4 +1,4 @@
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import CalendarIcon from '../../images/icons/calendar.svg'
 import LocationIcon from '../../images/icons/location.svg'
 import TimeIcon from '../../images/icons/time.svg'

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Link from '../components/link'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 import theme from '../../config/theme'
 import {bpMaxSM} from '../lib/breakpoints'
 import SubscribeForm from './forms/subscribe'

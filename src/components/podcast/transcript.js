@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {css} from '@emotion/core'
+import {css} from '@emotion/react'
 
 function Transcript({children}) {
   const [isOpen, setIsOpen] = React.useState(false)
