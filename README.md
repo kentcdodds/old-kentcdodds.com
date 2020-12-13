@@ -251,6 +251,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/julianbetancourt"><img src="https://avatars2.githubusercontent.com/u/11728570?v=4" width="100px;" alt=""/><br /><sub><b>Julian Betancourt</b></sub></a><br /><a href="#translation-julianbetancourt" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/nick722"><img src="https://avatars3.githubusercontent.com/u/31370625?v=4" width="100px;" alt=""/><br /><sub><b>Nikolai Yakuschenko</b></sub></a><br /><a href="#content-nick722" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ravishankar97"><img src="https://avatars2.githubusercontent.com/u/31211985?v=4" width="100px;" alt=""/><br /><sub><b>ravishankar97</b></sub></a><br /><a href="#content-ravishankar97" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/nekhaevskiy"><img src="https://avatars0.githubusercontent.com/u/15379100?v=4" width="100px;" alt=""/><br /><sub><b>Yury Nekhaevskiy</b></sub></a><br /><a href="#content-nekhaevskiy" title="Content">🖋</a></td>
   </tr>
 </table>
 
