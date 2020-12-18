@@ -1703,6 +1703,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "konstantinmuenster",
+      "name": "Konstantin Münster",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/46243719?v=4",
+      "profile": "https://github.com/konstantinmuenster",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
