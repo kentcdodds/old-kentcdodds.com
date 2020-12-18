@@ -12,3 +12,7 @@
 [build]
   command = "npm run netlify"
   functions = "public/functions/"
+
+[build.environment]
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  TERM = "xterm"
