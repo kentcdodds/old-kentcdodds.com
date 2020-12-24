@@ -253,6 +253,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/ravishankar97"><img src="https://avatars2.githubusercontent.com/u/31211985?v=4" width="100px;" alt=""/><br /><sub><b>ravishankar97</b></sub></a><br /><a href="#content-ravishankar97" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/nekhaevskiy"><img src="https://avatars0.githubusercontent.com/u/15379100?v=4" width="100px;" alt=""/><br /><sub><b>Yury Nekhaevskiy</b></sub></a><br /><a href="#content-nekhaevskiy" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/konstantinmuenster"><img src="https://avatars0.githubusercontent.com/u/46243719?v=4" width="100px;" alt=""/><br /><sub><b>Konstantin Münster</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=konstantinmuenster" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/billfienberg"><img src="https://avatars3.githubusercontent.com/u/6130520?v=4" width="100px;" alt=""/><br /><sub><b>Bill Fienberg</b></sub></a><br /><a href="#content-billfienberg" title="Content">🖋</a></td>
   </tr>
 </table>
 
