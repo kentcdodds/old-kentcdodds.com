@@ -146,7 +146,7 @@ in the process of refactoring especially.
 One of the things that really aggravates problems with prop drilling is breaking
 out your `render` method into multiple components unnecessarily. You'll be
 surprised how simple a big `render` method can be when you just inline as much
-as you can. There's no reason to breaking things out prematurely. Wait until you
+as you can. There's no reason to break things out prematurely. Wait until you
 really need to reuse a block before breaking it out. Then you wont need to pass
 props anyway!
 
@@ -174,7 +174,7 @@ about state management from my blog post:
 Use [React's Context API](/blog/how-to-use-react-context-effectively) for things
 that are truly necessary deep in the react tree. They don't have to be things
 you need _everywhere_ in the application (you can render a provider anywhere in
-the app). This can really help avoid some issues with prop drilling. It's been
+the app). This can real``ly help avoid some issues with prop drilling. It's been
 noted that context is kinda taking us back to the days of global variables. The
 difference is that because of the way the API was designed, you can still
 statically find the source of the context as well as any consumers with relative
