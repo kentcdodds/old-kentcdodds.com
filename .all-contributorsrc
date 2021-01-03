@@ -1721,6 +1721,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jrapala",
+      "name": "Juliette Rapala",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9326234?v=4",
+      "profile": "https://julietterapala.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
