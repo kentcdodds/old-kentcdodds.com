@@ -19,43 +19,49 @@ export default [
   //   `,
   // },
   {
-    title: 'Surprise Talk',
-    resources: [],
-    tags: ['javascript'],
+    title: 'Managing State Management',
+    resources: [
+      '[slides](https://github.com/kentcdodds/managing-state-management-slides)',
+    ],
+    tags: ['react', 'state'],
     deliveries: [
       {
-        event: '[DotJS 2021](https://www.dotjs.io/)',
-        date: '2021-04-18',
+        event: 'React Rally',
+        date: '2020-08-14',
+        recording: '',
+      },
+      {
+        event: 'Reactathon',
+        date: '2020-12-08',
+        recording:
+          'https://youtu.be/pkNzU-5oDiA?t=3890&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
-      dotJS has a tradition of not announcing the topics before the conference
-      and I will honor that here. You'll have to come and find out!
-    `,
-  },
-  {
-    title: 'Keynote: TBA',
-    resources: [],
-    tags: [],
-    deliveries: [
-      {
-        event: '[JS Day Canaries](https://jsdaycanarias.com/)',
-        date: '2021-11-13',
-      },
-    ],
-    description: `
+      Application State Management is one of the hardest parts of building and
+      maintaining React Applications. The number of options you have is numerous
+      and the reason is that it's just such a hard problem with so many nuances
+      and trade-offs. One thing that makes application state management harder
+      is when we aren't thoughtful about how that state is organized and
+      categorized in our app. There are different kinds of state and they
+      require different approaches for management. When you try to treat all app
+      state exactly the same is when problems come into play.
+      
+      Let's talk about what some of those categories are and how we can
+      drastically simplify our application code and improve our app's
+      performance by thinking about and organizing our state differently.
     `,
   },
   {
     title: 'Consume ➡️ Build ➡️ Teach',
-    resources: [],
-    tags: [],
+    resources: ['[slides](https://slides.com/kentcdodds/consume-build-teach)'],
+    tags: ['career'],
     deliveries: [
       {
         event: '[React Summit](https://reactsummit.com/)',
         date: '2020-10-15',
         recording:
-          'https://www.youtube.com/watch?v=jMqQh7JFxEQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+          'https://www.youtube.com/watch?v=yUcd_gXByoQ&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
