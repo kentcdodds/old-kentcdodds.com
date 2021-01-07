@@ -1,6 +1,6 @@
 const {URL} = require('url')
 const nodemailer = require('nodemailer')
-const ow = require('ow')
+const {default: ow} = require('ow')
 const unified = require('unified')
 const markdown = require('remark-parse')
 const remark2rehype = require('remark-rehype')
