@@ -257,6 +257,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://julietterapala.com"><img src="https://avatars3.githubusercontent.com/u/9326234?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Juliette Rapala</b></sub></a><br /><a href="#content-jrapala" title="Content">🖋</a></td>
+    <td align="center"><a href="http://arvigeus.github.com"><img src="https://avatars.githubusercontent.com/u/4872470?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikolay Stoynov</b></sub></a><br /><a href="#content-arvigeus" title="Content">🖋</a></td>
   </tr>
 </table>
 
