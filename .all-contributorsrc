@@ -1730,6 +1730,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "arvigeus",
+      "name": "Nikolay Stoynov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4872470?v=4",
+      "profile": "http://arvigeus.github.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
