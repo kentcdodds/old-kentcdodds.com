@@ -40,8 +40,8 @@ function useDarkMode() {
     const handleChange = () => {
       setMode(mediaQuery.matches ? 'dark' : 'light')
     }
-    mediaQuery.addListener(handleChange)
-    return () => mediaQuery.removeListener(handleChange)
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
 
   React.useEffect(() => {
