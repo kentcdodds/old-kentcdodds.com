@@ -70,13 +70,15 @@ function App() {
   )
 }
 
+interface ThemeModeManagement {
+  mode: DarkModeState
+  setMode: SetDarkModeState
+}
+
 function Home({
   mode,
   setMode,
-}: {
-  mode: DarkModeState
-  setMode: SetDarkModeState
-}) {
+}: ThemeModeManagement) {
   return (
     <>
       {/* ... */}
@@ -89,10 +91,7 @@ function Home({
 function Page({
   mode,
   setMode,
-}: {
-  mode: DarkModeState
-  setMode: SetDarkModeState
-}) {
+}: ThemeModeManagement) {
   return (
     <>
       {/* ... */}
@@ -105,10 +104,7 @@ function Page({
 function Navigation({
   mode,
   setMode,
-}: {
-  mode: DarkModeState
-  setMode: SetDarkModeState
-}) {
+}: ThemeModeManagement) {{
   return (
     <>
       {/* ... */}
