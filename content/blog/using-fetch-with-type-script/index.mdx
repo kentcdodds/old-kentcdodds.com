@@ -16,6 +16,9 @@ bannerCredit:
   'Photo by [Anthony Duran](https://unsplash.com/photos/1Ck8CCXlVEU)'
 ---
 
+When migrating some code to TypeScript, I ran into a few little
+hurdles I want to share with you.
+
 ## The use case:
 
 In [EpicReact.dev](https://epicreact.dev) workshops, when I'm teaching how to
@@ -133,8 +136,7 @@ get:
 ## Typing fetch
 
 Alright, now that we know what `fetchPokemon` is supposed to do, let's start
-adding types. When migrating this code to TypeScript, I ran into a few little
-hurdles I want to share with you.
+adding types.
 
 Here's how I migrate code to TypeScript:
 
@@ -227,7 +229,7 @@ Alright, let's get to that unfortunate explicit type for the `errors.map` call.
 As I mentioned earlier, this is an indication that our array isn't properly
 typed.
 
-A quick review here though will show that both `data` and `errors` is `any`:
+A quick review will show that both `data` and `errors` is `any`:
 
 ```typescript
 const {data, errors} = await response.json()
@@ -237,7 +239,7 @@ This is because the return type for `response.json` is `Promise<any>`. When I
 first realized this I was annoyed, but after a second of thinking about it I
 realized that I don't know what else it could be! How could TypeScript know what
 data my `fetch` call will return? So let's help the TypeScript compiler out with
-a little type definition:
+a little type annotation:
 
 ```typescript
 type JSONResponse = {
