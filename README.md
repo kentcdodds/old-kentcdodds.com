@@ -269,7 +269,7 @@ Thanks goes to these wonderful people
 
 This project follows the
 [all-contributors](https://github.com/all-contributors/all-contributors)
-specification. Contributions of any kind welcome!
+specification. Contributions of any kind are welcome!
 
 <!-- prettier-ignore-start -->
 [all-contributors-badge]: https://img.shields.io/github/all-contributors/kentcdodds/kentcdodds.com?color=orange&style=flat-square
