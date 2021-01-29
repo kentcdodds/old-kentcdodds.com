@@ -365,7 +365,7 @@ function onCreateMdxNode({node, getNode, actions}) {
   createNodeField({
     name: 'editLink',
     node,
-    value: `https://github.com/kentcdodds/kentcdodds.com/edit/master${node.fileAbsolutePath.replace(
+    value: `https://github.com/kentcdodds/kentcdodds.com/edit/main{node.fileAbsolutePath.replace(
       __dirname,
       '',
     )}`,
@@ -374,7 +374,7 @@ function onCreateMdxNode({node, getNode, actions}) {
   createNodeField({
     name: 'historyLink',
     node,
-    value: `https://github.com/kentcdodds/kentcdodds.com/commits/master${node.fileAbsolutePath.replace(
+    value: `https://github.com/kentcdodds/kentcdodds.com/commits/main${node.fileAbsolutePath.replace(
       __dirname,
       '',
     )}`,
