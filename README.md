@@ -260,7 +260,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://arvigeus.github.com"><img src="https://avatars.githubusercontent.com/u/4872470?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikolay Stoynov</b></sub></a><br /><a href="#content-arvigeus" title="Content">🖋</a></td>
     <td align="center"><a href="https://dev.to/oscardom"><img src="https://avatars.githubusercontent.com/u/2574275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oscar Dominguez</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=oscard0m" title="Code">💻</a></td>
     <td align="center"><a href="https://linkedin.com/in/willian/"><img src="https://avatars.githubusercontent.com/u/19230?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Willian Fernandes</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/pulls?q=is%3Apr+reviewed-by%3Awillian" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://github.com/wKovacs64"><img src="https://avatars.githubusercontent.com/u/1288694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Hall</b></sub></a><br /><a href="#content-wKovacs64" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/wKovacs64"><img src="https://avatars.githubusercontent.com/u/1288694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Hall</b></sub></a><br /><a href="#content-wKovacs64" title="Content">🖋</a> <a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=wKovacs64" title="Code">💻</a></td>
   </tr>
 </table>
 
