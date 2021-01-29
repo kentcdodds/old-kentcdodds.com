@@ -1757,6 +1757,16 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "wKovacs64",
+      "name": "Justin Hall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1288694?v=4",
+      "profile": "https://github.com/wKovacs64",
+      "contributions": [
+        "content",
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
