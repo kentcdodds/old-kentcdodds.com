@@ -1748,6 +1748,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "willian",
+      "name": "Willian Fernandes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19230?v=4",
+      "profile": "https://linkedin.com/in/willian/",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "commitConvention": "none",
