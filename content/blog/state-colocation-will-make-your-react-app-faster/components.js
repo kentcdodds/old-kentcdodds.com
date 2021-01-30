@@ -18,6 +18,8 @@ function SlowComponent({time, onChange}) {
         aria-label="time in milliseconds"
         value={time}
         type="number"
+        min="0"
+        max="3000"
         onChange={e => onChange(Number(e.target.value))}
       />
       {'ms slow'}
