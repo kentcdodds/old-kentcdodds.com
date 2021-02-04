@@ -218,10 +218,10 @@ version of the state.
 I should add that you won't have this same problem if you're using `useReducer`
 because that will always receive the most recent version of the `state` (as the
 first argument to your reducer), so you don't need to worry about stale state
-values. Though an exception to this would be if your state update is
-determined by props or some external state, in which case you might need a
-`useRef` to help ensure you've got the most current version of that prop or
-external state. But that's a subject for another blog post...
+values. Though an exception to this would be if your state update is determined
+by props or some external state, in which case you might need a `useRef` to help
+ensure you've got the most current version of that prop or external state. But
+that's a subject for another blog post...
 
 ## Conclusion
 

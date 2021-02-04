@@ -344,7 +344,7 @@ then you may be interested in
 class Person {
   #name
   greeting = 'hey there'
-  #getPrefixedName = (prefix) => `${prefix}: ${this.#name}`
+  #getPrefixedName = prefix => `${prefix}: ${this.#name}`
   constructor(name) {
     this.#name = name
   }
@@ -358,7 +358,7 @@ class Person {
   }
   getGreetingCallback() {
     const {greeting} = this
-    return (subject) => `${this.greeting} ${subject}, I'm ${#name}`
+    return subject => `${this.greeting} ${subject}, I'm ${#name}`
   }
 }
 const person = new Person('Jane Doe')
