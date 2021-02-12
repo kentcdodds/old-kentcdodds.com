@@ -1767,6 +1767,15 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "nikolalsvk",
+      "name": "Nikola Đuza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3028124?v=4",
+      "profile": "https://nikolalsvk.github.io/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
