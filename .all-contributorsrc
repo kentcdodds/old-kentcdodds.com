@@ -1776,6 +1776,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "chrismilson",
+      "name": "Chris Milson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13655076?v=4",
+      "profile": "http://shlappas.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",

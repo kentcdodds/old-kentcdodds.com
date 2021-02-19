@@ -262,6 +262,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://linkedin.com/in/willian/"><img src="https://avatars.githubusercontent.com/u/19230?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Willian Fernandes</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/pulls?q=is%3Apr+reviewed-by%3Awillian" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/wKovacs64"><img src="https://avatars.githubusercontent.com/u/1288694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Justin Hall</b></sub></a><br /><a href="#content-wKovacs64" title="Content">🖋</a> <a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=wKovacs64" title="Code">💻</a></td>
     <td align="center"><a href="https://nikolalsvk.github.io/"><img src="https://avatars.githubusercontent.com/u/3028124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikola Đuza</b></sub></a><br /><a href="#content-nikolalsvk" title="Content">🖋</a></td>
+    <td align="center"><a href="http://shlappas.com"><img src="https://avatars.githubusercontent.com/u/13655076?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Milson</b></sub></a><br /><a href="#content-chrismilson" title="Content">🖋</a></td>
   </tr>
 </table>
 
