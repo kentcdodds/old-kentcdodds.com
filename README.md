@@ -264,6 +264,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://nikolalsvk.github.io/"><img src="https://avatars.githubusercontent.com/u/3028124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikola Đuza</b></sub></a><br /><a href="#content-nikolalsvk" title="Content">🖋</a></td>
     <td align="center"><a href="http://shlappas.com"><img src="https://avatars.githubusercontent.com/u/13655076?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Milson</b></sub></a><br /><a href="#content-chrismilson" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/giovanisleite"><img src="https://avatars.githubusercontent.com/u/11703235?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovani Sousa</b></sub></a><br /><a href="#content-giovanisleite" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
