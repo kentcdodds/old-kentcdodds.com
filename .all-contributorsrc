@@ -1785,6 +1785,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "giovanisleite",
+      "name": "Giovani Sousa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11703235?v=4",
+      "profile": "https://github.com/giovanisleite",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
