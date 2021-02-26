@@ -28,6 +28,35 @@ simple examples.
 Keep in mind that there are TONS of combinations of different syntaxes. I only
 include those which are less obvious combinations or unique in some way.
 
+First, the biggest confusion I always have with the syntax of things is where to
+put the return type. When do I use `:` and when do I use `=>`. Here are a few
+quick examples that might help speed you up if you're using this post as a quick
+reference:
+
+```typescript
+// Simple type for a function, use =>
+type FnType = (arg: ArgType) => ReturnType
+
+// Every other time, use :
+type FnAsObjType = {
+  (arg: ArgType): ReturnType
+}
+interface InterfaceWithFn {
+  fn(arg: ArgType): ReturnType
+}
+
+const fnImplementation = (arg: ArgType): ReturnType => {
+  /* implementation */
+}
+```
+
+I think that was the biggest source of confusion for me. Having written this,
+now I know that the only time I use `=> ReturnType` is when I'm defining a
+function type as a type in itself. Any other time, use use `: ReturnType`.
+
+Continue reading for a bunch of examples of how this plays out in typical code
+examples.
+
 ## Function declarations
 
 ```typescript
