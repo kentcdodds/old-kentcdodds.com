@@ -1,5 +1,5 @@
 ---
-slug: 'type-script-function-syntaxes'
+slug: 'typescript-function-syntaxes'
 title: 'TypeScript Function Syntaxes'
 date: '2021-02-25'
 author: 'Kent C. Dodds'
@@ -27,6 +27,35 @@ simple examples.
 
 Keep in mind that there are TONS of combinations of different syntaxes. I only
 include those which are less obvious combinations or unique in some way.
+
+First, the biggest confusion I always have with the syntax of things is where to
+put the return type. When do I use `:` and when do I use `=>`. Here are a few
+quick examples that might help speed you up if you're using this post as a quick
+reference:
+
+```typescript
+// Simple type for a function, use =>
+type FnType = (arg: ArgType) => ReturnType
+
+// Every other time, use :
+type FnAsObjType = {
+  (arg: ArgType): ReturnType
+}
+interface InterfaceWithFn {
+  fn(arg: ArgType): ReturnType
+}
+
+const fnImplementation = (arg: ArgType): ReturnType => {
+  /* implementation */
+}
+```
+
+I think that was the biggest source of confusion for me. Having written this,
+now I know that the only time I use `=> ReturnType` is when I'm defining a
+function type as a type in itself. Any other time, use use `: ReturnType`.
+
+Continue reading for a bunch of examples of how this plays out in typical code
+examples.
 
 ## Function declarations
 
@@ -489,6 +518,70 @@ const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(typedBoolean) // Arr
 ```
 
 Woo!
+
+## Assertion functions
+
+You know how sometimes you do runtime checking to be extra-sure of something?
+Like, when an object can have a property with a value or `null` you want to
+check if it's `null` and maybe throw an error if it is `null`. Here's how you
+might do something like that:
+
+```typescript
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function logUserDisplayNameUpper(user: User) {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+TypeScript is fine with `user.displayName.toUpperCase()` because the `if`
+statement is a type guard that it understands. Now, let's say you want to take
+that `if` check and put it in a function:
+
+```typescript
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function assertDisplayName(user: User) {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+}
+
+function logUserDisplayName(user: User) {
+  assertDisplayName(user)
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+Now, TypeScript is no longer happy because the call to `assertDisplayName` isn't
+a sufficient type guard. I'd argue this is a limitation on TypeScript's part.
+Hey, no tech is perfect. Anyway, we can help TypeScript out a bit by telling it
+that our function makes an assertion:
+
+```typescript {8}
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function assertDisplayName(
+  user: User,
+): asserts user is User & {displayName: string} {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+}
+
+function logUserDisplayName(user: User) {
+  assertDisplayName(user)
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+And that's another way to turn our function into a type narrowing function!
 
 ## Conclusion
 
