@@ -490,6 +490,70 @@ const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(typedBoolean) // Arr
 
 Woo!
 
+## Assertion functions
+
+You know how sometimes you do runtime checking to be extra-sure of something?
+Like, when an object can have a property with a value or `null` you want to
+check if it's `null` and maybe throw an error if it is `null`. Here's how you
+might do something like that:
+
+```typescript
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function logUserDisplayNameUpper(user: User) {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+TypeScript is fine with `user.displayName.toUpperCase()` because the `if`
+statement is a type guard that it understands. Now, let's say you want to take
+that `if` check and put it in a function:
+
+```typescript
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function assertDisplayName(user: User) {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+}
+
+function logUserDisplayName(user: User) {
+  assertDisplayName(user)
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+Now, TypeScript is no longer happy because the call to `assertDisplayName` isn't
+a sufficient type guard. I'd argue this is a limitation on TypeScript's part.
+Hey, no tech is perfect. Anyway, we can help TypeScript out a bit by telling it
+that our function makes an assertion:
+
+```typescript {8}
+type User = {
+  name: string
+  displayName: string | null
+}
+
+function assertDisplayName(
+  user: User,
+): asserts user is User & {displayName: string} {
+  if (!user.displayName) throw new Error('Oh no, user has no displayName')
+}
+
+function logUserDisplayName(user: User) {
+  assertDisplayName(user)
+  console.log(user.displayName.toUpperCase())
+}
+```
+
+And that's another way to turn our function into a type narrowing function!
+
 ## Conclusion
 
 That's definitely not everything, but that's a lot of the common syntax I find
