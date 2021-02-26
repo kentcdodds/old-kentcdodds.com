@@ -344,7 +344,8 @@ const math = new MathUtils()
 const sum = math.sum
 sum(1, 2)
 
-// but it also comes at a cost that offsets any perf gains you get by going with a class over a regular object factor so...
+// but it also comes at a cost that offsets any perf gains you get
+// by going with a class over a regular object factor so...
 ```
 
 And then, you can extract these types. Here's what it looks like for the method
@@ -417,7 +418,8 @@ function asyncSum(a: number, b: number): Promise<number>
 function asyncSum(a: number, b: number, cb: asyncSumCb): void
 // define the actual implementation
 // notice cb is optional
-// also notice that the return type is inferred, but it could be specified as `void | Promise<number>`
+// also notice that the return type is inferred, but it could be specified
+// as `void | Promise<number>`
 function asyncSum(a: number, b: number, cb?: asyncSumCb) {
   const result = a + b
   if (cb) return cb(result)
@@ -457,7 +459,7 @@ type IteratorNextType = {
 }
 ```
 
-If you want type safety for the `yeild` expression completion value, add a type
+If you want type safety for the `yield` expression completion value, add a type
 annotation to the variable you assign it to:
 
 ```typescript {2}
@@ -526,13 +528,15 @@ to me):
 You have an array with some falsy values and you want those gone:
 
 ```typescript
-const arrayWithFalsyValues = [1, undefined, 0, 2] // Array<number | undefined>
+// Array<number | undefined>
+const arrayWithFalsyValues = [1, undefined, 0, 2]
 ```
 
 In regular JavaScript you can do:
 
 ```typescript
-const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(Boolean) // Array<number | undefined>
+// Array<number | undefined>
+const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(Boolean)
 ```
 
 Unfortunately, TypeScript doesn't consider this a type narrowing guard, so the
@@ -555,7 +559,8 @@ function typedBoolean<ValueType>(
 And with that we can do this:
 
 ```typescript
-const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(typedBoolean) // Array<number>
+// Array<number>
+const arrayWithoutFalsyValues = arrayWithFalsyValues.filter(typedBoolean)
 ```
 
 Woo!
