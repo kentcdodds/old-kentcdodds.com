@@ -207,7 +207,7 @@ sum(2, undefined) // results in 2
 So that example is functionally equivalent to:
 
 ```typescript
-const sum = (a: number, b?: number = 0): number => a + b
+const sum = (a: number, b: number | undefined = 0): number => a + b
 ```
 
 TIL.
