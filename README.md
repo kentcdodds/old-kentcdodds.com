@@ -266,6 +266,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/giovanisleite"><img src="https://avatars.githubusercontent.com/u/11703235?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovani Sousa</b></sub></a><br /><a href="#content-giovanisleite" title="Content">🖋</a></td>
+    <td align="center"><a href="http://sudhanshu-ranjan.tech"><img src="https://avatars.githubusercontent.com/u/22864071?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sudhanshu</b></sub></a><br /><a href="#content-tsuki42" title="Content">🖋</a></td>
   </tr>
 </table>
 
