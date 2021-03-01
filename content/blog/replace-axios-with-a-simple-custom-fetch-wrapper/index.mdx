@@ -103,11 +103,11 @@ function client(endpoint, customConfig = {}) {
   return window
     .fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config)
     .then(async response => {
-      const data = await response.json()
       if (response.ok) {
-        return data
+        return (await response.json())
       } else {
-        return Promise.reject(data)
+        const errorMessage = await response.text()
+        return Promise.reject(new Error(errorMessage))
       }
     })
 }
@@ -136,11 +136,11 @@ function client(endpoint, {body, ...customConfig} = {}) {
   return window
     .fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config)
     .then(async response => {
-      const data = await response.json()
       if (response.ok) {
-        return data
+        return (await response.json())
       } else {
-        return Promise.reject(data)
+        const errorMessage = await response.text();
+        return Promise.reject(new Error(errorMessage));
       }
     })
 }
