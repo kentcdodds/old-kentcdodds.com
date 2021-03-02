@@ -544,7 +544,7 @@ type is still `Array<number | undefined>` (no narrowing applied).
 
 So we can write our own function and tell the compiler that it returns
 true/false for whether the given argument is a specific type. For us, we'll say
-that our function returns true if the given argument's type is included in one
+that our function returns true if the given argument's type is not included in one
 of the falsy value types.
 
 ```typescript
