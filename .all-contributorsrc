@@ -1812,6 +1812,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "gapurov",
+      "name": "Vladislav Gapurov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34619645?v=4",
+      "profile": "https://gapurov.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
