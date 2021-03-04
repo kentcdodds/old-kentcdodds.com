@@ -16,6 +16,7 @@ keywords:
   - 'props'
   - 'react element'
   - 'children'
+  - 'testing'
 banner: './images/banner.jpg'
 bannerCredit: 'Photo by [Jonny Gios](https://unsplash.com/photos/prqTBbgDkec)'
 ---
@@ -104,7 +105,7 @@ With that, let's try some options for applying that type to the props object in
 our React Component.
 
 A common method to typing a React component is to use one of the generics that
-are built-into `@types/react` (I mean, it's built-in right? so what could go
+are built-into `@types/react` (I mean, it's built-in right? So what could go
 wrong?). Interestingly, you cannot type a function declaration this way, so
 we'll have to use a function expression:
 
@@ -125,8 +126,10 @@ This works pretty well, but there are three major problems with this:
 Ok ok, so maybe #3 isn't a _major_ problem, but #1 is pretty significant. There
 are a few other smaller issues laid out in
 [this excellent GitHub issue](https://github.com/facebook/create-react-app/pull/8177)
-if you want to dive deeper. Suffice it to say, don't use `React.FC` (or it's
-longer alias `React.FunctionComponent`).
+if you want to dive deeper (also check
+[the React TypeScript Cheatsheet](https://github.com/typescript-cheatsheets/react#function-components)).
+Suffice it to say, don't use `React.FC` (or its longer alias
+`React.FunctionComponent`).
 
 One of the things I love about React components is that they aren't all that
 special. Here's the definition of a React component:
