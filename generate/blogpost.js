@@ -54,7 +54,7 @@ async function generateBlogPost() {
       message: 'Keywords (comma separated)',
     },
   ])
-  const slug = slugify(title)
+  const slug = slugify(title).replace(/(java|type)-script/g, '$1script')
   const destination = fromRoot('content/blog', slug)
   mkdirp.sync(destination)
 

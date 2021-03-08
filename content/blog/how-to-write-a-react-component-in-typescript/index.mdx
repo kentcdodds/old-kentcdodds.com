@@ -163,8 +163,8 @@ inference) unless necessary. And that's the case here.
 
 ## Improving the `CalculatorProps` type
 
-Ok, now this next bit has nothing to do with typing React components, but I
-thought you'd find it interesting anyway, so skip ahead if you don't. Let's
+Ok, now this next bit doesn't have a lot to do with typing React components, but
+I thought you'd find it interesting anyway, so skip ahead if you don't. Let's
 improve the `CalculatorProps` type. As a reminder, here's what we have so far:
 
 ```tsx
@@ -248,85 +248,17 @@ type OperationsObj = {
 The `keyof` part will take all the keys of that type, resulting in
 `'+' | '-' | '*' | '/'` 🎉
 
-But I'm not done... I'm not a fan of having to type each of the `operations`
-objects. They're identically typed (by necessity due to the use case). The
-`operations` object is really just a record of operation strings mapped to a
-function that operates on two numbers. If we were to extract the type for those
-functions into a single type, it would be:
-
-```tsx
-type OperationFn = (left: number, right: number) => number
-```
-
-So if we add a type annotation on our `operations` variable, then we don't have
-to type each function individually. Let's try that:
-
-```tsx
-type OperationFn = (left: number, right: number) => number
-const operations: Record<string, OperationFn> = {
-  '+': (left, right) => left + right,
-  '-': (left, right) => left - right,
-  '*': (left, right) => left * right,
-  '/': (left, right) => left / right,
-}
-
-type CalculatorProps = {
-  left: number
-  operator: keyof typeof operations
-  right: number
-}
-```
-
-Sweet, so we don't have to type every function individually, but oh no... now
-the `typeof operations` is `Record<string, OperationFn>` and the `keyof` of that
-is going to be `string` which means our `CalculatorProps['operator']` type will
-be `string`. Ugh 😩
-
-Here's what we could do to fix this:
-
-```tsx {2-3}
-type OperationFn = (left: number, right: number) => number
-type Operator = '+' | '-' | '/' | '*'
-const operations: Record<Operator, OperationFn> = {
-  '+': (left, right) => left + right,
-  '-': (left, right) => left - right,
-  '*': (left, right) => left * right,
-  '/': (left, right) => left / right,
-}
-
-type CalculatorProps = {
-  left: number
-  operator: keyof typeof operations
-  right: number
-}
-```
-
-But now we're back to having to add `**` in two places if we decide to add the
-Exponentiation operator. However, in this case, TypeScript will give us a
-compiler error if we add it in one and not the other, so that's a step up.
-
-At this point, we just need to decide which we dislike the least: If we type
-every function individually, we deal with repetition in every function. If we
-add a type annotation to the object, we have duplication between the property
-names and the operators. Neither of these is more error prone, so it's really
-just preference at this point. If I were reviewing a PR from you, I wouldn't
-have an issue if you went with either approach.
-
-Personally, I think I prefer the `type Operator` option because I just don't
-like repeating the types in the functions.
-
 ## Conclusion
 
-Here's the finished version:
+Here's the finished version (I typed the operations functions as well):
 
 ```tsx
 type OperationFn = (left: number, right: number) => number
-type Operator = '+' | '-' | '/' | '*'
-const operations: Record<Operator, OperationFn> = {
-  '+': (left, right) => left + right,
-  '-': (left, right) => left - right,
-  '*': (left, right) => left * right,
-  '/': (left, right) => left / right,
+const operations = {
+  '+': (left: number, right: number): number => left + right,
+  '-': (left: number, right: number): number => left - right,
+  '*': (left: number, right: number): number => left * right,
+  '/': (left: number, right: number): number => left / right,
 }
 
 type CalculatorProps = {
@@ -358,3 +290,10 @@ const examples = (
 
 I hope that gives you an idea of a good way to type your React components. Good
 luck and take care!
+
+P.S. One thing I don't like at all about our solution is we have to type each of
+the `operations` functions. Interestingly, this is a bit of a rabbit hole, but
+at the other end of it, the types are definitely better and you learn a few
+tricks along the way. Originally that was part of this blog post, but I decided
+to move it to its own post. Read all about it here:
+[How to write a type narrowing identity function in TypeScript](/blog/how-to-write-a-type-narrowing-identity-function-in-typescript).
