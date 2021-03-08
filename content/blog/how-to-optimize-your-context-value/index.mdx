@@ -62,5 +62,31 @@ most situations, so I wouldn't bother optimizing most of my contexts. But if you
 really have all the problems mentioned above, then consider doing this as a
 simple way to side-step the issue.
 
+## The state and dispatch separation is annoying
+
+Some people find this annoying/overly verbose:
+
+```javascript
+const state = useCount()
+const dispatch = useCountDispatch()
+```
+
+They say "can't we just do this?":
+
+```javascript
+const [state, dispatch] = useCount()
+```
+
+Sure you can:
+
+```javascript
+function useCount() {
+  return [useCount(), useCountDispatch()]
+}
+```
+
+Just keep in mind that any component that uses that, you will lose the
+performance benefits if it only needs one or the other.
+
 Also, don't miss
 [How to use React Context effectively](/blog/how-to-use-react-context-effectively).
