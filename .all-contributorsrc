@@ -1830,6 +1830,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "maikeru",
+      "name": "P. Michael Holland",
+      "avatar_url": "https://avatars.githubusercontent.com/u/247246?v=4",
+      "profile": "http://maikeru.github.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
