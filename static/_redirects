@@ -20,6 +20,7 @@
 /cohorts                                                                /clubs
 /learning-clubs                                                         /clubs
 /blog/how-to-write-a-react-component-in-type-script                     /blog/how-to-write-a-react-component-in-typescript
+/blog/how-to-write-a-type-narrowing-identity-function-in-typescript     /blog/how-to-write-a-constrained-identity-function-in-typescript
 
 # Joel whoopsies
 /chats-with-kent-podcast/seasons/01/episodes/01                         /chats-with-kent-podcast/seasons/01/episodes/growing-your-skills-and-career-through-teaching-with-ali-spittel
