@@ -1,6 +1,6 @@
 ---
-slug: 'how-to-write-a-type-narrowing-identity-function-in-typescript'
-title: 'How to write a type narrowing identity function (TNIF) in TypeScript'
+slug: 'how-to-write-a-constrained-identity-function-in-typescript'
+title: 'How to write a Constrained Identity Function (CIF) in TypeScript'
 date: '2021-03-09'
 author: 'Kent C. Dodds'
 description:
@@ -12,6 +12,7 @@ keywords:
   - 'types'
   - 'type narrowing'
   - 'type widening'
+  - 'type constrained'
   - 'advanced patterns'
   - 'react'
   - 'testing'
@@ -119,7 +120,7 @@ This is where I left this when I first wrote this component, but then
 [@AlekseyL13 suggested](https://twitter.com/AlekseyL13/status/1368796045547888644)
 that I try a properly typed identity function.
 
-## The type narrowing identity function
+## The constrained identity function
 
 First, let's keep in mind, we have 2 goals:
 
@@ -134,17 +135,23 @@ a type annotation like `const operations: Record<string, OperationFn> = ...`,
 you end up widening the `key` so `keyof typeof` results in `string`. Ugh, how
 annoying.
 
-So here's where the type narrowing identity function comes in. By the way, "type
-narrowing" describes a situation where you have one thing that could be many
-possible values and you "narrow" it down to a few. Here's a simple example:
+So here's where the constrained identity function comes in. By the way,
+"constrained" describes a situation where you have a function that accepts a
+narrower version of an input than it's passed.Here's a simple example:
 
 ```tsx
-const randomNumber = Math.random()
-// typeof randomNumber === number
-if (randomNumber === 0.5) {
-  // typeof randomNumber === 0.5
+type NamedObject = {name: string}
+function getUserName<User extends NamedObject>(user: User) {
+  return user.name
 }
+
+const obj = {name: 'Hannah', age: 3}
+getUserName(obj)
 ```
+
+So the object that's passed to `getUserName` must satisfy all the types in the
+`NamedObject`. The `getUserName` constrains the input to at least match that
+type.
 
 And an "identity function" is a function that accepts a value and returns that
 value. I sometimes use these kinds of functions as the default value for
@@ -163,11 +170,11 @@ function buildProject(modifyConfig: ModifyConfigFn = identity) {
 }
 ```
 
-So with those definitions out of the way, a "type narrowing identity function"
-is a function which returns what it is given and also helps TypeScript narrow
-its type. This is exactly what we want to do.
+So with those definitions out of the way, a "constrained identity function" is a
+function which returns what it is given and also helps TypeScript constrain its
+type. This is exactly what we want to do.
 
-We can call it a **TNIF** (pronounced "tee niff"). Sure, let's go with that.
+We can call it a **CIF** (pronounced "see eye eff"). Sure, let's go with that.
 
 Let me show you a simple example first, then I'll explain what's going on, then
 we can apply it more usefully to our more complicated example:
@@ -184,9 +191,9 @@ const numbers = createNumbers({one: 1, two: 2, three: 3, four: 4})
 numbers['five']
 ```
 
-So the `createNumbers` is the type narrowing identity function. It returns the
+So the `createNumbers` is the constrained identity function. It returns the
 `obj` it's given, hopefully that's clear. But how does it enforce our input and
-narrow the type?
+constrain the type?
 
 Let me explain it this way. If we start with:
 
@@ -234,12 +241,12 @@ const numbers: Record<string, number> = {
 But now by typing our values explicitly, we've told TypeScript that our `key`
 can be a string. Unfortunately, there's no way to tell TypeScript: "This thing
 has the keys it has, but the values are this specific type." IMO, this is a
-missing feature of TypeScript. Our `createNumbers` type narrowing identity
-function (er... "TNIF") is a workaround.
+missing feature of TypeScript. Our `createNumbers` constrained identity function
+(er... "CIF") is a workaround.
 
 So here's what that workaround is:
 
-**Type narrowing identity functions allow us to _not_ explicitly annotate our
+**Constrained identity functions allow us to _not_ explicitly annotate our
 variable while _still_ getting to enforce the values.**
 
 So we create the object, get the best type that TypeScript can offer us (which
@@ -247,7 +254,7 @@ includes the narrow keys and wide values), then we pass it to a function which
 accepts wide keys and narrow values. TypeScript combines that to give us a
 `Record` with a `key` and `value` which are both narrow!
 
-Alrighty, so let's apply a TNIF to our original situation:
+Alrighty, so let's apply a CIF to our original situation:
 
 ```tsx
 type OperationFn = (left: number, right: number) => number
@@ -277,9 +284,9 @@ Wahoo! So with this solution we don't have to explicitly type all the operation
 functions the exact same way and we can still get a union type of all available
 operations.
 
-## A generic TNIF?
+## A generic CIF?
 
-You may have noticed that we had two TNIFs in the previous section:
+You may have noticed that we had two CIFs in the previous section:
 
 ```tsx
 type Value = number
@@ -297,40 +304,40 @@ Wouldn't it be neat if we could combine those? Sure would. But you're not going
 to like it... Here's what I tried first:
 
 ```tsx
-const narrow = <Given, Inferred extends Given>(item: Inferred) => item
+const constrain = <Given, Inferred extends Given>(item: Inferred) => item
 
 // @ts-expect-error Expected 2 type arguments, but got 1.(2558)
-const numbers = narrow<Record<string, number>>({one: 1 /* etc. */})
+const numbers = constrain<Record<string, number>>({one: 1 /* etc. */})
 ```
 
 Sad day. Unfortunately this is just not possible with TypeScript today. But
 here's a workaround:
 
 ```tsx
-const narrow = <Given extends unknown>() => <Inferred extends Given>(
+const constrain = <Given extends unknown>() => <Inferred extends Given>(
   item: Inferred,
 ) => item
 
-const numbers = narrow<Record<string, number>>()({one: 1 /* etc. */})
+const numbers = constrain<Record<string, number>>()({one: 1 /* etc. */})
 ```
 
 ... yeah, I told you you wouldn't like it. It's marginally better like this:
 
 ```tsx
-const createNumbers = narrow<Record<string, number>>()
+const createNumbers = constrain<Record<string, number>>()
 const numbers = createNumbers({one: 1 /* etc. */})
 ```
 
 But like, huh. Bummer.
 
-Luckily, I don't find myself making TNIFs very often anyway and they aren't
+Luckily, I don't find myself making CIFs very often anyway and they aren't
 difficult to write so I don't need an abstraction for them. Thought it'd be
 interesting to share with you though 😄
 
 ## Conclusion
 
 Here's the final version of our calculator component with everything typed with
-our TNIF:
+our CIF:
 
 ```tsx {2-4}
 type OperationFn = (left: number, right: number) => number
