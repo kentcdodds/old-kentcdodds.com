@@ -1839,6 +1839,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sitek94",
+      "name": "Maciek Sitkowski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58401630?v=4",
+      "profile": "https://macieksitkowski.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",

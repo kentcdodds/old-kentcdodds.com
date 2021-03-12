@@ -271,6 +271,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://gapurov.com"><img src="https://avatars.githubusercontent.com/u/34619645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vladislav Gapurov</b></sub></a><br /><a href="#content-gapurov" title="Content">🖋</a></td>
     <td align="center"><a href="https://keybase.io/erikras"><img src="https://avatars.githubusercontent.com/u/4396759?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Erik Rasmussen</b></sub></a><br /><a href="#content-erikras" title="Content">🖋</a></td>
     <td align="center"><a href="http://maikeru.github.io"><img src="https://avatars.githubusercontent.com/u/247246?v=4?s=100" width="100px;" alt=""/><br /><sub><b>P. Michael Holland</b></sub></a><br /><a href="#content-maikeru" title="Content">🖋</a></td>
+    <td align="center"><a href="https://macieksitkowski.com"><img src="https://avatars.githubusercontent.com/u/58401630?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Maciek Sitkowski</b></sub></a><br /><a href="#content-sitek94" title="Content">🖋</a></td>
   </tr>
 </table>
 
