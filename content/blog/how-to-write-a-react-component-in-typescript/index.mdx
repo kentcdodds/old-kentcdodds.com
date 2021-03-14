@@ -221,9 +221,9 @@ type CalculatorProps = {
 
 But if we decided to add the
 [Exponentiation Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-(`**`), then we'd have to update not only the `operators` object, but also the
+(`**`), then we'd have to update not only the `operations` object, but also the
 `operator` type which would be annoying. Maybe there's a way we can derive the
-type for the `operator` based on the `operators` object? Why, yes there is!
+type for the `operator` based on the `operations` object? Why, yes there is!
 
 ```tsx
 type CalculatorProps = {
