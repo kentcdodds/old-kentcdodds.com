@@ -1857,6 +1857,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "privatenumber",
+      "name": "hiroki osame",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1075694?v=4",
+      "profile": "http://instagram.com/private.number_",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
