@@ -275,6 +275,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/alex-rantos"><img src="https://avatars.githubusercontent.com/u/22919198?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexandros Rantos</b></sub></a><br /><a href="#content-alex-rantos" title="Content">🖋</a></td>
+    <td align="center"><a href="http://instagram.com/private.number_"><img src="https://avatars.githubusercontent.com/u/1075694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hiroki osame</b></sub></a><br /><a href="#content-privatenumber" title="Content">🖋</a></td>
   </tr>
 </table>
 
