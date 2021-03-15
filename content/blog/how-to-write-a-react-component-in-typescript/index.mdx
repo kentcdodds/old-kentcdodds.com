@@ -253,12 +253,16 @@ The `keyof` part will take all the keys of that type, resulting in
 Here's the finished version (I typed the operations functions as well):
 
 ```tsx
-const operations = {
-  '+': (left: number, right: number): number => left + right,
-  '-': (left: number, right: number): number => left - right,
-  '*': (left: number, right: number): number => left * right,
-  '/': (left: number, right: number): number => left / right,
+interface Operations {
+  [key: string]: (left: number, right: number) => number;
 }
+
+const operations: Operations = {
+  '+': (left, right) => left + right,
+  '-': (left, right) => left - right,
+  '*': (left, right) => left * right,
+  '/': (left, right) => left / right,
+};
 
 type CalculatorProps = {
   left: number
