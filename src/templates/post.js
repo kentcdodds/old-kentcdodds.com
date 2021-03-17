@@ -30,6 +30,7 @@ export default function PostPage({data: {site, mdx}}) {
     slug,
     description,
     banner,
+    bannerUrl,
     bannerCredit,
     noFooter,
     keywords,
@@ -47,7 +48,10 @@ export default function PostPage({data: {site, mdx}}) {
     >
       <SEO
         frontmatter={mdx.fields}
-        metaImage={get(mdx, 'fields.banner.childImageSharp.fluid.src')}
+        metaImage={
+          get(mdx, 'fields.banner.childImageSharp.fluid.src') ??
+          get(mdx, 'fields.bannerUrl')
+        }
         isBlogPost
       />
       <article
@@ -75,7 +79,7 @@ export default function PostPage({data: {site, mdx}}) {
           >
             {title}
           </h1>
-          {banner && (
+          {banner ?? bannerUrl ? (
             <div
               css={css`
                 text-align: center;
@@ -88,13 +92,20 @@ export default function PostPage({data: {site, mdx}}) {
                 }
               `}
             >
-              <Img
-                fluid={banner.childImageSharp.fluid}
-                alt={site.siteMetadata.keywords.join(', ')}
-              />
+              {banner ? (
+                <Img
+                  fluid={banner.childImageSharp.fluid}
+                  alt={site.siteMetadata.keywords.join(', ')}
+                />
+              ) : (
+                <img
+                  src={bannerUrl}
+                  alt={site.siteMetadata.keywords.join(', ')}
+                />
+              )}
               {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
             </div>
-          )}
+          ) : null}
           <br />
           {description ? <Markdown>{description}</Markdown> : null}
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -173,6 +184,7 @@ export const pageQuery = graphql`
         description
         plainTextDescription
         author
+        bannerUrl
         banner {
           ...bannerImage720
         }
