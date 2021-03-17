@@ -16,7 +16,15 @@ function getMatchSorterWorker() {
 }
 
 function BlogPostCard({blogpost}) {
-  const {slug, productionUrl, title, description, keywords, banner} = blogpost
+  const {
+    slug,
+    productionUrl,
+    title,
+    description,
+    keywords,
+    banner,
+    bannerUrl,
+  } = blogpost
   const defaultCopyText = 'Copy URL'
   const [copyText, setCopyText] = React.useState(defaultCopyText)
 
@@ -75,7 +83,11 @@ function BlogPostCard({blogpost}) {
             {copyText}
           </button>
         </div>
-        <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
+        {banner ? (
+          <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
+        ) : (
+          <img src={bannerUrl} alt={keywords.join(', ')} />
+        )}
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
       </RouterLink>
     </div>

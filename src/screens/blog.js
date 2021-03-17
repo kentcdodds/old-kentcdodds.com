@@ -23,6 +23,7 @@ function BlogScreen() {
                 categories
                 keywords
                 description: plainTextDescription
+                bannerUrl
                 banner {
                   ...bannerImage260
                 }
