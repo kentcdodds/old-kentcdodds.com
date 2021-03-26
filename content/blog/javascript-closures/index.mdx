@@ -173,3 +173,41 @@ Another great resource on closures you might enjoy is
 [whatthefork.is/closure](https://whatthefork.is/closure).
 
 Hope that helps! Good luck!
+
+## Comment from Jean Lazarou
+
+For me the code you show is not a closure but a simple function call.
+
+A closure version would look like:
+
+```javascript
+let fruit = 'raspberry'
+
+function getLogger() {
+
+  function logger() {
+
+    console.log(fruit)
+
+  }
+
+  return logger
+
+}
+
+const logFruit = getLogger()
+
+logFruit() // "raspberry"
+
+fruit = 'peach'
+
+logFruit() 
+```
+
+The output of the above code is (from browse console)
+
+```
+raspberry debugger eval code:7:13
+peach debugger eval code:7:13
+```
+And here we see that 'it works', because the `getLogger` function has a binding to the closure.
