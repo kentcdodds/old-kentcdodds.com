@@ -54,7 +54,9 @@ logFruit2() // "peach" what a relief...
 But why can't I just change the value of the variable and get the `logger` to
 log the latest value?
 
-The answer is closures. Let me briefly describe what's going on here:
+The answer is the fact that in JavaScript, when you call a function with
+arguments, the arguments you're passing are passed by value, not by reference.
+Let me briefly describe what's going on here:
 
 ```javascript
 function getLogger(arg) {
@@ -96,10 +98,10 @@ a = 2
 console.log(a, b) // 2, 1 ‼️
 ```
 
-Notice that even though we assigned `b` to `a`, we were able to change the
-assignment to `a` and the value `b` was assigned to is unchanged. This is
-because we didn't assign `b` to `a` per se. We assigned `b` to the value `a` was
-assigned to at the time!
+Notice that even though we make `b` point to the value of variable `a`, we were
+able to change the variable `a` and the value `b` pointed to is unchanged. This
+is because we didn't point `b` to `a` per se. We pointed `b` to the value `a`
+was pointing to at the time!
 
 I like to think of variables as little arrows that point to places in the
 computer's memory. So when we say `let a = 1`, we're saying: "Hey JavaScript
@@ -166,13 +168,8 @@ is the `current` property of an object).
 
 ## Conclusion
 
-Closures are an awesome feature of JavaScript and so much of what we can do with
-JavaScript is a result of the way its closures work. I hope this helped you get
-an idea of the power, limitations, and workarounds of closures. They're
-critically important for React (learn more in
-[How React Uses Closures to Avoid Bugs](https://epicreact.dev/how-react-uses-closures-to-avoid-bugs)).
-
-Another great resource on closures you might enjoy is
-[whatthefork.is/closure](https://whatthefork.is/closure).
-
-Hope that helps! Good luck!
+There are naturally trade-offs with this, but I'm glad that the JavaScript
+specification calls for function arguments to be passed by value rather than
+reference. And the workaround isn't too much trouble when you have the need
+(which is pretty rare because mutability makes programs harder to understand
+normally). Hope that helps! Good luck!
