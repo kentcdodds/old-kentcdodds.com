@@ -9,7 +9,7 @@ function BlogScreen() {
         blogposts: allMdx(
           sort: {fields: frontmatter___date, order: DESC}
           filter: {
-            frontmatter: {published: {ne: false}}
+            frontmatter: {published: {ne: false}, unlisted: {ne: false}}
             fileAbsolutePath: {regex: "//content/blog//"}
           }
         ) {
