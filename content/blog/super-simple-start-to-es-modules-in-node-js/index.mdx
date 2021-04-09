@@ -132,29 +132,7 @@ node .
 
 That's it. We've got native ESM running in Node.js.
 
-There's plenty more to talk about here (like integrating modules using CJS and
-ESM together, which is a bit of a trip), but this should get you started! Good
-luck!
-
-<!--
-TODO: finish this article
-
-Things start getting a little more tricky when we're trying to integrate CJS
-with ESM. Normally it'd be best to stick with one or the other, but there are
-situations where you need to. For example, if your project is `"type": "module"`
-and you've installed a module from npm that is CJS, or if your project is CJS
-and you've installed an ESM module. Let's explore what that's like since this
-transition is likely going to take a while.
-
-## Using CJS in ESM
-
-This works _mostly_ how you'd expect, except there are a few little tricky bits.
-One important thing to know about ESM is that the module path resolution
-algorithm has been drastically simplified for ESM. This means there's a lot less
-magic than before, so there are some features you may have gotten used to that
-won't work now. One of the things you'll discover very quickly is you have to
-specify the entire path to the module you're importing.
-
-## Using ESM in CJS
-
- -->
+There's plenty more to talk about here but this should get you started. You may
+be interested in reading
+[the official initial announcement of ESM support](https://nodejs.medium.com/announcing-core-node-js-support-for-ecmascript-modules-c5d6dc29b663).
+Good luck!
