@@ -730,7 +730,7 @@ export default [
         date: '2016-10-27',
       },
       {
-        event: '[UthaJS Conf](https://conf.utahjs.com/)',
+        event: '[UtahJS Conf](https://conf.utahjs.com/)',
         date: '2019-09-20',
       },
       {
