@@ -28,7 +28,8 @@ export default [
       {
         event: 'React Rally',
         date: '2020-08-14',
-        recording: '',
+        recording:
+          'https://www.youtube.com/watch?v=ZguCD2Flx14&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
       {
         event: 'Reactathon',
