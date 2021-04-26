@@ -265,7 +265,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://shlappas.com"><img src="https://avatars.githubusercontent.com/u/13655076?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Milson</b></sub></a><br /><a href="#content-chrismilson" title="Content">🖋</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/giovanisleite"><img src="https://avatars.githubusercontent.com/u/11703235?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovani Sousa</b></sub></a><br /><a href="#content-giovanisleite" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/giovanisleite"><img src="https://avatars.githubusercontent.com/u/11703235?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovani Sousa</b></sub></a><br /><a href="#content-giovanisleite" title="Content">🖋</a> <a href="#translation-giovanisleite" title="Translation">🌍</a></td>
     <td align="center"><a href="http://sudhanshu-ranjan.tech"><img src="https://avatars.githubusercontent.com/u/22864071?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sudhanshu</b></sub></a><br /><a href="#content-tsuki42" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/danielghandahari"><img src="https://avatars.githubusercontent.com/u/14072875?v=4?s=100" width="100px;" alt=""/><br /><sub><b>danielghandahari</b></sub></a><br /><a href="#content-danielghandahari" title="Content">🖋</a></td>
     <td align="center"><a href="https://gapurov.com"><img src="https://avatars.githubusercontent.com/u/34619645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vladislav Gapurov</b></sub></a><br /><a href="#content-gapurov" title="Content">🖋</a></td>
