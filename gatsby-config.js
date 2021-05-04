@@ -125,6 +125,9 @@ module.exports = {
           {
             resolve: require.resolve('./other/gatsby-remark-af'),
           },
+          {
+            resolve: require.resolve('./other/gatsby-remark-cloudinary'),
+          },
         ],
       },
     },
