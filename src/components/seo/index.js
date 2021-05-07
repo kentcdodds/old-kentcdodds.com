@@ -16,7 +16,9 @@ function SEO({
   description = postMeta.plainTextDescription ||
     postMeta.description ||
     seo.description,
-  image = `${seo.canonicalUrl}${metaImage || defaultMetaImage}`,
+  image = metaImage?.startsWith('http:')
+    ? metaImage
+    : `${seo.canonicalUrl}${metaImage || defaultMetaImage}`,
   url = postMeta.slug
     ? `${seo.canonicalUrl}${postMeta.slug}`
     : seo.canonicalUrl,
