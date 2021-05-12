@@ -163,7 +163,10 @@ the same file as your component, the problem of data over fetching is eliminated
 (you just filter out what you don't need in the `loader` so you only send what's
 needed over the wire) and a big problem that drives people to graphql clients is
 eliminated (to be clear, Remix works with graphql, you just don't have to use a
-complex client-side graphql client with Remix to avoid over fetching).
+complex client-side graphql client with Remix to avoid over fetching). Remix
+also only fetches the data for the _changed layouts_ on a page transition
+(something you can only really do with nested routing), further eliminating the
+over fetching problem.
 
 Because Remix supports `<form>` directly, you don't have to worry about the
 song-and-dance of form state management and submission. And to get the same
