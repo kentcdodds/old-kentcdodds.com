@@ -1,7 +1,7 @@
 ---
 slug: 'array-reduce-vs-chaining-vs-for-loop'
 title: 'Array reduce vs chaining vs for loop'
-date: '2020-01-13'
+date: '2021-05-24'
 author: 'Kent C. Dodds'
 description: '_A comparison of different approaches to operating on an array_'
 categories:
@@ -117,16 +117,35 @@ for (let index = 0; index < lines.length; index++) {
 }
 ```
 
-... 😐 ...
+That's not much simpler either.
 
-Yeah, that's definitely not any simpler either.
+**EDIT:** BUT WAIT! We can simplify this thanks to `for..of`!
 
-## So chaining it is
+```javascript
+const commands = []
+for (const line of lines) {
+  const file = line.trim()
+  if (!file) continue
 
-I'd say most of the time, I'm going to be chaining. If I have a performance
-concern with iterating over the array multiple times, then I'll measure and
-compare `reduce` and `loop`s and use the one that's faster (I personally don't
-think either has an upper leg on being more understandable).
+  const destFile = getDestFile(file)
+  const destFileDir = path.dirname(destFile)
+  commands.push(`mkdir -p "${destFileDir}" && mv "${file}" "${destFile}"`)
+}
+```
+
+Honestly I do think that's not a whole lot better than the traditional loop, but
+I do think it's pretty simple. I think some people discount for loops because
+they're "imperative", when they're actually pretty useful.
+
+## My take
+
+Often, I'm going to be choosing between chaining and `for..of` loops. If I have
+a performance concern with iterating over the array multiple times, then
+`for..of` will definitely be my selection of choice.
+
+I don't often use `reduce`, but sometimes I'll try it out and compare it to
+other options and go with that. I realize how subjective that sounds, but so
+much of coding is subjective so 🤷‍♂️
 
 I'd be interested to hear what you think. Reply to the tweet below and let me
 know. And feel free to retweet if that's something you're into.
