@@ -1886,6 +1886,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "joshuapinter",
+      "name": "Joshua Pinter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/180819?v=4",
+      "profile": "http://about.me/joshuapinter",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",

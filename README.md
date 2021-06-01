@@ -278,6 +278,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://instagram.com/private.number_"><img src="https://avatars.githubusercontent.com/u/1075694?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hiroki osame</b></sub></a><br /><a href="#content-privatenumber" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/sleepyArpan"><img src="https://avatars.githubusercontent.com/u/50901152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arpan Chattopadhyay</b></sub></a><br /><a href="#content-sleepyArpan" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/AdityaDonthy"><img src="https://avatars.githubusercontent.com/u/11058475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Donthy</b></sub></a><br /><a href="#content-AdityaDonthy" title="Content">🖋</a></td>
+    <td align="center"><a href="http://about.me/joshuapinter"><img src="https://avatars.githubusercontent.com/u/180819?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Pinter</b></sub></a><br /><a href="#content-joshuapinter" title="Content">🖋</a></td>
   </tr>
 </table>
 
