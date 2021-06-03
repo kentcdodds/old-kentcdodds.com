@@ -1,6 +1,6 @@
 ---
-slug: unit-vs-integration-vs-e2e-tests
-date: '2020-04-15'
+slug: static-vs-unit-vs-integration-vs-e2e-tests
+date: '2021-06-03'
 title: 'Static vs Unit vs Integration vs E2E Testing for Frontend Apps'
 author: 'Kent C. Dodds'
 description: _What these mean, why they matter, and why they don't_
@@ -109,69 +109,58 @@ describe('todo app', () => {
 The test below renders the full app. This is NOT a requirement of integration
 tests and most of my integration tests don't render the full app. They will
 however render with all the providers used in my app (that's what the `render`
-method from the imaginary "`til-client-test-utils`" module does). The idea
-behind integration tests is to mock as little as possible. I pretty much only
-mock:
+method from the imaginary "`test/app-test-utils`" module does). The idea behind
+integration tests is to mock as little as possible. I pretty much only mock:
 
-1. Network requests (using a mocked version of `window.fetch`)
+1. Network requests (using [MSW](https://mswjs.io/))
 2. Components responsible for animation (because who wants to wait for that in
    your tests?)
 
 ```javascript
-import userEvent from '@testing-library/user-event'
-import axiosMock from 'axios'
 import * as React from 'react'
-import {render, generate, screen} from 'til-client-test-utils'
-
+import {render, screen, waitForElementToBeRemoved} from 'test/app-test-utils'
+import userEvent from '@testing-library/user-event'
+import {build, fake} from '@jackfranklin/test-data-bot'
+import {rest} from 'msw'
+import {setupServer} from 'msw/node'
+import {handlers} from 'test/server-handlers'
 import App from '../app'
 
-test('login as an existing user', async () => {
-  // finishLoading is a utility offered by the test utils for my own app
-  const {finishLoading} = render(<App />)
+const buildLoginForm = build({
+  fields: {
+    username: fake(f => f.internet.userName()),
+    password: fake(f => f.internet.password()),
+  },
+})
 
-  // wait for the app to finish loading the mocked requests
-  await finishLoading()
+// integration tests typically only mock HTTP requests via MSW
+const server = setupServer(...handlers)
 
-  userEvent.click(screen.getByText(/login/i))
+beforeAll(() => server.listen())
+afterAll(() => server.close())
+afterEach(() => server.resetHandlers())
 
-  // fill out form
-  const fakeUser = generate.loginForm()
-  userEvent.type(screen.getByLabelText(/username/i), fakeUser.username)
-  userEvent.type(screen.getByLabelText(/password/i), fakeUser.password)
+test(`logging in displays the user's username`, async () => {
+  // The custom render returns a promise that resolves when the app has
+  //   finished loading (if you're server rendering, you may not need this).
+  // The custom render also allows you to specify your initial route
+  await render(<App />, {route: '/login'})
+  const {username, password} = buildLoginForm()
 
-  // submit form
-  const {post} = axiosMock.__mock.instance
-  const token = generate.token(fakeUser)
-  const fakeResponse = {data: {user: {...fakeUser, token}}}
-  window.fetch.mockResolvedValueOnce({
-    json: () => Promise.resolve(fakeResponse),
-  })
-  userEvent.click(screen.getByText(/submit/i))
+  userEvent.type(screen.getByLabelText(/username/i), username)
+  userEvent.type(screen.getByLabelText(/password/i), password)
+  userEvent.click(screen.getByRole('button', {name: /submit/i}))
 
-  // wait for the mocked requests to finish
-  await finishLoading()
+  await waitForElementToBeRemoved(() => screen.getByLabelText(/loading/i))
 
-  // assert calls
-  expect(window.fetch).toHaveBeenCalledWith(
-    '/auth/login',
-    object.containing({body: JSON.stringify(fakeUser)}),
-  )
-  expect(window.fetch).toHaveBeenCalledTimes(1)
-
-  // assert the state of the world
-  expect(window.localStorage.getItem('__auth_token__')).toBe(token)
-  expect(screen.getByTestId('username-display')).toHaveTextContent(
-    fakeUser.username,
-  )
-  expect(screen.getByText(/logout/i)).toBeInTheDocument()
+  // assert whatever you need to verify the user is logged in
+  expect(screen.getByText(username)).toBeInTheDocument()
 })
 ```
 
 For these, I'll also typically have a few things configured globally like
 [automatically resetting all mocks](https://jestjs.io/docs/en/configuration#resetmocks-boolean)
-between tests and automatically setting `window.fetch` to a
-[mock function](https://jestjs.io/docs/en/mock-function-api) that has some good
-default responses for requests made in my app.
+between tests.
 
 Learn how to setup a test-utils file like the one above in the
 [React Testing Library setup docs](https://testing-library.com/docs/react-testing-library/setup).
