@@ -369,9 +369,9 @@ export {useToggle, actionTypes}
 Cool, so now, users are going to pass `reducer` as a configuration object to our
 `useToggle` function, so let's accept that:
 
-```jsx {1}
+```jsx {1,2}
 function useToggle({reducer}) {
-  const [{on}, dispatch] = React.useReducer(toggleReducer, {on: false})
+  const [{on}, dispatch] = React.useReducer(reducer, {on: false})
 
   const toggle = () => dispatch({type: actionTypes.toggle})
   const setOn = () => dispatch({type: actionTypes.on})
