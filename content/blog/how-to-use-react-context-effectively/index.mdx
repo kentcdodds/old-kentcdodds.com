@@ -1,7 +1,7 @@
 ---
 slug: 'how-to-use-react-context-effectively'
 title: 'How to use React Context effectively'
-date: '2021-03-08'
+date: '2021-06-05'
 author: 'Kent C. Dodds'
 description: '_How to create and expose React Context providers and consumers_'
 categories:
@@ -87,9 +87,9 @@ do in your application, you reduce the amount of confidence that test can give
 you. [There are reasons to do this](/blog/the-merits-of-mocking), but that's not
 one of them.
 
-> Note: If you're using Flow or TypeScript, not providing a default value can be
-> really annoying for people who are using `React.useContext`, but I'll show you
-> how to avoid that problem altogether below. Keep reading!
+> Note: If you're using TypeScript, not providing a default value can be really
+> annoying for people who are using `React.useContext`, but I'll show you how to
+> avoid that problem altogether below. Keep reading!
 
 ## The Custom Provider Component
 
@@ -247,15 +247,39 @@ function CountConsumer({children}) {
 }
 ```
 
-This is what I used to do before we had hooks and it worked well. I would not
+And here's how class components would use it:
+
+```jsx
+class CounterThing extends React.Component {
+  render() {
+    return (
+      <CountConsumer>
+        {({state, dispatch}) => (
+          <div>
+            <div>{state.count}</div>
+            <button onClick={() => dispatch({type: 'decrement'})}>
+              Decrement
+            </button>
+            <button onClick={() => dispatch({type: 'increment'})}>
+              Increment
+            </button>
+          </div>
+        )}
+      </CountConsumer>
+    )
+  }
+}
+```
+
+This is what I used to do before we had hooks and it worked ok. I would not
 recommend bothering with this if you can use hooks though. Hooks are much
 better.
 
-## TypeScript / Flow
+## TypeScript
 
 I promised I'd show you how to avoid issues with skipping the `defaultValue`
-when using TypeScript or Flow. Guess what! By doing what I'm suggesting, you
-avoid the problem by default! It's actually not a problem at all. Check it out:
+when using TypeScript. Guess what! By doing what I'm suggesting, you avoid the
+problem by default! It's actually not a problem at all. Check it out:
 
 ```tsx {9-11,36-42,44}
 // src/count-context.tsx
@@ -314,8 +338,8 @@ because we're doing it for them!
 At this point, you reduxers are yelling: "Hey, where are the action creators?!"
 If you want to implement action creators that is fine by me, but I never liked
 action creators. I have always felt like they were an unnecessary abstraction.
-Also, if you are using TypeScript or Flow and have your actions well typed, then
-you should not need them. You can get autocomplete and inline type errors!
+Also, if you are using TypeScript and have your actions well typed, then you
+should not need them. You can get autocomplete and inline type errors!
 
 ![dispatch type getting autocompleted](./images/auto-complete.png)
 
