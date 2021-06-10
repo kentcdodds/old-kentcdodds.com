@@ -19,6 +19,115 @@ export default [
   //   `,
   // },
   {
+    title: 'TBA',
+    resources: [],
+    tags: ['keynote'],
+    deliveries: [
+      {
+        event: '[Connect.tech](https://connect.tech/)',
+        date: '2021-11-08',
+        // recording: '',
+      },
+    ],
+    description: `
+      TBA
+    `,
+  },
+  {
+    title: 'TBA',
+    resources: [],
+    tags: [],
+    deliveries: [
+      {
+        event: '[Connect.tech](https://connect.tech/)',
+        date: '2021-11-08',
+        // recording: '',
+      },
+    ],
+    description: `
+      TBA
+    `,
+  },
+  {
+    title: 'TBA',
+    resources: [],
+    tags: ['keynote'],
+    deliveries: [
+      {
+        event: '[React Advanced London](https://reactadvanced.com/)',
+        date: '2021-10-22',
+        // recording: '',
+      },
+    ],
+    description: `
+      TBA
+    `,
+  },
+  {
+    title: `Don't Solve Problems, Eliminate Them`,
+    resources: [
+      '[blog post](https://kentcdodds.com/blog/don-t-solve-problems-eliminate-them)',
+    ],
+    tags: ['keynote', 'career', 'software'],
+    deliveries: [
+      {
+        event: '[Shift Dev Conf 2021](https://shift.infobip.com/)',
+        date: '2021-09-07',
+        // recording: '',
+      },
+    ],
+    description: `
+      Humans are natural problem solvers and we're good enough at it that we've
+      survived over the centuries and become the dominant species of the planet.
+      Because we're so good at it, we sometimes become problem seekers
+      too–looking for problems we can solve. Those who most successfully
+      accomplish their goals are the problem eliminators. Let's talk about the
+      distinction between solving and eliminating problems with examples from
+      inside and outside the coding world.
+    `,
+  },
+  {
+    title: 'Practically Testing',
+    resources: [
+      '[slides](https://github.com/kentcdodds/practically-testing-slides)',
+    ],
+    tags: ['testing'],
+    deliveries: [
+      {
+        event: '[Frontend Test Fest](https://frontendtestfest.com/)',
+        date: '2021-06-08',
+        // recording: '',
+      },
+    ],
+    description: `
+      This talk is about how testing uses the same currency as everything else
+      we do for the product: our time. And we need to decide how much time we
+      invest relative to the ROI of everything else we can do.
+    `,
+  },
+  {
+    title: 'Testing Library',
+    resources: ['[repo](https://github.com/kentcdodds/testing-react-apps)'],
+    tags: ['react', 'testing'],
+    deliveries: [
+      {
+        event:
+          '[React Wednesdays All Day Edition](https://www.telerik.com/react-wednesdays-all-day-edition)',
+        date: '2021-06-02',
+        recording:
+          'https://www.youtube.com/watch?v=sVMv3H7x8ew&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
+      },
+    ],
+    description: `
+      This should be a fun one, as Kent C. Dodds
+      ([@kentcdodds](https://twitter.com/kentcdodds)) is joining us to talk us
+      about Testing Library, and to give us a live demo. You should bring fun
+      questions, like, how did you come up with the name Testing Library? Maybe
+      bring some real questions too, as Testing Library is a pretty powerful
+      library you’re probably using in production.
+    `,
+  },
+  {
     title: 'Managing State Management',
     resources: [
       '[slides](https://github.com/kentcdodds/managing-state-management-slides)',
@@ -56,7 +165,7 @@ export default [
   {
     title: 'Consume ➡️ Build ➡️ Teach',
     resources: ['[slides](https://slides.com/kentcdodds/consume-build-teach)'],
-    tags: ['career'],
+    tags: ['career', 'keynote'],
     deliveries: [
       {
         event: '[React Summit](https://reactsummit.com/)',
@@ -108,7 +217,7 @@ export default [
     resources: [
       '[slides](https://github.com/kentcdodds/aha-programming-slides)',
     ],
-    tags: ['software development', 'abstraction'],
+    tags: ['software development', 'abstraction', 'keynote'],
     deliveries: [
       {
         event: '[Concatenate Conf](https://www.concatenate.dev)',
@@ -465,7 +574,7 @@ export default [
   {
     title: 'PayPal and Node Tooling',
     resources: [],
-    tags: ['node'],
+    tags: ['node', 'keynote'],
     deliveries: [
       {
         event: 'JS@PayPal (internal conference)',
