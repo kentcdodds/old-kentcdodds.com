@@ -279,6 +279,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://github.com/sleepyArpan"><img src="https://avatars.githubusercontent.com/u/50901152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arpan Chattopadhyay</b></sub></a><br /><a href="#content-sleepyArpan" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/AdityaDonthy"><img src="https://avatars.githubusercontent.com/u/11058475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Donthy</b></sub></a><br /><a href="#content-AdityaDonthy" title="Content">🖋</a></td>
     <td align="center"><a href="http://about.me/joshuapinter"><img src="https://avatars.githubusercontent.com/u/180819?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Pinter</b></sub></a><br /><a href="#content-joshuapinter" title="Content">🖋</a></td>
+    <td align="center"><a href="https://goongoguma.github.io/"><img src="https://avatars.githubusercontent.com/u/38463426?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jae Hyun An</b></sub></a><br /><a href="#translation-goongoguma" title="Translation">🌍</a></td>
   </tr>
 </table>
 

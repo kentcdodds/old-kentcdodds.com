@@ -1895,6 +1895,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "goongoguma",
+      "name": "Jae Hyun An",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38463426?v=4",
+      "profile": "https://goongoguma.github.io/",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
