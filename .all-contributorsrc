@@ -1904,6 +1904,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "seongry",
+      "name": "Koal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20718266?v=4",
+      "profile": "https://seongry.github.io/",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "commitConvention": "none",
