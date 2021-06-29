@@ -1913,6 +1913,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "DakotahGodfrey",
+      "name": "Dakotah Godfrey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78933339?v=4",
+      "profile": "http://dakotahg.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
