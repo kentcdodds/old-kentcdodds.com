@@ -282,6 +282,9 @@ Thanks goes to these wonderful people
     <td align="center"><a href="https://goongoguma.github.io/"><img src="https://avatars.githubusercontent.com/u/38463426?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jae Hyun An</b></sub></a><br /><a href="#translation-goongoguma" title="Translation">🌍</a></td>
     <td align="center"><a href="https://seongry.github.io/"><img src="https://avatars.githubusercontent.com/u/20718266?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Koal</b></sub></a><br /><a href="#translation-seongry" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://dakotahg.dev"><img src="https://avatars.githubusercontent.com/u/78933339?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dakotah Godfrey</b></sub></a><br /><a href="#content-DakotahGodfrey" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
