@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import {Link as RouterLink} from '@reach/router'
-import Img from 'gatsby-image'
 import {rankings as matchSorterRankings} from 'match-sorter'
 import theme from '../../../config/theme'
 import MatchSorterWorker from './match-sorter.worker'
@@ -22,7 +21,6 @@ function BlogPostCard({blogpost}) {
     title,
     description,
     keywords,
-    banner,
     bannerUrl,
   } = blogpost
   const defaultCopyText = 'Copy URL'
@@ -83,11 +81,7 @@ function BlogPostCard({blogpost}) {
             {copyText}
           </button>
         </div>
-        {banner ? (
-          <Img fluid={banner.childImageSharp.fluid} alt={keywords.join(', ')} />
-        ) : (
-          <img src={bannerUrl} alt={keywords.join(', ')} />
-        )}
+        <img src={bannerUrl} alt={keywords.join(', ')} />
         <div css={{margin: '16px 0 0 0'}}>{description}</div>
       </RouterLink>
     </div>

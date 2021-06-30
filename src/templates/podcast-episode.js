@@ -86,9 +86,7 @@ const Article = styled.article(
 )
 
 function PodcastEpisodePage({data: {mdx, allMdx}, children}) {
-  const metaImage = mdx.frontmatter.metaImage
-    ? mdx.frontmatter.metaImage.childImageSharp.original.src
-    : podcastMetaImage
+  const metaImage = mdx.frontmatter.metaImage ?? podcastMetaImage
   return (
     <>
       <SEO frontmatter={mdx.frontmatter} metaImage={metaImage} />
@@ -180,23 +178,8 @@ export const query = graphql`
         description
         number
         season
-        guestPhoto {
-          childImageSharp {
-            fixed(width: 80, height: 80) {
-              ...GatsbyImageSharpFixed
-            }
-            original {
-              src
-            }
-          }
-        }
-        metaImage {
-          childImageSharp {
-            original {
-              src
-            }
-          }
-        }
+        guestPhoto
+        metaImage
       }
       fields {
         slug
@@ -214,16 +197,7 @@ export const query = graphql`
           description
           number
           season
-          guestPhoto {
-            childImageSharp {
-              fixed(width: 48, height: 48) {
-                ...GatsbyImageSharpFixed
-              }
-              original {
-                src
-              }
-            }
-          }
+          guestPhoto
         }
         fields {
           slug

@@ -333,12 +333,6 @@ function onCreateMdxNode({node, getNode, actions}) {
   })
 
   createNodeField({
-    name: 'banner',
-    node,
-    value: node.frontmatter.banner,
-  })
-
-  createNodeField({
     name: 'bannerUrl',
     node,
     value: node.frontmatter.bannerUrl,

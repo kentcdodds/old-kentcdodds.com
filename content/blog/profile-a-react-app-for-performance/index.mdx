@@ -13,7 +13,7 @@ keywords:
   - 'devtools'
   - 'optimization'
   - 'profile'
-banner: './images/banner.jpg'
+bannerUrl: 'https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033217/kentcdodds.com/content/blog/profile-a-react-app-for-performance/banner.jpg'
 bannerCredit:
   'Photo by [Felix Mittermeier](https://unsplash.com/photos/L4-16dmZ-1c)'
 ---
@@ -52,7 +52,7 @@ you've installed the project locally, run `npm run start` to get the development
 server running. This will pull up the app in your browser at
 `http://localhost:3000`:
 
-![bookshelf app with login and register buttons](./images/1.png)
+![bookshelf app with login and register buttons](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033217/kentcdodds.com/content/blog/profile-a-react-app-for-performance/1.png)
 
 ## Start a profiling session
 
@@ -61,12 +61,12 @@ clicking "Inspect." Then select the "⚛ Profiler" tab. This is the React DevToo
 profiler and you can now click the little blue circle to "Start profiling" the
 application.
 
-![bookshelf app with React DevTools Profile tab open and blue "Start profile" button highlighted](./images/2.png)
+![bookshelf app with React DevTools Profile tab open and blue "Start profile" button highlighted](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/2.png)
 
 From here go ahead and interact with the app a bit. I'm going to register for a
 new account. Then click the little red circle to "Stop profiling."
 
-![bookshelf app with React DevTools Profile tab open and red "Stop profile" button highlighted](./images/3.png)
+![bookshelf app with React DevTools Profile tab open and red "Stop profile" button highlighted](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/3.png)
 
 ## Explore the profiling data
 
@@ -76,7 +76,7 @@ chart", and there's also the "Ranked chart." Here's what the "Flamegraph chart"
 looks like (if you want to see the "Ranked chart," you'll have to do this
 yourself 😜):
 
-![bookshelf app with React DevTools Profile tab showing a flamegraph](./images/4.png)
+![bookshelf app with React DevTools Profile tab showing a flamegraph](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033217/kentcdodds.com/content/blog/profile-a-react-app-for-performance/4.png)
 
 We can dive into analyzing this stuff in another post.
 
@@ -103,7 +103,7 @@ So let's run the optimized production build with `npm run build`. Next we'll run
 That should start the app on port 5000. So let's pull that up and start a
 profiling session on that... Wait! Oh no! What's this?
 
-![React DevTools Profile tab showing the error "Profiling not supported"](./images/5.png)
+![React DevTools Profile tab showing the error "Profiling not supported"](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/5.png)
 
 > Profiling not supported.
 >
@@ -175,7 +175,7 @@ Great, now run `npm run build`, then `npx serve -s build` and let's profile the
 app again! I'll follow the same registration steps I did last time. Here's what
 I came out with:
 
-![React DevTools Profile tab showing flamegraph](./images/6.png)
+![React DevTools Profile tab showing flamegraph](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/6.png)
 
 Nice! You'll notice that this is the same interaction as the last time (it's
 rendering the page after registration) and we went from 13.7ms to 6.5ms. Nice
@@ -256,7 +256,7 @@ new TerserPlugin({
 With `keep_classnames` and `keep_fnames` configured to `true`, now let's try
 building our app code and running a profiling session once more!
 
-![React DevTools Profile tab showing flamegraph](./images/7.png)
+![React DevTools Profile tab showing flamegraph](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/7.png)
 
 Most excellent! Now we've got a profile session showing us the names of all of
 our components and they're running using code that resembles the code our
@@ -273,11 +273,11 @@ you throttle your CPU to simulate the experience of some users of your app.
 So let's do that. Click on the Chrome DevTools "Performance" tab, then on the
 gear icon to show settings, then on the CPU option, select "6x slowdown."
 
-![Chrome DevTools Performance tab showing CPU 6x slowdown selected](./images/8.png)
+![Chrome DevTools Performance tab showing CPU 6x slowdown selected](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033216/kentcdodds.com/content/blog/profile-a-react-app-for-performance/8.png)
 
 Now do the whole thing again, and checkout the difference:
 
-![React DevTools Profile tab showing flamegraph](./images/9.png)
+![React DevTools Profile tab showing flamegraph](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033217/kentcdodds.com/content/blog/profile-a-react-app-for-performance/9.png)
 
 Phew! 31.8ms! That's quite the slow-down! Learn more about the impact of that
 time on the user's experience in this blog post titled

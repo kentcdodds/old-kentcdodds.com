@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/react'
-import Img from 'gatsby-image'
 import Link from 'components/link'
 import first from 'lodash/first'
 import get from 'lodash/get'
@@ -164,13 +163,13 @@ function PodcastSeason({data, isNew, ...restProps}) {
                       marginRight: 18,
                     }}
                   >
-                    <Img
+                    <img
                       css={{
                         margin: '0 0.75rem 0 0.45rem',
 
                         borderRadius: '50%',
                       }}
-                      fixed={p.frontmatter.guestPhoto.childImageSharp.fixed}
+                      src={p.frontmatter.guestPhoto}
                       alt={title}
                     />
                   </div>

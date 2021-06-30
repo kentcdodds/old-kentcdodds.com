@@ -23,9 +23,7 @@ function BlogScreen() {
                 categories
                 keywords
                 description: plainTextDescription
-                banner {
-                  ...bannerImage260
-                }
+                bannerUrl
               }
               excerpt(pruneLength: 190)
             }

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import SEO from 'components/seo'
 import {css} from '@emotion/react'
@@ -15,7 +14,6 @@ import Markdown from 'react-markdown'
 import {fonts} from '../lib/typography'
 import config from '../../config/website'
 import {bpMaxSM} from '../lib/breakpoints'
-import get from 'lodash/get'
 
 // to add back workshop tickets check to the page, check this commit where
 // that was removed: c94057d
@@ -29,7 +27,6 @@ export default function PostPage({data: {site, mdx}}) {
     date,
     slug,
     description,
-    banner,
     bannerUrl,
     bannerCredit,
     noFooter,
@@ -48,10 +45,7 @@ export default function PostPage({data: {site, mdx}}) {
     >
       <SEO
         frontmatter={mdx.fields}
-        metaImage={
-          get(mdx, 'fields.banner.childImageSharp.fluid.src') ??
-          get(mdx, 'fields.bannerUrl')
-        }
+        metaImage={mdx.fields.bannerUrl}
         isBlogPost
       />
       <article
@@ -79,7 +73,7 @@ export default function PostPage({data: {site, mdx}}) {
           >
             {title}
           </h1>
-          {banner ?? bannerUrl ? (
+          {bannerUrl ? (
             <div
               css={css`
                 text-align: center;
@@ -92,17 +86,10 @@ export default function PostPage({data: {site, mdx}}) {
                 }
               `}
             >
-              {banner ? (
-                <Img
-                  fluid={banner.childImageSharp.fluid}
-                  alt={site.siteMetadata.keywords.join(', ')}
-                />
-              ) : (
-                <img
-                  src={bannerUrl}
-                  alt={site.siteMetadata.keywords.join(', ')}
-                />
-              )}
+              <img
+                src={bannerUrl}
+                alt={site.siteMetadata.keywords.join(', ')}
+              />
               {bannerCredit ? <Markdown>{bannerCredit}</Markdown> : null}
             </div>
           ) : null}
@@ -185,9 +172,6 @@ export const pageQuery = graphql`
         plainTextDescription
         author
         bannerUrl
-        banner {
-          ...bannerImage720
-        }
         bannerCredit
         slug
         keywords

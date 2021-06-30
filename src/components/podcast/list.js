@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'components/link'
-import Img from 'gatsby-image'
 import {css} from '@emotion/react'
 import theme from '../../../config/theme'
 import {fonts} from '../../lib/typography'
@@ -73,8 +72,9 @@ export default function PodcastList({data}) {
             })}
           >
             <div>
-              <Img
-                fixed={episode.frontmatter.guestPhoto.childImageSharp.fixed}
+              <img
+                css={css({maxWidth: 48, width: 48})}
+                src={episode.frontmatter.guestPhoto}
                 alt={episode.frontmatter.title}
               />
             </div>

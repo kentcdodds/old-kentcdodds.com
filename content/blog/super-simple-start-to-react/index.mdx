@@ -13,7 +13,7 @@ keywords:
   - 'css'
   - 'react'
   - 'simple'
-banner: './images/banner.jpg'
+bannerUrl: 'https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033397/kentcdodds.com/content/blog/super-simple-start-to-react/banner.jpg'
 bannerCredit:
   'Photo by [Emma Frances Logan](https://unsplash.com/photos/PVIbUkN_wCQ)'
 ---
@@ -55,7 +55,7 @@ where you don't know when one abstraction starts and the other ends and it
 honestly doesn't really matter all that much because all you care about is
 getting something shipped.
 
-![Ball of Rubber bands](./images/rubber-bands-ball.jpg)
+![Ball of Rubber bands](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033396/kentcdodds.com/content/blog/super-simple-start-to-react/rubber-bands-ball.jpg)
 
 But if you really want to get a solid foundation and use the abstractions to
 their greatest potential, then you'll find you're much more effective by taking
@@ -329,7 +329,10 @@ to get React running in an `index.html` file without any build tools whatsoever:
     <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
     <script type="text/babel">
-      ReactDOM.render(<div className="container">Hello World</div>, document.getElementById('root'))
+      ReactDOM.render(
+        <div className="container">Hello World</div>,
+        document.getElementById('root'),
+      )
     </script>
   </body>
 </html>
@@ -344,7 +347,7 @@ abstractions and adding them back one at a time can really help you understand
 how these tools and libraries work alone and how you can best use them together
 to build awesome stuff.
 
-![Rubber bands separated](./images/rubber-bands.jpg)
+![Rubber bands separated](https://res.cloudinary.com/kentcdodds-com/image/upload/v1625033397/kentcdodds.com/content/blog/super-simple-start-to-react/rubber-bands.jpg)
 
 If you want to continue your learning journey, don't miss
 [The Beginner's Guide to React](https://kcd.im/beginner-react). Good luck!

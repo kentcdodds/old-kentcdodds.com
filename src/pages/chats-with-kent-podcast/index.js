@@ -80,13 +80,7 @@ export const seasonIndexQuery = graphql`
           title
           season
           number
-          guestPhoto {
-            childImageSharp {
-              fixed(width: 48) {
-                ...GatsbyImageSharpFixed_withWebp_tracedSVG
-              }
-            }
-          }
+          guestPhoto
         }
       }
     }
@@ -105,13 +99,7 @@ export const seasonIndexQuery = graphql`
           title
           season
           number
-          guestPhoto {
-            childImageSharp {
-              fixed(width: 48) {
-                ...GatsbyImageSharpFixed_withWebp_tracedSVG
-              }
-            }
-          }
+          guestPhoto
         }
       }
     }
@@ -130,13 +118,7 @@ export const seasonIndexQuery = graphql`
           title
           season
           number
-          guestPhoto {
-            childImageSharp {
-              fixed(width: 48) {
-                ...GatsbyImageSharpFixed_withWebp_tracedSVG
-              }
-            }
-          }
+          guestPhoto
         }
       }
     }

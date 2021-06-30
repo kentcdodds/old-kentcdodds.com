@@ -25,7 +25,7 @@ export default function WorkshopPage(props) {
 }
 
 function Workshop({data: {site, mdx}}) {
-  const {title, banner} = mdx.fields
+  const {title, bannerUrl} = mdx.fields
   const {ckTag} = mdx.frontmatter
   const {events: allEvents, isLoading} = useWorkshopEvents({title})
   const events = allEvents.filter(event => event.workshop.title === title)
@@ -36,11 +36,7 @@ function Workshop({data: {site, mdx}}) {
       headerLink="/workshops"
       noFooter={true}
     >
-      <SEO
-        frontmatter={mdx.fields}
-        metaImage={get(mdx, 'fields.banner.childImageSharp.fluid.src')}
-        isBlogPost
-      />
+      <SEO frontmatter={mdx.fields} metaImage={bannerUrl} isBlogPost />
       <article
         css={css`
           width: 100%;
@@ -92,7 +88,7 @@ function Workshop({data: {site, mdx}}) {
                     soldOut={soldOut}
                     title={title}
                     date={scheduledEvent && scheduledEvent.date}
-                    image={banner ? banner.childImageSharp.fluid : false}
+                    image={bannerUrl ? bannerUrl : false}
                     buttonText={
                       discount ? 'Secure Your Discount' : 'Secure Your Seat'
                     }
@@ -148,9 +144,7 @@ export const pageQuery = graphql`
         description
         date(formatString: "MMMM DD, YYYY")
         author
-        banner {
-          ...bannerImage720
-        }
+        bannerUrl
         bannerCredit
         slug
         description
