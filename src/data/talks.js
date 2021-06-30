@@ -96,7 +96,8 @@ export default [
       {
         event: '[Frontend Test Fest](https://frontendtestfest.com/)',
         date: '2021-06-08',
-        // recording: '',
+        recording:
+          'https://www.youtube.com/watch?v=_mHy9U0jAG0&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf',
       },
     ],
     description: `
