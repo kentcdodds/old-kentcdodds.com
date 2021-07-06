@@ -65,11 +65,11 @@ function NotificationMessage({children, onClose}) {
       `}
     >
       <div
-        css={css`
-          max-width: 100%;
-          display: flex;
-          justify-content: center;
-        `}
+        style={{
+          maxWidth: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+        }}
       >
         {children}
       </div>
