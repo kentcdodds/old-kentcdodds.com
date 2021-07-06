@@ -5,7 +5,7 @@ import theme from '../../config/theme'
 
 // this component is one big shrug. I didn't have time to get good at animation
 // and it's such a simple single-use component hack something I could ship...
-function NotificationMessage({children}) {
+function NotificationMessage({children, onClose}) {
   const portalContainerRef = React.useRef(null)
   if (!portalContainerRef.current && typeof document !== 'undefined') {
     portalContainerRef.current = document.createElement('div')
@@ -71,7 +71,13 @@ function NotificationMessage({children}) {
       >
         {children}
       </div>
-      <button css={{marginLeft: 10}} onClick={() => setAnimateIn(false)}>
+      <button
+        css={{marginLeft: 10}}
+        onClick={() => {
+          setAnimateIn(false)
+          onClose?.()
+        }}
+      >
         Close
       </button>
     </div>,
