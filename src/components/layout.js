@@ -261,9 +261,11 @@ function Layout({
     <ThemeProvider theme={theme}>
       {displaySaleNotification && saleGoingOn ? (
         <NotificationMessage onClose={() => setDisplaySaleNotification(false)}>
-          {`🚨 Don't miss the limited time 25% discount on`}&nbsp;
-          <a href="https://epicreact.dev">EpicReact.dev</a>&nbsp;
-          {`going on right now! 🚀 ⚛️`}
+          <div>
+            {`🚨 Don't miss the limited time 25% discount on`}&nbsp;
+            <a href="https://epicreact.dev">EpicReact.dev</a>&nbsp;
+            {`going on right now! 🚀 ⚛️`}
+          </div>
         </NotificationMessage>
       ) : null}
       <QueryParamNotificationMessage queryStringKey="message" />

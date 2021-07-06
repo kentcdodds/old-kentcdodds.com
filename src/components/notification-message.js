@@ -55,6 +55,7 @@ function NotificationMessage({children, onClose}) {
         width: 100%;
         padding: 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         background-color: ${theme.colors.green};
@@ -65,6 +66,7 @@ function NotificationMessage({children, onClose}) {
     >
       <div
         css={css`
+          max-width: 100%;
           display: flex;
           justify-content: center;
         `}
