@@ -1922,6 +1922,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "itayperry",
+      "name": "Itay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37377389?v=4",
+      "profile": "https://github.com/itayperry",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
