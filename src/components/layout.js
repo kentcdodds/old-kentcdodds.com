@@ -262,9 +262,9 @@ function Layout({
       {displaySaleNotification && saleGoingOn ? (
         <NotificationMessage onClose={() => setDisplaySaleNotification(false)}>
           <div>
-            {`🚨 Don't miss the limited time 25% discount on`}&nbsp;
+            {`🚨`}&nbsp;
             <a href="https://epicreact.dev">EpicReact.dev</a>&nbsp;
-            {`going on right now! 🚀 ⚛️`}
+            {`is 25% off for a limited time right now! 🚀 ⚛️`}
           </div>
         </NotificationMessage>
       ) : null}
