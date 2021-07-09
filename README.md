@@ -284,6 +284,7 @@ Thanks goes to these wonderful people
   </tr>
   <tr>
     <td align="center"><a href="http://dakotahg.dev"><img src="https://avatars.githubusercontent.com/u/78933339?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dakotah Godfrey</b></sub></a><br /><a href="#content-DakotahGodfrey" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/itayperry"><img src="https://avatars.githubusercontent.com/u/37377389?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Itay</b></sub></a><br /><a href="#content-itayperry" title="Content">🖋</a></td>
   </tr>
 </table>
 
