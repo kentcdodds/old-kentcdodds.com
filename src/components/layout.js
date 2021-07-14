@@ -4,9 +4,7 @@ import {graphql, useStaticQuery} from 'gatsby'
 import {MDXProvider} from '@mdx-js/react'
 import {Global, css, ThemeProvider} from '@emotion/react'
 import styled from '@emotion/styled'
-import NotificationMessage, {
-  QueryParamNotificationMessage,
-} from 'components/notification-message'
+import {QueryParamNotificationMessage} from 'components/notification-message'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import mdxComponents from 'components/mdx'
@@ -174,33 +172,6 @@ const DefaultHero = styled.section`
   }
 `
 
-function useLocalStorageState({
-  key,
-  initialValue,
-  serialize = JSON.stringify,
-  deserialize = JSON.parse,
-}) {
-  const [state, setState] = React.useState(() => {
-    if (typeof window === 'undefined') {
-      return initialValue
-    }
-    try {
-      const lsVal = window.localStorage.getItem(key)
-      if (lsVal) return deserialize(lsVal)
-    } catch {
-      // ignore
-    }
-    return initialValue
-  })
-
-  const serializedState = serialize(state)
-  React.useEffect(() => {
-    window.localStorage.setItem(key, serializedState)
-  }, [key, serializedState])
-
-  return [state, setState]
-}
-
 function Layout({
   headerLink,
   siteTitle = 'Kent C. Dodds',
@@ -245,29 +216,13 @@ function Layout({
     title = config.siteTitle,
   } = frontmatter
 
-  const [
-    displaySaleNotification,
-    setDisplaySaleNotification,
-  ] = useLocalStorageState({
-    key: 'show-epic-react-2021-07-sale-notification',
-    initialValue: true,
-  })
-
-  // sale ends at 6am mdt on monday july 12th
-  const saleEnd = new Date('2021-07-13T12:00:00.000Z')
-  const saleGoingOn = new Date() < saleEnd
+  // the sale is over:
+  React.useEffect(() => {
+    window.localStorage.removeItem('show-epic-react-2021-07-sale-notification')
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
-      {displaySaleNotification && saleGoingOn ? (
-        <NotificationMessage onClose={() => setDisplaySaleNotification(false)}>
-          <div>
-            {`🚨`}&nbsp;
-            <a href="https://epicreact.dev">EpicReact.dev</a>&nbsp;
-            {`is 25% off for a limited time right now! 🚀 ⚛️`}
-          </div>
-        </NotificationMessage>
-      ) : null}
       <QueryParamNotificationMessage queryStringKey="message" />
       <QueryParamNotificationMessage queryStringKey="subscribed">{`Thanks for subscribing!`}</QueryParamNotificationMessage>
       <QueryParamNotificationMessage queryStringKey="remain-subscribed">{`Glad you're still here!`}</QueryParamNotificationMessage>
