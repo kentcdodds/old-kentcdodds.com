@@ -6,9 +6,6 @@
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
 
-[[plugins]]
-  package = "netlify-plugin-cypress"
-
 [build]
   command = "npm run netlify"
   functions = "public/functions/"
