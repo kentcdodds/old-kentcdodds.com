@@ -286,6 +286,7 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://dakotahg.dev"><img src="https://avatars.githubusercontent.com/u/78933339?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dakotah Godfrey</b></sub></a><br /><a href="#content-DakotahGodfrey" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/itayperry"><img src="https://avatars.githubusercontent.com/u/37377389?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Itay</b></sub></a><br /><a href="#content-itayperry" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/thomasmarr"><img src="https://avatars.githubusercontent.com/u/24485025?v=4?s=100" width="100px;" alt=""/><br /><sub><b>thomasmarr</b></sub></a><br /><a href="#content-thomasmarr" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/dianaeligg"><img src="https://avatars.githubusercontent.com/u/3084969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Diana García</b></sub></a><br /><a href="https://github.com/kentcdodds/kentcdodds.com/commits?author=dianaeligg" title="Code">💻</a></td>
   </tr>
 </table>
 
