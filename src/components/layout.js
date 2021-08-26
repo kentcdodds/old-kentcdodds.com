@@ -172,6 +172,11 @@ const DefaultHero = styled.section`
   }
 `
 
+const copyToClipboard = e => {
+  const textToClip = e.currentTarget?.href
+  navigator.clipboard.writeText(textToClip)
+}
+
 function Layout({
   headerLink,
   siteTitle = 'Kent C. Dodds',
@@ -219,6 +224,17 @@ function Layout({
   // the sale is over:
   React.useEffect(() => {
     window.localStorage.removeItem('show-epic-react-2021-07-sale-notification')
+  }, [])
+
+  React.useEffect(() => {
+    const headers = document.querySelectorAll('.autolinked-header')
+    headers.forEach(headerEl => {
+      headerEl.addEventListener('click', copyToClipboard)
+    })
+    return () =>
+      headers.forEach(headerEl =>
+        headerEl.removeEventListener('click', copyToClipboard),
+      )
   }, [])
 
   return (
