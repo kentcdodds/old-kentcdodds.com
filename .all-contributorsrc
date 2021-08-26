@@ -1940,6 +1940,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "dianaeligg",
+      "name": "Diana García",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3084969?v=4",
+      "profile": "https://github.com/dianaeligg",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "commitConvention": "none",
