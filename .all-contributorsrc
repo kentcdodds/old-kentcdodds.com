@@ -1949,6 +1949,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rmena0127",
+      "name": "Richard Mena",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60358090?v=4",
+      "profile": "https://github.com/rmena0127",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
