@@ -1958,6 +1958,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "cseas",
+      "name": "Abhijeet Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29686866?v=4",
+      "profile": "https://www.absingh.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "commitConvention": "none",
