@@ -246,6 +246,7 @@ function Layout({
       <Helmet
         title={title}
         meta={[
+          {name: 'robots', content: 'noindex'},
           {name: 'description', content: description},
           {name: 'keywords', content: keywords.join()},
         ]}
